@@ -1,6 +1,5 @@
 import type {
   Annotation,
-  Candidate,
   ChangeRecord,
   Finding,
   MatrixCell,
