@@ -657,7 +657,7 @@
     "unit_kind": "section",
     "text_raw": "6.1 Regulatory Monitoring. RPL's Manager of Regulatory Compliance (P09) maintains a continuous monitoring program for IURC rulemaking activity. This program subscribes to the Indiana Register for proposed and final rules affecting 170 IAC, monitors IURC docket postings at iurc.portal.in.gov, and tracks legislative activity in the Indiana General Assembly that may affect IC Title 8 provisions applicable to RPL. Monitoring is conducted on a weekly basis during active legislative and rulemaking sessions and at least bi-weekly at other times.",
     "row_cells": null,
-    "parent_clause_id": null
+    "parent_clause_id": "RPL-CMP-REG-001:5.2"
   },
   {
     "clause_id": "RPL-CMP-REG-001:6.2",
@@ -669,7 +669,7 @@
     "unit_kind": "section",
     "text_raw": "6.2 Initial Review of New Rules. When a new IURC rule is proposed or finalized, the Manager of Regulatory Compliance conducts an initial review within five business days to determine whether the rule creates a new obligation, modifies an existing obligation, or repeals an existing obligation. The initial review results in a preliminary determination of scope of impact on RPL's service territory and operations.",
     "row_cells": null,
-    "parent_clause_id": null
+    "parent_clause_id": "RPL-CMP-REG-001:5.2"
   },
   {
     "clause_id": "RPL-CMP-REG-001:6.3",
@@ -681,7 +681,7 @@
     "unit_kind": "section",
     "text_raw": "6.3 Obligation Extraction. For each new or amended rule that imposes an obligation on RPL, the Manager of Regulatory Compliance extracts one or more discrete obligations, each assigned a new OBL-YYYY-NNNN identifier. Obligations are extracted at the rule-section level (e.g., one obligation per sub-section where sub-sections impose distinct requirements). The extraction is reviewed by the Director of Regulatory Affairs (P08) before obligations are added to the Register.",
     "row_cells": null,
-    "parent_clause_id": null
+    "parent_clause_id": "RPL-CMP-REG-001:5.2"
   },
   {
     "clause_id": "RPL-CMP-REG-001:6.4",
@@ -693,7 +693,7 @@
     "unit_kind": "section",
     "text_raw": "6.4 Annual Register Review. The Register is formally reviewed by the Manager of Regulatory Compliance (P09) and the Director of Regulatory Affairs (P08) during January of each year. The annual review covers: (a) completeness — confirming all active IURC rules are represented; (b) accuracy — confirming obligation descriptions and citations remain correct; (c) ownership — confirming all accountable owners are current employees; and (d) status — updating compliance status and last-verified dates.",
     "row_cells": null,
-    "parent_clause_id": null
+    "parent_clause_id": "RPL-CMP-REG-001:5.2"
   },
   {
     "clause_id": "RPL-CMP-REG-001:6.5",
@@ -705,7 +705,7 @@
     "unit_kind": "section",
     "text_raw": "6.5 Mid-Year Update Trigger. Outside the annual review cycle, the Register is updated within thirty calendar days whenever: (a) the IURC adopts a final rule that creates or modifies an obligation; (b) a rule becomes effective that was previously pending; (c) the accountable owner for an obligation changes due to personnel action; or (d) the compliance status of any P1 obligation changes from compliant to in_progress or at_risk.",
     "row_cells": null,
-    "parent_clause_id": null
+    "parent_clause_id": "RPL-CMP-REG-001:5.2"
   },
   {
     "clause_id": "RPL-CMP-REG-001:6.6",
@@ -717,7 +717,7 @@
     "unit_kind": "section",
     "text_raw": "6.6 Version Control. Each update to the Register results in a new version of this document and a dated snapshot of the CSV file. The prior version is retained in the document management system for seven years in accordance with Section 12. Version numbering follows the format Major.Minor (e.g., 4.0 → 4.1 for a mid-year update, 5.0 for the next annual update).",
     "row_cells": null,
-    "parent_clause_id": null
+    "parent_clause_id": "RPL-CMP-REG-001:5.2"
   },
   {
     "clause_id": "RPL-CMP-REG-001:6.7",
@@ -729,7 +729,7 @@
     "unit_kind": "section",
     "text_raw": "6.7 Coordination with Legal Counsel. For obligation changes arising from legislative action or court decisions affecting Indiana utility law, the Manager of Regulatory Compliance coordinates the obligation extraction and Register update with the VP Legal & Regulatory (P03) before finalization.",
     "row_cells": null,
-    "parent_clause_id": null
+    "parent_clause_id": "RPL-CMP-REG-001:5.2"
   },
   {
     "clause_id": "RPL-CMP-REG-001:7.1",
@@ -1468,7 +1468,7 @@
     "unit_kind": "section",
     "text_raw": "This document is approved for distribution and is effective as of 2025-01-23. The next scheduled review is January 2026.",
     "row_cells": null,
-    "parent_clause_id": null
+    "parent_clause_id": "RPL-CMP-REG-001:14.1"
   },
   {
     "clause_id": "RPL-CMP-REG-001:15.1.tbl1.r1",

@@ -94,6 +94,18 @@ function SectionLabel({ children }: { children: React.ReactNode }) {
 function CollapseToggle({ collapsed }: { collapsed: boolean }) {
   const { toggleCollapsed } = useShell();
   const Icon = collapsed ? PanelLeftOpen : PanelLeftClose;
+  if (!collapsed) {
+    return (
+      <button
+        type="button"
+        onClick={toggleCollapsed}
+        className="flex h-8 w-full items-center gap-3 rounded-[8px] px-3 text-[15px] leading-5 text-sidebar-muted transition-colors duration-150 hover:bg-sidebar-active/60 hover:text-sidebar-fg"
+      >
+        <Icon className="size-4" strokeWidth={1.5} />
+        Collapse
+      </button>
+    );
+  }
   return (
     <Tooltip>
       <TooltipTrigger asChild>
@@ -190,11 +202,9 @@ export function Sidebar() {
         </div>
       </div>
 
-      <div className="flex shrink-0 items-center justify-between border-t border-sidebar-border px-4 py-3">
-        <div className="min-w-0 flex-1">
-          <CompanyChip />
-        </div>
+      <div className="shrink-0 border-t border-sidebar-border px-4 pb-3 pt-2">
         <CollapseToggle collapsed={false} />
+        <CompanyChip />
       </div>
     </aside>
   );

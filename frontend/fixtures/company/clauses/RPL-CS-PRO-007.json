@@ -799,7 +799,7 @@
     "parent_clause_id": null
   },
   {
-    "clause_id": "RPL-CS-PRO-007:6.6~c2",
+    "clause_id": "RPL-CS-PRO-007:6.6~c1",
     "doc_id": "RPL-CS-PRO-007",
     "ordinal": 58,
     "heading_path": [
@@ -1455,7 +1455,7 @@
     "parent_clause_id": null
   },
   {
-    "clause_id": "RPL-CS-PRO-007:12.5~c3",
+    "clause_id": "RPL-CS-PRO-007:12.5~c1",
     "doc_id": "RPL-CS-PRO-007",
     "ordinal": 108,
     "heading_path": [
@@ -1820,7 +1820,7 @@
     "parent_clause_id": "RPL-CS-PRO-007:14.1"
   },
   {
-    "clause_id": "RPL-CS-PRO-007:14.1~c4",
+    "clause_id": "RPL-CS-PRO-007:14.1~c1",
     "doc_id": "RPL-CS-PRO-007",
     "ordinal": 135,
     "heading_path": [
@@ -2807,7 +2807,7 @@
     "parent_clause_id": "RPL-CS-PRO-007:18.1"
   },
   {
-    "clause_id": "RPL-CS-PRO-007:18.1~c5",
+    "clause_id": "RPL-CS-PRO-007:18.1~c1",
     "doc_id": "RPL-CS-PRO-007",
     "ordinal": 195,
     "heading_path": [
@@ -3207,7 +3207,7 @@
     "parent_clause_id": "RPL-CS-PRO-007:App-A"
   },
   {
-    "clause_id": "RPL-CS-PRO-007:App-A~c6",
+    "clause_id": "RPL-CS-PRO-007:App-A~c1",
     "doc_id": "RPL-CS-PRO-007",
     "ordinal": 219,
     "heading_path": [
@@ -3640,7 +3640,7 @@
     "parent_clause_id": "RPL-CS-PRO-007:App-B"
   },
   {
-    "clause_id": "RPL-CS-PRO-007:App-B~c7",
+    "clause_id": "RPL-CS-PRO-007:App-B~c1",
     "doc_id": "RPL-CS-PRO-007",
     "ordinal": 245,
     "heading_path": [
@@ -4100,6 +4100,6 @@
     "unit_kind": "appendix",
     "text_raw": "Opening:\n\"Thank you for calling Rockridge Power. My name is [Agent Name]. I see your account at [Service Address]. You mentioned a concern about your bill — may I take a few minutes to review your account with you?\"\n\nStep E.1 — Review recent usage in CIS.\nPull AMI/AMR interval data (if AMI: last 30 days hourly; if AMR: last 3 months monthly). Compare to same period prior year. If gap >15% not explained by degree-days: \"Our records show your usage in [month] was higher than the same period last year. Let me check whether any billing parameters changed.\"\n\nStep E.2 — Check for estimated bills.\n\"I see [X] of your recent bills were estimated. Let me confirm the reads were corrected on the next actual read.\" If estimated reads appear unjustified, initiate review per §6.5 before offering a test.\n\nStep E.3 — Explain findings.\nSummarize triage findings in plain language. \"Based on what I can see in your account, [explanation].\" If the issue is explained: \"This appears to explain the higher bill. Is there anything else you would like me to check?\"\n\nStep E.4 — Offer a meter test.\n\"If you would still like a formal test of your meter, you have the right to request one in writing. Your first test is at no charge. Shall I process that request for you now?\"\n\nStep E.5 — Intake test request.\nIf yes: \"I'll complete the Meter Test Request form with you now [complete MTR-F-010 App-A]. Let me read back what I've recorded to confirm it's correct.\" Proceed to §7 of the procedure.\n\nStep E.6 — Fee disclosure (if applicable).\nIf fee may apply per T8-4: \"Before I schedule the test, I need to let you know that a test fee of $[amount] may apply if this is your third or later request within the past 36 months and the meter is found to be accurate. Would you like to proceed?\" Document acknowledgment in CIS per App-A.F15.\n\nStep E.7 — Closing.\n\"You will receive a written test report within ten days after the test is completed, showing the results and your rights if you wish to appeal. Is there anything else I can help you with today?\"\n\n> Note: If the customer mentions they have already filed a complaint with the IURC, apply CIS hold code `HIURC` immediately and notify Brian Kowalski (P17) before continuing.\n\n*End of RPL-CS-PRO-007 v3.0*",
     "row_cells": null,
-    "parent_clause_id": null
+    "parent_clause_id": "RPL-CS-PRO-007:App-D"
   }
 ]

@@ -4276,7 +4276,7 @@
     "parent_clause_id": "RPL-DO-PLN-002:25"
   },
   {
-    "clause_id": "RPL-DO-PLN-002:25~c5",
+    "clause_id": "RPL-DO-PLN-002:25~c1",
     "doc_id": "RPL-DO-PLN-002",
     "ordinal": 273,
     "heading_path": [
@@ -4308,7 +4308,7 @@
       "2025 Treatment": "Routine cycle",
       "Scheduled Quarter": "Q2"
     },
-    "parent_clause_id": "RPL-DO-PLN-002:25~c5"
+    "parent_clause_id": "RPL-DO-PLN-002:25~c1"
   },
   {
     "clause_id": "RPL-DO-PLN-002:T25B.r2",
@@ -4330,7 +4330,7 @@
       "2025 Treatment": "Routine cycle",
       "Scheduled Quarter": "Q3"
     },
-    "parent_clause_id": "RPL-DO-PLN-002:25~c5"
+    "parent_clause_id": "RPL-DO-PLN-002:25~c1"
   },
   {
     "clause_id": "RPL-DO-PLN-002:T25B.r3",
@@ -4352,7 +4352,7 @@
       "2025 Treatment": "Routine cycle",
       "Scheduled Quarter": "Q1"
     },
-    "parent_clause_id": "RPL-DO-PLN-002:25~c5"
+    "parent_clause_id": "RPL-DO-PLN-002:25~c1"
   },
   {
     "clause_id": "RPL-DO-PLN-002:T25B.r4",
@@ -4374,7 +4374,7 @@
       "2025 Treatment": "Routine cycle",
       "Scheduled Quarter": "Q2"
     },
-    "parent_clause_id": "RPL-DO-PLN-002:25~c5"
+    "parent_clause_id": "RPL-DO-PLN-002:25~c1"
   },
   {
     "clause_id": "RPL-DO-PLN-002:T25B.r5",
@@ -4396,7 +4396,7 @@
       "2025 Treatment": "Routine cycle",
       "Scheduled Quarter": "Q2"
     },
-    "parent_clause_id": "RPL-DO-PLN-002:25~c5"
+    "parent_clause_id": "RPL-DO-PLN-002:25~c1"
   },
   {
     "clause_id": "RPL-DO-PLN-002:T25B.r6",
@@ -4418,7 +4418,7 @@
       "2025 Treatment": "Routine cycle",
       "Scheduled Quarter": "Q1"
     },
-    "parent_clause_id": "RPL-DO-PLN-002:25~c5"
+    "parent_clause_id": "RPL-DO-PLN-002:25~c1"
   },
   {
     "clause_id": "RPL-DO-PLN-002:T25B.r7",
@@ -4440,7 +4440,7 @@
       "2025 Treatment": "Routine cycle",
       "Scheduled Quarter": "Q3"
     },
-    "parent_clause_id": "RPL-DO-PLN-002:25~c5"
+    "parent_clause_id": "RPL-DO-PLN-002:25~c1"
   },
   {
     "clause_id": "RPL-DO-PLN-002:T25B.r8",
@@ -4462,7 +4462,7 @@
       "2025 Treatment": "Routine cycle",
       "Scheduled Quarter": "Q1"
     },
-    "parent_clause_id": "RPL-DO-PLN-002:25~c5"
+    "parent_clause_id": "RPL-DO-PLN-002:25~c1"
   },
   {
     "clause_id": "RPL-DO-PLN-002:T25B.r9",
@@ -4484,7 +4484,7 @@
       "2025 Treatment": "Routine cycle",
       "Scheduled Quarter": "Q2"
     },
-    "parent_clause_id": "RPL-DO-PLN-002:25~c5"
+    "parent_clause_id": "RPL-DO-PLN-002:25~c1"
   },
   {
     "clause_id": "RPL-DO-PLN-002:T25B.r10",
@@ -4506,10 +4506,10 @@
       "2025 Treatment": "Routine cycle",
       "Scheduled Quarter": "Q3"
     },
-    "parent_clause_id": "RPL-DO-PLN-002:25~c5"
+    "parent_clause_id": "RPL-DO-PLN-002:25~c1"
   },
   {
-    "clause_id": "RPL-DO-PLN-002:25~c6",
+    "clause_id": "RPL-DO-PLN-002:25~c2",
     "doc_id": "RPL-DO-PLN-002",
     "ordinal": 284,
     "heading_path": [
@@ -4522,7 +4522,7 @@
     "parent_clause_id": "RPL-DO-PLN-002:25"
   },
   {
-    "clause_id": "RPL-DO-PLN-002:25~c7",
+    "clause_id": "RPL-DO-PLN-002:25~c3",
     "doc_id": "RPL-DO-PLN-002",
     "ordinal": 285,
     "heading_path": [
@@ -4535,7 +4535,7 @@
     "parent_clause_id": "RPL-DO-PLN-002:25"
   },
   {
-    "clause_id": "RPL-DO-PLN-002:25~c7.tbl1.r1",
+    "clause_id": "RPL-DO-PLN-002:25~c3.tbl1.r1",
     "doc_id": "RPL-DO-PLN-002",
     "ordinal": 286,
     "heading_path": [
@@ -4551,10 +4551,10 @@
       "Contractor A": "528",
       "Contractor B": "325"
     },
-    "parent_clause_id": "RPL-DO-PLN-002:25~c7"
+    "parent_clause_id": "RPL-DO-PLN-002:25~c3"
   },
   {
-    "clause_id": "RPL-DO-PLN-002:25~c7.tbl1.r2",
+    "clause_id": "RPL-DO-PLN-002:25~c3.tbl1.r2",
     "doc_id": "RPL-DO-PLN-002",
     "ordinal": 287,
     "heading_path": [
@@ -4570,10 +4570,10 @@
       "Contractor A": "712",
       "Contractor B": "319"
     },
-    "parent_clause_id": "RPL-DO-PLN-002:25~c7"
+    "parent_clause_id": "RPL-DO-PLN-002:25~c3"
   },
   {
-    "clause_id": "RPL-DO-PLN-002:25~c7.tbl1.r3",
+    "clause_id": "RPL-DO-PLN-002:25~c3.tbl1.r3",
     "doc_id": "RPL-DO-PLN-002",
     "ordinal": 288,
     "heading_path": [
@@ -4589,10 +4589,10 @@
       "Contractor A": "648",
       "Contractor B": "184"
     },
-    "parent_clause_id": "RPL-DO-PLN-002:25~c7"
+    "parent_clause_id": "RPL-DO-PLN-002:25~c3"
   },
   {
-    "clause_id": "RPL-DO-PLN-002:25~c7.tbl1.r4",
+    "clause_id": "RPL-DO-PLN-002:25~c3.tbl1.r4",
     "doc_id": "RPL-DO-PLN-002",
     "ordinal": 289,
     "heading_path": [
@@ -4608,10 +4608,10 @@
       "Contractor A": "448",
       "Contractor B": "5"
     },
-    "parent_clause_id": "RPL-DO-PLN-002:25~c7"
+    "parent_clause_id": "RPL-DO-PLN-002:25~c3"
   },
   {
-    "clause_id": "RPL-DO-PLN-002:25~c7.tbl1.r5",
+    "clause_id": "RPL-DO-PLN-002:25~c3.tbl1.r5",
     "doc_id": "RPL-DO-PLN-002",
     "ordinal": 290,
     "heading_path": [
@@ -4627,7 +4627,7 @@
       "Contractor A": "2,336",
       "Contractor B": "833"
     },
-    "parent_clause_id": "RPL-DO-PLN-002:25~c7"
+    "parent_clause_id": "RPL-DO-PLN-002:25~c3"
   },
   {
     "clause_id": "RPL-DO-PLN-002:26",

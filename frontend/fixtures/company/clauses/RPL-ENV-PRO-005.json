@@ -3316,7 +3316,7 @@
     "parent_clause_id": "RPL-ENV-PRO-005:App-C"
   },
   {
-    "clause_id": "RPL-ENV-PRO-005:App-C~c8",
+    "clause_id": "RPL-ENV-PRO-005:App-C~c1",
     "doc_id": "RPL-ENV-PRO-005",
     "ordinal": 228,
     "heading_path": [
@@ -3449,7 +3449,7 @@
     "parent_clause_id": "RPL-ENV-PRO-005:App-D"
   },
   {
-    "clause_id": "RPL-ENV-PRO-005:App-D~c9",
+    "clause_id": "RPL-ENV-PRO-005:App-D~c1",
     "doc_id": "RPL-ENV-PRO-005",
     "ordinal": 236,
     "heading_path": [
@@ -3474,7 +3474,7 @@
     "parent_clause_id": null
   },
   {
-    "clause_id": "RPL-ENV-PRO-005:App-E~c10",
+    "clause_id": "RPL-ENV-PRO-005:App-E~c1",
     "doc_id": "RPL-ENV-PRO-005",
     "ordinal": 238,
     "heading_path": [
@@ -3487,7 +3487,7 @@
     "parent_clause_id": "RPL-ENV-PRO-005:App-E"
   },
   {
-    "clause_id": "RPL-ENV-PRO-005:App-E~c11",
+    "clause_id": "RPL-ENV-PRO-005:App-E~c2",
     "doc_id": "RPL-ENV-PRO-005",
     "ordinal": 239,
     "heading_path": [
@@ -3500,7 +3500,7 @@
     "parent_clause_id": "RPL-ENV-PRO-005:App-E"
   },
   {
-    "clause_id": "RPL-ENV-PRO-005:App-E~c12",
+    "clause_id": "RPL-ENV-PRO-005:App-E~c3",
     "doc_id": "RPL-ENV-PRO-005",
     "ordinal": 240,
     "heading_path": [

@@ -447,7 +447,7 @@
     "unit_kind": "section",
     "text_raw": "Rockridge Power & Light Company is authorized by the Indiana Utility Regulatory Commission to provide electric distribution service within its certificated service territory in the State of Indiana. The Company's service territory encompasses portions of the following fourteen (14) counties in west-central Indiana: Tippecanoe, Clinton, Carroll, White, Benton, Warren, Fountain, Montgomery, Boone, Hendricks, Putnam, Parke, Vermillion, and Vigo.",
     "row_cells": null,
-    "parent_clause_id": null
+    "parent_clause_id": "RPL-TAR-GRR-012:S02.1"
   },
   {
     "clause_id": "RPL-TAR-GRR-012:S04.2",
@@ -459,7 +459,7 @@
     "unit_kind": "section",
     "text_raw": "Service is provided from five (5) service centers: Lafayette (LAF), Crawfordsville (CRW), Terre Haute (THT), Frankfort (FRK), and Danville (DAN). The exact boundaries of the certificated service territory are on file with the IURC and available for inspection at the Company's principal office at 400 Wabash Commons Drive, Lafayette, IN 47901.",
     "row_cells": null,
-    "parent_clause_id": null
+    "parent_clause_id": "RPL-TAR-GRR-012:S02.1"
   },
   {
     "clause_id": "RPL-TAR-GRR-012:S04.3",
@@ -471,10 +471,10 @@
     "unit_kind": "section",
     "text_raw": "This tariff and all Rate Schedules herein apply only to service rendered within the certificated service territory of RPL pursuant to IC 8-1-2 and the applicable certificate of territorial authority on file with the Commission. Pursuant to 170 IAC 1-2-1, separate schedules are filed for each class of service.",
     "row_cells": null,
-    "parent_clause_id": null
+    "parent_clause_id": "RPL-TAR-GRR-012:S02.1"
   },
   {
-    "clause_id": "RPL-TAR-GRR-012:S04.3~c2",
+    "clause_id": "RPL-TAR-GRR-012:S04.3~c1",
     "doc_id": "RPL-TAR-GRR-012",
     "ordinal": 30,
     "heading_path": [
@@ -846,7 +846,7 @@
     "parent_clause_id": null
   },
   {
-    "clause_id": "RPL-TAR-GRR-012:R01.D30~c3",
+    "clause_id": "RPL-TAR-GRR-012:R01.D30~c1",
     "doc_id": "RPL-TAR-GRR-012",
     "ordinal": 61,
     "heading_path": [
@@ -918,7 +918,7 @@
     "parent_clause_id": null
   },
   {
-    "clause_id": "RPL-TAR-GRR-012:R02.5~c4",
+    "clause_id": "RPL-TAR-GRR-012:R02.5~c1",
     "doc_id": "RPL-TAR-GRR-012",
     "ordinal": 67,
     "heading_path": [
@@ -990,7 +990,7 @@
     "parent_clause_id": null
   },
   {
-    "clause_id": "RPL-TAR-GRR-012:R03.5~c5",
+    "clause_id": "RPL-TAR-GRR-012:R03.5~c1",
     "doc_id": "RPL-TAR-GRR-012",
     "ordinal": 73,
     "heading_path": [
@@ -1098,7 +1098,7 @@
     "parent_clause_id": null
   },
   {
-    "clause_id": "RPL-TAR-GRR-012:R04.8~c6",
+    "clause_id": "RPL-TAR-GRR-012:R04.8~c1",
     "doc_id": "RPL-TAR-GRR-012",
     "ordinal": 82,
     "heading_path": [
@@ -1182,7 +1182,7 @@
     "parent_clause_id": null
   },
   {
-    "clause_id": "RPL-TAR-GRR-012:R05.6~c7",
+    "clause_id": "RPL-TAR-GRR-012:R05.6~c1",
     "doc_id": "RPL-TAR-GRR-012",
     "ordinal": 89,
     "heading_path": [
@@ -1409,7 +1409,7 @@
     "parent_clause_id": null
   },
   {
-    "clause_id": "RPL-TAR-GRR-012:R06.8~c8",
+    "clause_id": "RPL-TAR-GRR-012:R06.8~c1",
     "doc_id": "RPL-TAR-GRR-012",
     "ordinal": 105,
     "heading_path": [
@@ -1481,7 +1481,7 @@
     "parent_clause_id": null
   },
   {
-    "clause_id": "RPL-TAR-GRR-012:R07.5~c9",
+    "clause_id": "RPL-TAR-GRR-012:R07.5~c1",
     "doc_id": "RPL-TAR-GRR-012",
     "ordinal": 111,
     "heading_path": [
@@ -1541,7 +1541,7 @@
     "parent_clause_id": null
   },
   {
-    "clause_id": "RPL-TAR-GRR-012:R08.4~c10",
+    "clause_id": "RPL-TAR-GRR-012:R08.4~c1",
     "doc_id": "RPL-TAR-GRR-012",
     "ordinal": 116,
     "heading_path": [
@@ -1673,7 +1673,7 @@
     "parent_clause_id": null
   },
   {
-    "clause_id": "RPL-TAR-GRR-012:R09.10~c11",
+    "clause_id": "RPL-TAR-GRR-012:R09.10~c1",
     "doc_id": "RPL-TAR-GRR-012",
     "ordinal": 127,
     "heading_path": [
@@ -1781,7 +1781,7 @@
     "parent_clause_id": null
   },
   {
-    "clause_id": "RPL-TAR-GRR-012:R10.8~c12",
+    "clause_id": "RPL-TAR-GRR-012:R10.8~c1",
     "doc_id": "RPL-TAR-GRR-012",
     "ordinal": 136,
     "heading_path": [
@@ -1889,7 +1889,7 @@
     "parent_clause_id": null
   },
   {
-    "clause_id": "RPL-TAR-GRR-012:R11.8~c13",
+    "clause_id": "RPL-TAR-GRR-012:R11.8~c1",
     "doc_id": "RPL-TAR-GRR-012",
     "ordinal": 145,
     "heading_path": [
@@ -1973,7 +1973,7 @@
     "parent_clause_id": null
   },
   {
-    "clause_id": "RPL-TAR-GRR-012:R12.6~c14",
+    "clause_id": "RPL-TAR-GRR-012:R12.6~c1",
     "doc_id": "RPL-TAR-GRR-012",
     "ordinal": 152,
     "heading_path": [
@@ -2117,7 +2117,7 @@
     "parent_clause_id": null
   },
   {
-    "clause_id": "RPL-TAR-GRR-012:R13.11~c15",
+    "clause_id": "RPL-TAR-GRR-012:R13.11~c1",
     "doc_id": "RPL-TAR-GRR-012",
     "ordinal": 164,
     "heading_path": [
@@ -2213,7 +2213,7 @@
     "parent_clause_id": null
   },
   {
-    "clause_id": "RPL-TAR-GRR-012:R14.6~c16",
+    "clause_id": "RPL-TAR-GRR-012:R14.6~c1",
     "doc_id": "RPL-TAR-GRR-012",
     "ordinal": 172,
     "heading_path": [
@@ -2261,7 +2261,7 @@
     "parent_clause_id": null
   },
   {
-    "clause_id": "RPL-TAR-GRR-012:R15.3~c17",
+    "clause_id": "RPL-TAR-GRR-012:R15.3~c1",
     "doc_id": "RPL-TAR-GRR-012",
     "ordinal": 176,
     "heading_path": [
@@ -2533,7 +2533,7 @@
     "parent_clause_id": null
   },
   {
-    "clause_id": "RPL-TAR-GRR-012:R16.3~c18",
+    "clause_id": "RPL-TAR-GRR-012:R16.3~c1",
     "doc_id": "RPL-TAR-GRR-012",
     "ordinal": 194,
     "heading_path": [
@@ -2557,7 +2557,7 @@
     "parent_clause_id": null
   },
   {
-    "clause_id": "RPL-TAR-GRR-012:S47.1~c19",
+    "clause_id": "RPL-TAR-GRR-012:S47.1~c1",
     "doc_id": "RPL-TAR-GRR-012",
     "ordinal": 196,
     "heading_path": [

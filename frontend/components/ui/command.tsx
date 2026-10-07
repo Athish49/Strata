@@ -14,7 +14,7 @@ export function CommandInput({ className, ...props }: React.ComponentProps<typeo
       <Search className="size-4 shrink-0 text-ink-3" strokeWidth={1.5} aria-hidden />
       <C.Input
         className={cn(
-          "h-full flex-1 bg-transparent text-[15px] text-ink outline-none placeholder:text-ink-3",
+          "h-full flex-1 bg-transparent text-[15px] text-ink outline-none focus-visible:outline-none placeholder:text-ink-3",
           className,
         )}
         {...props}

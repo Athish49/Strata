@@ -140,7 +140,9 @@ interface Unit {
   heading_path: string[];
   lines: string[];
   row_cells: Record<string, string> | null;
-  parent: string | null | undefined; // undefined => resolve from id structure
+  parent: string | null | undefined; // undefined => resolve from heading/id structure
+  hparent?: string | null; // nearest preceding heading-clause at creation time
+  isHeading?: boolean;
   explicitText?: string;
   children: number;
 }
@@ -184,7 +186,8 @@ function segmentMarkdown(docId: string, body: string): Clause[] {
   let started = false;
   let skipping = false; // inside an ignored (document control) region
   let tableAnchor: string | null = null;
-  let synth = 0;
+  const synth = new Map<string, number>();
+  const headingUnits: { level: number; id: string }[] = [];
   const tableCounter = new Map<string, number>();
 
   const path_ = () => {
@@ -208,6 +211,7 @@ function segmentMarkdown(docId: string, body: string): Clause[] {
       row_cells: null,
       parent,
       children: 0,
+      hparent: headingUnits.length ? headingUnits[headingUnits.length - 1].id : null,
     };
     usedIds.add(u.clause_id);
     units.push(u);
@@ -221,8 +225,9 @@ function segmentMarkdown(docId: string, body: string): Clause[] {
     if (unit) return unit;
     if (!started || skipping || !lastReal) return null;
     const base = (lastReal as Unit).clause_id.replace(/~.*$/, "");
-    synth++;
-    const u = open(`${base}~c${synth}`, (lastReal as Unit).kind === "form_field" ? "appendix" : (lastReal as Unit).kind);
+    const n = (synth.get(base) ?? 0) + 1;
+    synth.set(base, n);
+    const u = open(`${base}~c${n}`, (lastReal as Unit).kind === "form_field" ? "appendix" : (lastReal as Unit).kind);
     u.parent = base;
     return u;
   };
@@ -267,6 +272,7 @@ function segmentMarkdown(docId: string, body: string): Clause[] {
       const level = hm[1].length;
       const text = stripMd(hm[2]).trim();
       while (headings.length && headings[headings.length - 1].level >= level) headings.pop();
+      while (headingUnits.length && headingUnits[headingUnits.length - 1].level >= level) headingUnits.pop();
       headings.push({ level, text });
       sub = null;
       if (unit && !hasText(unit) && (unit as Unit).row_cells === null && (unit as Unit).kind !== "form_field") {
@@ -274,6 +280,10 @@ function segmentMarkdown(docId: string, body: string): Clause[] {
         (unit as Unit).heading_path = path_();
         (unit as Unit).lines.push(text);
         (unit as Unit).kind = kindForId((unit as Unit).clause_id, path_());
+        (unit as Unit).isHeading = true;
+        // a heading clause's parent is the enclosing heading clause, not itself
+        (unit as Unit).hparent = headingUnits.length ? headingUnits[headingUnits.length - 1].id : null;
+        headingUnits.push({ level, id: (unit as Unit).clause_id });
       } else {
         unit = null;
       }
@@ -387,10 +397,11 @@ function segmentMarkdown(docId: string, body: string): Clause[] {
     const fm = FIELD_RE.exec(t);
     if (fm) {
       const id = `App-${fm[1]}.${fm[2]}`;
-      if (unit && unit.clause_id === id && !hasText(unit)) {
-        unit.kind = "form_field";
-        unit.heading_path = path_();
-        unit.lines.push(line);
+      const cur = unit as Unit | null;
+      if (cur && cur.clause_id === id && !hasText(cur)) {
+        cur.kind = "form_field";
+        cur.heading_path = path_();
+        cur.lines.push(line);
       } else {
         unit = null;
         const u = open(id, "form_field");
@@ -414,6 +425,7 @@ function segmentMarkdown(docId: string, body: string): Clause[] {
   const resolveParent = (u: Unit): string | null => {
     if (u.parent !== undefined) return u.parent && ids.has(u.parent) ? u.parent : null;
     const id = u.clause_id;
+    if (u.hparent && ids.has(u.hparent) && u.hparent !== id) return u.hparent;
     if (id.includes("~")) {
       const b = id.replace(/~.*$/, "");
       if (b !== id && ids.has(b)) return b;
