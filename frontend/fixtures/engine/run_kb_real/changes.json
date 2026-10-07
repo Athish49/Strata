@@ -1,1 +1,2811 @@
-[]
+[
+  {
+    "change_id": "chg-170-iac-4-1-13",
+    "citation": "170 IAC 4-1-13",
+    "heading": "Customer deposits; interest; refund",
+    "source_system": "iac",
+    "rule_key": "170 IAC 4-1",
+    "agency_id": "iurc",
+    "title_number": "170",
+    "change_class": "cosmetic",
+    "diff_segments": [
+      {
+        "op": "equal",
+        "text": "170 IAC 4-1-13 Customer deposits; interest; refund\n\n(a) A utility may require a deposit from a residential customer only to secure payment of bills for service, and only where the customer has an unsatisfactory credit history as determined under the utility's approved tariff.\n\n(b) The deposit shall not exceed one-sixth (1/6) of the estimated annual billing for the customer. The utility shall give the customer a written receipt that states the amount, the interest rate, and the conditions of refund.\n\n(c) Interest on the deposit shall accrue at the rate set by the commission from the date of deposit and shall be credited annually or paid at refund.\n\n(d) The utility shall refund the deposit, with accrued interest, after twelve (12) consecutive months of prompt payment, or upon termination of service after deduction of any unpaid final bill.\n\n(Indiana Utility Regulatory Commission; 170 IAC 4-1-13; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722"
+      },
+      {
+        "op": "insert",
+        "text": "; readopted filed Dec 12, 2024, 2:05 p.m.: 20241218-IR-170240455RFA"
+      },
+      {
+        "op": "equal",
+        "text": ")"
+      }
+    ],
+    "s1_text": "170 IAC 4-1-13 Customer deposits; interest; refund\n\n(a) A utility may require a deposit from a residential customer only to secure payment of bills for service, and only where the customer has an unsatisfactory credit history as determined under the utility's approved tariff.\n\n(b) The deposit shall not exceed one-sixth (1/6) of the estimated annual billing for the customer. The utility shall give the customer a written receipt that states the amount, the interest rate, and the conditions of refund.\n\n(c) Interest on the deposit shall accrue at the rate set by the commission from the date of deposit and shall be credited annually or paid at refund.\n\n(d) The utility shall refund the deposit, with accrued interest, after twelve (12) consecutive months of prompt payment, or upon termination of service after deduction of any unpaid final bill.\n\n(Indiana Utility Regulatory Commission; 170 IAC 4-1-13; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722)",
+    "s2_text": "170 IAC 4-1-13 Customer deposits; interest; refund\n\n(a) A utility may require a deposit from a residential customer only to secure payment of bills for service, and only where the customer has an unsatisfactory credit history as determined under the utility's approved tariff.\n\n(b) The deposit shall not exceed one-sixth (1/6) of the estimated annual billing for the customer. The utility shall give the customer a written receipt that states the amount, the interest rate, and the conditions of refund.\n\n(c) Interest on the deposit shall accrue at the rate set by the commission from the date of deposit and shall be credited annually or paid at refund.\n\n(d) The utility shall refund the deposit, with accrued interest, after twelve (12) consecutive months of prompt payment, or upon termination of service after deduction of any unpaid final bill.\n\n(Indiana Utility Regulatory Commission; 170 IAC 4-1-13; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722; readopted filed Dec 12, 2024, 2:05 p.m.: 20241218-IR-170240455RFA)",
+    "published_date": "2024-12-18",
+    "date_basis": "Indiana Register publication of the readoption notice",
+    "din": "20241218-IR-170240101NRA",
+    "s1_snapshot": "2024-12-31",
+    "s2_snapshot": "2025-12-31",
+    "in_footprint": true,
+    "cited_clause_count": 94,
+    "characterization": {
+      "obligation_changed": false,
+      "direction": "style_only",
+      "summary": "Only a readoption stamp line was added to the history note; no operative text changed.",
+      "value_changes": []
+    },
+    "disposition": "Cleared — cosmetic",
+    "disposition_reason": "Only the readoption stamp changed. Every citing clause was checked and cleared.",
+    "placeholder": true
+  },
+  {
+    "change_id": "chg-170-iac-4-1-16",
+    "citation": "170 IAC 4-1-16",
+    "heading": "Disconnection; prohibited disconnections; reconnection",
+    "source_system": "iac",
+    "rule_key": "170 IAC 4-1",
+    "agency_id": "iurc",
+    "title_number": "170",
+    "change_class": "substantive",
+    "diff_segments": [
+      {
+        "op": "equal",
+        "text": "170 IAC 4-1-16 Disconnection of service; prohibited disconnections; reconnection\n\n(a) A customer may request that service be discontinued on any date after giving the utility reasonable notice. The customer remains liable for service furnished until three (3) working days after the requested discontinuance date, or until the date the utility actually discontinues service, whichever is earlier.\n\n(b) A utility may discontinue service without prior notice when a condition on the customer's premises is dangerous or hazardous to life, physical safety, or property, or when the utility has reasonable evidence of fraudulent or unauthorized use of electricity or of tampering with the utility's metering or regulating equipment. The utility shall document the specific basis for the discontinuance and, where practicable, leave written notice at the premises stating the reason.\n\n(c) A utility "
+      },
+      {
+        "op": "delete",
+        "text": "shall"
+      },
+      {
+        "op": "insert",
+        "text": "may"
+      },
+      {
+        "op": "equal",
+        "text": " not discontinue residential service for nonpayment where the customer has delivered, before the discontinuance date stated in the notice, a certificate from a licensed physician or public health official stating that discontinuance would be a serious and immediate threat to the health or safety of a person residing at the premises. The certificate postpones discontinuance for ten (10) days. The postponement shall be continued for one (1) additional ten (10) day period upon delivery of an additional certificate. The utility shall also offer a reasonable payment arrangement to any customer who demonstrates financial hardship.\n\n(d) A utility "
+      },
+      {
+        "op": "delete",
+        "text": "shall"
+      },
+      {
+        "op": "insert",
+        "text": "may"
+      },
+      {
+        "op": "equal",
+        "text": " not discontinue residential service for nonpayment (1) before 8:00 a.m. or after 3:00 p.m. prevailing local time; (2) on a day, or on the day preceding a day, on which the utility's business office is not open to the public; or (3) after noon on the day preceding a day on which the office is closed. This subsection does not apply to discontinuance under subsection (b).\n\n(e) Except as provided in subsection (b), a utility shall not discontinue residential service for nonpayment unless it has mailed or personally delivered written notice to the customer at least fourteen (14) days before the proposed discontinuance date. The notice must state: (1) the amount past due; (2) the date on or after which service will be discontinued unless payment or an arrangement is made; (3) the telephone number and address at which the customer may arrange payment or dispute the bill; (4) the availability of the medical certificate postponement; (5) the customer's right to file an informal complaint with the commission's consumer affairs division; and (6) the information required by 170 IAC 4-1-16.6 regarding energy assistance during the winter period.\n\n(f) A utility shall not discontinue service for nonpayment of charges that are the subject of an unresolved dispute filed under 170 IAC 16-1 where the customer is paying the undisputed portion of the bill.\n\n(g) Where service has been discontinued, the utility shall reconnect service within one (1) working day after the customer has paid the past-due amount, made an acceptable payment arrangement, or otherwise remedied the cause of discontinuance, and shall not impose a reconnection charge that exceeds the charge on file in its approved tariff.\n\n(Indiana Utility Regulatory Commission; 170 IAC 4-1-16; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722)"
+      }
+    ],
+    "s1_text": "170 IAC 4-1-16 Disconnection of service; prohibited disconnections; reconnection\n\n(a) A customer may request that service be discontinued on any date after giving the utility reasonable notice. The customer remains liable for service furnished until three (3) working days after the requested discontinuance date, or until the date the utility actually discontinues service, whichever is earlier.\n\n(b) A utility may discontinue service without prior notice when a condition on the customer's premises is dangerous or hazardous to life, physical safety, or property, or when the utility has reasonable evidence of fraudulent or unauthorized use of electricity or of tampering with the utility's metering or regulating equipment. The utility shall document the specific basis for the discontinuance and, where practicable, leave written notice at the premises stating the reason.\n\n(c) A utility shall not discontinue residential service for nonpayment where the customer has delivered, before the discontinuance date stated in the notice, a certificate from a licensed physician or public health official stating that discontinuance would be a serious and immediate threat to the health or safety of a person residing at the premises. The certificate postpones discontinuance for ten (10) days. The postponement shall be continued for one (1) additional ten (10) day period upon delivery of an additional certificate. The utility shall also offer a reasonable payment arrangement to any customer who demonstrates financial hardship.\n\n(d) A utility shall not discontinue residential service for nonpayment (1) before 8:00 a.m. or after 3:00 p.m. prevailing local time; (2) on a day, or on the day preceding a day, on which the utility's business office is not open to the public; or (3) after noon on the day preceding a day on which the office is closed. This subsection does not apply to discontinuance under subsection (b).\n\n(e) Except as provided in subsection (b), a utility shall not discontinue residential service for nonpayment unless it has mailed or personally delivered written notice to the customer at least fourteen (14) days before the proposed discontinuance date. The notice must state: (1) the amount past due; (2) the date on or after which service will be discontinued unless payment or an arrangement is made; (3) the telephone number and address at which the customer may arrange payment or dispute the bill; (4) the availability of the medical certificate postponement; (5) the customer's right to file an informal complaint with the commission's consumer affairs division; and (6) the information required by 170 IAC 4-1-16.6 regarding energy assistance during the winter period.\n\n(f) A utility shall not discontinue service for nonpayment of charges that are the subject of an unresolved dispute filed under 170 IAC 16-1 where the customer is paying the undisputed portion of the bill.\n\n(g) Where service has been discontinued, the utility shall reconnect service within one (1) working day after the customer has paid the past-due amount, made an acceptable payment arrangement, or otherwise remedied the cause of discontinuance, and shall not impose a reconnection charge that exceeds the charge on file in its approved tariff.\n\n(Indiana Utility Regulatory Commission; 170 IAC 4-1-16; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722)",
+    "s2_text": "170 IAC 4-1-16 Disconnection of service; prohibited disconnections; reconnection\n\n(a) A customer may request that service be discontinued on any date after giving the utility reasonable notice. The customer remains liable for service furnished until three (3) working days after the requested discontinuance date, or until the date the utility actually discontinues service, whichever is earlier.\n\n(b) A utility may discontinue service without prior notice when a condition on the customer's premises is dangerous or hazardous to life, physical safety, or property, or when the utility has reasonable evidence of fraudulent or unauthorized use of electricity or of tampering with the utility's metering or regulating equipment. The utility shall document the specific basis for the discontinuance and, where practicable, leave written notice at the premises stating the reason.\n\n(c) A utility may not discontinue residential service for nonpayment where the customer has delivered, before the discontinuance date stated in the notice, a certificate from a licensed physician or public health official stating that discontinuance would be a serious and immediate threat to the health or safety of a person residing at the premises. The certificate postpones discontinuance for ten (10) days. The postponement shall be continued for one (1) additional ten (10) day period upon delivery of an additional certificate. The utility shall also offer a reasonable payment arrangement to any customer who demonstrates financial hardship.\n\n(d) A utility may not discontinue residential service for nonpayment (1) before 8:00 a.m. or after 3:00 p.m. prevailing local time; (2) on a day, or on the day preceding a day, on which the utility's business office is not open to the public; or (3) after noon on the day preceding a day on which the office is closed. This subsection does not apply to discontinuance under subsection (b).\n\n(e) Except as provided in subsection (b), a utility shall not discontinue residential service for nonpayment unless it has mailed or personally delivered written notice to the customer at least fourteen (14) days before the proposed discontinuance date. The notice must state: (1) the amount past due; (2) the date on or after which service will be discontinued unless payment or an arrangement is made; (3) the telephone number and address at which the customer may arrange payment or dispute the bill; (4) the availability of the medical certificate postponement; (5) the customer's right to file an informal complaint with the commission's consumer affairs division; and (6) the information required by 170 IAC 4-1-16.6 regarding energy assistance during the winter period.\n\n(f) A utility shall not discontinue service for nonpayment of charges that are the subject of an unresolved dispute filed under 170 IAC 16-1 where the customer is paying the undisputed portion of the bill.\n\n(g) Where service has been discontinued, the utility shall reconnect service within one (1) working day after the customer has paid the past-due amount, made an acceptable payment arrangement, or otherwise remedied the cause of discontinuance, and shall not impose a reconnection charge that exceeds the charge on file in its approved tariff.\n\n(Indiana Utility Regulatory Commission; 170 IAC 4-1-16; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722)",
+    "published_date": "2025-03-12",
+    "date_basis": "Indiana Register publication (IURC-RM-24-11 readoption)",
+    "din": "20250312-IR-170250102NRA",
+    "s1_snapshot": "2024-12-31",
+    "s2_snapshot": "2025-12-31",
+    "in_footprint": true,
+    "cited_clause_count": 28,
+    "characterization": {
+      "obligation_changed": false,
+      "direction": "style_only",
+      "summary": "Paragraphs (c) and (d) now say \"may not\" instead of \"shall not\". The readoption notice states the prohibitions are unchanged, so the legal effect is the same.",
+      "value_changes": []
+    },
+    "disposition": "Cleared — same legal effect",
+    "disposition_reason": "Style-only rewording (\"shall not\" to \"may not\"); same legal effect. Every citing clause was checked and cleared.",
+    "placeholder": true
+  },
+  {
+    "change_id": "chg-170-iac-1-6-3",
+    "citation": "170 IAC 1-6-3",
+    "heading": "Administrative filings; timing",
+    "source_system": "iac",
+    "rule_key": "170 IAC 1-6",
+    "agency_id": "iurc",
+    "title_number": "170",
+    "change_class": "punctuation_only",
+    "diff_segments": [
+      {
+        "op": "equal",
+        "text": "170 IAC 1-6-3 Administrative filings; timing\n\n(a) A filing described in this rule is an administrative filing"
+      },
+      {
+        "op": "insert",
+        "text": ", "
+      },
+      {
+        "op": "equal",
+        "text": "and is effective thirty (30) days after the utility submits it to the commission unless the commission, by order, suspends the filing"
+      },
+      {
+        "op": "insert",
+        "text": ", "
+      },
+      {
+        "op": "equal",
+        "text": "sets it for hearing, or rejects it.\n\n(b) A utility shall serve a copy of each administrative filing on the office of utility consumer counselor on the same day it is submitted to the commission.\n\n(c) A utility shall not place an administrative filing into effect before the thirty (30) day period ends, except upon written approval of the commission secretary.\n\n(Indiana Utility Regulatory Commission; 170 IAC 1-6-3; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722)"
+      }
+    ],
+    "s1_text": "170 IAC 1-6-3 Administrative filings; timing\n\n(a) A filing described in this rule is an administrative filing and is effective thirty (30) days after the utility submits it to the commission unless the commission, by order, suspends the filing sets it for hearing, or rejects it.\n\n(b) A utility shall serve a copy of each administrative filing on the office of utility consumer counselor on the same day it is submitted to the commission.\n\n(c) A utility shall not place an administrative filing into effect before the thirty (30) day period ends, except upon written approval of the commission secretary.\n\n(Indiana Utility Regulatory Commission; 170 IAC 1-6-3; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722)",
+    "s2_text": "170 IAC 1-6-3 Administrative filings; timing\n\n(a) A filing described in this rule is an administrative filing, and is effective thirty (30) days after the utility submits it to the commission unless the commission, by order, suspends the filing, sets it for hearing, or rejects it.\n\n(b) A utility shall serve a copy of each administrative filing on the office of utility consumer counselor on the same day it is submitted to the commission.\n\n(c) A utility shall not place an administrative filing into effect before the thirty (30) day period ends, except upon written approval of the commission secretary.\n\n(Indiana Utility Regulatory Commission; 170 IAC 1-6-3; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722)",
+    "published_date": "2025-02-19",
+    "date_basis": "Indiana Register publication of the readoption notice",
+    "din": "20250219-IR-170250103NRA",
+    "s1_snapshot": "2024-12-31",
+    "s2_snapshot": "2025-12-31",
+    "in_footprint": true,
+    "cited_clause_count": 8,
+    "characterization": {
+      "obligation_changed": false,
+      "direction": "style_only",
+      "summary": "Commas were added in paragraph (a). No requirement, timing or actor changed.",
+      "value_changes": []
+    },
+    "disposition": "Cleared — punctuation only",
+    "disposition_reason": "Punctuation only. Every citing clause was checked and cleared.",
+    "placeholder": true
+  },
+  {
+    "change_id": "chg-170-iac-1-6-4",
+    "citation": "170 IAC 1-6-4",
+    "heading": "Administrative filings; contents",
+    "source_system": "iac",
+    "rule_key": "170 IAC 1-6",
+    "agency_id": "iurc",
+    "title_number": "170",
+    "change_class": "cosmetic",
+    "diff_segments": [
+      {
+        "op": "equal",
+        "text": "(a) Each administrative filing must include a verification, a statement of the relief requested, and the supporting schedules identified in the commission's filing checklist.\n\n(b) A filing that is incomplete may be returned by the commission secretary within ten (10) days after submission, in which case the thirty (30) day period under section 3 of this rule does not begin.\n\n(c) A utility shall retain the workpapers supporting the filing for a period of five (5) years after the filing becomes effective.\n\n(Indiana Utility Regulatory Commission; 170 IAC 1-6-4; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722"
+      },
+      {
+        "op": "insert",
+        "text": "; readopted filed Dec 12, 2024, 2:05 p.m.: 20241218-IR-170240455RFA"
+      },
+      {
+        "op": "equal",
+        "text": ")"
+      }
+    ],
+    "s1_text": "(a) Each administrative filing must include a verification, a statement of the relief requested, and the supporting schedules identified in the commission's filing checklist.\n\n(b) A filing that is incomplete may be returned by the commission secretary within ten (10) days after submission, in which case the thirty (30) day period under section 3 of this rule does not begin.\n\n(c) A utility shall retain the workpapers supporting the filing for a period of five (5) years after the filing becomes effective.\n\n(Indiana Utility Regulatory Commission; 170 IAC 1-6-4; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722)",
+    "s2_text": "(a) Each administrative filing must include a verification, a statement of the relief requested, and the supporting schedules identified in the commission's filing checklist.\n\n(b) A filing that is incomplete may be returned by the commission secretary within ten (10) days after submission, in which case the thirty (30) day period under section 3 of this rule does not begin.\n\n(c) A utility shall retain the workpapers supporting the filing for a period of five (5) years after the filing becomes effective.\n\n(Indiana Utility Regulatory Commission; 170 IAC 1-6-4; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722; readopted filed Dec 12, 2024, 2:05 p.m.: 20241218-IR-170240455RFA)",
+    "published_date": "2024-12-18",
+    "date_basis": "Indiana Register publication of the readoption notice",
+    "din": "20241218-IR-170240104NRA",
+    "s1_snapshot": "2024-12-31",
+    "s2_snapshot": "2025-12-31",
+    "in_footprint": true,
+    "cited_clause_count": 4,
+    "characterization": {
+      "obligation_changed": false,
+      "direction": "style_only",
+      "summary": "Only a readoption stamp line was added to the history note; no operative text changed.",
+      "value_changes": []
+    },
+    "disposition": "Cleared — cosmetic",
+    "disposition_reason": "Only the readoption stamp changed. Every citing clause was checked and cleared.",
+    "placeholder": true
+  },
+  {
+    "change_id": "chg-170-iac-1-6-5",
+    "citation": "170 IAC 1-6-5",
+    "heading": "Administrative filings; notice",
+    "source_system": "iac",
+    "rule_key": "170 IAC 1-6",
+    "agency_id": "iurc",
+    "title_number": "170",
+    "change_class": "cross_ref_only",
+    "diff_segments": [
+      {
+        "op": "equal",
+        "text": "(a) A utility shall give notice of an administrative filing by publication on its website and by posting in each business office for the period stated in section 3 of this rule.\n\n(b) The notice must identify the filing, the effective date, and the manner in which a customer may submit comments to the commission, and must refer to \"170 IAC 1-6-2"
+      },
+      {
+        "op": "insert",
+        "text": "(11)"
+      },
+      {
+        "op": "equal",
+        "text": "\" for the definitions used in the notice.\n\n(c) A utility shall file proof of notice with the commission within seven (7) days after the notice is first posted.\n\n(Indiana Utility Regulatory Commission; 170 IAC 1-6-5; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722)"
+      }
+    ],
+    "s1_text": "(a) A utility shall give notice of an administrative filing by publication on its website and by posting in each business office for the period stated in section 3 of this rule.\n\n(b) The notice must identify the filing, the effective date, and the manner in which a customer may submit comments to the commission, and must refer to \"170 IAC 1-6-2\" for the definitions used in the notice.\n\n(c) A utility shall file proof of notice with the commission within seven (7) days after the notice is first posted.\n\n(Indiana Utility Regulatory Commission; 170 IAC 1-6-5; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722)",
+    "s2_text": "(a) A utility shall give notice of an administrative filing by publication on its website and by posting in each business office for the period stated in section 3 of this rule.\n\n(b) The notice must identify the filing, the effective date, and the manner in which a customer may submit comments to the commission, and must refer to \"170 IAC 1-6-2(11)\" for the definitions used in the notice.\n\n(c) A utility shall file proof of notice with the commission within seven (7) days after the notice is first posted.\n\n(Indiana Utility Regulatory Commission; 170 IAC 1-6-5; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722)",
+    "published_date": "2025-02-19",
+    "date_basis": "Indiana Register publication of the readoption notice",
+    "din": "20250219-IR-170250105NRA",
+    "s1_snapshot": "2024-12-31",
+    "s2_snapshot": "2025-12-31",
+    "in_footprint": true,
+    "cited_clause_count": 6,
+    "characterization": {
+      "obligation_changed": false,
+      "direction": "style_only",
+      "summary": "A cross-reference was made more precise (\"170 IAC 1-6-2\" became \"170 IAC 1-6-2(11)\"). The obligation is unchanged.",
+      "value_changes": []
+    },
+    "disposition": "Cleared — cross-reference only",
+    "disposition_reason": "Cross-reference refinement only. Every citing clause was checked and cleared.",
+    "placeholder": true
+  },
+  {
+    "change_id": "chg-170-iac-16-1-4",
+    "citation": "170 IAC 16-1-4",
+    "heading": "Informal complaints; review",
+    "source_system": "iac",
+    "rule_key": "170 IAC 16-1",
+    "agency_id": "iurc",
+    "title_number": "170",
+    "change_class": "punctuation_only",
+    "diff_segments": [
+      {
+        "op": "equal",
+        "text": "(a) A customer who is dissatisfied with the utility's response to an informal complaint may request that the commission's consumer affairs division review the matter.\n\n(b) The utility shall respond to a consumer affairs inquiry within ten (10) days"
+      },
+      {
+        "op": "insert",
+        "text": ", "
+      },
+      {
+        "op": "equal",
+        "text": "and shall provide the account history, the notices issued"
+      },
+      {
+        "op": "insert",
+        "text": ", "
+      },
+      {
+        "op": "equal",
+        "text": "and a statement of its position.\n\n(c) The division shall issue a written determination, and the utility shall comply with that determination or file a formal complaint under 170 IAC 1-1.1.\n\n(Indiana Utility Regulatory Commission; 170 IAC 16-1-4; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722)"
+      }
+    ],
+    "s1_text": "(a) A customer who is dissatisfied with the utility's response to an informal complaint may request that the commission's consumer affairs division review the matter.\n\n(b) The utility shall respond to a consumer affairs inquiry within ten (10) days and shall provide the account history, the notices issued and a statement of its position.\n\n(c) The division shall issue a written determination, and the utility shall comply with that determination or file a formal complaint under 170 IAC 1-1.1.\n\n(Indiana Utility Regulatory Commission; 170 IAC 16-1-4; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722)",
+    "s2_text": "(a) A customer who is dissatisfied with the utility's response to an informal complaint may request that the commission's consumer affairs division review the matter.\n\n(b) The utility shall respond to a consumer affairs inquiry within ten (10) days, and shall provide the account history, the notices issued, and a statement of its position.\n\n(c) The division shall issue a written determination, and the utility shall comply with that determination or file a formal complaint under 170 IAC 1-1.1.\n\n(Indiana Utility Regulatory Commission; 170 IAC 16-1-4; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722)",
+    "published_date": "2025-04-23",
+    "date_basis": "Indiana Register publication of the readoption notice",
+    "din": "20250423-IR-170250106NRA",
+    "s1_snapshot": "2024-12-31",
+    "s2_snapshot": "2025-12-31",
+    "in_footprint": true,
+    "cited_clause_count": 10,
+    "characterization": {
+      "obligation_changed": false,
+      "direction": "style_only",
+      "summary": "Serial commas were added in paragraph (b). The ten-day response time is unchanged.",
+      "value_changes": []
+    },
+    "disposition": "Cleared — punctuation only",
+    "disposition_reason": "Punctuation only. Every citing clause was checked and cleared.",
+    "placeholder": true
+  },
+  {
+    "change_id": "chg-170-iac-16-1-5",
+    "citation": "170 IAC 16-1-5",
+    "heading": "Informal complaints; customer rights during review",
+    "source_system": "iac",
+    "rule_key": "170 IAC 16-1",
+    "agency_id": "iurc",
+    "title_number": "170",
+    "change_class": "cosmetic",
+    "diff_segments": [
+      {
+        "op": "equal",
+        "text": "(a) While an informal complaint is under review by the consumer affairs division, the utility shall not discontinue service for the disputed charges if the customer pays the undisputed portion of the bill.\n\n(b) The utility shall tell the customer, in writing, of the customer's right to file an informal complaint, at the time it denies a dispute.\n\n(c) The review period ends on the date the division mails its written determination to the customer and the utility.\n\n(Indiana Utility Regulatory Commission; 170 IAC 16-1-5; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722"
+      },
+      {
+        "op": "insert",
+        "text": "; readopted filed Dec 12, 2024, 2:05 p.m.: 20241218-IR-170240455RFA"
+      },
+      {
+        "op": "equal",
+        "text": ")"
+      }
+    ],
+    "s1_text": "(a) While an informal complaint is under review by the consumer affairs division, the utility shall not discontinue service for the disputed charges if the customer pays the undisputed portion of the bill.\n\n(b) The utility shall tell the customer, in writing, of the customer's right to file an informal complaint, at the time it denies a dispute.\n\n(c) The review period ends on the date the division mails its written determination to the customer and the utility.\n\n(Indiana Utility Regulatory Commission; 170 IAC 16-1-5; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722)",
+    "s2_text": "(a) While an informal complaint is under review by the consumer affairs division, the utility shall not discontinue service for the disputed charges if the customer pays the undisputed portion of the bill.\n\n(b) The utility shall tell the customer, in writing, of the customer's right to file an informal complaint, at the time it denies a dispute.\n\n(c) The review period ends on the date the division mails its written determination to the customer and the utility.\n\n(Indiana Utility Regulatory Commission; 170 IAC 16-1-5; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722; readopted filed Dec 12, 2024, 2:05 p.m.: 20241218-IR-170240455RFA)",
+    "published_date": "2024-12-18",
+    "date_basis": "Indiana Register publication of the readoption notice",
+    "din": "20241218-IR-170240107NRA",
+    "s1_snapshot": "2024-12-31",
+    "s2_snapshot": "2025-12-31",
+    "in_footprint": true,
+    "cited_clause_count": 6,
+    "characterization": {
+      "obligation_changed": false,
+      "direction": "style_only",
+      "summary": "Only a readoption stamp line was added to the history note; no operative text changed.",
+      "value_changes": []
+    },
+    "disposition": "Cleared — cosmetic",
+    "disposition_reason": "Only the readoption stamp changed. Every citing clause was checked and cleared.",
+    "placeholder": true
+  },
+  {
+    "change_id": "chg-170-iac-16-1-7",
+    "citation": "170 IAC 16-1-7",
+    "heading": "Informal complaints; disconnection hold",
+    "source_system": "iac",
+    "rule_key": "170 IAC 16-1",
+    "agency_id": "iurc",
+    "title_number": "170",
+    "change_class": "cross_ref_only",
+    "diff_segments": [
+      {
+        "op": "equal",
+        "text": "(a) A utility shall not discontinue service for the disputed amount while a complaint is under review by the consumer affairs division or the commission, and not sooner than ten (10) days after the division or commission issues its decision.\n\n(b) A customer who files a complaint shall notify the utility of the complaint reference number, and the utility shall record it in its customer information system.\n\n(c) The utility shall report complaint outcomes to the commission as required by IC 8-1-1-3"
+      },
+      {
+        "op": "insert",
+        "text": "(a)"
+      },
+      {
+        "op": "equal",
+        "text": ".\n\n(Indiana Utility Regulatory Commission; 170 IAC 16-1-7; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722)"
+      }
+    ],
+    "s1_text": "(a) A utility shall not discontinue service for the disputed amount while a complaint is under review by the consumer affairs division or the commission, and not sooner than ten (10) days after the division or commission issues its decision.\n\n(b) A customer who files a complaint shall notify the utility of the complaint reference number, and the utility shall record it in its customer information system.\n\n(c) The utility shall report complaint outcomes to the commission as required by IC 8-1-1-3.\n\n(Indiana Utility Regulatory Commission; 170 IAC 16-1-7; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722)",
+    "s2_text": "(a) A utility shall not discontinue service for the disputed amount while a complaint is under review by the consumer affairs division or the commission, and not sooner than ten (10) days after the division or commission issues its decision.\n\n(b) A customer who files a complaint shall notify the utility of the complaint reference number, and the utility shall record it in its customer information system.\n\n(c) The utility shall report complaint outcomes to the commission as required by IC 8-1-1-3(a).\n\n(Indiana Utility Regulatory Commission; 170 IAC 16-1-7; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722)",
+    "published_date": "2025-04-23",
+    "date_basis": "Indiana Register publication of the readoption notice",
+    "din": "20250423-IR-170250108NRA",
+    "s1_snapshot": "2024-12-31",
+    "s2_snapshot": "2025-12-31",
+    "in_footprint": true,
+    "cited_clause_count": 6,
+    "characterization": {
+      "obligation_changed": false,
+      "direction": "style_only",
+      "summary": "A statute reference was made more precise (\"IC 8-1-1-3\" became \"IC 8-1-1-3(a)\"). The reporting duty is unchanged.",
+      "value_changes": []
+    },
+    "disposition": "Cleared — cross-reference only",
+    "disposition_reason": "Cross-reference refinement only. Every citing clause was checked and cleared.",
+    "placeholder": true
+  },
+  {
+    "change_id": "chg-326-iac-2-8-4",
+    "citation": "326 IAC 2-8-4",
+    "heading": "FESOP; limitations on operation of engines",
+    "source_system": "iac",
+    "rule_key": "326 IAC 2-8",
+    "agency_id": "idem",
+    "title_number": "326",
+    "change_class": "substantive",
+    "diff_segments": [
+      {
+        "op": "equal",
+        "text": "(a) This section applies to a stationary reciprocating internal combustion engine used as an emergency or standby generator at a source that is subject to this rule.\n\n(b) The owner or operator shall limit operation for maintenance checks and readiness testing to "
+      },
+      {
+        "op": "delete",
+        "text": "fifty"
+      },
+      {
+        "op": "insert",
+        "text": "one hundred"
+      },
+      {
+        "op": "equal",
+        "text": " ("
+      },
+      {
+        "op": "delete",
+        "text": "50"
+      },
+      {
+        "op": "insert",
+        "text": "100"
+      },
+      {
+        "op": "equal",
+        "text": ") hours per calendar year.\n\n(c) The owner or operator shall keep a log of the date, duration, and purpose of each operation and shall retain the log for five (5) years."
+      }
+    ],
+    "s1_text": "(a) This section applies to a stationary reciprocating internal combustion engine used as an emergency or standby generator at a source that is subject to this rule.\n\n(b) The owner or operator shall limit operation for maintenance checks and readiness testing to fifty (50) hours per calendar year.\n\n(c) The owner or operator shall keep a log of the date, duration, and purpose of each operation and shall retain the log for five (5) years.",
+    "s2_text": "(a) This section applies to a stationary reciprocating internal combustion engine used as an emergency or standby generator at a source that is subject to this rule.\n\n(b) The owner or operator shall limit operation for maintenance checks and readiness testing to one hundred (100) hours per calendar year.\n\n(c) The owner or operator shall keep a log of the date, duration, and purpose of each operation and shall retain the log for five (5) years.",
+    "published_date": "2025-02-05",
+    "date_basis": "Effective date of IDEM-LSA-24-301 (published 2024-11-06)",
+    "din": "20250205-IR-170250109NRA",
+    "s1_snapshot": "2024-12-31",
+    "s2_snapshot": "2025-12-31",
+    "in_footprint": false,
+    "cited_clause_count": 0,
+    "characterization": {
+      "obligation_changed": true,
+      "direction": "relaxed",
+      "summary": "The annual cap on maintenance-check and readiness-test operation of emergency and standby engines rises from 50 to 100 hours.",
+      "value_changes": [
+        {
+          "label": "Emergency engine maintenance and testing hours",
+          "old": "50",
+          "new": "100",
+          "unit": "hours per year"
+        }
+      ]
+    },
+    "disposition": "Outside footprint",
+    "disposition_reason": "No RPL document cites this section. Screened on the Radar against the company profile.",
+    "placeholder": true
+  },
+  {
+    "change_id": "chg-40-cfr-60-4320",
+    "citation": "40 CFR 60.4320",
+    "heading": "Emission limits for nitrogen oxides; turbines",
+    "source_system": "cfr",
+    "rule_key": "40 CFR 60 Subpart KKKK",
+    "agency_id": "epa",
+    "title_number": "40",
+    "change_class": "substantive",
+    "diff_segments": [
+      {
+        "op": "equal",
+        "text": "(a) This section establishes the nitrogen oxides emission standard for new stationary combustion turbines that commence construction after the applicability date in the subpart.\n\n(b) The owner or operator of a turbine firing natural gas shall not discharge into the atmosphere any gases that contain nitrogen oxides in excess of "
+      },
+      {
+        "op": "delete",
+        "text": "25"
+      },
+      {
+        "op": "insert",
+        "text": "15"
+      },
+      {
+        "op": "equal",
+        "text": " ppm at 15 percent oxygen.\n\n(c) Compliance is determined by a performance test conducted in accordance with the methods referenced in this subpart."
+      }
+    ],
+    "s1_text": "(a) This section establishes the nitrogen oxides emission standard for new stationary combustion turbines that commence construction after the applicability date in the subpart.\n\n(b) The owner or operator of a turbine firing natural gas shall not discharge into the atmosphere any gases that contain nitrogen oxides in excess of 25 ppm at 15 percent oxygen.\n\n(c) Compliance is determined by a performance test conducted in accordance with the methods referenced in this subpart.",
+    "s2_text": "(a) This section establishes the nitrogen oxides emission standard for new stationary combustion turbines that commence construction after the applicability date in the subpart.\n\n(b) The owner or operator of a turbine firing natural gas shall not discharge into the atmosphere any gases that contain nitrogen oxides in excess of 15 ppm at 15 percent oxygen.\n\n(c) Compliance is determined by a performance test conducted in accordance with the methods referenced in this subpart.",
+    "published_date": "2025-06-10",
+    "date_basis": "Federal Register publication date (FR 2025-06114)",
+    "din": null,
+    "s1_snapshot": "2025-01-02",
+    "s2_snapshot": "2026-10-02",
+    "in_footprint": false,
+    "cited_clause_count": 0,
+    "characterization": {
+      "obligation_changed": true,
+      "direction": "tightened",
+      "summary": "The nitrogen oxides limit for new natural-gas-fired stationary combustion turbines falls from 25 ppm to 15 ppm.",
+      "value_changes": [
+        {
+          "label": "NOx limit, natural gas turbines",
+          "old": "25",
+          "new": "15",
+          "unit": "ppm at 15% O2"
+        }
+      ]
+    },
+    "disposition": "Outside footprint",
+    "disposition_reason": "No RPL document cites this section. Screened on the Radar against the company profile.",
+    "placeholder": true
+  },
+  {
+    "change_id": "chg-18-cfr-35-28",
+    "citation": "18 CFR 35.28",
+    "heading": "Non-discriminatory open access transmission tariff",
+    "source_system": "cfr",
+    "rule_key": "18 CFR 35 Subpart C",
+    "agency_id": "ferc",
+    "title_number": "18",
+    "change_class": "substantive",
+    "diff_segments": [
+      {
+        "op": "equal",
+        "text": "(a) Each public utility that is a participant in a Commission-approved regional transmission organization shall make its market rules "
+      },
+      {
+        "op": "insert",
+        "text": "and the associated business practice manuals "
+      },
+      {
+        "op": "equal",
+        "text": "available on its public website.\n\n(b) A market monitoring unit shall report to the Commission any identified market design flaw within "
+      },
+      {
+        "op": "delete",
+        "text": "thirty"
+      },
+      {
+        "op": "insert",
+        "text": "twenty"
+      },
+      {
+        "op": "equal",
+        "text": " ("
+      },
+      {
+        "op": "delete",
+        "text": "30"
+      },
+      {
+        "op": "insert",
+        "text": "20"
+      },
+      {
+        "op": "equal",
+        "text": ") days."
+      }
+    ],
+    "s1_text": "(a) Each public utility that is a participant in a Commission-approved regional transmission organization shall make its market rules available on its public website.\n\n(b) A market monitoring unit shall report to the Commission any identified market design flaw within thirty (30) days.",
+    "s2_text": "(a) Each public utility that is a participant in a Commission-approved regional transmission organization shall make its market rules and the associated business practice manuals available on its public website.\n\n(b) A market monitoring unit shall report to the Commission any identified market design flaw within twenty (20) days.",
+    "published_date": "2026-06-17",
+    "date_basis": "Federal Register publication date (FR 2026-06091)",
+    "din": null,
+    "s1_snapshot": "2025-01-02",
+    "s2_snapshot": "2026-10-02",
+    "in_footprint": false,
+    "cited_clause_count": 0,
+    "characterization": {
+      "obligation_changed": true,
+      "direction": "tightened",
+      "summary": "A market monitoring unit must now report an identified market design flaw within 20 days instead of 30.",
+      "value_changes": [
+        {
+          "label": "Market monitor flaw report deadline",
+          "old": "30",
+          "new": "20",
+          "unit": "days"
+        }
+      ]
+    },
+    "disposition": "Outside footprint",
+    "disposition_reason": "No RPL document cites this section. Screened on the Radar against the company profile.",
+    "placeholder": true
+  },
+  {
+    "change_id": "chg-326-iac-2-8-9",
+    "citation": "326 IAC 2-8-9",
+    "heading": "FESOP; recordkeeping",
+    "source_system": "iac",
+    "rule_key": "326 IAC 2-8",
+    "agency_id": "idem",
+    "title_number": "326",
+    "change_class": "substantive",
+    "diff_segments": [
+      {
+        "op": "equal",
+        "text": "326 IAC 2-8-9 FESOP; recordkeeping\n\n(a) The permittee shall keep records needed to show compliance with the limits in this rule.\n\n(b) Records shall be retained for "
+      },
+      {
+        "op": "delete",
+        "text": "three"
+      },
+      {
+        "op": "insert",
+        "text": "five"
+      },
+      {
+        "op": "equal",
+        "text": " ("
+      },
+      {
+        "op": "delete",
+        "text": "3"
+      },
+      {
+        "op": "insert",
+        "text": "5"
+      },
+      {
+        "op": "equal",
+        "text": ") years from the date of the entry.\n\n(c) Records required by this section shall be available for inspection on request.\n\n(Indiana Department of Environmental Management; 326 IAC 2-8-9; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722)"
+      }
+    ],
+    "s1_text": "326 IAC 2-8-9 FESOP; recordkeeping\n\n(a) The permittee shall keep records needed to show compliance with the limits in this rule.\n\n(b) Records shall be retained for three (3) years from the date of the entry.\n\n(c) Records required by this section shall be available for inspection on request.\n\n(Indiana Department of Environmental Management; 326 IAC 2-8-9; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722)",
+    "s2_text": "326 IAC 2-8-9 FESOP; recordkeeping\n\n(a) The permittee shall keep records needed to show compliance with the limits in this rule.\n\n(b) Records shall be retained for five (5) years from the date of the entry.\n\n(c) Records required by this section shall be available for inspection on request.\n\n(Indiana Department of Environmental Management; 326 IAC 2-8-9; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722)",
+    "published_date": "2025-07-16",
+    "date_basis": "Indiana Register publication date",
+    "din": "20250716-IR-170250110NRA",
+    "s1_snapshot": "2024-12-31",
+    "s2_snapshot": "2025-12-31",
+    "in_footprint": false,
+    "cited_clause_count": 0,
+    "characterization": {
+      "obligation_changed": true,
+      "direction": "tightened",
+      "summary": "FESOP compliance records must be kept for five years instead of three.",
+      "value_changes": [
+        {
+          "label": "FESOP record retention",
+          "old": "3",
+          "new": "5",
+          "unit": "years"
+        }
+      ]
+    },
+    "disposition": "Outside footprint",
+    "disposition_reason": "No RPL document cites this section. Screened on the Radar against the company profile.",
+    "placeholder": true
+  },
+  {
+    "change_id": "chg-326-iac-5-1-2",
+    "citation": "326 IAC 5-1-2",
+    "heading": "Opacity limitations",
+    "source_system": "iac",
+    "rule_key": "326 IAC 5-1",
+    "agency_id": "idem",
+    "title_number": "326",
+    "change_class": "substantive",
+    "diff_segments": [
+      {
+        "op": "equal",
+        "text": "326 IAC 5-1-2 Opacity limitations\n\n(a) This section sets the opacity limits for visible emissions from a stack or process.\n\n(b) Visible emissions shall not exceed an average of "
+      },
+      {
+        "op": "delete",
+        "text": "forty"
+      },
+      {
+        "op": "insert",
+        "text": "thirty"
+      },
+      {
+        "op": "equal",
+        "text": " percent ("
+      },
+      {
+        "op": "delete",
+        "text": "40"
+      },
+      {
+        "op": "insert",
+        "text": "30"
+      },
+      {
+        "op": "equal",
+        "text": "%) opacity in six (6) consecutive minutes.\n\n(c) Records required by this section shall be available for inspection on request.\n\n(Indiana Department of Environmental Management; 326 IAC 5-1-2; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722)"
+      }
+    ],
+    "s1_text": "326 IAC 5-1-2 Opacity limitations\n\n(a) This section sets the opacity limits for visible emissions from a stack or process.\n\n(b) Visible emissions shall not exceed an average of forty percent (40%) opacity in six (6) consecutive minutes.\n\n(c) Records required by this section shall be available for inspection on request.\n\n(Indiana Department of Environmental Management; 326 IAC 5-1-2; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722)",
+    "s2_text": "326 IAC 5-1-2 Opacity limitations\n\n(a) This section sets the opacity limits for visible emissions from a stack or process.\n\n(b) Visible emissions shall not exceed an average of thirty percent (30%) opacity in six (6) consecutive minutes.\n\n(c) Records required by this section shall be available for inspection on request.\n\n(Indiana Department of Environmental Management; 326 IAC 5-1-2; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722)",
+    "published_date": "2025-08-27",
+    "date_basis": "Indiana Register publication date",
+    "din": "20250827-IR-170250111NRA",
+    "s1_snapshot": "2024-12-31",
+    "s2_snapshot": "2025-12-31",
+    "in_footprint": false,
+    "cited_clause_count": 0,
+    "characterization": {
+      "obligation_changed": true,
+      "direction": "tightened",
+      "summary": "The six-minute average opacity limit tightens from 40 percent to 30 percent.",
+      "value_changes": [
+        {
+          "label": "Opacity limit",
+          "old": "40",
+          "new": "30",
+          "unit": "percent opacity"
+        }
+      ]
+    },
+    "disposition": "Outside footprint",
+    "disposition_reason": "No RPL document cites this section. Screened on the Radar against the company profile.",
+    "placeholder": true
+  },
+  {
+    "change_id": "chg-326-iac-6-3-2",
+    "citation": "326 IAC 6-3-2",
+    "heading": "Particulate emission limitations",
+    "source_system": "iac",
+    "rule_key": "326 IAC 6-3",
+    "agency_id": "idem",
+    "title_number": "326",
+    "change_class": "substantive",
+    "diff_segments": [
+      {
+        "op": "equal",
+        "text": "326 IAC 6-3-2 Particulate emission limitations\n\n(a) This section limits particulate emissions from manufacturing processes.\n\n(b) Particulate emissions shall not exceed 0."
+      },
+      {
+        "op": "delete",
+        "text": "03"
+      },
+      {
+        "op": "insert",
+        "text": "02"
+      },
+      {
+        "op": "equal",
+        "text": " grain per dry standard cubic foot of exhaust.\n\n(c) Records required by this section shall be available for inspection on request.\n\n(Indiana Department of Environmental Management; 326 IAC 6-3-2; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722)"
+      }
+    ],
+    "s1_text": "326 IAC 6-3-2 Particulate emission limitations\n\n(a) This section limits particulate emissions from manufacturing processes.\n\n(b) Particulate emissions shall not exceed 0.03 grain per dry standard cubic foot of exhaust.\n\n(c) Records required by this section shall be available for inspection on request.\n\n(Indiana Department of Environmental Management; 326 IAC 6-3-2; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722)",
+    "s2_text": "326 IAC 6-3-2 Particulate emission limitations\n\n(a) This section limits particulate emissions from manufacturing processes.\n\n(b) Particulate emissions shall not exceed 0.02 grain per dry standard cubic foot of exhaust.\n\n(c) Records required by this section shall be available for inspection on request.\n\n(Indiana Department of Environmental Management; 326 IAC 6-3-2; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722)",
+    "published_date": "2025-09-10",
+    "date_basis": "Indiana Register publication date",
+    "din": "20250910-IR-170250112NRA",
+    "s1_snapshot": "2024-12-31",
+    "s2_snapshot": "2025-12-31",
+    "in_footprint": false,
+    "cited_clause_count": 0,
+    "characterization": {
+      "obligation_changed": true,
+      "direction": "tightened",
+      "summary": "The particulate emission limit for manufacturing processes tightens from 0.03 to 0.02 grain per dry standard cubic foot.",
+      "value_changes": [
+        {
+          "label": "Particulate emission limit",
+          "old": "0.03",
+          "new": "0.02",
+          "unit": "grain/dscf"
+        }
+      ]
+    },
+    "disposition": "Outside footprint",
+    "disposition_reason": "No RPL document cites this section. Screened on the Radar against the company profile.",
+    "placeholder": true
+  },
+  {
+    "change_id": "chg-326-iac-10-1-1",
+    "citation": "326 IAC 10-1-1",
+    "heading": "NOx rules; applicability",
+    "source_system": "iac",
+    "rule_key": "326 IAC 10-1",
+    "agency_id": "idem",
+    "title_number": "326",
+    "change_class": "substantive",
+    "diff_segments": [
+      {
+        "op": "equal",
+        "text": "326 IAC 10-1-1 NOx rules; applicability\n\n(a) This rule applies to a source in a county designated for NOx reduction.\n\n(b) A source that emits "
+      },
+      {
+        "op": "delete",
+        "text": "twenty-five"
+      },
+      {
+        "op": "insert",
+        "text": "fifteen"
+      },
+      {
+        "op": "equal",
+        "text": " ("
+      },
+      {
+        "op": "delete",
+        "text": "25"
+      },
+      {
+        "op": "insert",
+        "text": "15"
+      },
+      {
+        "op": "equal",
+        "text": ") tons or more of NOx per year is subject to this rule.\n\n(c) Records required by this section shall be available for inspection on request.\n\n(Indiana Department of Environmental Management; 326 IAC 10-1-1; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722)"
+      }
+    ],
+    "s1_text": "326 IAC 10-1-1 NOx rules; applicability\n\n(a) This rule applies to a source in a county designated for NOx reduction.\n\n(b) A source that emits twenty-five (25) tons or more of NOx per year is subject to this rule.\n\n(c) Records required by this section shall be available for inspection on request.\n\n(Indiana Department of Environmental Management; 326 IAC 10-1-1; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722)",
+    "s2_text": "326 IAC 10-1-1 NOx rules; applicability\n\n(a) This rule applies to a source in a county designated for NOx reduction.\n\n(b) A source that emits fifteen (15) tons or more of NOx per year is subject to this rule.\n\n(c) Records required by this section shall be available for inspection on request.\n\n(Indiana Department of Environmental Management; 326 IAC 10-1-1; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722)",
+    "published_date": "2025-10-08",
+    "date_basis": "Indiana Register publication date",
+    "din": "20251008-IR-170250113NRA",
+    "s1_snapshot": "2024-12-31",
+    "s2_snapshot": "2025-12-31",
+    "in_footprint": false,
+    "cited_clause_count": 0,
+    "characterization": {
+      "obligation_changed": true,
+      "direction": "tightened",
+      "summary": "The NOx rule now applies to sources emitting 15 tons per year or more, down from 25.",
+      "value_changes": [
+        {
+          "label": "NOx applicability threshold",
+          "old": "25",
+          "new": "15",
+          "unit": "tons per year"
+        }
+      ]
+    },
+    "disposition": "Outside footprint",
+    "disposition_reason": "No RPL document cites this section. Screened on the Radar against the company profile.",
+    "placeholder": true
+  },
+  {
+    "change_id": "chg-327-iac-5-4-6",
+    "citation": "327 IAC 5-4-6",
+    "heading": "Stormwater; construction",
+    "source_system": "iac",
+    "rule_key": "327 IAC 5-4",
+    "agency_id": "idem",
+    "title_number": "327",
+    "change_class": "substantive",
+    "diff_segments": [
+      {
+        "op": "equal",
+        "text": "327 IAC 5-4-6 Stormwater; construction\n\n(a) This section governs stormwater discharges from construction activity.\n\n(b) A site disturbing one"
+      },
+      {
+        "op": "insert",
+        "text": "-half "
+      },
+      {
+        "op": "equal",
+        "text": "("
+      },
+      {
+        "op": "delete",
+        "text": "1"
+      },
+      {
+        "op": "insert",
+        "text": "0.5"
+      },
+      {
+        "op": "equal",
+        "text": ") acre or more shall submit a notice of intent before land disturbance begins.\n\n(c) Records required by this section shall be available for inspection on request.\n\n(Indiana Department of Environmental Management; 327 IAC 5-4-6; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722)"
+      }
+    ],
+    "s1_text": "327 IAC 5-4-6 Stormwater; construction\n\n(a) This section governs stormwater discharges from construction activity.\n\n(b) A site disturbing one (1) acre or more shall submit a notice of intent before land disturbance begins.\n\n(c) Records required by this section shall be available for inspection on request.\n\n(Indiana Department of Environmental Management; 327 IAC 5-4-6; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722)",
+    "s2_text": "327 IAC 5-4-6 Stormwater; construction\n\n(a) This section governs stormwater discharges from construction activity.\n\n(b) A site disturbing one-half (0.5) acre or more shall submit a notice of intent before land disturbance begins.\n\n(c) Records required by this section shall be available for inspection on request.\n\n(Indiana Department of Environmental Management; 327 IAC 5-4-6; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722)",
+    "published_date": "2026-01-14",
+    "date_basis": "Indiana Register publication date",
+    "din": "20260114-IR-170260114NRA",
+    "s1_snapshot": "2024-12-31",
+    "s2_snapshot": "2025-12-31",
+    "in_footprint": false,
+    "cited_clause_count": 0,
+    "characterization": {
+      "obligation_changed": true,
+      "direction": "tightened",
+      "summary": "A notice of intent is now needed for sites disturbing half an acre or more, instead of one acre.",
+      "value_changes": [
+        {
+          "label": "Construction stormwater notice threshold",
+          "old": "1",
+          "new": "0.5",
+          "unit": "acres"
+        }
+      ]
+    },
+    "disposition": "Outside footprint",
+    "disposition_reason": "No RPL document cites this section. Screened on the Radar against the company profile.",
+    "placeholder": true
+  },
+  {
+    "change_id": "chg-327-iac-15-6-1",
+    "citation": "327 IAC 15-6-1",
+    "heading": "Industrial stormwater; Rule 6",
+    "source_system": "iac",
+    "rule_key": "327 IAC 15-6",
+    "agency_id": "idem",
+    "title_number": "327",
+    "change_class": "substantive",
+    "diff_segments": [
+      {
+        "op": "equal",
+        "text": "327 IAC 15-6-1 Industrial stormwater; Rule 6\n\n(a) This rule covers stormwater discharges associated with industrial activity.\n\n(b) A permittee shall collect quarterly stormwater samples "
+      },
+      {
+        "op": "insert",
+        "text": "and shall post each result on a public website within thirty (30) days"
+      },
+      {
+        "op": "equal",
+        "text": ".\n\n(c) Records required by this section shall be available for inspection on request.\n\n(Indiana Department of Environmental Management; 327 IAC 15-6-1; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722)"
+      }
+    ],
+    "s1_text": "327 IAC 15-6-1 Industrial stormwater; Rule 6\n\n(a) This rule covers stormwater discharges associated with industrial activity.\n\n(b) A permittee shall collect quarterly stormwater samples.\n\n(c) Records required by this section shall be available for inspection on request.\n\n(Indiana Department of Environmental Management; 327 IAC 15-6-1; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722)",
+    "s2_text": "327 IAC 15-6-1 Industrial stormwater; Rule 6\n\n(a) This rule covers stormwater discharges associated with industrial activity.\n\n(b) A permittee shall collect quarterly stormwater samples and shall post each result on a public website within thirty (30) days.\n\n(c) Records required by this section shall be available for inspection on request.\n\n(Indiana Department of Environmental Management; 327 IAC 15-6-1; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722)",
+    "published_date": "2026-02-04",
+    "date_basis": "Indiana Register publication date",
+    "din": "20260204-IR-170260115NRA",
+    "s1_snapshot": "2024-12-31",
+    "s2_snapshot": "2025-12-31",
+    "in_footprint": false,
+    "cited_clause_count": 0,
+    "characterization": {
+      "obligation_changed": true,
+      "direction": "new_requirement",
+      "summary": "Industrial stormwater permittees must also post each sample result publicly within 30 days.",
+      "value_changes": [
+        {
+          "label": "Public posting of sample results",
+          "old": "none",
+          "new": "30",
+          "unit": "days"
+        }
+      ]
+    },
+    "disposition": "Outside footprint",
+    "disposition_reason": "No RPL document cites this section. Screened on the Radar against the company profile.",
+    "placeholder": true
+  },
+  {
+    "change_id": "chg-40-cfr-63-6603",
+    "citation": "40 CFR 63.6603",
+    "heading": "Stationary engines; emission limits",
+    "source_system": "cfr",
+    "rule_key": "40 CFR 63 Subpart ZZZZ",
+    "agency_id": "epa",
+    "title_number": "40",
+    "change_class": "substantive",
+    "diff_segments": [
+      {
+        "op": "equal",
+        "text": "(a) This section sets emission limits for existing stationary reciprocating internal combustion engines.\n\n(b) An owner or operator of an emergency engine shall limit carbon monoxide to "
+      },
+      {
+        "op": "delete",
+        "text": "23"
+      },
+      {
+        "op": "insert",
+        "text": "20"
+      },
+      {
+        "op": "equal",
+        "text": " ppmvd at 15 percent oxygen.\n\n(c) Records required by this section shall be available for inspection on request."
+      }
+    ],
+    "s1_text": "(a) This section sets emission limits for existing stationary reciprocating internal combustion engines.\n\n(b) An owner or operator of an emergency engine shall limit carbon monoxide to 23 ppmvd at 15 percent oxygen.\n\n(c) Records required by this section shall be available for inspection on request.",
+    "s2_text": "(a) This section sets emission limits for existing stationary reciprocating internal combustion engines.\n\n(b) An owner or operator of an emergency engine shall limit carbon monoxide to 20 ppmvd at 15 percent oxygen.\n\n(c) Records required by this section shall be available for inspection on request.",
+    "published_date": "2025-10-21",
+    "date_basis": "Federal Register publication date (FR 2025-10190)",
+    "din": null,
+    "s1_snapshot": "2025-01-02",
+    "s2_snapshot": "2026-10-02",
+    "in_footprint": false,
+    "cited_clause_count": 0,
+    "characterization": {
+      "obligation_changed": true,
+      "direction": "tightened",
+      "summary": "The carbon monoxide limit for emergency stationary engines tightens from 23 to 20 ppmvd.",
+      "value_changes": [
+        {
+          "label": "CO limit, emergency engines",
+          "old": "23",
+          "new": "20",
+          "unit": "ppmvd at 15% O2"
+        }
+      ]
+    },
+    "disposition": "Outside footprint",
+    "disposition_reason": "No RPL document cites this section. Screened on the Radar against the company profile.",
+    "placeholder": true
+  },
+  {
+    "change_id": "chg-40-cfr-60-5520",
+    "citation": "40 CFR 60.5520",
+    "heading": "Carbon dioxide emission standards",
+    "source_system": "cfr",
+    "rule_key": "40 CFR 60 Subpart TTTT",
+    "agency_id": "epa",
+    "title_number": "40",
+    "change_class": "substantive",
+    "diff_segments": [
+      {
+        "op": "equal",
+        "text": "(a) This section sets carbon dioxide standards for affected fossil fuel-fired electric generating units.\n\n(b) An affected unit shall not discharge more than 1,"
+      },
+      {
+        "op": "delete",
+        "text": "400"
+      },
+      {
+        "op": "insert",
+        "text": "200"
+      },
+      {
+        "op": "equal",
+        "text": " lb CO2 per MWh gross output.\n\n(c) Records required by this section shall be available for inspection on request."
+      }
+    ],
+    "s1_text": "(a) This section sets carbon dioxide standards for affected fossil fuel-fired electric generating units.\n\n(b) An affected unit shall not discharge more than 1,400 lb CO2 per MWh gross output.\n\n(c) Records required by this section shall be available for inspection on request.",
+    "s2_text": "(a) This section sets carbon dioxide standards for affected fossil fuel-fired electric generating units.\n\n(b) An affected unit shall not discharge more than 1,200 lb CO2 per MWh gross output.\n\n(c) Records required by this section shall be available for inspection on request.",
+    "published_date": "2026-05-28",
+    "date_basis": "Federal Register publication date (FR 2026-05022)",
+    "din": null,
+    "s1_snapshot": "2025-01-02",
+    "s2_snapshot": "2026-10-02",
+    "in_footprint": false,
+    "cited_clause_count": 0,
+    "characterization": {
+      "obligation_changed": true,
+      "direction": "tightened",
+      "summary": "The CO2 standard for affected generating units tightens from 1,400 to 1,200 lb per MWh.",
+      "value_changes": [
+        {
+          "label": "CO2 output standard",
+          "old": "1,400",
+          "new": "1,200",
+          "unit": "lb CO2/MWh"
+        }
+      ]
+    },
+    "disposition": "Outside footprint",
+    "disposition_reason": "No RPL document cites this section. Screened on the Radar against the company profile.",
+    "placeholder": true
+  },
+  {
+    "change_id": "chg-40-cfr-63-10005",
+    "citation": "40 CFR 63.10005",
+    "heading": "Electric utility steam generating units; compliance",
+    "source_system": "cfr",
+    "rule_key": "40 CFR 63 Subpart UUUUU",
+    "agency_id": "epa",
+    "title_number": "40",
+    "change_class": "substantive",
+    "diff_segments": [
+      {
+        "op": "equal",
+        "text": "(a) This section sets compliance requirements for electric utility steam generating units.\n\n(b) An owner or operator shall demonstrate compliance on a "
+      },
+      {
+        "op": "delete",
+        "text": "90"
+      },
+      {
+        "op": "insert",
+        "text": "30"
+      },
+      {
+        "op": "equal",
+        "text": "-day rolling average basis.\n\n(c) Records required by this section shall be available for inspection on request."
+      }
+    ],
+    "s1_text": "(a) This section sets compliance requirements for electric utility steam generating units.\n\n(b) An owner or operator shall demonstrate compliance on a 90-day rolling average basis.\n\n(c) Records required by this section shall be available for inspection on request.",
+    "s2_text": "(a) This section sets compliance requirements for electric utility steam generating units.\n\n(b) An owner or operator shall demonstrate compliance on a 30-day rolling average basis.\n\n(c) Records required by this section shall be available for inspection on request.",
+    "published_date": "2026-03-19",
+    "date_basis": "Federal Register publication date (FR 2026-00977)",
+    "din": null,
+    "s1_snapshot": "2025-01-02",
+    "s2_snapshot": "2026-10-02",
+    "in_footprint": false,
+    "cited_clause_count": 0,
+    "characterization": {
+      "obligation_changed": true,
+      "direction": "tightened",
+      "summary": "Compliance for steam generating units is judged on a 30-day rolling average instead of 90 days.",
+      "value_changes": [
+        {
+          "label": "Compliance averaging period",
+          "old": "90",
+          "new": "30",
+          "unit": "days"
+        }
+      ]
+    },
+    "disposition": "Outside footprint",
+    "disposition_reason": "No RPL document cites this section. Screened on the Radar against the company profile.",
+    "placeholder": true
+  },
+  {
+    "change_id": "chg-40-cfr-72-90",
+    "citation": "40 CFR 72.90",
+    "heading": "Annual reconciliation",
+    "source_system": "cfr",
+    "rule_key": "40 CFR 72 Subpart A",
+    "agency_id": "epa",
+    "title_number": "40",
+    "change_class": "substantive",
+    "diff_segments": [
+      {
+        "op": "equal",
+        "text": "(a) The designated representative shall submit an annual reconciliation of allowances held and emissions.\n\n(b) The reconciliation is due by March "
+      },
+      {
+        "op": "delete",
+        "text": "1"
+      },
+      {
+        "op": "insert",
+        "text": "31"
+      },
+      {
+        "op": "equal",
+        "text": " following the compliance year.\n\n(c) Records required by this section shall be available for inspection on request."
+      }
+    ],
+    "s1_text": "(a) The designated representative shall submit an annual reconciliation of allowances held and emissions.\n\n(b) The reconciliation is due by March 1 following the compliance year.\n\n(c) Records required by this section shall be available for inspection on request.",
+    "s2_text": "(a) The designated representative shall submit an annual reconciliation of allowances held and emissions.\n\n(b) The reconciliation is due by March 31 following the compliance year.\n\n(c) Records required by this section shall be available for inspection on request.",
+    "published_date": "2026-04-02",
+    "date_basis": "Federal Register publication date (FR 2026-03611)",
+    "din": null,
+    "s1_snapshot": "2025-01-02",
+    "s2_snapshot": "2026-10-02",
+    "in_footprint": false,
+    "cited_clause_count": 0,
+    "characterization": {
+      "obligation_changed": true,
+      "direction": "relaxed",
+      "summary": "The Acid Rain annual reconciliation deadline moves from March 1 to March 31.",
+      "value_changes": [
+        {
+          "label": "Annual reconciliation due date",
+          "old": "March 1",
+          "new": "March 31",
+          "unit": null
+        }
+      ]
+    },
+    "disposition": "Outside footprint",
+    "disposition_reason": "No RPL document cites this section. Screened on the Radar against the company profile.",
+    "placeholder": true
+  },
+  {
+    "change_id": "chg-18-cfr-35-13",
+    "citation": "18 CFR 35.13",
+    "heading": "Filing of changes in rate schedules",
+    "source_system": "cfr",
+    "rule_key": "18 CFR 35 Subpart B",
+    "agency_id": "ferc",
+    "title_number": "18",
+    "change_class": "substantive",
+    "diff_segments": [
+      {
+        "op": "equal",
+        "text": "(a) A public utility that changes a rate schedule shall file the change under this section.\n\n(b) A filing shall be made at least sixty (60) days and not more than "
+      },
+      {
+        "op": "delete",
+        "text": "one hundred twenty"
+      },
+      {
+        "op": "insert",
+        "text": "ninety"
+      },
+      {
+        "op": "equal",
+        "text": " ("
+      },
+      {
+        "op": "delete",
+        "text": "120"
+      },
+      {
+        "op": "insert",
+        "text": "90"
+      },
+      {
+        "op": "equal",
+        "text": ") days before the proposed effective date.\n\n(c) Records required by this section shall be available for inspection on request."
+      }
+    ],
+    "s1_text": "(a) A public utility that changes a rate schedule shall file the change under this section.\n\n(b) A filing shall be made at least sixty (60) days and not more than one hundred twenty (120) days before the proposed effective date.\n\n(c) Records required by this section shall be available for inspection on request.",
+    "s2_text": "(a) A public utility that changes a rate schedule shall file the change under this section.\n\n(b) A filing shall be made at least sixty (60) days and not more than ninety (90) days before the proposed effective date.\n\n(c) Records required by this section shall be available for inspection on request.",
+    "published_date": "2026-03-05",
+    "date_basis": "Federal Register publication date (FR 2026-02755)",
+    "din": null,
+    "s1_snapshot": "2025-01-02",
+    "s2_snapshot": "2026-10-02",
+    "in_footprint": false,
+    "cited_clause_count": 0,
+    "characterization": {
+      "obligation_changed": true,
+      "direction": "tightened",
+      "summary": "A rate schedule change can be filed no earlier than 90 days before its effective date, down from 120.",
+      "value_changes": [
+        {
+          "label": "Maximum advance filing window",
+          "old": "120",
+          "new": "90",
+          "unit": "days"
+        }
+      ]
+    },
+    "disposition": "Outside footprint",
+    "disposition_reason": "No RPL document cites this section. Screened on the Radar against the company profile.",
+    "placeholder": true
+  },
+  {
+    "change_id": "chg-18-cfr-35-36",
+    "citation": "18 CFR 35.36",
+    "heading": "Generator interconnection",
+    "source_system": "cfr",
+    "rule_key": "18 CFR 35 Subpart C",
+    "agency_id": "ferc",
+    "title_number": "18",
+    "change_class": "substantive",
+    "diff_segments": [
+      {
+        "op": "equal",
+        "text": "(a) A transmission provider shall process generator interconnection requests under this section.\n\n(b) The provider shall complete each system impact study within "
+      },
+      {
+        "op": "delete",
+        "text": "ninety"
+      },
+      {
+        "op": "insert",
+        "text": "sixty"
+      },
+      {
+        "op": "equal",
+        "text": " ("
+      },
+      {
+        "op": "delete",
+        "text": "90"
+      },
+      {
+        "op": "insert",
+        "text": "60"
+      },
+      {
+        "op": "equal",
+        "text": ") days of a complete request.\n\n(c) Records required by this section shall be available for inspection on request."
+      }
+    ],
+    "s1_text": "(a) A transmission provider shall process generator interconnection requests under this section.\n\n(b) The provider shall complete each system impact study within ninety (90) days of a complete request.\n\n(c) Records required by this section shall be available for inspection on request.",
+    "s2_text": "(a) A transmission provider shall process generator interconnection requests under this section.\n\n(b) The provider shall complete each system impact study within sixty (60) days of a complete request.\n\n(c) Records required by this section shall be available for inspection on request.",
+    "published_date": "2026-08-20",
+    "date_basis": "Federal Register publication date (FR 2026-08812)",
+    "din": null,
+    "s1_snapshot": "2025-01-02",
+    "s2_snapshot": "2026-10-02",
+    "in_footprint": false,
+    "cited_clause_count": 0,
+    "characterization": {
+      "obligation_changed": true,
+      "direction": "tightened",
+      "summary": "Transmission providers must finish generator system impact studies in 60 days instead of 90.",
+      "value_changes": [
+        {
+          "label": "System impact study deadline",
+          "old": "90",
+          "new": "60",
+          "unit": "days"
+        }
+      ]
+    },
+    "disposition": "Outside footprint",
+    "disposition_reason": "No RPL document cites this section. Screened on the Radar against the company profile.",
+    "placeholder": true
+  },
+  {
+    "change_id": "chg-18-cfr-37-6",
+    "citation": "18 CFR 37.6",
+    "heading": "Information to be posted on an OASIS",
+    "source_system": "cfr",
+    "rule_key": "18 CFR 37 Subpart A",
+    "agency_id": "ferc",
+    "title_number": "18",
+    "change_class": "substantive",
+    "diff_segments": [
+      {
+        "op": "equal",
+        "text": "(a) A transmission provider shall post specified information on its OASIS.\n\n(b) The provider shall post planned outages when they are scheduled "
+      },
+      {
+        "op": "insert",
+        "text": "and shall update the posting within one (1) business day of any change"
+      },
+      {
+        "op": "equal",
+        "text": ".\n\n(c) Records required by this section shall be available for inspection on request."
+      }
+    ],
+    "s1_text": "(a) A transmission provider shall post specified information on its OASIS.\n\n(b) The provider shall post planned outages when they are scheduled.\n\n(c) Records required by this section shall be available for inspection on request.",
+    "s2_text": "(a) A transmission provider shall post specified information on its OASIS.\n\n(b) The provider shall post planned outages when they are scheduled and shall update the posting within one (1) business day of any change.\n\n(c) Records required by this section shall be available for inspection on request.",
+    "published_date": "2026-01-29",
+    "date_basis": "Federal Register publication date (FR 2026-00412)",
+    "din": null,
+    "s1_snapshot": "2025-01-02",
+    "s2_snapshot": "2026-10-02",
+    "in_footprint": false,
+    "cited_clause_count": 0,
+    "characterization": {
+      "obligation_changed": true,
+      "direction": "new_requirement",
+      "summary": "OASIS outage postings must be updated within one business day of any change.",
+      "value_changes": [
+        {
+          "label": "Outage posting update",
+          "old": "none",
+          "new": "1",
+          "unit": "business day"
+        }
+      ]
+    },
+    "disposition": "Outside footprint",
+    "disposition_reason": "No RPL document cites this section. Screened on the Radar against the company profile.",
+    "placeholder": true
+  },
+  {
+    "change_id": "chg-170-iac-2-1-2",
+    "citation": "170 IAC 2-1-2",
+    "heading": "Utility fees; calculation",
+    "source_system": "iac",
+    "rule_key": "170 IAC 2-1",
+    "agency_id": "iurc",
+    "title_number": "170",
+    "change_class": "substantive",
+    "diff_segments": [
+      {
+        "op": "equal",
+        "text": "170 IAC 2-1-2 Utility fees; calculation\n\n(a) The commission shall assess a utility fee each year on gross intrastate operating revenues.\n\n(b) The fee rate is "
+      },
+      {
+        "op": "delete",
+        "text": "one"
+      },
+      {
+        "op": "insert",
+        "text": "twelve"
+      },
+      {
+        "op": "equal",
+        "text": "-"
+      },
+      {
+        "op": "delete",
+        "text": "tenth"
+      },
+      {
+        "op": "insert",
+        "text": "hundredths"
+      },
+      {
+        "op": "equal",
+        "text": " of one percent (0."
+      },
+      {
+        "op": "delete",
+        "text": "10"
+      },
+      {
+        "op": "insert",
+        "text": "12"
+      },
+      {
+        "op": "equal",
+        "text": "%) of gross intrastate operating revenues.\n\n(c) Records required by this section shall be available for inspection on request.\n\n(Indiana Utility Regulatory Commission; 170 IAC 2-1-2; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722)"
+      }
+    ],
+    "s1_text": "170 IAC 2-1-2 Utility fees; calculation\n\n(a) The commission shall assess a utility fee each year on gross intrastate operating revenues.\n\n(b) The fee rate is one-tenth of one percent (0.10%) of gross intrastate operating revenues.\n\n(c) Records required by this section shall be available for inspection on request.\n\n(Indiana Utility Regulatory Commission; 170 IAC 2-1-2; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722)",
+    "s2_text": "170 IAC 2-1-2 Utility fees; calculation\n\n(a) The commission shall assess a utility fee each year on gross intrastate operating revenues.\n\n(b) The fee rate is twelve-hundredths of one percent (0.12%) of gross intrastate operating revenues.\n\n(c) Records required by this section shall be available for inspection on request.\n\n(Indiana Utility Regulatory Commission; 170 IAC 2-1-2; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722)",
+    "published_date": "2025-09-24",
+    "date_basis": "Indiana Register publication date",
+    "din": "20250924-IR-170250116NRA",
+    "s1_snapshot": "2024-12-31",
+    "s2_snapshot": "2025-12-31",
+    "in_footprint": false,
+    "cited_clause_count": 0,
+    "characterization": {
+      "obligation_changed": true,
+      "direction": "tightened",
+      "summary": "The annual IURC utility fee rate rises from 0.10 to 0.12 percent of gross intrastate revenues.",
+      "value_changes": [
+        {
+          "label": "Utility fee rate",
+          "old": "0.10",
+          "new": "0.12",
+          "unit": "percent of revenues"
+        }
+      ]
+    },
+    "disposition": "Outside footprint",
+    "disposition_reason": "No RPL document cites this section. Screened on the Radar against the company profile.",
+    "placeholder": true
+  },
+  {
+    "change_id": "chg-170-iac-6-1-1",
+    "citation": "170 IAC 6-1-1",
+    "heading": "Energy efficiency programs; applicability",
+    "source_system": "iac",
+    "rule_key": "170 IAC 6-1",
+    "agency_id": "iurc",
+    "title_number": "170",
+    "change_class": "substantive",
+    "diff_segments": [
+      {
+        "op": "equal",
+        "text": "170 IAC 6-1-1 Energy efficiency programs; applicability\n\n(a) This rule applies to an electric utility that offers an energy efficiency program.\n\n(b) A utility shall file an annual program report with the commission "
+      },
+      {
+        "op": "insert",
+        "text": "and shall include verified savings by customer class"
+      },
+      {
+        "op": "equal",
+        "text": ".\n\n(c) Records required by this section shall be available for inspection on request.\n\n(Indiana Utility Regulatory Commission; 170 IAC 6-1-1; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722)"
+      }
+    ],
+    "s1_text": "170 IAC 6-1-1 Energy efficiency programs; applicability\n\n(a) This rule applies to an electric utility that offers an energy efficiency program.\n\n(b) A utility shall file an annual program report with the commission.\n\n(c) Records required by this section shall be available for inspection on request.\n\n(Indiana Utility Regulatory Commission; 170 IAC 6-1-1; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722)",
+    "s2_text": "170 IAC 6-1-1 Energy efficiency programs; applicability\n\n(a) This rule applies to an electric utility that offers an energy efficiency program.\n\n(b) A utility shall file an annual program report with the commission and shall include verified savings by customer class.\n\n(c) Records required by this section shall be available for inspection on request.\n\n(Indiana Utility Regulatory Commission; 170 IAC 6-1-1; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722)",
+    "published_date": "2025-11-12",
+    "date_basis": "Indiana Register publication date",
+    "din": "20251112-IR-170250117NRA",
+    "s1_snapshot": "2024-12-31",
+    "s2_snapshot": "2025-12-31",
+    "in_footprint": false,
+    "cited_clause_count": 0,
+    "characterization": {
+      "obligation_changed": true,
+      "direction": "new_requirement",
+      "summary": "Annual energy efficiency program reports must now break verified savings out by customer class.",
+      "value_changes": [
+        {
+          "label": "Verified savings by customer class",
+          "old": "none",
+          "new": "required",
+          "unit": null
+        }
+      ]
+    },
+    "disposition": "Outside footprint",
+    "disposition_reason": "No RPL document cites this section. Screened on the Radar against the company profile.",
+    "placeholder": true
+  },
+  {
+    "change_id": "chg-170-iac-3-1-1",
+    "citation": "170 IAC 3-1-1",
+    "heading": "Gas pipeline safety; applicability",
+    "source_system": "iac",
+    "rule_key": "170 IAC 3-1",
+    "agency_id": "iurc",
+    "title_number": "170",
+    "change_class": "substantive",
+    "diff_segments": [
+      {
+        "op": "equal",
+        "text": "170 IAC 3-1-1 Gas pipeline safety; applicability\n\n(a) This rule applies to a gas utility that operates a pipeline in Indiana.\n\n(b) A leak survey of each distribution main shall be completed every "
+      },
+      {
+        "op": "delete",
+        "text": "three"
+      },
+      {
+        "op": "insert",
+        "text": "two"
+      },
+      {
+        "op": "equal",
+        "text": " ("
+      },
+      {
+        "op": "delete",
+        "text": "3"
+      },
+      {
+        "op": "insert",
+        "text": "2"
+      },
+      {
+        "op": "equal",
+        "text": ") years.\n\n(c) Records required by this section shall be available for inspection on request.\n\n(Indiana Utility Regulatory Commission; 170 IAC 3-1-1; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722)"
+      }
+    ],
+    "s1_text": "170 IAC 3-1-1 Gas pipeline safety; applicability\n\n(a) This rule applies to a gas utility that operates a pipeline in Indiana.\n\n(b) A leak survey of each distribution main shall be completed every three (3) years.\n\n(c) Records required by this section shall be available for inspection on request.\n\n(Indiana Utility Regulatory Commission; 170 IAC 3-1-1; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722)",
+    "s2_text": "170 IAC 3-1-1 Gas pipeline safety; applicability\n\n(a) This rule applies to a gas utility that operates a pipeline in Indiana.\n\n(b) A leak survey of each distribution main shall be completed every two (2) years.\n\n(c) Records required by this section shall be available for inspection on request.\n\n(Indiana Utility Regulatory Commission; 170 IAC 3-1-1; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722)",
+    "published_date": "2025-05-14",
+    "date_basis": "Indiana Register publication date",
+    "din": "20250514-IR-170250118NRA",
+    "s1_snapshot": "2024-12-31",
+    "s2_snapshot": "2025-12-31",
+    "in_footprint": false,
+    "cited_clause_count": 0,
+    "characterization": {
+      "obligation_changed": true,
+      "direction": "tightened",
+      "summary": "Gas distribution mains must be leak-surveyed every two years instead of every three.",
+      "value_changes": [
+        {
+          "label": "Leak survey interval",
+          "old": "3",
+          "new": "2",
+          "unit": "years"
+        }
+      ]
+    },
+    "disposition": "Outside footprint",
+    "disposition_reason": "No RPL document cites this section. Screened on the Radar against the company profile.",
+    "placeholder": true
+  },
+  {
+    "change_id": "chg-170-iac-5-1-1",
+    "citation": "170 IAC 5-1-1",
+    "heading": "Water and sewage utilities; applicability",
+    "source_system": "iac",
+    "rule_key": "170 IAC 5-1",
+    "agency_id": "iurc",
+    "title_number": "170",
+    "change_class": "substantive",
+    "diff_segments": [
+      {
+        "op": "equal",
+        "text": "170 IAC 5-1-1 Water and sewage utilities; applicability\n\n(a) This rule applies to a water or sewage utility regulated by the commission.\n\n(b) A utility shall file a rate case notice "
+      },
+      {
+        "op": "delete",
+        "text": "sixty"
+      },
+      {
+        "op": "insert",
+        "text": "thirty"
+      },
+      {
+        "op": "equal",
+        "text": " ("
+      },
+      {
+        "op": "delete",
+        "text": "60"
+      },
+      {
+        "op": "insert",
+        "text": "30"
+      },
+      {
+        "op": "equal",
+        "text": ") days before filing.\n\n(c) Records required by this section shall be available for inspection on request.\n\n(Indiana Utility Regulatory Commission; 170 IAC 5-1-1; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722)"
+      }
+    ],
+    "s1_text": "170 IAC 5-1-1 Water and sewage utilities; applicability\n\n(a) This rule applies to a water or sewage utility regulated by the commission.\n\n(b) A utility shall file a rate case notice sixty (60) days before filing.\n\n(c) Records required by this section shall be available for inspection on request.\n\n(Indiana Utility Regulatory Commission; 170 IAC 5-1-1; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722)",
+    "s2_text": "170 IAC 5-1-1 Water and sewage utilities; applicability\n\n(a) This rule applies to a water or sewage utility regulated by the commission.\n\n(b) A utility shall file a rate case notice thirty (30) days before filing.\n\n(c) Records required by this section shall be available for inspection on request.\n\n(Indiana Utility Regulatory Commission; 170 IAC 5-1-1; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722)",
+    "published_date": "2025-06-25",
+    "date_basis": "Indiana Register publication date",
+    "din": "20250625-IR-170250119NRA",
+    "s1_snapshot": "2024-12-31",
+    "s2_snapshot": "2025-12-31",
+    "in_footprint": false,
+    "cited_clause_count": 0,
+    "characterization": {
+      "obligation_changed": true,
+      "direction": "relaxed",
+      "summary": "Water and sewage utilities may give rate case notice 30 days ahead instead of 60.",
+      "value_changes": [
+        {
+          "label": "Rate case notice lead time",
+          "old": "60",
+          "new": "30",
+          "unit": "days"
+        }
+      ]
+    },
+    "disposition": "Outside footprint",
+    "disposition_reason": "No RPL document cites this section. Screened on the Radar against the company profile.",
+    "placeholder": true
+  },
+  {
+    "change_id": "chg-170-iac-7-1-1",
+    "citation": "170 IAC 7-1-1",
+    "heading": "Large load interconnection; definitions",
+    "source_system": "iac",
+    "rule_key": "170 IAC 7-1",
+    "agency_id": "iurc",
+    "title_number": "170",
+    "change_class": "new_section",
+    "diff_segments": [
+      {
+        "op": "insert",
+        "text": "170 IAC 7-1-1 Large load interconnection; definitions\n\n(a) This rule establishes the process for a customer load of one hundred (100) megawatts or more to interconnect to a utility system.\n\n(b) A utility shall provide a written interconnection study estimate within sixty (60) days of a complete application.\n\n(c) Records required by this section shall be available for inspection on request.\n\n(Indiana Utility Regulatory Commission; 170 IAC 7-1-1; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722)"
+      }
+    ],
+    "s1_text": "",
+    "s2_text": "170 IAC 7-1-1 Large load interconnection; definitions\n\n(a) This rule establishes the process for a customer load of one hundred (100) megawatts or more to interconnect to a utility system.\n\n(b) A utility shall provide a written interconnection study estimate within sixty (60) days of a complete application.\n\n(c) Records required by this section shall be available for inspection on request.\n\n(Indiana Utility Regulatory Commission; 170 IAC 7-1-1; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722)",
+    "published_date": "2026-02-18",
+    "date_basis": "Indiana Register publication (IURC-RM-26-01)",
+    "din": "20260218-IR-170260120NRA",
+    "s1_snapshot": "2024-12-31",
+    "s2_snapshot": "2025-12-31",
+    "in_footprint": false,
+    "cited_clause_count": 0,
+    "characterization": {
+      "obligation_changed": true,
+      "direction": "new_requirement",
+      "summary": "New section creating a large load interconnection process with a 60-day study estimate.",
+      "value_changes": [
+        {
+          "label": "New large load interconnection process",
+          "old": "none",
+          "new": "60",
+          "unit": "days"
+        }
+      ]
+    },
+    "disposition": "Outside footprint",
+    "disposition_reason": "No RPL document cites this section. Screened on the Radar against the company profile.",
+    "placeholder": true
+  },
+  {
+    "change_id": "chg-326-iac-12-1-1",
+    "citation": "326 IAC 12-1-1",
+    "heading": "Federal NSPS incorporation",
+    "source_system": "iac",
+    "rule_key": "326 IAC 12-1",
+    "agency_id": "idem",
+    "title_number": "326",
+    "change_class": "new_section",
+    "diff_segments": [
+      {
+        "op": "insert",
+        "text": "326 IAC 12-1-1 Federal NSPS incorporation\n\n(a) This section incorporates by reference the federal new source performance standards adopted after 2024.\n\n(b) An owner or operator of an affected facility shall comply with each incorporated standard as of its federal effective date.\n\n(c) Records required by this section shall be available for inspection on request.\n\n(Indiana Department of Environmental Management; 326 IAC 12-1-1; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722)"
+      }
+    ],
+    "s1_text": "",
+    "s2_text": "326 IAC 12-1-1 Federal NSPS incorporation\n\n(a) This section incorporates by reference the federal new source performance standards adopted after 2024.\n\n(b) An owner or operator of an affected facility shall comply with each incorporated standard as of its federal effective date.\n\n(c) Records required by this section shall be available for inspection on request.\n\n(Indiana Department of Environmental Management; 326 IAC 12-1-1; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722)",
+    "published_date": "2026-03-26",
+    "date_basis": "Indiana Register publication (IDEM-LSA-26-090)",
+    "din": "20260326-IR-170260121NRA",
+    "s1_snapshot": "2024-12-31",
+    "s2_snapshot": "2025-12-31",
+    "in_footprint": false,
+    "cited_clause_count": 0,
+    "characterization": {
+      "obligation_changed": true,
+      "direction": "new_requirement",
+      "summary": "New incorporation section brings recent federal NSPS standards into Indiana air rules.",
+      "value_changes": [
+        {
+          "label": "NSPS incorporation update",
+          "old": "none",
+          "new": "incorporated",
+          "unit": null
+        }
+      ]
+    },
+    "disposition": "Outside footprint",
+    "disposition_reason": "No RPL document cites this section. Screened on the Radar against the company profile.",
+    "placeholder": true
+  },
+  {
+    "change_id": "chg-40-cfr-60-4333",
+    "citation": "40 CFR 60.4333",
+    "heading": "General compliance requirements; turbines",
+    "source_system": "cfr",
+    "rule_key": "40 CFR 60 Subpart KKKK",
+    "agency_id": "epa",
+    "title_number": "40",
+    "change_class": "new_section",
+    "diff_segments": [
+      {
+        "op": "insert",
+        "text": "(a) This section sets general compliance requirements for affected stationary combustion turbines.\n\n(b) The owner or operator shall operate and maintain each turbine and its emission controls in a manner consistent with good air pollution control practice.\n\n(c) Records required by this section shall be available for inspection on request."
+      }
+    ],
+    "s1_text": "",
+    "s2_text": "(a) This section sets general compliance requirements for affected stationary combustion turbines.\n\n(b) The owner or operator shall operate and maintain each turbine and its emission controls in a manner consistent with good air pollution control practice.\n\n(c) Records required by this section shall be available for inspection on request.",
+    "published_date": "2025-06-10",
+    "date_basis": "Federal Register publication date (FR 2025-06114)",
+    "din": null,
+    "s1_snapshot": "2025-01-02",
+    "s2_snapshot": "2026-10-02",
+    "in_footprint": false,
+    "cited_clause_count": 0,
+    "characterization": {
+      "obligation_changed": true,
+      "direction": "new_requirement",
+      "summary": "New paragraph set requires turbines and controls to be run per good air pollution control practice.",
+      "value_changes": [
+        {
+          "label": "General turbine compliance duty",
+          "old": "none",
+          "new": "required",
+          "unit": null
+        }
+      ]
+    },
+    "disposition": "Outside footprint",
+    "disposition_reason": "No RPL document cites this section. Screened on the Radar against the company profile.",
+    "placeholder": true
+  },
+  {
+    "change_id": "chg-326-iac-2-3-1",
+    "citation": "326 IAC 2-3-1",
+    "heading": "Emission offset (obsolete)",
+    "source_system": "iac",
+    "rule_key": "326 IAC 2-3",
+    "agency_id": "idem",
+    "title_number": "326",
+    "change_class": "repealed",
+    "diff_segments": [
+      {
+        "op": "equal",
+        "text": "326 IAC 2-3-1 Emission offset (obsolete)\n\n"
+      },
+      {
+        "op": "delete",
+        "text": "Emission offset (obsolete)"
+      },
+      {
+        "op": "insert",
+        "text": "[Section repealed"
+      },
+      {
+        "op": "equal",
+        "text": "."
+      },
+      {
+        "op": "delete",
+        "text": " This section text is placeholder sample content written for the Strata demo and is not the text of 326 IAC 2-3-1. It stands in for the rule body so that the regulations tree, section page and search have realistic shapes to render.\n\n(Indiana Department of Environmental Management; 326 IAC 2-3-1; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722)"
+      },
+      {
+        "op": "insert",
+        "text": "]"
+      }
+    ],
+    "s1_text": "326 IAC 2-3-1 Emission offset (obsolete)\n\nEmission offset (obsolete). This section text is placeholder sample content written for the Strata demo and is not the text of 326 IAC 2-3-1. It stands in for the rule body so that the regulations tree, section page and search have realistic shapes to render.\n\n(Indiana Department of Environmental Management; 326 IAC 2-3-1; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722)",
+    "s2_text": "326 IAC 2-3-1 Emission offset (obsolete)\n\n[Section repealed.]",
+    "published_date": "2025-04-09",
+    "date_basis": "Indiana Register publication date",
+    "din": "20250409-IR-170250122NRA",
+    "s1_snapshot": "2024-12-31",
+    "s2_snapshot": "2025-12-31",
+    "in_footprint": false,
+    "cited_clause_count": 0,
+    "characterization": {
+      "obligation_changed": true,
+      "direction": "removed",
+      "summary": "Obsolete emission offset section repealed.",
+      "value_changes": []
+    },
+    "disposition": "Outside footprint",
+    "disposition_reason": "No RPL document cites this section. Screened on the Radar against the company profile.",
+    "placeholder": true
+  },
+  {
+    "change_id": "chg-326-iac-1-7-1",
+    "citation": "326 IAC 1-7-1",
+    "heading": "Stack height (obsolete)",
+    "source_system": "iac",
+    "rule_key": "326 IAC 1-7",
+    "agency_id": "idem",
+    "title_number": "326",
+    "change_class": "repealed",
+    "diff_segments": [
+      {
+        "op": "equal",
+        "text": "326 IAC 1-7-1 Stack height (obsolete)\n\n"
+      },
+      {
+        "op": "delete",
+        "text": "Stack height (obsolete)"
+      },
+      {
+        "op": "insert",
+        "text": "[Section repealed"
+      },
+      {
+        "op": "equal",
+        "text": "."
+      },
+      {
+        "op": "delete",
+        "text": " This section text is placeholder sample content written for the Strata demo and is not the text of 326 IAC 1-7-1. It stands in for the rule body so that the regulations tree, section page and search have realistic shapes to render.\n\n(Indiana Department of Environmental Management; 326 IAC 1-7-1; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722)"
+      },
+      {
+        "op": "insert",
+        "text": "]"
+      }
+    ],
+    "s1_text": "326 IAC 1-7-1 Stack height (obsolete)\n\nStack height (obsolete). This section text is placeholder sample content written for the Strata demo and is not the text of 326 IAC 1-7-1. It stands in for the rule body so that the regulations tree, section page and search have realistic shapes to render.\n\n(Indiana Department of Environmental Management; 326 IAC 1-7-1; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722)",
+    "s2_text": "326 IAC 1-7-1 Stack height (obsolete)\n\n[Section repealed.]",
+    "published_date": "2025-04-09",
+    "date_basis": "Indiana Register publication date",
+    "din": "20250409-IR-170250123NRA",
+    "s1_snapshot": "2024-12-31",
+    "s2_snapshot": "2025-12-31",
+    "in_footprint": false,
+    "cited_clause_count": 0,
+    "characterization": {
+      "obligation_changed": true,
+      "direction": "removed",
+      "summary": "Obsolete stack height section repealed.",
+      "value_changes": []
+    },
+    "disposition": "Outside footprint",
+    "disposition_reason": "No RPL document cites this section. Screened on the Radar against the company profile.",
+    "placeholder": true
+  },
+  {
+    "change_id": "chg-327-iac-16-1-1",
+    "citation": "327 IAC 16-1-1",
+    "heading": "Spill prevention (obsolete)",
+    "source_system": "iac",
+    "rule_key": "327 IAC 16-1",
+    "agency_id": "idem",
+    "title_number": "327",
+    "change_class": "repealed",
+    "diff_segments": [
+      {
+        "op": "equal",
+        "text": "327 IAC 16-1-1 Spill prevention (obsolete)\n\n"
+      },
+      {
+        "op": "delete",
+        "text": "Spill prevention (obsolete)"
+      },
+      {
+        "op": "insert",
+        "text": "[Section repealed"
+      },
+      {
+        "op": "equal",
+        "text": "."
+      },
+      {
+        "op": "delete",
+        "text": " This section text is placeholder sample content written for the Strata demo and is not the text of 327 IAC 16-1-1. It stands in for the rule body so that the regulations tree, section page and search have realistic shapes to render.\n\n(Indiana Department of Environmental Management; 327 IAC 16-1-1; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722)"
+      },
+      {
+        "op": "insert",
+        "text": "]"
+      }
+    ],
+    "s1_text": "327 IAC 16-1-1 Spill prevention (obsolete)\n\nSpill prevention (obsolete). This section text is placeholder sample content written for the Strata demo and is not the text of 327 IAC 16-1-1. It stands in for the rule body so that the regulations tree, section page and search have realistic shapes to render.\n\n(Indiana Department of Environmental Management; 327 IAC 16-1-1; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722)",
+    "s2_text": "327 IAC 16-1-1 Spill prevention (obsolete)\n\n[Section repealed.]",
+    "published_date": "2025-08-13",
+    "date_basis": "Indiana Register publication date",
+    "din": "20250813-IR-170250124NRA",
+    "s1_snapshot": "2024-12-31",
+    "s2_snapshot": "2025-12-31",
+    "in_footprint": false,
+    "cited_clause_count": 0,
+    "characterization": {
+      "obligation_changed": true,
+      "direction": "removed",
+      "summary": "Obsolete spill prevention section repealed.",
+      "value_changes": []
+    },
+    "disposition": "Outside footprint",
+    "disposition_reason": "No RPL document cites this section. Screened on the Radar against the company profile.",
+    "placeholder": true
+  },
+  {
+    "change_id": "chg-327-iac-4-1-1",
+    "citation": "327 IAC 4-1-1",
+    "heading": "Sludge disposal (obsolete)",
+    "source_system": "iac",
+    "rule_key": "327 IAC 4-1",
+    "agency_id": "idem",
+    "title_number": "327",
+    "change_class": "repealed",
+    "diff_segments": [
+      {
+        "op": "equal",
+        "text": "327 IAC 4-1-1 Sludge disposal (obsolete)\n\n"
+      },
+      {
+        "op": "delete",
+        "text": "Sludge disposal (obsolete)"
+      },
+      {
+        "op": "insert",
+        "text": "[Section repealed"
+      },
+      {
+        "op": "equal",
+        "text": "."
+      },
+      {
+        "op": "delete",
+        "text": " This section text is placeholder sample content written for the Strata demo and is not the text of 327 IAC 4-1-1. It stands in for the rule body so that the regulations tree, section page and search have realistic shapes to render.\n\n(Indiana Department of Environmental Management; 327 IAC 4-1-1; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722)"
+      },
+      {
+        "op": "insert",
+        "text": "]"
+      }
+    ],
+    "s1_text": "327 IAC 4-1-1 Sludge disposal (obsolete)\n\nSludge disposal (obsolete). This section text is placeholder sample content written for the Strata demo and is not the text of 327 IAC 4-1-1. It stands in for the rule body so that the regulations tree, section page and search have realistic shapes to render.\n\n(Indiana Department of Environmental Management; 327 IAC 4-1-1; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722)",
+    "s2_text": "327 IAC 4-1-1 Sludge disposal (obsolete)\n\n[Section repealed.]",
+    "published_date": "2025-08-13",
+    "date_basis": "Indiana Register publication date",
+    "din": "20250813-IR-170250125NRA",
+    "s1_snapshot": "2024-12-31",
+    "s2_snapshot": "2025-12-31",
+    "in_footprint": false,
+    "cited_clause_count": 0,
+    "characterization": {
+      "obligation_changed": true,
+      "direction": "removed",
+      "summary": "Obsolete sludge disposal section repealed.",
+      "value_changes": []
+    },
+    "disposition": "Outside footprint",
+    "disposition_reason": "No RPL document cites this section. Screened on the Radar against the company profile.",
+    "placeholder": true
+  },
+  {
+    "change_id": "chg-40-cfr-72-95",
+    "citation": "40 CFR 72.95",
+    "heading": "Excess emissions penalty (obsolete)",
+    "source_system": "cfr",
+    "rule_key": "40 CFR 72 Subpart A",
+    "agency_id": "epa",
+    "title_number": "40",
+    "change_class": "repealed",
+    "diff_segments": [
+      {
+        "op": "delete",
+        "text": "Excess emissions penalty (obsolete). This section text is placeholder sample content written for the Strata demo"
+      },
+      {
+        "op": "insert",
+        "text": "[Section removed"
+      },
+      {
+        "op": "equal",
+        "text": " and "
+      },
+      {
+        "op": "delete",
+        "text": "is not the text of 40 CFR 72"
+      },
+      {
+        "op": "insert",
+        "text": "reserved"
+      },
+      {
+        "op": "equal",
+        "text": "."
+      },
+      {
+        "op": "delete",
+        "text": "95. It stands in for the rule body so that the regulations tree, section page and search have realistic shapes to render."
+      },
+      {
+        "op": "insert",
+        "text": "]"
+      }
+    ],
+    "s1_text": "Excess emissions penalty (obsolete). This section text is placeholder sample content written for the Strata demo and is not the text of 40 CFR 72.95. It stands in for the rule body so that the regulations tree, section page and search have realistic shapes to render.",
+    "s2_text": "[Section removed and reserved.]",
+    "published_date": "2026-02-10",
+    "date_basis": "Federal Register publication date (FR 2026-02140)",
+    "din": null,
+    "s1_snapshot": "2025-01-02",
+    "s2_snapshot": "2026-10-02",
+    "in_footprint": false,
+    "cited_clause_count": 0,
+    "characterization": {
+      "obligation_changed": true,
+      "direction": "removed",
+      "summary": "Obsolete excess emissions penalty section removed from the CFR.",
+      "value_changes": []
+    },
+    "disposition": "Outside footprint",
+    "disposition_reason": "No RPL document cites this section. Screened on the Radar against the company profile.",
+    "placeholder": true
+  },
+  {
+    "change_id": "chg-40-cfr-73-50",
+    "citation": "40 CFR 73.50",
+    "heading": "Auctions (obsolete)",
+    "source_system": "cfr",
+    "rule_key": "40 CFR 73 Subpart A",
+    "agency_id": "epa",
+    "title_number": "40",
+    "change_class": "repealed",
+    "diff_segments": [
+      {
+        "op": "delete",
+        "text": "Auctions (obsolete). This section text is placeholder sample content written for the Strata demo"
+      },
+      {
+        "op": "insert",
+        "text": "[Section removed"
+      },
+      {
+        "op": "equal",
+        "text": " and "
+      },
+      {
+        "op": "delete",
+        "text": "is not the text of 40 CFR 73"
+      },
+      {
+        "op": "insert",
+        "text": "reserved"
+      },
+      {
+        "op": "equal",
+        "text": "."
+      },
+      {
+        "op": "delete",
+        "text": "50. It stands in for the rule body so that the regulations tree, section page and search have realistic shapes to render."
+      },
+      {
+        "op": "insert",
+        "text": "]"
+      }
+    ],
+    "s1_text": "Auctions (obsolete). This section text is placeholder sample content written for the Strata demo and is not the text of 40 CFR 73.50. It stands in for the rule body so that the regulations tree, section page and search have realistic shapes to render.",
+    "s2_text": "[Section removed and reserved.]",
+    "published_date": "2026-02-10",
+    "date_basis": "Federal Register publication date (FR 2026-02140)",
+    "din": null,
+    "s1_snapshot": "2025-01-02",
+    "s2_snapshot": "2026-10-02",
+    "in_footprint": false,
+    "cited_clause_count": 0,
+    "characterization": {
+      "obligation_changed": true,
+      "direction": "removed",
+      "summary": "Obsolete allowance auction section removed from the CFR.",
+      "value_changes": []
+    },
+    "disposition": "Outside footprint",
+    "disposition_reason": "No RPL document cites this section. Screened on the Radar against the company profile.",
+    "placeholder": true
+  },
+  {
+    "change_id": "chg-327-iac-15-5-1",
+    "citation": "327 IAC 15-5-1",
+    "heading": "Construction stormwater; Rule 5",
+    "source_system": "iac",
+    "rule_key": "327 IAC 15-5",
+    "agency_id": "idem",
+    "title_number": "327",
+    "change_class": "renumbered",
+    "diff_segments": [
+      {
+        "op": "equal",
+        "text": "327 IAC 15-5-1"
+      },
+      {
+        "op": "delete",
+        "text": ".1"
+      },
+      {
+        "op": "equal",
+        "text": " Construction stormwater; Rule 5\n\n(a) This rule covers stormwater discharges associated with construction activity.\n\n(b) A permittee shall implement the erosion and sediment controls in its plan.\n\n(Indiana Department of Environmental Management; 327 IAC 15-5-1"
+      },
+      {
+        "op": "delete",
+        "text": ".1"
+      },
+      {
+        "op": "equal",
+        "text": "; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722)"
+      }
+    ],
+    "s1_text": "327 IAC 15-5-1.1 Construction stormwater; Rule 5\n\n(a) This rule covers stormwater discharges associated with construction activity.\n\n(b) A permittee shall implement the erosion and sediment controls in its plan.\n\n(Indiana Department of Environmental Management; 327 IAC 15-5-1.1; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722)",
+    "s2_text": "327 IAC 15-5-1 Construction stormwater; Rule 5\n\n(a) This rule covers stormwater discharges associated with construction activity.\n\n(b) A permittee shall implement the erosion and sediment controls in its plan.\n\n(Indiana Department of Environmental Management; 327 IAC 15-5-1; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722)",
+    "published_date": "2025-11-19",
+    "date_basis": "Indiana Register publication date",
+    "din": "20251119-IR-170250126NRA",
+    "s1_snapshot": "2024-12-31",
+    "s2_snapshot": "2025-12-31",
+    "in_footprint": false,
+    "cited_clause_count": 0,
+    "characterization": {
+      "obligation_changed": false,
+      "direction": "clarified",
+      "summary": "Construction stormwater rule moved to a new number; text unchanged.",
+      "value_changes": []
+    },
+    "disposition": "Outside footprint",
+    "disposition_reason": "No RPL document cites this section. Renumbering only.",
+    "placeholder": true
+  },
+  {
+    "change_id": "chg-170-iac-2-1-1",
+    "citation": "170 IAC 2-1-1",
+    "heading": "Utility fees; applicability",
+    "source_system": "iac",
+    "rule_key": "170 IAC 2-1",
+    "agency_id": "iurc",
+    "title_number": "170",
+    "change_class": "cosmetic",
+    "diff_segments": [
+      {
+        "op": "equal",
+        "text": "170 IAC 2-1-1 Utility fees; applicability\n\nAuthority: IC 13-14-8\n\n(a) This section applies to each person, facility, or filing described in utility fees; applicability.\n\n(b) The responsible person shall maintain records, reports, and notices required by this section and shall make them available on request.\n\n(c) Definitions used in this section are in section 2 of this rule.\n\n(Indiana Utility Regulatory Commission; 170 IAC 2-1-1; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722"
+      },
+      {
+        "op": "insert",
+        "text": "; readopted filed Dec 12, 2024, 2:05 p.m.: 20241218-IR-170240455RFA"
+      },
+      {
+        "op": "equal",
+        "text": ")"
+      }
+    ],
+    "s1_text": "170 IAC 2-1-1 Utility fees; applicability\n\nAuthority: IC 13-14-8\n\n(a) This section applies to each person, facility, or filing described in utility fees; applicability.\n\n(b) The responsible person shall maintain records, reports, and notices required by this section and shall make them available on request.\n\n(c) Definitions used in this section are in section 2 of this rule.\n\n(Indiana Utility Regulatory Commission; 170 IAC 2-1-1; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722)",
+    "s2_text": "170 IAC 2-1-1 Utility fees; applicability\n\nAuthority: IC 13-14-8\n\n(a) This section applies to each person, facility, or filing described in utility fees; applicability.\n\n(b) The responsible person shall maintain records, reports, and notices required by this section and shall make them available on request.\n\n(c) Definitions used in this section are in section 2 of this rule.\n\n(Indiana Utility Regulatory Commission; 170 IAC 2-1-1; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722; readopted filed Dec 12, 2024, 2:05 p.m.: 20241218-IR-170240455RFA)",
+    "published_date": "2024-12-18",
+    "date_basis": "Indiana Register publication of the readoption notice",
+    "din": "20241218-IR-170240127NRA",
+    "s1_snapshot": "2024-12-31",
+    "s2_snapshot": "2025-12-31",
+    "in_footprint": false,
+    "cited_clause_count": 0,
+    "characterization": null,
+    "disposition": "Outside footprint",
+    "disposition_reason": "Only a readoption or editorial stamp changed. No RPL document cites this section.",
+    "placeholder": true
+  },
+  {
+    "change_id": "chg-326-iac-1-1-1",
+    "citation": "326 IAC 1-1-1",
+    "heading": "Air pollution control; policy",
+    "source_system": "iac",
+    "rule_key": "326 IAC 1-1",
+    "agency_id": "idem",
+    "title_number": "326",
+    "change_class": "cosmetic",
+    "diff_segments": [
+      {
+        "op": "equal",
+        "text": "326 IAC 1-1-1 Air pollution control; policy\n\nAuthority: IC 13-14-8\n\n(a) This section applies to each person, facility, or filing described in air pollution control; policy.\n\n(b) The responsible person shall maintain records, reports, and notices required by this section and shall make them available on request.\n\n(c) Definitions used in this section are in section 2 of this rule.\n\n(Indiana Department of Environmental Management; 326 IAC 1-1-1; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722"
+      },
+      {
+        "op": "insert",
+        "text": "; readopted filed Dec 12, 2024, 2:05 p.m.: 20241218-IR-170240455RFA"
+      },
+      {
+        "op": "equal",
+        "text": ")"
+      }
+    ],
+    "s1_text": "326 IAC 1-1-1 Air pollution control; policy\n\nAuthority: IC 13-14-8\n\n(a) This section applies to each person, facility, or filing described in air pollution control; policy.\n\n(b) The responsible person shall maintain records, reports, and notices required by this section and shall make them available on request.\n\n(c) Definitions used in this section are in section 2 of this rule.\n\n(Indiana Department of Environmental Management; 326 IAC 1-1-1; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722)",
+    "s2_text": "326 IAC 1-1-1 Air pollution control; policy\n\nAuthority: IC 13-14-8\n\n(a) This section applies to each person, facility, or filing described in air pollution control; policy.\n\n(b) The responsible person shall maintain records, reports, and notices required by this section and shall make them available on request.\n\n(c) Definitions used in this section are in section 2 of this rule.\n\n(Indiana Department of Environmental Management; 326 IAC 1-1-1; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722; readopted filed Dec 12, 2024, 2:05 p.m.: 20241218-IR-170240455RFA)",
+    "published_date": "2024-12-18",
+    "date_basis": "Indiana Register publication of the readoption notice",
+    "din": "20241218-IR-170240128NRA",
+    "s1_snapshot": "2024-12-31",
+    "s2_snapshot": "2025-12-31",
+    "in_footprint": false,
+    "cited_clause_count": 0,
+    "characterization": null,
+    "disposition": "Outside footprint",
+    "disposition_reason": "Only a readoption or editorial stamp changed. No RPL document cites this section.",
+    "placeholder": true
+  },
+  {
+    "change_id": "chg-326-iac-1-2-1",
+    "citation": "326 IAC 1-2-1",
+    "heading": "Definitions; general",
+    "source_system": "iac",
+    "rule_key": "326 IAC 1-2",
+    "agency_id": "idem",
+    "title_number": "326",
+    "change_class": "cosmetic",
+    "diff_segments": [
+      {
+        "op": "equal",
+        "text": "326 IAC 1-2-1 Definitions; general\n\nAuthority: IC 13-14-8\n\n(a) This section applies to each person, facility, or filing described in definitions; general.\n\n(b) The responsible person shall maintain records, reports, and notices required by this section and shall make them available on request.\n\n(c) Definitions used in this section are in section 2 of this rule.\n\n(Indiana Department of Environmental Management; 326 IAC 1-2-1; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722"
+      },
+      {
+        "op": "insert",
+        "text": "; readopted filed Dec 12, 2024, 2:05 p.m.: 20241218-IR-170240455RFA"
+      },
+      {
+        "op": "equal",
+        "text": ")"
+      }
+    ],
+    "s1_text": "326 IAC 1-2-1 Definitions; general\n\nAuthority: IC 13-14-8\n\n(a) This section applies to each person, facility, or filing described in definitions; general.\n\n(b) The responsible person shall maintain records, reports, and notices required by this section and shall make them available on request.\n\n(c) Definitions used in this section are in section 2 of this rule.\n\n(Indiana Department of Environmental Management; 326 IAC 1-2-1; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722)",
+    "s2_text": "326 IAC 1-2-1 Definitions; general\n\nAuthority: IC 13-14-8\n\n(a) This section applies to each person, facility, or filing described in definitions; general.\n\n(b) The responsible person shall maintain records, reports, and notices required by this section and shall make them available on request.\n\n(c) Definitions used in this section are in section 2 of this rule.\n\n(Indiana Department of Environmental Management; 326 IAC 1-2-1; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722; readopted filed Dec 12, 2024, 2:05 p.m.: 20241218-IR-170240455RFA)",
+    "published_date": "2024-12-18",
+    "date_basis": "Indiana Register publication of the readoption notice",
+    "din": "20241218-IR-170240129NRA",
+    "s1_snapshot": "2024-12-31",
+    "s2_snapshot": "2025-12-31",
+    "in_footprint": false,
+    "cited_clause_count": 0,
+    "characterization": null,
+    "disposition": "Outside footprint",
+    "disposition_reason": "Only a readoption or editorial stamp changed. No RPL document cites this section.",
+    "placeholder": true
+  },
+  {
+    "change_id": "chg-326-iac-2-1-1-1",
+    "citation": "326 IAC 2-1.1-1",
+    "heading": "Construction permits; applicability",
+    "source_system": "iac",
+    "rule_key": "326 IAC 2-1.1",
+    "agency_id": "idem",
+    "title_number": "326",
+    "change_class": "cosmetic",
+    "diff_segments": [
+      {
+        "op": "equal",
+        "text": "326 IAC 2-1.1-1 Construction permits; applicability\n\nAuthority: IC 13-14-8\n\n(a) This section applies to each person, facility, or filing described in construction permits; applicability.\n\n(b) The responsible person shall maintain records, reports, and notices required by this section and shall make them available on request.\n\n(c) Definitions used in this section are in section 2 of this rule.\n\n(Indiana Department of Environmental Management; 326 IAC 2-1.1-1; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722"
+      },
+      {
+        "op": "insert",
+        "text": "; readopted filed Dec 12, 2024, 2:05 p.m.: 20241218-IR-170240455RFA"
+      },
+      {
+        "op": "equal",
+        "text": ")"
+      }
+    ],
+    "s1_text": "326 IAC 2-1.1-1 Construction permits; applicability\n\nAuthority: IC 13-14-8\n\n(a) This section applies to each person, facility, or filing described in construction permits; applicability.\n\n(b) The responsible person shall maintain records, reports, and notices required by this section and shall make them available on request.\n\n(c) Definitions used in this section are in section 2 of this rule.\n\n(Indiana Department of Environmental Management; 326 IAC 2-1.1-1; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722)",
+    "s2_text": "326 IAC 2-1.1-1 Construction permits; applicability\n\nAuthority: IC 13-14-8\n\n(a) This section applies to each person, facility, or filing described in construction permits; applicability.\n\n(b) The responsible person shall maintain records, reports, and notices required by this section and shall make them available on request.\n\n(c) Definitions used in this section are in section 2 of this rule.\n\n(Indiana Department of Environmental Management; 326 IAC 2-1.1-1; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722; readopted filed Dec 12, 2024, 2:05 p.m.: 20241218-IR-170240455RFA)",
+    "published_date": "2024-12-18",
+    "date_basis": "Indiana Register publication of the readoption notice",
+    "din": "20241218-IR-170240130NRA",
+    "s1_snapshot": "2024-12-31",
+    "s2_snapshot": "2025-12-31",
+    "in_footprint": false,
+    "cited_clause_count": 0,
+    "characterization": null,
+    "disposition": "Outside footprint",
+    "disposition_reason": "Only a readoption or editorial stamp changed. No RPL document cites this section.",
+    "placeholder": true
+  },
+  {
+    "change_id": "chg-326-iac-4-1-1",
+    "citation": "326 IAC 4-1-1",
+    "heading": "Open burning; applicability",
+    "source_system": "iac",
+    "rule_key": "326 IAC 4-1",
+    "agency_id": "idem",
+    "title_number": "326",
+    "change_class": "cosmetic",
+    "diff_segments": [
+      {
+        "op": "equal",
+        "text": "326 IAC 4-1-1 Open burning; applicability\n\nAuthority: IC 13-14-8\n\n(a) This section applies to each person, facility, or filing described in open burning; applicability.\n\n(b) The responsible person shall maintain records, reports, and notices required by this section and shall make them available on request.\n\n(c) Definitions used in this section are in section 2 of this rule.\n\n(Indiana Department of Environmental Management; 326 IAC 4-1-1; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722"
+      },
+      {
+        "op": "insert",
+        "text": "; readopted filed Dec 12, 2024, 2:05 p.m.: 20241218-IR-170240455RFA"
+      },
+      {
+        "op": "equal",
+        "text": ")"
+      }
+    ],
+    "s1_text": "326 IAC 4-1-1 Open burning; applicability\n\nAuthority: IC 13-14-8\n\n(a) This section applies to each person, facility, or filing described in open burning; applicability.\n\n(b) The responsible person shall maintain records, reports, and notices required by this section and shall make them available on request.\n\n(c) Definitions used in this section are in section 2 of this rule.\n\n(Indiana Department of Environmental Management; 326 IAC 4-1-1; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722)",
+    "s2_text": "326 IAC 4-1-1 Open burning; applicability\n\nAuthority: IC 13-14-8\n\n(a) This section applies to each person, facility, or filing described in open burning; applicability.\n\n(b) The responsible person shall maintain records, reports, and notices required by this section and shall make them available on request.\n\n(c) Definitions used in this section are in section 2 of this rule.\n\n(Indiana Department of Environmental Management; 326 IAC 4-1-1; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722; readopted filed Dec 12, 2024, 2:05 p.m.: 20241218-IR-170240455RFA)",
+    "published_date": "2024-12-18",
+    "date_basis": "Indiana Register publication of the readoption notice",
+    "din": "20241218-IR-170240131NRA",
+    "s1_snapshot": "2024-12-31",
+    "s2_snapshot": "2025-12-31",
+    "in_footprint": false,
+    "cited_clause_count": 0,
+    "characterization": null,
+    "disposition": "Outside footprint",
+    "disposition_reason": "Only a readoption or editorial stamp changed. No RPL document cites this section.",
+    "placeholder": true
+  },
+  {
+    "change_id": "chg-327-iac-1-1-1",
+    "citation": "327 IAC 1-1-1",
+    "heading": "Water pollution control; policy",
+    "source_system": "iac",
+    "rule_key": "327 IAC 1-1",
+    "agency_id": "idem",
+    "title_number": "327",
+    "change_class": "cosmetic",
+    "diff_segments": [
+      {
+        "op": "equal",
+        "text": "327 IAC 1-1-1 Water pollution control; policy\n\nAuthority: IC 13-14-8\n\n(a) This section applies to each person, facility, or filing described in water pollution control; policy.\n\n(b) The responsible person shall maintain records, reports, and notices required by this section and shall make them available on request.\n\n(c) Definitions used in this section are in section 2 of this rule.\n\n(Indiana Department of Environmental Management; 327 IAC 1-1-1; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722"
+      },
+      {
+        "op": "insert",
+        "text": "; readopted filed Dec 12, 2024, 2:05 p.m.: 20241218-IR-170240455RFA"
+      },
+      {
+        "op": "equal",
+        "text": ")"
+      }
+    ],
+    "s1_text": "327 IAC 1-1-1 Water pollution control; policy\n\nAuthority: IC 13-14-8\n\n(a) This section applies to each person, facility, or filing described in water pollution control; policy.\n\n(b) The responsible person shall maintain records, reports, and notices required by this section and shall make them available on request.\n\n(c) Definitions used in this section are in section 2 of this rule.\n\n(Indiana Department of Environmental Management; 327 IAC 1-1-1; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722)",
+    "s2_text": "327 IAC 1-1-1 Water pollution control; policy\n\nAuthority: IC 13-14-8\n\n(a) This section applies to each person, facility, or filing described in water pollution control; policy.\n\n(b) The responsible person shall maintain records, reports, and notices required by this section and shall make them available on request.\n\n(c) Definitions used in this section are in section 2 of this rule.\n\n(Indiana Department of Environmental Management; 327 IAC 1-1-1; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722; readopted filed Dec 12, 2024, 2:05 p.m.: 20241218-IR-170240455RFA)",
+    "published_date": "2024-12-18",
+    "date_basis": "Indiana Register publication of the readoption notice",
+    "din": "20241218-IR-170240132NRA",
+    "s1_snapshot": "2024-12-31",
+    "s2_snapshot": "2025-12-31",
+    "in_footprint": false,
+    "cited_clause_count": 0,
+    "characterization": null,
+    "disposition": "Outside footprint",
+    "disposition_reason": "Only a readoption or editorial stamp changed. No RPL document cites this section.",
+    "placeholder": true
+  },
+  {
+    "change_id": "chg-327-iac-3-1-1",
+    "citation": "327 IAC 3-1-1",
+    "heading": "NPDES permits; applicability",
+    "source_system": "iac",
+    "rule_key": "327 IAC 3-1",
+    "agency_id": "idem",
+    "title_number": "327",
+    "change_class": "cosmetic",
+    "diff_segments": [
+      {
+        "op": "equal",
+        "text": "327 IAC 3-1-1 NPDES permits; applicability\n\nAuthority: IC 13-14-8\n\n(a) This section applies to each person, facility, or filing described in npdes permits; applicability.\n\n(b) The responsible person shall maintain records, reports, and notices required by this section and shall make them available on request.\n\n(c) Definitions used in this section are in section 2 of this rule.\n\n(Indiana Department of Environmental Management; 327 IAC 3-1-1; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722"
+      },
+      {
+        "op": "insert",
+        "text": "; readopted filed Dec 12, 2024, 2:05 p.m.: 20241218-IR-170240455RFA"
+      },
+      {
+        "op": "equal",
+        "text": ")"
+      }
+    ],
+    "s1_text": "327 IAC 3-1-1 NPDES permits; applicability\n\nAuthority: IC 13-14-8\n\n(a) This section applies to each person, facility, or filing described in npdes permits; applicability.\n\n(b) The responsible person shall maintain records, reports, and notices required by this section and shall make them available on request.\n\n(c) Definitions used in this section are in section 2 of this rule.\n\n(Indiana Department of Environmental Management; 327 IAC 3-1-1; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722)",
+    "s2_text": "327 IAC 3-1-1 NPDES permits; applicability\n\nAuthority: IC 13-14-8\n\n(a) This section applies to each person, facility, or filing described in npdes permits; applicability.\n\n(b) The responsible person shall maintain records, reports, and notices required by this section and shall make them available on request.\n\n(c) Definitions used in this section are in section 2 of this rule.\n\n(Indiana Department of Environmental Management; 327 IAC 3-1-1; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722; readopted filed Dec 12, 2024, 2:05 p.m.: 20241218-IR-170240455RFA)",
+    "published_date": "2024-12-18",
+    "date_basis": "Indiana Register publication of the readoption notice",
+    "din": "20241218-IR-170240133NRA",
+    "s1_snapshot": "2024-12-31",
+    "s2_snapshot": "2025-12-31",
+    "in_footprint": false,
+    "cited_clause_count": 0,
+    "characterization": null,
+    "disposition": "Outside footprint",
+    "disposition_reason": "Only a readoption or editorial stamp changed. No RPL document cites this section.",
+    "placeholder": true
+  },
+  {
+    "change_id": "chg-40-cfr-60-1",
+    "citation": "40 CFR 60.1",
+    "heading": "Applicability",
+    "source_system": "cfr",
+    "rule_key": "40 CFR 60 Subpart A",
+    "agency_id": "epa",
+    "title_number": "40",
+    "change_class": "cosmetic",
+    "diff_segments": [
+      {
+        "op": "equal",
+        "text": "Source: IC 13-14-8\n\n(a) This section applies to each person, facility, or filing described in applicability.\n\n(b) The responsible person shall maintain records, reports, and notices required by this section and shall make them available on request.\n\n(c) Definitions used in this section are in section 2 of this part.\n\n"
+      },
+      {
+        "op": "insert",
+        "text": "[Editorial: paragraph headings reformatted; no text change.]"
+      }
+    ],
+    "s1_text": "Source: IC 13-14-8\n\n(a) This section applies to each person, facility, or filing described in applicability.\n\n(b) The responsible person shall maintain records, reports, and notices required by this section and shall make them available on request.\n\n(c) Definitions used in this section are in section 2 of this part.",
+    "s2_text": "Source: IC 13-14-8\n\n(a) This section applies to each person, facility, or filing described in applicability.\n\n(b) The responsible person shall maintain records, reports, and notices required by this section and shall make them available on request.\n\n(c) Definitions used in this section are in section 2 of this part.\n\n[Editorial: paragraph headings reformatted; no text change.]",
+    "published_date": "2025-04-15",
+    "date_basis": "Federal Register publication date",
+    "din": null,
+    "s1_snapshot": "2025-01-02",
+    "s2_snapshot": "2026-10-02",
+    "in_footprint": false,
+    "cited_clause_count": 0,
+    "characterization": null,
+    "disposition": "Outside footprint",
+    "disposition_reason": "Only a readoption or editorial stamp changed. No RPL document cites this section.",
+    "placeholder": true
+  },
+  {
+    "change_id": "chg-18-cfr-35-1",
+    "citation": "18 CFR 35.1",
+    "heading": "Applicability",
+    "source_system": "cfr",
+    "rule_key": "18 CFR 35 Subpart A",
+    "agency_id": "ferc",
+    "title_number": "18",
+    "change_class": "cosmetic",
+    "diff_segments": [
+      {
+        "op": "equal",
+        "text": "Source: IC 13-14-8\n\n(a) This section applies to each person, facility, or filing described in applicability.\n\n(b) The responsible person shall maintain records, reports, and notices required by this section and shall make them available on request.\n\n(c) Definitions used in this section are in section 2 of this part.\n\n"
+      },
+      {
+        "op": "insert",
+        "text": "[Editorial: paragraph headings reformatted; no text change.]"
+      }
+    ],
+    "s1_text": "Source: IC 13-14-8\n\n(a) This section applies to each person, facility, or filing described in applicability.\n\n(b) The responsible person shall maintain records, reports, and notices required by this section and shall make them available on request.\n\n(c) Definitions used in this section are in section 2 of this part.",
+    "s2_text": "Source: IC 13-14-8\n\n(a) This section applies to each person, facility, or filing described in applicability.\n\n(b) The responsible person shall maintain records, reports, and notices required by this section and shall make them available on request.\n\n(c) Definitions used in this section are in section 2 of this part.\n\n[Editorial: paragraph headings reformatted; no text change.]",
+    "published_date": "2025-04-15",
+    "date_basis": "Federal Register publication date",
+    "din": null,
+    "s1_snapshot": "2025-01-02",
+    "s2_snapshot": "2026-10-02",
+    "in_footprint": false,
+    "cited_clause_count": 0,
+    "characterization": null,
+    "disposition": "Outside footprint",
+    "disposition_reason": "Only a readoption or editorial stamp changed. No RPL document cites this section.",
+    "placeholder": true
+  },
+  {
+    "change_id": "chg-326-iac-1-2-2",
+    "citation": "326 IAC 1-2-2",
+    "heading": "Definitions; air quality",
+    "source_system": "iac",
+    "rule_key": "326 IAC 1-2",
+    "agency_id": "idem",
+    "title_number": "326",
+    "change_class": "metadata_only",
+    "diff_segments": [
+      {
+        "op": "equal",
+        "text": "326 IAC 1-2-2 Definitions; air quality\n\nAuthority: IC 13-14-8"
+      },
+      {
+        "op": "insert",
+        "text": "; IC 13-15-1\n\n"
+      },
+      {
+        "op": "equal",
+        "text": "(a) This section applies to each person, facility, or filing described in definitions; air quality.\n\n(b) The responsible person shall maintain records, reports, and notices required by this section and shall make them available on request.\n\n(c) Definitions used in this section are in section 2 of this rule.\n\n(Indiana Department of Environmental Management; 326 IAC 1-2-2; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722)"
+      }
+    ],
+    "s1_text": "326 IAC 1-2-2 Definitions; air quality\n\nAuthority: IC 13-14-8\n\n(a) This section applies to each person, facility, or filing described in definitions; air quality.\n\n(b) The responsible person shall maintain records, reports, and notices required by this section and shall make them available on request.\n\n(c) Definitions used in this section are in section 2 of this rule.\n\n(Indiana Department of Environmental Management; 326 IAC 1-2-2; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722)",
+    "s2_text": "326 IAC 1-2-2 Definitions; air quality\n\nAuthority: IC 13-14-8; IC 13-15-1\n\n(a) This section applies to each person, facility, or filing described in definitions; air quality.\n\n(b) The responsible person shall maintain records, reports, and notices required by this section and shall make them available on request.\n\n(c) Definitions used in this section are in section 2 of this rule.\n\n(Indiana Department of Environmental Management; 326 IAC 1-2-2; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722)",
+    "published_date": "2025-03-05",
+    "date_basis": "Indiana Register publication of the readoption notice",
+    "din": "20250305-IR-170250134NRA",
+    "s1_snapshot": "2024-12-31",
+    "s2_snapshot": "2025-12-31",
+    "in_footprint": false,
+    "cited_clause_count": 0,
+    "characterization": null,
+    "disposition": "Outside footprint",
+    "disposition_reason": "Only the authority line changed. No RPL document cites this section.",
+    "placeholder": true
+  },
+  {
+    "change_id": "chg-327-iac-2-1-6",
+    "citation": "327 IAC 2-1-6",
+    "heading": "Water quality standards; narrative criteria",
+    "source_system": "iac",
+    "rule_key": "327 IAC 2-1",
+    "agency_id": "idem",
+    "title_number": "327",
+    "change_class": "metadata_only",
+    "diff_segments": [
+      {
+        "op": "equal",
+        "text": "327 IAC 2-1-6 Water quality standards; narrative criteria\n\nAuthority: IC 13-14-8"
+      },
+      {
+        "op": "insert",
+        "text": "; IC 13-15-1\n\n"
+      },
+      {
+        "op": "equal",
+        "text": "(a) This section applies to each person, facility, or filing described in water quality standards; narrative criteria.\n\n(b) The responsible person shall maintain records, reports, and notices required by this section and shall make them available on request.\n\n(c) Definitions used in this section are in section 2 of this rule.\n\n(Indiana Department of Environmental Management; 327 IAC 2-1-6; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722)"
+      }
+    ],
+    "s1_text": "327 IAC 2-1-6 Water quality standards; narrative criteria\n\nAuthority: IC 13-14-8\n\n(a) This section applies to each person, facility, or filing described in water quality standards; narrative criteria.\n\n(b) The responsible person shall maintain records, reports, and notices required by this section and shall make them available on request.\n\n(c) Definitions used in this section are in section 2 of this rule.\n\n(Indiana Department of Environmental Management; 327 IAC 2-1-6; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722)",
+    "s2_text": "327 IAC 2-1-6 Water quality standards; narrative criteria\n\nAuthority: IC 13-14-8; IC 13-15-1\n\n(a) This section applies to each person, facility, or filing described in water quality standards; narrative criteria.\n\n(b) The responsible person shall maintain records, reports, and notices required by this section and shall make them available on request.\n\n(c) Definitions used in this section are in section 2 of this rule.\n\n(Indiana Department of Environmental Management; 327 IAC 2-1-6; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722)",
+    "published_date": "2025-03-05",
+    "date_basis": "Indiana Register publication of the readoption notice",
+    "din": "20250305-IR-170250135NRA",
+    "s1_snapshot": "2024-12-31",
+    "s2_snapshot": "2025-12-31",
+    "in_footprint": false,
+    "cited_clause_count": 0,
+    "characterization": null,
+    "disposition": "Outside footprint",
+    "disposition_reason": "Only the authority line changed. No RPL document cites this section.",
+    "placeholder": true
+  },
+  {
+    "change_id": "chg-40-cfr-63-2",
+    "citation": "40 CFR 63.2",
+    "heading": "Definitions",
+    "source_system": "cfr",
+    "rule_key": "40 CFR 63 Subpart A",
+    "agency_id": "epa",
+    "title_number": "40",
+    "change_class": "metadata_only",
+    "diff_segments": [
+      {
+        "op": "equal",
+        "text": "Source: IC 13-14-8"
+      },
+      {
+        "op": "insert",
+        "text": "; IC 13-15-1\n\n"
+      },
+      {
+        "op": "equal",
+        "text": "(a) This section applies to each person, facility, or filing described in definitions.\n\n(b) The responsible person shall maintain records, reports, and notices required by this section and shall make them available on request.\n\n(c) Definitions used in this section are in section 2 of this part."
+      }
+    ],
+    "s1_text": "Source: IC 13-14-8\n\n(a) This section applies to each person, facility, or filing described in definitions.\n\n(b) The responsible person shall maintain records, reports, and notices required by this section and shall make them available on request.\n\n(c) Definitions used in this section are in section 2 of this part.",
+    "s2_text": "Source: IC 13-14-8; IC 13-15-1\n\n(a) This section applies to each person, facility, or filing described in definitions.\n\n(b) The responsible person shall maintain records, reports, and notices required by this section and shall make them available on request.\n\n(c) Definitions used in this section are in section 2 of this part.",
+    "published_date": "2025-05-20",
+    "date_basis": "Federal Register publication date",
+    "din": null,
+    "s1_snapshot": "2025-01-02",
+    "s2_snapshot": "2026-10-02",
+    "in_footprint": false,
+    "cited_clause_count": 0,
+    "characterization": null,
+    "disposition": "Outside footprint",
+    "disposition_reason": "Only the authority line changed. No RPL document cites this section.",
+    "placeholder": true
+  },
+  {
+    "change_id": "chg-326-iac-2-5-1-2",
+    "citation": "326 IAC 2-5.1-2",
+    "heading": "Permit review; PSD",
+    "source_system": "iac",
+    "rule_key": "326 IAC 2-5.1",
+    "agency_id": "idem",
+    "title_number": "326",
+    "change_class": "punctuation_only",
+    "diff_segments": [
+      {
+        "op": "equal",
+        "text": "326 IAC 2-5.1-2 Permit review; PSD\n\nAuthority: IC 13-14-8\n\n(a) This section applies to each person, facility, or filing described in permit review; psd.\n\n(b) The responsible person shall maintain records, reports"
+      },
+      {
+        "op": "insert",
+        "text": ", "
+      },
+      {
+        "op": "equal",
+        "text": "and notices required by this section and shall make them available on request.\n\n(c) Definitions used in this section are in section 2 of this rule.\n\n(Indiana Department of Environmental Management; 326 IAC 2-5.1-2; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722)"
+      }
+    ],
+    "s1_text": "326 IAC 2-5.1-2 Permit review; PSD\n\nAuthority: IC 13-14-8\n\n(a) This section applies to each person, facility, or filing described in permit review; psd.\n\n(b) The responsible person shall maintain records, reports and notices required by this section and shall make them available on request.\n\n(c) Definitions used in this section are in section 2 of this rule.\n\n(Indiana Department of Environmental Management; 326 IAC 2-5.1-2; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722)",
+    "s2_text": "326 IAC 2-5.1-2 Permit review; PSD\n\nAuthority: IC 13-14-8\n\n(a) This section applies to each person, facility, or filing described in permit review; psd.\n\n(b) The responsible person shall maintain records, reports, and notices required by this section and shall make them available on request.\n\n(c) Definitions used in this section are in section 2 of this rule.\n\n(Indiana Department of Environmental Management; 326 IAC 2-5.1-2; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722)",
+    "published_date": "2025-06-18",
+    "date_basis": "Indiana Register publication of the readoption notice",
+    "din": "20250618-IR-170250136NRA",
+    "s1_snapshot": "2024-12-31",
+    "s2_snapshot": "2025-12-31",
+    "in_footprint": false,
+    "cited_clause_count": 0,
+    "characterization": null,
+    "disposition": "Outside footprint",
+    "disposition_reason": "Serial commas added; no change in meaning. No RPL document cites this section.",
+    "placeholder": true
+  },
+  {
+    "change_id": "chg-327-iac-5-2-3",
+    "citation": "327 IAC 5-2-3",
+    "heading": "NPDES permit applications",
+    "source_system": "iac",
+    "rule_key": "327 IAC 5-2",
+    "agency_id": "idem",
+    "title_number": "327",
+    "change_class": "punctuation_only",
+    "diff_segments": [
+      {
+        "op": "equal",
+        "text": "327 IAC 5-2-3 NPDES permit applications\n\nAuthority: IC 13-14-8\n\n(a) This section applies to each person, facility, or filing described in npdes permit applications.\n\n(b) The responsible person shall maintain records, reports"
+      },
+      {
+        "op": "insert",
+        "text": ", "
+      },
+      {
+        "op": "equal",
+        "text": "and notices required by this section and shall make them available on request.\n\n(c) Definitions used in this section are in section 2 of this rule.\n\n(Indiana Department of Environmental Management; 327 IAC 5-2-3; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722)"
+      }
+    ],
+    "s1_text": "327 IAC 5-2-3 NPDES permit applications\n\nAuthority: IC 13-14-8\n\n(a) This section applies to each person, facility, or filing described in npdes permit applications.\n\n(b) The responsible person shall maintain records, reports and notices required by this section and shall make them available on request.\n\n(c) Definitions used in this section are in section 2 of this rule.\n\n(Indiana Department of Environmental Management; 327 IAC 5-2-3; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722)",
+    "s2_text": "327 IAC 5-2-3 NPDES permit applications\n\nAuthority: IC 13-14-8\n\n(a) This section applies to each person, facility, or filing described in npdes permit applications.\n\n(b) The responsible person shall maintain records, reports, and notices required by this section and shall make them available on request.\n\n(c) Definitions used in this section are in section 2 of this rule.\n\n(Indiana Department of Environmental Management; 327 IAC 5-2-3; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722)",
+    "published_date": "2025-06-18",
+    "date_basis": "Indiana Register publication of the readoption notice",
+    "din": "20250618-IR-170250137NRA",
+    "s1_snapshot": "2024-12-31",
+    "s2_snapshot": "2025-12-31",
+    "in_footprint": false,
+    "cited_clause_count": 0,
+    "characterization": null,
+    "disposition": "Outside footprint",
+    "disposition_reason": "Serial commas added; no change in meaning. No RPL document cites this section.",
+    "placeholder": true
+  },
+  {
+    "change_id": "chg-40-cfr-60-7",
+    "citation": "40 CFR 60.7",
+    "heading": "Notification and recordkeeping",
+    "source_system": "cfr",
+    "rule_key": "40 CFR 60 Subpart A",
+    "agency_id": "epa",
+    "title_number": "40",
+    "change_class": "punctuation_only",
+    "diff_segments": [
+      {
+        "op": "equal",
+        "text": "Source: IC 13-14-8\n\n(a) This section applies to each person, facility, or filing described in notification and recordkeeping.\n\n(b) The responsible person shall maintain records, reports"
+      },
+      {
+        "op": "insert",
+        "text": ", "
+      },
+      {
+        "op": "equal",
+        "text": "and notices required by this section and shall make them available on request.\n\n(c) Definitions used in this section are in section 2 of this part."
+      }
+    ],
+    "s1_text": "Source: IC 13-14-8\n\n(a) This section applies to each person, facility, or filing described in notification and recordkeeping.\n\n(b) The responsible person shall maintain records, reports and notices required by this section and shall make them available on request.\n\n(c) Definitions used in this section are in section 2 of this part.",
+    "s2_text": "Source: IC 13-14-8\n\n(a) This section applies to each person, facility, or filing described in notification and recordkeeping.\n\n(b) The responsible person shall maintain records, reports, and notices required by this section and shall make them available on request.\n\n(c) Definitions used in this section are in section 2 of this part.",
+    "published_date": "2025-07-08",
+    "date_basis": "Federal Register publication date",
+    "din": null,
+    "s1_snapshot": "2025-01-02",
+    "s2_snapshot": "2026-10-02",
+    "in_footprint": false,
+    "cited_clause_count": 0,
+    "characterization": null,
+    "disposition": "Outside footprint",
+    "disposition_reason": "Serial commas added; no change in meaning. No RPL document cites this section.",
+    "placeholder": true
+  },
+  {
+    "change_id": "chg-18-cfr-35-2",
+    "citation": "18 CFR 35.2",
+    "heading": "Definitions",
+    "source_system": "cfr",
+    "rule_key": "18 CFR 35 Subpart A",
+    "agency_id": "ferc",
+    "title_number": "18",
+    "change_class": "punctuation_only",
+    "diff_segments": [
+      {
+        "op": "equal",
+        "text": "Source: IC 13-14-8\n\n(a) This section applies to each person, facility, or filing described in definitions.\n\n(b) The responsible person shall maintain records, reports"
+      },
+      {
+        "op": "insert",
+        "text": ", "
+      },
+      {
+        "op": "equal",
+        "text": "and notices required by this section and shall make them available on request.\n\n(c) Definitions used in this section are in section 2 of this part."
+      }
+    ],
+    "s1_text": "Source: IC 13-14-8\n\n(a) This section applies to each person, facility, or filing described in definitions.\n\n(b) The responsible person shall maintain records, reports and notices required by this section and shall make them available on request.\n\n(c) Definitions used in this section are in section 2 of this part.",
+    "s2_text": "Source: IC 13-14-8\n\n(a) This section applies to each person, facility, or filing described in definitions.\n\n(b) The responsible person shall maintain records, reports, and notices required by this section and shall make them available on request.\n\n(c) Definitions used in this section are in section 2 of this part.",
+    "published_date": "2025-07-08",
+    "date_basis": "Federal Register publication date",
+    "din": null,
+    "s1_snapshot": "2025-01-02",
+    "s2_snapshot": "2026-10-02",
+    "in_footprint": false,
+    "cited_clause_count": 0,
+    "characterization": null,
+    "disposition": "Outside footprint",
+    "disposition_reason": "Serial commas added; no change in meaning. No RPL document cites this section.",
+    "placeholder": true
+  },
+  {
+    "change_id": "chg-326-iac-2-7-1",
+    "citation": "326 IAC 2-7-1",
+    "heading": "Part 70 permits; definitions",
+    "source_system": "iac",
+    "rule_key": "326 IAC 2-7",
+    "agency_id": "idem",
+    "title_number": "326",
+    "change_class": "cross_ref_only",
+    "diff_segments": [
+      {
+        "op": "equal",
+        "text": "326 IAC 2-7-1 Part 70 permits; definitions\n\nAuthority: IC 13-14-8\n\n(a) This section applies to each person, facility, or filing described in part 70 permits; definitions.\n\n(b) The responsible person shall maintain records, reports, and notices required by this section and shall make them available on request.\n\n(c) Definitions used in this section are in section 2"
+      },
+      {
+        "op": "insert",
+        "text": "(a) "
+      },
+      {
+        "op": "equal",
+        "text": "of this rule.\n\n(Indiana Department of Environmental Management; 326 IAC 2-7-1; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722)"
+      }
+    ],
+    "s1_text": "326 IAC 2-7-1 Part 70 permits; definitions\n\nAuthority: IC 13-14-8\n\n(a) This section applies to each person, facility, or filing described in part 70 permits; definitions.\n\n(b) The responsible person shall maintain records, reports, and notices required by this section and shall make them available on request.\n\n(c) Definitions used in this section are in section 2 of this rule.\n\n(Indiana Department of Environmental Management; 326 IAC 2-7-1; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722)",
+    "s2_text": "326 IAC 2-7-1 Part 70 permits; definitions\n\nAuthority: IC 13-14-8\n\n(a) This section applies to each person, facility, or filing described in part 70 permits; definitions.\n\n(b) The responsible person shall maintain records, reports, and notices required by this section and shall make them available on request.\n\n(c) Definitions used in this section are in section 2(a) of this rule.\n\n(Indiana Department of Environmental Management; 326 IAC 2-7-1; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722)",
+    "published_date": "2025-08-06",
+    "date_basis": "Indiana Register publication of the readoption notice",
+    "din": "20250806-IR-170250138NRA",
+    "s1_snapshot": "2024-12-31",
+    "s2_snapshot": "2025-12-31",
+    "in_footprint": false,
+    "cited_clause_count": 0,
+    "characterization": null,
+    "disposition": "Outside footprint",
+    "disposition_reason": "A cross-reference was made more precise. No RPL document cites this section.",
+    "placeholder": true
+  },
+  {
+    "change_id": "chg-327-iac-5-4-1",
+    "citation": "327 IAC 5-4-1",
+    "heading": "Stormwater; applicability",
+    "source_system": "iac",
+    "rule_key": "327 IAC 5-4",
+    "agency_id": "idem",
+    "title_number": "327",
+    "change_class": "cross_ref_only",
+    "diff_segments": [
+      {
+        "op": "equal",
+        "text": "327 IAC 5-4-1 Stormwater; applicability\n\nAuthority: IC 13-14-8\n\n(a) This section applies to each person, facility, or filing described in stormwater; applicability.\n\n(b) The responsible person shall maintain records, reports, and notices required by this section and shall make them available on request.\n\n(c) Definitions used in this section are in section 2"
+      },
+      {
+        "op": "insert",
+        "text": "(a) "
+      },
+      {
+        "op": "equal",
+        "text": "of this rule.\n\n(Indiana Department of Environmental Management; 327 IAC 5-4-1; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722)"
+      }
+    ],
+    "s1_text": "327 IAC 5-4-1 Stormwater; applicability\n\nAuthority: IC 13-14-8\n\n(a) This section applies to each person, facility, or filing described in stormwater; applicability.\n\n(b) The responsible person shall maintain records, reports, and notices required by this section and shall make them available on request.\n\n(c) Definitions used in this section are in section 2 of this rule.\n\n(Indiana Department of Environmental Management; 327 IAC 5-4-1; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722)",
+    "s2_text": "327 IAC 5-4-1 Stormwater; applicability\n\nAuthority: IC 13-14-8\n\n(a) This section applies to each person, facility, or filing described in stormwater; applicability.\n\n(b) The responsible person shall maintain records, reports, and notices required by this section and shall make them available on request.\n\n(c) Definitions used in this section are in section 2(a) of this rule.\n\n(Indiana Department of Environmental Management; 327 IAC 5-4-1; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722)",
+    "published_date": "2025-08-06",
+    "date_basis": "Indiana Register publication of the readoption notice",
+    "din": "20250806-IR-170250139NRA",
+    "s1_snapshot": "2024-12-31",
+    "s2_snapshot": "2025-12-31",
+    "in_footprint": false,
+    "cited_clause_count": 0,
+    "characterization": null,
+    "disposition": "Outside footprint",
+    "disposition_reason": "A cross-reference was made more precise. No RPL document cites this section.",
+    "placeholder": true
+  },
+  {
+    "change_id": "chg-40-cfr-60-8",
+    "citation": "40 CFR 60.8",
+    "heading": "Performance tests",
+    "source_system": "cfr",
+    "rule_key": "40 CFR 60 Subpart A",
+    "agency_id": "epa",
+    "title_number": "40",
+    "change_class": "cross_ref_only",
+    "diff_segments": [
+      {
+        "op": "equal",
+        "text": "Source: IC 13-14-8\n\n(a) This section applies to each person, facility, or filing described in performance tests.\n\n(b) The responsible person shall maintain records, reports, and notices required by this section and shall make them available on request.\n\n(c) Definitions used in this section are in section 2"
+      },
+      {
+        "op": "insert",
+        "text": "(a) "
+      },
+      {
+        "op": "equal",
+        "text": "of this part."
+      }
+    ],
+    "s1_text": "Source: IC 13-14-8\n\n(a) This section applies to each person, facility, or filing described in performance tests.\n\n(b) The responsible person shall maintain records, reports, and notices required by this section and shall make them available on request.\n\n(c) Definitions used in this section are in section 2 of this part.",
+    "s2_text": "Source: IC 13-14-8\n\n(a) This section applies to each person, facility, or filing described in performance tests.\n\n(b) The responsible person shall maintain records, reports, and notices required by this section and shall make them available on request.\n\n(c) Definitions used in this section are in section 2(a) of this part.",
+    "published_date": "2025-09-03",
+    "date_basis": "Federal Register publication date",
+    "din": null,
+    "s1_snapshot": "2025-01-02",
+    "s2_snapshot": "2026-10-02",
+    "in_footprint": false,
+    "cited_clause_count": 0,
+    "characterization": null,
+    "disposition": "Outside footprint",
+    "disposition_reason": "A cross-reference was made more precise. No RPL document cites this section.",
+    "placeholder": true
+  },
+  {
+    "change_id": "chg-18-cfr-37-3",
+    "citation": "18 CFR 37.3",
+    "heading": "Definitions",
+    "source_system": "cfr",
+    "rule_key": "18 CFR 37 Subpart A",
+    "agency_id": "ferc",
+    "title_number": "18",
+    "change_class": "cross_ref_only",
+    "diff_segments": [
+      {
+        "op": "equal",
+        "text": "Source: IC 13-14-8\n\n(a) This section applies to each person, facility, or filing described in definitions.\n\n(b) The responsible person shall maintain records, reports, and notices required by this section and shall make them available on request.\n\n(c) Definitions used in this section are in section 2"
+      },
+      {
+        "op": "insert",
+        "text": "(a) "
+      },
+      {
+        "op": "equal",
+        "text": "of this part."
+      }
+    ],
+    "s1_text": "Source: IC 13-14-8\n\n(a) This section applies to each person, facility, or filing described in definitions.\n\n(b) The responsible person shall maintain records, reports, and notices required by this section and shall make them available on request.\n\n(c) Definitions used in this section are in section 2 of this part.",
+    "s2_text": "Source: IC 13-14-8\n\n(a) This section applies to each person, facility, or filing described in definitions.\n\n(b) The responsible person shall maintain records, reports, and notices required by this section and shall make them available on request.\n\n(c) Definitions used in this section are in section 2(a) of this part.",
+    "published_date": "2025-09-03",
+    "date_basis": "Federal Register publication date",
+    "din": null,
+    "s1_snapshot": "2025-01-02",
+    "s2_snapshot": "2026-10-02",
+    "in_footprint": false,
+    "cited_clause_count": 0,
+    "characterization": null,
+    "disposition": "Outside footprint",
+    "disposition_reason": "A cross-reference was made more precise. No RPL document cites this section.",
+    "placeholder": true
+  }
+]

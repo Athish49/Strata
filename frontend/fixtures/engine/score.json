@@ -1,1 +1,18 @@
-{"precision":0,"recall":0,"fp_rate_must_not_flag":0,"routing_accuracy":0,"targets":{"precision":0.8,"recall":0.83,"fp_rate":0,"routing":0.8},"baseline_findings":0,"decided_by":{"rule":0,"ai":0},"llm_calls":0}
+{
+  "precision": 0.91,
+  "recall": 0.88,
+  "fp_rate_must_not_flag": 0,
+  "routing_accuracy": 0.92,
+  "targets": {
+    "precision": 0.8,
+    "recall": 0.83,
+    "fp_rate": 0,
+    "routing": 0.8
+  },
+  "baseline_findings": 0,
+  "decided_by": {
+    "rule": 214,
+    "ai": 96
+  },
+  "llm_calls": 118
+}

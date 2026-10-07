@@ -1,1 +1,67 @@
-[]
+[
+  {
+    "change_id": "chg_whatif_a_001",
+    "citation": "170 IAC 4-1-16",
+    "heading": "Disconnection; prohibited disconnections; reconnection",
+    "source_system": "iac",
+    "rule_key": "170 IAC 4-1",
+    "agency_id": "iurc",
+    "title_number": "170",
+    "change_class": "substantive",
+    "diff_segments": [
+      {
+        "op": "equal",
+        "text": "170 IAC 4-1-16 Disconnection of service; prohibited disconnections; reconnection\n\n(a) A customer may request that service be discontinued on any date after giving the utility reasonable notice. The customer remains liable for service furnished until three (3) working days after the requested discontinuance date, or until the date the utility actually discontinues service, whichever is earlier.\n\n(b) A utility may discontinue service without prior notice when a condition on the customer's premises is dangerous or hazardous to life, physical safety, or property, or when the utility has reasonable evidence of fraudulent or unauthorized use of electricity or of tampering with the utility's metering or regulating equipment. The utility shall document the specific basis for the discontinuance and, where practicable, leave written notice at the premises stating the reason.\n\n(c) A utility shall not discontinue residential service for nonpayment where the customer has delivered, before the discontinuance date stated in the notice, a certificate from a licensed physician or public health official stating that discontinuance would be a serious and immediate threat to the health or safety of a person residing at the premises. The certificate postpones discontinuance for ten (10) days. The postponement shall be continued for one (1) additional ten (10) day period upon delivery of an additional certificate. The utility shall also offer a reasonable payment arrangement to any customer who demonstrates financial hardship.\n\n(d) A utility shall not discontinue residential service for nonpayment (1) before 8:00 a.m. or after 3:00 p.m. prevailing local time; (2) on a day, or on the day preceding a day, on which the utility's business office is not open to the public; or (3) after noon on the day preceding a day on which the office is closed. This subsection does not apply to discontinuance under subsection (b).\n\n(e) Except as provided in subsection (b), a utility shall not discontinue residential service for nonpayment unless it has mailed or personally delivered written notice to the customer at least "
+      },
+      {
+        "op": "delete",
+        "text": "fourteen"
+      },
+      {
+        "op": "insert",
+        "text": "twenty"
+      },
+      {
+        "op": "equal",
+        "text": " ("
+      },
+      {
+        "op": "delete",
+        "text": "14"
+      },
+      {
+        "op": "insert",
+        "text": "20"
+      },
+      {
+        "op": "equal",
+        "text": ") days before the proposed discontinuance date. The notice must state: (1) the amount past due; (2) the date on or after which service will be discontinued unless payment or an arrangement is made; (3) the telephone number and address at which the customer may arrange payment or dispute the bill; (4) the availability of the medical certificate postponement; (5) the customer's right to file an informal complaint with the commission's consumer affairs division; and (6) the information required by 170 IAC 4-1-16.6 regarding energy assistance during the winter period.\n\n(f) A utility shall not discontinue service for nonpayment of charges that are the subject of an unresolved dispute filed under 170 IAC 16-1 where the customer is paying the undisputed portion of the bill.\n\n(g) Where service has been discontinued, the utility shall reconnect service within one (1) working day after the customer has paid the past-due amount, made an acceptable payment arrangement, or otherwise remedied the cause of discontinuance, and shall not impose a reconnection charge that exceeds the charge on file in its approved tariff.\n\n(Indiana Utility Regulatory Commission; 170 IAC 4-1-16; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722)"
+      }
+    ],
+    "s1_text": "170 IAC 4-1-16 Disconnection of service; prohibited disconnections; reconnection\n\n(a) A customer may request that service be discontinued on any date after giving the utility reasonable notice. The customer remains liable for service furnished until three (3) working days after the requested discontinuance date, or until the date the utility actually discontinues service, whichever is earlier.\n\n(b) A utility may discontinue service without prior notice when a condition on the customer's premises is dangerous or hazardous to life, physical safety, or property, or when the utility has reasonable evidence of fraudulent or unauthorized use of electricity or of tampering with the utility's metering or regulating equipment. The utility shall document the specific basis for the discontinuance and, where practicable, leave written notice at the premises stating the reason.\n\n(c) A utility shall not discontinue residential service for nonpayment where the customer has delivered, before the discontinuance date stated in the notice, a certificate from a licensed physician or public health official stating that discontinuance would be a serious and immediate threat to the health or safety of a person residing at the premises. The certificate postpones discontinuance for ten (10) days. The postponement shall be continued for one (1) additional ten (10) day period upon delivery of an additional certificate. The utility shall also offer a reasonable payment arrangement to any customer who demonstrates financial hardship.\n\n(d) A utility shall not discontinue residential service for nonpayment (1) before 8:00 a.m. or after 3:00 p.m. prevailing local time; (2) on a day, or on the day preceding a day, on which the utility's business office is not open to the public; or (3) after noon on the day preceding a day on which the office is closed. This subsection does not apply to discontinuance under subsection (b).\n\n(e) Except as provided in subsection (b), a utility shall not discontinue residential service for nonpayment unless it has mailed or personally delivered written notice to the customer at least fourteen (14) days before the proposed discontinuance date. The notice must state: (1) the amount past due; (2) the date on or after which service will be discontinued unless payment or an arrangement is made; (3) the telephone number and address at which the customer may arrange payment or dispute the bill; (4) the availability of the medical certificate postponement; (5) the customer's right to file an informal complaint with the commission's consumer affairs division; and (6) the information required by 170 IAC 4-1-16.6 regarding energy assistance during the winter period.\n\n(f) A utility shall not discontinue service for nonpayment of charges that are the subject of an unresolved dispute filed under 170 IAC 16-1 where the customer is paying the undisputed portion of the bill.\n\n(g) Where service has been discontinued, the utility shall reconnect service within one (1) working day after the customer has paid the past-due amount, made an acceptable payment arrangement, or otherwise remedied the cause of discontinuance, and shall not impose a reconnection charge that exceeds the charge on file in its approved tariff.\n\n(Indiana Utility Regulatory Commission; 170 IAC 4-1-16; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722)",
+    "s2_text": "170 IAC 4-1-16 Disconnection of service; prohibited disconnections; reconnection\n\n(a) A customer may request that service be discontinued on any date after giving the utility reasonable notice. The customer remains liable for service furnished until three (3) working days after the requested discontinuance date, or until the date the utility actually discontinues service, whichever is earlier.\n\n(b) A utility may discontinue service without prior notice when a condition on the customer's premises is dangerous or hazardous to life, physical safety, or property, or when the utility has reasonable evidence of fraudulent or unauthorized use of electricity or of tampering with the utility's metering or regulating equipment. The utility shall document the specific basis for the discontinuance and, where practicable, leave written notice at the premises stating the reason.\n\n(c) A utility shall not discontinue residential service for nonpayment where the customer has delivered, before the discontinuance date stated in the notice, a certificate from a licensed physician or public health official stating that discontinuance would be a serious and immediate threat to the health or safety of a person residing at the premises. The certificate postpones discontinuance for ten (10) days. The postponement shall be continued for one (1) additional ten (10) day period upon delivery of an additional certificate. The utility shall also offer a reasonable payment arrangement to any customer who demonstrates financial hardship.\n\n(d) A utility shall not discontinue residential service for nonpayment (1) before 8:00 a.m. or after 3:00 p.m. prevailing local time; (2) on a day, or on the day preceding a day, on which the utility's business office is not open to the public; or (3) after noon on the day preceding a day on which the office is closed. This subsection does not apply to discontinuance under subsection (b).\n\n(e) Except as provided in subsection (b), a utility shall not discontinue residential service for nonpayment unless it has mailed or personally delivered written notice to the customer at least twenty (20) days before the proposed discontinuance date. The notice must state: (1) the amount past due; (2) the date on or after which service will be discontinued unless payment or an arrangement is made; (3) the telephone number and address at which the customer may arrange payment or dispute the bill; (4) the availability of the medical certificate postponement; (5) the customer's right to file an informal complaint with the commission's consumer affairs division; and (6) the information required by 170 IAC 4-1-16.6 regarding energy assistance during the winter period.\n\n(f) A utility shall not discontinue service for nonpayment of charges that are the subject of an unresolved dispute filed under 170 IAC 16-1 where the customer is paying the undisputed portion of the bill.\n\n(g) Where service has been discontinued, the utility shall reconnect service within one (1) working day after the customer has paid the past-due amount, made an acceptable payment arrangement, or otherwise remedied the cause of discontinuance, and shall not impose a reconnection charge that exceeds the charge on file in its approved tariff.\n\n(Indiana Utility Regulatory Commission; 170 IAC 4-1-16; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722)",
+    "published_date": "2025-02-20",
+    "date_basis": "What-if assumption: edit treated as effective on this date",
+    "din": null,
+    "s1_snapshot": "2024-12-31",
+    "s2_snapshot": "2025-12-31",
+    "in_footprint": true,
+    "cited_clause_count": 36,
+    "characterization": {
+      "obligation_changed": true,
+      "direction": "tightened",
+      "summary": "The minimum written notice before a residential disconnection for nonpayment is lengthened from fourteen (14) days to twenty (20) days. Every other subsection is unchanged.",
+      "value_changes": [
+        {
+          "label": "Residential disconnection notice period",
+          "old": "14",
+          "new": "20",
+          "unit": "days"
+        }
+      ]
+    },
+    "disposition": "obligation_changed",
+    "disposition_reason": "Subsection (e) now requires twenty (20) days of written notice. Clauses that state, schedule, audit or print the 14-day period need review.",
+    "placeholder": true
+  }
+]

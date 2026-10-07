@@ -1,1 +1,1253 @@
-[]
+[
+  {
+    "finding_id": "f_a_001",
+    "run_id": "run_whatif_preset_a",
+    "change_id": "chg_whatif_a_001",
+    "clause_id": "RPL-CMP-REG-001:OBL-2024-0036",
+    "doc_id": "RPL-CMP-REG-001",
+    "citation": "170 IAC 4-1-16",
+    "finding_type": "register_control_update",
+    "verdict": "review",
+    "severity": "medium",
+    "confidence": 1,
+    "decided_by": "rule",
+    "required_change": {
+      "from_text": "advance notice to customer",
+      "to_text": "advance notice to customer (20 days)"
+    },
+    "quotes": {
+      "s1": {
+        "text": "at least fourteen (14) days before the proposed discontinuance date",
+        "span": [
+          2110,
+          2177
+        ]
+      },
+      "s2": {
+        "text": "at least twenty (20) days before the proposed discontinuance date",
+        "span": [
+          2110,
+          2175
+        ]
+      },
+      "clause": {
+        "text": "advance notice to customer",
+        "span": [
+          102,
+          128
+        ]
+      }
+    },
+    "quotes_verified": true,
+    "rationale": "The register row obliges RPL to give advance notice under 170 IAC 4-1-16 and names the Disconnection Procedure as its implementation. The notice period it monitors is now 20 days, so the control description and monitoring method should state the new period.",
+    "match_path": "direct_section",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-16",
+        "label": "170 IAC 4-1-16"
+      },
+      {
+        "kind": "register_row",
+        "ref": "RPL-CMP-REG-001:OBL-2024-0036",
+        "label": "RPL-CMP-REG-001 row OBL-2024-0036"
+      }
+    ],
+    "propagated_from": null,
+    "stale_at_approval": false,
+    "doc_approved_date": "2025-01-23",
+    "rule_published_date": "2025-02-20",
+    "route": {
+      "owner": {
+        "person_id": "P06",
+        "name": "Priya Raman",
+        "title": "Senior Compliance Analyst",
+        "department": "Compliance",
+        "reports_to_id": "P05"
+      },
+      "reviewer": {
+        "person_id": "P05",
+        "name": "David Okafor",
+        "title": "Manager Regulatory Compliance",
+        "department": "Compliance",
+        "reports_to_id": "P04"
+      },
+      "approver": {
+        "person_id": "P04",
+        "name": "Margaret Ellison",
+        "title": "Chief Compliance Officer",
+        "department": "Compliance",
+        "reports_to_id": "P01"
+      }
+    },
+    "reviews": []
+  },
+  {
+    "finding_id": "f_a_002",
+    "run_id": "run_whatif_preset_a",
+    "change_id": "chg_whatif_a_001",
+    "clause_id": "RPL-CS-PRO-004:8.2",
+    "doc_id": "RPL-CS-PRO-004",
+    "citation": "170 IAC 4-1-16",
+    "finding_type": "value_mismatch",
+    "verdict": "action_required",
+    "severity": "high",
+    "confidence": 1,
+    "decided_by": "rule",
+    "required_change": {
+      "from_text": "fourteen (14) days prior written notice",
+      "to_text": "twenty (20) days prior written notice"
+    },
+    "quotes": {
+      "s1": {
+        "text": "at least fourteen (14) days before the proposed discontinuance date",
+        "span": [
+          2110,
+          2177
+        ]
+      },
+      "s2": {
+        "text": "at least twenty (20) days before the proposed discontinuance date",
+        "span": [
+          2110,
+          2175
+        ]
+      },
+      "clause": {
+        "text": "fourteen (14) days prior written notice",
+        "span": [
+          134,
+          173
+        ]
+      }
+    },
+    "quotes_verified": true,
+    "rationale": "Section 8.2 is the procedure's statement of the residential notice period and it still says 14 days. Reached from register row OBL-2024-0036; fixing this sentence resolves the register finding's implementation gap.",
+    "match_path": "register_hop",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-16",
+        "label": "170 IAC 4-1-16(e)"
+      },
+      {
+        "kind": "register_row",
+        "ref": "RPL-CMP-REG-001:OBL-2024-0036",
+        "label": "OBL-2024-0036"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-004:8.2",
+        "label": "RPL-CS-PRO-004 §8.2"
+      }
+    ],
+    "propagated_from": "f_a_001",
+    "stale_at_approval": false,
+    "doc_approved_date": "2025-02-05",
+    "rule_published_date": "2025-02-20",
+    "route": {
+      "owner": {
+        "person_id": "P15",
+        "name": "Jasmine Carter",
+        "title": "Supervisor Credit & Collections",
+        "department": "Customer Operations",
+        "reports_to_id": "P14"
+      },
+      "reviewer": {
+        "person_id": "P13",
+        "name": "Karen Mitchell",
+        "title": "Director Customer Service",
+        "department": "Customer Operations",
+        "reports_to_id": "P16"
+      },
+      "approver": {
+        "person_id": "P03",
+        "name": "Jonathan Pierce",
+        "title": "Senior Counsel Regulatory",
+        "department": "Legal",
+        "reports_to_id": "P02"
+      }
+    },
+    "reviews": []
+  },
+  {
+    "finding_id": "f_a_003",
+    "run_id": "run_whatif_preset_a",
+    "change_id": "chg_whatif_a_001",
+    "clause_id": "RPL-CS-PRO-004:3.7",
+    "doc_id": "RPL-CS-PRO-004",
+    "citation": "170 IAC 4-1-16",
+    "finding_type": "value_mismatch",
+    "verdict": "action_required",
+    "severity": "medium",
+    "confidence": 1,
+    "decided_by": "rule",
+    "required_change": {
+      "from_text": "at least fourteen (14) days before the proposed disconnection date",
+      "to_text": "at least twenty (20) days before the proposed disconnection date"
+    },
+    "quotes": {
+      "s1": {
+        "text": "at least fourteen (14) days before the proposed discontinuance date",
+        "span": [
+          2110,
+          2177
+        ]
+      },
+      "s2": {
+        "text": "at least twenty (20) days before the proposed discontinuance date",
+        "span": [
+          2110,
+          2175
+        ]
+      },
+      "clause": {
+        "text": "at least fourteen (14) days before the proposed disconnection date",
+        "span": [
+          112,
+          178
+        ]
+      }
+    },
+    "quotes_verified": true,
+    "rationale": "The definition of the disconnect notice hard-codes 14 days and cites 170 IAC 4-1-16(e) directly. It must match the rule's new minimum.",
+    "match_path": "direct_section",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-16",
+        "label": "170 IAC 4-1-16"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-004:3.7",
+        "label": "RPL-CS-PRO-004 §3.7"
+      }
+    ],
+    "propagated_from": null,
+    "stale_at_approval": false,
+    "doc_approved_date": "2025-02-05",
+    "rule_published_date": "2025-02-20",
+    "route": {
+      "owner": {
+        "person_id": "P15",
+        "name": "Jasmine Carter",
+        "title": "Supervisor Credit & Collections",
+        "department": "Customer Operations",
+        "reports_to_id": "P14"
+      },
+      "reviewer": {
+        "person_id": "P13",
+        "name": "Karen Mitchell",
+        "title": "Director Customer Service",
+        "department": "Customer Operations",
+        "reports_to_id": "P16"
+      },
+      "approver": {
+        "person_id": "P03",
+        "name": "Jonathan Pierce",
+        "title": "Senior Counsel Regulatory",
+        "department": "Legal",
+        "reports_to_id": "P02"
+      }
+    },
+    "reviews": []
+  },
+  {
+    "finding_id": "f_a_004",
+    "run_id": "run_whatif_preset_a",
+    "change_id": "chg_whatif_a_001",
+    "clause_id": "RPL-CS-PRO-004:T6-3",
+    "doc_id": "RPL-CS-PRO-004",
+    "citation": "170 IAC 4-1-16",
+    "finding_type": "value_mismatch",
+    "verdict": "action_required",
+    "severity": "medium",
+    "confidence": 0.97,
+    "decided_by": "rule",
+    "required_change": {
+      "from_text": "14-day notice period begins",
+      "to_text": "20-day notice period begins"
+    },
+    "quotes": {
+      "s1": {
+        "text": "at least fourteen (14) days before the proposed discontinuance date",
+        "span": [
+          2110,
+          2177
+        ]
+      },
+      "s2": {
+        "text": "at least twenty (20) days before the proposed discontinuance date",
+        "span": [
+          2110,
+          2175
+        ]
+      },
+      "clause": {
+        "text": "14-day notice period begins (170 IAC 4-1-16(e))",
+        "span": [
+          102,
+          149
+        ]
+      }
+    },
+    "quotes_verified": true,
+    "rationale": "The collection-cycle table says the notice generated on Day 18 starts a 14-day period. With a 20-day minimum the CIS batch logic and this table need to change together.",
+    "match_path": "direct_section",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-16",
+        "label": "170 IAC 4-1-16"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-004:T6-3",
+        "label": "RPL-CS-PRO-004 table T6-3"
+      }
+    ],
+    "propagated_from": null,
+    "stale_at_approval": false,
+    "doc_approved_date": "2025-02-05",
+    "rule_published_date": "2025-02-20",
+    "route": {
+      "owner": {
+        "person_id": "P15",
+        "name": "Jasmine Carter",
+        "title": "Supervisor Credit & Collections",
+        "department": "Customer Operations",
+        "reports_to_id": "P14"
+      },
+      "reviewer": {
+        "person_id": "P13",
+        "name": "Karen Mitchell",
+        "title": "Director Customer Service",
+        "department": "Customer Operations",
+        "reports_to_id": "P16"
+      },
+      "approver": {
+        "person_id": "P03",
+        "name": "Jonathan Pierce",
+        "title": "Senior Counsel Regulatory",
+        "department": "Legal",
+        "reports_to_id": "P02"
+      }
+    },
+    "reviews": []
+  },
+  {
+    "finding_id": "f_a_005",
+    "run_id": "run_whatif_preset_a",
+    "change_id": "chg_whatif_a_001",
+    "clause_id": "RPL-CS-PRO-004:T7-1",
+    "doc_id": "RPL-CS-PRO-004",
+    "citation": "170 IAC 4-1-16",
+    "finding_type": "value_mismatch",
+    "verdict": "review",
+    "severity": "medium",
+    "confidence": 0.95,
+    "decided_by": "rule",
+    "required_change": {
+      "from_text": "proper 14-day notice mailed",
+      "to_text": "proper 20-day notice mailed"
+    },
+    "quotes": {
+      "s1": {
+        "text": "at least fourteen (14) days before the proposed discontinuance date",
+        "span": [
+          2110,
+          2177
+        ]
+      },
+      "s2": {
+        "text": "at least twenty (20) days before the proposed discontinuance date",
+        "span": [
+          2110,
+          2175
+        ]
+      },
+      "clause": {
+        "text": "proper 14-day notice mailed",
+        "span": [
+          39,
+          66
+        ]
+      }
+    },
+    "quotes_verified": true,
+    "rationale": "The eligibility decision table allows disconnection when a proper 14-day notice was mailed. Confirm whether the system rule that evaluates this row also needs the new period.",
+    "match_path": "direct_section",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-16",
+        "label": "170 IAC 4-1-16"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-004:T7-1",
+        "label": "RPL-CS-PRO-004 table T7-1"
+      }
+    ],
+    "propagated_from": null,
+    "stale_at_approval": false,
+    "doc_approved_date": "2025-02-05",
+    "rule_published_date": "2025-02-20",
+    "route": {
+      "owner": {
+        "person_id": "P15",
+        "name": "Jasmine Carter",
+        "title": "Supervisor Credit & Collections",
+        "department": "Customer Operations",
+        "reports_to_id": "P14"
+      },
+      "reviewer": {
+        "person_id": "P13",
+        "name": "Karen Mitchell",
+        "title": "Director Customer Service",
+        "department": "Customer Operations",
+        "reports_to_id": "P16"
+      },
+      "approver": {
+        "person_id": "P03",
+        "name": "Jonathan Pierce",
+        "title": "Senior Counsel Regulatory",
+        "department": "Legal",
+        "reports_to_id": "P02"
+      }
+    },
+    "reviews": []
+  },
+  {
+    "finding_id": "f_a_006",
+    "run_id": "run_whatif_preset_a",
+    "change_id": "chg_whatif_a_001",
+    "clause_id": "RPL-CS-PRO-004:T6-5",
+    "doc_id": "RPL-CS-PRO-004",
+    "citation": "170 IAC 4-1-16",
+    "finding_type": "restated_value",
+    "verdict": "review",
+    "severity": "medium",
+    "confidence": 0.71,
+    "decided_by": "ai",
+    "required_change": {
+      "from_text": "Day 32 (Day 18 + 14 days notice)",
+      "to_text": "Day 38 (Day 18 + 20 days notice)"
+    },
+    "quotes": {
+      "s1": {
+        "text": "at least fourteen (14) days before the proposed discontinuance date",
+        "span": [
+          2110,
+          2177
+        ]
+      },
+      "s2": {
+        "text": "at least twenty (20) days before the proposed discontinuance date",
+        "span": [
+          2110,
+          2175
+        ]
+      },
+      "clause": {
+        "text": "Day 18 + 14-day notice",
+        "span": null
+      }
+    },
+    "quotes_verified": false,
+    "rationale": "This row never cites the rule, but its day count (Day 18 + 14 days) restates the old notice period. The wording the model quoted could not be matched exactly in the clause, so confirm the evidence before acting.",
+    "match_path": "value_echo",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-16",
+        "label": "Restated value: 14 days"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-004:T6-5",
+        "label": "RPL-CS-PRO-004 table T6-5"
+      }
+    ],
+    "propagated_from": null,
+    "stale_at_approval": false,
+    "doc_approved_date": "2025-02-05",
+    "rule_published_date": "2025-02-20",
+    "route": {
+      "owner": {
+        "person_id": "P15",
+        "name": "Jasmine Carter",
+        "title": "Supervisor Credit & Collections",
+        "department": "Customer Operations",
+        "reports_to_id": "P14"
+      },
+      "reviewer": {
+        "person_id": "P13",
+        "name": "Karen Mitchell",
+        "title": "Director Customer Service",
+        "department": "Customer Operations",
+        "reports_to_id": "P16"
+      },
+      "approver": {
+        "person_id": "P03",
+        "name": "Jonathan Pierce",
+        "title": "Senior Counsel Regulatory",
+        "department": "Legal",
+        "reports_to_id": "P02"
+      }
+    },
+    "reviews": []
+  },
+  {
+    "finding_id": "f_a_007",
+    "run_id": "run_whatif_preset_a",
+    "change_id": "chg_whatif_a_001",
+    "clause_id": "RPL-CS-PRO-004:16.3",
+    "doc_id": "RPL-CS-PRO-004",
+    "citation": "170 IAC 4-1-16",
+    "finding_type": "restated_value",
+    "verdict": "action_required",
+    "severity": "medium",
+    "confidence": 0.88,
+    "decided_by": "ai",
+    "required_change": {
+      "from_text": "at least 14 days before disconnect date",
+      "to_text": "at least 20 days before disconnect date"
+    },
+    "quotes": {
+      "s1": {
+        "text": "at least fourteen (14) days before the proposed discontinuance date",
+        "span": [
+          2110,
+          2177
+        ]
+      },
+      "s2": {
+        "text": "at least twenty (20) days before the proposed discontinuance date",
+        "span": [
+          2110,
+          2175
+        ]
+      },
+      "clause": {
+        "text": "at least 14 days before disconnect date",
+        "span": [
+          209,
+          248
+        ]
+      }
+    },
+    "quotes_verified": true,
+    "rationale": "The monthly audit tests whether the notice went out at least 14 days before disconnection. Left unchanged, the audit would pass notices that are now too short.",
+    "match_path": "value_echo",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-16",
+        "label": "Restated value: 14 days"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-004:16.3",
+        "label": "RPL-CS-PRO-004 §16.3"
+      }
+    ],
+    "propagated_from": null,
+    "stale_at_approval": false,
+    "doc_approved_date": "2025-02-05",
+    "rule_published_date": "2025-02-20",
+    "route": {
+      "owner": {
+        "person_id": "P15",
+        "name": "Jasmine Carter",
+        "title": "Supervisor Credit & Collections",
+        "department": "Customer Operations",
+        "reports_to_id": "P14"
+      },
+      "reviewer": {
+        "person_id": "P13",
+        "name": "Karen Mitchell",
+        "title": "Director Customer Service",
+        "department": "Customer Operations",
+        "reports_to_id": "P16"
+      },
+      "approver": {
+        "person_id": "P03",
+        "name": "Jonathan Pierce",
+        "title": "Senior Counsel Regulatory",
+        "department": "Legal",
+        "reports_to_id": "P02"
+      }
+    },
+    "reviews": []
+  },
+  {
+    "finding_id": "f_a_008",
+    "run_id": "run_whatif_preset_a",
+    "change_id": "chg_whatif_a_001",
+    "clause_id": "RPL-CS-PRO-004:App-A.F6",
+    "doc_id": "RPL-CS-PRO-004",
+    "citation": "170 IAC 4-1-16",
+    "finding_type": "form_content",
+    "verdict": "review",
+    "severity": "medium",
+    "confidence": 0.82,
+    "decided_by": "ai",
+    "required_change": {
+      "from_text": "Proposed Disconnection Date (notice date + 14 days)",
+      "to_text": "Proposed Disconnection Date (notice date + 20 days)"
+    },
+    "quotes": {
+      "s1": {
+        "text": "at least fourteen (14) days before the proposed discontinuance date",
+        "span": [
+          2110,
+          2177
+        ]
+      },
+      "s2": {
+        "text": "at least twenty (20) days before the proposed discontinuance date",
+        "span": [
+          2110,
+          2175
+        ]
+      },
+      "clause": {
+        "text": "A.F6 — Proposed Disconnection Date",
+        "span": [
+          0,
+          34
+        ]
+      }
+    },
+    "quotes_verified": true,
+    "rationale": "The Proposed Disconnection Date printed on notice letter CS-F-012 is computed from the notice date plus the notice period (section 8.2). Once 8.2 changes, the date this field shows must move out by six more days.",
+    "match_path": "register_hop",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-16",
+        "label": "170 IAC 4-1-16(e)"
+      },
+      {
+        "kind": "register_row",
+        "ref": "RPL-CMP-REG-001:OBL-2024-0036",
+        "label": "OBL-2024-0036"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-004:8.2",
+        "label": "RPL-CS-PRO-004 §8.2"
+      },
+      {
+        "kind": "form_field",
+        "ref": "RPL-CS-PRO-004:App-A.F6",
+        "label": "Notice letter field App-A.F6"
+      }
+    ],
+    "propagated_from": "f_a_002",
+    "stale_at_approval": false,
+    "doc_approved_date": "2025-02-05",
+    "rule_published_date": "2025-02-20",
+    "route": {
+      "owner": {
+        "person_id": "P15",
+        "name": "Jasmine Carter",
+        "title": "Supervisor Credit & Collections",
+        "department": "Customer Operations",
+        "reports_to_id": "P14"
+      },
+      "reviewer": {
+        "person_id": "P13",
+        "name": "Karen Mitchell",
+        "title": "Director Customer Service",
+        "department": "Customer Operations",
+        "reports_to_id": "P16"
+      },
+      "approver": {
+        "person_id": "P03",
+        "name": "Jonathan Pierce",
+        "title": "Senior Counsel Regulatory",
+        "department": "Legal",
+        "reports_to_id": "P02"
+      }
+    },
+    "reviews": []
+  },
+  {
+    "finding_id": "f_a_009",
+    "run_id": "run_whatif_preset_a",
+    "change_id": "chg_whatif_a_001",
+    "clause_id": "RPL-CS-PRO-004:T4-4",
+    "doc_id": "RPL-CS-PRO-004",
+    "citation": "170 IAC 4-1-16",
+    "finding_type": "stale_reference",
+    "verdict": "update_citation",
+    "severity": "low",
+    "confidence": 1,
+    "decided_by": "rule",
+    "required_change": {
+      "from_text": "170 IAC 4-1-16",
+      "to_text": "170 IAC 4-1-16 (as amended)"
+    },
+    "quotes": {
+      "s1": {
+        "text": "at least fourteen (14) days before the proposed discontinuance date",
+        "span": [
+          2110,
+          2177
+        ]
+      },
+      "s2": {
+        "text": "at least twenty (20) days before the proposed discontinuance date",
+        "span": [
+          2110,
+          2175
+        ]
+      },
+      "clause": {
+        "text": "170 IAC 4-1-16",
+        "span": [
+          7,
+          21
+        ]
+      }
+    },
+    "quotes_verified": true,
+    "rationale": "The Regulatory Basis table lists the rule as the authority for notice content and timing. Update the entry and the document's law-as-of marker when the section text is revised.",
+    "match_path": "direct_section",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-16",
+        "label": "170 IAC 4-1-16"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-004:T4-4",
+        "label": "RPL-CS-PRO-004 table T4-4"
+      }
+    ],
+    "propagated_from": null,
+    "stale_at_approval": false,
+    "doc_approved_date": "2025-02-05",
+    "rule_published_date": "2025-02-20",
+    "route": {
+      "owner": {
+        "person_id": "P15",
+        "name": "Jasmine Carter",
+        "title": "Supervisor Credit & Collections",
+        "department": "Customer Operations",
+        "reports_to_id": "P14"
+      },
+      "reviewer": {
+        "person_id": "P13",
+        "name": "Karen Mitchell",
+        "title": "Director Customer Service",
+        "department": "Customer Operations",
+        "reports_to_id": "P16"
+      },
+      "approver": {
+        "person_id": "P03",
+        "name": "Jonathan Pierce",
+        "title": "Senior Counsel Regulatory",
+        "department": "Legal",
+        "reports_to_id": "P02"
+      }
+    },
+    "reviews": []
+  },
+  {
+    "finding_id": "f_a_010",
+    "run_id": "run_whatif_preset_a",
+    "change_id": "chg_whatif_a_001",
+    "clause_id": "RPL-CS-PRO-004:2.3",
+    "doc_id": "RPL-CS-PRO-004",
+    "citation": "170 IAC 4-1-16",
+    "finding_type": "restated_value",
+    "verdict": "info",
+    "severity": "low",
+    "confidence": 0.95,
+    "decided_by": "rule",
+    "required_change": {
+      "from_text": "The 14-day prior written notice requirement",
+      "to_text": "The 20-day prior written notice requirement"
+    },
+    "quotes": {
+      "s1": {
+        "text": "at least fourteen (14) days before the proposed discontinuance date",
+        "span": [
+          2110,
+          2177
+        ]
+      },
+      "s2": {
+        "text": "at least twenty (20) days before the proposed discontinuance date",
+        "span": [
+          2110,
+          2175
+        ]
+      },
+      "clause": {
+        "text": "The 14-day prior written notice requirement at 170 IAC 4-1-16(e)",
+        "span": [
+          135,
+          199
+        ]
+      }
+    },
+    "quotes_verified": true,
+    "rationale": "The scope note names the 14-day residential requirement only to exclude non-residential accounts. Behaviour does not change, but the figure should be corrected for consistency.",
+    "match_path": "direct_section",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-16",
+        "label": "170 IAC 4-1-16"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-004:2.3",
+        "label": "RPL-CS-PRO-004 §2.3"
+      }
+    ],
+    "propagated_from": null,
+    "stale_at_approval": false,
+    "doc_approved_date": "2025-02-05",
+    "rule_published_date": "2025-02-20",
+    "route": {
+      "owner": {
+        "person_id": "P15",
+        "name": "Jasmine Carter",
+        "title": "Supervisor Credit & Collections",
+        "department": "Customer Operations",
+        "reports_to_id": "P14"
+      },
+      "reviewer": {
+        "person_id": "P13",
+        "name": "Karen Mitchell",
+        "title": "Director Customer Service",
+        "department": "Customer Operations",
+        "reports_to_id": "P16"
+      },
+      "approver": {
+        "person_id": "P03",
+        "name": "Jonathan Pierce",
+        "title": "Senior Counsel Regulatory",
+        "department": "Legal",
+        "reports_to_id": "P02"
+      }
+    },
+    "reviews": []
+  },
+  {
+    "finding_id": "f_a_011",
+    "run_id": "run_whatif_preset_a",
+    "change_id": "chg_whatif_a_001",
+    "clause_id": "RPL-CS-PRO-004:8.11",
+    "doc_id": "RPL-CS-PRO-004",
+    "citation": "170 IAC 4-1-16",
+    "finding_type": "restated_value",
+    "verdict": "info",
+    "severity": "low",
+    "confidence": 0.95,
+    "decided_by": "rule",
+    "required_change": {
+      "from_text": "the 14-day residential notice",
+      "to_text": "the 20-day residential notice"
+    },
+    "quotes": {
+      "s1": {
+        "text": "at least fourteen (14) days before the proposed discontinuance date",
+        "span": [
+          2110,
+          2177
+        ]
+      },
+      "s2": {
+        "text": "at least twenty (20) days before the proposed discontinuance date",
+        "span": [
+          2110,
+          2175
+        ]
+      },
+      "clause": {
+        "text": "do not receive the 14-day residential notice required by 170 IAC 4-1-16(e)",
+        "span": [
+          54,
+          128
+        ]
+      }
+    },
+    "quotes_verified": true,
+    "rationale": "Non-residential accounts remain on the tariff timeline, so the process is unchanged. The sentence quotes the old residential period and should be updated.",
+    "match_path": "direct_section",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-16",
+        "label": "170 IAC 4-1-16"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-004:8.11",
+        "label": "RPL-CS-PRO-004 §8.11"
+      }
+    ],
+    "propagated_from": null,
+    "stale_at_approval": false,
+    "doc_approved_date": "2025-02-05",
+    "rule_published_date": "2025-02-20",
+    "route": {
+      "owner": {
+        "person_id": "P15",
+        "name": "Jasmine Carter",
+        "title": "Supervisor Credit & Collections",
+        "department": "Customer Operations",
+        "reports_to_id": "P14"
+      },
+      "reviewer": {
+        "person_id": "P13",
+        "name": "Karen Mitchell",
+        "title": "Director Customer Service",
+        "department": "Customer Operations",
+        "reports_to_id": "P16"
+      },
+      "approver": {
+        "person_id": "P03",
+        "name": "Jonathan Pierce",
+        "title": "Senior Counsel Regulatory",
+        "department": "Legal",
+        "reports_to_id": "P02"
+      }
+    },
+    "reviews": []
+  },
+  {
+    "finding_id": "f_a_012",
+    "run_id": "run_whatif_preset_a",
+    "change_id": "chg_whatif_a_001",
+    "clause_id": "RPL-REG-CAL-2025:EVT-2025-0041",
+    "doc_id": "RPL-REG-CAL-2025",
+    "citation": "170 IAC 4-1-16",
+    "finding_type": "monitoring_update",
+    "verdict": "review",
+    "severity": "medium",
+    "confidence": 0.95,
+    "decided_by": "rule",
+    "required_change": {
+      "from_text": "required notice timelines and procedures",
+      "to_text": "required notice timelines (20 days) and procedures"
+    },
+    "quotes": {
+      "s1": {
+        "text": "at least fourteen (14) days before the proposed discontinuance date",
+        "span": [
+          2110,
+          2177
+        ]
+      },
+      "s2": {
+        "text": "at least twenty (20) days before the proposed discontinuance date",
+        "span": [
+          2110,
+          2175
+        ]
+      },
+      "clause": {
+        "text": "required notice timelines and procedures",
+        "span": [
+          152,
+          192
+        ]
+      }
+    },
+    "quotes_verified": true,
+    "rationale": "The monthly monitoring event checks compliance with the notice timelines in 170 IAC 4-1-16. The checklist behind it should be updated to test for 20 days. This calendar was approved after the rule's publication date, so it was already out of date when approved.",
+    "match_path": "direct_section",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-16",
+        "label": "170 IAC 4-1-16"
+      },
+      {
+        "kind": "register_row",
+        "ref": "RPL-REG-CAL-2025:EVT-2025-0041",
+        "label": "RPL-REG-CAL-2025 row EVT-2025-0041"
+      }
+    ],
+    "propagated_from": null,
+    "stale_at_approval": true,
+    "doc_approved_date": "2025-03-14",
+    "rule_published_date": "2025-02-20",
+    "route": {
+      "owner": {
+        "person_id": "P09",
+        "name": "Marcus Lee",
+        "title": "Regulatory Affairs Analyst",
+        "department": "Regulatory Affairs",
+        "reports_to_id": "P08"
+      },
+      "reviewer": {
+        "person_id": "P08",
+        "name": "Elena Vasquez",
+        "title": "Manager Regulatory Affairs",
+        "department": "Regulatory Affairs",
+        "reports_to_id": "P07"
+      },
+      "approver": {
+        "person_id": "P07",
+        "name": "Thomas Whitfield",
+        "title": "Vice President Regulatory & Government Affairs",
+        "department": "Regulatory Affairs",
+        "reports_to_id": "P01"
+      }
+    },
+    "reviews": []
+  },
+  {
+    "finding_id": "f_a_013",
+    "run_id": "run_whatif_preset_a",
+    "change_id": "chg_whatif_a_001",
+    "clause_id": "RPL-REG-CAL-2025:EVT-2025-0031",
+    "doc_id": "RPL-REG-CAL-2025",
+    "citation": "170 IAC 4-1-16",
+    "finding_type": "scope_note",
+    "verdict": "info",
+    "severity": "low",
+    "confidence": 0.9,
+    "decided_by": "rule",
+    "required_change": {
+      "from_text": "all 170 IAC Articles 1 and 4 obligations",
+      "to_text": "all 170 IAC Articles 1 and 4 obligations (including the 20-day disconnection notice)"
+    },
+    "quotes": {
+      "s1": {
+        "text": "at least fourteen (14) days before the proposed discontinuance date",
+        "span": [
+          2110,
+          2177
+        ]
+      },
+      "s2": {
+        "text": "at least twenty (20) days before the proposed discontinuance date",
+        "span": [
+          2110,
+          2175
+        ]
+      },
+      "clause": {
+        "text": "covering all 170 IAC Articles 1 and 4 obligations",
+        "span": [
+          111,
+          160
+        ]
+      }
+    },
+    "quotes_verified": true,
+    "rationale": "The annual self-assessment covers every obligation under 170 IAC 4-1, which now includes the longer disconnection notice. No wording must change, but the assessor should add it to the checklist.",
+    "match_path": "direct_rule",
+    "path_detail": [
+      {
+        "kind": "rule",
+        "ref": "170 IAC 4-1",
+        "label": "170 IAC 4-1"
+      },
+      {
+        "kind": "register_row",
+        "ref": "RPL-REG-CAL-2025:EVT-2025-0031",
+        "label": "RPL-REG-CAL-2025 row EVT-2025-0031"
+      }
+    ],
+    "propagated_from": null,
+    "stale_at_approval": true,
+    "doc_approved_date": "2025-03-14",
+    "rule_published_date": "2025-02-20",
+    "route": {
+      "owner": {
+        "person_id": "P09",
+        "name": "Marcus Lee",
+        "title": "Regulatory Affairs Analyst",
+        "department": "Regulatory Affairs",
+        "reports_to_id": "P08"
+      },
+      "reviewer": {
+        "person_id": "P08",
+        "name": "Elena Vasquez",
+        "title": "Manager Regulatory Affairs",
+        "department": "Regulatory Affairs",
+        "reports_to_id": "P07"
+      },
+      "approver": {
+        "person_id": "P07",
+        "name": "Thomas Whitfield",
+        "title": "Vice President Regulatory & Government Affairs",
+        "department": "Regulatory Affairs",
+        "reports_to_id": "P01"
+      }
+    },
+    "reviews": []
+  },
+  {
+    "finding_id": "f_a_014",
+    "run_id": "run_whatif_preset_a",
+    "change_id": "chg_whatif_a_001",
+    "clause_id": "RPL-TAR-GRR-012:R13.3",
+    "doc_id": "RPL-TAR-GRR-012",
+    "citation": "170 IAC 4-1-16",
+    "finding_type": "value_mismatch",
+    "verdict": "action_required",
+    "severity": "high",
+    "confidence": 1,
+    "decided_by": "rule",
+    "required_change": {
+      "from_text": "without fourteen (14) days prior written notice",
+      "to_text": "without twenty (20) days prior written notice"
+    },
+    "quotes": {
+      "s1": {
+        "text": "at least fourteen (14) days before the proposed discontinuance date",
+        "span": [
+          2110,
+          2177
+        ]
+      },
+      "s2": {
+        "text": "at least twenty (20) days before the proposed discontinuance date",
+        "span": [
+          2110,
+          2175
+        ]
+      },
+      "clause": {
+        "text": "without fourteen (14) days prior written notice",
+        "span": [
+          269,
+          316
+        ]
+      }
+    },
+    "quotes_verified": true,
+    "rationale": "The filed tariff states the 14-day residential notice and cites 170 IAC 4-1-16(e). A tariff revision would have to be filed with the commission, so this needs the longest lead time of any finding.",
+    "match_path": "direct_section",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-16",
+        "label": "170 IAC 4-1-16"
+      },
+      {
+        "kind": "tariff_rule",
+        "ref": "RPL-TAR-GRR-012:R13.3",
+        "label": "RPL-TAR-GRR-012 rule R13.3"
+      }
+    ],
+    "propagated_from": null,
+    "stale_at_approval": false,
+    "doc_approved_date": "2024-05-15",
+    "rule_published_date": "2025-02-20",
+    "route": {
+      "owner": {
+        "person_id": "P11",
+        "name": "Aisha Thompson",
+        "title": "Senior Rates & Tariffs Analyst",
+        "department": "Regulatory Affairs",
+        "reports_to_id": "P10"
+      },
+      "reviewer": {
+        "person_id": "P10",
+        "name": "Robert Haskins",
+        "title": "Manager Rates & Tariffs",
+        "department": "Regulatory Affairs",
+        "reports_to_id": "P07"
+      },
+      "approver": {
+        "person_id": "P03",
+        "name": "Jonathan Pierce",
+        "title": "Senior Counsel Regulatory",
+        "department": "Legal",
+        "reports_to_id": "P02"
+      }
+    },
+    "reviews": []
+  },
+  {
+    "finding_id": "f_a_015",
+    "run_id": "run_whatif_preset_a",
+    "change_id": "chg_whatif_a_001",
+    "clause_id": "RPL-CS-PRO-011:8.5",
+    "doc_id": "RPL-CS-PRO-011",
+    "citation": "170 IAC 4-1-16",
+    "finding_type": "value_mismatch",
+    "verdict": "action_required",
+    "severity": "medium",
+    "confidence": 0.95,
+    "decided_by": "rule",
+    "required_change": {
+      "from_text": "a 14-day written notice was sent",
+      "to_text": "a 20-day written notice was sent"
+    },
+    "quotes": {
+      "s1": {
+        "text": "at least fourteen (14) days before the proposed discontinuance date",
+        "span": [
+          2110,
+          2177
+        ]
+      },
+      "s2": {
+        "text": "at least twenty (20) days before the proposed discontinuance date",
+        "span": [
+          2110,
+          2175
+        ]
+      },
+      "clause": {
+        "text": "a 14-day written notice was sent to residential customers",
+        "span": [
+          406,
+          463
+        ]
+      }
+    },
+    "quotes_verified": true,
+    "rationale": "The complaint specialist's checklist for disconnection complaints verifies that a 14-day notice was sent and cites 170 IAC 4-1-16(e). The check must use 20 days. This procedure was approved after the rule's publication date.",
+    "match_path": "direct_section",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-16",
+        "label": "170 IAC 4-1-16"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-011:8.5",
+        "label": "RPL-CS-PRO-011 §8.5"
+      }
+    ],
+    "propagated_from": null,
+    "stale_at_approval": true,
+    "doc_approved_date": "2025-02-26",
+    "rule_published_date": "2025-02-20",
+    "route": {
+      "owner": {
+        "person_id": "P17",
+        "name": "Brian Kowalski",
+        "title": "Manager Customer Advocacy & Complaint Resolution",
+        "department": "Customer Operations",
+        "reports_to_id": "P13"
+      },
+      "reviewer": {
+        "person_id": "P13",
+        "name": "Karen Mitchell",
+        "title": "Director Customer Service",
+        "department": "Customer Operations",
+        "reports_to_id": "P16"
+      },
+      "approver": null
+    },
+    "reviews": []
+  }
+]

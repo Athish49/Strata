@@ -1,1 +1,891 @@
-[]
+[
+  {
+    "candidate_id": "cand_a_001",
+    "run_id": "run_whatif_preset_a",
+    "change_id": "chg_whatif_a_001",
+    "clause_id": "RPL-CMP-REG-001:OBL-2024-0036",
+    "doc_id": "RPL-CMP-REG-001",
+    "match_path": "direct_section",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-16",
+        "label": "170 IAC 4-1-16"
+      },
+      {
+        "kind": "register_row",
+        "ref": "RPL-CMP-REG-001:OBL-2024-0036",
+        "label": "RPL-CMP-REG-001 row OBL-2024-0036"
+      }
+    ],
+    "outcome": "affected",
+    "skip_reason": null,
+    "rationale": "The register row obliges RPL to give advance notice under 170 IAC 4-1-16 and names the Disconnection Procedure as its implementation. The notice period it monitors is now 20 days, so the control description and monitoring method should state the new period.",
+    "finding_id": "f_a_001"
+  },
+  {
+    "candidate_id": "cand_a_002",
+    "run_id": "run_whatif_preset_a",
+    "change_id": "chg_whatif_a_001",
+    "clause_id": "RPL-CS-PRO-004:8.2",
+    "doc_id": "RPL-CS-PRO-004",
+    "match_path": "register_hop",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-16",
+        "label": "170 IAC 4-1-16(e)"
+      },
+      {
+        "kind": "register_row",
+        "ref": "RPL-CMP-REG-001:OBL-2024-0036",
+        "label": "OBL-2024-0036"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-004:8.2",
+        "label": "RPL-CS-PRO-004 §8.2"
+      }
+    ],
+    "outcome": "affected",
+    "skip_reason": null,
+    "rationale": "Section 8.2 is the procedure's statement of the residential notice period and it still says 14 days. Reached from register row OBL-2024-0036; fixing this sentence resolves the register finding's implementation gap.",
+    "finding_id": "f_a_002"
+  },
+  {
+    "candidate_id": "cand_a_003",
+    "run_id": "run_whatif_preset_a",
+    "change_id": "chg_whatif_a_001",
+    "clause_id": "RPL-CS-PRO-004:3.7",
+    "doc_id": "RPL-CS-PRO-004",
+    "match_path": "direct_section",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-16",
+        "label": "170 IAC 4-1-16"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-004:3.7",
+        "label": "RPL-CS-PRO-004 §3.7"
+      }
+    ],
+    "outcome": "affected",
+    "skip_reason": null,
+    "rationale": "The definition of the disconnect notice hard-codes 14 days and cites 170 IAC 4-1-16(e) directly. It must match the rule's new minimum.",
+    "finding_id": "f_a_003"
+  },
+  {
+    "candidate_id": "cand_a_004",
+    "run_id": "run_whatif_preset_a",
+    "change_id": "chg_whatif_a_001",
+    "clause_id": "RPL-CS-PRO-004:T6-3",
+    "doc_id": "RPL-CS-PRO-004",
+    "match_path": "direct_section",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-16",
+        "label": "170 IAC 4-1-16"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-004:T6-3",
+        "label": "RPL-CS-PRO-004 table T6-3"
+      }
+    ],
+    "outcome": "affected",
+    "skip_reason": null,
+    "rationale": "The collection-cycle table says the notice generated on Day 18 starts a 14-day period. With a 20-day minimum the CIS batch logic and this table need to change together.",
+    "finding_id": "f_a_004"
+  },
+  {
+    "candidate_id": "cand_a_005",
+    "run_id": "run_whatif_preset_a",
+    "change_id": "chg_whatif_a_001",
+    "clause_id": "RPL-CS-PRO-004:T7-1",
+    "doc_id": "RPL-CS-PRO-004",
+    "match_path": "direct_section",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-16",
+        "label": "170 IAC 4-1-16"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-004:T7-1",
+        "label": "RPL-CS-PRO-004 table T7-1"
+      }
+    ],
+    "outcome": "affected",
+    "skip_reason": null,
+    "rationale": "The eligibility decision table allows disconnection when a proper 14-day notice was mailed. Confirm whether the system rule that evaluates this row also needs the new period.",
+    "finding_id": "f_a_005"
+  },
+  {
+    "candidate_id": "cand_a_006",
+    "run_id": "run_whatif_preset_a",
+    "change_id": "chg_whatif_a_001",
+    "clause_id": "RPL-CS-PRO-004:T6-5",
+    "doc_id": "RPL-CS-PRO-004",
+    "match_path": "value_echo",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-16",
+        "label": "Restated value: 14 days"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-004:T6-5",
+        "label": "RPL-CS-PRO-004 table T6-5"
+      }
+    ],
+    "outcome": "affected",
+    "skip_reason": null,
+    "rationale": "This row never cites the rule, but its day count (Day 18 + 14 days) restates the old notice period. The wording the model quoted could not be matched exactly in the clause, so confirm the evidence before acting.",
+    "finding_id": "f_a_006"
+  },
+  {
+    "candidate_id": "cand_a_007",
+    "run_id": "run_whatif_preset_a",
+    "change_id": "chg_whatif_a_001",
+    "clause_id": "RPL-CS-PRO-004:16.3",
+    "doc_id": "RPL-CS-PRO-004",
+    "match_path": "value_echo",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-16",
+        "label": "Restated value: 14 days"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-004:16.3",
+        "label": "RPL-CS-PRO-004 §16.3"
+      }
+    ],
+    "outcome": "affected",
+    "skip_reason": null,
+    "rationale": "The monthly audit tests whether the notice went out at least 14 days before disconnection. Left unchanged, the audit would pass notices that are now too short.",
+    "finding_id": "f_a_007"
+  },
+  {
+    "candidate_id": "cand_a_008",
+    "run_id": "run_whatif_preset_a",
+    "change_id": "chg_whatif_a_001",
+    "clause_id": "RPL-CS-PRO-004:App-A.F6",
+    "doc_id": "RPL-CS-PRO-004",
+    "match_path": "register_hop",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-16",
+        "label": "170 IAC 4-1-16(e)"
+      },
+      {
+        "kind": "register_row",
+        "ref": "RPL-CMP-REG-001:OBL-2024-0036",
+        "label": "OBL-2024-0036"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-004:8.2",
+        "label": "RPL-CS-PRO-004 §8.2"
+      },
+      {
+        "kind": "form_field",
+        "ref": "RPL-CS-PRO-004:App-A.F6",
+        "label": "Notice letter field App-A.F6"
+      }
+    ],
+    "outcome": "affected",
+    "skip_reason": null,
+    "rationale": "The Proposed Disconnection Date printed on notice letter CS-F-012 is computed from the notice date plus the notice period (section 8.2). Once 8.2 changes, the date this field shows must move out by six more days.",
+    "finding_id": "f_a_008"
+  },
+  {
+    "candidate_id": "cand_a_009",
+    "run_id": "run_whatif_preset_a",
+    "change_id": "chg_whatif_a_001",
+    "clause_id": "RPL-CS-PRO-004:T4-4",
+    "doc_id": "RPL-CS-PRO-004",
+    "match_path": "direct_section",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-16",
+        "label": "170 IAC 4-1-16"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-004:T4-4",
+        "label": "RPL-CS-PRO-004 table T4-4"
+      }
+    ],
+    "outcome": "affected",
+    "skip_reason": null,
+    "rationale": "The Regulatory Basis table lists the rule as the authority for notice content and timing. Update the entry and the document's law-as-of marker when the section text is revised.",
+    "finding_id": "f_a_009"
+  },
+  {
+    "candidate_id": "cand_a_010",
+    "run_id": "run_whatif_preset_a",
+    "change_id": "chg_whatif_a_001",
+    "clause_id": "RPL-CS-PRO-004:2.3",
+    "doc_id": "RPL-CS-PRO-004",
+    "match_path": "direct_section",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-16",
+        "label": "170 IAC 4-1-16"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-004:2.3",
+        "label": "RPL-CS-PRO-004 §2.3"
+      }
+    ],
+    "outcome": "affected",
+    "skip_reason": null,
+    "rationale": "The scope note names the 14-day residential requirement only to exclude non-residential accounts. Behaviour does not change, but the figure should be corrected for consistency.",
+    "finding_id": "f_a_010"
+  },
+  {
+    "candidate_id": "cand_a_011",
+    "run_id": "run_whatif_preset_a",
+    "change_id": "chg_whatif_a_001",
+    "clause_id": "RPL-CS-PRO-004:8.11",
+    "doc_id": "RPL-CS-PRO-004",
+    "match_path": "direct_section",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-16",
+        "label": "170 IAC 4-1-16"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-004:8.11",
+        "label": "RPL-CS-PRO-004 §8.11"
+      }
+    ],
+    "outcome": "affected",
+    "skip_reason": null,
+    "rationale": "Non-residential accounts remain on the tariff timeline, so the process is unchanged. The sentence quotes the old residential period and should be updated.",
+    "finding_id": "f_a_011"
+  },
+  {
+    "candidate_id": "cand_a_012",
+    "run_id": "run_whatif_preset_a",
+    "change_id": "chg_whatif_a_001",
+    "clause_id": "RPL-REG-CAL-2025:EVT-2025-0041",
+    "doc_id": "RPL-REG-CAL-2025",
+    "match_path": "direct_section",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-16",
+        "label": "170 IAC 4-1-16"
+      },
+      {
+        "kind": "register_row",
+        "ref": "RPL-REG-CAL-2025:EVT-2025-0041",
+        "label": "RPL-REG-CAL-2025 row EVT-2025-0041"
+      }
+    ],
+    "outcome": "affected",
+    "skip_reason": null,
+    "rationale": "The monthly monitoring event checks compliance with the notice timelines in 170 IAC 4-1-16. The checklist behind it should be updated to test for 20 days. This calendar was approved after the rule's publication date, so it was already out of date when approved.",
+    "finding_id": "f_a_012"
+  },
+  {
+    "candidate_id": "cand_a_013",
+    "run_id": "run_whatif_preset_a",
+    "change_id": "chg_whatif_a_001",
+    "clause_id": "RPL-REG-CAL-2025:EVT-2025-0031",
+    "doc_id": "RPL-REG-CAL-2025",
+    "match_path": "direct_rule",
+    "path_detail": [
+      {
+        "kind": "rule",
+        "ref": "170 IAC 4-1",
+        "label": "170 IAC 4-1"
+      },
+      {
+        "kind": "register_row",
+        "ref": "RPL-REG-CAL-2025:EVT-2025-0031",
+        "label": "RPL-REG-CAL-2025 row EVT-2025-0031"
+      }
+    ],
+    "outcome": "affected",
+    "skip_reason": null,
+    "rationale": "The annual self-assessment covers every obligation under 170 IAC 4-1, which now includes the longer disconnection notice. No wording must change, but the assessor should add it to the checklist.",
+    "finding_id": "f_a_013"
+  },
+  {
+    "candidate_id": "cand_a_014",
+    "run_id": "run_whatif_preset_a",
+    "change_id": "chg_whatif_a_001",
+    "clause_id": "RPL-TAR-GRR-012:R13.3",
+    "doc_id": "RPL-TAR-GRR-012",
+    "match_path": "direct_section",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-16",
+        "label": "170 IAC 4-1-16"
+      },
+      {
+        "kind": "tariff_rule",
+        "ref": "RPL-TAR-GRR-012:R13.3",
+        "label": "RPL-TAR-GRR-012 rule R13.3"
+      }
+    ],
+    "outcome": "affected",
+    "skip_reason": null,
+    "rationale": "The filed tariff states the 14-day residential notice and cites 170 IAC 4-1-16(e). A tariff revision would have to be filed with the commission, so this needs the longest lead time of any finding.",
+    "finding_id": "f_a_014"
+  },
+  {
+    "candidate_id": "cand_a_015",
+    "run_id": "run_whatif_preset_a",
+    "change_id": "chg_whatif_a_001",
+    "clause_id": "RPL-CS-PRO-011:8.5",
+    "doc_id": "RPL-CS-PRO-011",
+    "match_path": "direct_section",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-16",
+        "label": "170 IAC 4-1-16"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-011:8.5",
+        "label": "RPL-CS-PRO-011 §8.5"
+      }
+    ],
+    "outcome": "affected",
+    "skip_reason": null,
+    "rationale": "The complaint specialist's checklist for disconnection complaints verifies that a 14-day notice was sent and cites 170 IAC 4-1-16(e). The check must use 20 days. This procedure was approved after the rule's publication date.",
+    "finding_id": "f_a_015"
+  },
+  {
+    "candidate_id": "cand_a_016",
+    "run_id": "run_whatif_preset_a",
+    "change_id": "chg_whatif_a_001",
+    "clause_id": "RPL-CS-PRO-004:8.3",
+    "doc_id": "RPL-CS-PRO-004",
+    "match_path": "direct_section",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-16",
+        "label": "170 IAC 4-1-16"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-004:8.3",
+        "label": "RPL-CS-PRO-004 §8.3"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "no_period_stated",
+    "rationale": "Delivery method (first-class mail or personal delivery) is unchanged; no day count appears in this clause.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand_a_017",
+    "run_id": "run_whatif_preset_a",
+    "change_id": "chg_whatif_a_001",
+    "clause_id": "RPL-CS-PRO-004:8.4",
+    "doc_id": "RPL-CS-PRO-004",
+    "match_path": "direct_section",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-16",
+        "label": "170 IAC 4-1-16"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-004:8.4",
+        "label": "RPL-CS-PRO-004 §8.4"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "no_period_stated",
+    "rationale": "Language and format requirements for the notice are unchanged by the edit.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand_a_018",
+    "run_id": "run_whatif_preset_a",
+    "change_id": "chg_whatif_a_001",
+    "clause_id": "RPL-CS-PRO-004:8.5",
+    "doc_id": "RPL-CS-PRO-004",
+    "match_path": "direct_section",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-16",
+        "label": "170 IAC 4-1-16"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-004:8.5",
+        "label": "RPL-CS-PRO-004 §8.5"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "no_period_stated",
+    "rationale": "Content element (proposed disconnection date) is unchanged. The date itself is governed by section 8.2 and the notice-letter field, which are flagged.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand_a_019",
+    "run_id": "run_whatif_preset_a",
+    "change_id": "chg_whatif_a_001",
+    "clause_id": "RPL-CS-PRO-004:9.5",
+    "doc_id": "RPL-CS-PRO-004",
+    "match_path": "direct_section",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-16",
+        "label": "170 IAC 4-1-16"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-004:9.5",
+        "label": "RPL-CS-PRO-004 §9.5"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "different_subsection",
+    "rationale": "Cites subsection (c) (10-day medical postponement). The edit changes only subsection (e).",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand_a_020",
+    "run_id": "run_whatif_preset_a",
+    "change_id": "chg_whatif_a_001",
+    "clause_id": "RPL-CS-PRO-004:9.6",
+    "doc_id": "RPL-CS-PRO-004",
+    "match_path": "direct_section",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-16",
+        "label": "170 IAC 4-1-16"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-004:9.6",
+        "label": "RPL-CS-PRO-004 §9.6"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "different_subsection",
+    "rationale": "Cites subsection (c) (renewal of the 10-day postponement). Not touched by the edit.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand_a_021",
+    "run_id": "run_whatif_preset_a",
+    "change_id": "chg_whatif_a_001",
+    "clause_id": "RPL-CS-PRO-004:12.6",
+    "doc_id": "RPL-CS-PRO-004",
+    "match_path": "direct_section",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-16",
+        "label": "170 IAC 4-1-16"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-004:12.6",
+        "label": "RPL-CS-PRO-004 §12.6"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "different_subsection",
+    "rationale": "Cites subsection (d) (time-of-day limits). Not touched by the edit.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand_a_022",
+    "run_id": "run_whatif_preset_a",
+    "change_id": "chg_whatif_a_001",
+    "clause_id": "RPL-CS-PRO-004:13.3",
+    "doc_id": "RPL-CS-PRO-004",
+    "match_path": "direct_section",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-16",
+        "label": "170 IAC 4-1-16"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-004:13.3",
+        "label": "RPL-CS-PRO-004 §13.3"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "different_subsection",
+    "rationale": "Cites subsection (g) (reconnection timing). Not touched by the edit.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand_a_023",
+    "run_id": "run_whatif_preset_a",
+    "change_id": "chg_whatif_a_001",
+    "clause_id": "RPL-CS-PRO-004:App-A.F5",
+    "doc_id": "RPL-CS-PRO-004",
+    "match_path": "register_hop",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-16",
+        "label": "170 IAC 4-1-16(e)"
+      },
+      {
+        "kind": "register_row",
+        "ref": "RPL-CMP-REG-001:OBL-2024-0036",
+        "label": "OBL-2024-0036"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-004:8.2",
+        "label": "RPL-CS-PRO-004 §8.2"
+      },
+      {
+        "kind": "form_field",
+        "ref": "RPL-CS-PRO-004:App-A.F5",
+        "label": "RPL-CS-PRO-004 field A.F5"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "label_only",
+    "rationale": "The Notice Date field is the date the letter is generated. Only the Proposed Disconnection Date (A.F6) depends on the notice period.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand_a_024",
+    "run_id": "run_whatif_preset_a",
+    "change_id": "chg_whatif_a_001",
+    "clause_id": "RPL-CS-PRO-004:App-A.F13",
+    "doc_id": "RPL-CS-PRO-004",
+    "match_path": "value_echo",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-16",
+        "label": "170 IAC 4-1-16"
+      },
+      {
+        "kind": "form_field",
+        "ref": "RPL-CS-PRO-004:App-A.F13",
+        "label": "RPL-CS-PRO-004 field A.F13"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "different_period",
+    "rationale": "States a ten (10) day medical postponement, which comes from subsection (c), not the notice period.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand_a_025",
+    "run_id": "run_whatif_preset_a",
+    "change_id": "chg_whatif_a_001",
+    "clause_id": "RPL-CS-PRO-004:T7-4",
+    "doc_id": "RPL-CS-PRO-004",
+    "match_path": "direct_section",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-16",
+        "label": "170 IAC 4-1-16"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-004:T7-4",
+        "label": "RPL-CS-PRO-004 table T7-4"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "different_subsection",
+    "rationale": "Decision-table row for the 10-day medical postponement under subsection (c).",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand_a_026",
+    "run_id": "run_whatif_preset_a",
+    "change_id": "chg_whatif_a_001",
+    "clause_id": "RPL-CMP-REG-001:A.1.tbl1.r4",
+    "doc_id": "RPL-CMP-REG-001",
+    "match_path": "direct_section",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-16",
+        "label": "170 IAC 4-1-16"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CMP-REG-001:A.1.tbl1.r4",
+        "label": "RPL-CMP-REG-001 table A.1.tbl1.r4"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "no_period_stated",
+    "rationale": "Top-20 excerpt lists the obligation by citation only and states no period. The underlying row OBL-2024-0036 carries the flag.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand_a_027",
+    "run_id": "run_whatif_preset_a",
+    "change_id": "chg_whatif_a_001",
+    "clause_id": "RPL-CMP-REG-001:11.2.tbl1.r2",
+    "doc_id": "RPL-CMP-REG-001",
+    "match_path": "direct_rule",
+    "path_detail": [
+      {
+        "kind": "rule",
+        "ref": "170 IAC 4-1",
+        "label": "170 IAC 4-1"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CMP-REG-001:11.2.tbl1.r2",
+        "label": "RPL-CMP-REG-001 table 11.2.tbl1.r2"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "range_reference",
+    "rationale": "Maps the procedure to a range of rules (4-1-11 through 4-1-16) without stating any period.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand_a_028",
+    "run_id": "run_whatif_preset_a",
+    "change_id": "chg_whatif_a_001",
+    "clause_id": "RPL-REG-CAL-2025:EVT-2025-0006",
+    "doc_id": "RPL-REG-CAL-2025",
+    "match_path": "direct_section",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-16",
+        "label": "170 IAC 4-1-16"
+      },
+      {
+        "kind": "register_row",
+        "ref": "RPL-REG-CAL-2025:EVT-2025-0006",
+        "label": "RPL-REG-CAL-2025 row EVT-2025-0006"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "completed_event",
+    "rationale": "Q1 review that was completed on 2025-02-28; a historical record that does not need to change.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand_a_029",
+    "run_id": "run_whatif_preset_a",
+    "change_id": "chg_whatif_a_001",
+    "clause_id": "RPL-TAR-GRR-012:R13.1",
+    "doc_id": "RPL-TAR-GRR-012",
+    "match_path": "direct_section",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-16",
+        "label": "170 IAC 4-1-16"
+      },
+      {
+        "kind": "tariff_rule",
+        "ref": "RPL-TAR-GRR-012:R13.1",
+        "label": "RPL-TAR-GRR-012 rule R13.1"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "different_subsection",
+    "rationale": "Cites subsection (a) (customer-requested disconnection, three days).",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand_a_030",
+    "run_id": "run_whatif_preset_a",
+    "change_id": "chg_whatif_a_001",
+    "clause_id": "RPL-TAR-GRR-012:R13.2",
+    "doc_id": "RPL-TAR-GRR-012",
+    "match_path": "direct_section",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-16",
+        "label": "170 IAC 4-1-16"
+      },
+      {
+        "kind": "tariff_rule",
+        "ref": "RPL-TAR-GRR-012:R13.2",
+        "label": "RPL-TAR-GRR-012 rule R13.2"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "different_subsection",
+    "rationale": "Cites subsection (b) (disconnection without notice for hazards or fraud).",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand_a_031",
+    "run_id": "run_whatif_preset_a",
+    "change_id": "chg_whatif_a_001",
+    "clause_id": "RPL-TAR-GRR-012:R13.4",
+    "doc_id": "RPL-TAR-GRR-012",
+    "match_path": "direct_section",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-16",
+        "label": "170 IAC 4-1-16"
+      },
+      {
+        "kind": "tariff_rule",
+        "ref": "RPL-TAR-GRR-012:R13.4",
+        "label": "RPL-TAR-GRR-012 rule R13.4"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "different_subsection",
+    "rationale": "Cites subsection (d) (permitted hours and days).",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand_a_032",
+    "run_id": "run_whatif_preset_a",
+    "change_id": "chg_whatif_a_001",
+    "clause_id": "RPL-TAR-GRR-012:R13.7",
+    "doc_id": "RPL-TAR-GRR-012",
+    "match_path": "direct_section",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-16",
+        "label": "170 IAC 4-1-16"
+      },
+      {
+        "kind": "tariff_rule",
+        "ref": "RPL-TAR-GRR-012:R13.7",
+        "label": "RPL-TAR-GRR-012 rule R13.7"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "different_subsection",
+    "rationale": "Cites subsection (c) (ten-day medical postponement).",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand_a_033",
+    "run_id": "run_whatif_preset_a",
+    "change_id": "chg_whatif_a_001",
+    "clause_id": "RPL-CS-PRO-011:T4-4",
+    "doc_id": "RPL-CS-PRO-011",
+    "match_path": "direct_section",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-16",
+        "label": "170 IAC 4-1-16"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-011:T4-4",
+        "label": "RPL-CS-PRO-011 table T4-4"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "no_period_stated",
+    "rationale": "Regulatory-basis row describing complaint handling for service-off cases; states no notice period.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand_a_034",
+    "run_id": "run_whatif_preset_a",
+    "change_id": "chg_whatif_a_001",
+    "clause_id": "RPL-CS-PRO-011:11.6",
+    "doc_id": "RPL-CS-PRO-011",
+    "match_path": "value_echo",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-16",
+        "label": "170 IAC 4-1-16"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-011:11.6",
+        "label": "RPL-CS-PRO-011 §11.6"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "different_rule_value",
+    "rationale": "The 14 days is RPL's response time to Consumer Affairs under 170 IAC 16-1-5(c)(3), an unrelated rule.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand_a_035",
+    "run_id": "run_whatif_preset_a",
+    "change_id": "chg_whatif_a_001",
+    "clause_id": "RPL-DO-PLN-002:T11.r1",
+    "doc_id": "RPL-DO-PLN-002",
+    "match_path": "value_echo",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-16",
+        "label": "170 IAC 4-1-16"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-DO-PLN-002:T11.r1",
+        "label": "RPL-DO-PLN-002 table T11.r1"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "different_rule_value",
+    "rationale": "The 14-day figure is the regulatory minimum for vegetation-work notices, not the disconnection notice.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand_a_036",
+    "run_id": "run_whatif_preset_a",
+    "change_id": "chg_whatif_a_001",
+    "clause_id": "RPL-DO-PLN-002:T19.r4",
+    "doc_id": "RPL-DO-PLN-002",
+    "match_path": "value_echo",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-16",
+        "label": "170 IAC 4-1-16"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-DO-PLN-002:T19.r4",
+        "label": "RPL-DO-PLN-002 table T19.r4"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "different_rule_value",
+    "rationale": "KPI measures vegetation notice lead time; unrelated to disconnection notice.",
+    "finding_id": null
+  }
+]

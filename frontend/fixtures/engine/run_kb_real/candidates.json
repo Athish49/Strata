@@ -1,1 +1,4220 @@
-[]
+[
+  {
+    "candidate_id": "cand-0001",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-1-6-4",
+    "clause_id": "RPL-REG-CAL-2025:6.1.tbl1.r1",
+    "doc_id": "RPL-REG-CAL-2025",
+    "match_path": "direct_section",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 1-6-4",
+        "label": "170 IAC 1-6-4 · Administrative filings; contents"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-REG-CAL-2025:6.1.tbl1.r1",
+        "label": "RPL-REG-CAL-2025 · Section 6 — Q2 Events (April–June 2025)"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "cosmetic_noise",
+    "rationale": "Only a readoption stamp was added to the history note, so the clause's reliance on 170 IAC 1-6-4 is unaffected.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0002",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-1-6-4",
+    "clause_id": "RPL-REG-CAL-2025:EVT-2025-0005",
+    "doc_id": "RPL-REG-CAL-2025",
+    "match_path": "register_hop",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 1-6-4",
+        "label": "170 IAC 1-6-4 · Administrative filings; contents"
+      },
+      {
+        "kind": "register_row",
+        "ref": "RPL-CMP-REG-001:OBL-2024-0019",
+        "label": "Register row OBL-2024-0019"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-REG-CAL-2025:EVT-2025-0005",
+        "label": "RPL-REG-CAL-2025 · Regulatory calendar events"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "cosmetic_noise",
+    "rationale": "Only a readoption stamp was added to the history note, so the clause's reliance on 170 IAC 1-6-4 is unaffected.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0003",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-1-6-4",
+    "clause_id": "RPL-REG-CAL-2025:EVT-2025-0011",
+    "doc_id": "RPL-REG-CAL-2025",
+    "match_path": "register_hop",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 1-6-4",
+        "label": "170 IAC 1-6-4 · Administrative filings; contents"
+      },
+      {
+        "kind": "register_row",
+        "ref": "RPL-CMP-REG-001:OBL-2024-0019",
+        "label": "Register row OBL-2024-0019"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-REG-CAL-2025:EVT-2025-0011",
+        "label": "RPL-REG-CAL-2025 · Regulatory calendar events"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "cosmetic_noise",
+    "rationale": "Only a readoption stamp was added to the history note, so the clause's reliance on 170 IAC 1-6-4 is unaffected.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0004",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-1-6-4",
+    "clause_id": "RPL-REG-CAL-2025:EVT-2025-0013",
+    "doc_id": "RPL-REG-CAL-2025",
+    "match_path": "register_hop",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 1-6-4",
+        "label": "170 IAC 1-6-4 · Administrative filings; contents"
+      },
+      {
+        "kind": "register_row",
+        "ref": "RPL-CMP-REG-001:OBL-2024-0019",
+        "label": "Register row OBL-2024-0019"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-REG-CAL-2025:EVT-2025-0013",
+        "label": "RPL-REG-CAL-2025 · Regulatory calendar events"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "cosmetic_noise",
+    "rationale": "Only a readoption stamp was added to the history note, so the clause's reliance on 170 IAC 1-6-4 is unaffected.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0005",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-1-6-5",
+    "clause_id": "RPL-REG-CAL-2025:5.1.tbl1.r5",
+    "doc_id": "RPL-REG-CAL-2025",
+    "match_path": "direct_section",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 1-6-5",
+        "label": "170 IAC 1-6-5 · Administrative filings; notice"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-REG-CAL-2025:5.1.tbl1.r5",
+        "label": "RPL-REG-CAL-2025 · Section 5 — Q1 Events (January–March 2025)"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "cross_ref_only_noise",
+    "rationale": "The change only refines a cross-reference to \"170 IAC 1-6-2(11)\"; the notice obligation this clause relies on is unchanged.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0006",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-1-6-5",
+    "clause_id": "RPL-REG-CAL-2025:6.1.tbl1.r7",
+    "doc_id": "RPL-REG-CAL-2025",
+    "match_path": "direct_section",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 1-6-5",
+        "label": "170 IAC 1-6-5 · Administrative filings; notice"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-REG-CAL-2025:6.1.tbl1.r7",
+        "label": "RPL-REG-CAL-2025 · Section 6 — Q2 Events (April–June 2025)"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "cross_ref_only_noise",
+    "rationale": "The change only refines a cross-reference to \"170 IAC 1-6-2(11)\"; the notice obligation this clause relies on is unchanged.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0007",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-1-6-5",
+    "clause_id": "RPL-REG-CAL-2025:7.1.tbl1.r9",
+    "doc_id": "RPL-REG-CAL-2025",
+    "match_path": "direct_section",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 1-6-5",
+        "label": "170 IAC 1-6-5 · Administrative filings; notice"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-REG-CAL-2025:7.1.tbl1.r9",
+        "label": "RPL-REG-CAL-2025 · Section 7 — Q3 Events (July–September 2025)"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "cross_ref_only_noise",
+    "rationale": "The change only refines a cross-reference to \"170 IAC 1-6-2(11)\"; the notice obligation this clause relies on is unchanged.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0008",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-1-6-5",
+    "clause_id": "RPL-REG-CAL-2025:9.1.tbl1.r5",
+    "doc_id": "RPL-REG-CAL-2025",
+    "match_path": "direct_section",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 1-6-5",
+        "label": "170 IAC 1-6-5 · Administrative filings; notice"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-REG-CAL-2025:9.1.tbl1.r5",
+        "label": "RPL-REG-CAL-2025 · Section 9 — Annual/Rolling Events (Throughout 2025)"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "cross_ref_only_noise",
+    "rationale": "The change only refines a cross-reference to \"170 IAC 1-6-2(11)\"; the notice obligation this clause relies on is unchanged.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0009",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-1-6-5",
+    "clause_id": "RPL-REG-CAL-2025:EVT-2025-0017",
+    "doc_id": "RPL-REG-CAL-2025",
+    "match_path": "register_hop",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 1-6-5",
+        "label": "170 IAC 1-6-5 · Administrative filings; notice"
+      },
+      {
+        "kind": "register_row",
+        "ref": "RPL-CMP-REG-001:OBL-2024-0020",
+        "label": "Register row OBL-2024-0020"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-REG-CAL-2025:EVT-2025-0017",
+        "label": "RPL-REG-CAL-2025 · Regulatory calendar events"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "cross_ref_only_noise",
+    "rationale": "The change only refines a cross-reference to \"170 IAC 1-6-2(11)\"; the notice obligation this clause relies on is unchanged.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0010",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-1-6-5",
+    "clause_id": "RPL-REG-CAL-2025:EVT-2025-0029",
+    "doc_id": "RPL-REG-CAL-2025",
+    "match_path": "register_hop",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 1-6-5",
+        "label": "170 IAC 1-6-5 · Administrative filings; notice"
+      },
+      {
+        "kind": "register_row",
+        "ref": "RPL-CMP-REG-001:OBL-2024-0020",
+        "label": "Register row OBL-2024-0020"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-REG-CAL-2025:EVT-2025-0029",
+        "label": "RPL-REG-CAL-2025 · Regulatory calendar events"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "cross_ref_only_noise",
+    "rationale": "The change only refines a cross-reference to \"170 IAC 1-6-2(11)\"; the notice obligation this clause relies on is unchanged.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0011",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-1-6-3",
+    "clause_id": "RPL-REG-CAL-2025:1.3",
+    "doc_id": "RPL-REG-CAL-2025",
+    "match_path": "direct_section",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 1-6-3",
+        "label": "170 IAC 1-6-3 · Administrative filings; timing"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-REG-CAL-2025:1.3",
+        "label": "RPL-REG-CAL-2025 · Section 1 — Purpose"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "punctuation_only_noise",
+    "rationale": "Commas were added to paragraph (a); the 30-day effective period and who acts are unchanged, so this clause stays accurate.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0012",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-1-6-3",
+    "clause_id": "RPL-REG-CAL-2025:6.1.tbl1.r3",
+    "doc_id": "RPL-REG-CAL-2025",
+    "match_path": "direct_section",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 1-6-3",
+        "label": "170 IAC 1-6-3 · Administrative filings; timing"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-REG-CAL-2025:6.1.tbl1.r3",
+        "label": "RPL-REG-CAL-2025 · Section 6 — Q2 Events (April–June 2025)"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "punctuation_only_noise",
+    "rationale": "Commas were added to paragraph (a); the 30-day effective period and who acts are unchanged, so this clause stays accurate.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0013",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-1-6-3",
+    "clause_id": "RPL-REG-CAL-2025:7.1.tbl1.r2",
+    "doc_id": "RPL-REG-CAL-2025",
+    "match_path": "direct_section",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 1-6-3",
+        "label": "170 IAC 1-6-3 · Administrative filings; timing"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-REG-CAL-2025:7.1.tbl1.r2",
+        "label": "RPL-REG-CAL-2025 · Section 7 — Q3 Events (July–September 2025)"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "punctuation_only_noise",
+    "rationale": "Commas were added to paragraph (a); the 30-day effective period and who acts are unchanged, so this clause stays accurate.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0014",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-1-6-3",
+    "clause_id": "RPL-REG-CAL-2025:7.1.tbl1.r5",
+    "doc_id": "RPL-REG-CAL-2025",
+    "match_path": "direct_section",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 1-6-3",
+        "label": "170 IAC 1-6-3 · Administrative filings; timing"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-REG-CAL-2025:7.1.tbl1.r5",
+        "label": "RPL-REG-CAL-2025 · Section 7 — Q3 Events (July–September 2025)"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "punctuation_only_noise",
+    "rationale": "Commas were added to paragraph (a); the 30-day effective period and who acts are unchanged, so this clause stays accurate.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0015",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-1-6-3",
+    "clause_id": "RPL-REG-CAL-2025:8.1.tbl1.r6",
+    "doc_id": "RPL-REG-CAL-2025",
+    "match_path": "direct_section",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 1-6-3",
+        "label": "170 IAC 1-6-3 · Administrative filings; timing"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-REG-CAL-2025:8.1.tbl1.r6",
+        "label": "RPL-REG-CAL-2025 · Section 8 — Q4 Events (October–December 2025)"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "punctuation_only_noise",
+    "rationale": "Commas were added to paragraph (a); the 30-day effective period and who acts are unchanged, so this clause stays accurate.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0016",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-1-6-3",
+    "clause_id": "RPL-REG-CAL-2025:11.2",
+    "doc_id": "RPL-REG-CAL-2025",
+    "match_path": "direct_section",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 1-6-3",
+        "label": "170 IAC 1-6-3 · Administrative filings; timing"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-REG-CAL-2025:11.2",
+        "label": "RPL-REG-CAL-2025 · Section 11 — Revision History"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "punctuation_only_noise",
+    "rationale": "Commas were added to paragraph (a); the 30-day effective period and who acts are unchanged, so this clause stays accurate.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0017",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-1-6-3",
+    "clause_id": "RPL-REG-CAL-2025:EVT-2025-0022",
+    "doc_id": "RPL-REG-CAL-2025",
+    "match_path": "register_hop",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 1-6-3",
+        "label": "170 IAC 1-6-3 · Administrative filings; timing"
+      },
+      {
+        "kind": "register_row",
+        "ref": "RPL-CMP-REG-001:OBL-2024-0018",
+        "label": "Register row OBL-2024-0018"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-REG-CAL-2025:EVT-2025-0022",
+        "label": "RPL-REG-CAL-2025 · Regulatory calendar events"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "punctuation_only_noise",
+    "rationale": "Commas were added to paragraph (a); the 30-day effective period and who acts are unchanged, so this clause stays accurate.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0018",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-1-6-3",
+    "clause_id": "RPL-REG-CAL-2025:EVT-2025-0025",
+    "doc_id": "RPL-REG-CAL-2025",
+    "match_path": "register_hop",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 1-6-3",
+        "label": "170 IAC 1-6-3 · Administrative filings; timing"
+      },
+      {
+        "kind": "register_row",
+        "ref": "RPL-CMP-REG-001:OBL-2024-0018",
+        "label": "Register row OBL-2024-0018"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-REG-CAL-2025:EVT-2025-0025",
+        "label": "RPL-REG-CAL-2025 · Regulatory calendar events"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "punctuation_only_noise",
+    "rationale": "Commas were added to paragraph (a); the 30-day effective period and who acts are unchanged, so this clause stays accurate.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0019",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-16-1-5",
+    "clause_id": "RPL-CS-PRO-011:3.4",
+    "doc_id": "RPL-CS-PRO-011",
+    "match_path": "direct_section",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 16-1-5",
+        "label": "170 IAC 16-1-5 · Informal complaints; customer rights during review"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-011:3.4",
+        "label": "RPL-CS-PRO-011 · 3. Definitions"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "cosmetic_noise",
+    "rationale": "Only a readoption stamp was added to the history note, so the clause's reliance on 170 IAC 16-1-5 is unaffected.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0020",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-16-1-5",
+    "clause_id": "RPL-CS-PRO-004:T4-10",
+    "doc_id": "RPL-CS-PRO-004",
+    "match_path": "direct_section",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 16-1-5",
+        "label": "170 IAC 16-1-5 · Informal complaints; customer rights during review"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-004:T4-10",
+        "label": "RPL-CS-PRO-004 · 4. Regulatory Basis"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "cosmetic_noise",
+    "rationale": "Only a readoption stamp was added to the history note, so the clause's reliance on 170 IAC 16-1-5 is unaffected.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0021",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-16-1-5",
+    "clause_id": "RPL-CS-PRO-011:T4-10",
+    "doc_id": "RPL-CS-PRO-011",
+    "match_path": "direct_section",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 16-1-5",
+        "label": "170 IAC 16-1-5 · Informal complaints; customer rights during review"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-011:T4-10",
+        "label": "RPL-CS-PRO-011 · 4. Regulatory Basis"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "cosmetic_noise",
+    "rationale": "Only a readoption stamp was added to the history note, so the clause's reliance on 170 IAC 16-1-5 is unaffected.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0022",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-16-1-5",
+    "clause_id": "RPL-CS-PRO-011:9.5",
+    "doc_id": "RPL-CS-PRO-011",
+    "match_path": "direct_section",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 16-1-5",
+        "label": "170 IAC 16-1-5 · Informal complaints; customer rights during review"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-011:9.5",
+        "label": "RPL-CS-PRO-011 · 9. Utility Determination and Customer Notice"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "cosmetic_noise",
+    "rationale": "Only a readoption stamp was added to the history note, so the clause's reliance on 170 IAC 16-1-5 is unaffected.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0023",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-16-1-5",
+    "clause_id": "RPL-CS-PRO-011:11.6",
+    "doc_id": "RPL-CS-PRO-011",
+    "match_path": "direct_section",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 16-1-5",
+        "label": "170 IAC 16-1-5 · Informal complaints; customer rights during review"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-011:11.6",
+        "label": "RPL-CS-PRO-011 · 11. IURC Consumer Affairs Referrals and Responses"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "cosmetic_noise",
+    "rationale": "Only a readoption stamp was added to the history note, so the clause's reliance on 170 IAC 16-1-5 is unaffected.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0024",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-16-1-5",
+    "clause_id": "RPL-CS-PRO-011:11.8",
+    "doc_id": "RPL-CS-PRO-011",
+    "match_path": "direct_section",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 16-1-5",
+        "label": "170 IAC 16-1-5 · Informal complaints; customer rights during review"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-011:11.8",
+        "label": "RPL-CS-PRO-011 · 11. IURC Consumer Affairs Referrals and Responses"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "cosmetic_noise",
+    "rationale": "Only a readoption stamp was added to the history note, so the clause's reliance on 170 IAC 16-1-5 is unaffected.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0025",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-16-1-7",
+    "clause_id": "RPL-CS-PRO-011:3.11",
+    "doc_id": "RPL-CS-PRO-011",
+    "match_path": "direct_section",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 16-1-7",
+        "label": "170 IAC 16-1-7 · Informal complaints; disconnection hold"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-011:3.11",
+        "label": "RPL-CS-PRO-011 · 3. Definitions"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "cross_ref_only_noise",
+    "rationale": "The change only adds \"(a)\" to the IC 8-1-1-3 reference; the complaint-outcome reporting duty this clause relies on is unchanged.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0026",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-16-1-7",
+    "clause_id": "RPL-CS-PRO-004:T4-12",
+    "doc_id": "RPL-CS-PRO-004",
+    "match_path": "direct_section",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 16-1-7",
+        "label": "170 IAC 16-1-7 · Informal complaints; disconnection hold"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-004:T4-12",
+        "label": "RPL-CS-PRO-004 · 4. Regulatory Basis"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "cross_ref_only_noise",
+    "rationale": "The change only adds \"(a)\" to the IC 8-1-1-3 reference; the complaint-outcome reporting duty this clause relies on is unchanged.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0027",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-16-1-7",
+    "clause_id": "RPL-CS-PRO-011:T4-12",
+    "doc_id": "RPL-CS-PRO-011",
+    "match_path": "direct_section",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 16-1-7",
+        "label": "170 IAC 16-1-7 · Informal complaints; disconnection hold"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-011:T4-12",
+        "label": "RPL-CS-PRO-011 · 4. Regulatory Basis"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "cross_ref_only_noise",
+    "rationale": "The change only adds \"(a)\" to the IC 8-1-1-3 reference; the complaint-outcome reporting duty this clause relies on is unchanged.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0028",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-16-1-7",
+    "clause_id": "RPL-CS-PRO-004:T7-14",
+    "doc_id": "RPL-CS-PRO-004",
+    "match_path": "direct_section",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 16-1-7",
+        "label": "170 IAC 16-1-7 · Informal complaints; disconnection hold"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-004:T7-14",
+        "label": "RPL-CS-PRO-004 · 7. Eligibility for Disconnection — Decision Table"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "cross_ref_only_noise",
+    "rationale": "The change only adds \"(a)\" to the IC 8-1-1-3 reference; the complaint-outcome reporting duty this clause relies on is unchanged.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0029",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-16-1-7",
+    "clause_id": "RPL-CS-PRO-011:7.1",
+    "doc_id": "RPL-CS-PRO-011",
+    "match_path": "direct_section",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 16-1-7",
+        "label": "170 IAC 16-1-7 · Informal complaints; disconnection hold"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-011:7.1",
+        "label": "RPL-CS-PRO-011 · 7. Protection During a Dispute"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "cross_ref_only_noise",
+    "rationale": "The change only adds \"(a)\" to the IC 8-1-1-3 reference; the complaint-outcome reporting duty this clause relies on is unchanged.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0030",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-16-1-7",
+    "clause_id": "RPL-CS-PRO-004:T7-15",
+    "doc_id": "RPL-CS-PRO-004",
+    "match_path": "direct_section",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 16-1-7",
+        "label": "170 IAC 16-1-7 · Informal complaints; disconnection hold"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-004:T7-15",
+        "label": "RPL-CS-PRO-004 · 7. Eligibility for Disconnection — Decision Table"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "cross_ref_only_noise",
+    "rationale": "The change only adds \"(a)\" to the IC 8-1-1-3 reference; the complaint-outcome reporting duty this clause relies on is unchanged.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0031",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-16-1-4",
+    "clause_id": "RPL-CS-PRO-011:2.2",
+    "doc_id": "RPL-CS-PRO-011",
+    "match_path": "direct_section",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 16-1-4",
+        "label": "170 IAC 16-1-4 · Informal complaints; review"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-011:2.2",
+        "label": "RPL-CS-PRO-011 · 2. Scope"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "punctuation_only_noise",
+    "rationale": "Serial commas were added in paragraph (b); the ten-day response time and the items to provide are unchanged.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0032",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-16-1-4",
+    "clause_id": "RPL-CS-PRO-004:T4-9",
+    "doc_id": "RPL-CS-PRO-004",
+    "match_path": "direct_section",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 16-1-4",
+        "label": "170 IAC 16-1-4 · Informal complaints; review"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-004:T4-9",
+        "label": "RPL-CS-PRO-004 · 4. Regulatory Basis"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "punctuation_only_noise",
+    "rationale": "Serial commas were added in paragraph (b); the ten-day response time and the items to provide are unchanged.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0033",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-16-1-4",
+    "clause_id": "RPL-CS-PRO-004:14.2",
+    "doc_id": "RPL-CS-PRO-004",
+    "match_path": "direct_section",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 16-1-4",
+        "label": "170 IAC 16-1-4 · Informal complaints; review"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-004:14.2",
+        "label": "RPL-CS-PRO-004 · 14. Disputes During the Disconnection Process"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "punctuation_only_noise",
+    "rationale": "Serial commas were added in paragraph (b); the ten-day response time and the items to provide are unchanged.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0034",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-16-1-4",
+    "clause_id": "RPL-CS-PRO-011:T4-9",
+    "doc_id": "RPL-CS-PRO-011",
+    "match_path": "direct_section",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 16-1-4",
+        "label": "170 IAC 16-1-4 · Informal complaints; review"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-011:T4-9",
+        "label": "RPL-CS-PRO-011 · 4. Regulatory Basis"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "punctuation_only_noise",
+    "rationale": "Serial commas were added in paragraph (b); the ten-day response time and the items to provide are unchanged.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0035",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-16-1-4",
+    "clause_id": "RPL-CS-PRO-004:14.3",
+    "doc_id": "RPL-CS-PRO-004",
+    "match_path": "direct_section",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 16-1-4",
+        "label": "170 IAC 16-1-4 · Informal complaints; review"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-004:14.3",
+        "label": "RPL-CS-PRO-004 · 14. Disputes During the Disconnection Process"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "punctuation_only_noise",
+    "rationale": "Serial commas were added in paragraph (b); the ten-day response time and the items to provide are unchanged.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0036",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-16-1-4",
+    "clause_id": "RPL-CS-PRO-011:6.1",
+    "doc_id": "RPL-CS-PRO-011",
+    "match_path": "direct_section",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 16-1-4",
+        "label": "170 IAC 16-1-4 · Informal complaints; review"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-011:6.1",
+        "label": "RPL-CS-PRO-011 · 6. Intake and Classification"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "punctuation_only_noise",
+    "rationale": "Serial commas were added in paragraph (b); the ten-day response time and the items to provide are unchanged.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0037",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-16-1-4",
+    "clause_id": "RPL-CS-PRO-004:14.6",
+    "doc_id": "RPL-CS-PRO-004",
+    "match_path": "direct_section",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 16-1-4",
+        "label": "170 IAC 16-1-4 · Informal complaints; review"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-004:14.6",
+        "label": "RPL-CS-PRO-004 · 14. Disputes During the Disconnection Process"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "punctuation_only_noise",
+    "rationale": "Serial commas were added in paragraph (b); the ten-day response time and the items to provide are unchanged.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0038",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-16-1-4",
+    "clause_id": "RPL-CS-PRO-011:6.7",
+    "doc_id": "RPL-CS-PRO-011",
+    "match_path": "direct_section",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 16-1-4",
+        "label": "170 IAC 16-1-4 · Informal complaints; review"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-011:6.7",
+        "label": "RPL-CS-PRO-011 · 6. Intake and Classification"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "punctuation_only_noise",
+    "rationale": "Serial commas were added in paragraph (b); the ten-day response time and the items to provide are unchanged.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0039",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-16-1-4",
+    "clause_id": "RPL-CS-PRO-004:16.5",
+    "doc_id": "RPL-CS-PRO-004",
+    "match_path": "direct_section",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 16-1-4",
+        "label": "170 IAC 16-1-4 · Informal complaints; review"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-004:16.5",
+        "label": "RPL-CS-PRO-004 · 16. Quality Assurance and Monitoring"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "punctuation_only_noise",
+    "rationale": "Serial commas were added in paragraph (b); the ten-day response time and the items to provide are unchanged.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0040",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-16-1-4",
+    "clause_id": "RPL-CS-PRO-011:7.2",
+    "doc_id": "RPL-CS-PRO-011",
+    "match_path": "direct_section",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 16-1-4",
+        "label": "170 IAC 16-1-4 · Informal complaints; review"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-011:7.2",
+        "label": "RPL-CS-PRO-011 · 7. Protection During a Dispute"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "punctuation_only_noise",
+    "rationale": "Serial commas were added in paragraph (b); the ten-day response time and the items to provide are unchanged.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0041",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-4-1-16",
+    "clause_id": "RPL-REG-CAL-2025:5.1.tbl1.r6",
+    "doc_id": "RPL-REG-CAL-2025",
+    "match_path": "direct_section",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-16",
+        "label": "170 IAC 4-1-16 · Disconnection; prohibited disconnections; reconnection"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-REG-CAL-2025:5.1.tbl1.r6",
+        "label": "RPL-REG-CAL-2025 · Section 5 — Q1 Events (January–March 2025)"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "style_only_same_effect",
+    "rationale": "Paragraphs (c) and (d) changed from \"shall not\" to \"may not\". The commission's readoption notice states no change in effect, so the prohibition this clause relies on has the same legal effect.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0042",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-4-1-16",
+    "clause_id": "RPL-CS-PRO-011:T4-4",
+    "doc_id": "RPL-CS-PRO-011",
+    "match_path": "direct_section",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-16",
+        "label": "170 IAC 4-1-16 · Disconnection; prohibited disconnections; reconnection"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-011:T4-4",
+        "label": "RPL-CS-PRO-011 · 4. Regulatory Basis"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "style_only_same_effect",
+    "rationale": "Paragraphs (c) and (d) changed from \"shall not\" to \"may not\". The commission's readoption notice states no change in effect, so the prohibition this clause relies on has the same legal effect.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0043",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-4-1-16",
+    "clause_id": "RPL-CS-PRO-004:1.2",
+    "doc_id": "RPL-CS-PRO-004",
+    "match_path": "direct_section",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-16",
+        "label": "170 IAC 4-1-16 · Disconnection; prohibited disconnections; reconnection"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-004:1.2",
+        "label": "RPL-CS-PRO-004 · 1. Purpose"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "style_only_same_effect",
+    "rationale": "Paragraphs (c) and (d) changed from \"shall not\" to \"may not\". The commission's readoption notice states no change in effect, so the prohibition this clause relies on has the same legal effect.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0044",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-4-1-16",
+    "clause_id": "RPL-REG-CAL-2025:9.1.tbl1.r1",
+    "doc_id": "RPL-REG-CAL-2025",
+    "match_path": "direct_section",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-16",
+        "label": "170 IAC 4-1-16 · Disconnection; prohibited disconnections; reconnection"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-REG-CAL-2025:9.1.tbl1.r1",
+        "label": "RPL-REG-CAL-2025 · Section 9 — Annual/Rolling Events (Throughout 2025)"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "style_only_same_effect",
+    "rationale": "Paragraphs (c) and (d) changed from \"shall not\" to \"may not\". The commission's readoption notice states no change in effect, so the prohibition this clause relies on has the same legal effect.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0045",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-4-1-16",
+    "clause_id": "RPL-CS-PRO-011:8.5",
+    "doc_id": "RPL-CS-PRO-011",
+    "match_path": "direct_section",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-16",
+        "label": "170 IAC 4-1-16 · Disconnection; prohibited disconnections; reconnection"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-011:8.5",
+        "label": "RPL-CS-PRO-011 · 8. Investigation"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "style_only_same_effect",
+    "rationale": "Paragraphs (c) and (d) changed from \"shall not\" to \"may not\". The commission's readoption notice states no change in effect, so the prohibition this clause relies on has the same legal effect.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0046",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-4-1-16",
+    "clause_id": "RPL-CS-PRO-004:2.3",
+    "doc_id": "RPL-CS-PRO-004",
+    "match_path": "direct_section",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-16",
+        "label": "170 IAC 4-1-16 · Disconnection; prohibited disconnections; reconnection"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-004:2.3",
+        "label": "RPL-CS-PRO-004 · 2. Scope and Applicability"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "style_only_same_effect",
+    "rationale": "Paragraphs (c) and (d) changed from \"shall not\" to \"may not\". The commission's readoption notice states no change in effect, so the prohibition this clause relies on has the same legal effect.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0047",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-4-1-16",
+    "clause_id": "RPL-REG-CAL-2025:EVT-2025-0006",
+    "doc_id": "RPL-REG-CAL-2025",
+    "match_path": "register_hop",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-16",
+        "label": "170 IAC 4-1-16 · Disconnection; prohibited disconnections; reconnection"
+      },
+      {
+        "kind": "register_row",
+        "ref": "RPL-CMP-REG-001:OBL-2024-0036",
+        "label": "Register row OBL-2024-0036"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-REG-CAL-2025:EVT-2025-0006",
+        "label": "RPL-REG-CAL-2025 · Regulatory calendar events"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "style_only_same_effect",
+    "rationale": "Paragraphs (c) and (d) changed from \"shall not\" to \"may not\". The commission's readoption notice states no change in effect, so the prohibition this clause relies on has the same legal effect.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0048",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-4-1-16",
+    "clause_id": "RPL-CS-PRO-011:12.1",
+    "doc_id": "RPL-CS-PRO-011",
+    "match_path": "direct_section",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-16",
+        "label": "170 IAC 4-1-16 · Disconnection; prohibited disconnections; reconnection"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-011:12.1",
+        "label": "RPL-CS-PRO-011 · 12. Payment Arrangements Arising from Disputes"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "style_only_same_effect",
+    "rationale": "Paragraphs (c) and (d) changed from \"shall not\" to \"may not\". The commission's readoption notice states no change in effect, so the prohibition this clause relies on has the same legal effect.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0049",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-4-1-16",
+    "clause_id": "RPL-CS-PRO-004:2.5",
+    "doc_id": "RPL-CS-PRO-004",
+    "match_path": "direct_section",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-16",
+        "label": "170 IAC 4-1-16 · Disconnection; prohibited disconnections; reconnection"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-004:2.5",
+        "label": "RPL-CS-PRO-004 · 2. Scope and Applicability"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "style_only_same_effect",
+    "rationale": "Paragraphs (c) and (d) changed from \"shall not\" to \"may not\". The commission's readoption notice states no change in effect, so the prohibition this clause relies on has the same legal effect.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0050",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-4-1-16",
+    "clause_id": "RPL-REG-CAL-2025:EVT-2025-0041",
+    "doc_id": "RPL-REG-CAL-2025",
+    "match_path": "register_hop",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-16",
+        "label": "170 IAC 4-1-16 · Disconnection; prohibited disconnections; reconnection"
+      },
+      {
+        "kind": "register_row",
+        "ref": "RPL-CMP-REG-001:OBL-2024-0036",
+        "label": "Register row OBL-2024-0036"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-REG-CAL-2025:EVT-2025-0041",
+        "label": "RPL-REG-CAL-2025 · Regulatory calendar events"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "style_only_same_effect",
+    "rationale": "Paragraphs (c) and (d) changed from \"shall not\" to \"may not\". The commission's readoption notice states no change in effect, so the prohibition this clause relies on has the same legal effect.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0051",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-4-1-16",
+    "clause_id": "RPL-CS-PRO-011:12.2",
+    "doc_id": "RPL-CS-PRO-011",
+    "match_path": "direct_section",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-16",
+        "label": "170 IAC 4-1-16 · Disconnection; prohibited disconnections; reconnection"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-011:12.2",
+        "label": "RPL-CS-PRO-011 · 12. Payment Arrangements Arising from Disputes"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "style_only_same_effect",
+    "rationale": "Paragraphs (c) and (d) changed from \"shall not\" to \"may not\". The commission's readoption notice states no change in effect, so the prohibition this clause relies on has the same legal effect.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0052",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-4-1-16",
+    "clause_id": "RPL-CS-PRO-004:2.6",
+    "doc_id": "RPL-CS-PRO-004",
+    "match_path": "direct_section",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-16",
+        "label": "170 IAC 4-1-16 · Disconnection; prohibited disconnections; reconnection"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-004:2.6",
+        "label": "RPL-CS-PRO-004 · 2. Scope and Applicability"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "style_only_same_effect",
+    "rationale": "Paragraphs (c) and (d) changed from \"shall not\" to \"may not\". The commission's readoption notice states no change in effect, so the prohibition this clause relies on has the same legal effect.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0053",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-4-1-16",
+    "clause_id": "RPL-CS-PRO-004:3.7",
+    "doc_id": "RPL-CS-PRO-004",
+    "match_path": "direct_section",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-16",
+        "label": "170 IAC 4-1-16 · Disconnection; prohibited disconnections; reconnection"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-004:3.7",
+        "label": "RPL-CS-PRO-004 · 3. Definitions"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "style_only_same_effect",
+    "rationale": "Paragraphs (c) and (d) changed from \"shall not\" to \"may not\". The commission's readoption notice states no change in effect, so the prohibition this clause relies on has the same legal effect.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0054",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-4-1-16",
+    "clause_id": "RPL-CS-PRO-004:3.10",
+    "doc_id": "RPL-CS-PRO-004",
+    "match_path": "direct_section",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-16",
+        "label": "170 IAC 4-1-16 · Disconnection; prohibited disconnections; reconnection"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-004:3.10",
+        "label": "RPL-CS-PRO-004 · 3. Definitions"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "style_only_same_effect",
+    "rationale": "Paragraphs (c) and (d) changed from \"shall not\" to \"may not\". The commission's readoption notice states no change in effect, so the prohibition this clause relies on has the same legal effect.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0055",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-4-1-16",
+    "clause_id": "RPL-CS-PRO-004:3.13",
+    "doc_id": "RPL-CS-PRO-004",
+    "match_path": "direct_section",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-16",
+        "label": "170 IAC 4-1-16 · Disconnection; prohibited disconnections; reconnection"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-004:3.13",
+        "label": "RPL-CS-PRO-004 · 3. Definitions"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "style_only_same_effect",
+    "rationale": "Paragraphs (c) and (d) changed from \"shall not\" to \"may not\". The commission's readoption notice states no change in effect, so the prohibition this clause relies on has the same legal effect.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0056",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-4-1-16",
+    "clause_id": "RPL-CS-PRO-004:3.16",
+    "doc_id": "RPL-CS-PRO-004",
+    "match_path": "direct_section",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-16",
+        "label": "170 IAC 4-1-16 · Disconnection; prohibited disconnections; reconnection"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-004:3.16",
+        "label": "RPL-CS-PRO-004 · 3. Definitions"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "style_only_same_effect",
+    "rationale": "Paragraphs (c) and (d) changed from \"shall not\" to \"may not\". The commission's readoption notice states no change in effect, so the prohibition this clause relies on has the same legal effect.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0057",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-4-1-16",
+    "clause_id": "RPL-CS-PRO-004:T4-4",
+    "doc_id": "RPL-CS-PRO-004",
+    "match_path": "direct_section",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-16",
+        "label": "170 IAC 4-1-16 · Disconnection; prohibited disconnections; reconnection"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-004:T4-4",
+        "label": "RPL-CS-PRO-004 · 4. Regulatory Basis"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "style_only_same_effect",
+    "rationale": "Paragraphs (c) and (d) changed from \"shall not\" to \"may not\". The commission's readoption notice states no change in effect, so the prohibition this clause relies on has the same legal effect.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0058",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-4-1-16",
+    "clause_id": "RPL-CS-PRO-004:T6-3",
+    "doc_id": "RPL-CS-PRO-004",
+    "match_path": "direct_section",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-16",
+        "label": "170 IAC 4-1-16 · Disconnection; prohibited disconnections; reconnection"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-004:T6-3",
+        "label": "RPL-CS-PRO-004 · 6. Collection Cycle Overview"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "style_only_same_effect",
+    "rationale": "Paragraphs (c) and (d) changed from \"shall not\" to \"may not\". The commission's readoption notice states no change in effect, so the prohibition this clause relies on has the same legal effect.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0059",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-4-1-16",
+    "clause_id": "RPL-CS-PRO-004:T6-10",
+    "doc_id": "RPL-CS-PRO-004",
+    "match_path": "direct_section",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-16",
+        "label": "170 IAC 4-1-16 · Disconnection; prohibited disconnections; reconnection"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-004:T6-10",
+        "label": "RPL-CS-PRO-004 · 6. Collection Cycle Overview"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "style_only_same_effect",
+    "rationale": "Paragraphs (c) and (d) changed from \"shall not\" to \"may not\". The commission's readoption notice states no change in effect, so the prohibition this clause relies on has the same legal effect.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0060",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-4-1-16",
+    "clause_id": "RPL-CS-PRO-004:T7-1",
+    "doc_id": "RPL-CS-PRO-004",
+    "match_path": "direct_section",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-16",
+        "label": "170 IAC 4-1-16 · Disconnection; prohibited disconnections; reconnection"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-004:T7-1",
+        "label": "RPL-CS-PRO-004 · 7. Eligibility for Disconnection — Decision Table"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "style_only_same_effect",
+    "rationale": "Paragraphs (c) and (d) changed from \"shall not\" to \"may not\". The commission's readoption notice states no change in effect, so the prohibition this clause relies on has the same legal effect.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0061",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-4-1-16",
+    "clause_id": "RPL-CS-PRO-004:T6-5",
+    "doc_id": "RPL-CS-PRO-004",
+    "match_path": "value_echo",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-16",
+        "label": "170 IAC 4-1-16 · Disconnection; prohibited disconnections; reconnection"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-004:T6-5",
+        "label": "RPL-CS-PRO-004 · 6. Collection Cycle Overview"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "style_only_same_effect",
+    "rationale": "Echoes the 14-day notice period in 4-1-16(e), which is not edited. The rewording touches only (c) and (d), with the same legal effect.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0062",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-4-1-16",
+    "clause_id": "RPL-CS-PRO-004:8.12",
+    "doc_id": "RPL-CS-PRO-004",
+    "match_path": "value_echo",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-16",
+        "label": "170 IAC 4-1-16 · Disconnection; prohibited disconnections; reconnection"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-004:8.12",
+        "label": "RPL-CS-PRO-004 · 8. Notice Requirements"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "style_only_same_effect",
+    "rationale": "Echoes the 14-day notice period in 4-1-16(e), which is not edited. The rewording touches only (c) and (d), with the same legal effect.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0063",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-4-1-16",
+    "clause_id": "RPL-CS-PRO-004:16.3",
+    "doc_id": "RPL-CS-PRO-004",
+    "match_path": "value_echo",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-16",
+        "label": "170 IAC 4-1-16 · Disconnection; prohibited disconnections; reconnection"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-004:16.3",
+        "label": "RPL-CS-PRO-004 · 16. Quality Assurance and Monitoring"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "style_only_same_effect",
+    "rationale": "Echoes the 14-day notice period in 4-1-16(e), which is not edited. The rewording touches only (c) and (d), with the same legal effect.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0064",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-4-1-16",
+    "clause_id": "RPL-CS-PRO-004:16.4",
+    "doc_id": "RPL-CS-PRO-004",
+    "match_path": "value_echo",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-16",
+        "label": "170 IAC 4-1-16 · Disconnection; prohibited disconnections; reconnection"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-004:16.4",
+        "label": "RPL-CS-PRO-004 · 16. Quality Assurance and Monitoring"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "style_only_same_effect",
+    "rationale": "Echoes the 14-day notice period in 4-1-16(e), which is not edited. The rewording touches only (c) and (d), with the same legal effect.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0065",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-4-1-16",
+    "clause_id": "RPL-CS-PRO-004:T7-2",
+    "doc_id": "RPL-CS-PRO-004",
+    "match_path": "direct_section",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-16",
+        "label": "170 IAC 4-1-16 · Disconnection; prohibited disconnections; reconnection"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-004:T7-2",
+        "label": "RPL-CS-PRO-004 · 7. Eligibility for Disconnection — Decision Table"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "style_only_same_effect",
+    "rationale": "Paragraphs (c) and (d) changed from \"shall not\" to \"may not\". The commission's readoption notice states no change in effect, so the prohibition this clause relies on has the same legal effect.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0066",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-4-1-16",
+    "clause_id": "RPL-CS-PRO-004:T7-3",
+    "doc_id": "RPL-CS-PRO-004",
+    "match_path": "direct_section",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-16",
+        "label": "170 IAC 4-1-16 · Disconnection; prohibited disconnections; reconnection"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-004:T7-3",
+        "label": "RPL-CS-PRO-004 · 7. Eligibility for Disconnection — Decision Table"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "style_only_same_effect",
+    "rationale": "Paragraphs (c) and (d) changed from \"shall not\" to \"may not\". The commission's readoption notice states no change in effect, so the prohibition this clause relies on has the same legal effect.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0067",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-4-1-16",
+    "clause_id": "RPL-CS-PRO-004:T7-4",
+    "doc_id": "RPL-CS-PRO-004",
+    "match_path": "direct_section",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-16",
+        "label": "170 IAC 4-1-16 · Disconnection; prohibited disconnections; reconnection"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-004:T7-4",
+        "label": "RPL-CS-PRO-004 · 7. Eligibility for Disconnection — Decision Table"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "style_only_same_effect",
+    "rationale": "Paragraphs (c) and (d) changed from \"shall not\" to \"may not\". The commission's readoption notice states no change in effect, so the prohibition this clause relies on has the same legal effect.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0068",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-4-1-16",
+    "clause_id": "RPL-CS-PRO-004:T7-5",
+    "doc_id": "RPL-CS-PRO-004",
+    "match_path": "direct_section",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-16",
+        "label": "170 IAC 4-1-16 · Disconnection; prohibited disconnections; reconnection"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-004:T7-5",
+        "label": "RPL-CS-PRO-004 · 7. Eligibility for Disconnection — Decision Table"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "style_only_same_effect",
+    "rationale": "Paragraphs (c) and (d) changed from \"shall not\" to \"may not\". The commission's readoption notice states no change in effect, so the prohibition this clause relies on has the same legal effect.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0069",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-4-1-13",
+    "clause_id": "RPL-REG-CAL-2025:5.1.tbl1.r2",
+    "doc_id": "RPL-REG-CAL-2025",
+    "match_path": "direct_section",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-13",
+        "label": "170 IAC 4-1-13 · Customer deposits; interest; refund"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-REG-CAL-2025:5.1.tbl1.r2",
+        "label": "RPL-REG-CAL-2025 · Section 5 — Q1 Events (January–March 2025)"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "cosmetic_noise",
+    "rationale": "Only a readoption stamp was added to the history note, so the clause's reliance on 170 IAC 4-1-13 is unaffected.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0070",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-4-1-13",
+    "clause_id": "RPL-CS-PRO-011:T4-3",
+    "doc_id": "RPL-CS-PRO-011",
+    "match_path": "direct_section",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-13",
+        "label": "170 IAC 4-1-13 · Customer deposits; interest; refund"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-011:T4-3",
+        "label": "RPL-CS-PRO-011 · 4. Regulatory Basis"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "cosmetic_noise",
+    "rationale": "Only a readoption stamp was added to the history note, so the clause's reliance on 170 IAC 4-1-13 is unaffected.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0071",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-4-1-13",
+    "clause_id": "RPL-CS-PRO-004:3.5",
+    "doc_id": "RPL-CS-PRO-004",
+    "match_path": "direct_section",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-13",
+        "label": "170 IAC 4-1-13 · Customer deposits; interest; refund"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-004:3.5",
+        "label": "RPL-CS-PRO-004 · 3. Definitions"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "cosmetic_noise",
+    "rationale": "Only a readoption stamp was added to the history note, so the clause's reliance on 170 IAC 4-1-13 is unaffected.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0072",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-4-1-13",
+    "clause_id": "RPL-REG-CAL-2025:5.1.tbl1.r9",
+    "doc_id": "RPL-REG-CAL-2025",
+    "match_path": "direct_section",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-13",
+        "label": "170 IAC 4-1-13 · Customer deposits; interest; refund"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-REG-CAL-2025:5.1.tbl1.r9",
+        "label": "RPL-REG-CAL-2025 · Section 5 — Q1 Events (January–March 2025)"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "cosmetic_noise",
+    "rationale": "Only a readoption stamp was added to the history note, so the clause's reliance on 170 IAC 4-1-13 is unaffected.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0073",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-4-1-13",
+    "clause_id": "RPL-CS-PRO-004:3.6",
+    "doc_id": "RPL-CS-PRO-004",
+    "match_path": "direct_section",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-13",
+        "label": "170 IAC 4-1-13 · Customer deposits; interest; refund"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-004:3.6",
+        "label": "RPL-CS-PRO-004 · 3. Definitions"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "cosmetic_noise",
+    "rationale": "Only a readoption stamp was added to the history note, so the clause's reliance on 170 IAC 4-1-13 is unaffected.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0074",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-4-1-13",
+    "clause_id": "RPL-REG-CAL-2025:6.1.tbl1.r2",
+    "doc_id": "RPL-REG-CAL-2025",
+    "match_path": "direct_section",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-13",
+        "label": "170 IAC 4-1-13 · Customer deposits; interest; refund"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-REG-CAL-2025:6.1.tbl1.r2",
+        "label": "RPL-REG-CAL-2025 · Section 6 — Q2 Events (April–June 2025)"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "cosmetic_noise",
+    "rationale": "Only a readoption stamp was added to the history note, so the clause's reliance on 170 IAC 4-1-13 is unaffected.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0075",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-4-1-13",
+    "clause_id": "RPL-CS-PRO-011:8.3",
+    "doc_id": "RPL-CS-PRO-011",
+    "match_path": "direct_section",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-13",
+        "label": "170 IAC 4-1-13 · Customer deposits; interest; refund"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-011:8.3",
+        "label": "RPL-CS-PRO-011 · 8. Investigation"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "cosmetic_noise",
+    "rationale": "Only a readoption stamp was added to the history note, so the clause's reliance on 170 IAC 4-1-13 is unaffected.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0076",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-4-1-13",
+    "clause_id": "RPL-CS-PRO-004:T4-2",
+    "doc_id": "RPL-CS-PRO-004",
+    "match_path": "direct_section",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-13",
+        "label": "170 IAC 4-1-13 · Customer deposits; interest; refund"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-004:T4-2",
+        "label": "RPL-CS-PRO-004 · 4. Regulatory Basis"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "cosmetic_noise",
+    "rationale": "Only a readoption stamp was added to the history note, so the clause's reliance on 170 IAC 4-1-13 is unaffected.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0077",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-4-1-13",
+    "clause_id": "RPL-REG-CAL-2025:6.1.tbl1.r9",
+    "doc_id": "RPL-REG-CAL-2025",
+    "match_path": "direct_section",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-13",
+        "label": "170 IAC 4-1-13 · Customer deposits; interest; refund"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-REG-CAL-2025:6.1.tbl1.r9",
+        "label": "RPL-REG-CAL-2025 · Section 6 — Q2 Events (April–June 2025)"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "cosmetic_noise",
+    "rationale": "Only a readoption stamp was added to the history note, so the clause's reliance on 170 IAC 4-1-13 is unaffected.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0078",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-4-1-13",
+    "clause_id": "RPL-CS-PRO-004:T6-2",
+    "doc_id": "RPL-CS-PRO-004",
+    "match_path": "direct_section",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-13",
+        "label": "170 IAC 4-1-13 · Customer deposits; interest; refund"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-004:T6-2",
+        "label": "RPL-CS-PRO-004 · 6. Collection Cycle Overview"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "cosmetic_noise",
+    "rationale": "Only a readoption stamp was added to the history note, so the clause's reliance on 170 IAC 4-1-13 is unaffected.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0079",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-4-1-13",
+    "clause_id": "RPL-REG-CAL-2025:6.1.tbl1.r10",
+    "doc_id": "RPL-REG-CAL-2025",
+    "match_path": "direct_section",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-13",
+        "label": "170 IAC 4-1-13 · Customer deposits; interest; refund"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-REG-CAL-2025:6.1.tbl1.r10",
+        "label": "RPL-REG-CAL-2025 · Section 6 — Q2 Events (April–June 2025)"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "cosmetic_noise",
+    "rationale": "Only a readoption stamp was added to the history note, so the clause's reliance on 170 IAC 4-1-13 is unaffected.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0080",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-4-1-13",
+    "clause_id": "RPL-CS-PRO-004:8.2",
+    "doc_id": "RPL-CS-PRO-004",
+    "match_path": "direct_section",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-13",
+        "label": "170 IAC 4-1-13 · Customer deposits; interest; refund"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-004:8.2",
+        "label": "RPL-CS-PRO-004 · 8. Notice Requirements"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "cosmetic_noise",
+    "rationale": "Only a readoption stamp was added to the history note, so the clause's reliance on 170 IAC 4-1-13 is unaffected.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0081",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-4-1-13",
+    "clause_id": "RPL-REG-CAL-2025:7.1.tbl1.r1",
+    "doc_id": "RPL-REG-CAL-2025",
+    "match_path": "direct_section",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-13",
+        "label": "170 IAC 4-1-13 · Customer deposits; interest; refund"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-REG-CAL-2025:7.1.tbl1.r1",
+        "label": "RPL-REG-CAL-2025 · Section 7 — Q3 Events (July–September 2025)"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "cosmetic_noise",
+    "rationale": "Only a readoption stamp was added to the history note, so the clause's reliance on 170 IAC 4-1-13 is unaffected.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0082",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-4-1-13",
+    "clause_id": "RPL-CS-PRO-004:App-I.1",
+    "doc_id": "RPL-CS-PRO-004",
+    "match_path": "direct_section",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-13",
+        "label": "170 IAC 4-1-13 · Customer deposits; interest; refund"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-004:App-I.1",
+        "label": "RPL-CS-PRO-004 · App-I — Swimlane Process Diagram (Collection Cycle — Involuntary Disconne"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "cosmetic_noise",
+    "rationale": "Only a readoption stamp was added to the history note, so the clause's reliance on 170 IAC 4-1-13 is unaffected.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0083",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-4-1-13",
+    "clause_id": "RPL-REG-CAL-2025:7.1.tbl1.r8",
+    "doc_id": "RPL-REG-CAL-2025",
+    "match_path": "direct_section",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-13",
+        "label": "170 IAC 4-1-13 · Customer deposits; interest; refund"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-REG-CAL-2025:7.1.tbl1.r8",
+        "label": "RPL-REG-CAL-2025 · Section 7 — Q3 Events (July–September 2025)"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "cosmetic_noise",
+    "rationale": "Only a readoption stamp was added to the history note, so the clause's reliance on 170 IAC 4-1-13 is unaffected.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0084",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-4-1-13",
+    "clause_id": "RPL-REG-CAL-2025:8.1.tbl1.r2",
+    "doc_id": "RPL-REG-CAL-2025",
+    "match_path": "direct_section",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-13",
+        "label": "170 IAC 4-1-13 · Customer deposits; interest; refund"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-REG-CAL-2025:8.1.tbl1.r2",
+        "label": "RPL-REG-CAL-2025 · Section 8 — Q4 Events (October–December 2025)"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "cosmetic_noise",
+    "rationale": "Only a readoption stamp was added to the history note, so the clause's reliance on 170 IAC 4-1-13 is unaffected.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0085",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-4-1-13",
+    "clause_id": "RPL-REG-CAL-2025:8.1.tbl1.r7",
+    "doc_id": "RPL-REG-CAL-2025",
+    "match_path": "direct_section",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-13",
+        "label": "170 IAC 4-1-13 · Customer deposits; interest; refund"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-REG-CAL-2025:8.1.tbl1.r7",
+        "label": "RPL-REG-CAL-2025 · Section 8 — Q4 Events (October–December 2025)"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "cosmetic_noise",
+    "rationale": "Only a readoption stamp was added to the history note, so the clause's reliance on 170 IAC 4-1-13 is unaffected.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0086",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-4-1-13",
+    "clause_id": "RPL-REG-CAL-2025:EVT-2025-0002",
+    "doc_id": "RPL-REG-CAL-2025",
+    "match_path": "register_hop",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-13",
+        "label": "170 IAC 4-1-13 · Customer deposits; interest; refund"
+      },
+      {
+        "kind": "register_row",
+        "ref": "RPL-CMP-REG-001:OBL-2024-0033",
+        "label": "Register row OBL-2024-0033"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-REG-CAL-2025:EVT-2025-0002",
+        "label": "RPL-REG-CAL-2025 · Regulatory calendar events"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "cosmetic_noise",
+    "rationale": "Only a readoption stamp was added to the history note, so the clause's reliance on 170 IAC 4-1-13 is unaffected.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0087",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-4-1-13",
+    "clause_id": "RPL-REG-CAL-2025:EVT-2025-0009",
+    "doc_id": "RPL-REG-CAL-2025",
+    "match_path": "register_hop",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-13",
+        "label": "170 IAC 4-1-13 · Customer deposits; interest; refund"
+      },
+      {
+        "kind": "register_row",
+        "ref": "RPL-CMP-REG-001:OBL-2024-0033",
+        "label": "Register row OBL-2024-0033"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-REG-CAL-2025:EVT-2025-0009",
+        "label": "RPL-REG-CAL-2025 · Regulatory calendar events"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "cosmetic_noise",
+    "rationale": "Only a readoption stamp was added to the history note, so the clause's reliance on 170 IAC 4-1-13 is unaffected.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0088",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-4-1-13",
+    "clause_id": "RPL-REG-CAL-2025:EVT-2025-0012",
+    "doc_id": "RPL-REG-CAL-2025",
+    "match_path": "register_hop",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-13",
+        "label": "170 IAC 4-1-13 · Customer deposits; interest; refund"
+      },
+      {
+        "kind": "register_row",
+        "ref": "RPL-CMP-REG-001:OBL-2024-0033",
+        "label": "Register row OBL-2024-0033"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-REG-CAL-2025:EVT-2025-0012",
+        "label": "RPL-REG-CAL-2025 · Regulatory calendar events"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "cosmetic_noise",
+    "rationale": "Only a readoption stamp was added to the history note, so the clause's reliance on 170 IAC 4-1-13 is unaffected.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0089",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-4-1-13",
+    "clause_id": "RPL-REG-CAL-2025:EVT-2025-0019",
+    "doc_id": "RPL-REG-CAL-2025",
+    "match_path": "register_hop",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-13",
+        "label": "170 IAC 4-1-13 · Customer deposits; interest; refund"
+      },
+      {
+        "kind": "register_row",
+        "ref": "RPL-CMP-REG-001:OBL-2024-0033",
+        "label": "Register row OBL-2024-0033"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-REG-CAL-2025:EVT-2025-0019",
+        "label": "RPL-REG-CAL-2025 · Regulatory calendar events"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "cosmetic_noise",
+    "rationale": "Only a readoption stamp was added to the history note, so the clause's reliance on 170 IAC 4-1-13 is unaffected.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0090",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-4-1-13",
+    "clause_id": "RPL-REG-CAL-2025:EVT-2025-0020",
+    "doc_id": "RPL-REG-CAL-2025",
+    "match_path": "register_hop",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-13",
+        "label": "170 IAC 4-1-13 · Customer deposits; interest; refund"
+      },
+      {
+        "kind": "register_row",
+        "ref": "RPL-CMP-REG-001:OBL-2024-0033",
+        "label": "Register row OBL-2024-0033"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-REG-CAL-2025:EVT-2025-0020",
+        "label": "RPL-REG-CAL-2025 · Regulatory calendar events"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "cosmetic_noise",
+    "rationale": "Only a readoption stamp was added to the history note, so the clause's reliance on 170 IAC 4-1-13 is unaffected.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0091",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-4-1-13",
+    "clause_id": "RPL-REG-CAL-2025:EVT-2025-0021",
+    "doc_id": "RPL-REG-CAL-2025",
+    "match_path": "register_hop",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-13",
+        "label": "170 IAC 4-1-13 · Customer deposits; interest; refund"
+      },
+      {
+        "kind": "register_row",
+        "ref": "RPL-CMP-REG-001:OBL-2024-0033",
+        "label": "Register row OBL-2024-0033"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-REG-CAL-2025:EVT-2025-0021",
+        "label": "RPL-REG-CAL-2025 · Regulatory calendar events"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "cosmetic_noise",
+    "rationale": "Only a readoption stamp was added to the history note, so the clause's reliance on 170 IAC 4-1-13 is unaffected.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0092",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-4-1-13",
+    "clause_id": "RPL-REG-CAL-2025:EVT-2025-0028",
+    "doc_id": "RPL-REG-CAL-2025",
+    "match_path": "register_hop",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-13",
+        "label": "170 IAC 4-1-13 · Customer deposits; interest; refund"
+      },
+      {
+        "kind": "register_row",
+        "ref": "RPL-CMP-REG-001:OBL-2024-0033",
+        "label": "Register row OBL-2024-0033"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-REG-CAL-2025:EVT-2025-0028",
+        "label": "RPL-REG-CAL-2025 · Regulatory calendar events"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "cosmetic_noise",
+    "rationale": "Only a readoption stamp was added to the history note, so the clause's reliance on 170 IAC 4-1-13 is unaffected.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0093",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-4-1-13",
+    "clause_id": "RPL-REG-CAL-2025:EVT-2025-0032",
+    "doc_id": "RPL-REG-CAL-2025",
+    "match_path": "register_hop",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-13",
+        "label": "170 IAC 4-1-13 · Customer deposits; interest; refund"
+      },
+      {
+        "kind": "register_row",
+        "ref": "RPL-CMP-REG-001:OBL-2024-0033",
+        "label": "Register row OBL-2024-0033"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-REG-CAL-2025:EVT-2025-0032",
+        "label": "RPL-REG-CAL-2025 · Regulatory calendar events"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "cosmetic_noise",
+    "rationale": "Only a readoption stamp was added to the history note, so the clause's reliance on 170 IAC 4-1-13 is unaffected.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0094",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-4-1-13",
+    "clause_id": "RPL-REG-CAL-2025:EVT-2025-0037",
+    "doc_id": "RPL-REG-CAL-2025",
+    "match_path": "register_hop",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-13",
+        "label": "170 IAC 4-1-13 · Customer deposits; interest; refund"
+      },
+      {
+        "kind": "register_row",
+        "ref": "RPL-CMP-REG-001:OBL-2024-0033",
+        "label": "Register row OBL-2024-0033"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-REG-CAL-2025:EVT-2025-0037",
+        "label": "RPL-REG-CAL-2025 · Regulatory calendar events"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "cosmetic_noise",
+    "rationale": "Only a readoption stamp was added to the history note, so the clause's reliance on 170 IAC 4-1-13 is unaffected.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0095",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-4-1-13",
+    "clause_id": "RPL-REG-CAL-2025:2.4",
+    "doc_id": "RPL-REG-CAL-2025",
+    "match_path": "value_echo",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-13",
+        "label": "170 IAC 4-1-13 · Customer deposits; interest; refund"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-REG-CAL-2025:2.4",
+        "label": "RPL-REG-CAL-2025 · Section 2 — Scope"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "cosmetic_noise",
+    "rationale": "Mentions customer deposits, which 170 IAC 4-1-13 governs; the section changed only by a readoption stamp.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0096",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-4-1-13",
+    "clause_id": "RPL-REG-CAL-2025:5.1.tbl1.r4",
+    "doc_id": "RPL-REG-CAL-2025",
+    "match_path": "value_echo",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-13",
+        "label": "170 IAC 4-1-13 · Customer deposits; interest; refund"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-REG-CAL-2025:5.1.tbl1.r4",
+        "label": "RPL-REG-CAL-2025 · Section 5 — Q1 Events (January–March 2025)"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "cosmetic_noise",
+    "rationale": "Mentions customer deposits, which 170 IAC 4-1-13 governs; the section changed only by a readoption stamp.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0097",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-4-1-13",
+    "clause_id": "RPL-REG-CAL-2025:6.1.tbl1.r8",
+    "doc_id": "RPL-REG-CAL-2025",
+    "match_path": "value_echo",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-13",
+        "label": "170 IAC 4-1-13 · Customer deposits; interest; refund"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-REG-CAL-2025:6.1.tbl1.r8",
+        "label": "RPL-REG-CAL-2025 · Section 6 — Q2 Events (April–June 2025)"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "cosmetic_noise",
+    "rationale": "Mentions customer deposits, which 170 IAC 4-1-13 governs; the section changed only by a readoption stamp.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0098",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-4-1-13",
+    "clause_id": "RPL-REG-CAL-2025:9.1.tbl1.r7",
+    "doc_id": "RPL-REG-CAL-2025",
+    "match_path": "value_echo",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-13",
+        "label": "170 IAC 4-1-13 · Customer deposits; interest; refund"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-REG-CAL-2025:9.1.tbl1.r7",
+        "label": "RPL-REG-CAL-2025 · Section 9 — Annual/Rolling Events (Throughout 2025)"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "cosmetic_noise",
+    "rationale": "Mentions customer deposits, which 170 IAC 4-1-13 governs; the section changed only by a readoption stamp.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0099",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-4-1-13",
+    "clause_id": "RPL-REG-CAL-2025:10.1.tbl1.r4",
+    "doc_id": "RPL-REG-CAL-2025",
+    "match_path": "value_echo",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-13",
+        "label": "170 IAC 4-1-13 · Customer deposits; interest; refund"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-REG-CAL-2025:10.1.tbl1.r4",
+        "label": "RPL-REG-CAL-2025 · Section 10 — Cross-References to Implementation Procedures"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "cosmetic_noise",
+    "rationale": "Mentions customer deposits, which 170 IAC 4-1-13 governs; the section changed only by a readoption stamp.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0100",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-4-1-13",
+    "clause_id": "RPL-REG-CAL-2025:10.1.tbl1.r5",
+    "doc_id": "RPL-REG-CAL-2025",
+    "match_path": "value_echo",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-13",
+        "label": "170 IAC 4-1-13 · Customer deposits; interest; refund"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-REG-CAL-2025:10.1.tbl1.r5",
+        "label": "RPL-REG-CAL-2025 · Section 10 — Cross-References to Implementation Procedures"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "cosmetic_noise",
+    "rationale": "Mentions customer deposits, which 170 IAC 4-1-13 governs; the section changed only by a readoption stamp.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0101",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-4-1-13",
+    "clause_id": "RPL-REG-CAL-2025:EVT-2025-0004",
+    "doc_id": "RPL-REG-CAL-2025",
+    "match_path": "value_echo",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-13",
+        "label": "170 IAC 4-1-13 · Customer deposits; interest; refund"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-REG-CAL-2025:EVT-2025-0004",
+        "label": "RPL-REG-CAL-2025 · Regulatory calendar events"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "cosmetic_noise",
+    "rationale": "Mentions customer deposits, which 170 IAC 4-1-13 governs; the section changed only by a readoption stamp.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0102",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-4-1-13",
+    "clause_id": "RPL-REG-CAL-2025:EVT-2025-0018",
+    "doc_id": "RPL-REG-CAL-2025",
+    "match_path": "value_echo",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-13",
+        "label": "170 IAC 4-1-13 · Customer deposits; interest; refund"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-REG-CAL-2025:EVT-2025-0018",
+        "label": "RPL-REG-CAL-2025 · Regulatory calendar events"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "cosmetic_noise",
+    "rationale": "Mentions customer deposits, which 170 IAC 4-1-13 governs; the section changed only by a readoption stamp.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0103",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-4-1-13",
+    "clause_id": "RPL-REG-CAL-2025:EVT-2025-0027",
+    "doc_id": "RPL-REG-CAL-2025",
+    "match_path": "value_echo",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-13",
+        "label": "170 IAC 4-1-13 · Customer deposits; interest; refund"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-REG-CAL-2025:EVT-2025-0027",
+        "label": "RPL-REG-CAL-2025 · Regulatory calendar events"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "cosmetic_noise",
+    "rationale": "Mentions customer deposits, which 170 IAC 4-1-13 governs; the section changed only by a readoption stamp.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0104",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-4-1-13",
+    "clause_id": "RPL-REG-CAL-2025:EVT-2025-0036",
+    "doc_id": "RPL-REG-CAL-2025",
+    "match_path": "value_echo",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-13",
+        "label": "170 IAC 4-1-13 · Customer deposits; interest; refund"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-REG-CAL-2025:EVT-2025-0036",
+        "label": "RPL-REG-CAL-2025 · Regulatory calendar events"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "cosmetic_noise",
+    "rationale": "Mentions customer deposits, which 170 IAC 4-1-13 governs; the section changed only by a readoption stamp.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0105",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-4-1-13",
+    "clause_id": "RPL-REG-CAL-2025:EVT-2025-0047",
+    "doc_id": "RPL-REG-CAL-2025",
+    "match_path": "value_echo",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-13",
+        "label": "170 IAC 4-1-13 · Customer deposits; interest; refund"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-REG-CAL-2025:EVT-2025-0047",
+        "label": "RPL-REG-CAL-2025 · Regulatory calendar events"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "cosmetic_noise",
+    "rationale": "Mentions customer deposits, which 170 IAC 4-1-13 governs; the section changed only by a readoption stamp.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0106",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-4-1-13",
+    "clause_id": "RPL-CS-PRO-011:3.1",
+    "doc_id": "RPL-CS-PRO-011",
+    "match_path": "value_echo",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-13",
+        "label": "170 IAC 4-1-13 · Customer deposits; interest; refund"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-011:3.1",
+        "label": "RPL-CS-PRO-011 · 3. Definitions"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "cosmetic_noise",
+    "rationale": "Mentions customer deposits, which 170 IAC 4-1-13 governs; the section changed only by a readoption stamp.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0107",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-4-1-13",
+    "clause_id": "RPL-CS-PRO-011:3.14",
+    "doc_id": "RPL-CS-PRO-011",
+    "match_path": "value_echo",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-13",
+        "label": "170 IAC 4-1-13 · Customer deposits; interest; refund"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-011:3.14",
+        "label": "RPL-CS-PRO-011 · 3. Definitions"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "cosmetic_noise",
+    "rationale": "Mentions customer deposits, which 170 IAC 4-1-13 governs; the section changed only by a readoption stamp.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0108",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-4-1-13",
+    "clause_id": "RPL-CS-PRO-011:6.3.tbl1.r2",
+    "doc_id": "RPL-CS-PRO-011",
+    "match_path": "value_echo",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-13",
+        "label": "170 IAC 4-1-13 · Customer deposits; interest; refund"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-011:6.3.tbl1.r2",
+        "label": "RPL-CS-PRO-011 · 6. Intake and Classification"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "cosmetic_noise",
+    "rationale": "Mentions customer deposits, which 170 IAC 4-1-13 governs; the section changed only by a readoption stamp.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0109",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-4-1-13",
+    "clause_id": "RPL-CS-PRO-011:6.4",
+    "doc_id": "RPL-CS-PRO-011",
+    "match_path": "value_echo",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-13",
+        "label": "170 IAC 4-1-13 · Customer deposits; interest; refund"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-011:6.4",
+        "label": "RPL-CS-PRO-011 · 6. Intake and Classification"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "cosmetic_noise",
+    "rationale": "Mentions customer deposits, which 170 IAC 4-1-13 governs; the section changed only by a readoption stamp.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0110",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-4-1-13",
+    "clause_id": "RPL-CS-PRO-011:8.6",
+    "doc_id": "RPL-CS-PRO-011",
+    "match_path": "value_echo",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-13",
+        "label": "170 IAC 4-1-13 · Customer deposits; interest; refund"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-011:8.6",
+        "label": "RPL-CS-PRO-011 · 8. Investigation"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "cosmetic_noise",
+    "rationale": "Mentions customer deposits, which 170 IAC 4-1-13 governs; the section changed only by a readoption stamp.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0111",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-4-1-13",
+    "clause_id": "RPL-CS-PRO-011:TE.r3",
+    "doc_id": "RPL-CS-PRO-011",
+    "match_path": "value_echo",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-13",
+        "label": "170 IAC 4-1-13 · Customer deposits; interest; refund"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-011:TE.r3",
+        "label": "RPL-CS-PRO-011 · Appendix E — Complaint Category and Priority Code Table"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "cosmetic_noise",
+    "rationale": "Mentions customer deposits, which 170 IAC 4-1-13 governs; the section changed only by a readoption stamp.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0112",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-4-1-13",
+    "clause_id": "RPL-CS-PRO-011:TE.r4",
+    "doc_id": "RPL-CS-PRO-011",
+    "match_path": "value_echo",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-13",
+        "label": "170 IAC 4-1-13 · Customer deposits; interest; refund"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-011:TE.r4",
+        "label": "RPL-CS-PRO-011 · Appendix E — Complaint Category and Priority Code Table"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "cosmetic_noise",
+    "rationale": "Mentions customer deposits, which 170 IAC 4-1-13 governs; the section changed only by a readoption stamp.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0113",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-4-1-13",
+    "clause_id": "RPL-CS-PRO-004:T4-3",
+    "doc_id": "RPL-CS-PRO-004",
+    "match_path": "value_echo",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-13",
+        "label": "170 IAC 4-1-13 · Customer deposits; interest; refund"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-004:T4-3",
+        "label": "RPL-CS-PRO-004 · 4. Regulatory Basis"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "cosmetic_noise",
+    "rationale": "Mentions customer deposits, which 170 IAC 4-1-13 governs; the section changed only by a readoption stamp.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0114",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-4-1-13",
+    "clause_id": "RPL-CS-PRO-004:11.8",
+    "doc_id": "RPL-CS-PRO-004",
+    "match_path": "value_echo",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-13",
+        "label": "170 IAC 4-1-13 · Customer deposits; interest; refund"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-004:11.8",
+        "label": "RPL-CS-PRO-004 · 11. Payment Arrangements"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "cosmetic_noise",
+    "rationale": "Mentions customer deposits, which 170 IAC 4-1-13 governs; the section changed only by a readoption stamp.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0115",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-4-1-13",
+    "clause_id": "RPL-REG-CAL-2025:3.3",
+    "doc_id": "RPL-REG-CAL-2025",
+    "match_path": "direct_rule",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-13",
+        "label": "170 IAC 4-1-13 · Customer deposits; interest; refund"
+      },
+      {
+        "kind": "rule",
+        "ref": "170 IAC 4-1",
+        "label": "170 IAC 4-1"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-REG-CAL-2025:3.3",
+        "label": "RPL-REG-CAL-2025 · Section 3 — Definitions"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "cosmetic_noise",
+    "rationale": "Cites the 170 IAC 4-1 rule generally; the only change in 170 IAC 4-1-13 is a readoption stamp.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0116",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-4-1-13",
+    "clause_id": "RPL-REG-CAL-2025:3.11",
+    "doc_id": "RPL-REG-CAL-2025",
+    "match_path": "direct_rule",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-13",
+        "label": "170 IAC 4-1-13 · Customer deposits; interest; refund"
+      },
+      {
+        "kind": "rule",
+        "ref": "170 IAC 4-1",
+        "label": "170 IAC 4-1"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-REG-CAL-2025:3.11",
+        "label": "RPL-REG-CAL-2025 · Section 3 — Definitions"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "cosmetic_noise",
+    "rationale": "Cites the 170 IAC 4-1 rule generally; the only change in 170 IAC 4-1-13 is a readoption stamp.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0117",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-4-1-13",
+    "clause_id": "RPL-REG-CAL-2025:5.1.tbl1.r3",
+    "doc_id": "RPL-REG-CAL-2025",
+    "match_path": "direct_rule",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-13",
+        "label": "170 IAC 4-1-13 · Customer deposits; interest; refund"
+      },
+      {
+        "kind": "rule",
+        "ref": "170 IAC 4-1",
+        "label": "170 IAC 4-1"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-REG-CAL-2025:5.1.tbl1.r3",
+        "label": "RPL-REG-CAL-2025 · Section 5 — Q1 Events (January–March 2025)"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "cosmetic_noise",
+    "rationale": "Cites the 170 IAC 4-1 rule generally; the only change in 170 IAC 4-1-13 is a readoption stamp.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0118",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-4-1-13",
+    "clause_id": "RPL-REG-CAL-2025:5.1.tbl1.r10",
+    "doc_id": "RPL-REG-CAL-2025",
+    "match_path": "direct_rule",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-13",
+        "label": "170 IAC 4-1-13 · Customer deposits; interest; refund"
+      },
+      {
+        "kind": "rule",
+        "ref": "170 IAC 4-1",
+        "label": "170 IAC 4-1"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-REG-CAL-2025:5.1.tbl1.r10",
+        "label": "RPL-REG-CAL-2025 · Section 5 — Q1 Events (January–March 2025)"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "cosmetic_noise",
+    "rationale": "Cites the 170 IAC 4-1 rule generally; the only change in 170 IAC 4-1-13 is a readoption stamp.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0119",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-4-1-13",
+    "clause_id": "RPL-REG-CAL-2025:6.1.tbl1.r4",
+    "doc_id": "RPL-REG-CAL-2025",
+    "match_path": "direct_rule",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-13",
+        "label": "170 IAC 4-1-13 · Customer deposits; interest; refund"
+      },
+      {
+        "kind": "rule",
+        "ref": "170 IAC 4-1",
+        "label": "170 IAC 4-1"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-REG-CAL-2025:6.1.tbl1.r4",
+        "label": "RPL-REG-CAL-2025 · Section 6 — Q2 Events (April–June 2025)"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "cosmetic_noise",
+    "rationale": "Cites the 170 IAC 4-1 rule generally; the only change in 170 IAC 4-1-13 is a readoption stamp.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0120",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-4-1-13",
+    "clause_id": "RPL-REG-CAL-2025:7.1.tbl1.r3",
+    "doc_id": "RPL-REG-CAL-2025",
+    "match_path": "direct_rule",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-13",
+        "label": "170 IAC 4-1-13 · Customer deposits; interest; refund"
+      },
+      {
+        "kind": "rule",
+        "ref": "170 IAC 4-1",
+        "label": "170 IAC 4-1"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-REG-CAL-2025:7.1.tbl1.r3",
+        "label": "RPL-REG-CAL-2025 · Section 7 — Q3 Events (July–September 2025)"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "cosmetic_noise",
+    "rationale": "Cites the 170 IAC 4-1 rule generally; the only change in 170 IAC 4-1-13 is a readoption stamp.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0121",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-4-1-13",
+    "clause_id": "RPL-REG-CAL-2025:7.1.tbl1.r6",
+    "doc_id": "RPL-REG-CAL-2025",
+    "match_path": "direct_rule",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-13",
+        "label": "170 IAC 4-1-13 · Customer deposits; interest; refund"
+      },
+      {
+        "kind": "rule",
+        "ref": "170 IAC 4-1",
+        "label": "170 IAC 4-1"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-REG-CAL-2025:7.1.tbl1.r6",
+        "label": "RPL-REG-CAL-2025 · Section 7 — Q3 Events (July–September 2025)"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "cosmetic_noise",
+    "rationale": "Cites the 170 IAC 4-1 rule generally; the only change in 170 IAC 4-1-13 is a readoption stamp.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0122",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-4-1-13",
+    "clause_id": "RPL-REG-CAL-2025:7.1.tbl1.r7",
+    "doc_id": "RPL-REG-CAL-2025",
+    "match_path": "direct_rule",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-13",
+        "label": "170 IAC 4-1-13 · Customer deposits; interest; refund"
+      },
+      {
+        "kind": "rule",
+        "ref": "170 IAC 4-1",
+        "label": "170 IAC 4-1"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-REG-CAL-2025:7.1.tbl1.r7",
+        "label": "RPL-REG-CAL-2025 · Section 7 — Q3 Events (July–September 2025)"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "cosmetic_noise",
+    "rationale": "Cites the 170 IAC 4-1 rule generally; the only change in 170 IAC 4-1-13 is a readoption stamp.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0123",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-4-1-13",
+    "clause_id": "RPL-REG-CAL-2025:7.1.tbl1.r10",
+    "doc_id": "RPL-REG-CAL-2025",
+    "match_path": "direct_rule",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-13",
+        "label": "170 IAC 4-1-13 · Customer deposits; interest; refund"
+      },
+      {
+        "kind": "rule",
+        "ref": "170 IAC 4-1",
+        "label": "170 IAC 4-1"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-REG-CAL-2025:7.1.tbl1.r10",
+        "label": "RPL-REG-CAL-2025 · Section 7 — Q3 Events (July–September 2025)"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "cosmetic_noise",
+    "rationale": "Cites the 170 IAC 4-1 rule generally; the only change in 170 IAC 4-1-13 is a readoption stamp.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0124",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-4-1-13",
+    "clause_id": "RPL-REG-CAL-2025:8.1.tbl1.r3",
+    "doc_id": "RPL-REG-CAL-2025",
+    "match_path": "direct_rule",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-13",
+        "label": "170 IAC 4-1-13 · Customer deposits; interest; refund"
+      },
+      {
+        "kind": "rule",
+        "ref": "170 IAC 4-1",
+        "label": "170 IAC 4-1"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-REG-CAL-2025:8.1.tbl1.r3",
+        "label": "RPL-REG-CAL-2025 · Section 8 — Q4 Events (October–December 2025)"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "cosmetic_noise",
+    "rationale": "Cites the 170 IAC 4-1 rule generally; the only change in 170 IAC 4-1-13 is a readoption stamp.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0125",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-4-1-13",
+    "clause_id": "RPL-REG-CAL-2025:8.1.tbl1.r10",
+    "doc_id": "RPL-REG-CAL-2025",
+    "match_path": "direct_rule",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-13",
+        "label": "170 IAC 4-1-13 · Customer deposits; interest; refund"
+      },
+      {
+        "kind": "rule",
+        "ref": "170 IAC 4-1",
+        "label": "170 IAC 4-1"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-REG-CAL-2025:8.1.tbl1.r10",
+        "label": "RPL-REG-CAL-2025 · Section 8 — Q4 Events (October–December 2025)"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "cosmetic_noise",
+    "rationale": "Cites the 170 IAC 4-1 rule generally; the only change in 170 IAC 4-1-13 is a readoption stamp.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0126",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-4-1-13",
+    "clause_id": "RPL-REG-CAL-2025:9.1.tbl1.r2",
+    "doc_id": "RPL-REG-CAL-2025",
+    "match_path": "direct_rule",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-13",
+        "label": "170 IAC 4-1-13 · Customer deposits; interest; refund"
+      },
+      {
+        "kind": "rule",
+        "ref": "170 IAC 4-1",
+        "label": "170 IAC 4-1"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-REG-CAL-2025:9.1.tbl1.r2",
+        "label": "RPL-REG-CAL-2025 · Section 9 — Annual/Rolling Events (Throughout 2025)"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "cosmetic_noise",
+    "rationale": "Cites the 170 IAC 4-1 rule generally; the only change in 170 IAC 4-1-13 is a readoption stamp.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0127",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-4-1-13",
+    "clause_id": "RPL-REG-CAL-2025:9.1.tbl1.r3",
+    "doc_id": "RPL-REG-CAL-2025",
+    "match_path": "direct_rule",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-13",
+        "label": "170 IAC 4-1-13 · Customer deposits; interest; refund"
+      },
+      {
+        "kind": "rule",
+        "ref": "170 IAC 4-1",
+        "label": "170 IAC 4-1"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-REG-CAL-2025:9.1.tbl1.r3",
+        "label": "RPL-REG-CAL-2025 · Section 9 — Annual/Rolling Events (Throughout 2025)"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "cosmetic_noise",
+    "rationale": "Cites the 170 IAC 4-1 rule generally; the only change in 170 IAC 4-1-13 is a readoption stamp.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0128",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-4-1-13",
+    "clause_id": "RPL-REG-CAL-2025:9.1.tbl1.r6",
+    "doc_id": "RPL-REG-CAL-2025",
+    "match_path": "direct_rule",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-13",
+        "label": "170 IAC 4-1-13 · Customer deposits; interest; refund"
+      },
+      {
+        "kind": "rule",
+        "ref": "170 IAC 4-1",
+        "label": "170 IAC 4-1"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-REG-CAL-2025:9.1.tbl1.r6",
+        "label": "RPL-REG-CAL-2025 · Section 9 — Annual/Rolling Events (Throughout 2025)"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "cosmetic_noise",
+    "rationale": "Cites the 170 IAC 4-1 rule generally; the only change in 170 IAC 4-1-13 is a readoption stamp.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0129",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-4-1-13",
+    "clause_id": "RPL-REG-CAL-2025:11.1.tbl1.r2",
+    "doc_id": "RPL-REG-CAL-2025",
+    "match_path": "direct_rule",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-13",
+        "label": "170 IAC 4-1-13 · Customer deposits; interest; refund"
+      },
+      {
+        "kind": "rule",
+        "ref": "170 IAC 4-1",
+        "label": "170 IAC 4-1"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-REG-CAL-2025:11.1.tbl1.r2",
+        "label": "RPL-REG-CAL-2025 · Section 11 — Revision History"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "cosmetic_noise",
+    "rationale": "Cites the 170 IAC 4-1 rule generally; the only change in 170 IAC 4-1-13 is a readoption stamp.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0130",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-4-1-13",
+    "clause_id": "RPL-REG-CAL-2025:EVT-2025-0014",
+    "doc_id": "RPL-REG-CAL-2025",
+    "match_path": "direct_rule",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-13",
+        "label": "170 IAC 4-1-13 · Customer deposits; interest; refund"
+      },
+      {
+        "kind": "rule",
+        "ref": "170 IAC 4-1",
+        "label": "170 IAC 4-1"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-REG-CAL-2025:EVT-2025-0014",
+        "label": "RPL-REG-CAL-2025 · Regulatory calendar events"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "cosmetic_noise",
+    "rationale": "Cites the 170 IAC 4-1 rule generally; the only change in 170 IAC 4-1-13 is a readoption stamp.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0131",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-4-1-13",
+    "clause_id": "RPL-REG-CAL-2025:EVT-2025-0033",
+    "doc_id": "RPL-REG-CAL-2025",
+    "match_path": "direct_rule",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-13",
+        "label": "170 IAC 4-1-13 · Customer deposits; interest; refund"
+      },
+      {
+        "kind": "rule",
+        "ref": "170 IAC 4-1",
+        "label": "170 IAC 4-1"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-REG-CAL-2025:EVT-2025-0033",
+        "label": "RPL-REG-CAL-2025 · Regulatory calendar events"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "cosmetic_noise",
+    "rationale": "Cites the 170 IAC 4-1 rule generally; the only change in 170 IAC 4-1-13 is a readoption stamp.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0132",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-4-1-13",
+    "clause_id": "RPL-REG-CAL-2025:EVT-2025-0040",
+    "doc_id": "RPL-REG-CAL-2025",
+    "match_path": "direct_rule",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-13",
+        "label": "170 IAC 4-1-13 · Customer deposits; interest; refund"
+      },
+      {
+        "kind": "rule",
+        "ref": "170 IAC 4-1",
+        "label": "170 IAC 4-1"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-REG-CAL-2025:EVT-2025-0040",
+        "label": "RPL-REG-CAL-2025 · Regulatory calendar events"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "cosmetic_noise",
+    "rationale": "Cites the 170 IAC 4-1 rule generally; the only change in 170 IAC 4-1-13 is a readoption stamp.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0133",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-4-1-13",
+    "clause_id": "RPL-REG-CAL-2025:EVT-2025-0042",
+    "doc_id": "RPL-REG-CAL-2025",
+    "match_path": "direct_rule",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-13",
+        "label": "170 IAC 4-1-13 · Customer deposits; interest; refund"
+      },
+      {
+        "kind": "rule",
+        "ref": "170 IAC 4-1",
+        "label": "170 IAC 4-1"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-REG-CAL-2025:EVT-2025-0042",
+        "label": "RPL-REG-CAL-2025 · Regulatory calendar events"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "cosmetic_noise",
+    "rationale": "Cites the 170 IAC 4-1 rule generally; the only change in 170 IAC 4-1-13 is a readoption stamp.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0134",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-4-1-13",
+    "clause_id": "RPL-REG-CAL-2025:EVT-2025-0043",
+    "doc_id": "RPL-REG-CAL-2025",
+    "match_path": "direct_rule",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-13",
+        "label": "170 IAC 4-1-13 · Customer deposits; interest; refund"
+      },
+      {
+        "kind": "rule",
+        "ref": "170 IAC 4-1",
+        "label": "170 IAC 4-1"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-REG-CAL-2025:EVT-2025-0043",
+        "label": "RPL-REG-CAL-2025 · Regulatory calendar events"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "cosmetic_noise",
+    "rationale": "Cites the 170 IAC 4-1 rule generally; the only change in 170 IAC 4-1-13 is a readoption stamp.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0135",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-4-1-13",
+    "clause_id": "RPL-REG-CAL-2025:EVT-2025-0046",
+    "doc_id": "RPL-REG-CAL-2025",
+    "match_path": "direct_rule",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-13",
+        "label": "170 IAC 4-1-13 · Customer deposits; interest; refund"
+      },
+      {
+        "kind": "rule",
+        "ref": "170 IAC 4-1",
+        "label": "170 IAC 4-1"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-REG-CAL-2025:EVT-2025-0046",
+        "label": "RPL-REG-CAL-2025 · Regulatory calendar events"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "cosmetic_noise",
+    "rationale": "Cites the 170 IAC 4-1 rule generally; the only change in 170 IAC 4-1-13 is a readoption stamp.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0136",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-4-1-13",
+    "clause_id": "RPL-CS-PRO-011:2.1",
+    "doc_id": "RPL-CS-PRO-011",
+    "match_path": "direct_rule",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-13",
+        "label": "170 IAC 4-1-13 · Customer deposits; interest; refund"
+      },
+      {
+        "kind": "rule",
+        "ref": "170 IAC 4-1",
+        "label": "170 IAC 4-1"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-011:2.1",
+        "label": "RPL-CS-PRO-011 · 2. Scope"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "cosmetic_noise",
+    "rationale": "Cites the 170 IAC 4-1 rule generally; the only change in 170 IAC 4-1-13 is a readoption stamp.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0137",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-4-1-13",
+    "clause_id": "RPL-CS-PRO-011:T4-1",
+    "doc_id": "RPL-CS-PRO-011",
+    "match_path": "direct_rule",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-13",
+        "label": "170 IAC 4-1-13 · Customer deposits; interest; refund"
+      },
+      {
+        "kind": "rule",
+        "ref": "170 IAC 4-1",
+        "label": "170 IAC 4-1"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-011:T4-1",
+        "label": "RPL-CS-PRO-011 · 4. Regulatory Basis"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "cosmetic_noise",
+    "rationale": "Cites the 170 IAC 4-1 rule generally; the only change in 170 IAC 4-1-13 is a readoption stamp.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0138",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-4-1-13",
+    "clause_id": "RPL-CS-PRO-011:T4-2",
+    "doc_id": "RPL-CS-PRO-011",
+    "match_path": "direct_rule",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-13",
+        "label": "170 IAC 4-1-13 · Customer deposits; interest; refund"
+      },
+      {
+        "kind": "rule",
+        "ref": "170 IAC 4-1",
+        "label": "170 IAC 4-1"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-011:T4-2",
+        "label": "RPL-CS-PRO-011 · 4. Regulatory Basis"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "cosmetic_noise",
+    "rationale": "Cites the 170 IAC 4-1 rule generally; the only change in 170 IAC 4-1-13 is a readoption stamp.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0139",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-4-1-13",
+    "clause_id": "RPL-CS-PRO-011:T4-5",
+    "doc_id": "RPL-CS-PRO-011",
+    "match_path": "direct_rule",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-13",
+        "label": "170 IAC 4-1-13 · Customer deposits; interest; refund"
+      },
+      {
+        "kind": "rule",
+        "ref": "170 IAC 4-1",
+        "label": "170 IAC 4-1"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-011:T4-5",
+        "label": "RPL-CS-PRO-011 · 4. Regulatory Basis"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "cosmetic_noise",
+    "rationale": "Cites the 170 IAC 4-1 rule generally; the only change in 170 IAC 4-1-13 is a readoption stamp.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0140",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-4-1-13",
+    "clause_id": "RPL-CS-PRO-011:3.15~c1",
+    "doc_id": "RPL-CS-PRO-011",
+    "match_path": "direct_rule",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-13",
+        "label": "170 IAC 4-1-13 · Customer deposits; interest; refund"
+      },
+      {
+        "kind": "rule",
+        "ref": "170 IAC 4-1",
+        "label": "170 IAC 4-1"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-011:3.15~c1",
+        "label": "RPL-CS-PRO-011 · 4. Regulatory Basis"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "cosmetic_noise",
+    "rationale": "Cites the 170 IAC 4-1 rule generally; the only change in 170 IAC 4-1-13 is a readoption stamp.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0141",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-4-1-13",
+    "clause_id": "RPL-CS-PRO-004:2.2",
+    "doc_id": "RPL-CS-PRO-004",
+    "match_path": "direct_rule",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-13",
+        "label": "170 IAC 4-1-13 · Customer deposits; interest; refund"
+      },
+      {
+        "kind": "rule",
+        "ref": "170 IAC 4-1",
+        "label": "170 IAC 4-1"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-004:2.2",
+        "label": "RPL-CS-PRO-004 · 2. Scope and Applicability"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "cosmetic_noise",
+    "rationale": "Cites the 170 IAC 4-1 rule generally; the only change in 170 IAC 4-1-13 is a readoption stamp.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0142",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-4-1-13",
+    "clause_id": "RPL-CS-PRO-004:3.2",
+    "doc_id": "RPL-CS-PRO-004",
+    "match_path": "direct_rule",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-13",
+        "label": "170 IAC 4-1-13 · Customer deposits; interest; refund"
+      },
+      {
+        "kind": "rule",
+        "ref": "170 IAC 4-1",
+        "label": "170 IAC 4-1"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-004:3.2",
+        "label": "RPL-CS-PRO-004 · 3. Definitions"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "cosmetic_noise",
+    "rationale": "Cites the 170 IAC 4-1 rule generally; the only change in 170 IAC 4-1-13 is a readoption stamp.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0143",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-4-1-13",
+    "clause_id": "RPL-CS-PRO-004:3.3",
+    "doc_id": "RPL-CS-PRO-004",
+    "match_path": "direct_rule",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-13",
+        "label": "170 IAC 4-1-13 · Customer deposits; interest; refund"
+      },
+      {
+        "kind": "rule",
+        "ref": "170 IAC 4-1",
+        "label": "170 IAC 4-1"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-004:3.3",
+        "label": "RPL-CS-PRO-004 · 3. Definitions"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "cosmetic_noise",
+    "rationale": "Cites the 170 IAC 4-1 rule generally; the only change in 170 IAC 4-1-13 is a readoption stamp.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0144",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-4-1-13",
+    "clause_id": "RPL-CS-PRO-004:3.4",
+    "doc_id": "RPL-CS-PRO-004",
+    "match_path": "direct_rule",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-13",
+        "label": "170 IAC 4-1-13 · Customer deposits; interest; refund"
+      },
+      {
+        "kind": "rule",
+        "ref": "170 IAC 4-1",
+        "label": "170 IAC 4-1"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-004:3.4",
+        "label": "RPL-CS-PRO-004 · 3. Definitions"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "cosmetic_noise",
+    "rationale": "Cites the 170 IAC 4-1 rule generally; the only change in 170 IAC 4-1-13 is a readoption stamp.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0145",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-4-1-13",
+    "clause_id": "RPL-CS-PRO-004:3.11",
+    "doc_id": "RPL-CS-PRO-004",
+    "match_path": "direct_rule",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-13",
+        "label": "170 IAC 4-1-13 · Customer deposits; interest; refund"
+      },
+      {
+        "kind": "rule",
+        "ref": "170 IAC 4-1",
+        "label": "170 IAC 4-1"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-004:3.11",
+        "label": "RPL-CS-PRO-004 · 3. Definitions"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "cosmetic_noise",
+    "rationale": "Cites the 170 IAC 4-1 rule generally; the only change in 170 IAC 4-1-13 is a readoption stamp.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0146",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-4-1-13",
+    "clause_id": "RPL-CS-PRO-004:T4-1",
+    "doc_id": "RPL-CS-PRO-004",
+    "match_path": "direct_rule",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-13",
+        "label": "170 IAC 4-1-13 · Customer deposits; interest; refund"
+      },
+      {
+        "kind": "rule",
+        "ref": "170 IAC 4-1",
+        "label": "170 IAC 4-1"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-004:T4-1",
+        "label": "RPL-CS-PRO-004 · 4. Regulatory Basis"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "cosmetic_noise",
+    "rationale": "Cites the 170 IAC 4-1 rule generally; the only change in 170 IAC 4-1-13 is a readoption stamp.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0147",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-4-1-13",
+    "clause_id": "RPL-CS-PRO-004:T4-5",
+    "doc_id": "RPL-CS-PRO-004",
+    "match_path": "direct_rule",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-13",
+        "label": "170 IAC 4-1-13 · Customer deposits; interest; refund"
+      },
+      {
+        "kind": "rule",
+        "ref": "170 IAC 4-1",
+        "label": "170 IAC 4-1"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-004:T4-5",
+        "label": "RPL-CS-PRO-004 · 4. Regulatory Basis"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "cosmetic_noise",
+    "rationale": "Cites the 170 IAC 4-1 rule generally; the only change in 170 IAC 4-1-13 is a readoption stamp.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0148",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-4-1-13",
+    "clause_id": "RPL-CS-PRO-004:T7-6",
+    "doc_id": "RPL-CS-PRO-004",
+    "match_path": "direct_rule",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-13",
+        "label": "170 IAC 4-1-13 · Customer deposits; interest; refund"
+      },
+      {
+        "kind": "rule",
+        "ref": "170 IAC 4-1",
+        "label": "170 IAC 4-1"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-004:T7-6",
+        "label": "RPL-CS-PRO-004 · 7. Eligibility for Disconnection — Decision Table"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "cosmetic_noise",
+    "rationale": "Cites the 170 IAC 4-1 rule generally; the only change in 170 IAC 4-1-13 is a readoption stamp.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0149",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-4-1-13",
+    "clause_id": "RPL-CS-PRO-004:T7-7",
+    "doc_id": "RPL-CS-PRO-004",
+    "match_path": "direct_rule",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-13",
+        "label": "170 IAC 4-1-13 · Customer deposits; interest; refund"
+      },
+      {
+        "kind": "rule",
+        "ref": "170 IAC 4-1",
+        "label": "170 IAC 4-1"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-004:T7-7",
+        "label": "RPL-CS-PRO-004 · 7. Eligibility for Disconnection — Decision Table"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "cosmetic_noise",
+    "rationale": "Cites the 170 IAC 4-1 rule generally; the only change in 170 IAC 4-1-13 is a readoption stamp.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0150",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-4-1-13",
+    "clause_id": "RPL-CS-PRO-004:T7-8",
+    "doc_id": "RPL-CS-PRO-004",
+    "match_path": "direct_rule",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-13",
+        "label": "170 IAC 4-1-13 · Customer deposits; interest; refund"
+      },
+      {
+        "kind": "rule",
+        "ref": "170 IAC 4-1",
+        "label": "170 IAC 4-1"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-004:T7-8",
+        "label": "RPL-CS-PRO-004 · 7. Eligibility for Disconnection — Decision Table"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "cosmetic_noise",
+    "rationale": "Cites the 170 IAC 4-1 rule generally; the only change in 170 IAC 4-1-13 is a readoption stamp.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0151",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-4-1-13",
+    "clause_id": "RPL-CS-PRO-004:T7-9",
+    "doc_id": "RPL-CS-PRO-004",
+    "match_path": "direct_rule",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-13",
+        "label": "170 IAC 4-1-13 · Customer deposits; interest; refund"
+      },
+      {
+        "kind": "rule",
+        "ref": "170 IAC 4-1",
+        "label": "170 IAC 4-1"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-004:T7-9",
+        "label": "RPL-CS-PRO-004 · 7. Eligibility for Disconnection — Decision Table"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "cosmetic_noise",
+    "rationale": "Cites the 170 IAC 4-1 rule generally; the only change in 170 IAC 4-1-13 is a readoption stamp.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0152",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-4-1-13",
+    "clause_id": "RPL-CS-PRO-004:T7-10",
+    "doc_id": "RPL-CS-PRO-004",
+    "match_path": "direct_rule",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-13",
+        "label": "170 IAC 4-1-13 · Customer deposits; interest; refund"
+      },
+      {
+        "kind": "rule",
+        "ref": "170 IAC 4-1",
+        "label": "170 IAC 4-1"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-004:T7-10",
+        "label": "RPL-CS-PRO-004 · 7. Eligibility for Disconnection — Decision Table"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "cosmetic_noise",
+    "rationale": "Cites the 170 IAC 4-1 rule generally; the only change in 170 IAC 4-1-13 is a readoption stamp.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0153",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-4-1-13",
+    "clause_id": "RPL-CS-PRO-004:T7-11",
+    "doc_id": "RPL-CS-PRO-004",
+    "match_path": "direct_rule",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-13",
+        "label": "170 IAC 4-1-13 · Customer deposits; interest; refund"
+      },
+      {
+        "kind": "rule",
+        "ref": "170 IAC 4-1",
+        "label": "170 IAC 4-1"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-004:T7-11",
+        "label": "RPL-CS-PRO-004 · 7. Eligibility for Disconnection — Decision Table"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "cosmetic_noise",
+    "rationale": "Cites the 170 IAC 4-1 rule generally; the only change in 170 IAC 4-1-13 is a readoption stamp.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0154",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-4-1-13",
+    "clause_id": "RPL-CS-PRO-004:T7-12",
+    "doc_id": "RPL-CS-PRO-004",
+    "match_path": "direct_rule",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-13",
+        "label": "170 IAC 4-1-13 · Customer deposits; interest; refund"
+      },
+      {
+        "kind": "rule",
+        "ref": "170 IAC 4-1",
+        "label": "170 IAC 4-1"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-004:T7-12",
+        "label": "RPL-CS-PRO-004 · 7. Eligibility for Disconnection — Decision Table"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "cosmetic_noise",
+    "rationale": "Cites the 170 IAC 4-1 rule generally; the only change in 170 IAC 4-1-13 is a readoption stamp.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0155",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-4-1-13",
+    "clause_id": "RPL-CS-PRO-004:T7-13",
+    "doc_id": "RPL-CS-PRO-004",
+    "match_path": "direct_rule",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-13",
+        "label": "170 IAC 4-1-13 · Customer deposits; interest; refund"
+      },
+      {
+        "kind": "rule",
+        "ref": "170 IAC 4-1",
+        "label": "170 IAC 4-1"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-004:T7-13",
+        "label": "RPL-CS-PRO-004 · 7. Eligibility for Disconnection — Decision Table"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "cosmetic_noise",
+    "rationale": "Cites the 170 IAC 4-1 rule generally; the only change in 170 IAC 4-1-13 is a readoption stamp.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0156",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-4-1-13",
+    "clause_id": "RPL-CS-PRO-004:T7-17",
+    "doc_id": "RPL-CS-PRO-004",
+    "match_path": "direct_rule",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-13",
+        "label": "170 IAC 4-1-13 · Customer deposits; interest; refund"
+      },
+      {
+        "kind": "rule",
+        "ref": "170 IAC 4-1",
+        "label": "170 IAC 4-1"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-004:T7-17",
+        "label": "RPL-CS-PRO-004 · 7. Eligibility for Disconnection — Decision Table"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "cosmetic_noise",
+    "rationale": "Cites the 170 IAC 4-1 rule generally; the only change in 170 IAC 4-1-13 is a readoption stamp.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0157",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-4-1-13",
+    "clause_id": "RPL-CS-PRO-004:T7-18",
+    "doc_id": "RPL-CS-PRO-004",
+    "match_path": "direct_rule",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-13",
+        "label": "170 IAC 4-1-13 · Customer deposits; interest; refund"
+      },
+      {
+        "kind": "rule",
+        "ref": "170 IAC 4-1",
+        "label": "170 IAC 4-1"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-004:T7-18",
+        "label": "RPL-CS-PRO-004 · 7. Eligibility for Disconnection — Decision Table"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "cosmetic_noise",
+    "rationale": "Cites the 170 IAC 4-1 rule generally; the only change in 170 IAC 4-1-13 is a readoption stamp.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0158",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-4-1-13",
+    "clause_id": "RPL-CS-PRO-004:8.3",
+    "doc_id": "RPL-CS-PRO-004",
+    "match_path": "direct_rule",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-13",
+        "label": "170 IAC 4-1-13 · Customer deposits; interest; refund"
+      },
+      {
+        "kind": "rule",
+        "ref": "170 IAC 4-1",
+        "label": "170 IAC 4-1"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-004:8.3",
+        "label": "RPL-CS-PRO-004 · 8. Notice Requirements"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "cosmetic_noise",
+    "rationale": "Cites the 170 IAC 4-1 rule generally; the only change in 170 IAC 4-1-13 is a readoption stamp.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0159",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-4-1-13",
+    "clause_id": "RPL-CS-PRO-004:8.4",
+    "doc_id": "RPL-CS-PRO-004",
+    "match_path": "direct_rule",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-13",
+        "label": "170 IAC 4-1-13 · Customer deposits; interest; refund"
+      },
+      {
+        "kind": "rule",
+        "ref": "170 IAC 4-1",
+        "label": "170 IAC 4-1"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-004:8.4",
+        "label": "RPL-CS-PRO-004 · 8. Notice Requirements"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "cosmetic_noise",
+    "rationale": "Cites the 170 IAC 4-1 rule generally; the only change in 170 IAC 4-1-13 is a readoption stamp.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0160",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-4-1-13",
+    "clause_id": "RPL-CS-PRO-004:8.5",
+    "doc_id": "RPL-CS-PRO-004",
+    "match_path": "direct_rule",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-13",
+        "label": "170 IAC 4-1-13 · Customer deposits; interest; refund"
+      },
+      {
+        "kind": "rule",
+        "ref": "170 IAC 4-1",
+        "label": "170 IAC 4-1"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-004:8.5",
+        "label": "RPL-CS-PRO-004 · 8. Notice Requirements"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "cosmetic_noise",
+    "rationale": "Cites the 170 IAC 4-1 rule generally; the only change in 170 IAC 4-1-13 is a readoption stamp.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0161",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-4-1-13",
+    "clause_id": "RPL-CS-PRO-004:8.6",
+    "doc_id": "RPL-CS-PRO-004",
+    "match_path": "direct_rule",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-13",
+        "label": "170 IAC 4-1-13 · Customer deposits; interest; refund"
+      },
+      {
+        "kind": "rule",
+        "ref": "170 IAC 4-1",
+        "label": "170 IAC 4-1"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-004:8.6",
+        "label": "RPL-CS-PRO-004 · 8. Notice Requirements"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "cosmetic_noise",
+    "rationale": "Cites the 170 IAC 4-1 rule generally; the only change in 170 IAC 4-1-13 is a readoption stamp.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand-0162",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-4-1-13",
+    "clause_id": "RPL-CS-PRO-004:8.7",
+    "doc_id": "RPL-CS-PRO-004",
+    "match_path": "direct_rule",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-13",
+        "label": "170 IAC 4-1-13 · Customer deposits; interest; refund"
+      },
+      {
+        "kind": "rule",
+        "ref": "170 IAC 4-1",
+        "label": "170 IAC 4-1"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-004:8.7",
+        "label": "RPL-CS-PRO-004 · 8. Notice Requirements"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "cosmetic_noise",
+    "rationale": "Cites the 170 IAC 4-1 rule generally; the only change in 170 IAC 4-1-13 is a readoption stamp.",
+    "finding_id": null
+  }
+]

@@ -1,1 +1,51 @@
-[]
+[
+  {
+    "change_id": "chg_whatif_b_001",
+    "citation": "170 IAC 4-1-16.6",
+    "heading": "Home energy assistance; disconnection to recipients",
+    "source_system": "iac",
+    "rule_key": "170 IAC 4-1",
+    "agency_id": "iurc",
+    "title_number": "170",
+    "change_class": "repealed",
+    "diff_segments": [
+      {
+        "op": "equal",
+        "text": "170 IAC 4-1-16.6 "
+      },
+      {
+        "op": "delete",
+        "text": "Home energy assistance; disconnection to recipients\n\n(a) A utility shall not discontinue residential electric service for nonpayment during the period December 1 through March 15 to a customer who is receiving, or who has applied for and is eligible to receive, assistance under IC 4-4-33.\n\n(b) The utility shall accept as proof of eligibility either the award letter issued by the Indiana Housing and Community Development Authority or its designee, or written notification from that agency that an application is pending.\n\n(c) Within five (5) days after receiving a notice under subsection (b), the utility shall record the protection in its customer information system and shall suspend any pending discontinuance order for that customer.\n\n(d) Nothing in this section relieves a customer of liability for service furnished. Amounts past due remain subject to a payment arrangement under 170 IAC 4-1-16(c).\n\n(Indiana Utility Regulatory Commission; 170 IAC 4-1-16.6; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722)"
+      },
+      {
+        "op": "insert",
+        "text": "[Repealed]"
+      }
+    ],
+    "s1_text": "170 IAC 4-1-16.6 Home energy assistance; disconnection to recipients\n\n(a) A utility shall not discontinue residential electric service for nonpayment during the period December 1 through March 15 to a customer who is receiving, or who has applied for and is eligible to receive, assistance under IC 4-4-33.\n\n(b) The utility shall accept as proof of eligibility either the award letter issued by the Indiana Housing and Community Development Authority or its designee, or written notification from that agency that an application is pending.\n\n(c) Within five (5) days after receiving a notice under subsection (b), the utility shall record the protection in its customer information system and shall suspend any pending discontinuance order for that customer.\n\n(d) Nothing in this section relieves a customer of liability for service furnished. Amounts past due remain subject to a payment arrangement under 170 IAC 4-1-16(c).\n\n(Indiana Utility Regulatory Commission; 170 IAC 4-1-16.6; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722)",
+    "s2_text": "170 IAC 4-1-16.6 [Repealed]",
+    "published_date": "2025-02-20",
+    "date_basis": "What-if assumption: edit treated as effective on this date",
+    "din": null,
+    "s1_snapshot": "2024-12-31",
+    "s2_snapshot": "2025-12-31",
+    "in_footprint": true,
+    "cited_clause_count": 19,
+    "characterization": {
+      "obligation_changed": true,
+      "direction": "removed",
+      "summary": "The December 1 through March 15 ban on disconnecting energy-assistance recipients is repealed. Clauses that cite this section as their authority now point at a rule that no longer exists.",
+      "value_changes": [
+        {
+          "label": "Winter disconnection protection period",
+          "old": "December 1 – March 15",
+          "new": "repealed",
+          "unit": null
+        }
+      ]
+    },
+    "disposition": "obligation_changed",
+    "disposition_reason": "The section is repealed. Clauses that cite it must drop the citation or restate the protection as company policy.",
+    "placeholder": true
+  }
+]

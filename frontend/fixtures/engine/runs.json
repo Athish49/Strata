@@ -1,1 +1,108 @@
-[]
+[
+  {
+    "run_id": "run_kb_real",
+    "kind": "kb",
+    "title": "Real wave · S1→S2",
+    "status": "succeeded",
+    "started_at": "2026-10-05T14:02:11Z",
+    "finished_at": "2026-10-05T14:09:48Z",
+    "scenario_id": null,
+    "progress": null,
+    "stats": {
+      "changes_raw": 1114,
+      "by_class": {
+        "substantive": 403,
+        "repealed": 31,
+        "renumbered": 12,
+        "new_section": 45,
+        "cosmetic": 590,
+        "metadata_only": 9,
+        "punctuation_only": 14,
+        "cross_ref_only": 10
+      },
+      "substantive": 491,
+      "noise": 623,
+      "in_footprint": 8,
+      "obligation_changed": 0,
+      "candidates_by_path": {
+        "direct_section": 72,
+        "direct_rule": 48,
+        "register_hop": 18,
+        "value_echo": 24
+      },
+      "findings_by_verdict": {
+        "action_required": 0,
+        "optional_relaxed": 0,
+        "update_citation": 0,
+        "review": 0,
+        "info": 0
+      },
+      "clauses_cleared": 162,
+      "docs_flagged": 0,
+      "docs_cleared": 3,
+      "radar": {
+        "applicable": 5,
+        "screened_out": 467,
+        "unclear": 18
+      },
+      "decided_by": {
+        "rule": 134,
+        "ai": 28
+      },
+      "llm_calls": 29
+    }
+  },
+  {
+    "run_id": "run_baseline",
+    "kind": "baseline",
+    "title": "Baseline · S1 vs S1",
+    "status": "succeeded",
+    "started_at": "2026-10-05T14:10:30Z",
+    "finished_at": "2026-10-05T14:10:41Z",
+    "scenario_id": null,
+    "progress": null,
+    "stats": {
+      "changes_raw": 0,
+      "by_class": {
+        "substantive": 0,
+        "repealed": 0,
+        "renumbered": 0,
+        "new_section": 0,
+        "cosmetic": 0,
+        "metadata_only": 0,
+        "punctuation_only": 0,
+        "cross_ref_only": 0
+      },
+      "substantive": 0,
+      "noise": 0,
+      "in_footprint": 0,
+      "obligation_changed": 0,
+      "candidates_by_path": {
+        "direct_section": 0,
+        "direct_rule": 0,
+        "register_hop": 0,
+        "value_echo": 0
+      },
+      "findings_by_verdict": {
+        "action_required": 0,
+        "optional_relaxed": 0,
+        "update_citation": 0,
+        "review": 0,
+        "info": 0
+      },
+      "clauses_cleared": 0,
+      "docs_flagged": 0,
+      "docs_cleared": 0,
+      "radar": {
+        "applicable": 0,
+        "screened_out": 0,
+        "unclear": 0
+      },
+      "decided_by": {
+        "rule": 0,
+        "ai": 0
+      },
+      "llm_calls": 0
+    }
+  }
+]

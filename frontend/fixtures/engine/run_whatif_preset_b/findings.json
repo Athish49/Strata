@@ -1,1 +1,754 @@
-[]
+[
+  {
+    "finding_id": "f_b_001",
+    "run_id": "run_whatif_preset_b",
+    "change_id": "chg_whatif_b_001",
+    "clause_id": "RPL-CS-PRO-004:10.2",
+    "doc_id": "RPL-CS-PRO-004",
+    "citation": "170 IAC 4-1-16.6",
+    "finding_type": "repealed_authority",
+    "verdict": "action_required",
+    "severity": "high",
+    "confidence": 1,
+    "decided_by": "rule",
+    "required_change": {
+      "from_text": "(170 IAC 4-1-16.6(a))",
+      "to_text": "(RPL policy; 170 IAC 4-1-16.6 repealed)"
+    },
+    "quotes": {
+      "s1": {
+        "text": "shall not discontinue residential electric service for nonpayment during the period December 1 through March 15",
+        "span": [
+          84,
+          195
+        ]
+      },
+      "s2": {
+        "text": "[Repealed]",
+        "span": [
+          17,
+          27
+        ]
+      },
+      "clause": {
+        "text": "(170 IAC 4-1-16.6(a))",
+        "span": [
+          273,
+          294
+        ]
+      }
+    },
+    "quotes_verified": true,
+    "rationale": "Section 10.2 presents the winter protection as a legal requirement and cites the repealed subsection as its basis. RPL must decide whether to keep the protection as company policy and, if so, restate its authority.",
+    "match_path": "direct_section",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-16.6",
+        "label": "170 IAC 4-1-16.6"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-004:10.2",
+        "label": "RPL-CS-PRO-004 §10.2"
+      }
+    ],
+    "propagated_from": null,
+    "stale_at_approval": false,
+    "doc_approved_date": "2025-02-05",
+    "rule_published_date": "2025-02-20",
+    "route": {
+      "owner": {
+        "person_id": "P15",
+        "name": "Jasmine Carter",
+        "title": "Supervisor Credit & Collections",
+        "department": "Customer Operations",
+        "reports_to_id": "P14"
+      },
+      "reviewer": {
+        "person_id": "P13",
+        "name": "Karen Mitchell",
+        "title": "Director Customer Service",
+        "department": "Customer Operations",
+        "reports_to_id": "P16"
+      },
+      "approver": {
+        "person_id": "P03",
+        "name": "Jonathan Pierce",
+        "title": "Senior Counsel Regulatory",
+        "department": "Legal",
+        "reports_to_id": "P02"
+      }
+    },
+    "reviews": []
+  },
+  {
+    "finding_id": "f_b_002",
+    "run_id": "run_whatif_preset_b",
+    "change_id": "chg_whatif_b_001",
+    "clause_id": "RPL-CS-PRO-004:10.3",
+    "doc_id": "RPL-CS-PRO-004",
+    "citation": "170 IAC 4-1-16.6",
+    "finding_type": "repealed_authority",
+    "verdict": "update_citation",
+    "severity": "medium",
+    "confidence": 1,
+    "decided_by": "rule",
+    "required_change": {
+      "from_text": "(170 IAC 4-1-16.6(b))",
+      "to_text": "(RPL policy)"
+    },
+    "quotes": {
+      "s1": {
+        "text": "shall not discontinue residential electric service for nonpayment during the period December 1 through March 15",
+        "span": [
+          84,
+          195
+        ]
+      },
+      "s2": {
+        "text": "[Repealed]",
+        "span": [
+          17,
+          27
+        ]
+      },
+      "clause": {
+        "text": "(170 IAC 4-1-16.6(b))",
+        "span": [
+          537,
+          558
+        ]
+      }
+    },
+    "quotes_verified": true,
+    "rationale": "Application-pending protection cites subsection (b) of the repealed section. Remove or replace the citation once the policy decision for 10.2 is made.",
+    "match_path": "direct_section",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-16.6",
+        "label": "170 IAC 4-1-16.6"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-004:10.3",
+        "label": "RPL-CS-PRO-004 §10.3"
+      }
+    ],
+    "propagated_from": null,
+    "stale_at_approval": false,
+    "doc_approved_date": "2025-02-05",
+    "rule_published_date": "2025-02-20",
+    "route": {
+      "owner": {
+        "person_id": "P15",
+        "name": "Jasmine Carter",
+        "title": "Supervisor Credit & Collections",
+        "department": "Customer Operations",
+        "reports_to_id": "P14"
+      },
+      "reviewer": {
+        "person_id": "P13",
+        "name": "Karen Mitchell",
+        "title": "Director Customer Service",
+        "department": "Customer Operations",
+        "reports_to_id": "P16"
+      },
+      "approver": {
+        "person_id": "P03",
+        "name": "Jonathan Pierce",
+        "title": "Senior Counsel Regulatory",
+        "department": "Legal",
+        "reports_to_id": "P02"
+      }
+    },
+    "reviews": []
+  },
+  {
+    "finding_id": "f_b_003",
+    "run_id": "run_whatif_preset_b",
+    "change_id": "chg_whatif_b_001",
+    "clause_id": "RPL-CS-PRO-004:10.8",
+    "doc_id": "RPL-CS-PRO-004",
+    "citation": "170 IAC 4-1-16.6",
+    "finding_type": "repealed_authority",
+    "verdict": "update_citation",
+    "severity": "low",
+    "confidence": 1,
+    "decided_by": "rule",
+    "required_change": {
+      "from_text": "(170 IAC 4-1-16.6(c))",
+      "to_text": "(RPL policy)"
+    },
+    "quotes": {
+      "s1": {
+        "text": "shall not discontinue residential electric service for nonpayment during the period December 1 through March 15",
+        "span": [
+          84,
+          195
+        ]
+      },
+      "s2": {
+        "text": "[Repealed]",
+        "span": [
+          17,
+          27
+        ]
+      },
+      "clause": {
+        "text": "(170 IAC 4-1-16.6(c))",
+        "span": [
+          635,
+          656
+        ]
+      }
+    },
+    "quotes_verified": true,
+    "rationale": "The exceptions to winter protection cite subsection (c) of the repealed section.",
+    "match_path": "direct_section",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-16.6",
+        "label": "170 IAC 4-1-16.6"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-004:10.8",
+        "label": "RPL-CS-PRO-004 §10.8"
+      }
+    ],
+    "propagated_from": null,
+    "stale_at_approval": false,
+    "doc_approved_date": "2025-02-05",
+    "rule_published_date": "2025-02-20",
+    "route": {
+      "owner": {
+        "person_id": "P15",
+        "name": "Jasmine Carter",
+        "title": "Supervisor Credit & Collections",
+        "department": "Customer Operations",
+        "reports_to_id": "P14"
+      },
+      "reviewer": {
+        "person_id": "P13",
+        "name": "Karen Mitchell",
+        "title": "Director Customer Service",
+        "department": "Customer Operations",
+        "reports_to_id": "P16"
+      },
+      "approver": {
+        "person_id": "P03",
+        "name": "Jonathan Pierce",
+        "title": "Senior Counsel Regulatory",
+        "department": "Legal",
+        "reports_to_id": "P02"
+      }
+    },
+    "reviews": []
+  },
+  {
+    "finding_id": "f_b_004",
+    "run_id": "run_whatif_preset_b",
+    "change_id": "chg_whatif_b_001",
+    "clause_id": "RPL-CS-PRO-004:T7-6",
+    "doc_id": "RPL-CS-PRO-004",
+    "citation": "170 IAC 4-1-16.6",
+    "finding_type": "repealed_authority",
+    "verdict": "update_citation",
+    "severity": "medium",
+    "confidence": 1,
+    "decided_by": "rule",
+    "required_change": {
+      "from_text": "170 IAC 4-1-16.6(a)",
+      "to_text": "RPL policy"
+    },
+    "quotes": {
+      "s1": {
+        "text": "shall not discontinue residential electric service for nonpayment during the period December 1 through March 15",
+        "span": [
+          84,
+          195
+        ]
+      },
+      "s2": {
+        "text": "[Repealed]",
+        "span": [
+          17,
+          27
+        ]
+      },
+      "clause": {
+        "text": "170 IAC 4-1-16.6(a)",
+        "span": [
+          166,
+          185
+        ]
+      }
+    },
+    "quotes_verified": true,
+    "rationale": "The eligibility decision-table row blocks disconnection of energy-assistance recipients and cites the repealed subsection.",
+    "match_path": "direct_section",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-16.6",
+        "label": "170 IAC 4-1-16.6"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-004:T7-6",
+        "label": "RPL-CS-PRO-004 table T7-6"
+      }
+    ],
+    "propagated_from": null,
+    "stale_at_approval": false,
+    "doc_approved_date": "2025-02-05",
+    "rule_published_date": "2025-02-20",
+    "route": {
+      "owner": {
+        "person_id": "P15",
+        "name": "Jasmine Carter",
+        "title": "Supervisor Credit & Collections",
+        "department": "Customer Operations",
+        "reports_to_id": "P14"
+      },
+      "reviewer": {
+        "person_id": "P13",
+        "name": "Karen Mitchell",
+        "title": "Director Customer Service",
+        "department": "Customer Operations",
+        "reports_to_id": "P16"
+      },
+      "approver": {
+        "person_id": "P03",
+        "name": "Jonathan Pierce",
+        "title": "Senior Counsel Regulatory",
+        "department": "Legal",
+        "reports_to_id": "P02"
+      }
+    },
+    "reviews": []
+  },
+  {
+    "finding_id": "f_b_005",
+    "run_id": "run_whatif_preset_b",
+    "change_id": "chg_whatif_b_001",
+    "clause_id": "RPL-CS-PRO-004:T7-7",
+    "doc_id": "RPL-CS-PRO-004",
+    "citation": "170 IAC 4-1-16.6",
+    "finding_type": "repealed_authority",
+    "verdict": "update_citation",
+    "severity": "medium",
+    "confidence": 1,
+    "decided_by": "rule",
+    "required_change": {
+      "from_text": "170 IAC 4-1-16.6(b)",
+      "to_text": "RPL policy"
+    },
+    "quotes": {
+      "s1": {
+        "text": "shall not discontinue residential electric service for nonpayment during the period December 1 through March 15",
+        "span": [
+          84,
+          195
+        ]
+      },
+      "s2": {
+        "text": "[Repealed]",
+        "span": [
+          17,
+          27
+        ]
+      },
+      "clause": {
+        "text": "170 IAC 4-1-16.6(b)",
+        "span": [
+          209,
+          228
+        ]
+      }
+    },
+    "quotes_verified": true,
+    "rationale": "The decision-table row for pending applications cites the repealed subsection (b).",
+    "match_path": "direct_section",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-16.6",
+        "label": "170 IAC 4-1-16.6"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-004:T7-7",
+        "label": "RPL-CS-PRO-004 table T7-7"
+      }
+    ],
+    "propagated_from": null,
+    "stale_at_approval": false,
+    "doc_approved_date": "2025-02-05",
+    "rule_published_date": "2025-02-20",
+    "route": {
+      "owner": {
+        "person_id": "P15",
+        "name": "Jasmine Carter",
+        "title": "Supervisor Credit & Collections",
+        "department": "Customer Operations",
+        "reports_to_id": "P14"
+      },
+      "reviewer": {
+        "person_id": "P13",
+        "name": "Karen Mitchell",
+        "title": "Director Customer Service",
+        "department": "Customer Operations",
+        "reports_to_id": "P16"
+      },
+      "approver": {
+        "person_id": "P03",
+        "name": "Jonathan Pierce",
+        "title": "Senior Counsel Regulatory",
+        "department": "Legal",
+        "reports_to_id": "P02"
+      }
+    },
+    "reviews": []
+  },
+  {
+    "finding_id": "f_b_006",
+    "run_id": "run_whatif_preset_b",
+    "change_id": "chg_whatif_b_001",
+    "clause_id": "RPL-CS-PRO-004:T4-5",
+    "doc_id": "RPL-CS-PRO-004",
+    "citation": "170 IAC 4-1-16.6",
+    "finding_type": "repealed_authority",
+    "verdict": "review",
+    "severity": "low",
+    "confidence": 0.95,
+    "decided_by": "rule",
+    "required_change": {
+      "from_text": "170 IAC 4-1-16.6 | Home energy assistance; disconnection to recipients",
+      "to_text": "Remove from Regulatory Basis, or mark as RPL policy"
+    },
+    "quotes": {
+      "s1": {
+        "text": "shall not discontinue residential electric service for nonpayment during the period December 1 through March 15",
+        "span": [
+          84,
+          195
+        ]
+      },
+      "s2": {
+        "text": "[Repealed]",
+        "span": [
+          17,
+          27
+        ]
+      },
+      "clause": {
+        "text": "170 IAC 4-1-16.6",
+        "span": [
+          7,
+          23
+        ]
+      }
+    },
+    "quotes_verified": true,
+    "rationale": "The Regulatory Basis table lists the repealed section as authority for clauses 10.1 through 10.8. Review the table after those clauses are resolved.",
+    "match_path": "direct_section",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-16.6",
+        "label": "170 IAC 4-1-16.6"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-004:T4-5",
+        "label": "RPL-CS-PRO-004 table T4-5"
+      }
+    ],
+    "propagated_from": null,
+    "stale_at_approval": false,
+    "doc_approved_date": "2025-02-05",
+    "rule_published_date": "2025-02-20",
+    "route": {
+      "owner": {
+        "person_id": "P15",
+        "name": "Jasmine Carter",
+        "title": "Supervisor Credit & Collections",
+        "department": "Customer Operations",
+        "reports_to_id": "P14"
+      },
+      "reviewer": {
+        "person_id": "P13",
+        "name": "Karen Mitchell",
+        "title": "Director Customer Service",
+        "department": "Customer Operations",
+        "reports_to_id": "P16"
+      },
+      "approver": {
+        "person_id": "P03",
+        "name": "Jonathan Pierce",
+        "title": "Senior Counsel Regulatory",
+        "department": "Legal",
+        "reports_to_id": "P02"
+      }
+    },
+    "reviews": []
+  },
+  {
+    "finding_id": "f_b_007",
+    "run_id": "run_whatif_preset_b",
+    "change_id": "chg_whatif_b_001",
+    "clause_id": "RPL-CS-PRO-004:App-D.F5",
+    "doc_id": "RPL-CS-PRO-004",
+    "citation": "170 IAC 4-1-16.6",
+    "finding_type": "form_content",
+    "verdict": "review",
+    "severity": "medium",
+    "confidence": 0.82,
+    "decided_by": "ai",
+    "required_change": {
+      "from_text": "(170 IAC 4-1-16.6)",
+      "to_text": "(RPL energy assistance protection policy)"
+    },
+    "quotes": {
+      "s1": {
+        "text": "shall not discontinue residential electric service for nonpayment during the period December 1 through March 15",
+        "span": [
+          84,
+          195
+        ]
+      },
+      "s2": {
+        "text": "[Repealed]",
+        "span": [
+          17,
+          27
+        ]
+      },
+      "clause": {
+        "text": "(170 IAC 4-1-16.6)",
+        "span": [
+          405,
+          423
+        ]
+      }
+    },
+    "quotes_verified": true,
+    "rationale": "The customer-facing protection confirmation letter tells the customer that RPL may not disconnect them, citing the repealed section. Wording depends on the decision for clause 10.2.",
+    "match_path": "register_hop",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-16.6",
+        "label": "170 IAC 4-1-16.6"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-004:10.2",
+        "label": "RPL-CS-PRO-004 §10.2"
+      },
+      {
+        "kind": "form_field",
+        "ref": "RPL-CS-PRO-004:App-D.F5",
+        "label": "Protection confirmation letter App-D.F5"
+      }
+    ],
+    "propagated_from": "f_b_001",
+    "stale_at_approval": false,
+    "doc_approved_date": "2025-02-05",
+    "rule_published_date": "2025-02-20",
+    "route": {
+      "owner": {
+        "person_id": "P15",
+        "name": "Jasmine Carter",
+        "title": "Supervisor Credit & Collections",
+        "department": "Customer Operations",
+        "reports_to_id": "P14"
+      },
+      "reviewer": {
+        "person_id": "P13",
+        "name": "Karen Mitchell",
+        "title": "Director Customer Service",
+        "department": "Customer Operations",
+        "reports_to_id": "P16"
+      },
+      "approver": {
+        "person_id": "P03",
+        "name": "Jonathan Pierce",
+        "title": "Senior Counsel Regulatory",
+        "department": "Legal",
+        "reports_to_id": "P02"
+      }
+    },
+    "reviews": []
+  },
+  {
+    "finding_id": "f_b_008",
+    "run_id": "run_whatif_preset_b",
+    "change_id": "chg_whatif_b_001",
+    "clause_id": "RPL-TAR-GRR-012:R13.6",
+    "doc_id": "RPL-TAR-GRR-012",
+    "citation": "170 IAC 4-1-16.6",
+    "finding_type": "repealed_authority",
+    "verdict": "review",
+    "severity": "high",
+    "confidence": 1,
+    "decided_by": "rule",
+    "required_change": {
+      "from_text": "Pursuant to 170 IAC 4-1-16.6(a)",
+      "to_text": "Pursuant to RPL's filed tariff"
+    },
+    "quotes": {
+      "s1": {
+        "text": "shall not discontinue residential electric service for nonpayment during the period December 1 through March 15",
+        "span": [
+          84,
+          195
+        ]
+      },
+      "s2": {
+        "text": "[Repealed]",
+        "span": [
+          17,
+          27
+        ]
+      },
+      "clause": {
+        "text": "Pursuant to 170 IAC 4-1-16.6(a)",
+        "span": [
+          41,
+          72
+        ]
+      }
+    },
+    "quotes_verified": true,
+    "rationale": "The LIHEAP Winter Moratorium tariff rule is authorised by the repealed section. The tariff is on file with the commission, so any change needs a filing and cannot be made by editing the procedure alone.",
+    "match_path": "direct_section",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-16.6",
+        "label": "170 IAC 4-1-16.6"
+      },
+      {
+        "kind": "tariff_rule",
+        "ref": "RPL-TAR-GRR-012:R13.6",
+        "label": "RPL-TAR-GRR-012 rule R13.6"
+      }
+    ],
+    "propagated_from": null,
+    "stale_at_approval": false,
+    "doc_approved_date": "2024-05-15",
+    "rule_published_date": "2025-02-20",
+    "route": {
+      "owner": {
+        "person_id": "P11",
+        "name": "Aisha Thompson",
+        "title": "Senior Rates & Tariffs Analyst",
+        "department": "Regulatory Affairs",
+        "reports_to_id": "P10"
+      },
+      "reviewer": {
+        "person_id": "P10",
+        "name": "Robert Haskins",
+        "title": "Manager Rates & Tariffs",
+        "department": "Regulatory Affairs",
+        "reports_to_id": "P07"
+      },
+      "approver": {
+        "person_id": "P03",
+        "name": "Jonathan Pierce",
+        "title": "Senior Counsel Regulatory",
+        "department": "Legal",
+        "reports_to_id": "P02"
+      }
+    },
+    "reviews": []
+  },
+  {
+    "finding_id": "f_b_009",
+    "run_id": "run_whatif_preset_b",
+    "change_id": "chg_whatif_b_001",
+    "clause_id": "RPL-TAR-GRR-012:R01.D25",
+    "doc_id": "RPL-TAR-GRR-012",
+    "citation": "170 IAC 4-1-16.6",
+    "finding_type": "repealed_authority",
+    "verdict": "update_citation",
+    "severity": "low",
+    "confidence": 1,
+    "decided_by": "rule",
+    "required_change": {
+      "from_text": "Rule 13.6 and 170 IAC 4-1-16.6",
+      "to_text": "Rule 13.6"
+    },
+    "quotes": {
+      "s1": {
+        "text": "shall not discontinue residential electric service for nonpayment during the period December 1 through March 15",
+        "span": [
+          84,
+          195
+        ]
+      },
+      "s2": {
+        "text": "[Repealed]",
+        "span": [
+          17,
+          27
+        ]
+      },
+      "clause": {
+        "text": "Rule 13.6 and 170 IAC 4-1-16.6",
+        "span": [
+          215,
+          245
+        ]
+      }
+    },
+    "quotes_verified": true,
+    "rationale": "The LIHEAP definition points customers to the repealed section as a source of winter protections.",
+    "match_path": "direct_section",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-16.6",
+        "label": "170 IAC 4-1-16.6"
+      },
+      {
+        "kind": "tariff_rule",
+        "ref": "RPL-TAR-GRR-012:R01.D25",
+        "label": "RPL-TAR-GRR-012 rule R01.D25"
+      }
+    ],
+    "propagated_from": null,
+    "stale_at_approval": false,
+    "doc_approved_date": "2024-05-15",
+    "rule_published_date": "2025-02-20",
+    "route": {
+      "owner": {
+        "person_id": "P11",
+        "name": "Aisha Thompson",
+        "title": "Senior Rates & Tariffs Analyst",
+        "department": "Regulatory Affairs",
+        "reports_to_id": "P10"
+      },
+      "reviewer": {
+        "person_id": "P10",
+        "name": "Robert Haskins",
+        "title": "Manager Rates & Tariffs",
+        "department": "Regulatory Affairs",
+        "reports_to_id": "P07"
+      },
+      "approver": {
+        "person_id": "P03",
+        "name": "Jonathan Pierce",
+        "title": "Senior Counsel Regulatory",
+        "department": "Legal",
+        "reports_to_id": "P02"
+      }
+    },
+    "reviews": []
+  }
+]
