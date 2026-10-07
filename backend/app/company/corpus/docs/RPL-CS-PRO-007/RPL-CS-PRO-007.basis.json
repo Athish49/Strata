@@ -1,0 +1,456 @@
+{
+  "doc_id": "RPL-CS-PRO-007",
+  "version": "3.0",
+  "law_as_of": "2024-12-31",
+  "snapshot": "S1",
+  "approved_date": "2025-02-12",
+  "effective_date": "2025-02-17",
+  "owner_id": "P18",
+  "reviewer_id": "P14",
+  "approver_id": null,
+  "two_signature": true,
+  "supersedes": "RPL-CS-PRO-007 v2.1 (2023-11-06)",
+  "grounding_pack": "T15",
+  "value_ledger": [
+    {
+      "id": "VL-001",
+      "clause_id": "RPL-CS-PRO-007:3.3",
+      "description": "Average accuracy formula: average accuracy = (FL + LL) ÷ 2",
+      "value": "(FL + LL) / 2",
+      "unit": "formula",
+      "citation": "170 IAC 4-1-8(a)"
+    },
+    {
+      "id": "VL-002",
+      "clause_id": "RPL-CS-PRO-007:3.7",
+      "description": "Creep test voltage limit: meter exhibiting creep at <110% of standard service voltage shall not remain in service",
+      "value": 110,
+      "unit": "% of standard service voltage",
+      "citation": "170 IAC 4-1-9(a)"
+    },
+    {
+      "id": "VL-003",
+      "clause_id": "RPL-CS-PRO-007:3.9",
+      "description": "Fast meter billing adjustment trigger: positive average error > 3%",
+      "value": 3,
+      "unit": "% positive average error",
+      "citation": "170 IAC 4-1-14(A)(1)"
+    },
+    {
+      "id": "VL-004",
+      "clause_id": "RPL-CS-PRO-007:3.17",
+      "description": "Slow meter billing adjustment trigger: negative average error > 3% (accuracy below 97%)",
+      "value": 3,
+      "unit": "% negative average error",
+      "citation": "170 IAC 4-1-14(A)(2)"
+    },
+    {
+      "id": "VL-005",
+      "clause_id": "RPL-CS-PRO-007:8.1",
+      "description": "Test fee — residential / single-phase meter",
+      "value": 40.00,
+      "unit": "USD",
+      "form_id": "Tariff Rule 16 Sheet 45 F-9",
+      "citation": "RPL-TAR-GRR-012 Rule 16 Sheet 45 F-9"
+    },
+    {
+      "id": "VL-006",
+      "clause_id": "RPL-CS-PRO-007:8.1",
+      "description": "Test fee — polyphase / demand meter",
+      "value": 95.00,
+      "unit": "USD",
+      "form_id": "Tariff Rule 16 Sheet 45 F-9",
+      "citation": "RPL-TAR-GRR-012 Rule 16 Sheet 45 F-9"
+    },
+    {
+      "id": "VL-007",
+      "clause_id": "RPL-CS-PRO-007:T8",
+      "description": "First and second customer-requested tests: no charge",
+      "value": 0,
+      "unit": "USD",
+      "citation": "170 IAC 4-1-11(a)"
+    },
+    {
+      "id": "VL-008",
+      "clause_id": "RPL-CS-PRO-007:T8",
+      "description": "Second test eligibility look-back: may request after 12 months",
+      "value": 12,
+      "unit": "months",
+      "citation": "170 IAC 4-1-11(a)"
+    },
+    {
+      "id": "VL-009",
+      "clause_id": "RPL-CS-PRO-007:T8",
+      "description": "Third/subsequent test fee condition: meter tested within prior 36 months at customer request",
+      "value": 36,
+      "unit": "months",
+      "citation": "170 IAC 4-1-11(b)"
+    },
+    {
+      "id": "VL-010",
+      "clause_id": "RPL-CS-PRO-007:10.3",
+      "description": "Full load test point: approximately 100% of rated test amperes",
+      "value": 100,
+      "unit": "% of rated test amperes",
+      "citation": "170 IAC 4-1-8(a)"
+    },
+    {
+      "id": "VL-011",
+      "clause_id": "RPL-CS-PRO-007:10.3",
+      "description": "Light load test point: approximately 10% of rated test amperes",
+      "value": 10,
+      "unit": "% of rated test amperes",
+      "citation": "170 IAC 4-1-8(a)"
+    },
+    {
+      "id": "VL-012",
+      "clause_id": "RPL-CS-PRO-007:10.4",
+      "description": "Minimum test runs at each load point: at least 2 (unless automated device)",
+      "value": 2,
+      "unit": "tests",
+      "citation": "170 IAC 4-1-8(b)"
+    },
+    {
+      "id": "VL-013",
+      "clause_id": "RPL-CS-PRO-007:10.4",
+      "description": "Two test runs must agree within 0.5% (unless automated)",
+      "value": 0.5,
+      "unit": "% agreement tolerance",
+      "citation": "170 IAC 4-1-8(b)"
+    },
+    {
+      "id": "VL-014",
+      "clause_id": "RPL-CS-PRO-007:10.4",
+      "description": "Single-test exception: average <103% and meter to be adjusted",
+      "value": 103,
+      "unit": "% average accuracy (upper bound for single-run exception)",
+      "citation": "170 IAC 4-1-8(b)"
+    },
+    {
+      "id": "VL-015",
+      "clause_id": "RPL-CS-PRO-007:10.6",
+      "description": "In-service accuracy limit — average error: not over ±2%",
+      "value": 2,
+      "unit": "% average error (plus or minus)",
+      "citation": "170 IAC 4-1-9(b)(1)"
+    },
+    {
+      "id": "VL-016",
+      "clause_id": "RPL-CS-PRO-007:10.6",
+      "description": "In-service accuracy limit — full load error: not over ±1%",
+      "value": 1,
+      "unit": "% full load error (plus or minus)",
+      "citation": "170 IAC 4-1-9(b)(1)"
+    },
+    {
+      "id": "VL-017",
+      "clause_id": "RPL-CS-PRO-007:10.6",
+      "description": "In-service accuracy limit — light load error: not over ±3%",
+      "value": 3,
+      "unit": "% light load error (plus or minus)",
+      "citation": "170 IAC 4-1-9(b)(1)"
+    },
+    {
+      "id": "VL-018",
+      "clause_id": "RPL-CS-PRO-007:10.8",
+      "description": "Integrating demand meter — timing element cumulative error: not over ±2% for entire billing period",
+      "value": 2,
+      "unit": "% cumulative timing error per billing period",
+      "citation": "170 IAC 4-1-9(b)(3)"
+    },
+    {
+      "id": "VL-019",
+      "clause_id": "RPL-CS-PRO-007:10.8",
+      "description": "TOU demand register — max time deviation from correct time: 10 minutes (under normal service conditions)",
+      "value": 10,
+      "unit": "minutes",
+      "citation": "170 IAC 4-1-9(b)(3)"
+    },
+    {
+      "id": "VL-020",
+      "clause_id": "RPL-CS-PRO-007:10.8",
+      "description": "Lagged demand meter — electromagnetic type: error not over ±2% of full scale",
+      "value": 2,
+      "unit": "% of full scale (electromagnetic lagged demand)",
+      "citation": "170 IAC 4-1-9(b)(4)"
+    },
+    {
+      "id": "VL-021",
+      "clause_id": "RPL-CS-PRO-007:10.8",
+      "description": "Lagged demand meter — thermal type: error not over ±4% of full scale",
+      "value": 4,
+      "unit": "% of full scale (thermal lagged demand)",
+      "citation": "170 IAC 4-1-9(b)(4)"
+    },
+    {
+      "id": "VL-022",
+      "clause_id": "RPL-CS-PRO-007:10.9",
+      "description": "Power factor test for inductive load circuits: 50% lagging power factor, error not over ±2%",
+      "value": 50,
+      "unit": "% lagging power factor",
+      "citation": "170 IAC 4-1-9(b)(5)"
+    },
+    {
+      "id": "VL-023",
+      "clause_id": "RPL-CS-PRO-007:10.9",
+      "description": "Power factor test error limit: not over ±2%",
+      "value": 2,
+      "unit": "% error at 50% lagging PF",
+      "citation": "170 IAC 4-1-9(b)(5)"
+    },
+    {
+      "id": "VL-024",
+      "clause_id": "RPL-CS-PRO-007:10.1",
+      "description": "Reference standards calibration interval: at least once every 2 years",
+      "value": 2,
+      "unit": "years",
+      "citation": "170 IAC 4-1-7(C)"
+    },
+    {
+      "id": "VL-025",
+      "clause_id": "RPL-CS-PRO-007:10.1",
+      "description": "Portable watthour standard error threshold requiring re-certification: >1% at any load",
+      "value": 1,
+      "unit": "% error (plus or minus)",
+      "citation": "170 IAC 4-1-7(D)"
+    },
+    {
+      "id": "VL-026",
+      "clause_id": "RPL-CS-PRO-007:10.1",
+      "description": "Portable indicating instrument error at zero threshold: >1% of full scale",
+      "value": 1,
+      "unit": "% of full scale",
+      "citation": "170 IAC 4-1-7(E)"
+    },
+    {
+      "id": "VL-027",
+      "clause_id": "RPL-CS-PRO-007:11.1",
+      "description": "Written test report to customer: within 10 days after test completion",
+      "value": 10,
+      "unit": "calendar days",
+      "citation": "170 IAC 4-1-11(d)"
+    },
+    {
+      "id": "VL-028",
+      "clause_id": "RPL-CS-PRO-007:11.3",
+      "description": "Customer appeal deadline: within 5 days of date of report",
+      "value": 5,
+      "unit": "calendar days",
+      "citation": "170 IAC 4-1-11(e)"
+    },
+    {
+      "id": "VL-029",
+      "clause_id": "RPL-CS-PRO-007:13.1.2",
+      "description": "Fast meter adjustment period: determinable fast period or 1 year, whichever is shorter",
+      "value": 1,
+      "unit": "year (maximum look-back)",
+      "citation": "170 IAC 4-1-14(A)(1)"
+    },
+    {
+      "id": "VL-030",
+      "clause_id": "RPL-CS-PRO-007:13.1.3",
+      "description": "Fast meter refund formula: excess = billed_amount × (accuracy − 100) ÷ accuracy",
+      "value": "billed_amount * (accuracy - 100) / accuracy",
+      "unit": "formula",
+      "citation": "170 IAC 4-1-14(A)(1)"
+    },
+    {
+      "id": "VL-031",
+      "clause_id": "RPL-CS-PRO-007:13.2.2",
+      "description": "Slow meter back-bill period: shorter of one-half of period since last previous test or 1 year",
+      "value": 1,
+      "unit": "year (maximum look-back)",
+      "citation": "170 IAC 4-1-14(A)(2)"
+    },
+    {
+      "id": "VL-032",
+      "clause_id": "RPL-CS-PRO-007:13.4.1",
+      "description": "Demand meter billing adjustment trigger: error > 4% (integrating demand)",
+      "value": 4,
+      "unit": "% error",
+      "citation": "170 IAC 4-1-14(A)"
+    },
+    {
+      "id": "VL-033",
+      "clause_id": "RPL-CS-PRO-007:13.5.2",
+      "description": "Other billing error adjustment period: from known date of error or 1 year, whichever is shorter",
+      "value": 1,
+      "unit": "year (maximum look-back)",
+      "citation": "170 IAC 4-1-14(B)"
+    },
+    {
+      "id": "VL-034",
+      "clause_id": "RPL-CS-PRO-007:13.6.1",
+      "description": "Tampering investigation minimum charge",
+      "value": 100.00,
+      "unit": "USD minimum (plus actual costs and unbilled energy)",
+      "form_id": "Tariff Rule 16 Sheet 45 F-8",
+      "citation": "RPL-TAR-GRR-012 Rule 16 Sheet 45 F-8"
+    }
+  ],
+  "out_of_scope_references": [
+    {
+      "id": "OSR-001",
+      "citation": "IC 8-1-2-34",
+      "note": "Statutory authority for customer meter accessibility rights. RPL complies; operational obligations carried by 170 IAC 4-1 implementing rules in this procedure.",
+      "clause_id": "RPL-CS-PRO-007:4.1"
+    },
+    {
+      "id": "OSR-002",
+      "citation": "IC 8-1-2-35",
+      "note": "Statutory authority for customer testing standards rights. RPL complies; operational obligations carried by 170 IAC 4-1 implementing rules in this procedure.",
+      "clause_id": "RPL-CS-PRO-007:4.1"
+    }
+  ],
+  "company_practice_items": [
+    {
+      "id": "CP-001",
+      "clause_id": "RPL-CS-PRO-007:6",
+      "description": "High-bill triage steps (§6.1–6.5) are company practice; not a regulatory prerequisite. Triage must not delay or replace a meter test the customer is entitled to."
+    },
+    {
+      "id": "CP-002",
+      "clause_id": "RPL-CS-PRO-007:6.3",
+      "description": "Weather normalization: 15% or greater year-over-year increase in heating/cooling degree-days used as threshold to explain proportional bill increase."
+    },
+    {
+      "id": "CP-003",
+      "clause_id": "RPL-CS-PRO-007:T8",
+      "row": "T8-3",
+      "description": "RPL performs second customer-requested test at no charge regardless of interval since first request. The 12-month language in 170 IAC 4-1-11(a) sets the customer's right, not a prohibition on earlier tests."
+    },
+    {
+      "id": "CP-004",
+      "clause_id": "RPL-CS-PRO-007:T8",
+      "row": "T8-4",
+      "description": "RPL applies the 170 IAC 4-1-10(c)(4)–(c)(5) accuracy limits (98%–102% at full load) on a single-meter basis when assessing fee eligibility for third/subsequent test, since lot-level limits represent the standard accuracy specification."
+    },
+    {
+      "id": "CP-005",
+      "clause_id": "RPL-CS-PRO-007:9.3",
+      "description": "Customer right to be present during meter removal and shop test (company practice in alignment with customer-service standards)."
+    },
+    {
+      "id": "CP-006",
+      "clause_id": "RPL-CS-PRO-007:9.2",
+      "description": "Scheduling performance target: test appointment offered within 5 calendar days of receipt of written request. Internal target only."
+    },
+    {
+      "id": "CP-007",
+      "clause_id": "RPL-CS-PRO-007:11.1",
+      "description": "Internal performance target: issue MTR-F-011 within 5 calendar days of test completion (regulatory requirement is 10 days)."
+    },
+    {
+      "id": "CP-008",
+      "clause_id": "RPL-CS-PRO-007:13",
+      "description": "Interest is not included in RPL's standard billing adjustment calculation."
+    },
+    {
+      "id": "CP-009",
+      "clause_id": "RPL-CS-PRO-007:13.2.5",
+      "description": "Payment arrangements for back-bills offered when amount exceeds customer's average monthly bill. Documented in CIS under code HPAY."
+    },
+    {
+      "id": "CP-010",
+      "clause_id": "RPL-CS-PRO-007:13.3.3",
+      "description": "AMR/AMI zero-read alert reviewed weekly. Residential accounts investigated same business day; non-residential within 2 business days (internal performance targets)."
+    },
+    {
+      "id": "CP-011",
+      "clause_id": "RPL-CS-PRO-007:14.1",
+      "description": "Billing adjustment approval thresholds: ≤$500 (Billing Adjustment Analyst); $500.01–$5,000 (P18 Luis Hernandez); >$5,000 (P14 Steven Park). These are company practice thresholds."
+    },
+    {
+      "id": "CP-012",
+      "clause_id": "RPL-CS-PRO-007:2.3",
+      "description": "RPL fleet as of 2024-12-31: 371,200 solid-state AMI meters; 31,400 solid-state AMR meters; 7,350 electromechanical (legacy) meters."
+    },
+    {
+      "id": "CP-013",
+      "clause_id": "RPL-CS-PRO-007:13.1.4",
+      "description": "Refund check issued within 30 calendar days of adjustment calculation for customers who have closed their account or request a check."
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "INT-001",
+      "clause_id": "RPL-CS-PRO-007:T8",
+      "row": "T8-4",
+      "regulatory_text": "170 IAC 4-1-11(b) — three-condition fee rule for third/subsequent tests",
+      "interpretation": "RPL reads 'section 10(c)(4) and 10(c)(5)' as a single-meter accuracy standard (98%–102% at full load) rather than a lot-level determination, because applying lot sampling to a single customer meter is impractical. Company position documented in T8-4."
+    },
+    {
+      "id": "INT-002",
+      "clause_id": "RPL-CS-PRO-007:13.1.2",
+      "regulatory_text": "170 IAC 4-1-14(A)(1) — fast period determination",
+      "interpretation": "Where AMI interval data, WAM fault records, or other evidence can establish the start date of the fast condition, RPL adjusts for the determinable period or one year, whichever is shorter. Where no determinable start is available, RPL defaults to 12 billing months preceding the test date."
+    }
+  ],
+  "coverage": {
+    "170 IAC 4-1-1": {
+      "disposition": "covered",
+      "clause_ids": ["RPL-CS-PRO-007:3.8"],
+      "note": "Definition of 'Customer' (residential limitation for §§13(d), 15, 16) operationalized in §3.8 and applied in §§7, 8, 11."
+    },
+    "170 IAC 4-1-2": {
+      "disposition": "covered",
+      "clause_ids": ["RPL-CS-PRO-007:2.1", "RPL-CS-PRO-007:2.2", "RPL-CS-PRO-007:4.1"],
+      "note": "Applicability of rules — scope of procedure covers all RPL meter types per §2."
+    },
+    "170 IAC 4-1-4": {
+      "disposition": "covered",
+      "clause_ids": ["RPL-CS-PRO-007:10.13", "RPL-CS-PRO-007:16.2"],
+      "note": "Meter test record requirements implemented via MTR-F-011 (§10.13) and WAM permanent records (§16.2)."
+    },
+    "170 IAC 4-1-5": {
+      "disposition": "covered",
+      "clause_ids": ["RPL-CS-PRO-007:6.1"],
+      "note": "Meter accessibility / residential customer meter number right addressed in §6.1 (register read verification). Location standards are cross-referenced; installation siting is out of scope for this procedure."
+    },
+    "170 IAC 4-1-6": {
+      "disposition": "covered",
+      "clause_ids": ["RPL-CS-PRO-007:10.2", "RPL-CS-PRO-007:13.5.3"],
+      "note": "§10.2 addresses as-found test integrity. §13.5.3 operationalizes the multiplier marking requirement (§6(d)) for billing adjustment purposes."
+    },
+    "170 IAC 4-1-7": {
+      "disposition": "covered",
+      "clause_ids": ["RPL-CS-PRO-007:10.1"],
+      "note": "All sub-parts (A)–(F) addressed in §10.1 by reference to RPL-MTR-PGM-001 with specific frequency and tolerance values restated."
+    },
+    "170 IAC 4-1-8": {
+      "disposition": "covered",
+      "clause_ids": ["RPL-CS-PRO-007:3.1", "RPL-CS-PRO-007:3.3", "RPL-CS-PRO-007:10.3", "RPL-CS-PRO-007:10.4", "RPL-CS-PRO-007:10.5", "RPL-CS-PRO-007:10.12"],
+      "note": "Average accuracy formula and test procedures fully operationalized. (a) FL/LL definition and average formula in §10.3–10.5; (b) test run count and agreement requirement in §10.4; (c) as-left determination in §10.12."
+    },
+    "170 IAC 4-1-9": {
+      "disposition": "covered",
+      "clause_ids": ["RPL-CS-PRO-007:10.6", "RPL-CS-PRO-007:10.7", "RPL-CS-PRO-007:10.8", "RPL-CS-PRO-007:10.9", "RPL-CS-PRO-007:10.10"],
+      "note": "(a) Creep/no-load test — §10.7; (b)(1) watthour accuracy limits — §10.6; (b)(3) integrating demand/TOU — §10.8; (b)(4) lagged demand — §10.8; (b)(5) PF test — §10.9; (c) CT instrument transformers — §10.10."
+    },
+    "170 IAC 4-1-10": {
+      "disposition": "covered",
+      "clause_ids": ["RPL-CS-PRO-007:8.1", "RPL-CS-PRO-007:T8"],
+      "note": "§8 fee eligibility decision table references 10(c)(4)–(c)(5) accuracy limits (98%–102%) as the compliance standard for the third-test fee determination."
+    },
+    "170 IAC 4-1-11": {
+      "disposition": "covered",
+      "clause_ids": ["RPL-CS-PRO-007:7.1", "RPL-CS-PRO-007:8.1", "RPL-CS-PRO-007:T8", "RPL-CS-PRO-007:11.1", "RPL-CS-PRO-007:11.2", "RPL-CS-PRO-007:11.3"],
+      "note": "(a) written request and free first/second test — §7.1, T8-1/T8-2; (b) third-test fee conditions — T8-4; (c) fee disclosure before test — §8.1; (d) 10-day report requirement — §11.1; (e) 5-day appeal deadline — §11.3."
+    },
+    "170 IAC 4-1-12": {
+      "disposition": "covered",
+      "clause_ids": ["RPL-CS-PRO-007:12.1", "RPL-CS-PRO-007:12.2", "RPL-CS-PRO-007:12.3", "RPL-CS-PRO-007:12.4", "RPL-CS-PRO-007:12.5", "RPL-CS-PRO-007:9.4"],
+      "note": "(a) IURC watthour test on application — §12.1; (b) demand test conditions — §12.3; (c) meter preservation hold — §12.2, §9.4; fee rule — §12.4."
+    },
+    "170 IAC 4-1-13": {
+      "disposition": "covered",
+      "clause_ids": ["RPL-CS-PRO-007:6.5", "RPL-CS-PRO-007:13.5.4"],
+      "note": "(d) Good-cause estimated bill rule operationalized in triage §6.5 and billing error correction §13.5.4. Bill content requirements (§13(a)) are a billing-system obligation, not repeated in this procedure."
+    },
+    "170 IAC 4-1-14": {
+      "disposition": "covered",
+      "clause_ids": ["RPL-CS-PRO-007:13.1.1", "RPL-CS-PRO-007:13.1.2", "RPL-CS-PRO-007:13.1.3", "RPL-CS-PRO-007:13.2.1", "RPL-CS-PRO-007:13.2.2", "RPL-CS-PRO-007:13.2.3", "RPL-CS-PRO-007:13.2.4", "RPL-CS-PRO-007:13.4.1", "RPL-CS-PRO-007:13.4.2", "RPL-CS-PRO-007:13.5.1", "RPL-CS-PRO-007:13.5.2"],
+      "note": "(A)(1) fast meter — §13.1; (A)(2) slow/stopped meter — §13.2–13.3; demand error threshold 4% — §13.4.1; (B) other billing errors — §13.5."
+    }
+  }
+}

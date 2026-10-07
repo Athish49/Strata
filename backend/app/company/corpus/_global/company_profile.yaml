@@ -1,0 +1,206 @@
+# Rockridge Power & Light Company — Company Profile
+# Generated: 2026-10-06  Task T01
+
+company:
+  legal_name: "Rockridge Power & Light Company"
+  short_names:
+    - RPL
+    - "Rockridge Power"
+  entity_type: "Indiana corporation; investor-owned public utility under IC 8-1-2, financed by the sale of securities and overseen by a board representing shareholders"
+  parent: "Rockridge Energy Group, Inc."
+  regulator: "Indiana Utility Regulatory Commission (IURC)"
+  iurc_utility_id: "99012"
+
+headquarters:
+  address: "400 Wabash Commons Drive"
+  city: Lafayette
+  state: IN
+  zip: "47901"
+
+contact:
+  customer_service_phone: "1-800-555-0142"
+  customer_service_hours: "24/7"
+  customer_service_email: "customercare@rockridge-pl.example"
+  outage_line: "1-800-555-0177"
+  general_business_phone: "765-555-0200"
+  spanish_language_line: "1-800-555-0143"
+  web: "www.rockridge-pl.example"
+  payment_mailing_address: "Rockridge Power, P.O. Box 6600, Lafayette, IN 47903"
+  written_disputes_address: "Rockridge Power, Customer Advocacy, 400 Wabash Commons Drive, Lafayette, IN 47901"
+
+business_model:
+  description: "Electric distribution only. RPL owns no generating units. It buys full-requirements wholesale power under a FERC-jurisdictional agreement and operates inside the MISO footprint."
+  utility_type: electric_distribution
+  owns_generating_units: false
+  wholesale_power_arrangement: FERC-jurisdictional full-requirements
+  grid_membership: MISO
+
+service_territory:
+  description: "14 west-central Indiana counties"
+  counties:
+    - Tippecanoe
+    - Clinton
+    - Carroll
+    - White
+    - Benton
+    - Warren
+    - Fountain
+    - Montgomery
+    - Boone
+    - Hendricks
+    - Putnam
+    - Parke
+    - Vermillion
+    - Vigo
+
+service_centers:
+  - id: LAF
+    name: Lafayette
+    role: "Main / Headquarters"
+    address: "400 Wabash Commons Drive, Lafayette, IN 47901"
+  - id: CRW
+    name: Crawfordsville
+    role: "Service Center"
+  - id: THT
+    name: "Terre Haute"
+    role: "Service Center"
+  - id: FRK
+    name: Frankfort
+    role: "Service Center"
+  - id: DAN
+    name: Danville
+    role: "Service Center"
+
+customers:
+  as_of: "2024-12-31"
+  residential: 361480
+  commercial: 44215
+  industrial: 1184
+  public_street_highway_lighting: 612
+  total: 407491
+
+meters_in_service:
+  as_of: "2024-12-31"
+  solid_state_ami: 371200
+  solid_state_amr: 31400
+  electromechanical_legacy: 7350
+  total: 409950
+  note: "Includes inactive premises"
+
+distribution_plant:
+  distribution_substations: 112
+  distribution_circuits: 528
+  overhead_circuit_miles: 14200
+  underground_circuit_miles: 4900
+  poles_approx: 212000
+  distribution_transformers_approx: 118400
+  oil_filled_substation_power_transformers: 186
+  owned_voltage_levels:
+    subtransmission_kv: 69
+    subtransmission_circuit_miles: 418
+    primary_distribution_kv:
+      - 12.47
+      - 34.5
+
+standby_generation:
+  description: "Three diesel emergency standby generators for backup/emergency use at company facilities. These are not generating stations."
+  units:
+    - location: "Lafayette HQ data center"
+      capacity_kw: 750
+      fuel_tank_type: "double-walled belly tank"
+      fuel_tank_gal: 1500
+    - location: "Crawfordsville service center"
+      capacity_kw: 350
+      fuel_tank_type: "double-walled belly tank"
+      fuel_tank_gal: 660
+    - location: "Terre Haute service center"
+      capacity_kw: 350
+      fuel_tank_type: "double-walled belly tank"
+      fuel_tank_gal: 660
+
+workforce:
+  employees_approx: 1450
+  field_crews: internal
+  vegetation_contractors:
+    - "Contractor A"
+    - "Contractor B"
+
+fleet:
+  vehicles_approx: 640
+  aerial_bucket_and_digger_derrick_units: 210
+  fueling_locations: "All five service centers (aboveground tanks covered by RPL-ENV-PLN-011)"
+
+core_systems:
+  - id: CIS
+    name: "Customer Information System"
+  - id: OMS
+    name: "Outage Management System"
+  - id: AMI_HES
+    name: "AMI Head-End System"
+  - id: GIS
+    name: "Geographic Information System"
+  - id: WAM
+    name: "Work & Asset Management"
+  - id: EHS_IMS
+    name: "EHS Incident Management System"
+  - id: DCS
+    name: "Document Control System"
+
+facilities:
+  meter_shop_standards_lab:
+    location: "Lafayette HQ campus"
+  distribution_control_center:
+    location: Lafayette
+    staffing: "24/7"
+    paging_groups:
+      - ENV-ONCALL
+      - SAF-ONCALL
+      - REG-ONCALL
+      - DCC-ESCALATION
+
+regulatory_contacts:
+  - name: "Indiana Utility Regulatory Commission (IURC)"
+    division: "Consumer Affairs Division"
+    phone_tollfree: "1-800-851-4268"
+    phone_direct: "317-232-2712"
+    fax: "317-233-2410"
+    address: "PNC Center, 101 W. Washington Street, Suite 1500E, Indianapolis, IN 46204"
+    hours: "8:15 a.m.–4:45 p.m. ET, Monday–Friday"
+    online: "iurc.portal.in.gov"
+    complaint_form: "State Form 50488"
+  - name: "Indiana Office of Utility Consumer Counselor (OUCC)"
+    phone_tollfree: "1-888-441-2494"
+  - name: "Indiana Department of Environmental Management (IDEM)"
+    emergency_response_24hr: "(888) 233-7745"
+    emergency_response_direct: "(317) 233-7745"
+  - name: "Indiana 811"
+    note: "Damage prevention / underground locate line"
+
+spcc:
+  substations_with_spcc_plans: 41
+  spcc_plan_substations: "RPL-ENV-PLN-010"
+  spcc_plan_service_centers: "RPL-ENV-PLN-011"
+
+applicability_attributes:
+  jurisdiction: IN
+  utility_type: electric
+  ownership: investor_owned
+  owns_generating_units: false
+  operates_transmission_above_100kv: false
+  has_gas_operations: false
+  has_water_operations: false
+  customer_count_total: 407491
+  has_emergency_standby_generators: true
+  standby_generator_count: 3
+  has_oil_filled_equipment: true
+  has_underground_facilities: true
+  iurc_jurisdictional: true
+  has_fleet_vehicles: true
+  fleet_vehicle_count: 640
+  has_aboveground_fuel_storage: true
+  has_spcc_plans: true
+  pcb_equipment_possible: true
+  state_osha_plan: IOSHA
+  owns_customer_meters: true
+  meters_in_service_total: 409950
+  has_vegetation_management_program: true

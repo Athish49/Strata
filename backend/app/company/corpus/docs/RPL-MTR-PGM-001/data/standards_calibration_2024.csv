@@ -1,0 +1,42 @@
+standard_id,standard_level,make_model_generic,serial,accuracy_class_generic,location,last_certified_date,certified_by,traceable_to,certificate_no,as_found_deviation_pct,next_due,certificate_on_file
+RS-001,reference,Lab-Standard-Whr-1,RS0001,0.05%,"Meter Shop & Standards Laboratory, Lafayette HQ",2024-05-22,Accredited External Calibration Laboratory,NIST,CERT-RS-2024-0001,-0.0059,2026-06-02,Y
+RS-002,reference,Lab-Standard-Whr-2,RS0002,0.05%,"Meter Shop & Standards Laboratory, Lafayette HQ",2024-05-25,Accredited External Calibration Laboratory,NIST,CERT-RS-2024-0002,0.02,2026-05-26,Y
+RS-003,reference,Lab-Standard-Whr-3,RS0003,0.05%,"Meter Shop & Standards Laboratory, Lafayette HQ",2024-05-24,Accredited External Calibration Laboratory,NIST,CERT-RS-2024-0003,-0.0122,2026-06-08,Y
+TB-001,working_test_board,Shop-Test-Board-1,TB0001,0.1%,"Meter Shop & Standards Laboratory, Lafayette HQ",2024-06-11,RPL reference standard RS-001,RS-001,CERT-TB-2024-0001,-0.0631,2025-06-11,Y
+TB-002,working_test_board,Shop-Test-Board-2,TB0002,0.1%,"Meter Shop & Standards Laboratory, Lafayette HQ",2024-06-09,RPL reference standard RS-002,RS-002,CERT-TB-2024-0002,0.0083,2025-06-09,Y
+TB-003,working_test_board,Shop-Test-Board-3,TB0003,0.1%,"Meter Shop & Standards Laboratory, Lafayette HQ",2024-01-14,RPL reference standard RS-003,RS-003,CERT-TB-2024-0003,-0.0374,2025-01-13,Y
+TB-004,working_test_board,Shop-Test-Board-4,TB0004,0.1%,"Meter Shop & Standards Laboratory, Lafayette HQ",2024-03-01,RPL reference standard RS-001,RS-001,CERT-TB-2024-0004,-0.0266,2025-03-01,Y
+TB-005,working_test_board,Shop-Test-Board-5,TB0005,0.1%,"Meter Shop & Standards Laboratory, Lafayette HQ",2024-02-26,RPL reference standard RS-002,RS-002,CERT-TB-2024-0005,-0.0107,2025-02-25,Y
+TB-006,working_test_board,Shop-Test-Board-6,TB0006,0.1%,"Meter Shop & Standards Laboratory, Lafayette HQ",2024-06-01,RPL reference standard RS-003,RS-003,CERT-TB-2024-0006,-0.0135,2025-06-01,Y
+TB-007,working_test_board,Shop-Test-Board-7,TB0007,0.1%,"Meter Shop & Standards Laboratory, Lafayette HQ",2024-03-14,RPL reference standard RS-001,RS-001,CERT-TB-2024-0007,0.0534,2025-03-14,Y
+TB-008,working_test_board,Shop-Test-Board-8,TB0008,0.1%,"Meter Shop & Standards Laboratory, Lafayette HQ",2024-01-08,RPL reference standard RS-002,RS-002,CERT-TB-2024-0008,0.0321,2025-01-07,Y
+PS-001,portable,Field-Portable-Std-1,PS0001,0.5%,Service center — assigned,2024-03-22,RPL reference standard RS-001,RS-001,CERT-PS-2024-0001,-0.1035,2025-03-22,Y
+PS-002,portable,Field-Portable-Std-2,PS0002,0.5%,Service center — assigned,2024-03-11,RPL reference standard RS-002,RS-002,CERT-PS-2024-0002,0.031,2025-03-11,Y
+PS-003,portable,Field-Portable-Std-3,PS0003,0.5%,Service center — assigned,2023-07-01,RPL reference standard RS-003,RS-003,CERT-PS-2024-0003,-0.0776,2024-06-30,Y
+PS-004,portable,Field-Portable-Std-4,PS0004,0.5%,Service center — assigned,2023-12-22,RPL reference standard RS-001,RS-001,CERT-PS-2024-0004,-0.0182,2024-12-21,Y
+PS-005,portable,Field-Portable-Std-5,PS0005,0.5%,Service center — assigned,2023-06-17,RPL reference standard RS-002,RS-002,CERT-PS-2024-0005,-0.0965,2024-06-16,Y
+PS-006,portable,Field-Portable-Std-6,PS0006,0.5%,Service center — assigned,2024-02-06,RPL reference standard RS-003,RS-003,CERT-PS-2024-0006,-0.0021,2025-02-05,Y
+PS-007,portable,Field-Portable-Std-7,PS0007,0.5%,Service center — assigned,2024-03-15,RPL reference standard RS-001,RS-001,CERT-PS-2024-0007,0.2064,2025-03-15,Y
+PS-008,portable,Field-Portable-Std-8,PS0008,0.5%,Service center — assigned,2023-06-22,RPL reference standard RS-002,RS-002,CERT-PS-2024-0008,0.0198,2024-06-21,Y
+PS-009,portable,Field-Portable-Std-9,PS0009,0.5%,Service center — assigned,2023-11-20,RPL reference standard RS-003,RS-003,CERT-PS-2024-0009,0.0055,2024-11-19,Y
+PS-010,portable,Field-Portable-Std-10,PS0010,0.5%,Service center — assigned,2023-06-02,RPL reference standard RS-001,RS-001,CERT-PS-2024-0010,0.0108,2024-06-01,Y
+PS-011,portable,Field-Portable-Std-11,PS0011,0.5%,Service center — assigned,2024-02-10,RPL reference standard RS-002,RS-002,CERT-PS-2024-0011,-0.1009,2025-02-09,Y
+PS-012,portable,Field-Portable-Std-12,PS0012,0.5%,Service center — assigned,2023-09-18,RPL reference standard RS-003,RS-003,CERT-PS-2024-0012,0.0035,2024-09-17,Y
+PS-013,portable,Field-Portable-Std-13,PS0013,0.5%,Service center — assigned,2023-08-08,RPL reference standard RS-001,RS-001,CERT-PS-2024-0013,-0.0429,2024-08-07,Y
+PS-014,portable,Field-Portable-Std-14,PS0014,0.5%,Service center — assigned,2024-02-17,RPL reference standard RS-002,RS-002,CERT-PS-2024-0014,0.0062,2025-02-16,Y
+PS-015,portable,Field-Portable-Std-15,PS0015,0.5%,Service center — assigned,2024-04-02,RPL reference standard RS-003,RS-003,CERT-PS-2024-0015,0.0076,2025-04-02,Y
+PS-016,portable,Field-Portable-Std-16,PS0016,0.5%,Service center — assigned,2024-01-01,RPL reference standard RS-001,RS-001,CERT-PS-2024-0016,-0.0684,2024-12-31,Y
+PS-017,portable,Field-Portable-Std-17,PS0017,0.5%,Service center — assigned,2023-07-15,RPL reference standard RS-002,RS-002,CERT-PS-2024-0017,-0.0697,2024-07-14,Y
+PS-018,portable,Field-Portable-Std-18,PS0018,0.5%,Service center — assigned,2023-07-12,RPL reference standard RS-003,RS-003,CERT-PS-2024-0018,0.1533,2024-07-11,Y
+PS-019,portable,Field-Portable-Std-19,PS0019,0.5%,Service center — assigned,2024-05-08,RPL reference standard RS-001,RS-001,CERT-PS-2024-0019,0.1343,2025-05-08,Y
+PS-020,portable,Field-Portable-Std-20,PS0020,0.5%,Service center — assigned,2024-02-27,RPL reference standard RS-002,RS-002,CERT-PS-2024-0020,0.0449,2025-02-26,Y
+PS-021,portable,Field-Portable-Std-21,PS0021,0.5%,Service center — assigned,2024-02-22,RPL reference standard RS-003,RS-003,CERT-PS-2024-0021,-0.15,2025-02-21,Y
+PS-022,portable,Field-Portable-Std-22,PS0022,0.5%,Service center — assigned,2024-05-10,RPL reference standard RS-001,RS-001,CERT-PS-2024-0022,0.0267,2025-05-10,Y
+PS-023,portable,Field-Portable-Std-23,PS0023,0.5%,Service center — assigned,2023-07-11,RPL reference standard RS-002,RS-002,CERT-PS-2024-0023,0.0007,2024-07-10,Y
+PS-024,portable,Field-Portable-Std-24,PS0024,0.5%,Service center — assigned,2023-06-21,RPL reference standard RS-003,RS-003,CERT-PS-2024-0024,-0.0074,2024-06-20,Y
+PS-025,portable,Field-Portable-Std-25,PS0025,0.5%,Service center — assigned,2024-03-22,RPL reference standard RS-001,RS-001,CERT-PS-2024-0025,-0.0092,2025-03-22,Y
+PS-026,portable,Field-Portable-Std-26,PS0026,0.5%,Service center — assigned,2023-12-07,RPL reference standard RS-002,RS-002,CERT-PS-2024-0026,0.0257,2024-12-06,Y
+PS-027,portable,Field-Portable-Std-27,PS0027,0.5%,Service center — assigned,2023-09-04,RPL reference standard RS-003,RS-003,CERT-PS-2024-0027,-0.116,2024-09-03,Y
+PS-028,portable,Field-Portable-Std-28,PS0028,0.5%,Service center — assigned,2023-09-16,RPL reference standard RS-001,RS-001,CERT-PS-2024-0028,0.0135,2024-09-15,Y
+PS-029,portable,Field-Portable-Std-29,PS0029,0.5%,Service center — assigned,2023-06-04,RPL reference standard RS-002,RS-002,CERT-PS-2024-0029,0.1922,2024-06-03,Y
+PS-030,portable,Field-Portable-Std-30,PS0030,0.5%,Service center — assigned,2023-08-21,RPL reference standard RS-003,RS-003,CERT-PS-2024-0030,0.0513,2024-08-20,Y

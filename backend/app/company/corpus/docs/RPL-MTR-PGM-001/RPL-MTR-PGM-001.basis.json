@@ -1,0 +1,389 @@
+{
+  "doc_id": "RPL-MTR-PGM-001",
+  "version": "6.0",
+  "law_as_of": "2024-12-31",
+  "snapshot": "S1",
+  "approved_date": "2025-01-08",
+  "effective_date": "2025-01-13",
+  "owner_id": "P19",
+  "reviewer_id": "P20",
+  "approver_id": "P16",
+  "supersedes": "RPL-MTR-PGM-001 v5.2 (2024-02-05)",
+  "grounding_pack": "T18",
+  "sampling_standard_instruction": "company_practice \u2014 ANSI/ASQC Z1.9-1993 named in pack but paywalled; sample-size table written as RPL internal procedure per orchestrator_instruction in sampling_table.json",
+  "value_ledger": [
+    {
+      "id": "VL-001",
+      "label": "Average error limit",
+      "value": 2.0,
+      "unit": "percent_plus_minus",
+      "citation": "170 IAC 4-1-9(b)(1)(A)",
+      "section": "10.2",
+      "table": "T10-2",
+      "applies_to": "all watthour meters"
+    },
+    {
+      "id": "VL-002",
+      "label": "Full-load error limit",
+      "value": 1.0,
+      "unit": "percent_plus_minus",
+      "citation": "170 IAC 4-1-9(b)(1)(B)",
+      "section": "10.2",
+      "table": "T10-2",
+      "applies_to": "all watthour meters"
+    },
+    {
+      "id": "VL-003",
+      "label": "Light-load error limit",
+      "value": 3.0,
+      "unit": "percent_plus_minus",
+      "citation": "170 IAC 4-1-9(b)(1)(C)",
+      "section": "10.2",
+      "table": "T10-2",
+      "applies_to": "all watthour meters"
+    },
+    {
+      "id": "VL-004",
+      "label": "Light-load test load percentage",
+      "value": 10,
+      "unit": "percent_of_rated_test_amperes",
+      "citation": "170 IAC 4-1-8(a)",
+      "section": "10.1",
+      "applies_to": "self-contained meters"
+    },
+    {
+      "id": "VL-005",
+      "label": "Full-load test load percentage",
+      "value": 100,
+      "unit": "percent_of_rated_test_amperes",
+      "citation": "170 IAC 4-1-8(a)",
+      "section": "10.1",
+      "applies_to": "self-contained meters"
+    },
+    {
+      "id": "VL-006",
+      "label": "LL test agreement limit (manual two-test method)",
+      "value": 0.5,
+      "unit": "percent",
+      "citation": "170 IAC 4-1-8(b)",
+      "section": "10.1",
+      "applies_to": "non-automated LL testing; two tests must agree within 0.5%"
+    },
+    {
+      "id": "VL-007",
+      "label": "Average accuracy formula",
+      "value": "(FL + LL) / 2",
+      "unit": "formula",
+      "citation": "170 IAC 4-1-8(a)",
+      "section": "10.1",
+      "applies_to": "all watthour meters"
+    },
+    {
+      "id": "VL-008",
+      "label": "Power-factor test limit \u2014 CT-metered installations",
+      "value": 2.0,
+      "unit": "percent_plus_minus",
+      "citation": "170 IAC 4-1-9(b)(5)",
+      "section": "10.5",
+      "applies_to": "non-self-contained meters (12S, 16S, 9S) at 100% rated current, 50% lagging PF"
+    },
+    {
+      "id": "VL-009",
+      "label": "Method A periodic interval \u2014 EM watthour meter (KWH register)",
+      "value": 16,
+      "unit": "years",
+      "citation": "170 IAC 4-1-10(b); 170 IAC 4-1-10(d)(1)(A)",
+      "section": "9.2",
+      "table": "T9-2",
+      "applies_to": "electromechanical meters, KWH register only"
+    },
+    {
+      "id": "VL-010",
+      "label": "Method A periodic interval \u2014 demand register (mechanical)",
+      "value": 8,
+      "unit": "years",
+      "citation": "170 IAC 4-1-10(d)(1)(B),(H)",
+      "section": "9.2",
+      "table": "T9-2",
+      "applies_to": "mechanical demand register meters"
+    },
+    {
+      "id": "VL-011",
+      "label": "Method A periodic interval \u2014 EM mechanical cam pulse initiators",
+      "value": 2,
+      "unit": "years",
+      "citation": "170 IAC 4-1-10(d)(1)(D)",
+      "section": "9.2",
+      "table": "T9-2",
+      "applies_to": "EM mechanical cam pulse initiators"
+    },
+    {
+      "id": "VL-012",
+      "label": "Method A periodic interval \u2014 EM gear-shutter pulse initiators",
+      "value": 8,
+      "unit": "years",
+      "citation": "170 IAC 4-1-10(d)(1)(E)",
+      "section": "9.2",
+      "table": "T9-2",
+      "applies_to": "EM mechanical gear shutter pulse initiators"
+    },
+    {
+      "id": "VL-013",
+      "label": "Method A periodic interval \u2014 electronic (solid-state) meters",
+      "value": 16,
+      "unit": "years",
+      "citation": "170 IAC 4-1-10(d)(2)",
+      "section": "9.2",
+      "table": "T9-2",
+      "applies_to": "solid-state non-AMI meters under Method A election"
+    },
+    {
+      "id": "VL-014",
+      "label": "Method B lot minimum size",
+      "value": 301,
+      "unit": "meters",
+      "citation": "170 IAC 4-1-10(c)(2)",
+      "section": "9.1",
+      "applies_to": "Method B sampling groups"
+    },
+    {
+      "id": "VL-015",
+      "label": "Method B Acceptable Quality Level (AQL)",
+      "value": 2.5,
+      "unit": "percent",
+      "citation": "170 IAC 4-1-10(c)(4)",
+      "section": "9.4",
+      "applies_to": "Method B lot acceptance criterion"
+    },
+    {
+      "id": "VL-016",
+      "label": "Method B upper specification limit (U)",
+      "value": 102.0,
+      "unit": "percent_accuracy",
+      "citation": "170 IAC 4-1-10(c)(5)",
+      "section": "9.4",
+      "applies_to": "Method B DSL lot testing"
+    },
+    {
+      "id": "VL-017",
+      "label": "Method B lower specification limit (L)",
+      "value": 98.0,
+      "unit": "percent_accuracy",
+      "citation": "170 IAC 4-1-10(c)(5)",
+      "section": "9.4",
+      "applies_to": "Method B DSL lot testing"
+    },
+    {
+      "id": "VL-018",
+      "label": "Rejected lot accelerated testing maximum period",
+      "value": 96,
+      "unit": "months",
+      "citation": "170 IAC 4-1-10(c)(7)",
+      "section": "9.4",
+      "table": "T9-4",
+      "applies_to": "Method B rejected lots"
+    },
+    {
+      "id": "VL-019",
+      "label": "Reference standard recalibration interval",
+      "value": 2,
+      "unit": "years",
+      "citation": "170 IAC 4-1-7(C)",
+      "section": "11.2",
+      "table": "T11-6",
+      "applies_to": "RPL reference standards STD-REF-001 through STD-REF-003"
+    },
+    {
+      "id": "VL-020",
+      "label": "Portable standard error threshold \u2014 out-of-service trigger",
+      "value": 1.0,
+      "unit": "percent_plus_minus",
+      "citation": "170 IAC 4-1-7(D)",
+      "section": "11.3",
+      "applies_to": "all portable watthour standards"
+    },
+    {
+      "id": "VL-021",
+      "label": "New meter pre- or post-installation test window",
+      "value": 60,
+      "unit": "days",
+      "citation": "170 IAC 4-1-6(c),(d)",
+      "section": "8.6",
+      "applies_to": "all watthour and demand meters (non-self-contained); installation or within 60 days"
+    },
+    {
+      "id": "VL-022",
+      "label": "Records retention minimum",
+      "value": 3,
+      "unit": "years",
+      "citation": "170 IAC 4-1-3",
+      "section": "17",
+      "table": "T4",
+      "applies_to": "all meter test records; kept in Indiana; open to IURC inspection"
+    },
+    {
+      "id": "VL-023",
+      "label": "Customer test report deadline",
+      "value": 10,
+      "unit": "days",
+      "citation": "170 IAC 4-1-11(d)",
+      "section": "13",
+      "applies_to": "written report to customer after customer-requested test"
+    },
+    {
+      "id": "VL-024",
+      "label": "Customer appeal period",
+      "value": 5,
+      "unit": "days",
+      "citation": "170 IAC 4-1-11(e)",
+      "section": "13",
+      "applies_to": "customer right to request commission-supervised retest"
+    },
+    {
+      "id": "VL-025",
+      "label": "Customer test free \u2014 first two within 12-month period",
+      "value": true,
+      "unit": "boolean",
+      "citation": "170 IAC 4-1-11(a)",
+      "section": "13",
+      "applies_to": "residential customers; first and second test in any 12-month period are free"
+    },
+    {
+      "id": "VL-026",
+      "label": "Customer billing review lookback \u2014 if meter found fast",
+      "value": 36,
+      "unit": "months",
+      "citation": "170 IAC 4-1-11(b)(1)(A)",
+      "section": "13",
+      "applies_to": "billing adjustment when meter found fast (over-registering)"
+    },
+    {
+      "id": "VL-027",
+      "label": "No-load creep prohibition \u2014 max revolutions at no-load",
+      "value": 1,
+      "unit": "revolutions",
+      "citation": "170 IAC 4-1-9(a)",
+      "section": "10.3",
+      "applies_to": "all watthour meters; must not exceed 1 complete revolution at no-load with voltage < 110% standard"
+    },
+    {
+      "id": "VL-028",
+      "label": "No-load applied voltage threshold",
+      "value": 110,
+      "unit": "percent_of_standard_service_voltage",
+      "citation": "170 IAC 4-1-9(a)",
+      "section": "10.3",
+      "applies_to": "no-load creep test condition"
+    },
+    {
+      "id": "VL-029",
+      "label": "Integrating demand meter \u2014 timing element cumulative error",
+      "value": 2.0,
+      "unit": "percent_plus_minus",
+      "citation": "170 IAC 4-1-9(b)(3)",
+      "section": "10.4",
+      "table": "T10-4",
+      "applies_to": "integrating demand meter timing element for entire billing period"
+    },
+    {
+      "id": "VL-030",
+      "label": "TOU meter \u2014 maximum time error",
+      "value": 10,
+      "unit": "minutes",
+      "citation": "170 IAC 4-1-9(b)(3)",
+      "section": "10.4",
+      "table": "T10-4",
+      "applies_to": "time-of-use / time-of-day meter register"
+    },
+    {
+      "id": "VL-031",
+      "label": "Lagged demand meter \u2014 electromagnetic type accuracy limit",
+      "value": 2.0,
+      "unit": "percent_plus_minus_full_scale",
+      "citation": "170 IAC 4-1-9(b)(4)",
+      "section": "10.4",
+      "table": "T10-4",
+      "applies_to": "electromagnetic lagged demand meter"
+    },
+    {
+      "id": "VL-032",
+      "label": "Lagged demand meter \u2014 thermal type accuracy limit",
+      "value": 4.0,
+      "unit": "percent_plus_minus_full_scale",
+      "citation": "170 IAC 4-1-9(b)(4)",
+      "section": "10.4",
+      "table": "T10-4",
+      "applies_to": "thermal lagged demand meter"
+    },
+    {
+      "id": "VL-033",
+      "label": "Curve drawing instrument \u2014 electrical element limit",
+      "value": 2.0,
+      "unit": "percent_plus_minus_full_scale",
+      "citation": "170 IAC 4-1-9(b)(4)",
+      "section": "10.4",
+      "table": "T10-4",
+      "applies_to": "curve drawing instruments"
+    },
+    {
+      "id": "VL-034",
+      "label": "Meter mounting height \u2014 minimum",
+      "value": 4,
+      "unit": "feet_above_standing_surface",
+      "citation": "170 IAC 4-1-5(B),(C)",
+      "section": "7.2",
+      "applies_to": "all meters; measured from center of meter cover to final standing surface"
+    },
+    {
+      "id": "VL-035",
+      "label": "Meter mounting height \u2014 maximum",
+      "value": 6,
+      "unit": "feet_above_standing_surface",
+      "citation": "170 IAC 4-1-5(B),(C)",
+      "section": "7.2",
+      "applies_to": "all meters unless authorized by RPL"
+    },
+    {
+      "id": "VL-036",
+      "label": "Minimum center-to-center spacing on meter board",
+      "value": 7.5,
+      "unit": "inches",
+      "citation": "170 IAC 4-1-5(C)",
+      "section": "7.2",
+      "applies_to": "multiple meters on same meter board"
+    },
+    {
+      "id": "VL-037",
+      "label": "Single-phase as-found average limit for one-test expedited method",
+      "value": 103.0,
+      "unit": "percent",
+      "citation": "170 IAC 4-1-8(b)",
+      "section": "10.1",
+      "applies_to": "condition for using single LL + single FL test when meter is to be adjusted"
+    }
+  ],
+  "out_of_scope_references": [],
+  "company_practice_items": [
+    "RPL Meter Sampling Plan (sample-size table, Table 9-3; lot-size code letters B\u2013P; based on variables-sampling principles consistent with ANSI/ASQC Z1.9-1993 Inspection Level II)",
+    "AMI HES health monitoring parameters \u2014 anomaly flag rate threshold (0.5%), zero-consumption window (10 days)",
+    "Transformer-rated meter schedule \u2014 approximately 6,400\u20138,600 units within AMI 12S/16S/9S groups; exact count per WAM extract",
+    "Shop test board calibration interval (annually against reference standards; not specified in regulation)",
+    "Acceptance sampling for new self-contained meters (RPL audit sample beyond manufacturer certified test data)",
+    "Annual sample draw execution date (by January 15 each year; Gregory Walsh P19)",
+    "Field vs. shop split rule (AMI/AMR removed to shop; EM in rural service centers may use portable standards)"
+  ],
+  "interpretations": [],
+  "coverage": {
+    "170 IAC 4-1-3": "\u00a717 Records and Retention",
+    "170 IAC 4-1-4": "\u00a76 Meter Records",
+    "170 IAC 4-1-5": "\u00a77 Meter Location and Accessibility Standards",
+    "170 IAC 4-1-6": "\u00a78 New and Repaired Meter Acceptance",
+    "170 IAC 4-1-7": "\u00a711 Test Equipment and Standards",
+    "170 IAC 4-1-8": "\u00a710 Accuracy Limits and Average-Accuracy Method",
+    "170 IAC 4-1-9": "\u00a710 Accuracy Limits and Average-Accuracy Method",
+    "170 IAC 4-1-10": "\u00a79 In-Service Testing Program",
+    "170 IAC 4-1-11": "\u00a713 Customer-Requested and Commission-Supervised Tests",
+    "170 IAC 4-1-1": "RPL-MTR-PGM-001:2.1",
+    "170 IAC 4-1-2": "RPL-MTR-PGM-001:2.1"
+  }
+}

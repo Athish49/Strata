@@ -1,0 +1,24 @@
+{
+  "package": "corpus/_global/ops",
+  "task": "T04",
+  "seed": 2024,
+  "generated_at": "2026-10-07T07:00:11.017766+00:00",
+  "summary": {
+    "substations": 112,
+    "circuits": 528,
+    "oh_miles": 14200.0,
+    "ug_miles": 4900.0,
+    "customers_total": 407491,
+    "customers_residential": 361480,
+    "customers_nonresidential": 46011,
+    "events_total": 10928,
+    "med_days_2024": 5,
+    "tmed_min": 137.1872,
+    "annual_2024_ex_med": {
+      "saifi": 1.0987,
+      "saidi": 138.3058,
+      "caidi": 125.8813
+    },
+    "annual_2024_with_med_saidi": 262.1955
+  }
+}

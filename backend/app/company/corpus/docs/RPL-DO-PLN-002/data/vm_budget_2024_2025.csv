@@ -1,0 +1,9 @@
+line_id,category,cost_type,system,budget_2024_usd,actual_2024_usd,variance_usd,variance_note,budget_2025_usd,unit,units_2025,unit_cost_2025
+BDG-001,Routine cycle trimming — distribution,O&M,distribution,27703919,28869862,1165943,,27940000,OH-miles,3350,8340.3
+BDG-002,Hazard tree removal (incl. outside-ROW),O&M,distribution,6028721,5655679,-373042,Favorable contractor pricing; mild late-winter enabled Q1 acceleration.,6180000,trees,4100,1507.32
+BDG-003,Herbicide / brush / mowing (IVM),O&M,distribution,2270630,2529763,259133,Storm-driven scope increase Q3; accelerated trimming on high-CI circuits.,2580000,acres,3200,806.25
+BDG-004,"Mid-cycle, hot spot and customer-request work",O&M,distribution,2007762,1836043,-171719,Favorable contractor pricing; mild late-winter enabled Q1 acceleration.,2020000,work-orders,680,2970.59
+BDG-005,Storm / emergency vegetation (non-MED),O&M,distribution,1430660,1301238,-129422,Favorable contractor pricing; mild late-winter enabled Q1 acceleration.,1490000,events,,
+BDG-006,69 kV subtransmission ROW,capital,subtransmission_69kv,940442,1049571,109129,Storm-driven scope increase Q3; accelerated trimming on high-CI circuits.,910000,ROW-miles,42,21666.67
+BDG-007,"Contractor oversight, work planning and QA/QC",O&M,distribution,350949,319655,-31294,Favorable contractor pricing; mild late-winter enabled Q1 acceleration.,390000,audits,320,1218.75
+BDG-008,Customer education and communications,O&M,distribution,79701,80677,976,,90000,campaigns,6,15000.0

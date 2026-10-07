@@ -1,0 +1,423 @@
+{
+  "schema_version": "2.0",
+  "doc_id": "RPL-ENV-PRO-005",
+  "version": "3.1",
+  "law_as_of": "2024-12-31",
+  "grounding_pack": "corpus/grounding/T20.json",
+  "doc_sha256": "PLACEHOLDER_SHA256_SEE_RENDER_SCRIPT",
+  "default_route": {"owner": "P26", "reviewer": "P25", "approver": "P24"},
+  "clauses": [
+    {
+      "clause_id": "RPL-ENV-PRO-005:4.1",
+      "clause_type": "out_of_scope_reference",
+      "line_start": 115,
+      "citations": ["327 IAC 2-6.1"],
+      "assessed": false,
+      "parameters": [],
+      "note": "Full rule 327 IAC 2-6.1 was not ingested into the Strata knowledge layer at Snapshot 1. RPL states it complies with this rule. No values from the rule are stated in this document."
+    },
+    {
+      "clause_id": "RPL-ENV-PRO-005:6.6",
+      "clause_type": "out_of_scope_reference",
+      "line_start": 220,
+      "citations": ["327 IAC 2-6.1"],
+      "assessed": false,
+      "parameters": [],
+      "note": "Emergency response precedence provision of 327 IAC 2-6.1 referenced; no values stated."
+    },
+    {
+      "clause_id": "RPL-ENV-PRO-005:7",
+      "clause_type": "out_of_scope_reference",
+      "line_start": 230,
+      "citations": ["327 IAC 2-6.1"],
+      "assessed": false,
+      "parameters": [],
+      "note": "Reportability determination built entirely as company practice because pack is empty."
+    },
+    {
+      "clause_id": "RPL-ENV-PRO-005:T7-1",
+      "clause_type": "company_position",
+      "line_start": 260,
+      "citations": [],
+      "assessed": false,
+      "parameters": [
+        {
+          "parameter_id": "RPL-ENV-PRO-005:T7-1#p1",
+          "kind": "condition",
+          "name": "Exclusion CP-NR1 — impervious, fully contained",
+          "doc_value": "impervious surface; volume recovered >= volume released; no drain; NP-T or NP-M; no special area",
+          "unit": "n/a",
+          "qualifier": "all five conditions must be met",
+          "day_type": "n/a",
+          "s1_quote": null,
+          "s1_span": null,
+          "derived": null,
+          "source": "company_practice"
+        }
+      ]
+    },
+    {
+      "clause_id": "RPL-ENV-PRO-005:T7-2",
+      "clause_type": "company_position",
+      "line_start": 265,
+      "citations": [],
+      "assessed": false,
+      "parameters": [
+        {
+          "parameter_id": "RPL-ENV-PRO-005:T7-2#p1",
+          "kind": "condition",
+          "name": "Soil beyond boundary or uncontained — reportable",
+          "doc_value": "soil beyond facility boundary, or soil inside boundary not fully contained",
+          "unit": "n/a",
+          "qualifier": "any volume",
+          "day_type": "n/a",
+          "s1_quote": null,
+          "s1_span": null,
+          "derived": null,
+          "source": "company_practice"
+        }
+      ]
+    },
+    {
+      "clause_id": "RPL-ENV-PRO-005:T7-3",
+      "clause_type": "company_position",
+      "line_start": 270,
+      "citations": [],
+      "assessed": false,
+      "parameters": [
+        {
+          "parameter_id": "RPL-ENV-PRO-005:T7-3#p1",
+          "kind": "condition",
+          "name": "Release to water pathway — reportable",
+          "doc_value": "storm drain, sewer, or surface water; any volume",
+          "unit": "n/a",
+          "qualifier": "any volume reaching listed medium",
+          "day_type": "n/a",
+          "s1_quote": null,
+          "s1_span": null,
+          "derived": null,
+          "source": "company_practice"
+        }
+      ]
+    },
+    {
+      "clause_id": "RPL-ENV-PRO-005:T7-4",
+      "clause_type": "company_position",
+      "line_start": 275,
+      "citations": [],
+      "assessed": false,
+      "parameters": [
+        {
+          "parameter_id": "RPL-ENV-PRO-005:T7-4#p1",
+          "kind": "condition",
+          "name": "Special area flag — reportable",
+          "doc_value": "special_area_flag = Y (ENV_WellheadProtection, ENV_PrivateWellBuffer, ENV_SensitiveWaters, or ENV_StormInlets triggered)",
+          "unit": "n/a",
+          "qualifier": "any medium",
+          "day_type": "n/a",
+          "s1_quote": null,
+          "s1_span": null,
+          "derived": null,
+          "source": "company_practice"
+        }
+      ]
+    },
+    {
+      "clause_id": "RPL-ENV-PRO-005:T7-5",
+      "clause_type": "company_position",
+      "line_start": 280,
+      "citations": [],
+      "assessed": false,
+      "parameters": [
+        {
+          "parameter_id": "RPL-ENV-PRO-005:T7-5#p1",
+          "kind": "condition",
+          "name": "PCB uncertain or confirmed — reportable",
+          "doc_value": "pcb_status_code in (UNK, PCB-C, PCB); regardless of medium",
+          "unit": "n/a",
+          "qualifier": "regardless of containment or medium",
+          "day_type": "n/a",
+          "s1_quote": null,
+          "s1_span": null,
+          "derived": null,
+          "source": "company_practice"
+        }
+      ]
+    },
+    {
+      "clause_id": "RPL-ENV-PRO-005:T7-6",
+      "clause_type": "company_position",
+      "line_start": 285,
+      "citations": [],
+      "assessed": false,
+      "parameters": [],
+      "note": "Catch-all: when no prior row resolves, treat as reportable."
+    },
+    {
+      "clause_id": "RPL-ENV-PRO-005:8.3",
+      "clause_type": "internal_target",
+      "line_start": 320,
+      "citations": ["327 IAC 2-6.1"],
+      "assessed": false,
+      "parameters": [
+        {
+          "parameter_id": "RPL-ENV-PRO-005:8.3#p1",
+          "kind": "period",
+          "name": "Internal IDEM notification window",
+          "doc_value": "2 hours",
+          "unit": "hours",
+          "qualifier": "within",
+          "day_type": "hours",
+          "s1_quote": null,
+          "s1_span": null,
+          "derived": null,
+          "source": "company_practice",
+          "note": "Company performance target, set more conservatively than the regulatory requirement of 327 IAC 2-6.1 (value of which is not stated here)."
+        }
+      ]
+    },
+    {
+      "clause_id": "RPL-ENV-PRO-005:8.4",
+      "clause_type": "out_of_scope_reference",
+      "line_start": 330,
+      "citations": ["327 IAC 2-6.1"],
+      "assessed": false,
+      "parameters": [],
+      "note": "Update obligation references 327 IAC 2-6.1 but states no values from the rule."
+    },
+    {
+      "clause_id": "RPL-ENV-PRO-005:8.5",
+      "clause_type": "out_of_scope_reference",
+      "line_start": 340,
+      "citations": ["327 IAC 2-6.1"],
+      "assessed": false,
+      "parameters": [],
+      "note": "Report content elements built as company practice interpretation of 327 IAC 2-6.1; no values from the rule text are stated."
+    },
+    {
+      "clause_id": "RPL-ENV-PRO-005:9.4",
+      "clause_type": "out_of_scope_reference",
+      "line_start": 380,
+      "citations": ["327 IAC 2-6.1"],
+      "assessed": false,
+      "parameters": [],
+      "note": "Additional third-party notification obligations under 327 IAC 2-6.1 handled as company practice with no rule values stated."
+    },
+    {
+      "clause_id": "RPL-ENV-PRO-005:10.4",
+      "clause_type": "out_of_scope_reference",
+      "line_start": 400,
+      "citations": ["327 IAC 2-6.1"],
+      "assessed": false,
+      "parameters": [],
+      "note": "Cleanup obligations under 327 IAC 2-6.1 referenced; no values stated."
+    },
+    {
+      "clause_id": "RPL-ENV-PRO-005:11.1",
+      "clause_type": "out_of_scope_reference",
+      "line_start": 420,
+      "citations": ["327 IAC 2-6.1"],
+      "assessed": false,
+      "parameters": [],
+      "note": "Written report triggers and timing under 327 IAC 2-6.1 referenced; no values stated."
+    },
+    {
+      "clause_id": "RPL-ENV-PRO-005:11.2",
+      "clause_type": "out_of_scope_reference",
+      "line_start": 425,
+      "citations": ["327 IAC 2-6.1"],
+      "assessed": false,
+      "parameters": [],
+      "note": "Written copy on request provision under 327 IAC 2-6.1 referenced; no values stated."
+    },
+    {
+      "clause_id": "RPL-ENV-PRO-005:12.2",
+      "clause_type": "out_of_scope_reference",
+      "line_start": 445,
+      "citations": ["327 IAC 2-6.1"],
+      "assessed": false,
+      "parameters": [],
+      "note": "Compliance confirmation provision under 327 IAC 2-6.1 referenced; no values stated."
+    },
+    {
+      "clause_id": "RPL-ENV-PRO-005:14.1",
+      "clause_type": "out_of_scope_reference",
+      "line_start": 475,
+      "citations": ["40 CFR Part 302", "40 CFR Part 300"],
+      "assessed": false,
+      "parameters": [],
+      "note": "Federal release notification referenced; handled under RPL-ENV-PRO-008; no values stated."
+    },
+    {
+      "clause_id": "RPL-ENV-PRO-005:15",
+      "clause_type": "out_of_scope_reference",
+      "line_start": 485,
+      "citations": ["327 IAC 2-6.1"],
+      "assessed": false,
+      "parameters": [],
+      "note": "Retention periods reference 327 IAC 2-6.1 minimum periods without stating values."
+    }
+  ],
+  "coverage": [],
+  "interpretations": [
+    {
+      "clause_id": "RPL-ENV-PRO-005:T7a-1",
+      "question": "Is a pole-mount transformer 'facility equipment' under 327 IAC 2-6.1, and where is the facility boundary?",
+      "position": "Pole-mount transformers are treated as facility equipment; the facility boundary is the base of the supporting pole, so any release that reaches the soil beyond the pole base is classified as beyond-boundary.",
+      "pack_citations_considered": [],
+      "rationale": "Pack is empty. Conservative reading chosen to make more releases reportable."
+    },
+    {
+      "clause_id": "RPL-ENV-PRO-005:T7a-2",
+      "question": "Is a padmount transformer vault the 'facility' boundary under 327 IAC 2-6.1?",
+      "position": "The padmount transformer vault slab and any secondary containment structure constitute the facility boundary. Releases beyond the vault slab are beyond-boundary. Releases reaching a connected storm drain are treated as reaching a receiving medium regardless of whether the drain is 'at' the facility.",
+      "pack_citations_considered": [],
+      "rationale": "Pack is empty. Conservative reading chosen."
+    },
+    {
+      "clause_id": "RPL-ENV-PRO-005:T7a-3",
+      "question": "Is the substation perimeter fence the facility boundary for 327 IAC 2-6.1 purposes?",
+      "position": "The substation perimeter fence marks the facility boundary. Releases on internal impervious containment pads are inside-boundary; releases that penetrate the fence gravel or reach beyond the fence are beyond-boundary.",
+      "pack_citations_considered": [],
+      "rationale": "Pack is empty. Conservative reading chosen."
+    },
+    {
+      "clause_id": "RPL-ENV-PRO-005:T7a-4",
+      "question": "Are standby generator belly tanks at service centers 'facility fuel storage' sources?",
+      "position": "Belly tanks at service centers are classified as facility fuel storage. The concrete pad and double-wall secondary containment define the containment boundary; any release that exits secondary containment is classified by actual receiving medium.",
+      "pack_citations_considered": [],
+      "rationale": "Pack is empty. Conservative reading chosen."
+    },
+    {
+      "clause_id": "RPL-ENV-PRO-005:T7a-5",
+      "question": "Is fueling at a service center a facility source?",
+      "position": "Service center fueling stations are facility sources with the service center property boundary as the facility boundary.",
+      "pack_citations_considered": [],
+      "rationale": "Pack is empty. Conservative reading chosen."
+    },
+    {
+      "clause_id": "RPL-ENV-PRO-005:T7a-6",
+      "question": "Are fleet vehicles in transit treated as transportation sources with no fixed facility boundary?",
+      "position": "Fleet vehicles in transit (on public roads or customer property) are transportation sources with no fixed facility boundary; all releases are classified by actual receiving medium.",
+      "pack_citations_considered": [],
+      "rationale": "Pack is empty. Conservative reading chosen."
+    },
+    {
+      "clause_id": "RPL-ENV-PRO-005:T7a-7",
+      "question": "Does a fleet vehicle parked at a work site (not a service center) retain its transportation-source classification?",
+      "position": "Yes. A vehicle at a work site that is not a service center retains its transportation-source classification; the receiving medium governs reportability.",
+      "pack_citations_considered": [],
+      "rationale": "Pack is empty. Conservative reading chosen."
+    },
+    {
+      "clause_id": "RPL-ENV-PRO-005:T7a-8",
+      "question": "How is an oil release discovered on customer property classified?",
+      "position": "The source is identified first (which RPL asset?). If an RPL asset, the relevant §7.1 row applies. If a vehicle, the transportation-source classification applies. When the source is uncertain, the release is treated as reportable.",
+      "pack_citations_considered": [],
+      "rationale": "Pack is empty. Conservative reading chosen: uncertain classification defaults to reportable."
+    }
+  ],
+  "out_of_scope_references": [
+    {
+      "clause_id": "RPL-ENV-PRO-005:4.1",
+      "reference": "327 IAC 2-6.1 (Indiana Spill Reporting Rule — full rule)",
+      "note": "Outside the Snapshot-1 knowledge layer. Not assessed. RPL complies with this rule. No values from the rule are stated. All obligations are built as company practice. §2.7 applies to the entire rule."
+    },
+    {
+      "clause_id": "RPL-ENV-PRO-005:14.1",
+      "reference": "40 CFR Part 302 (CERCLA Reportable Quantities) and 40 CFR Part 300 (NCP — National Response Center notification)",
+      "note": "Outside scope of this procedure. Handled under RPL-ENV-PRO-008. No values stated."
+    },
+    {
+      "clause_id": "RPL-ENV-PRO-005:App-A.F40",
+      "reference": "CERCLA/EPCRA federal reportable quantity requirements (NRC notification)",
+      "note": "Referenced in EHS-F-201 Part F field F-8. Handled under RPL-ENV-PRO-008. No values stated."
+    },
+    {
+      "clause_id": "RPL-ENV-PRO-005:2.2",
+      "reference": "40 CFR Part 112 (SPCC)",
+      "note": "Spill Prevention, Control and Countermeasure plan requirements. Handled under RPL-ENV-PLN-010 and RPL-ENV-PLN-011. No values stated."
+    },
+    {
+      "clause_id": "RPL-ENV-PRO-005:2.2",
+      "reference": "40 CFR Part 761 (PCB regulations)",
+      "note": "PCB management and cleanup requirements. Handled under RPL-ENV-PRO-006. No values stated."
+    },
+    {
+      "clause_id": "RPL-ENV-PRO-005:2.2",
+      "reference": "40 CFR Parts 260–262 (RCRA hazardous waste)",
+      "note": "Hazardous waste characterization and disposal. Handled under RPL-ENV-PRO-007. No values stated."
+    }
+  ],
+  "value_ledger": [
+    {"clause_id": "RPL-ENV-PRO-005:6.4", "text": "30 minutes", "source": "company_practice", "ref": "§6.4 crew DCC call requirement"},
+    {"clause_id": "RPL-ENV-PRO-005:6.5", "text": "15 minutes", "source": "company_practice", "ref": "§6.5 DCC ENV-ONCALL page window"},
+    {"clause_id": "RPL-ENV-PRO-005:6.5", "text": "30 minutes", "source": "company_practice", "ref": "§6.5 DCC IDEM backup if ENV-ONCALL unresponsive"},
+    {"clause_id": "RPL-ENV-PRO-005:6.6", "text": "2 hours", "source": "company_practice", "ref": "§6.6 EHS-F-201 completion window"},
+    {"clause_id": "RPL-ENV-PRO-005:7.5", "text": "1 hour", "source": "company_practice", "ref": "§7.5 GIS screening window"},
+    {"clause_id": "RPL-ENV-PRO-005:7.6", "text": "1 hour", "source": "company_practice", "ref": "§7.6 determination decision window"},
+    {"clause_id": "RPL-ENV-PRO-005:8.3", "text": "2 hours", "source": "company_practice", "ref": "§8.3 internal IDEM notification target"},
+    {"clause_id": "RPL-ENV-PRO-005:9.2", "text": "4 hours", "source": "company_practice", "ref": "§9.2 property owner identification window"},
+    {"clause_id": "RPL-ENV-PRO-005:11.3", "text": "30 calendar days", "source": "company_practice", "ref": "§11.3 internal closure package deadline"},
+    {"clause_id": "RPL-ENV-PRO-005:11.3", "text": "5 business days", "source": "company_practice", "ref": "§11.3 Daniel Foster review window for closure package"},
+    {"clause_id": "RPL-ENV-PRO-005:12.3", "text": "60 calendar days", "source": "company_practice", "ref": "§12.3 open event escalation threshold"},
+    {"clause_id": "RPL-ENV-PRO-005:App-D", "text": "5 business days", "source": "company_practice", "ref": "App-D kit deficiency correction window"},
+    {"clause_id": "RPL-ENV-PRO-005:1", "text": "5", "source": "section1", "ref": "§1.1 service centers count"},
+    {"clause_id": "RPL-ENV-PRO-005:2.1", "text": "112", "source": "section1", "ref": "§1.1 distribution substations"},
+    {"clause_id": "RPL-ENV-PRO-005:2.1", "text": "14", "source": "section1", "ref": "§1.1 counties"},
+    {"clause_id": "RPL-ENV-PRO-005:3.5", "text": "08:00", "source": "section1.6", "ref": "§1.6 Table S ENV-ONCALL rotation handover time"},
+    {"clause_id": "RPL-ENV-PRO-005:App-D", "text": "20", "source": "section1.6", "ref": "§1.6 Table S truck kit capacity (gal)"},
+    {"clause_id": "RPL-ENV-PRO-005:App-D", "text": "95", "source": "section1.6", "ref": "§1.6 Table S service center overpack kit capacity (gal)"},
+    {"clause_id": "RPL-ENV-PRO-005:App-D", "text": "100", "source": "section1.6", "ref": "§1.6 Table S service center boom length (ft)"},
+    {"clause_id": "RPL-ENV-PRO-005:App-C", "text": "(888) 233-7745", "source": "section1.6", "ref": "§1.6 Table X IDEM Emergency Response toll-free"},
+    {"clause_id": "RPL-ENV-PRO-005:App-C", "text": "(317) 233-7745", "source": "section1.6", "ref": "§1.6 Table X IDEM Emergency Response direct"},
+    {"clause_id": "RPL-ENV-PRO-005:8.2", "text": "(888) 233-7745", "source": "section1.6", "ref": "§1.6 Table X IDEM Emergency Response toll-free"},
+    {"clause_id": "RPL-ENV-PRO-005:8.2", "text": "(317) 233-7745", "source": "section1.6", "ref": "§1.6 Table X IDEM Emergency Response direct"},
+    {"clause_id": "RPL-ENV-PRO-005:7.4", "text": "0.7", "source": "company_practice", "ref": "§7.4 soil absorption factor for staining area method"},
+    {"clause_id": "RPL-ENV-PRO-005:7.4", "text": "0.9", "source": "company_practice", "ref": "§7.4 pavement absorption factor for staining area method"},
+    {"clause_id": "RPL-ENV-PRO-005:16.1", "text": "January 31", "source": "company_practice", "ref": "§16.1 delinquency reporting deadline"},
+    {"clause_id": "RPL-ENV-PRO-005:16.3", "text": "5", "source": "company_practice", "ref": "§16.3 tabletop drills per year (one per service center)"},
+    {"clause_id": "RPL-ENV-PRO-005:16.3", "text": "March 31", "source": "company_practice", "ref": "§16.3 drill scheduling deadline"},
+    {"clause_id": "RPL-ENV-PRO-005:1", "text": "1-800-555-0177", "source": "section1", "ref": "§1.1 RPL outage/DCC line"},
+    {"clause_id": "RPL-ENV-PRO-005:6.4", "text": "1-800-555-0177", "source": "section1", "ref": "§1.1 RPL outage/DCC line"},
+    {"clause_id": "RPL-ENV-PRO-005:App-B", "text": "1-800-555-0177", "source": "section1", "ref": "§1.1 RPL outage/DCC line"},
+    {"clause_id": "RPL-ENV-PRO-005:T7a-1", "text": "8", "source": "company_position", "ref": "§7.1 table, facility boundary definition for pole-mount transformer"},
+    {"clause_id": "RPL-ENV-PRO-005:App-E", "text": "2024-04-17", "source": "dataset", "ref": "App-E Example 1, SPL-2024-0033 event date"},
+    {"clause_id": "RPL-ENV-PRO-005:App-E", "text": "14:22", "source": "dataset", "ref": "App-E Example 1, SPL-2024-0033 discovery time"},
+    {"clause_id": "RPL-ENV-PRO-005:App-E", "text": "42", "source": "dataset", "ref": "App-E Example 1, SPL-2024-0033 volume released"},
+    {"clause_id": "RPL-ENV-PRO-005:App-E", "text": "8", "source": "dataset", "ref": "App-E Example 1, SPL-2024-0033 volume recovered"},
+    {"clause_id": "RPL-ENV-PRO-005:App-E", "text": "15", "source": "dataset", "ref": "App-E Example 1, distance to storm drain (illustrative)"},
+    {"clause_id": "RPL-ENV-PRO-005:App-E", "text": "2024-07-09", "source": "dataset", "ref": "App-E Example 2, SPL-2024-0071 event date"},
+    {"clause_id": "RPL-ENV-PRO-005:App-E", "text": "08:55", "source": "dataset", "ref": "App-E Example 2, SPL-2024-0071 discovery time"},
+    {"clause_id": "RPL-ENV-PRO-005:App-E", "text": "18", "source": "dataset", "ref": "App-E Example 2, SPL-2024-0071 volume released"},
+    {"clause_id": "RPL-ENV-PRO-005:App-E", "text": "10", "source": "dataset", "ref": "App-E Example 2, SPL-2024-0071 volume recovered"},
+    {"clause_id": "RPL-ENV-PRO-005:App-E", "text": "500", "source": "company_practice", "ref": "App-E Example 2, illustrative GIS screening distance"},
+    {"clause_id": "RPL-ENV-PRO-005:App-E", "text": "2024-09-03", "source": "dataset", "ref": "App-E Example 3, SPL-2024-0088 event date"},
+    {"clause_id": "RPL-ENV-PRO-005:App-E", "text": "11:40", "source": "dataset", "ref": "App-E Example 3, SPL-2024-0088 discovery time"},
+    {"clause_id": "RPL-ENV-PRO-005:App-E", "text": "3.5", "source": "dataset", "ref": "App-E Example 3, SPL-2024-0088 volume released and recovered"},
+    {"clause_id": "RPL-ENV-PRO-005:App-E", "text": "50", "source": "company_practice", "ref": "App-E Example 3, illustrative distance to nearest drain (feet)"},
+    {"clause_id": "RPL-ENV-PRO-005:3.6", "text": "4025", "source": "section1", "ref": "§1.3 Daniel Foster phone ext"},
+    {"clause_id": "RPL-ENV-PRO-005:3.6", "text": "4024", "source": "section1", "ref": "§1.3 Sandra Kim phone ext"}
+  ],
+  "gaps": [
+    "327 IAC 2-6.1 — full rule not in knowledge layer. All reportability thresholds, timing obligations, written report triggers, third-party notification distances, cleanup standards and compliance confirmation procedures built as company practice. Decision table rows T7-1 through T7-6, all §7.3 exclusions, and §8/§9/§11/§12 obligations carry no pack citation.",
+    "No s1_quote is possible for any clause — pack.sections is empty."
+  ],
+  "sources": [],
+  "company_practice_values": [
+    {"clause_id": "RPL-ENV-PRO-005:8.3", "name": "IDEM internal notification window", "value": "2 hours from determination", "benchmark_source": "reviewer judgement — conservative relative to typical state spill reporting windows"},
+    {"clause_id": "RPL-ENV-PRO-005:11.3", "name": "Internal 30-day closure package", "value": "30 calendar days from discovery", "benchmark_source": "reviewer judgement — common utility EHS internal closure practice"},
+    {"clause_id": "RPL-ENV-PRO-005:7.4", "name": "Staining area method absorption factors", "value": "soil 0.7; pavement 0.9", "benchmark_source": "reviewer judgement — standard field estimation practice"},
+    {"clause_id": "RPL-ENV-PRO-005:16.3", "name": "Annual tabletop drills", "value": "one per service center per year (five total)", "benchmark_source": "reviewer judgement — standard utility environmental training practice"}
+  ],
+  "considered_no_obligation": [],
+  "worked_examples": [
+    {
+      "clause_id": "RPL-ENV-PRO-005:App-E",
+      "script": "scripts/generate_spill_data.py",
+      "inputs": {"event_ids": ["SPL-2024-0033", "SPL-2024-0071", "SPL-2024-0088"]},
+      "outputs": {"examples_in_appendix": "App-E Examples E-1, E-2, E-3"}
+    }
+  ],
+  "notes": "Grounding pack T20.json is empty (sections: [], must_cover: []). §2.7 of the spec applies to the entire rule 327 IAC 2-6.1. No values from 327 IAC 2-6.1 appear anywhere in this document. All regulatory obligations are named (rule referenced) and said to be complied with, but no thresholds, durations, distances, volumes or content lists from the rule are stated. Coverage array is empty because no pack sections exist to cover. All company-position rows in §7.1 are listed in interpretations. All out_of_scope_references are listed above."
+}

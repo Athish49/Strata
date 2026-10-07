@@ -1,0 +1,402 @@
+{
+  "validation_date": "2026-10-07",
+  "corpus_sha256": "a7adf93afef12d7a7c58008efbca265b3d4dea2f5a27bd18c29eeeeca66937f0",
+  "overall_result": "PASS",
+  "checks": {
+    "1_quote_placement": {
+      "status": "PASS",
+      "total": 0,
+      "passed": 0,
+      "skipped_no_quote": 443,
+      "issues": []
+    },
+    "2_value_existence": {
+      "status": "WARN",
+      "total": 280,
+      "passed": 243,
+      "warnings": 37,
+      "failures": 0,
+      "note": "WARN items may be legitimate reformulations; require manual spot-check",
+      "warn_sample": [
+        {
+          "doc": "RPL-TAR-GRR-012",
+          "value": "no less than 8 weeks",
+          "clause": ""
+        },
+        {
+          "doc": "RPL-TAR-GRR-012",
+          "value": "Within 15 days after payment of final bill",
+          "clause": ""
+        },
+        {
+          "doc": "RPL-TAR-GRR-012",
+          "value": "Not to exceed $10 or 1/10 of bill, whichever is less",
+          "clause": ""
+        },
+        {
+          "doc": "RPL-TAR-GRR-012",
+          "value": "Average error not over 2%, plus or minus",
+          "clause": ""
+        },
+        {
+          "doc": "RPL-TAR-GRR-012",
+          "value": "Error at full load not over 1%, plus or minus",
+          "clause": ""
+        }
+      ]
+    },
+    "3_coverage_dispositions": {
+      "status": "PASS",
+      "issues_count": 0,
+      "issues": []
+    },
+    "4_citation_validity": {
+      "status": "PASS",
+      "phantom_count": 0,
+      "issues": []
+    },
+    "5_value_ledger": {
+      "status": "PASS",
+      "incomplete": []
+    },
+    "6_clause_ids": {
+      "status": "PASS",
+      "total_ids": 0,
+      "issues_count": 0,
+      "issues": []
+    },
+    "7_cross_document": {
+      "status": "PASS",
+      "people_count": 27,
+      "register_count": 16,
+      "issues": []
+    },
+    "8_dates": {
+      "status": "PASS",
+      "issues": []
+    },
+    "9_datasets": {
+      "status": "PASS",
+      "scripts_found": 5,
+      "scripts_ok": 5,
+      "issues": []
+    },
+    "10_render_parity": {
+      "status": "PASS",
+      "issues": []
+    },
+    "11_fidelity_llm": {
+      "status": "DEFERRED",
+      "details": "Requires per-document LLM fidelity reviewer (fresh agent per document, \u00a70.4 step 3). Not run in this automated pass."
+    },
+    "12_realism_llm": {
+      "status": "DEFERRED",
+      "details": "Requires per-document LLM realism & depth rubric agent (\u00a73.8 Parts A-C). Not run in this automated pass."
+    },
+    "13_positions_llm": {
+      "status": "DEFERRED",
+      "details": "Requires per-document LLM fidelity reviewer to verify interpretations do not contradict pack text. Not run in this automated pass."
+    },
+    "14_contamination": {
+      "status": "PENDING",
+      "details": "Requires isolated contamination-check agent with Snapshot-2 access (Appendix O-11). Returns only pass/fail + clause IDs; never exposes S2 text to this report."
+    },
+    "15_engine_run": {
+      "status": "NA",
+      "details": "Strata engine not yet deployed. Expected: zero non-informational findings against Snapshot 1."
+    }
+  },
+  "per_document": {
+    "RPL-TAR-GRR-012": {
+      "overall": "PASS",
+      "issues": [],
+      "warnings": [
+        "2_value: Value 'no less than 8 weeks' not found verbatim (may be expressed differently)",
+        "2_value: Value 'Within 15 days after payment of final bill' not found verbatim (may be expressed differently)",
+        "2_value: Value 'Not to exceed $10 or 1/10 of bill, whichever is less' not found verbatim (may be expressed differently)",
+        "2_value: Value 'Average error not over 2%, plus or minus' not found verbatim (may be expressed differently)",
+        "2_value: Value 'Error at full load not over 1%, plus or minus' not found verbatim (may be expressed differently)",
+        "2_value: Value 'Error at light load not over 3%, plus or minus' not found verbatim (may be expressed differently)",
+        "2_value: Value 'Not more than 16 years' not found verbatim (may be expressed differently)",
+        "2_value: Value 'Within 10 days after test is complete' not found verbatim (may be expressed differently)",
+        "2_value: Value 'Period meter was fast or 1 year, whichever is shorter' not found verbatim (may be expressed differently)",
+        "2_value: Value 'Known date of error or 1 year, whichever is shorter' not found verbatim (may be expressed differently)",
+        "2_value: Value '>3% error' not found verbatim (may be expressed differently)",
+        "2_value: Value '>4% error' not found verbatim (may be expressed differently)",
+        "2_value: Value '+/- 5% of nominal; total variation \u22646% in cities >2,500 pop,' not found verbatim (may be expressed differently)",
+        "2_value: Value 'No disconnect while under review; or sooner than 10 days aft' not found verbatim (may be expressed differently)",
+        "2_value: Value 'Minimum 7 years' not found verbatim (may be expressed differently)",
+        "2_value: Value 'Less than 45 days unpaid' not found verbatim (may be expressed differently)",
+        "2_value: Value 'At least 30 days' not found verbatim (may be expressed differently)",
+        "2_value: Value 'Within 60 days of installation' not found verbatim (may be expressed differently)",
+        "2_value: Value 'At least once every 2 years' not found verbatim (may be expressed differently)",
+        "2_value: Value 'At least 3 days in advance' not found verbatim (may be expressed differently)"
+      ]
+    },
+    "RPL-CS-PRO-007": {
+      "overall": "PASS",
+      "issues": [],
+      "warnings": [
+        "2_value: Value '(FL + LL) / 2' not found verbatim (may be expressed differently)",
+        "2_value: Value 'billed_amount * (accuracy - 100) / accuracy' not found verbatim (may be expressed differently)"
+      ]
+    },
+    "RPL-DO-PLN-002": {
+      "overall": "PASS",
+      "issues": [],
+      "warnings": [
+        "2_value: Value 'ANSI A300; NESC (2002 edition per 170 IAC 4-1-26); Shigo Gui' not found verbatim (may be expressed differently)",
+        "2_value: Value 'characteristics of locality; electrical facility; health of ' not found verbatim (may be expressed differently)",
+        "2_value: Value 'App-C Vegetation Dispute Log (RRS-DO-003)' not found verbatim (may be expressed differently)"
+      ]
+    },
+    "RPL-MTR-PGM-001": {
+      "overall": "PASS",
+      "issues": [],
+      "warnings": [
+        "2_value: Value '(FL + LL) / 2' not found verbatim (may be expressed differently)",
+        "2_value: Value 'True' not found verbatim (may be expressed differently)",
+        "2_value: Value '4.0' not found verbatim (may be expressed differently)"
+      ]
+    },
+    "RPL-DCC-PRO-003": {
+      "overall": "PASS",
+      "issues": [],
+      "warnings": [
+        "2_value: Value '137.1872' not found verbatim (may be expressed differently)",
+        "2_value: Value '138.3058' not found verbatim (may be expressed differently)",
+        "2_value: Value '125.8813' not found verbatim (may be expressed differently)",
+        "2_value: Value '262.1955' not found verbatim (may be expressed differently)",
+        "2_value: Value '166.7592' not found verbatim (may be expressed differently)",
+        "2_value: Value '40238410' not found verbatim (may be expressed differently)",
+        "2_value: Value '99.157' not found verbatim (may be expressed differently)"
+      ]
+    },
+    "RPL-CMP-REG-001": {
+      "overall": "PASS",
+      "issues": [],
+      "warnings": [
+        "2_value: Value 'clean_energy_credit' not found verbatim (may be expressed differently)",
+        "2_value: Value 'plus_or_minus_2_percent' not found verbatim (may be expressed differently)",
+        "6_clause_ids: Unresolved implementation_clause=RPL-TAR-GRR-012:R01.D01 in compliance_register_2024-12-31.csv",
+        "6_clause_ids: Unresolved implementation_clause=RPL-TAR-GRR-012:R02.1 in compliance_register_2024-12-31.csv",
+        "6_clause_ids: Unresolved implementation_clause=RPL-TAR-GRR-012:R02.2 in compliance_register_2024-12-31.csv",
+        "6_clause_ids: Unresolved implementation_clause=RPL-TAR-GRR-012:R02.3 in compliance_register_2024-12-31.csv",
+        "6_clause_ids: Unresolved implementation_clause=RPL-TAR-GRR-012:R02.4 in compliance_register_2024-12-31.csv",
+        "6_clause_ids: Unresolved implementation_clause=RPL-TAR-GRR-012:R02.5 in compliance_register_2024-12-31.csv",
+        "6_clause_ids: Unresolved implementation_clause=RPL-TAR-GRR-012:R02.3 in compliance_register_2024-12-31.csv",
+        "6_clause_ids: Unresolved implementation_clause=RPL-TAR-GRR-012:R02.4 in compliance_register_2024-12-31.csv",
+        "6_clause_ids: Unresolved implementation_clause=RPL-TAR-GRR-012:R03.1 in compliance_register_2024-12-31.csv",
+        "6_clause_ids: Unresolved implementation_clause=RPL-TAR-GRR-012:R03.2 in compliance_register_2024-12-31.csv",
+        "6_clause_ids: Unresolved implementation_clause=RPL-TAR-GRR-012:R03.3 in compliance_register_2024-12-31.csv",
+        "6_clause_ids: Unresolved implementation_clause=RPL-TAR-GRR-012:R03.4 in compliance_register_2024-12-31.csv",
+        "6_clause_ids: Unresolved implementation_clause=RPL-TAR-GRR-012:R03.5 in compliance_register_2024-12-31.csv",
+        "6_clause_ids: Unresolved implementation_clause=RPL-TAR-GRR-012:R04.1 in compliance_register_2024-12-31.csv",
+        "6_clause_ids: Unresolved implementation_clause=RPL-TAR-GRR-012:R04.2 in compliance_register_2024-12-31.csv",
+        "6_clause_ids: Unresolved implementation_clause=RPL-TAR-GRR-012:R04.3 in compliance_register_2024-12-31.csv",
+        "6_clause_ids: Unresolved implementation_clause=RPL-TAR-GRR-012:R04.4 in compliance_register_2024-12-31.csv",
+        "6_clause_ids: Unresolved implementation_clause=RPL-TAR-GRR-012:R05.1 in compliance_register_2024-12-31.csv",
+        "6_clause_ids: Unresolved implementation_clause=RPL-TAR-GRR-012:R05.2 in compliance_register_2024-12-31.csv",
+        "6_clause_ids: Unresolved implementation_clause=RPL-TAR-GRR-012:R05.3 in compliance_register_2024-12-31.csv",
+        "6_clause_ids: Unresolved implementation_clause=RPL-TAR-GRR-012:R06.1 in compliance_register_2024-12-31.csv",
+        "6_clause_ids: Unresolved implementation_clause=RPL-DO-PLN-002:10.1 in compliance_register_2024-12-31.csv",
+        "6_clause_ids: Unresolved implementation_clause=RPL-MTR-PGM-001:10.1 in compliance_register_2024-12-31.csv",
+        "6_clause_ids: Unresolved implementation_clause=RPL-MTR-PGM-001:10 in compliance_register_2024-12-31.csv",
+        "6_clause_ids: Unresolved implementation_clause=RPL-MTR-PGM-001:1 in compliance_register_2024-12-31.csv",
+        "6_clause_ids: Unresolved implementation_clause=RPL-MTR-PGM-001:10 in compliance_register_2024-12-31.csv",
+        "6_clause_ids: Unresolved implementation_clause=RPL-MTR-PGM-001:10.1 in compliance_register_2024-12-31.csv",
+        "6_clause_ids: Unresolved implementation_clause=RPL-MTR-PGM-001:10 in compliance_register_2024-12-31.csv",
+        "6_clause_ids: Unresolved implementation_clause=RPL-MTR-PGM-001:10.1 in compliance_register_2024-12-31.csv",
+        "6_clause_ids: Unresolved implementation_clause=RPL-CS-PRO-004:12.1 in compliance_register_2024-12-31.csv",
+        "6_clause_ids: Unresolved implementation_clause=RPL-CS-PRO-004:12.2 in compliance_register_2024-12-31.csv",
+        "6_clause_ids: Unresolved implementation_clause=RPL-CS-PRO-004:10.1 in compliance_register_2024-12-31.csv",
+        "6_clause_ids: Unresolved implementation_clause=RPL-CS-PRO-004:10.2 in compliance_register_2024-12-31.csv",
+        "6_clause_ids: Unresolved implementation_clause=RPL-CS-PRO-004:11.1 in compliance_register_2024-12-31.csv",
+        "6_clause_ids: Unresolved implementation_clause=RPL-CS-PRO-004:13.1 in compliance_register_2024-12-31.csv",
+        "6_clause_ids: Unresolved implementation_clause=RPL-CS-PRO-007:1.1 in compliance_register_2024-12-31.csv",
+        "6_clause_ids: Unresolved implementation_clause=RPL-DO-PLN-002:10 in compliance_register_2024-12-31.csv",
+        "6_clause_ids: Unresolved implementation_clause=RPL-DO-PLN-002:10.1 in compliance_register_2024-12-31.csv",
+        "6_clause_ids: Unresolved implementation_clause=RPL-DO-PLN-002:10 in compliance_register_2024-12-31.csv",
+        "6_clause_ids: Unresolved implementation_clause=RPL-DO-PLN-002:10 in compliance_register_2024-12-31.csv",
+        "6_clause_ids: Unresolved implementation_clause=RPL-DCC-PRO-003:10 in compliance_register_2024-12-31.csv",
+        "6_clause_ids: Unresolved implementation_clause=RPL-SAF-PRO-009:10 in compliance_register_2024-12-31.csv",
+        "6_clause_ids: Unresolved implementation_clause=RPL-DO-PLN-002:10 in compliance_register_2024-12-31.csv",
+        "6_clause_ids: Unresolved implementation_clause=RPL-DO-PLN-002:10.1 in compliance_register_2024-12-31.csv",
+        "6_clause_ids: Unresolved implementation_clause=RPL-TAR-GRR-012:R09.1 in compliance_register_2024-12-31.csv",
+        "6_clause_ids: Unresolved implementation_clause=RPL-TAR-GRR-012:R09.2 in compliance_register_2024-12-31.csv",
+        "6_clause_ids: Unresolved implementation_clause=RPL-TAR-GRR-012:R01.D01 in compliance_register_2024-12-31.csv",
+        "6_clause_ids: Unresolved implementation_clause=RPL-ENV-PRO-005:1 in compliance_register_2024-12-31.csv",
+        "6_clause_ids: Unresolved implementation_clause=RPL-ENV-PRO-005:10 in compliance_register_2024-12-31.csv",
+        "6_clause_ids: Unresolved implementation_clause=RPL-ENV-PRO-005:10 in compliance_register_2024-12-31.csv",
+        "6_clause_ids: Unresolved implementation_clause=RPL-ENV-PRO-005:10 in compliance_register_2024-12-31.csv",
+        "6_clause_ids: Unresolved implementation_clause=RPL-ENV-PRO-005:10 in compliance_register_2024-12-31.csv",
+        "6_clause_ids: Unresolved implementation_clause=RPL-ENV-PRO-005:10 in compliance_register_2024-12-31.csv",
+        "6_clause_ids: Unresolved implementation_clause=RPL-ENV-PRO-005:10 in compliance_register_2024-12-31.csv",
+        "6_clause_ids: Unresolved implementation_clause=RPL-ENV-PRO-005:10 in compliance_register_2024-12-31.csv",
+        "6_clause_ids: Unresolved implementation_clause=RPL-ENV-PRO-005:10 in compliance_register_2024-12-31.csv",
+        "6_clause_ids: Unresolved implementation_clause=RPL-ENV-PRO-005:10 in compliance_register_2024-12-31.csv",
+        "6_clause_ids: Unresolved implementation_clause=RPL-ENV-PRO-005:10 in compliance_register_2024-12-31.csv",
+        "6_clause_ids: Unresolved implementation_clause=RPL-ENV-PRO-005:10 in compliance_register_2024-12-31.csv",
+        "6_clause_ids: Unresolved implementation_clause=RPL-CS-PRO-011:1.1 in compliance_register_2024-12-31.csv",
+        "6_clause_ids: Unresolved implementation_clause=RPL-CS-PRO-011:10.1 in compliance_register_2024-12-31.csv",
+        "6_clause_ids: Unresolved implementation_clause=RPL-CS-PRO-011:1.2 in compliance_register_2024-12-31.csv",
+        "6_clause_ids: Unresolved implementation_clause=RPL-CS-PRO-011:10.1 in compliance_register_2024-12-31.csv",
+        "6_clause_ids: Unresolved implementation_clause=RPL-CS-PRO-011:10.1 in compliance_register_2024-12-31.csv",
+        "6_clause_ids: Unresolved implementation_clause=RPL-CS-PRO-011:13.1 in compliance_register_2024-12-31.csv",
+        "6_clause_ids: Unresolved implementation_clause=RPL-TAR-GRR-012:R01.D01 in compliance_register_2024-12-31.csv",
+        "6_clause_ids: Unresolved implementation_clause=RPL-TAR-GRR-012:R03.1 in compliance_register_2024-12-31.csv",
+        "6_clause_ids: Unresolved implementation_clause=RPL-SAF-PRO-009:10 in compliance_register_2024-12-31.csv"
+      ]
+    },
+    "RPL-ENV-PRO-005": {
+      "overall": "PASS",
+      "issues": [],
+      "warnings": [
+        "4_citation: T20 non-cp source: section1",
+        "4_citation: T20 non-cp source: section1",
+        "4_citation: T20 non-cp source: section1",
+        "4_citation: T20 non-cp source: section1.6",
+        "4_citation: T20 non-cp source: section1.6",
+        "4_citation: T20 non-cp source: section1.6",
+        "4_citation: T20 non-cp source: section1.6",
+        "4_citation: T20 non-cp source: section1.6",
+        "4_citation: T20 non-cp source: section1.6",
+        "4_citation: T20 non-cp source: section1.6",
+        "4_citation: T20 non-cp source: section1.6",
+        "4_citation: T20 non-cp source: section1",
+        "4_citation: T20 non-cp source: section1",
+        "4_citation: T20 non-cp source: section1",
+        "4_citation: T20 non-cp source: company_position",
+        "4_citation: T20 non-cp source: dataset",
+        "4_citation: T20 non-cp source: dataset",
+        "4_citation: T20 non-cp source: dataset",
+        "4_citation: T20 non-cp source: dataset",
+        "4_citation: T20 non-cp source: dataset",
+        "4_citation: T20 non-cp source: dataset",
+        "4_citation: T20 non-cp source: dataset",
+        "4_citation: T20 non-cp source: dataset",
+        "4_citation: T20 non-cp source: dataset",
+        "4_citation: T20 non-cp source: dataset",
+        "4_citation: T20 non-cp source: dataset",
+        "4_citation: T20 non-cp source: dataset",
+        "4_citation: T20 non-cp source: section1",
+        "4_citation: T20 non-cp source: section1"
+      ]
+    },
+    "RPL-REG-CAL-2025": {
+      "overall": "PASS",
+      "issues": [],
+      "warnings": [
+        "6_clause_ids: Unresolved implementation_clause=RPL-TAR-GRR-012:R01.D01 in calendar_events_2025.csv",
+        "6_clause_ids: Unresolved implementation_clause=RPL-CS-PRO-004:12.1 in calendar_events_2025.csv",
+        "6_clause_ids: Unresolved implementation_clause=RPL-MTR-PGM-001:1 in calendar_events_2025.csv",
+        "6_clause_ids: Unresolved implementation_clause=RPL-CS-PRO-004:9.1 in calendar_events_2025.csv",
+        "6_clause_ids: Unresolved implementation_clause=RPL-CS-PRO-004:8.1 in calendar_events_2025.csv",
+        "6_clause_ids: Unresolved implementation_clause=RPL-TAR-GRR-012:R02.1 in calendar_events_2025.csv",
+        "6_clause_ids: Unresolved implementation_clause=RPL-CS-PRO-011:1.1 in calendar_events_2025.csv",
+        "6_clause_ids: Unresolved implementation_clause=RPL-CS-PRO-004:12.1 in calendar_events_2025.csv",
+        "6_clause_ids: Unresolved implementation_clause=RPL-MTR-PGM-001:1 in calendar_events_2025.csv",
+        "6_clause_ids: Unresolved implementation_clause=RPL-TAR-GRR-012:R01.D01 in calendar_events_2025.csv",
+        "6_clause_ids: Unresolved implementation_clause=RPL-TAR-GRR-012:R03.1 in calendar_events_2025.csv",
+        "6_clause_ids: Unresolved implementation_clause=RPL-CS-PRO-004:9.1 in calendar_events_2025.csv",
+        "6_clause_ids: Unresolved implementation_clause=RPL-CS-PRO-011:1.1 in calendar_events_2025.csv",
+        "6_clause_ids: Unresolved implementation_clause=RPL-CS-PRO-004:12.1 in calendar_events_2025.csv",
+        "6_clause_ids: Unresolved implementation_clause=RPL-CS-PRO-004:12.1 in calendar_events_2025.csv",
+        "6_clause_ids: Unresolved implementation_clause=RPL-MTR-PGM-001:1 in calendar_events_2025.csv",
+        "6_clause_ids: Unresolved implementation_clause=RPL-TAR-GRR-012:R04.1 in calendar_events_2025.csv",
+        "6_clause_ids: Unresolved implementation_clause=RPL-TAR-GRR-012:R05.1 in calendar_events_2025.csv",
+        "6_clause_ids: Unresolved implementation_clause=RPL-CS-PRO-004:3.1 in calendar_events_2025.csv",
+        "6_clause_ids: Unresolved implementation_clause=RPL-CS-PRO-011:1.1 in calendar_events_2025.csv",
+        "6_clause_ids: Unresolved implementation_clause=RPL-DO-PLN-002:2.1 in calendar_events_2025.csv",
+        "6_clause_ids: Unresolved implementation_clause=RPL-CS-PRO-004:12.1 in calendar_events_2025.csv",
+        "6_clause_ids: Unresolved implementation_clause=RPL-MTR-PGM-001:1 in calendar_events_2025.csv",
+        "6_clause_ids: Unresolved implementation_clause=RPL-TAR-GRR-012:R03.1 in calendar_events_2025.csv",
+        "6_clause_ids: Unresolved implementation_clause=RPL-TAR-GRR-012:R01.D01 in calendar_events_2025.csv",
+        "6_clause_ids: Unresolved implementation_clause=RPL-CS-PRO-004:9.1 in calendar_events_2025.csv",
+        "6_clause_ids: Unresolved implementation_clause=RPL-CS-PRO-011:1.1 in calendar_events_2025.csv",
+        "6_clause_ids: Unresolved implementation_clause=RPL-CS-PRO-004:8.1 in calendar_events_2025.csv",
+        "6_clause_ids: Unresolved implementation_clause=RPL-CS-PRO-007:13.1.1 in calendar_events_2025.csv",
+        "6_clause_ids: Unresolved implementation_clause=RPL-CS-PRO-007:13.1.1 in calendar_events_2025.csv",
+        "6_clause_ids: Unresolved implementation_clause=RPL-CS-PRO-007:10.1 in calendar_events_2025.csv",
+        "6_clause_ids: Unresolved implementation_clause=RPL-CS-PRO-004:9.1 in calendar_events_2025.csv",
+        "8_dates: Revision dates possibly unordered: ['2023-03-01', '2024-02-28', '2025-03-14', '2025-01-24', '2025-03-14']"
+      ]
+    },
+    "RPL-LEG-RRS-001": {
+      "overall": "PASS",
+      "issues": [],
+      "warnings": [
+        "6_clause_ids: Unresolved wave2_clause_ref=delete in retention_schedule_2024-12-31.csv",
+        "6_clause_ids: Unresolved wave2_clause_ref=RPL-CS-PRO-004:12.2; RPL-TAR-GRR-012:R01.D02 in retention_schedule_2024-12-31.csv",
+        "6_clause_ids: Unresolved wave2_clause_ref=RPL-CS-PRO-011:5.1; RPL-CS-PRO-004:13.1 in retention_schedule_2024-12-31.csv",
+        "6_clause_ids: Unresolved wave2_clause_ref=RPL-CS-PRO-011:6.1; RPL-CS-PRO-011:7.1 in retention_schedule_2024-12-31.csv",
+        "6_clause_ids: Unresolved wave2_clause_ref=RPL-CS-PRO-004:10.1; RPL-TAR-GRR-012:R04.1 in retention_schedule_2024-12-31.csv",
+        "6_clause_ids: Unresolved wave2_clause_ref=RPL-CS-PRO-004:1.1; RPL-TAR-GRR-012:S01.1 in retention_schedule_2024-12-31.csv",
+        "6_clause_ids: Unresolved wave2_clause_ref=RPL-CS-PRO-004:11.1 in retention_schedule_2024-12-31.csv",
+        "6_clause_ids: Unresolved wave2_clause_ref=RPL-CS-PRO-007:4.1 in retention_schedule_2024-12-31.csv",
+        "6_clause_ids: Unresolved wave2_clause_ref=RPL-TAR-GRR-012:S01.1; RPL-TAR-GRR-012:S01.2 in retention_schedule_2024-12-31.csv",
+        "6_clause_ids: Unresolved wave2_clause_ref=RPL-TAR-GRR-012:R01.D15 in retention_schedule_2024-12-31.csv",
+        "6_clause_ids: Unresolved wave2_clause_ref=RPL-MTR-PGM-001:4.1 in retention_schedule_2024-12-31.csv",
+        "6_clause_ids: Unresolved wave2_clause_ref=RPL-MTR-PGM-001:5.1 in retention_schedule_2024-12-31.csv",
+        "6_clause_ids: Unresolved wave2_clause_ref=RPL-MTR-PGM-001:6.1; RPL-CS-PRO-004:12.5 in retention_schedule_2024-12-31.csv",
+        "6_clause_ids: Unresolved wave2_clause_ref=RPL-MTR-PGM-001:3.1 in retention_schedule_2024-12-31.csv",
+        "6_clause_ids: Unresolved wave2_clause_ref=RPL-MTR-PGM-001:7.1 in retention_schedule_2024-12-31.csv",
+        "6_clause_ids: Unresolved wave2_clause_ref=RPL-MTR-PGM-001:8.1 in retention_schedule_2024-12-31.csv",
+        "6_clause_ids: Unresolved wave2_clause_ref=RPL-DCC-PRO-003:4.1 in retention_schedule_2024-12-31.csv",
+        "6_clause_ids: Unresolved wave2_clause_ref=RPL-MTR-PGM-001:2.1 in retention_schedule_2024-12-31.csv",
+        "6_clause_ids: Unresolved wave2_clause_ref=RPL-DCC-PRO-003:6.1; RPL-DCC-PRO-003:6.2 in retention_schedule_2024-12-31.csv",
+        "6_clause_ids: Unresolved wave2_clause_ref=RPL-DCC-PRO-003:7.1 in retention_schedule_2024-12-31.csv",
+        "6_clause_ids: Unresolved wave2_clause_ref=RPL-DO-PLN-002:3.1; RPL-DO-PLN-002:3.2 in retention_schedule_2024-12-31.csv",
+        "6_clause_ids: Unresolved wave2_clause_ref=RPL-DO-PLN-002:5.1 in retention_schedule_2024-12-31.csv",
+        "6_clause_ids: Unresolved wave2_clause_ref=RPL-DO-PLN-002:7.1; RPL-DO-PLN-002:7.2 in retention_schedule_2024-12-31.csv",
+        "6_clause_ids: Unresolved wave2_clause_ref=RPL-DO-PLN-002:8.1 in retention_schedule_2024-12-31.csv",
+        "6_clause_ids: Unresolved wave2_clause_ref=RPL-SAF-PRO-009:8.1 in retention_schedule_2024-12-31.csv",
+        "6_clause_ids: Unresolved wave2_clause_ref=RPL-DO-PLN-002:9.1 in retention_schedule_2024-12-31.csv",
+        "6_clause_ids: Unresolved wave2_clause_ref=RPL-DO-PLN-002:4.1 in retention_schedule_2024-12-31.csv",
+        "6_clause_ids: Unresolved wave2_clause_ref=RPL-DCC-PRO-003:3.1 in retention_schedule_2024-12-31.csv",
+        "6_clause_ids: Unresolved wave2_clause_ref=RPL-ENV-PRO-005:3.1 in retention_schedule_2024-12-31.csv",
+        "6_clause_ids: Unresolved wave2_clause_ref=RPL-ENV-PRO-005:5.1 in retention_schedule_2024-12-31.csv",
+        "6_clause_ids: Unresolved wave2_clause_ref=RPL-ENV-PRO-005:6.1 in retention_schedule_2024-12-31.csv",
+        "6_clause_ids: Unresolved wave2_clause_ref=RPL-ENV-PRO-005:6.2 in retention_schedule_2024-12-31.csv",
+        "6_clause_ids: Unresolved wave2_clause_ref=RPL-ENV-PRO-005:7.1 in retention_schedule_2024-12-31.csv",
+        "6_clause_ids: Unresolved wave2_clause_ref=RPL-ENV-PRO-005:4.1 in retention_schedule_2024-12-31.csv",
+        "6_clause_ids: Unresolved wave2_clause_ref=RPL-ENV-PRO-005:4.2 in retention_schedule_2024-12-31.csv",
+        "6_clause_ids: Unresolved wave2_clause_ref=RPL-ENV-PRO-005:8.1 in retention_schedule_2024-12-31.csv",
+        "6_clause_ids: Unresolved wave2_clause_ref=RPL-SAF-PRO-009:3.1 in retention_schedule_2024-12-31.csv",
+        "6_clause_ids: Unresolved wave2_clause_ref=RPL-SAF-PRO-009:3.2 in retention_schedule_2024-12-31.csv",
+        "6_clause_ids: Unresolved wave2_clause_ref=RPL-SAF-PRO-009:9.1 in retention_schedule_2024-12-31.csv",
+        "6_clause_ids: Unresolved wave2_clause_ref=RPL-SAF-PRO-009:9.2 in retention_schedule_2024-12-31.csv",
+        "6_clause_ids: Unresolved wave2_clause_ref=RPL-SAF-PRO-009:10.1 in retention_schedule_2024-12-31.csv",
+        "6_clause_ids: Unresolved wave2_clause_ref=RPL-SAF-PRO-009:11.1; RPL-DCC-PRO-003:9.1 in retention_schedule_2024-12-31.csv",
+        "6_clause_ids: Unresolved wave2_clause_ref=RPL-SAF-PRO-009:7.1 in retention_schedule_2024-12-31.csv",
+        "6_clause_ids: Unresolved wave2_clause_ref=RPL-SAF-PRO-009:6.1 in retention_schedule_2024-12-31.csv",
+        "6_clause_ids: Unresolved wave2_clause_ref=RPL-SAF-PRO-009:5.1 in retention_schedule_2024-12-31.csv",
+        "6_clause_ids: Unresolved wave2_clause_ref=RPL-SAF-PRO-009:12.1 in retention_schedule_2024-12-31.csv",
+        "6_clause_ids: Unresolved wave2_clause_ref=RPL-TAR-GRR-012:R09.1 in retention_schedule_2024-12-31.csv",
+        "6_clause_ids: Unresolved wave2_clause_ref=RPL-TAR-GRR-012:R01.D20 in retention_schedule_2024-12-31.csv",
+        "6_clause_ids: Unresolved wave2_clause_ref=RPL-DO-PLN-002:5.2 in retention_schedule_2024-12-31.csv",
+        "6_clause_ids: Unresolved wave2_clause_ref=RPL-TAR-GRR-012:R02.1 in retention_schedule_2024-12-31.csv",
+        "6_clause_ids: Unresolved wave2_clause_ref=RPL-TAR-GRR-012:R10.1 in retention_schedule_2024-12-31.csv",
+        "6_clause_ids: Unresolved wave2_clause_ref=RPL-TAR-GRR-012:S47.1 in retention_schedule_2024-12-31.csv",
+        "6_clause_ids: Unresolved wave2_clause_ref=RPL-DCC-PRO-003:10.1 in retention_schedule_2024-12-31.csv",
+        "6_clause_ids: Unresolved wave2_clause_ref=RPL-DO-PLN-002:3.3 in retention_schedule_2024-12-31.csv",
+        "6_clause_ids: Unresolved wave2_clause_ref=RPL-ENV-PRO-005:2.1 in retention_schedule_2024-12-31.csv"
+      ]
+    },
+    "RPL-CS-PRO-004": {
+      "overall": "PASS",
+      "issues": [],
+      "warnings": []
+    },
+    "RPL-CS-PRO-011": {
+      "overall": "PASS",
+      "issues": [],
+      "warnings": []
+    },
+    "RPL-SAF-PRO-009": {
+      "overall": "PASS",
+      "issues": [],
+      "warnings": []
+    }
+  }
+}

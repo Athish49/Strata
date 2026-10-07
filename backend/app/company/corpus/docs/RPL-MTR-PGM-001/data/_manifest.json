@@ -1,0 +1,41 @@
+{
+  "generator": "generate_meter_data.py",
+  "seed": 2024,
+  "files": [
+    {
+      "file": "meter_registry_2024-12-31.csv.gz",
+      "sha256": "df1bedce62c86e4544c9a26b8bedd399a6de167783ceddc056f9662ea9a38f37",
+      "size_bytes": 5948765
+    },
+    {
+      "file": "meter_population_2024-12-31.csv",
+      "sha256": "e7dce161ef01e6e9eb332f942c3023cb6f1e720a45042b09535d4549374992c0",
+      "size_bytes": 11451
+    },
+    {
+      "file": "meter_test_results_2024.csv",
+      "sha256": "b8b7543fdc47b57f6fc4129e0c29028558429d638e83dce75e4c0c352d66e885",
+      "size_bytes": 1047189
+    },
+    {
+      "file": "new_meter_lots_2024.csv",
+      "sha256": "321682c04e49aa7e9419c85d2b2c77a57805a31ada9e6fa1e54e14b187efb646",
+      "size_bytes": 1329
+    },
+    {
+      "file": "inservice_sample_selection_2025.csv",
+      "sha256": "46f19ac804d246c7c81db6ab41d3fc054e00a9896a8600571069948dc327e896",
+      "size_bytes": 124135
+    },
+    {
+      "file": "customer_test_requests_2024.csv",
+      "sha256": "56019d6d44ea2737247c8292876561b209869ec77279d6bf4070e56ef546d6df",
+      "size_bytes": 88618
+    },
+    {
+      "file": "standards_calibration_2024.csv",
+      "sha256": "581ddaee3d74307f1b92011e5e8e5f73e3c125f9f98955f8f4c1f4f03fbb7366",
+      "size_bytes": 7247
+    }
+  ]
+}

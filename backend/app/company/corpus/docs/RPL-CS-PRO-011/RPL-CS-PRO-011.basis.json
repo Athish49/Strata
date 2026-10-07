@@ -1,0 +1,696 @@
+{
+  "schema_version": "2.0",
+  "doc_id": "RPL-CS-PRO-011",
+  "version": "2.3",
+  "law_as_of": "2024-12-31",
+  "grounding_pack": "corpus/grounding/T17.json",
+  "doc_sha256": "<computed at validation>",
+  "default_route": {"owner": "P17", "reviewer": "P13", "approver": null},
+  "clauses": [
+    {
+      "clause_id": "RPL-CS-PRO-011:2.1",
+      "clause_type": "regulatory_restatement",
+      "citations": ["170 IAC 4-1-2", "170 IAC 16-1-1"],
+      "assessed": true,
+      "parameters": [
+        {
+          "parameter_id": "RPL-CS-PRO-011:2.1#p1",
+          "kind": "applicability",
+          "name": "RPL subject to IURC jurisdiction",
+          "doc_value": "all residential and non-residential customers receiving electric distribution service from RPL",
+          "s1_quote": "these rules shall apply to any electrical public utility subject to the jurisdiction of the commission",
+          "s1_span": [0, 100]
+        }
+      ]
+    },
+    {
+      "clause_id": "RPL-CS-PRO-011:2.2",
+      "clause_type": "regulatory_restatement",
+      "citations": ["170 IAC 16-1-4(a)"],
+      "assessed": true,
+      "parameters": [
+        {
+          "parameter_id": "RPL-CS-PRO-011:2.2#p1",
+          "kind": "channel",
+          "name": "Customer dispute access channels",
+          "doc_value": "telephone, web form, email, written letter, in person at any RPL service center, executive office referral, or IURC Consumer Affairs portal referral",
+          "s1_quote": "by telephone. (2) in writing. (3) through the utility's website. (4) at the utility's business office. (5) by any other method made available by the utility.",
+          "s1_span": [0, 200]
+        }
+      ]
+    },
+    {
+      "clause_id": "RPL-CS-PRO-011:6.7",
+      "clause_type": "regulatory_restatement",
+      "citations": ["170 IAC 16-1-4(b)"],
+      "assessed": true,
+      "parameters": [
+        {
+          "parameter_id": "RPL-CS-PRO-011:6.7#p1",
+          "kind": "content_element",
+          "name": "Required dispute record fields",
+          "doc_value": "customer name; service address; customer contact telephone number, if available; customer account number; general nature of the dispute",
+          "s1_quote": "(1) the customer's name. (2) the customer's service address. (3) the telephone number at which the customer may be contacted, if such number is available. (4) the customer's account number. (5) the general nature of the dispute.",
+          "s1_span": [0, 300]
+        }
+      ]
+    },
+    {
+      "clause_id": "RPL-CS-PRO-011:7.1",
+      "clause_type": "regulatory_restatement",
+      "citations": ["170 IAC 16-1-7(a)"],
+      "assessed": true,
+      "parameters": [
+        {
+          "parameter_id": "RPL-CS-PRO-011:7.1#p1",
+          "kind": "period",
+          "name": "Post-decision no-disconnect window",
+          "doc_value": "sooner than 10 days after a decision by consumer affairs or the commission",
+          "unit": "days",
+          "qualifier": "not sooner than",
+          "day_type": "calendar",
+          "s1_quote": "sooner than ten (10) days after a decision by consumer affairs or the commission.",
+          "s1_span": [0, 100]
+        },
+        {
+          "parameter_id": "RPL-CS-PRO-011:7.1#p2",
+          "kind": "condition",
+          "name": "Service continuation condition",
+          "doc_value": "while the utility's proposed resolution is under review by consumer affairs or the commission",
+          "s1_quote": "while the utility's proposed resolution is under review by consumer affairs or the commission",
+          "s1_span": [0, 150]
+        }
+      ]
+    },
+    {
+      "clause_id": "RPL-CS-PRO-011:7.2",
+      "clause_type": "regulatory_restatement",
+      "citations": ["170 IAC 16-1-4(c)(1)", "170 IAC 4-1-13(c)"],
+      "assessed": true,
+      "parameters": [
+        {
+          "parameter_id": "RPL-CS-PRO-011:7.2#p1",
+          "kind": "period",
+          "name": "Bill delinquency period",
+          "doc_value": "17 days after the initial bill is postmarked",
+          "unit": "days",
+          "qualifier": "within",
+          "day_type": "calendar",
+          "s1_quote": "a bill is considered delinquent unless payment is received within seventeen (17) days after the initial bill is postmarked.",
+          "s1_span": [0, 150]
+        }
+      ]
+    },
+    {
+      "clause_id": "RPL-CS-PRO-011:7.3",
+      "clause_type": "regulatory_restatement",
+      "citations": ["170 IAC 16-1-7(b)"],
+      "assessed": true,
+      "parameters": [
+        {
+          "parameter_id": "RPL-CS-PRO-011:7.3#p1",
+          "kind": "number",
+          "name": "Undisputed amount formula — fraction of annual billing",
+          "doc_value": "one-twelfth (1/12) of the estimated annual billing",
+          "qualifier": "equal to",
+          "day_type": "n/a",
+          "s1_quote": "an amount equal to one-twelfth (1/12) of the estimated annual billing for service to be rendered to the customer.",
+          "s1_span": [0, 120]
+        },
+        {
+          "parameter_id": "RPL-CS-PRO-011:7.3#p2",
+          "kind": "period",
+          "name": "Minimum tenure for using actual average",
+          "doc_value": "at least 12 months",
+          "unit": "months",
+          "qualifier": "at least",
+          "day_type": "calendar",
+          "s1_quote": "for a customer who has been a customer for at least twelve (12) months, the estimate will be based on the customer's average bill for the twelve (12) months immediately preceding the disputed bill.",
+          "s1_span": [0, 200]
+        }
+      ]
+    },
+    {
+      "clause_id": "RPL-CS-PRO-011:8.3",
+      "clause_type": "regulatory_restatement",
+      "citations": ["170 IAC 4-1-13(a)", "170 IAC 4-1-13(c)"],
+      "assessed": true,
+      "parameters": [
+        {
+          "parameter_id": "RPL-CS-PRO-011:8.3#p1",
+          "kind": "period",
+          "name": "17-day nonpenalty period",
+          "doc_value": "17-day nonpenalty period",
+          "unit": "days",
+          "qualifier": "within",
+          "day_type": "calendar",
+          "s1_quote": "printed statements or actual figures, or both, on either side of the bill must inform the customer of the seventeen (17) day nonpenalty period.",
+          "s1_span": [0, 200]
+        }
+      ]
+    },
+    {
+      "clause_id": "RPL-CS-PRO-011:8.5",
+      "clause_type": "regulatory_restatement",
+      "citations": ["170 IAC 4-1-16(d)", "170 IAC 4-1-16(e)"],
+      "assessed": true,
+      "parameters": [
+        {
+          "parameter_id": "RPL-CS-PRO-011:8.5#p1",
+          "kind": "period",
+          "name": "Disconnection hours — earliest",
+          "doc_value": "8:00 a.m.",
+          "unit": "time",
+          "day_type": "n/a",
+          "s1_quote": "no utility may disconnect service unless it is done between the hours of 8:00 a.m. and 3:00 p.m., prevailing local time.",
+          "s1_span": [0, 100]
+        },
+        {
+          "parameter_id": "RPL-CS-PRO-011:8.5#p2",
+          "kind": "period",
+          "name": "Disconnection hours — latest",
+          "doc_value": "3:00 p.m.",
+          "unit": "time",
+          "day_type": "n/a",
+          "s1_quote": "no utility may disconnect service unless it is done between the hours of 8:00 a.m. and 3:00 p.m., prevailing local time.",
+          "s1_span": [0, 100]
+        },
+        {
+          "parameter_id": "RPL-CS-PRO-011:8.5#p3",
+          "kind": "period",
+          "name": "Residential disconnect notice period",
+          "doc_value": "14 days prior written notice",
+          "unit": "days",
+          "qualifier": "at least",
+          "day_type": "calendar",
+          "s1_quote": "electric service to any residential customer shall not be disconnected for a violation of any rule or regulation of a utility or for the nonpayment of a bill, except after fourteen (14) days prior written notice to the customer",
+          "s1_span": [0, 200]
+        }
+      ]
+    },
+    {
+      "clause_id": "RPL-CS-PRO-011:9.5",
+      "clause_type": "regulatory_restatement",
+      "citations": ["170 IAC 16-1-4(c)(5)", "170 IAC 16-1-5(a)", "170 IAC 16-1-3(b)", "170 IAC 16-1-3(c)"],
+      "assessed": true,
+      "parameters": [
+        {
+          "parameter_id": "RPL-CS-PRO-011:9.5#p1",
+          "kind": "period",
+          "name": "Customer appeal window to consumer affairs",
+          "doc_value": "within 7 days of the date the proposed resolution is received",
+          "unit": "days",
+          "qualifier": "within",
+          "day_type": "calendar",
+          "s1_quote": "a complaint must be submitted under this section within seven (7) days of the date the customer receives the utility's proposed resolution.",
+          "s1_span": [0, 150]
+        },
+        {
+          "parameter_id": "RPL-CS-PRO-011:9.5#p2",
+          "kind": "condition",
+          "name": "Day-of-act exclusion in time period computation",
+          "doc_value": "the day on which the customer receives the determination is not counted",
+          "s1_quote": "the day of the act from which the designated period of time begins to run shall not be included.",
+          "s1_span": [0, 100]
+        }
+      ]
+    },
+    {
+      "clause_id": "RPL-CS-PRO-011:11.6",
+      "clause_type": "regulatory_restatement",
+      "citations": ["170 IAC 16-1-5(c)(3)"],
+      "assessed": true,
+      "parameters": [
+        {
+          "parameter_id": "RPL-CS-PRO-011:11.6#p1",
+          "kind": "period",
+          "name": "Additional info response to consumer affairs",
+          "doc_value": "within 14 days unless consumer affairs directs otherwise",
+          "unit": "days",
+          "qualifier": "within",
+          "day_type": "calendar",
+          "s1_quote": "to which parties must respond within fourteen (14) days unless otherwise directed by consumer affairs.",
+          "s1_span": [0, 100]
+        }
+      ]
+    },
+    {
+      "clause_id": "RPL-CS-PRO-011:11.8",
+      "clause_type": "regulatory_restatement",
+      "citations": ["170 IAC 16-1-5(c)(5)"],
+      "assessed": true,
+      "parameters": [
+        {
+          "parameter_id": "RPL-CS-PRO-011:11.8#p1",
+          "kind": "period",
+          "name": "Consumer affairs decision deadline",
+          "doc_value": "within 30 days of the complaint submission date",
+          "unit": "days",
+          "qualifier": "within",
+          "day_type": "calendar",
+          "s1_quote": "provide a decision to the customer and the utility within thirty (30) days of the complaint submission date",
+          "s1_span": [0, 120]
+        }
+      ]
+    },
+    {
+      "clause_id": "RPL-CS-PRO-011:11.10",
+      "clause_type": "regulatory_restatement",
+      "citations": ["170 IAC 16-1-5(d)", "170 IAC 16-1-6(a)", "170 IAC 16-1-6(b)"],
+      "assessed": true,
+      "parameters": [
+        {
+          "parameter_id": "RPL-CS-PRO-011:11.10#p1",
+          "kind": "period",
+          "name": "Director review request window",
+          "doc_value": "within 7 days of the date of receipt of the proposed resolution",
+          "unit": "days",
+          "qualifier": "within",
+          "day_type": "calendar",
+          "s1_quote": "either party may request a review by the director of consumer affairs or director's designee within seven (7) days of the date of receipt of the proposed resolution of the informal complaint.",
+          "s1_span": [0, 200]
+        },
+        {
+          "parameter_id": "RPL-CS-PRO-011:11.10#p2",
+          "kind": "period",
+          "name": "Commission review request window",
+          "doc_value": "within 20 days of the date of receipt of the director's decision",
+          "unit": "days",
+          "qualifier": "within",
+          "day_type": "calendar",
+          "s1_quote": "either party may request commission review of the consumer affairs' decision under ic 8-1-2-34.5 within twenty (20) days of the date of receipt of the decision of the director of consumer affairs' or director's designee.",
+          "s1_span": [0, 250]
+        },
+        {
+          "parameter_id": "RPL-CS-PRO-011:11.10#p3",
+          "kind": "period",
+          "name": "Commission copies to opposing party and OUCC",
+          "doc_value": "within 7 days from the date the review is requested",
+          "unit": "days",
+          "qualifier": "within",
+          "day_type": "calendar",
+          "s1_quote": "upon receiving a request for commission review, the commission shall provide a copy of the request to the opposing party and the office of the utility consumer counselor (oucc) within seven (7) days from the date the review is requested.",
+          "s1_span": [0, 250]
+        }
+      ]
+    },
+    {
+      "clause_id": "RPL-CS-PRO-011:11.11",
+      "clause_type": "regulatory_restatement",
+      "citations": ["170 IAC 16-1-5(a)", "170 IAC 16-1-5(b)"],
+      "assessed": true,
+      "parameters": [
+        {
+          "parameter_id": "RPL-CS-PRO-011:11.11#p1",
+          "kind": "period",
+          "name": "Customer informal complaint filing window",
+          "doc_value": "within 7 days of the date the customer receives RPL's proposed resolution",
+          "unit": "days",
+          "qualifier": "within",
+          "day_type": "calendar",
+          "s1_quote": "a complaint must be submitted under this section within seven (7) days of the date the customer receives the utility's proposed resolution.",
+          "s1_span": [0, 150]
+        }
+      ]
+    },
+    {
+      "clause_id": "RPL-CS-PRO-011:12.1",
+      "clause_type": "regulatory_restatement",
+      "citations": ["170 IAC 4-1-16(c)(2)"],
+      "assessed": true,
+      "parameters": [
+        {
+          "parameter_id": "RPL-CS-PRO-011:12.1#p1",
+          "kind": "threshold",
+          "name": "Hardship payment — maximum initial payment",
+          "doc_value": "lesser of $10 or one-tenth (1/10) of the bill",
+          "unit": "USD or fraction",
+          "qualifier": "not to exceed",
+          "s1_quote": "pays a reasonable portion (not to exceed ten dollars ($10) or one-tenth (1/10) of the bill, whichever is less, unless the customer agrees to a greater portion) of the bill",
+          "s1_span": [0, 200]
+        },
+        {
+          "parameter_id": "RPL-CS-PRO-011:12.1#p2",
+          "kind": "period",
+          "name": "Hardship arrangement — remainder payment window",
+          "doc_value": "within 3 months",
+          "unit": "months",
+          "qualifier": "within",
+          "day_type": "calendar",
+          "s1_quote": "agrees to pay the remainder of the outstanding bill within three (3) months",
+          "s1_span": [0, 100]
+        },
+        {
+          "parameter_id": "RPL-CS-PRO-011:12.1#p3",
+          "kind": "period",
+          "name": "Prior breach lookback period",
+          "doc_value": "within the past 12 months",
+          "unit": "months",
+          "qualifier": "within",
+          "day_type": "calendar",
+          "s1_quote": "has not breached any similar agreement with the utility made pursuant to this section within the past twelve (12) months",
+          "s1_span": [0, 150]
+        }
+      ]
+    },
+    {
+      "clause_id": "RPL-CS-PRO-011:12.2",
+      "clause_type": "regulatory_restatement",
+      "citations": ["170 IAC 4-1-16(c)(3)"],
+      "assessed": true,
+      "parameters": [
+        {
+          "parameter_id": "RPL-CS-PRO-011:12.2#p1",
+          "kind": "threshold",
+          "name": "Utility-error bill — maximum initial payment",
+          "doc_value": "reasonable portion not exceeding an amount equal to the customer's average bill for the 6 bills immediately preceding the bill in question",
+          "unit": "billing periods",
+          "qualifier": "not to exceed average of preceding",
+          "s1_quote": "pays a reasonable portion of the bill, not to exceed an amount equal to the customer's average bill for the six (6) bills immediately preceding the bill in question",
+          "s1_span": [0, 200]
+        },
+        {
+          "parameter_id": "RPL-CS-PRO-011:12.2#p2",
+          "kind": "exception",
+          "name": "No late fee on utility-error arrangement",
+          "doc_value": "RPL may not add a late fee to this arrangement",
+          "s1_quote": "the utility may not add to the outstanding bill any late fee",
+          "s1_span": [0, 80]
+        }
+      ]
+    },
+    {
+      "clause_id": "RPL-CS-PRO-011:14.1",
+      "clause_type": "regulatory_restatement",
+      "citations": ["170 IAC 16-1-4(d)"],
+      "assessed": true,
+      "parameters": [
+        {
+          "parameter_id": "RPL-CS-PRO-011:14.1#p1",
+          "kind": "content_element",
+          "name": "Annual IURC complaint report contents",
+          "doc_value": "number of complaints received, general nature of subject matter, how each complaint was received, whether a commission review was conducted",
+          "s1_quote": "each utility shall annually submit a report to the commission that shall state and classify the number of complaints made to the utility under section 3 of this rule, the general nature of the subject matter thereof, how the complaint was received, and whether a commission review was conducted thereon.",
+          "s1_span": [0, 300]
+        }
+      ]
+    },
+    {
+      "clause_id": "RPL-CS-PRO-011:15.1",
+      "clause_type": "regulatory_restatement",
+      "citations": ["170 IAC 16-1-4(b)"],
+      "assessed": true,
+      "parameters": [
+        {
+          "parameter_id": "RPL-CS-PRO-011:15.1#p1",
+          "kind": "period",
+          "name": "Records retention minimum",
+          "doc_value": "6 months from the date of final resolution",
+          "unit": "months",
+          "qualifier": "at least",
+          "day_type": "calendar",
+          "s1_quote": "the utility shall retain records of disputes received under this rule and the resolutions thereof for a period of six (6) months from the date of final resolution of the dispute under this rule",
+          "s1_span": [0, 200]
+        }
+      ]
+    },
+    {
+      "clause_id": "RPL-CS-PRO-011:App-C.F08",
+      "clause_type": "template_field",
+      "citations": ["170 IAC 16-1-4(c)(5)", "170 IAC 16-1-5(a)"],
+      "assessed": true,
+      "parameters": [
+        {
+          "parameter_id": "RPL-CS-PRO-011:App-C.F08#p1",
+          "kind": "period",
+          "name": "Appeal window stated on CS-F-032",
+          "doc_value": "within 7 days of the date you receive this letter",
+          "unit": "days",
+          "qualifier": "within",
+          "day_type": "calendar",
+          "s1_quote": "a complaint must be submitted under this section within seven (7) days of the date the customer receives the utility's proposed resolution.",
+          "s1_span": [0, 150]
+        }
+      ]
+    },
+    {
+      "clause_id": "RPL-CS-PRO-011:App-D.F02",
+      "clause_type": "template_field",
+      "citations": ["170 IAC 16-1-5(a)"],
+      "assessed": true,
+      "parameters": [
+        {
+          "parameter_id": "RPL-CS-PRO-011:App-D.F02#p1",
+          "kind": "period",
+          "name": "Filing deadline on App-D",
+          "doc_value": "within 7 days of the date you receive Rockridge Power's written determination",
+          "unit": "days",
+          "qualifier": "within",
+          "day_type": "calendar",
+          "s1_quote": "a complaint must be submitted under this section within seven (7) days of the date the customer receives the utility's proposed resolution.",
+          "s1_span": [0, 150]
+        }
+      ]
+    },
+    {
+      "clause_id": "RPL-CS-PRO-011:App-D.F04",
+      "clause_type": "template_field",
+      "citations": ["170 IAC 16-1-5(c)(5)"],
+      "assessed": true,
+      "parameters": [
+        {
+          "parameter_id": "RPL-CS-PRO-011:App-D.F04#p1",
+          "kind": "period",
+          "name": "CA decision period stated on App-D",
+          "doc_value": "within 30 days of your complaint submission date",
+          "unit": "days",
+          "qualifier": "within",
+          "day_type": "calendar",
+          "s1_quote": "provide a decision to the customer and the utility within thirty (30) days of the complaint submission date",
+          "s1_span": [0, 120]
+        }
+      ]
+    },
+    {
+      "clause_id": "RPL-CS-PRO-011:App-D.F05",
+      "clause_type": "template_field",
+      "citations": ["170 IAC 16-1-5(d)", "170 IAC 16-1-6(a)"],
+      "assessed": true,
+      "parameters": [
+        {
+          "parameter_id": "RPL-CS-PRO-011:App-D.F05#p1",
+          "kind": "period",
+          "name": "Director review and commission review on App-D",
+          "doc_value": "within 7 days of receiving that decision; within 20 days of the Director's decision",
+          "unit": "days",
+          "qualifier": "within",
+          "day_type": "calendar",
+          "s1_quote": "either party may request a review by the director of consumer affairs or director's designee within seven (7) days of the date of receipt of the proposed resolution of the informal complaint.",
+          "s1_span": [0, 200]
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "citation": "170 IAC 4-1-1",
+      "disposition": "covered",
+      "coverage_priority": "standard",
+      "clause_ids": ["RPL-CS-PRO-011:3.1", "RPL-CS-PRO-011:3.2"],
+      "reason": "Definitions used in §3 definitions section"
+    },
+    {
+      "citation": "170 IAC 4-1-2",
+      "disposition": "covered",
+      "coverage_priority": "high",
+      "clause_ids": ["RPL-CS-PRO-011:2.1"],
+      "reason": "Applicability of IURC rules to RPL as an Indiana electric public utility"
+    },
+    {
+      "citation": "170 IAC 4-1-13",
+      "disposition": "covered",
+      "coverage_priority": "standard",
+      "clause_ids": ["RPL-CS-PRO-011:7.2", "RPL-CS-PRO-011:8.3", "RPL-CS-PRO-011:12.1"],
+      "reason": "Bills rule — 17-day delinquency period cited in §7.2 note; billing check in §8.3 BIL checklist; late charge cap in §12.1"
+    },
+    {
+      "citation": "170 IAC 4-1-16",
+      "disposition": "covered",
+      "coverage_priority": "high",
+      "clause_ids": ["RPL-CS-PRO-011:7.2", "RPL-CS-PRO-011:8.5", "RPL-CS-PRO-011:12.1", "RPL-CS-PRO-011:12.2"],
+      "reason": "Disconnect protection during dispute; disconnect timing rules; hardship and utility-error payment arrangements"
+    },
+    {
+      "citation": "170 IAC 4-1-17",
+      "disposition": "not_applicable",
+      "coverage_priority": "standard",
+      "clause_ids": [],
+      "reason": "Repealed effective 2010-05-25; creates no obligation. Noted in §4 Table 4-5."
+    },
+    {
+      "citation": "170 IAC 16-1-1",
+      "disposition": "covered",
+      "coverage_priority": "high",
+      "clause_ids": ["RPL-CS-PRO-011:2.1"],
+      "reason": "This article applies to RPL as an electric utility subject to commission jurisdiction"
+    },
+    {
+      "citation": "170 IAC 16-1-2",
+      "disposition": "covered",
+      "coverage_priority": "standard",
+      "clause_ids": ["RPL-CS-PRO-011:3.1", "RPL-CS-PRO-011:3.2", "RPL-CS-PRO-011:3.5"],
+      "reason": "Definitions of commission, consumer affairs, customer used in §3"
+    },
+    {
+      "citation": "170 IAC 16-1-3",
+      "disposition": "covered",
+      "coverage_priority": "standard",
+      "clause_ids": ["RPL-CS-PRO-011:9.5"],
+      "reason": "Time period computation rule — day of act excluded; runs to next business day — applied in §9.5 note on 7-day appeal window"
+    },
+    {
+      "citation": "170 IAC 16-1-4",
+      "disposition": "covered",
+      "coverage_priority": "high",
+      "clause_ids": ["RPL-CS-PRO-011:2.2", "RPL-CS-PRO-011:6.7", "RPL-CS-PRO-011:7.2", "RPL-CS-PRO-011:9.3", "RPL-CS-PRO-011:9.5", "RPL-CS-PRO-011:14.1", "RPL-CS-PRO-011:15.1"],
+      "reason": "Utility responsibilities for disputes: channels, records, undisputed payment notice, investigation, resolution, 7-day appeal advisory, annual report, 6-month retention"
+    },
+    {
+      "citation": "170 IAC 16-1-5",
+      "disposition": "covered",
+      "coverage_priority": "standard",
+      "clause_ids": ["RPL-CS-PRO-011:11.6", "RPL-CS-PRO-011:11.8", "RPL-CS-PRO-011:11.10", "RPL-CS-PRO-011:11.11"],
+      "reason": "Consumer affairs informal complaint process — 7-day filing, 14-day info response, 30-day CA decision, director review"
+    },
+    {
+      "citation": "170 IAC 16-1-6",
+      "disposition": "covered",
+      "coverage_priority": "standard",
+      "clause_ids": ["RPL-CS-PRO-011:11.10"],
+      "reason": "Commission review — 20-day request window; 7-day copy to parties/OUCC"
+    },
+    {
+      "citation": "170 IAC 16-1-7",
+      "disposition": "covered",
+      "coverage_priority": "standard",
+      "clause_ids": ["RPL-CS-PRO-011:7.1", "RPL-CS-PRO-011:7.3", "RPL-CS-PRO-011:11.9"],
+      "reason": "Service continuation and undisputed charges — 10-day post-decision protection; 1/12 formula"
+    }
+  ],
+  "interpretations": [
+    {
+      "clause_id": "RPL-CS-PRO-011:6.2",
+      "question": "What language access methods are required beyond English and Spanish?",
+      "position": "Company position: RPL uses a third-party telephonic interpreter service for languages other than English or Spanish, targeting connection within 5 minutes of request. This is company practice; the pack requires no specific method or timeframe.",
+      "pack_citations_considered": ["170 IAC 16-1-4(a)"],
+      "rationale": "170 IAC 16-1-4(a) requires channels for customers to bring disputes to the utility's attention but does not specify language access methods. RPL adopts the broader approach to serve its diverse service territory."
+    },
+    {
+      "clause_id": "RPL-CS-PRO-011:3.13",
+      "question": "Are CIS hold codes a regulatory concept or company practice?",
+      "position": "Company position: CIS hold codes HDSP and HIURC are RPL's internal system implementation of the service protection requirements in 170 IAC 16-1-7 and 170 IAC 16-1-4. The codes themselves are company practice; the protection obligations are regulatory.",
+      "pack_citations_considered": ["170 IAC 16-1-7", "170 IAC 16-1-4(c)(1)"],
+      "rationale": "The pack requires service continuation and notification to stop collection activity during disputes but does not specify a system code mechanism."
+    }
+  ],
+  "out_of_scope_references": [
+    {
+      "clause_id": "RPL-CS-PRO-011:2.4",
+      "reference": "IC 8-1-2-54 (formal complaint proceedings before the Commission)",
+      "note": "Outside the v1 knowledge layer; not assessed. Formal petitions under IC 8-1-2-54 are routed to P03 (Jonathan Pierce, Senior Counsel, Regulatory)."
+    }
+  ],
+  "value_ledger": [
+    {"clause_id": "RPL-CS-PRO-011:7.1", "text": "10 days", "source": "pack", "ref": "170 IAC 16-1-7(a)"},
+    {"clause_id": "RPL-CS-PRO-011:7.2", "text": "17 days", "source": "pack", "ref": "170 IAC 4-1-13(c)"},
+    {"clause_id": "RPL-CS-PRO-011:7.3", "text": "1/12", "source": "pack", "ref": "170 IAC 16-1-7(b)"},
+    {"clause_id": "RPL-CS-PRO-011:7.3", "text": "12 months", "source": "pack", "ref": "170 IAC 16-1-7(b)"},
+    {"clause_id": "RPL-CS-PRO-011:8.3", "text": "17-day nonpenalty period", "source": "pack", "ref": "170 IAC 4-1-13(a)"},
+    {"clause_id": "RPL-CS-PRO-011:8.3", "text": "12 months", "source": "company_practice", "ref": "12-month billing history retrieval — internal standard"},
+    {"clause_id": "RPL-CS-PRO-011:8.5", "text": "8:00 a.m.", "source": "pack", "ref": "170 IAC 4-1-16(d)"},
+    {"clause_id": "RPL-CS-PRO-011:8.5", "text": "3:00 p.m.", "source": "pack", "ref": "170 IAC 4-1-16(d)"},
+    {"clause_id": "RPL-CS-PRO-011:8.5", "text": "14 days", "source": "pack", "ref": "170 IAC 4-1-16(e)"},
+    {"clause_id": "RPL-CS-PRO-011:9.5", "text": "7 days", "source": "pack", "ref": "170 IAC 16-1-4(c)(5); 170 IAC 16-1-5(a)"},
+    {"clause_id": "RPL-CS-PRO-011:11.6", "text": "14 days", "source": "pack", "ref": "170 IAC 16-1-5(c)(3)"},
+    {"clause_id": "RPL-CS-PRO-011:11.8", "text": "30 days", "source": "pack", "ref": "170 IAC 16-1-5(c)(5)"},
+    {"clause_id": "RPL-CS-PRO-011:11.9", "text": "10 days", "source": "pack", "ref": "170 IAC 16-1-7(a)"},
+    {"clause_id": "RPL-CS-PRO-011:11.10", "text": "7 days", "source": "pack", "ref": "170 IAC 16-1-5(d)"},
+    {"clause_id": "RPL-CS-PRO-011:11.10", "text": "20 days", "source": "pack", "ref": "170 IAC 16-1-6(a)"},
+    {"clause_id": "RPL-CS-PRO-011:11.10", "text": "7 days", "source": "pack", "ref": "170 IAC 16-1-6(b)"},
+    {"clause_id": "RPL-CS-PRO-011:11.11", "text": "7 days", "source": "pack", "ref": "170 IAC 16-1-5(a)"},
+    {"clause_id": "RPL-CS-PRO-011:12.1", "text": "$10", "source": "pack", "ref": "170 IAC 4-1-16(c)(2)(A)"},
+    {"clause_id": "RPL-CS-PRO-011:12.1", "text": "1/10", "source": "pack", "ref": "170 IAC 4-1-16(c)(2)(A)"},
+    {"clause_id": "RPL-CS-PRO-011:12.1", "text": "3 months", "source": "pack", "ref": "170 IAC 4-1-16(c)(2)(B)"},
+    {"clause_id": "RPL-CS-PRO-011:12.1", "text": "12 months", "source": "pack", "ref": "170 IAC 4-1-16(c)(2)(D)"},
+    {"clause_id": "RPL-CS-PRO-011:12.2", "text": "6 bills", "source": "pack", "ref": "170 IAC 4-1-16(c)(3)(A)"},
+    {"clause_id": "RPL-CS-PRO-011:12.2", "text": "2 months", "source": "pack", "ref": "170 IAC 4-1-16(c)(3) — utility error condition 'no actual reading was taken for over two (2) months'"},
+    {"clause_id": "RPL-CS-PRO-011:14.1", "text": "annual", "source": "pack", "ref": "170 IAC 16-1-4(d)"},
+    {"clause_id": "RPL-CS-PRO-011:15.1", "text": "6 months", "source": "pack", "ref": "170 IAC 16-1-4(b)"},
+    {"clause_id": "RPL-CS-PRO-011:6.5", "text": "15 minutes", "source": "company_practice", "ref": "Internal performance target — HDSP hold placement P1"},
+    {"clause_id": "RPL-CS-PRO-011:6.5", "text": "30 minutes", "source": "company_practice", "ref": "Internal performance target — specialist assignment P1"},
+    {"clause_id": "RPL-CS-PRO-011:6.5", "text": "2 hours", "source": "company_practice", "ref": "Internal performance target — P1 case acknowledgment and investigation initiation"},
+    {"clause_id": "RPL-CS-PRO-011:6.2", "text": "5 minutes", "source": "company_practice", "ref": "Internal performance target — interpreter connection"},
+    {"clause_id": "RPL-CS-PRO-011:6.9", "text": "1 business day", "source": "company_practice", "ref": "Internal performance target — P2 acknowledgment"},
+    {"clause_id": "RPL-CS-PRO-011:8.2", "text": "1 business day", "source": "company_practice", "ref": "Internal performance target — initial customer contact"},
+    {"clause_id": "RPL-CS-PRO-011:8.2", "text": "2 hours", "source": "company_practice", "ref": "Internal performance target — P1 specialist assignment"},
+    {"clause_id": "RPL-CS-PRO-011:8.11", "text": "same calendar day", "source": "company_practice", "ref": "Internal performance target — P1 service-off determination"},
+    {"clause_id": "RPL-CS-PRO-011:9.1", "text": "$500", "source": "company_practice", "ref": "Internal review threshold — P17 review of billing adjustments"},
+    {"clause_id": "RPL-CS-PRO-011:10.1", "text": "3 business days", "source": "company_practice", "ref": "Internal escalation trigger — investigation completion"},
+    {"clause_id": "RPL-CS-PRO-011:10.3", "text": "$1,000", "source": "company_practice", "ref": "Internal threshold — legal review threshold for damage claims"},
+    {"clause_id": "RPL-CS-PRO-011:10.3", "text": "1 business day", "source": "company_practice", "ref": "Internal performance target — P03 legal review turnaround"},
+    {"clause_id": "RPL-CS-PRO-011:10.4", "text": "2 business days", "source": "company_practice", "ref": "Internal performance target — executive complaint determination"},
+    {"clause_id": "RPL-CS-PRO-011:10.5", "text": "30 minutes", "source": "company_practice", "ref": "Internal performance target — P17 notification on media-related complaint"},
+    {"clause_id": "RPL-CS-PRO-011:11.4", "text": "4 business hours", "source": "company_practice", "ref": "Internal performance target — IURC referral notification to P17"},
+    {"clause_id": "RPL-CS-PRO-011:11.4", "text": "1 business day", "source": "company_practice", "ref": "Internal performance target — P17 acknowledgment of IURC referral"},
+    {"clause_id": "RPL-CS-PRO-011:11.6", "text": "5 business days", "source": "company_practice", "ref": "Internal performance target — initial IURC response package"},
+    {"clause_id": "RPL-CS-PRO-011:11.7", "text": "$1,000", "source": "company_practice", "ref": "Internal threshold — legal review on IURC response"},
+    {"clause_id": "RPL-CS-PRO-011:11.10", "text": "1 business day", "source": "company_practice", "ref": "Internal performance target — notify P03 of commission-review request"},
+    {"clause_id": "RPL-CS-PRO-011:13.3", "text": "3", "source": "company_practice", "ref": "Internal RCA trigger threshold — complaints with same root-cause code in one month"},
+    {"clause_id": "RPL-CS-PRO-011:13.3", "text": "5 business days", "source": "company_practice", "ref": "Internal performance target — RCA initiation"},
+    {"clause_id": "RPL-CS-PRO-011:13.5", "text": "10 business days", "source": "company_practice", "ref": "Internal performance target — RCA finding to procedure owners"},
+    {"clause_id": "RPL-CS-PRO-011:13.5", "text": "20 business days", "source": "company_practice", "ref": "Internal target — procedure owner acknowledgment"},
+    {"clause_id": "RPL-CS-PRO-011:14.2", "text": "5 business days", "source": "company_practice", "ref": "Internal performance target — monthly KPI report delivery"},
+    {"clause_id": "RPL-CS-PRO-011:14.4", "text": "5 business days", "source": "company_practice", "ref": "Internal performance target — P13 review of KPI report"},
+    {"clause_id": "RPL-CS-PRO-011:16.3", "text": "30 days", "source": "company_practice", "ref": "Internal target — new-hire de-escalation module completion"},
+    {"clause_id": "RPL-CS-PRO-011:16.4", "text": "30 business days", "source": "company_practice", "ref": "Internal target — RCA-triggered supplemental training"},
+    {"clause_id": "RPL-CS-PRO-011:App-F", "text": "407,491", "source": "section1", "ref": "§1.1 total customer count 2024-12-31"},
+    {"clause_id": "RPL-CS-PRO-011:App-F", "text": "591", "source": "company_practice", "ref": "Fictional January 2025 cases opened — illustrative KPI"},
+    {"clause_id": "RPL-CS-PRO-011:App-F", "text": "564", "source": "company_practice", "ref": "Fictional January 2025 cases closed — illustrative KPI"},
+    {"clause_id": "RPL-CS-PRO-011:App-F", "text": "0.34", "source": "company_practice", "ref": "Fictional January 2025 IURC complaints per 1,000 customers"},
+    {"clause_id": "RPL-CS-PRO-011:App-F", "text": "138", "source": "company_practice", "ref": "Fictional trailing 12-month IURC informal complaint count"},
+    {"clause_id": "RPL-CS-PRO-011:App-F", "text": "61.4%", "source": "company_practice", "ref": "Fictional January 2025 first-contact resolution rate"},
+    {"clause_id": "RPL-CS-PRO-011:App-F", "text": "0.8", "source": "company_practice", "ref": "Fictional January 2025 avg days to P1 determination"},
+    {"clause_id": "RPL-CS-PRO-011:App-F", "text": "4.1", "source": "company_practice", "ref": "Fictional January 2025 avg days to P2 determination"},
+    {"clause_id": "RPL-CS-PRO-011:App-F", "text": "84.7%", "source": "company_practice", "ref": "Fictional January 2025 % within 3-business-day target"},
+    {"clause_id": "RPL-CS-PRO-011:App-F", "text": "4", "source": "company_practice", "ref": "Fictional January 2025 IURC referrals opened"},
+    {"clause_id": "RPL-CS-PRO-011:App-F", "text": "3", "source": "company_practice", "ref": "Fictional January 2025 IURC referrals responded"},
+    {"clause_id": "RPL-CS-PRO-011:App-F", "text": "2", "source": "company_practice", "ref": "Fictional January 2025 IURC referrals closed"},
+    {"clause_id": "RPL-CS-PRO-011:App-F", "text": "1", "source": "company_practice", "ref": "Fictional January 2025 CA decisions favorable to customer"},
+    {"clause_id": "RPL-CS-PRO-011:App-F", "text": "7", "source": "company_practice", "ref": "Fictional January 2025 repeat complaints"},
+    {"clause_id": "RPL-CS-PRO-011:App-F", "text": "90 days", "source": "company_practice", "ref": "Repeat complaint lookback window — company practice"},
+    {"clause_id": "RPL-CS-PRO-011:14.3", "text": "90 days", "source": "company_practice", "ref": "Repeat complaint lookback window — company practice"},
+    {"clause_id": "RPL-CS-PRO-011:1.1", "text": "1-800-555-0142", "source": "section1", "ref": "§1.1 customer service phone"},
+    {"clause_id": "RPL-CS-PRO-011:6.1", "text": "1-800-555-0143", "source": "section1.6", "ref": "§1.6 Table C Spanish-language line"},
+    {"clause_id": "RPL-CS-PRO-011:9.3", "text": "1-800-851-4268", "source": "section1.6", "ref": "§1.6 Table C IURC toll-free"},
+    {"clause_id": "RPL-CS-PRO-011:9.3", "text": "317-232-2712", "source": "section1.6", "ref": "§1.6 Table C IURC direct"},
+    {"clause_id": "RPL-CS-PRO-011:9.3", "text": "317-233-2410", "source": "section1.6", "ref": "§1.6 Table C IURC fax"},
+    {"clause_id": "RPL-CS-PRO-011:9.3", "text": "8:15 a.m.", "source": "section1.6", "ref": "§1.6 Table C IURC hours"},
+    {"clause_id": "RPL-CS-PRO-011:9.3", "text": "4:45 p.m.", "source": "section1.6", "ref": "§1.6 Table C IURC hours"},
+    {"clause_id": "RPL-CS-PRO-011:9.3", "text": "1-888-441-2494", "source": "section1.6", "ref": "§1.6 Table C OUCC phone"}
+  ],
+  "gaps": [],
+  "sources": [],
+  "company_practice_values": [
+    {"clause_id": "RPL-CS-PRO-011:6.5", "name": "P1 HDSP hold placement target", "value": "15 minutes", "benchmark_source": "reviewer judgement — IURC complaint-handling best practice"},
+    {"clause_id": "RPL-CS-PRO-011:6.5", "name": "P1 specialist assignment target", "value": "30 minutes", "benchmark_source": "reviewer judgement"},
+    {"clause_id": "RPL-CS-PRO-011:8.11", "name": "P1 service-off determination target", "value": "same calendar day", "benchmark_source": "reviewer judgement — industry standard for service-off complaints"},
+    {"clause_id": "RPL-CS-PRO-011:11.6", "name": "IURC response package internal target", "value": "5 business days", "benchmark_source": "reviewer judgement — shorter than any pack deadline"}
+  ],
+  "considered_no_obligation": [
+    {"citation": "170 IAC 4-1-13(e)", "reason": "Applies to cooperatively owned utilities only; RPL is investor-owned"},
+    {"citation": "170 IAC 4-1-13(f)", "reason": "Alternative billing method — RPL offers budget billing per its tariff; covered in T13 not T17"},
+    {"citation": "170 IAC 4-1-13(g)", "reason": "Round-up charitable billing plan — applies to REMCs only; RPL is investor-owned"}
+  ],
+  "worked_examples": [],
+  "notes": "170 IAC 4-1-17 (Customer complaints) was repealed effective 2010-05-25; its substance was replaced by 170 IAC 16-1. This document does not cite 170 IAC 4-1-17 and notes its repeal in §4 Table 4-5. No regulatory investigation or determination deadline is set by the pack for RPL's own complaint handling; all RPL-level timeframes are company practice labeled as Internal performance target."
+}

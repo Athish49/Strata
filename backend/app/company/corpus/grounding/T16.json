@@ -1,0 +1,482 @@
+{
+  "task": "T16",
+  "law_as_of": "2024-12-31",
+  "sections": [
+    {
+      "citation": "170 IAC 4-1-1",
+      "heading": "170 IAC 4-1-1 Definitions",
+      "role": "context",
+      "status_s1": "active",
+      "effective_date_s1": "2019-04-11",
+      "body_text_s1": "Authority: IC 8-1-1-3 ; IC 8-1-2-4 Affected: IC 8-1-2-1 Sec. 1. (a) Where applicable, the definitions in IC 8-1-2-1 and this section apply throughout this article. (b) \"Commission\" means the Indiana utility regulatory commission. (c) \"Customer\" means any: (1) person; (2) firm; (3) corporation; (4) municipality; or (5) other government agency; that has agreed, orally or otherwise, to pay for electric service received from a utility; provided, that for the purposes of sections 13(d), 15, and 16 of this rule, the term shall be limited to mean persons who have agreed to pay for such service exclusively for residential purposes. (d) \"Disconnection\" means the termination or discontinuance of electric service. (e) \"Late payment charge\" means the one (1) time penalty assessed by a utility upon all current bills at such time as they become delinquent. (Indiana Utility Regulatory Commission; No. 33629: Standards of Service For Electrical Utilities Rule 1; filed Mar 10, 1976, 9:10 a.m.: Rules and Regs. 1977, p. 337; readopted filed Jul 11, 2001, 4:30 p.m.: 24 IR 4233; readopted filed Apr 24, 2007, 8:21 a.m.: 20070509-IR-170070147RFA ; errata filed Jul 21, 2009, 1:33 p.m.: 20090819-IR-170090571ACA ; filed May 25, 2010, 1:52 p.m.: 20100623-IR-170090792FRA ; readopted filed Aug 2, 2013, 2:16 p.m.: 20130828-IR-170130227RFA ; readopted filed Apr 11, 2019, 9:04 a.m.: 20190508-IR-170190136RFA )",
+      "body_text_s1_normalized": "(a) where applicable, the definitions in ic 8-1-2-1 and this section apply throughout this article. (b) \"commission\" means the indiana utility regulatory commission. (c) \"customer\" means any: (1) person; (2) firm; (3) corporation; (4) municipality; or (5) other government agency; that has agreed, orally or otherwise, to pay for electric service received from a utility; provided, that for the purposes of sections 13(d), 15, and 16 of this rule, the term shall be limited to mean persons who have agreed to pay for such service exclusively for residential purposes. (d) \"disconnection\" means the termination or discontinuance of electric service. (e) \"late payment charge\" means the one (1) time penalty assessed by a utility upon all current bills at such time as they become delinquent.",
+      "subsections": [],
+      "iac_cross_refs_s1": [],
+      "external_refs_s1": [
+        "IC 8-1-1-3",
+        "IC 8-1-2-1",
+        "IC 8-1-2-4"
+      ],
+      "coverage_priority": "standard"
+    },
+    {
+      "citation": "170 IAC 4-1-2",
+      "heading": "170 IAC 4-1-2 Applicability of rules",
+      "role": "context",
+      "status_s1": "active",
+      "effective_date_s1": "2019-04-11",
+      "body_text_s1": "Authority: IC 8-1-1-3 ; IC 8-1-2-4 Affected: IC 8-1-2 ; IC 8-1-13 Sec. 2. Application of Rules. These rules shall apply to any electrical public utility subject to the jurisdiction of the commission pursuant to the provisions of the Public Service Commission Act [ IC 8-1-2 ] , the Rural Electric Membership Corporation Act [ IC 8-1-13 ] or any other statute of the State of Indiana, which now or hereafter may be engaged in the production, sale or distribution of electric service and which comes under the jurisdiction of the commission (herein called \"utility\" or \"utilities\"). (Indiana Utility Regulatory Commission; No. 33629: Standards of Service For Electrical Utilities Rule 2; filed Mar 10, 1976, 9:10 am: Rules and Regs. 1977, p. 337; readopted filed Jul 11, 2001, 4:30 p.m.: 24 IR 4233; readopted filed Apr 24, 2007, 8:21 a.m.: 20070509-IR-170070147RFA ; readopted filed Aug 2, 2013, 2:16 p.m.: 20130828-IR-170130227RFA ; readopted filed Apr 11, 2019, 9:04 a.m.: 20190508-IR- 170190136RFA )",
+      "body_text_s1_normalized": "application of rules. these rules shall apply to any electrical public utility subject to the jurisdiction of the commission pursuant to the provisions of the public service commission act [ ic 8-1-2 ] , the rural electric membership corporation act [ ic 8-1-13 ] or any other statute of the state of indiana, which now or hereafter may be engaged in the production, sale or distribution of electric service and which comes under the jurisdiction of the commission (herein called \"utility\" or \"utilities\").",
+      "subsections": [],
+      "iac_cross_refs_s1": [],
+      "external_refs_s1": [
+        "IC 8-1-1-3",
+        "IC 8-1-13",
+        "IC 8-1-2",
+        "IC 8-1-2-4"
+      ],
+      "coverage_priority": "high"
+    },
+    {
+      "citation": "170 IAC 4-1-26",
+      "heading": "170 IAC 4-1-26 Line construction; variances",
+      "role": "scope",
+      "status_s1": "active",
+      "effective_date_s1": "2019-04-11",
+      "body_text_s1": "Authority: IC 8-1-1-3 ; IC 8-1-2-4 Affected: IC 8-1-2 Sec. 26. (a) In all cases not covered by specific statutes in effect, Part 2, \"Safety Rules for the Installation and Maintenance of Overhead Electric Supply and Communication Lines\", and Part 3, \"Safety Rules for the Installation and Maintenance of Underground Electric Supply and Communication Lines\", of the 2002 edition of the National Electrical Safety Code as approved by the American National Standards Institute June 14, 2001, as ANSI Standard C2, are prescribed for overhead and underground construction practice commenced after the date of promulgation of this section. (b) The commission incorporates by reference the 2002 National Electrical Safety Code. Copies may be obtained from the Institute of Electrical and Electronics Engineers, Inc., 445 Hoes Lane, Piscataway, New Jersey 08855-1331 or are available for copying at the Indiana Utility Regulatory Commission, 101 West Washington Street, Suite 1500 E, Indianapolis, Indiana 46204. (c) Any public utility wishing to depart from the National Electrical Safety Code: (1) for the purpose of experimentation or the development of improved methods of construction; (2) because it works an injustice or expense not justified by the protection secured or is shown to be impractical; or (3) where equivalent or safer construction can be more readily provided in other ways; may informally petition for authorization to construct, install, or use materials, equipment, or methods other than specified in this rule, directing such petition to the electricity division of the commission. The petition shall be accompanied by the consent of any other utility whose facilities will be directly affected by the proposed departure from this rule. The electricity division shall forthwith make an investigation and, if satisfied that such petition falls within one (1) or more of the three (3) categories set forth in this subsection and is justified from an engineering standpoint, shall so advise the commission. The petitioning utility and any consenting utility shall thereupon be notified, in writing, that the proposed departure from this rule has been authorized. (Indiana Utility Regulatory Commission; No. 33629: Standards of Service For Electrical Utilities Rule 24; filed Mar 10, 1976, 9:10 a.m.: Rules and Regs. 1977, p. 356; filed Feb 28, 1986, 9:30 a.m.: 9 IR 1564; filed Oct 7, 1987, 12:30 p.m.: 11 IR 565; filed Oct 15, 1990, 3:28 p.m.: 14 IR 418; filed Jan 28, 1993, 9:00 a.m.: 16 IR 1510; filed Feb 23, 1998, 11:30 a.m.: 21 IR 2325; readopted filed Jul 11, 2001, 4:30 p.m.: 24 IR 4233; filed Sep 27, 2002, 2:33 p.m.: 26 IR 328; readopted filed Apr 24, 2007, 8:21 a.m.: 20070509-IR-170070147RFA ; errata filed Jul 21, 2009, 1:33 p.m.: 20090819-IR-170090571ACA ; readopted filed Aug 2, 2013, 2:16 p.m.: 20130828-IR-170130227RFA ; readopted filed Apr 11, 2019, 9:04 a.m.: 20190508-IR- 170190136RFA )",
+      "body_text_s1_normalized": "(a) in all cases not covered by specific statutes in effect, part 2, \"safety rules for the installation and maintenance of overhead electric supply and communication lines\", and part 3, \"safety rules for the installation and maintenance of underground electric supply and communication lines\", of the 2002 edition of the national electrical safety code as approved by the american national standards institute june 14, 2001, as ansi standard c2, are prescribed for overhead and underground construction practice commenced after the date of promulgation of this section. (b) the commission incorporates by reference the 2002 national electrical safety code. copies may be obtained from the institute of electrical and electronics engineers, inc., 445 hoes lane, piscataway, new jersey 08855-1331 or are available for copying at the indiana utility regulatory commission, 101 west washington street, suite 1500 e, indianapolis, indiana 46204. (c) any public utility wishing to depart from the national electrical safety code: (1) for the purpose of experimentation or the development of improved methods of construction; (2) because it works an injustice or expense not justified by the protection secured or is shown to be impractical; or (3) where equivalent or safer construction can be more readily provided in other ways; may informally petition for authorization to construct, install, or use materials, equipment, or methods other than specified in this rule, directing such petition to the electricity division of the commission. the petition shall be accompanied by the consent of any other utility whose facilities will be directly affected by the proposed departure from this rule. the electricity division shall forthwith make an investigation and, if satisfied that such petition falls within one (1) or more of the three (3) categories set forth in this subsection and is justified from an engineering standpoint, shall so advise the commission. the petitioning utility and any consenting utility shall thereupon be notified, in writing, that the proposed departure from this rule has been authorized.",
+      "subsections": [],
+      "iac_cross_refs_s1": [],
+      "external_refs_s1": [
+        "IC 8-1-1-3",
+        "IC 8-1-2",
+        "IC 8-1-2-4"
+      ],
+      "coverage_priority": "standard"
+    },
+    {
+      "citation": "170 IAC 4-9-1",
+      "heading": "170 IAC 4-9-1 Applicability; incorporation by reference of commission order",
+      "role": "scope",
+      "status_s1": "active",
+      "effective_date_s1": "2019-04-11",
+      "body_text_s1": "Authority: IC 8-1-1-3 ; IC 8-1-2-4 ; IC 8-1.5-3-8 Affected: IC 8-1-2 ; IC 8-1-13 ; IC 23-1-17 Sec. 1. (a) This rule applies to an electrical public utility subject to the jurisdiction of the commission pursuant to the provisions of the Public Service Commission Act, IC 8-1-2 , that is financed by the sale of securities and whose business operations are overseen by a board representing their shareholders. This rule does not apply to an electric public utility subject to the jurisdiction of the commission that is organized as a rural electric membership corporation under IC 8-1-13 or a nonprofit corporation organized under IC 23-1-17 . (b) The commission through this rule implements the commission's order in cause number 43663, approved on November 30, 2010, and the commission's order on reconsideration in the cause, approved July 7, 2011. Copies of the orders are available for review and copying at the Indiana Utility Regulatory Commission, 101 West Washington Street, Suite 1500E, Indianapolis, Indiana 46204. (Indiana Utility Regulatory Commission; 170 IAC 4-9-1 ; filed Sep 27, 2012, 2:09 p.m.: 20121024-IR-170120042FRA ; readopted filed Aug 2, 2013, 2:16 p.m.: 20130828-IR-170130227RFA ; readopted filed Apr 11, 2019, 9:04 a.m.: 20190508-IR- 170190136RFA )",
+      "body_text_s1_normalized": "(a) this rule applies to an electrical public utility subject to the jurisdiction of the commission pursuant to the provisions of the public service commission act, ic 8-1-2 , that is financed by the sale of securities and whose business operations are overseen by a board representing their shareholders. this rule does not apply to an electric public utility subject to the jurisdiction of the commission that is organized as a rural electric membership corporation under ic 8-1-13 or a nonprofit corporation organized under ic 23-1-17 . (b) the commission through this rule implements the commission's order in cause number 43663, approved on november 30, 2010, and the commission's order on reconsideration in the cause, approved july 7, 2011. copies of the orders are available for review and copying at the indiana utility regulatory commission, 101 west washington street, suite 1500e, indianapolis, indiana 46204.",
+      "subsections": [],
+      "iac_cross_refs_s1": [
+        "170 IAC 4-9-1"
+      ],
+      "external_refs_s1": [
+        "IC 23-1-17",
+        "IC 8-1",
+        "IC 8-1-1-3",
+        "IC 8-1-13",
+        "IC 8-1-2",
+        "IC 8-1-2-4"
+      ],
+      "coverage_priority": "standard"
+    },
+    {
+      "citation": "170 IAC 4-9-2",
+      "heading": "170 IAC 4-9-2 Definitions",
+      "role": "scope",
+      "status_s1": "active",
+      "effective_date_s1": "2019-04-11",
+      "body_text_s1": "Authority: IC 8-1-1-3 ; IC 8-1-2-4 ; IC 8-1.5-3-8 Affected: IC 8-1-2 Sec. 2. The following definitions apply throughout this rule: (1) \"Brush\" means vegetation with stems less than six (6) inches diameter at breast height. (2) \"Business days\" means days other than: (A) Saturday; (B) Sunday; or (C) a legal holiday observed by the state of Indiana. (3) \"Commission\" means the Indiana utility regulatory commission. (4) \"Customer\" means the following: (A) For purposes of notice, \"customer\" has the meaning set forth in 170 IAC 16-1-2 (3) or may include the occupant of the property. (B) For purposes of the disputes, \"customer\" has the meaning set forth in 170 IAC 16-1-2 (3) but also includes the property owner. (5) \"Emergency or storm event\": (A) means: (i) a condition dangerous or hazardous to: (AA) health; (BB) life; (CC) physical safety; or (DD) property; exists or is imminent; (ii) an interruption of utility service; or (iii) the need to immediately repair or clear utility facilities; and (B) includes: (i) circumstances that exist that make it impractical or impossible for a utility to comply with the provisions of the rule, including, but not limited to: (AA) floods; (BB) ice; (CC) snow; (DD) storms; (EE) tornadoes; (FF) winds; and (GG) other acts of God; (ii) falling trees; (iii) trees causing outages; and (iv) trees showing evidence of: (AA) burning; or (BB) otherwise having been in direct contact with electric conductors. (6) \"Implied consent\" means the property owner or customer has not contacted the utility to deny consent within two (2) weeks after receiving notice that tree trimming will occur. (7) \"In person\" means: (A) person to person delivery of verbal or written notice by an authorized utility representative to a customer; or (B) hand delivery of a door hanger or similar document accompanied by an attempt by the authorized utility representative to speak with the resident through actions including knocking on the door or ringing the door bell, with delivery documented in writing or computerized entry by the authorized utility representative making the hand delivery. (8) \"Power line compatible vegetation\" means a plant that at maturity will not reach a height greater than twelve (12) feet. (9) \"Public safety situation\" means the following: (A) The existence of a vegetation condition that could reasonably be expected to cause imminent physical harm to electrical equipment necessary for the provision of electric service, including the following: (i) Trees that are unstable to the point of representing a danger to utility equipment, facilities, or personnel in the course of repairs to said equipment or facilities due to disease, damage, or soil erosion. Personnel may include, but is not limited to, safety workers such as fire, police, emergency medical personnel, utility line and repair crews. (ii) Trees that lean to a degree that they can touch power lines. (iii) Trees that have burn marks or other indicators that they have previously touched a power line. (B) A condition in vegetation unrelated to normal growth that would result in contact with power lines or high voltage equipment and cause imminent physical harm to the public if not immediately mitigated. (10) \"Telephone call\" means: (A) Making an attempt to contact the customer via the telephone number the utility has on file and: (i) making verbal telephone contact; or (ii) leaving a message on: (AA) voice mail; (BB) an answering machine; or (CC) an answering service; if available. (B) If an attempt is unsuccessful in either making verbal telephone contact with the customer or leaving a telephonic message as described in clause (A), a second attempt must be made. (11) \"Utility\" means an electrical public utility subject to the jurisdiction of the commission pursuant to the provisions of the Public Service Commission Act, IC 8-1-2 , that is financed by the sale of securities and whose business operations are overseen by a board representing their shareholders. (12) \"Vegetation management\" means the cutting or removal of vegetation or the prevention of vegetative growth to accomplish one (1) of the following: (A) The maintenance of safe conditions around utility facilities. (B) Ensuring reliable electric service. (C) Preventing hazards caused by the encroachment of vegetation on utility facilities and to provide utility access to facilities. (13) \"Written notice\" means notice sent from the utility to the customer in one (1) of the following manners: (A) By electronic mail. (B) By U.S. mail or another mail delivery system, including inside utility bills. (C) By in person delivery of written notice to the customer's premises, including, but not limited to, a door hanger. (Indiana Utility Regulatory Commission; 170 IAC 4-9-2 ; filed Sep 27, 2012, 2:09 p.m.: 20121024-IR- 170120042FRA ; readopted filed Aug 2, 2013, 2:16 p.m.: 20130828-IR-170130227RFA ; readopted filed Apr 11, 2019, 9:04 a.m.: 20190508-IR-170190136RFA )",
+      "body_text_s1_normalized": "the following definitions apply throughout this rule: (1) \"brush\" means vegetation with stems less than six (6) inches diameter at breast height. (2) \"business days\" means days other than: (a) saturday; (b) sunday; or (c) a legal holiday observed by the state of indiana. (3) \"commission\" means the indiana utility regulatory commission. (4) \"customer\" means the following: (a) for purposes of notice, \"customer\" has the meaning set forth in 170 iac 16-1-2 (3) or may include the occupant of the property. (b) for purposes of the disputes, \"customer\" has the meaning set forth in 170 iac 16-1-2 (3) but also includes the property owner. (5) \"emergency or storm event\": (a) means: (i) a condition dangerous or hazardous to: (aa) health; (bb) life; (cc) physical safety; or (dd) property; exists or is imminent; (ii) an interruption of utility service; or (iii) the need to immediately repair or clear utility facilities; and (b) includes: (i) circumstances that exist that make it impractical or impossible for a utility to comply with the provisions of the rule, including, but not limited to: (aa) floods; (bb) ice; (cc) snow; (dd) storms; (ee) tornadoes; (ff) winds; and (gg) other acts of god; (ii) falling trees; (iii) trees causing outages; and (iv) trees showing evidence of: (aa) burning; or (bb) otherwise having been in direct contact with electric conductors. (6) \"implied consent\" means the property owner or customer has not contacted the utility to deny consent within two (2) weeks after receiving notice that tree trimming will occur. (7) \"in person\" means: (a) person to person delivery of verbal or written notice by an authorized utility representative to a customer; or (b) hand delivery of a door hanger or similar document accompanied by an attempt by the authorized utility representative to speak with the resident through actions including knocking on the door or ringing the door bell, with delivery documented in writing or computerized entry by the authorized utility representative making the hand delivery. (8) \"power line compatible vegetation\" means a plant that at maturity will not reach a height greater than twelve (12) feet. (9) \"public safety situation\" means the following: (a) the existence of a vegetation condition that could reasonably be expected to cause imminent physical harm to electrical equipment necessary for the provision of electric service, including the following: (i) trees that are unstable to the point of representing a danger to utility equipment, facilities, or personnel in the course of repairs to said equipment or facilities due to disease, damage, or soil erosion. personnel may include, but is not limited to, safety workers such as fire, police, emergency medical personnel, utility line and repair crews. (ii) trees that lean to a degree that they can touch power lines. (iii) trees that have burn marks or other indicators that they have previously touched a power line. (b) a condition in vegetation unrelated to normal growth that would result in contact with power lines or high voltage equipment and cause imminent physical harm to the public if not immediately mitigated. (10) \"telephone call\" means: (a) making an attempt to contact the customer via the telephone number the utility has on file and: (i) making verbal telephone contact; or (ii) leaving a message on: (aa) voice mail; (bb) an answering machine; or (cc) an answering service; if available. (b) if an attempt is unsuccessful in either making verbal telephone contact with the customer or leaving a telephonic message as described in clause (a), a second attempt must be made. (11) \"utility\" means an electrical public utility subject to the jurisdiction of the commission pursuant to the provisions of the public service commission act, ic 8-1-2 , that is financed by the sale of securities and whose business operations are overseen by a board representing their shareholders. (12) \"vegetation management\" means the cutting or removal of vegetation or the prevention of vegetative growth to accomplish one (1) of the following: (a) the maintenance of safe conditions around utility facilities. (b) ensuring reliable electric service. (c) preventing hazards caused by the encroachment of vegetation on utility facilities and to provide utility access to facilities. (13) \"written notice\" means notice sent from the utility to the customer in one (1) of the following manners: (a) by electronic mail. (b) by u.s. mail or another mail delivery system, including inside utility bills. (c) by in person delivery of written notice to the customer's premises, including, but not limited to, a door hanger.",
+      "subsections": [],
+      "iac_cross_refs_s1": [
+        "170 IAC 16-1-2",
+        "170 IAC 4-9-2"
+      ],
+      "external_refs_s1": [
+        "IC 8-1",
+        "IC 8-1-1-3",
+        "IC 8-1-2",
+        "IC 8-1-2-4"
+      ],
+      "coverage_priority": "standard"
+    },
+    {
+      "citation": "170 IAC 4-9-3",
+      "heading": "170 IAC 4-9-3 Easements and rights of way",
+      "role": "scope",
+      "status_s1": "active",
+      "effective_date_s1": "2019-04-11",
+      "body_text_s1": "Authority: IC 8-1-1-3 ; IC 8-1-2-4 ; IC 8-1.5-3-8 Affected: IC 8-1-2 Sec. 3. (a) This rule does not modify property rights. Utilities must have or obtain the following legal authority and must provide documentation in accordance with subsection (b): (1) easements; (2) rights of way; (3) statutory authority; (4) other legal authority; or (5) the express or implied consent of the property owner or customer; prior to trimming vegetation. The utility's ability to secure a prescriptive easement may be presented to the customer to obtain consent, but is not independent legal authority. (b) Upon request by the customer within five (5) business days of the customer's receipt of the notice required under section 4 of this rule, the utility will provide one (1) of the following prior to vegetation management: (1) A copy of the easement or public right of way document that gives the utility the legal right to enter the customer's property to perform vegetation management. (2) If an easement or public right of way document is not reasonably available, a copy of the authority that gives the utility the legal right to enter the customer's property to perform vegetation management. (Indiana Utility Regulatory Commission; 170 IAC 4-9-3 ; filed Sep 27, 2012, 2:09 p.m.: 20121024-IR- 170120042FRA ; readopted filed Aug 2, 2013, 2:16 p.m.: 20130828-IR-170130227RFA ; readopted filed Apr 11, 2019, 9:04 a.m.: 20190508-IR-170190136RFA )",
+      "body_text_s1_normalized": "(a) this rule does not modify property rights. utilities must have or obtain the following legal authority and must provide documentation in accordance with subsection (b): (1) easements; (2) rights of way; (3) statutory authority; (4) other legal authority; or (5) the express or implied consent of the property owner or customer; prior to trimming vegetation. the utility's ability to secure a prescriptive easement may be presented to the customer to obtain consent, but is not independent legal authority. (b) upon request by the customer within five (5) business days of the customer's receipt of the notice required under section 4 of this rule, the utility will provide one (1) of the following prior to vegetation management: (1) a copy of the easement or public right of way document that gives the utility the legal right to enter the customer's property to perform vegetation management. (2) if an easement or public right of way document is not reasonably available, a copy of the authority that gives the utility the legal right to enter the customer's property to perform vegetation management.",
+      "subsections": [],
+      "iac_cross_refs_s1": [
+        "170 IAC 4-9-3"
+      ],
+      "external_refs_s1": [
+        "IC 8-1",
+        "IC 8-1-1-3",
+        "IC 8-1-2",
+        "IC 8-1-2-4"
+      ],
+      "coverage_priority": "standard"
+    },
+    {
+      "citation": "170 IAC 4-9-4",
+      "heading": "170 IAC 4-9-4 Notice requirements for routine vegetation management",
+      "role": "scope",
+      "status_s1": "active",
+      "effective_date_s1": "2019-04-11",
+      "body_text_s1": "Authority: IC 8-1-1-3 ; IC 8-1-2-4 ; IC 8-1.5-3-8 Affected: IC 8-1-2 Sec. 4. (a) At least two (2) calendar weeks prior to engaging in routine vegetation management, the utility must provide notice to customers and property owners whose vegetation will be subject to the vegetation management except under the following circumstances: (1) The utility has: (A) a written easement; (B) government permit; (C) contractual agreement; or (D) court order; that expressly gives the utility the right to conduct vegetation management activities. (2) An emergency or storm event occurs. (b) A utility must provide notice to a customer in the following manner: (1) At least one (1) attempt to contact must be: (A) in person; or (B) via telephone call. (2) At least one (1) attempt to contact must include written notice. (c) Written and in person notice shall include, at minimum, the following information: (1) The fact that vegetation management is scheduled to occur. (2) An explanation of: (A) what vegetation management is; and (B) why it is necessary for safe and reliable electric service. (3) The fact that nonproperty owners living or working on the property who receive the notice are strongly encouraged to notify the property owner as soon as possible that vegetation management is scheduled to occur. (4) The fact that receipt of this notice by the occupant initiates the two (2) week window for calculating implied consent by the customer. (5) The estimated date that vegetation management is scheduled to occur. (6) Contact information, including, at a minimum, a telephone number for an authorized utility representative who is able to answer customer inquiries related to vegetation management. (d) Written notice will also include the following: (1) The heading, \"TREE TRIMMING NOTICE\". (2) The date the written notice was hand delivered or mailed. (3) The website address of the commission's vegetation management administrative rule, this rule. (4) The commission's website at http://www.in.gov/iurc. (5) The utility's vegetation management website address. (6) A reference to an educational resource for planting around electrical facilities, like the Arbor Day Foundation's right tree, right place program and the website address, if available. (7) A website address and telephone number for customers to obtain the name of the contractor, if used by the utility, that will deliver the in person notice or conduct vegetation management. (8) A statement that the utility's representative shall carry identification when delivering the in person notice or conducting vegetation management. (e) The customer may, within three (3) calendar days of receiving the notice in subsection (a), request the utility provide the estimated day that vegetation management is expected to occur. The utility will then provide the estimated day at least three (3) business days prior to engaging in vegetation management. If the customer requests a more specific time, the supervisor shall endeavor to work with the customer to give a precise time. (f) A utility must provide notice to a property owner by publishing notice in at least one (1) newspaper of general circulation in the county in which the property is located. The notice must include the following: (1) The fact that vegetation management is scheduled to occur. (2) The area where vegetation management is scheduled to occur by listing at least one (1) of the following: (A) The street name and block. (B) The name of the subdivision. (C) The intersecting roads bounding the area. (D) The specific address of each property. (3) The fact that publication of this notice initiates the two (2) week window for calculating implied consent by the property owner. (4) The estimated date that vegetation management is scheduled to occur. (5) Contact information, including, at a minimum, a telephone number for an authorized utility representative who is able to answer property owner inquiries related to vegetation management. (g) The property owner who receives notice by publication may, within three (3) calendar days of the notice being published as outlined in subsection (f), request the utility provide the estimated day that vegetation management is expected to occur. The utility will then provide the estimated day at least three (3) business days prior to engaging in vegetation management. If the property owner requests a more specific time, the supervisor shall endeavor to work with the property owner to give a precise time. (Indiana Utility Regulatory Commission; 170 IAC 4-9-4 ; filed Sep 27, 2012, 2:09 p.m.: 20121024-IR-170120042FRA ; readopted filed Aug 2, 2013, 2:16 p.m.: 20130828-IR-170130227RFA ; readopted filed Apr 11, 2019, 9:04 a.m.: 20190508-IR-170190136RFA )",
+      "body_text_s1_normalized": "(a) at least two (2) calendar weeks prior to engaging in routine vegetation management, the utility must provide notice to customers and property owners whose vegetation will be subject to the vegetation management except under the following circumstances: (1) the utility has: (a) a written easement; (b) government permit; (c) contractual agreement; or (d) court order; that expressly gives the utility the right to conduct vegetation management activities. (2) an emergency or storm event occurs. (b) a utility must provide notice to a customer in the following manner: (1) at least one (1) attempt to contact must be: (a) in person; or (b) via telephone call. (2) at least one (1) attempt to contact must include written notice. (c) written and in person notice shall include, at minimum, the following information: (1) the fact that vegetation management is scheduled to occur. (2) an explanation of: (a) what vegetation management is; and (b) why it is necessary for safe and reliable electric service. (3) the fact that nonproperty owners living or working on the property who receive the notice are strongly encouraged to notify the property owner as soon as possible that vegetation management is scheduled to occur. (4) the fact that receipt of this notice by the occupant initiates the two (2) week window for calculating implied consent by the customer. (5) the estimated date that vegetation management is scheduled to occur. (6) contact information, including, at a minimum, a telephone number for an authorized utility representative who is able to answer customer inquiries related to vegetation management. (d) written notice will also include the following: (1) the heading, \"tree trimming notice\". (2) the date the written notice was hand delivered or mailed. (3) the website address of the commission's vegetation management administrative rule, this rule. (4) the commission's website at http://www.in.gov/iurc. (5) the utility's vegetation management website address. (6) a reference to an educational resource for planting around electrical facilities, like the arbor day foundation's right tree, right place program and the website address, if available. (7) a website address and telephone number for customers to obtain the name of the contractor, if used by the utility, that will deliver the in person notice or conduct vegetation management. (8) a statement that the utility's representative shall carry identification when delivering the in person notice or conducting vegetation management. (e) the customer may, within three (3) calendar days of receiving the notice in subsection (a), request the utility provide the estimated day that vegetation management is expected to occur. the utility will then provide the estimated day at least three (3) business days prior to engaging in vegetation management. if the customer requests a more specific time, the supervisor shall endeavor to work with the customer to give a precise time. (f) a utility must provide notice to a property owner by publishing notice in at least one (1) newspaper of general circulation in the county in which the property is located. the notice must include the following: (1) the fact that vegetation management is scheduled to occur. (2) the area where vegetation management is scheduled to occur by listing at least one (1) of the following: (a) the street name and block. (b) the name of the subdivision. (c) the intersecting roads bounding the area. (d) the specific address of each property. (3) the fact that publication of this notice initiates the two (2) week window for calculating implied consent by the property owner. (4) the estimated date that vegetation management is scheduled to occur. (5) contact information, including, at a minimum, a telephone number for an authorized utility representative who is able to answer property owner inquiries related to vegetation management. (g) the property owner who receives notice by publication may, within three (3) calendar days of the notice being published as outlined in subsection (f), request the utility provide the estimated day that vegetation management is expected to occur. the utility will then provide the estimated day at least three (3) business days prior to engaging in vegetation management. if the property owner requests a more specific time, the supervisor shall endeavor to work with the property owner to give a precise time.",
+      "subsections": [],
+      "iac_cross_refs_s1": [
+        "170 IAC 4-9-4"
+      ],
+      "external_refs_s1": [
+        "IC 8-1",
+        "IC 8-1-1-3",
+        "IC 8-1-2",
+        "IC 8-1-2-4"
+      ],
+      "coverage_priority": "standard"
+    },
+    {
+      "citation": "170 IAC 4-9-5",
+      "heading": "170 IAC 4-9-5 Notice requirements for line upgrades",
+      "role": "scope",
+      "status_s1": "active",
+      "effective_date_s1": "2019-04-11",
+      "body_text_s1": "Authority: IC 8-1-1-3 ; IC 8-1-2-4 ; IC 8-1.5-3-8 Affected: IC 8-1-2 Sec. 5. (a) At least sixty (60) calendar days prior to a utility changing a distribution or transmission line to a higher voltage level, the utility must give notice to the affected customer if the change in the line will change the area in which vegetation management will be necessary as a result of safe clearance requirements. (b) Notice shall be provided in the same manner as in section 4(b) of this rule. (c) Notice shall include, at minimum, the following information: (1) The fact that line upgrades are scheduled to occur. (2) An explanation of what line upgrades are. (3) An explanation as to why line upgrades are necessary for safe and reliable electric service. (4) The fact that nonproperty owners living or working on the property and receiving the notice are strongly encouraged to notify the property owner as soon as possible that line upgrades are scheduled to occur. (5) The estimated date that line upgrades are scheduled to occur. (6) The estimated length of time construction will continue. (7) New vegetation restrictions on the property as a result of the line upgrades. (8) Changes to the property owner's easement or right of way as a result of the line upgrades. (9) Contact information, including, at a minimum, a telephone number for an authorized utility representative who is able to answer customer inquiries related to line upgrades. (Indiana Utility Regulatory Commission; 170 IAC 4-9-5 ; filed Sep 27, 2012, 2:09 p.m.: 20121024-IR- 170120042FRA ; readopted filed Aug 2, 2013, 2:16 p.m.: 20130828-IR-170130227RFA ; readopted filed Apr 11, 2019, 9:04 a.m.: 20190508-IR-170190136RFA )",
+      "body_text_s1_normalized": "(a) at least sixty (60) calendar days prior to a utility changing a distribution or transmission line to a higher voltage level, the utility must give notice to the affected customer if the change in the line will change the area in which vegetation management will be necessary as a result of safe clearance requirements. (b) notice shall be provided in the same manner as in section 4(b) of this rule. (c) notice shall include, at minimum, the following information: (1) the fact that line upgrades are scheduled to occur. (2) an explanation of what line upgrades are. (3) an explanation as to why line upgrades are necessary for safe and reliable electric service. (4) the fact that nonproperty owners living or working on the property and receiving the notice are strongly encouraged to notify the property owner as soon as possible that line upgrades are scheduled to occur. (5) the estimated date that line upgrades are scheduled to occur. (6) the estimated length of time construction will continue. (7) new vegetation restrictions on the property as a result of the line upgrades. (8) changes to the property owner's easement or right of way as a result of the line upgrades. (9) contact information, including, at a minimum, a telephone number for an authorized utility representative who is able to answer customer inquiries related to line upgrades.",
+      "subsections": [],
+      "iac_cross_refs_s1": [
+        "170 IAC 4-9-5"
+      ],
+      "external_refs_s1": [
+        "IC 8-1",
+        "IC 8-1-1-3",
+        "IC 8-1-2",
+        "IC 8-1-2-4"
+      ],
+      "coverage_priority": "standard"
+    },
+    {
+      "citation": "170 IAC 4-9-6",
+      "heading": "170 IAC 4-9-6 Emergency or public safety trimming",
+      "role": "scope",
+      "status_s1": "active",
+      "effective_date_s1": "2019-04-11",
+      "body_text_s1": "Authority: IC 8-1-1-3 ; IC 8-1-2-4 ; IC 8-1.5-3-8 Affected: IC 8-1-2 Sec. 6. In cases of emergency or public safety, utilities may, without customer consent, remove more than twenty-five percent (25%) of a tree or trim beyond existing easement or right-of-way boundaries in order to remedy the emergency or public safety situation. (Indiana Utility Regulatory Commission; 170 IAC 4-9-6 ; filed Sep 27, 2012, 2:09 p.m.: 20121024-IR- 170120042FRA ; readopted filed Aug 2, 2013, 2:16 p.m.: 20130828-IR-170130227RFA ; readopted filed Apr 11, 2019, 9:04 a.m.: 20190508-IR-170190136RFA )",
+      "body_text_s1_normalized": "in cases of emergency or public safety, utilities may, without customer consent, remove more than twenty-five percent (25%) of a tree or trim beyond existing easement or right-of-way boundaries in order to remedy the emergency or public safety situation.",
+      "subsections": [],
+      "iac_cross_refs_s1": [
+        "170 IAC 4-9-6"
+      ],
+      "external_refs_s1": [
+        "IC 8-1",
+        "IC 8-1-1-3",
+        "IC 8-1-2",
+        "IC 8-1-2-4"
+      ],
+      "coverage_priority": "standard"
+    },
+    {
+      "citation": "170 IAC 4-9-7",
+      "heading": "170 IAC 4-9-7 Vegetation management standards",
+      "role": "scope",
+      "status_s1": "active",
+      "effective_date_s1": "2019-04-11",
+      "body_text_s1": "Authority: IC 8-1-1-3 ; IC 8-1-2-4 ; IC 8-1.5-3-8 Affected: IC 8-1-2 Sec. 7. (a) Utilities, their agents, and contractors shall apply and adhere to the guidelines of: (1) American National Standards Institute ANSI A300; (2) the National Electric Safety Code; (3) the Shigo Guide; and (4) the International Society of Arboriculture Best Management Practices. (b) There is not a uniform clearance requirement, but line clearances should take into consideration the: (1) characteristics of the locality; (2) electrical facility; and (3) health of the tree. (c) Except in situations of emergency or public safety, if a tree would have more than twenty-five percent (25%) of its canopy removed, the utility or its agent or contractor shall do one (1) of the following actions: (1) Obtain consent from the property owner. (2) If the property owner and utility or its agent or contractor cannot mutually agree on how the tree can be trimmed to provide sufficient clearance in order to maintain reliable electric service, the utility or its agent or contractor shall take one (1) of the following actions: (A) Remove the tree, at the utility's expense, as long as the utility has secured the requisite easements to allow its personnel onto the owner's property. (B) Inform the customer that it will need to make non-ANSI standards cuts in order to provide clearance. (d) Brush that is under or near a utility's electrical facilities may be removed by the utility without the consent of the customer only when its removal is necessary for safe and reliable service. (e) Debris associated with routine maintenance, in a maintained area, absent intervening inclement weather that may pull crews from maintenance activities, shall be removed within three (3) calendar days or left on the property as agreed to in writing by the owner. (f) Utilities and their agents and contractors are not required to clear debris caused by storms and other natural occurrences like tree failures. (g) A utility shall file a separate report regarding tree-related outages by March 31 annually and whenever the utility makes a change to its vegetation management plan. The report shall include the following information: (1) The utility's vegetation management budget. (2) Actual expenditures for the prior calendar year. (3) The number of customer complaints related to tree trimming. (4) The manner in which complaints were addressed or resolved. (5) Tree-related outages as a percentage of total outages. (Indiana Utility Regulatory Commission; 170 IAC 4-9-7 ; filed Sep 27, 2012, 2:09 p.m.: 20121024-IR- 170120042FRA ; readopted filed Aug 2, 2013, 2:16 p.m.: 20130828-IR-170130227RFA ; readopted filed Apr 11, 2019, 9:04 a.m.: 20190508-IR-170190136RFA )",
+      "body_text_s1_normalized": "(a) utilities, their agents, and contractors shall apply and adhere to the guidelines of: (1) american national standards institute ansi a300; (2) the national electric safety code; (3) the shigo guide; and (4) the international society of arboriculture best management practices. (b) there is not a uniform clearance requirement, but line clearances should take into consideration the: (1) characteristics of the locality; (2) electrical facility; and (3) health of the tree. (c) except in situations of emergency or public safety, if a tree would have more than twenty-five percent (25%) of its canopy removed, the utility or its agent or contractor shall do one (1) of the following actions: (1) obtain consent from the property owner. (2) if the property owner and utility or its agent or contractor cannot mutually agree on how the tree can be trimmed to provide sufficient clearance in order to maintain reliable electric service, the utility or its agent or contractor shall take one (1) of the following actions: (a) remove the tree, at the utility's expense, as long as the utility has secured the requisite easements to allow its personnel onto the owner's property. (b) inform the customer that it will need to make non-ansi standards cuts in order to provide clearance. (d) brush that is under or near a utility's electrical facilities may be removed by the utility without the consent of the customer only when its removal is necessary for safe and reliable service. (e) debris associated with routine maintenance, in a maintained area, absent intervening inclement weather that may pull crews from maintenance activities, shall be removed within three (3) calendar days or left on the property as agreed to in writing by the owner. (f) utilities and their agents and contractors are not required to clear debris caused by storms and other natural occurrences like tree failures. (g) a utility shall file a separate report regarding tree-related outages by march 31 annually and whenever the utility makes a change to its vegetation management plan. the report shall include the following information: (1) the utility's vegetation management budget. (2) actual expenditures for the prior calendar year. (3) the number of customer complaints related to tree trimming. (4) the manner in which complaints were addressed or resolved. (5) tree-related outages as a percentage of total outages.",
+      "subsections": [],
+      "iac_cross_refs_s1": [
+        "170 IAC 4-9-7"
+      ],
+      "external_refs_s1": [
+        "ANSI A300",
+        "IC 8-1",
+        "IC 8-1-1-3",
+        "IC 8-1-2",
+        "IC 8-1-2-4"
+      ],
+      "coverage_priority": "standard"
+    },
+    {
+      "citation": "170 IAC 4-9-8",
+      "heading": "170 IAC 4-9-8 Dispute resolution process prior to vegetation management",
+      "role": "scope",
+      "status_s1": "active",
+      "effective_date_s1": "2019-04-11",
+      "body_text_s1": "Authority: IC 8-1-1-3 ; IC 8-1-2-4 ; IC 8-1.5-3-8 Affected: IC 8-1-2 Sec. 8. (a) To temporarily stay the proposed vegetation management on the customer's property or rental property, a customer must notify the utility of the customer's objection to the proposed vegetation management within five (5) business days of the customer's receipt of the notice required under section 4 of this rule. Questions or requests for information are not customer objections. (b) A utility must respond to a customer's objection: (1) in person; (2) via telephone call; or (3) in writing; within three (3) business days. (c) If the initial utility representative cannot resolve the customer's objection regarding proposed vegetation management, at least one (1) additional authorized utility representative must attempt to resolve the objection. If the utility is unsuccessful in resolving the objection, the customer shall be provided with the following: (1) The website location of the commission's vegetation management administrative rule, this rule. (2) Contact information, including, at minimum, a telephone number, for the commission's consumer affairs division. (d) No temporary stay of vegetation management shall be available when one (1) of the following occurs: (1) An emergency, storm event, or public safety situation exists. (2) The customer has withdrawn the objection or approved conditions under which cutting may resume, either in writing or during a recorded call. (3) More than seven (7) calendar days have passed since the utility provided the proposed resolution referenced in the complaint process under 170 IAC 16-1-4 (c)(5) and the customer failed to file an informal complaint to the commission as required by 170 IAC 16-1-5 (a). (4) A final disposition on an informal complaint has been rendered by the commission. (Indiana Utility Regulatory Commission; 170 IAC 4-9-8 ; filed Sep 27, 2012, 2:09 p.m.: 20121024-IR- 170120042FRA ; readopted filed Aug 2, 2013, 2:16 p.m.: 20130828-IR-170130227RFA ; readopted filed Apr 11, 2019, 9:04 a.m.: 20190508-IR-170190136RFA )",
+      "body_text_s1_normalized": "(a) to temporarily stay the proposed vegetation management on the customer's property or rental property, a customer must notify the utility of the customer's objection to the proposed vegetation management within five (5) business days of the customer's receipt of the notice required under section 4 of this rule. questions or requests for information are not customer objections. (b) a utility must respond to a customer's objection: (1) in person; (2) via telephone call; or (3) in writing; within three (3) business days. (c) if the initial utility representative cannot resolve the customer's objection regarding proposed vegetation management, at least one (1) additional authorized utility representative must attempt to resolve the objection. if the utility is unsuccessful in resolving the objection, the customer shall be provided with the following: (1) the website location of the commission's vegetation management administrative rule, this rule. (2) contact information, including, at minimum, a telephone number, for the commission's consumer affairs division. (d) no temporary stay of vegetation management shall be available when one (1) of the following occurs: (1) an emergency, storm event, or public safety situation exists. (2) the customer has withdrawn the objection or approved conditions under which cutting may resume, either in writing or during a recorded call. (3) more than seven (7) calendar days have passed since the utility provided the proposed resolution referenced in the complaint process under 170 iac 16-1-4 (c)(5) and the customer failed to file an informal complaint to the commission as required by 170 iac 16-1-5 (a). (4) a final disposition on an informal complaint has been rendered by the commission.",
+      "subsections": [],
+      "iac_cross_refs_s1": [
+        "170 IAC 16-1-4",
+        "170 IAC 16-1-5",
+        "170 IAC 4-9-8"
+      ],
+      "external_refs_s1": [
+        "IC 8-1",
+        "IC 8-1-1-3",
+        "IC 8-1-2",
+        "IC 8-1-2-4"
+      ],
+      "coverage_priority": "standard"
+    },
+    {
+      "citation": "170 IAC 4-9-9",
+      "heading": "170 IAC 4-9-9 Dispute resolution process during vegetation management",
+      "role": "scope",
+      "status_s1": "active",
+      "effective_date_s1": "2019-04-11",
+      "body_text_s1": "Authority: IC 8-1-1-3 ; IC 8-1-2-4 ; IC 8-1.5-3-8 Affected: IC 8-1-2 Sec. 9. (a) Upon request of the customer, the utility shall temporarily stay vegetation management on the customer's premises during the vegetation management only if one (1) of the following occurs or is disputed: (1) The utility failed to provide the notice required under section 4 of this rule. (2) The utility is engaging in vegetation management outside the scope of a written or recorded agreement between the customer and the utility. (3) The utility did not have authority to enter the customer's property. (4) The utility did not exercise due diligence to secure an easement or right of way document in accordance with section 3(b)(2) [of this rule] . (b) At least one (1) member of the work crew must have the authority from the utility to discuss and attempt to resolve customer objections and must respond to the customer's inquiry or complaint. If the work crew cannot resolve the customer's objection regarding vegetation management, at least one (1) additional authorized utility representative must attempt to resolve the objection. If the utility is unsuccessful in resolving the objection, the utility shall provide to the customer the information required in 170 IAC 16-1-4 (c)(5). (c) A utility may proceed with the vegetation management where: (1) an emergency exists; (2) the customer has withdrawn the objection or approved conditions under which cutting may resume, either in writing or during a recorded call; (3) more than seven (7) calendar days have passed since the utility provided the proposed resolution referenced in the complaint process under 170 IAC 16-1-4 (c)(5) and the customer failed to file an informal complaint to the commission as required by 170 IAC 16-1-5 (a); (4) the customer failed to take timely action to seek further review of a decision of the commission's consumer affairs division or its director under 170 IAC 16-1-5 (d) or 170 IAC 16-1-6 (a); or (5) a final disposition on an informal complaint has been rendered by the commission. (Indiana Utility Regulatory Commission; 170 IAC 4-9-9 ; filed Sep 27, 2012, 2:09 p.m.: 20121024-IR- 170120042FRA ; readopted filed Aug 2, 2013, 2:16 p.m.: 20130828-IR-170130227RFA ; readopted filed Apr 11, 2019, 9:04 a.m.: 20190508-IR-170190136RFA )",
+      "body_text_s1_normalized": "(a) upon request of the customer, the utility shall temporarily stay vegetation management on the customer's premises during the vegetation management only if one (1) of the following occurs or is disputed: (1) the utility failed to provide the notice required under section 4 of this rule. (2) the utility is engaging in vegetation management outside the scope of a written or recorded agreement between the customer and the utility. (3) the utility did not have authority to enter the customer's property. (4) the utility did not exercise due diligence to secure an easement or right of way document in accordance with section 3(b)(2) [of this rule] . (b) at least one (1) member of the work crew must have the authority from the utility to discuss and attempt to resolve customer objections and must respond to the customer's inquiry or complaint. if the work crew cannot resolve the customer's objection regarding vegetation management, at least one (1) additional authorized utility representative must attempt to resolve the objection. if the utility is unsuccessful in resolving the objection, the utility shall provide to the customer the information required in 170 iac 16-1-4 (c)(5). (c) a utility may proceed with the vegetation management where: (1) an emergency exists; (2) the customer has withdrawn the objection or approved conditions under which cutting may resume, either in writing or during a recorded call; (3) more than seven (7) calendar days have passed since the utility provided the proposed resolution referenced in the complaint process under 170 iac 16-1-4 (c)(5) and the customer failed to file an informal complaint to the commission as required by 170 iac 16-1-5 (a); (4) the customer failed to take timely action to seek further review of a decision of the commission's consumer affairs division or its director under 170 iac 16-1-5 (d) or 170 iac 16-1-6 (a); or (5) a final disposition on an informal complaint has been rendered by the commission.",
+      "subsections": [],
+      "iac_cross_refs_s1": [
+        "170 IAC 16-1-4",
+        "170 IAC 16-1-5",
+        "170 IAC 16-1-6",
+        "170 IAC 4-9-9"
+      ],
+      "external_refs_s1": [
+        "IC 8-1",
+        "IC 8-1-1-3",
+        "IC 8-1-2",
+        "IC 8-1-2-4"
+      ],
+      "coverage_priority": "standard"
+    },
+    {
+      "citation": "170 IAC 4-9-10",
+      "heading": "170 IAC 4-9-10 Dispute resolution process after vegetation management",
+      "role": "scope",
+      "status_s1": "active",
+      "effective_date_s1": "2019-04-11",
+      "body_text_s1": "Authority: IC 8-1-1-3 ; IC 8-1-2-4 ; IC 8-1.5-3-8 Affected: IC 8-1-2 Sec. 10. (a) A customer may contact the utility regarding vegetation management on the customer's premises after the vegetation management occurred if one (1) of the following occurs: (1) The utility failed to provide the notice required under section 4 of this rule. (2) The utility engaged in vegetation management outside the scope of an agreement between the customer and the utility. (3) The utility did not have authority to enter the customer's property. (4) The utility failed to follow the vegetation management pruning standards required by the commission or by the utility's own vegetation management policy. (5) Another reason permitted by law. (b) A utility must respond within three (3) business days of receiving a customer's inquiry or dispute: (1) in person; (2) via telephone call; or (3) in writing. (c) If the initial utility representative cannot resolve the customer's dispute regarding vegetation management, at least one (1) additional authorized utility representative must attempt to resolve the dispute. If the utility is unsuccessful in resolving the dispute, the customer shall be provided the information required in 170 IAC 16-1-5 and will be informed that disputes over monetary damages can only be resolved by a civil court, not the commission. (Indiana Utility Regulatory Commission; 170 IAC 4-9-10 ; filed Sep 27, 2012, 2:09 p.m.: 20121024-IR-170120042FRA ; readopted filed Aug 2, 2013, 2:16 p.m.: 20130828-IR-170130227RFA ; readopted filed Apr 11, 2019, 9:04 a.m.: 20190508-IR-170190136RFA )",
+      "body_text_s1_normalized": "(a) a customer may contact the utility regarding vegetation management on the customer's premises after the vegetation management occurred if one (1) of the following occurs: (1) the utility failed to provide the notice required under section 4 of this rule. (2) the utility engaged in vegetation management outside the scope of an agreement between the customer and the utility. (3) the utility did not have authority to enter the customer's property. (4) the utility failed to follow the vegetation management pruning standards required by the commission or by the utility's own vegetation management policy. (5) another reason permitted by law. (b) a utility must respond within three (3) business days of receiving a customer's inquiry or dispute: (1) in person; (2) via telephone call; or (3) in writing. (c) if the initial utility representative cannot resolve the customer's dispute regarding vegetation management, at least one (1) additional authorized utility representative must attempt to resolve the dispute. if the utility is unsuccessful in resolving the dispute, the customer shall be provided the information required in 170 iac 16-1-5 and will be informed that disputes over monetary damages can only be resolved by a civil court, not the commission.",
+      "subsections": [],
+      "iac_cross_refs_s1": [
+        "170 IAC 16-1-5",
+        "170 IAC 4-9-10"
+      ],
+      "external_refs_s1": [
+        "IC 8-1",
+        "IC 8-1-1-3",
+        "IC 8-1-2",
+        "IC 8-1-2-4"
+      ],
+      "coverage_priority": "standard"
+    },
+    {
+      "citation": "170 IAC 4-9-11",
+      "heading": "170 IAC 4-9-11 Customer education process",
+      "role": "scope",
+      "status_s1": "active",
+      "effective_date_s1": "2019-04-11",
+      "body_text_s1": "Authority: IC 8-1-1-3 ; IC 8-1-2-4 ; IC 8-1.5-3-8 Affected: IC 8-1-2 Sec. 11. A utility shall develop and implement an education plan to inform and educate customers on the following: (1) Tree and vegetation selection and placement around electric facilities. (2) The public importance of vegetation management to avoid: (A) electric interruptions; (B) injuries; and (C) fatalities. (3) The need for, and benefit of, preventing tree contact with power lines. (4) The importance of cooperation between customers and their utility in accomplishing the essential public task of power line maintenance. (5) The critical importance of the public service of vegetation management to: (A) protect electric service reliability; and (B) avoid injuries and fatalities from electrocution. (6) Trimming cycles a utility chooses to implement, including how the chosen trim cycle impacts clearance distance and the extent to which a tree's appearance will be impacted based upon that chosen cycle. (Indiana Utility Regulatory Commission; 170 IAC 4-9-11 ; filed Sep 27, 2012, 2:09 p.m.: 20121024-IR- 170120042FRA ; readopted filed Aug 2, 2013, 2:16 p.m.: 20130828-IR-170130227RFA ; readopted filed Apr 11, 2019, 9:04 a.m.: 20190508-IR-170190136RFA )",
+      "body_text_s1_normalized": "a utility shall develop and implement an education plan to inform and educate customers on the following: (1) tree and vegetation selection and placement around electric facilities. (2) the public importance of vegetation management to avoid: (a) electric interruptions; (b) injuries; and (c) fatalities. (3) the need for, and benefit of, preventing tree contact with power lines. (4) the importance of cooperation between customers and their utility in accomplishing the essential public task of power line maintenance. (5) the critical importance of the public service of vegetation management to: (a) protect electric service reliability; and (b) avoid injuries and fatalities from electrocution. (6) trimming cycles a utility chooses to implement, including how the chosen trim cycle impacts clearance distance and the extent to which a tree's appearance will be impacted based upon that chosen cycle.",
+      "subsections": [],
+      "iac_cross_refs_s1": [
+        "170 IAC 4-9-11"
+      ],
+      "external_refs_s1": [
+        "IC 8-1",
+        "IC 8-1-1-3",
+        "IC 8-1-2",
+        "IC 8-1-2-4"
+      ],
+      "coverage_priority": "standard"
+    },
+    {
+      "citation": "170 IAC 4-9-12",
+      "heading": "170 IAC 4-9-12 Tree replacement program",
+      "role": "scope",
+      "status_s1": "active",
+      "effective_date_s1": "2019-04-11",
+      "body_text_s1": "Authority: IC 8-1-1-3 ; IC 8-1-2-4 ; IC 8-1.5-3-8 Affected: IC 8-1-2 Sec. 12. Where a tree will be removed, a utility may offer to provide the customer with: (1) a power line compatible vegetation; (2) other replacement plant; or (3) monetary compensation or credit at an amount agreed to by the parties; provided that the customer agrees not to plant a tree that will encroach into the utility's facilities at a future date and consents to the removal by the utility if that kind of a tree is planted. (Indiana Utility Regulatory Commission; 170 IAC 4-9-12 ; filed Sep 27, 2012, 2:09 p.m.: 20121024-IR-170120042FRA ; readopted filed Aug 2, 2013, 2:16 p.m.: 20130828-IR- 170130227RFA ; readopted filed Apr 11, 2019, 9:04 a.m.: 20190508-IR-170190136RFA )",
+      "body_text_s1_normalized": "where a tree will be removed, a utility may offer to provide the customer with: (1) a power line compatible vegetation; (2) other replacement plant; or (3) monetary compensation or credit at an amount agreed to by the parties; provided that the customer agrees not to plant a tree that will encroach into the utility's facilities at a future date and consents to the removal by the utility if that kind of a tree is planted.",
+      "subsections": [],
+      "iac_cross_refs_s1": [
+        "170 IAC 4-9-12"
+      ],
+      "external_refs_s1": [
+        "IC 8-1",
+        "IC 8-1-1-3",
+        "IC 8-1-2",
+        "IC 8-1-2-4"
+      ],
+      "coverage_priority": "high"
+    },
+    {
+      "citation": "170 IAC 4-9-13",
+      "heading": "170 IAC 4-9-13 Utility representative identification",
+      "role": "scope",
+      "status_s1": "active",
+      "effective_date_s1": "2019-04-11",
+      "body_text_s1": "Authority: IC 8-1-1-3 ; IC 8-1-2-4 ; IC 8-1.5-3-8 Affected: IC 8-1-2 Sec. 13. Employees or contractors performing: (1) vegetation management; or (2) in person notification for vegetation management; on behalf of the utility shall carry identification and provide it for inspection by the customer upon request. (Indiana Utility Regulatory Commission; 170 IAC 4-9-13 ; filed Sep 27, 2012, 2:09 p.m.: 20121024-IR-170120042FRA ; readopted filed Aug 2, 2013, 2:16 p.m.: 20130828-IR-170130227RFA ; readopted filed Apr 11, 2019, 9:04 a.m.: 20190508-IR- 170190136RFA )",
+      "body_text_s1_normalized": "employees or contractors performing: (1) vegetation management; or (2) in person notification for vegetation management; on behalf of the utility shall carry identification and provide it for inspection by the customer upon request.",
+      "subsections": [],
+      "iac_cross_refs_s1": [
+        "170 IAC 4-9-13"
+      ],
+      "external_refs_s1": [
+        "IC 8-1",
+        "IC 8-1-1-3",
+        "IC 8-1-2",
+        "IC 8-1-2-4"
+      ],
+      "coverage_priority": "standard"
+    },
+    {
+      "citation": "170 IAC 16-1-1",
+      "heading": "170 IAC 16-1-1 Scope and applicability",
+      "role": "scope",
+      "status_s1": "active",
+      "effective_date_s1": "2022-07-12",
+      "body_text_s1": "Authority: IC 8-1-1-3 ; IC 8-1-2-34.5 Affected: IC 8-1-2-34.5 Sec. 1. (a) This article implements the authority of the commission under IC 8-1-2-34.5 . (b) This article applies to any utility subject to the commission's jurisdiction that offers: (1) gas; (2) electric; (3) water; or (4) sewage disposal; services. (c) The procedures for the resolution of customer complaints involving telephone utilities can be found in 170 IAC 7 . (Indiana Utility Regulatory Commission; 170 IAC 16-1-1 ; filed May 25, 2010, 1:52 p.m.: 20100623-IR- 170090792FRA ; readopted filed Jul 12, 2016, 10:01 a.m.: 20160810-IR-170160168RFA ; readopted filed Jul 12, 2022, 12:18 p.m.: 20220810-IR-170220116RFA )",
+      "body_text_s1_normalized": "(a) this article implements the authority of the commission under ic 8-1-2-34.5 . (b) this article applies to any utility subject to the commission's jurisdiction that offers: (1) gas; (2) electric; (3) water; or (4) sewage disposal; services. (c) the procedures for the resolution of customer complaints involving telephone utilities can be found in 170 iac 7 .",
+      "subsections": [],
+      "iac_cross_refs_s1": [
+        "170 IAC 16-1-1"
+      ],
+      "external_refs_s1": [
+        "IC 8-1-1-3",
+        "IC 8-1-2-34"
+      ],
+      "coverage_priority": "high"
+    },
+    {
+      "citation": "170 IAC 16-1-2",
+      "heading": "170 IAC 16-1-2 Definitions",
+      "role": "scope",
+      "status_s1": "active",
+      "effective_date_s1": "2022-07-12",
+      "body_text_s1": "Authority: IC 8-1-1-3 ; IC 8-1-2-34.5 Affected: IC 8-1-2-1 Sec. 2. Where applicable, terms used in this rule shall have the meaning assigned to them in IC 8-1-2-1 . The following definitions apply throughout this rule: (1) \"Commission\" means the Indiana utility regulatory commission. (2) \"Consumer affairs\" means the consumer affairs division of the commission. (3) \"Customer\" means any: (A) person; (B) firm; (C) corporation; (D) municipality; or (E) government agency; who has agreed to pay for service from a utility, or a person authorized under a valid power of attorney to act on another person's or the entity's behalf. (4) \"Utility\" means the following: (A) Electric utilities. (B) Gas utilities. (C) Water utilities. (D) Sewage disposal services. (Indiana Utility Regulatory Commission; 170 IAC 16-1-2 ; filed May 25, 2010, 1:52 p.m.: 20100623-IR- 170090792FRA ; readopted filed Jul 12, 2016, 10:01 a.m.: 20160810-IR-170160168RFA ; readopted filed Jul 12, 2022, 12:18 p.m.: 20220810-IR-170220116RFA )",
+      "body_text_s1_normalized": "where applicable, terms used in this rule shall have the meaning assigned to them in ic 8-1-2-1 . the following definitions apply throughout this rule: (1) \"commission\" means the indiana utility regulatory commission. (2) \"consumer affairs\" means the consumer affairs division of the commission. (3) \"customer\" means any: (a) person; (b) firm; (c) corporation; (d) municipality; or (e) government agency; who has agreed to pay for service from a utility, or a person authorized under a valid power of attorney to act on another person's or the entity's behalf. (4) \"utility\" means the following: (a) electric utilities. (b) gas utilities. (c) water utilities. (d) sewage disposal services.",
+      "subsections": [],
+      "iac_cross_refs_s1": [
+        "170 IAC 16-1-2"
+      ],
+      "external_refs_s1": [
+        "IC 8-1-1-3",
+        "IC 8-1-2-1",
+        "IC 8-1-2-34"
+      ],
+      "coverage_priority": "standard"
+    },
+    {
+      "citation": "170 IAC 16-1-3",
+      "heading": "170 IAC 16-1-3 Customer dispute process; time periods",
+      "role": "scope",
+      "status_s1": "active",
+      "effective_date_s1": "2022-07-12",
+      "body_text_s1": "Authority: IC 8-1-1-3 ; IC 8-1-2-34.5 Affected: IC 8-1-2.34.5 Sec. 3. (a) Disputes regarding any utility service or billing matter that have not been resolved at the utility level may constitute a complaint and may be resolved through the following process: (1) A customer may appeal a utility's proposed resolution of a dispute by filing an informal complaint with consumer affairs in accordance with section 5 of this rule. (2) A customer or utility may request commission review of a consumer affairs decision in accordance with section 6 of this rule. (b) In computing any period of time prescribed or allowed by this article, the day of the act from which the designated period of time begins to run shall not be included. The last day of the period so computed is to be included unless it is a: (1) Saturday; (2) Sunday; (3) legal holiday as defined by state statute; or (4) day that the utility or commission office in which the act is to occur is closed during regular business hours. (c) The period of time runs until the end of the next day that is not a: (1) Saturday; (2) Sunday; (3) legal holiday; or (4) day on which the office is closed. (Indiana Utility Regulatory Commission; 170 IAC 16-1-3 ; filed May 25, 2010, 1:52 p.m.: 20100623-IR- 170090792FRA ; readopted filed Jul 12, 2016, 10:01 a.m.: 20160810-IR-170160168RFA ; readopted filed Jul 12, 2022, 12:18 p.m.: 20220810-IR-170220116RFA )",
+      "body_text_s1_normalized": "(a) disputes regarding any utility service or billing matter that have not been resolved at the utility level may constitute a complaint and may be resolved through the following process: (1) a customer may appeal a utility's proposed resolution of a dispute by filing an informal complaint with consumer affairs in accordance with section 5 of this rule. (2) a customer or utility may request commission review of a consumer affairs decision in accordance with section 6 of this rule. (b) in computing any period of time prescribed or allowed by this article, the day of the act from which the designated period of time begins to run shall not be included. the last day of the period so computed is to be included unless it is a: (1) saturday; (2) sunday; (3) legal holiday as defined by state statute; or (4) day that the utility or commission office in which the act is to occur is closed during regular business hours. (c) the period of time runs until the end of the next day that is not a: (1) saturday; (2) sunday; (3) legal holiday; or (4) day on which the office is closed.",
+      "subsections": [],
+      "iac_cross_refs_s1": [
+        "170 IAC 16-1-3"
+      ],
+      "external_refs_s1": [
+        "IC 8-1-1-3",
+        "IC 8-1-2",
+        "IC 8-1-2-34"
+      ],
+      "coverage_priority": "standard"
+    },
+    {
+      "citation": "170 IAC 16-1-4",
+      "heading": "170 IAC 16-1-4 Disputes; utility responsibilities",
+      "role": "scope",
+      "status_s1": "active",
+      "effective_date_s1": "2022-07-12",
+      "body_text_s1": "Authority: IC 8-1-1-3 ; IC 8-1-2-34.5 Affected: IC 8-1-2-34.5 Sec. 4. (a) A utility shall provide the following means for customers to bring disputes to its attention: (1) By telephone. (2) In writing. (3) Through the utility's website. (4) At the utility's business office. (5) By any other method made available by the utility. (b) The utility shall retain records of disputes received under this rule and the resolutions thereof for a period of six (6) months from the date of final resolution of the dispute under this rule and the records shall include, at a minimum, the following information: (1) The customer's name. (2) The customer's service address. (3) The telephone number at which the customer may be contacted, if such number is available. (4) The customer's account number. (5) The general nature of the dispute. (c) A utility shall take the following actions with regard to each dispute: (1) Inform the customer that any portion of a bill that is undisputed must be paid by the date due stated on the bill in order to avoid disconnection of service in accordance with section 7 of this rule. (2) Investigate the matter promptly and thoroughly. (3) Make a good faith effort to resolve the matter. (4) Advise the customer of the utility's proposed resolution by: (A) telephone; (B) written notice mailed to the customer's billing address; (C) e-mail; or (D) another means reasonably calculated to reach the customer. (5) Advise the customer that if he or she is not satisfied with the utility's proposed resolution, the customer may submit an informal complaint to consumer affairs within seven (7) days of the date the proposed resolution is received. (6) Offer to provide the customer with the following consumer affairs contact information: (A) Mailing address. (B) Toll free complaint number. (C) Local telephone number. A utility shall make records available upon request by the commission once an informal complaint has been submitted. (d) Each utility shall annually submit a report to the commission that shall state and classify the number of complaints made to the utility under section 3 of this rule, the general nature of the subject matter thereof, how the complaint was received, and whether a commission review was conducted thereon. (Indiana Utility Regulatory Commission; 170 IAC 16-1-4 ; filed May 25, 2010, 1:52 p.m.: 20100623-IR-170090792FRA ; readopted filed Jul 12, 2016, 10:01 a.m.: 20160810-IR-170160168RFA ; readopted filed Jul 12, 2022, 12:18 p.m.: 20220810-IR-170220116RFA )",
+      "body_text_s1_normalized": "(a) a utility shall provide the following means for customers to bring disputes to its attention: (1) by telephone. (2) in writing. (3) through the utility's website. (4) at the utility's business office. (5) by any other method made available by the utility. (b) the utility shall retain records of disputes received under this rule and the resolutions thereof for a period of six (6) months from the date of final resolution of the dispute under this rule and the records shall include, at a minimum, the following information: (1) the customer's name. (2) the customer's service address. (3) the telephone number at which the customer may be contacted, if such number is available. (4) the customer's account number. (5) the general nature of the dispute. (c) a utility shall take the following actions with regard to each dispute: (1) inform the customer that any portion of a bill that is undisputed must be paid by the date due stated on the bill in order to avoid disconnection of service in accordance with section 7 of this rule. (2) investigate the matter promptly and thoroughly. (3) make a good faith effort to resolve the matter. (4) advise the customer of the utility's proposed resolution by: (a) telephone; (b) written notice mailed to the customer's billing address; (c) e-mail; or (d) another means reasonably calculated to reach the customer. (5) advise the customer that if he or she is not satisfied with the utility's proposed resolution, the customer may submit an informal complaint to consumer affairs within seven (7) days of the date the proposed resolution is received. (6) offer to provide the customer with the following consumer affairs contact information: (a) mailing address. (b) toll free complaint number. (c) local telephone number. a utility shall make records available upon request by the commission once an informal complaint has been submitted. (d) each utility shall annually submit a report to the commission that shall state and classify the number of complaints made to the utility under section 3 of this rule, the general nature of the subject matter thereof, how the complaint was received, and whether a commission review was conducted thereon.",
+      "subsections": [],
+      "iac_cross_refs_s1": [
+        "170 IAC 16-1-4"
+      ],
+      "external_refs_s1": [
+        "IC 8-1-1-3",
+        "IC 8-1-2-34"
+      ],
+      "coverage_priority": "high"
+    },
+    {
+      "citation": "170 IAC 16-1-5",
+      "heading": "170 IAC 16-1-5 Consumer affairs review of utility's proposed resolution; consumer affairs' responsibilities",
+      "role": "scope",
+      "status_s1": "active",
+      "effective_date_s1": "2022-07-12",
+      "body_text_s1": "Authority: IC 8-1-1-3 ; IC 8-1-2-34.5 Affected: IC 8-1-2-34.5 Sec. 5. (a) If a customer is dissatisfied with a utility's proposed resolution of a dispute, the customer may appeal the proposed resolution to consumer affairs by submitting an informal complaint. A complaint must be submitted under this section within seven (7) days of the date the customer receives the utility's proposed resolution. At its discretion, consumer affairs may waive the time limitation for good cause, including failure to receive timely notice of proposed resolution. A complaint shall be considered submitted upon receipt by consumer affairs. (b) A customer may file a complaint with consumer affairs in the following ways: (1) By telephone. (2) In writing. (3) By completing a form available at the commission's office and on the commission's website. (c) Upon receipt of a complaint, consumer affairs shall take the following actions: (1) Provide the utility: (A) a copy of the complaint if in writing, or a summary of the complaint if not in writing; and (B) an opportunity to respond. (2) Conduct an informal review consisting of not less than a prompt and thorough investigation of the disputed facts of the complaint. (3) To the extent that consumer affairs may deem necessary to ensure the accuracy and completeness of the consumer affairs record, meet with the parties or require additional information or documentation from the parties, to which parties must respond within fourteen (14) days unless otherwise directed by consumer affairs. (4) Preserve in a systematic order all information and documentation received and generated during the review, and the consumer affairs decision, which shall comprise the consumer affairs record and be made readily available to the parties for inspection and copying upon request. (5) Provide a decision to the customer and the utility within thirty (30) days of the complaint submission date, except that if the complexity of issues or circumstances involved in a complaint require additional time, consumer affairs shall notify parties within thirty (30) days of the complaint submission date that additional time is required. (d) If a customer or utility is dissatisfied with the consumer affairs resolution of the informal complaint, either party may request a review by the director of consumer affairs or director's designee within seven (7) days of the date of receipt of the proposed resolution of the informal complaint. (e) Notwithstanding any other provision in this section, consumer affairs may refer a complaint to the commission for review at any time during the review process based on the complexity of issues or circumstances involved in a complaint as determined by the director of consumer affairs or director's designee. (Indiana Utility Regulatory Commission; 170 IAC 16-1-5 ; filed May 25, 2010, 1:52 p.m.: 20100623-IR-170090792FRA ; readopted filed Jul 12, 2016, 10:01 a.m.: 20160810-IR-170160168RFA ; readopted filed Jul 12, 2022, 12:18 p.m.: 20220810-IR-170220116RFA )",
+      "body_text_s1_normalized": "(a) if a customer is dissatisfied with a utility's proposed resolution of a dispute, the customer may appeal the proposed resolution to consumer affairs by submitting an informal complaint. a complaint must be submitted under this section within seven (7) days of the date the customer receives the utility's proposed resolution. at its discretion, consumer affairs may waive the time limitation for good cause, including failure to receive timely notice of proposed resolution. a complaint shall be considered submitted upon receipt by consumer affairs. (b) a customer may file a complaint with consumer affairs in the following ways: (1) by telephone. (2) in writing. (3) by completing a form available at the commission's office and on the commission's website. (c) upon receipt of a complaint, consumer affairs shall take the following actions: (1) provide the utility: (a) a copy of the complaint if in writing, or a summary of the complaint if not in writing; and (b) an opportunity to respond. (2) conduct an informal review consisting of not less than a prompt and thorough investigation of the disputed facts of the complaint. (3) to the extent that consumer affairs may deem necessary to ensure the accuracy and completeness of the consumer affairs record, meet with the parties or require additional information or documentation from the parties, to which parties must respond within fourteen (14) days unless otherwise directed by consumer affairs. (4) preserve in a systematic order all information and documentation received and generated during the review, and the consumer affairs decision, which shall comprise the consumer affairs record and be made readily available to the parties for inspection and copying upon request. (5) provide a decision to the customer and the utility within thirty (30) days of the complaint submission date, except that if the complexity of issues or circumstances involved in a complaint require additional time, consumer affairs shall notify parties within thirty (30) days of the complaint submission date that additional time is required. (d) if a customer or utility is dissatisfied with the consumer affairs resolution of the informal complaint, either party may request a review by the director of consumer affairs or director's designee within seven (7) days of the date of receipt of the proposed resolution of the informal complaint. (e) notwithstanding any other provision in this section, consumer affairs may refer a complaint to the commission for review at any time during the review process based on the complexity of issues or circumstances involved in a complaint as determined by the director of consumer affairs or director's designee.",
+      "subsections": [],
+      "iac_cross_refs_s1": [
+        "170 IAC 16-1-5"
+      ],
+      "external_refs_s1": [
+        "IC 8-1-1-3",
+        "IC 8-1-2-34"
+      ],
+      "coverage_priority": "standard"
+    },
+    {
+      "citation": "170 IAC 16-1-6",
+      "heading": "170 IAC 16-1-6 Request for commission review of consumer affairs decision",
+      "role": "scope",
+      "status_s1": "active",
+      "effective_date_s1": "2022-07-12",
+      "body_text_s1": "Authority: IC 8-1-1-3 ; IC 8-1-2-34.5 Affected: IC 8-1-2-34.5 Sec. 6. (a) Either party may request commission review of the consumer affairs' decision under IC 8-1-2-34.5 within twenty (20) days of the date of receipt of the decision of the director of consumer affairs' or director's designee. A request under this section must be in writing and shall be considered filed upon receipt by the commission. (b) Upon receiving a request for commission review, the commission shall provide a copy of the request to the opposing party and the office of the utility consumer counselor (OUCC) within seven (7) days from the date the review is requested. The nonrequesting party and the OUCC shall be permitted to file an answer within the time frames provided in 170 IAC 1-1.1-10 (c). (c) Commission review of a consumer affairs decision shall be reasonably limited to the matters raised in the request for review and the answer, and to a review of the consumer affairs record as compiled during the review conducted under section 5 of this rule, or as otherwise determined by the presiding officer. (Indiana Utility Regulatory Commission; 170 IAC 16-1-6 ; filed May 25, 2010, 1:52 p.m.: 20100623-IR-170090792FRA ; readopted filed Jul 12, 2016, 10:01 a.m.: 20160810-IR-170160168RFA ; readopted filed Jul 12, 2022, 12:18 p.m.: 20220810-IR-170220116RFA )",
+      "body_text_s1_normalized": "(a) either party may request commission review of the consumer affairs' decision under ic 8-1-2-34.5 within twenty (20) days of the date of receipt of the decision of the director of consumer affairs' or director's designee. a request under this section must be in writing and shall be considered filed upon receipt by the commission. (b) upon receiving a request for commission review, the commission shall provide a copy of the request to the opposing party and the office of the utility consumer counselor (oucc) within seven (7) days from the date the review is requested. the nonrequesting party and the oucc shall be permitted to file an answer within the time frames provided in 170 iac 1-1.1-10 (c). (c) commission review of a consumer affairs decision shall be reasonably limited to the matters raised in the request for review and the answer, and to a review of the consumer affairs record as compiled during the review conducted under section 5 of this rule, or as otherwise determined by the presiding officer.",
+      "subsections": [],
+      "iac_cross_refs_s1": [
+        "170 IAC 1-1.1-10",
+        "170 IAC 16-1-6"
+      ],
+      "external_refs_s1": [
+        "IC 8-1-1-3",
+        "IC 8-1-2-34"
+      ],
+      "coverage_priority": "standard"
+    },
+    {
+      "citation": "170 IAC 16-1-7",
+      "heading": "170 IAC 16-1-7 Continuation of service during complaint process; payment of undisputed charges; disconnection for nonpayment; determining payment amount",
+      "role": "scope",
+      "status_s1": "active",
+      "effective_date_s1": "2022-07-12",
+      "body_text_s1": "Authority: IC 8-1-1-3 ; IC 8-1-2-34.5 Affected: IC 8-1-2-34.5 Sec. 7. (a) If a customer receiving service has paid and continues to pay all undisputed charges, the utility shall not disconnect any service related to the disputed charges: (1) while the utility's proposed resolution is under review by consumer affairs or the commission; or (2) sooner than ten (10) days after a decision by consumer affairs or the commission. (b) If a customer and utility cannot agree what portion of the charges in a bill is undisputed, to avoid disconnection, the customer should pay on the disputed bill an amount equal to one-twelfth (1/12) of the estimated annual billing for service to be rendered to the customer. For a customer who has been a customer for at least twelve (12) months, the estimate will be based on the customer's average bill for the twelve (12) months immediately preceding the disputed bill. (Indiana Utility Regulatory Commission; 170 IAC 16-1-7 ; filed May 25, 2010, 1:52 p.m.: 20100623-IR-170090792FRA ; readopted filed Jul 12, 2016, 10:01 a.m.: 20160810-IR- 170160168RFA ; readopted filed Jul 12, 2022, 12:18 p.m.: 20220810-IR-170220116RFA )",
+      "body_text_s1_normalized": "(a) if a customer receiving service has paid and continues to pay all undisputed charges, the utility shall not disconnect any service related to the disputed charges: (1) while the utility's proposed resolution is under review by consumer affairs or the commission; or (2) sooner than ten (10) days after a decision by consumer affairs or the commission. (b) if a customer and utility cannot agree what portion of the charges in a bill is undisputed, to avoid disconnection, the customer should pay on the disputed bill an amount equal to one-twelfth (1/12) of the estimated annual billing for service to be rendered to the customer. for a customer who has been a customer for at least twelve (12) months, the estimate will be based on the customer's average bill for the twelve (12) months immediately preceding the disputed bill.",
+      "subsections": [],
+      "iac_cross_refs_s1": [
+        "170 IAC 16-1-7"
+      ],
+      "external_refs_s1": [
+        "IC 8-1-1-3",
+        "IC 8-1-2-34"
+      ],
+      "coverage_priority": "standard"
+    }
+  ],
+  "must_cover": [
+    "170 IAC 4-1-1",
+    "170 IAC 4-1-2",
+    "170 IAC 4-1-26",
+    "170 IAC 4-9-1",
+    "170 IAC 4-9-2",
+    "170 IAC 4-9-3",
+    "170 IAC 4-9-4",
+    "170 IAC 4-9-5",
+    "170 IAC 4-9-6",
+    "170 IAC 4-9-7",
+    "170 IAC 4-9-8",
+    "170 IAC 4-9-9",
+    "170 IAC 4-9-10",
+    "170 IAC 4-9-11",
+    "170 IAC 4-9-12",
+    "170 IAC 4-9-13",
+    "170 IAC 16-1-1",
+    "170 IAC 16-1-2",
+    "170 IAC 16-1-3",
+    "170 IAC 16-1-4",
+    "170 IAC 16-1-5",
+    "170 IAC 16-1-6",
+    "170 IAC 16-1-7"
+  ]
+}

@@ -1,0 +1,730 @@
+{
+  "corpus_sha256": "a7adf93afef12d7a7c58008efbca265b3d4dea2f5a27bd18c29eeeeca66937f0",
+  "generated_date": "2026-10-07",
+  "generator": "T91 \u2014 Expected-findings answer key (Wave 5, isolated agent)",
+  "snapshots": {
+    "S1": "2024-12-31",
+    "S2": "2025-12-31"
+  },
+  "changed_citations": [
+    {
+      "citation": "170 IAC 1-6-3",
+      "s1_id": 805,
+      "s2_id": 4455,
+      "s2_effective": "2025-01-24",
+      "classification": "content_element_added_and_renumbered",
+      "summary": "New item (6) added: 'A decrease in: (A) a charge; or (B) a rate or rates.' Prior items (6)\u2192(7), (7)\u2192(8), (8)\u2192(9). Comma added in item (5) preamble. All prior subsection obligations (1)\u2013(5) substantively unchanged."
+    },
+    {
+      "citation": "170 IAC 1-6-4",
+      "s1_id": 806,
+      "s2_id": 4456,
+      "s2_effective": "2025-01-24",
+      "classification": "qualifier_changed_and_condition_removed",
+      "summary": "'shall not' changed to 'may not' throughout; SDC prohibition (prior item 5) removed; item (2) qualifier changed ('Rules and regulations that would' \u2192 'Rules and regulations that'); items renumbered (5)SDC removed, (6)\u2192(5), (7)\u2192(6), (8)\u2192(7), (9)\u2192(8)."
+    },
+    {
+      "citation": "170 IAC 1-6-5",
+      "s1_id": 807,
+      "s2_id": 4457,
+      "s2_effective": "2025-01-24",
+      "classification": "required_content_change",
+      "summary": "'shall' \u2192 'must' throughout; fax option removed from service method choices (contact info item D); new items (4)\u2013(5) added for communications service provider (CSP) intrastate access tariffs; prior item (4) (work papers) renumbered to (6); prior item (5) (verified statement) renumbered to (7) with IC 8-1-2.6-1.5(d) exemption; subsection (b) limited to non-intrastate-access tariffs; subsection (c) replaced: prior paper/electronic options removed, electronic filing system now mandatory; Affected ICs expanded to include IC 8-1-2.6-1.5, IC 8-1-32.5-4, IC 8-1-32.5-11."
+    },
+    {
+      "citation": "170 IAC 1-7-3",
+      "s1_id": 814,
+      "s2_id": 4463,
+      "s2_effective": "2023-05-25",
+      "classification": "typographical_correction",
+      "summary": "Whitespace correction only: '8-1.5-3- 8.3' corrected to '8-1.5-3-8.3' in statutory citation. Substantive content identical."
+    },
+    {
+      "citation": "170 IAC 4-1-16",
+      "s1_id": 832,
+      "s2_id": 4481,
+      "s2_effective": "2025-09-12",
+      "classification": "readoption_only",
+      "summary": "Readoption for administrative filing purposes only. Body text is substantively identical; S2 appends readoption filing citation. No obligation, value, period, or condition changes."
+    }
+  ],
+  "documents": [
+    {
+      "doc_id": "RPL-TAR-GRR-012",
+      "doc_title": "RPL General Rules and Regulations Tariff",
+      "expected_status": "cleared",
+      "cleared_rationale": "T13 cites 170 IAC 1-6-3(2) (R04.7) and 1-6-3(4) (R16.1) \u2014 both subsections are unchanged in S2. 1-6-3 adds a new item (6) inserted before the previously cited items (6)\u2192(7), (7)\u2192(8), (8)\u2192(9), but T13 does not cite items (6), (7), or (8). 1-6-4 and 1-6-5 are present in basis coverage only as general compliance; no specific parameters from these sections appear in the tariff text. 1-7-3 is whitespace-only. 4-1-16 is a readoption with substantively identical content. T13's approval date (2025-01-23) is one day before the S2 effective date (2025-01-24) for 1-6-3/4/5.",
+      "findings": [
+        {
+          "finding_id": "EF-0007",
+          "clause_id": "RPL-TAR-GRR-012:R13.1",
+          "acceptable_clause_ids": [
+            "RPL-TAR-GRR-012:R13.1",
+            "RPL-TAR-GRR-012:R13.2",
+            "RPL-TAR-GRR-012:R13.3",
+            "RPL-TAR-GRR-012:R13.4",
+            "RPL-TAR-GRR-012:R13.5",
+            "RPL-TAR-GRR-012:R13.6",
+            "RPL-TAR-GRR-012:R13.7",
+            "RPL-TAR-GRR-012:R13.8",
+            "RPL-TAR-GRR-012:R13.9",
+            "RPL-TAR-GRR-012:R13.10",
+            "RPL-TAR-GRR-012:R13.11"
+          ],
+          "parent_tolerance": false,
+          "citation": "170 IAC 4-1-16",
+          "finding_type": "informational",
+          "severity": "low",
+          "s1_quote": "Sec. 16. (a) The customer shall: (1) notify the utility at least three (3) da[ys in advance of the disconnection]",
+          "s2_quote": "Sec. 16. (a) The customer shall: (1) notify the utility at least three (3) da[ys in advance of the disconnection] [readoption citation appended]",
+          "doc_value": "170 IAC 4-1-16 cited in R13.1\u2013R13.11 (disconnection/reconnection procedures). Substantive content identical in S2; readoption effective 2025-09-12 adds administrative filing citation only.",
+          "expected_action": "No content update required. Review is informational only: confirm no substantive obligations changed.",
+          "route_to": {
+            "owner": "P11",
+            "reviewer": "P10",
+            "approver": "P03"
+          },
+          "propagated_from": null
+        },
+        {
+          "finding_id": "EF-0008",
+          "clause_id": "RPL-TAR-GRR-012:R02.3",
+          "acceptable_clause_ids": [
+            "RPL-TAR-GRR-012:R02.3"
+          ],
+          "parent_tolerance": false,
+          "citation": "170 IAC 1-7-3",
+          "finding_type": "informational",
+          "severity": "low",
+          "s1_quote": "170 IAC 1-7-3 cited via general compliance clause (R02.3 basis coverage \u2192 R02.3)",
+          "s2_quote": "Authority: IC 8-1-1-3 ; IC 8-1.5-3-8.3",
+          "doc_value": "170 IAC 1-7-3 cited in R04.7 (Extensions of Service). S2 corrects a typographical space in the statutory citation \u2014 '8-1.5-3- 8.3' \u2192 '8-1.5-3-8.3'. No substantive change.",
+          "expected_action": "No content update required. Informational notice of typographical correction in IAC citation.",
+          "route_to": {
+            "owner": "P11",
+            "reviewer": "P10",
+            "approver": "P03"
+          },
+          "propagated_from": null
+        }
+      ],
+      "must_not_flag": [
+        "RPL-TAR-GRR-012:R04.7",
+        "RPL-TAR-GRR-012:R16.1",
+        "RPL-TAR-GRR-012:R13.1",
+        "RPL-TAR-GRR-012:R13.2",
+        "RPL-TAR-GRR-012:R13.3",
+        "RPL-TAR-GRR-012:R13.4",
+        "RPL-TAR-GRR-012:R13.5",
+        "RPL-TAR-GRR-012:R13.6",
+        "RPL-TAR-GRR-012:R13.7",
+        "RPL-TAR-GRR-012:R13.8",
+        "RPL-TAR-GRR-012:R13.9",
+        "RPL-TAR-GRR-012:R13.10",
+        "RPL-TAR-GRR-012:R13.11",
+        "RPL-TAR-GRR-012:R02.3"
+      ],
+      "quantified_impacts": [],
+      "decoys_correctly_unchanged": [
+        "170 IAC 1-7-3",
+        "170 IAC 4-1-16"
+      ]
+    },
+    {
+      "doc_id": "RPL-CS-PRO-004",
+      "doc_title": "RPL Disconnection and Reconnection Procedures",
+      "expected_status": "cleared",
+      "cleared_rationale": "170 IAC 4-1-16 is cited 76 times across all sections implementing disconnection/reconnection obligations. S2 is a readoption only \u2014 substantive content is identical. No other changed citations appear in this document's grounding pack.",
+      "findings": [
+        {
+          "finding_id": "EF-0009",
+          "clause_id": "RPL-CS-PRO-004:8.1",
+          "acceptable_clause_ids": [
+            "RPL-CS-PRO-004:7.1",
+            "RPL-CS-PRO-004:8.1",
+            "RPL-CS-PRO-004:8.2",
+            "RPL-CS-PRO-004:8.3",
+            "RPL-CS-PRO-004:8.4",
+            "RPL-CS-PRO-004:8.5",
+            "RPL-CS-PRO-004:8.6",
+            "RPL-CS-PRO-004:8.7",
+            "RPL-CS-PRO-004:8.8",
+            "RPL-CS-PRO-004:8.9",
+            "RPL-CS-PRO-004:8.10",
+            "RPL-CS-PRO-004:8.11",
+            "RPL-CS-PRO-004:8.12",
+            "RPL-CS-PRO-004:8.13",
+            "RPL-CS-PRO-004:9.1",
+            "RPL-CS-PRO-004:9.2",
+            "RPL-CS-PRO-004:9.3",
+            "RPL-CS-PRO-004:9.4",
+            "RPL-CS-PRO-004:9.5",
+            "RPL-CS-PRO-004:9.6",
+            "RPL-CS-PRO-004:9.7",
+            "RPL-CS-PRO-004:9.8",
+            "RPL-CS-PRO-004:9.9",
+            "RPL-CS-PRO-004:9.10",
+            "RPL-CS-PRO-004:10.1",
+            "RPL-CS-PRO-004:10.2",
+            "RPL-CS-PRO-004:10.3",
+            "RPL-CS-PRO-004:10.4",
+            "RPL-CS-PRO-004:10.5",
+            "RPL-CS-PRO-004:10.6",
+            "RPL-CS-PRO-004:10.7",
+            "RPL-CS-PRO-004:10.8",
+            "RPL-CS-PRO-004:10.9",
+            "RPL-CS-PRO-004:11.1",
+            "RPL-CS-PRO-004:11.2",
+            "RPL-CS-PRO-004:11.3",
+            "RPL-CS-PRO-004:11.4",
+            "RPL-CS-PRO-004:11.5",
+            "RPL-CS-PRO-004:11.6",
+            "RPL-CS-PRO-004:11.7",
+            "RPL-CS-PRO-004:11.8",
+            "RPL-CS-PRO-004:12.1",
+            "RPL-CS-PRO-004:12.2",
+            "RPL-CS-PRO-004:12.3",
+            "RPL-CS-PRO-004:App-A.F1",
+            "RPL-CS-PRO-004:App-A.F11",
+            "RPL-CS-PRO-004:App-A.F15",
+            "RPL-CS-PRO-004:App-A.F20"
+          ],
+          "parent_tolerance": true,
+          "citation": "170 IAC 4-1-16",
+          "finding_type": "informational",
+          "severity": "low",
+          "s1_quote": "The 14-day prior written notice requirement at 170 IAC 4-1-16(e) applies to residential customers",
+          "s2_quote": "[Substantively identical \u2014 readoption filing citation appended to authority block only]",
+          "doc_value": "All obligations, notice periods, prohibited disconnection conditions, and reconnection requirements in this document derive from 170 IAC 4-1-16. S2 content is substantively identical to S1; readoption effective 2025-09-12.",
+          "expected_action": "No content update required. Informational notice of readoption; confirm no substantive obligations changed.",
+          "route_to": {
+            "owner": "P15",
+            "reviewer": "P13",
+            "approver": "P03"
+          },
+          "propagated_from": null
+        }
+      ],
+      "must_not_flag": [
+        "RPL-CS-PRO-004:1.1",
+        "RPL-CS-PRO-004:1.2",
+        "RPL-CS-PRO-004:1.3",
+        "RPL-CS-PRO-004:2.1",
+        "RPL-CS-PRO-004:2.2",
+        "RPL-CS-PRO-004:8.1",
+        "RPL-CS-PRO-004:8.5",
+        "RPL-CS-PRO-004:8.10",
+        "RPL-CS-PRO-004:9.1",
+        "RPL-CS-PRO-004:9.4",
+        "RPL-CS-PRO-004:10.1",
+        "RPL-CS-PRO-004:10.5",
+        "RPL-CS-PRO-004:11.1",
+        "RPL-CS-PRO-004:11.8",
+        "RPL-CS-PRO-004:12.1",
+        "RPL-CS-PRO-004:App-A.F1",
+        "RPL-CS-PRO-004:App-A.F11",
+        "RPL-CS-PRO-004:App-A.F15",
+        "RPL-CS-PRO-004:App-A.F20"
+      ],
+      "quantified_impacts": [],
+      "decoys_correctly_unchanged": [
+        "170 IAC 4-1-16"
+      ]
+    },
+    {
+      "doc_id": "RPL-CS-PRO-007",
+      "doc_title": "RPL Billing and Payment Procedures",
+      "expected_status": "cleared",
+      "cleared_rationale": "No citations in the RPL-CS-PRO-007 grounding pack correspond to the five changed citations. All regulatory obligations cited in this document are drawn from unchanged S2 sections.",
+      "findings": [],
+      "must_not_flag": [
+        "RPL-CS-PRO-007:1.1",
+        "RPL-CS-PRO-007:1.2",
+        "RPL-CS-PRO-007:4.1",
+        "RPL-CS-PRO-007:5.1",
+        "RPL-CS-PRO-007:7.1",
+        "RPL-CS-PRO-007:8.1",
+        "RPL-CS-PRO-007:10.1"
+      ],
+      "quantified_impacts": [],
+      "decoys_correctly_unchanged": []
+    },
+    {
+      "doc_id": "RPL-DO-PLN-002",
+      "doc_title": "RPL Distribution Operations Vegetation Management Plan",
+      "expected_status": "cleared",
+      "cleared_rationale": "No citations in the RPL-DO-PLN-002 grounding pack correspond to the five changed citations. The vegetation management plan is governed by 170 IAC 4-9 and related rules, none of which changed between S1 and S2.",
+      "findings": [],
+      "must_not_flag": [
+        "RPL-DO-PLN-002:1",
+        "RPL-DO-PLN-002:2",
+        "RPL-DO-PLN-002:3",
+        "RPL-DO-PLN-002:4",
+        "RPL-DO-PLN-002:5",
+        "RPL-DO-PLN-002:6",
+        "RPL-DO-PLN-002:10.1",
+        "RPL-DO-PLN-002:11"
+      ],
+      "quantified_impacts": [],
+      "decoys_correctly_unchanged": []
+    },
+    {
+      "doc_id": "RPL-CS-PRO-011",
+      "doc_title": "RPL Customer Service Complaint Handling Procedures",
+      "expected_status": "cleared",
+      "cleared_rationale": "170 IAC 4-1-16 is cited in the RPL-CS-PRO-011 grounding pack and document text. S2 is a readoption only \u2014 substantive content is identical. No other changed citations are in this document's pack.",
+      "findings": [
+        {
+          "finding_id": "EF-0010",
+          "clause_id": "RPL-CS-PRO-011:1.1",
+          "acceptable_clause_ids": [
+            "RPL-CS-PRO-011:1.1",
+            "RPL-CS-PRO-011:2.1",
+            "RPL-CS-PRO-011:3.1",
+            "RPL-CS-PRO-011:4.1",
+            "RPL-CS-PRO-011:5.1",
+            "RPL-CS-PRO-011:6.1",
+            "RPL-CS-PRO-011:7.1",
+            "RPL-CS-PRO-011:8.1",
+            "RPL-CS-PRO-011:9.1",
+            "RPL-CS-PRO-011:10.1"
+          ],
+          "parent_tolerance": true,
+          "citation": "170 IAC 4-1-16",
+          "finding_type": "informational",
+          "severity": "low",
+          "s1_quote": "[170 IAC 4-1-16 cited for customer-facing disconnection/reconnection obligations within complaint handling scope]",
+          "s2_quote": "[Substantively identical \u2014 readoption filing citation appended to authority block only]",
+          "doc_value": "170 IAC 4-1-16 cited for disconnection-related complaint handling obligations. S2 content is substantively identical; readoption effective 2025-09-12.",
+          "expected_action": "No content update required. Informational notice of readoption.",
+          "route_to": {
+            "owner": "P17",
+            "reviewer": "P13",
+            "approver": "P03"
+          },
+          "propagated_from": null
+        }
+      ],
+      "must_not_flag": [
+        "RPL-CS-PRO-011:1.1",
+        "RPL-CS-PRO-011:2.1",
+        "RPL-CS-PRO-011:3.1",
+        "RPL-CS-PRO-011:4.1",
+        "RPL-CS-PRO-011:5.1",
+        "RPL-CS-PRO-011:6.1",
+        "RPL-CS-PRO-011:7.1",
+        "RPL-CS-PRO-011:8.1",
+        "RPL-CS-PRO-011:9.1",
+        "RPL-CS-PRO-011:10.1",
+        "RPL-CS-PRO-011:11.1"
+      ],
+      "quantified_impacts": [],
+      "decoys_correctly_unchanged": [
+        "170 IAC 4-1-16"
+      ]
+    },
+    {
+      "doc_id": "RPL-MTR-PGM-001",
+      "doc_title": "RPL Meter Testing and Accuracy Program",
+      "expected_status": "cleared",
+      "cleared_rationale": "No citations in the RPL-MTR-PGM-001 grounding pack correspond to the five changed citations. The meter testing program is governed by 170 IAC 4-1-10 and related rules, none of which changed between S1 and S2.",
+      "findings": [],
+      "must_not_flag": [
+        "RPL-MTR-PGM-001:1",
+        "RPL-MTR-PGM-001:2",
+        "RPL-MTR-PGM-001:3",
+        "RPL-MTR-PGM-001:4",
+        "RPL-MTR-PGM-001:5",
+        "RPL-MTR-PGM-001:6",
+        "RPL-MTR-PGM-001:10.1",
+        "RPL-MTR-PGM-001:11"
+      ],
+      "quantified_impacts": [],
+      "decoys_correctly_unchanged": []
+    },
+    {
+      "doc_id": "RPL-DCC-PRO-003",
+      "doc_title": "RPL Distribution Control Center Operating Procedures",
+      "expected_status": "cleared",
+      "cleared_rationale": "No citations in the RPL-DCC-PRO-003 grounding pack correspond to the five changed citations. The DCC operating procedures are governed by 170 IAC 4-1-1, 4-1-23, 4-9-1, 4-9-2, 4-9-7 and related rules, none of which changed between S1 and S2.",
+      "findings": [],
+      "must_not_flag": [
+        "RPL-DCC-PRO-003:1",
+        "RPL-DCC-PRO-003:2",
+        "RPL-DCC-PRO-003:3",
+        "RPL-DCC-PRO-003:4",
+        "RPL-DCC-PRO-003:5",
+        "RPL-DCC-PRO-003:6",
+        "RPL-DCC-PRO-003:10.1",
+        "RPL-DCC-PRO-003:11"
+      ],
+      "quantified_impacts": [],
+      "decoys_correctly_unchanged": []
+    },
+    {
+      "doc_id": "RPL-ENV-PRO-005",
+      "doc_title": "RPL Environmental Spill Response Procedures",
+      "expected_status": "cleared",
+      "cleared_rationale": "The RPL-ENV-PRO-005 grounding pack is empty \u2014 327 IAC 2-6.1 is absent from the Snapshot S1 database. The document was written as company_practice per sampling_table.json T20 action = company_practice. No IAC citations from S1 or S2 are in scope for change detection.",
+      "findings": [],
+      "must_not_flag": [
+        "RPL-ENV-PRO-005:1",
+        "RPL-ENV-PRO-005:2",
+        "RPL-ENV-PRO-005:3",
+        "RPL-ENV-PRO-005:4",
+        "RPL-ENV-PRO-005:5",
+        "RPL-ENV-PRO-005:6",
+        "RPL-ENV-PRO-005:10.1",
+        "RPL-ENV-PRO-005:11"
+      ],
+      "quantified_impacts": [],
+      "decoys_correctly_unchanged": []
+    },
+    {
+      "doc_id": "RPL-SAF-PRO-009",
+      "doc_title": "RPL Safety and Arc Flash Protection Procedures",
+      "expected_status": "cleared",
+      "cleared_rationale": "No citations in the RPL-SAF-PRO-009 grounding pack correspond to the five changed citations. The safety procedures are governed by 170 IAC 4-1-38 and related OSHA-analogous provisions, none of which changed between S1 and S2.",
+      "findings": [],
+      "must_not_flag": [
+        "RPL-SAF-PRO-009:1",
+        "RPL-SAF-PRO-009:2",
+        "RPL-SAF-PRO-009:3",
+        "RPL-SAF-PRO-009:4",
+        "RPL-SAF-PRO-009:5",
+        "RPL-SAF-PRO-009:6",
+        "RPL-SAF-PRO-009:10",
+        "RPL-SAF-PRO-009:11"
+      ],
+      "quantified_impacts": [],
+      "decoys_correctly_unchanged": []
+    },
+    {
+      "doc_id": "RPL-CMP-REG-001",
+      "doc_title": "RPL Compliance Obligations Register",
+      "expected_status": "flagged",
+      "findings": [
+        {
+          "finding_id": "EF-0001",
+          "clause_id": "RPL-CMP-REG-001:A.1",
+          "acceptable_clause_ids": [
+            "RPL-CMP-REG-001:A.1",
+            "RPL-CMP-REG-001:4.2",
+            "RPL-CMP-REG-001:2.7"
+          ],
+          "parent_tolerance": false,
+          "citation": "170 IAC 1-6-3",
+          "finding_type": "stale_citation",
+          "severity": "medium",
+          "s1_quote": "This version does not cover any rule whose effective date under Snapshot S2 is later than 2024-12-31 (e.g., 170 IAC 1-6-3/4/5 amendments effective 2025-01-24 are outside scope).",
+          "s2_quote": "S2 \u00a7 3: New item (6) 'A decrease in: (A) a charge; or (B) a rate or rates.' added; prior items (6)\u2192(7), (7)\u2192(8), (8)\u2192(9) renumbered.",
+          "doc_value": "OBL-2024-0018 tracks 170 IAC 1-6-3 (administrative filing \u2014 allowable types). Register was authored with S1 law as-of 2024-12-31; S2 effective 2025-01-24 adds new allowable filing type. Document explicitly notes amendments are outside scope (Section 2.7, amendment log entry 2024-12-01).",
+          "expected_action": "Update OBL-2024-0018 to reflect S2 1-6-3: new item (6) 'rate/charge decrease' is now an allowable filing type under the 30-day administrative procedure. Renumber references to prior items (7)/(8) if embedded.",
+          "route_to": {
+            "owner": "P09",
+            "reviewer": "P08",
+            "approver": "P03"
+          },
+          "propagated_from": null
+        },
+        {
+          "finding_id": "EF-0002",
+          "clause_id": "RPL-CMP-REG-001:A.1",
+          "acceptable_clause_ids": [
+            "RPL-CMP-REG-001:A.1",
+            "RPL-CMP-REG-001:4.2",
+            "RPL-CMP-REG-001:2.7"
+          ],
+          "parent_tolerance": false,
+          "citation": "170 IAC 1-6-4",
+          "finding_type": "stale_citation",
+          "severity": "medium",
+          "s1_quote": "The following types of filings shall not be allowed under this rule: ... (5) SDCs.",
+          "s2_quote": "The following types of filings may not be allowed under this rule: ... [SDC item removed; renumbered (5)SDC\u2192removed, (6)\u2192(5), (7)\u2192(6), (8)\u2192(7), (9)\u2192(8)]",
+          "doc_value": "OBL-2024-0019 tracks 170 IAC 1-6-4 (prohibited 30-day filings). S2 changes 'shall not' to 'may not' and removes the SDC prohibition item. Document notes amendments are outside scope.",
+          "expected_action": "Update OBL-2024-0019 to reflect S2 1-6-4: modal verb weakened ('shall not' \u2192 'may not'); SDC prohibition no longer explicitly listed. Assess whether RPL SDC filings policy requires adjustment.",
+          "route_to": {
+            "owner": "P09",
+            "reviewer": "P08",
+            "approver": "P03"
+          },
+          "propagated_from": null
+        },
+        {
+          "finding_id": "EF-0003",
+          "clause_id": "RPL-CMP-REG-001:A.1",
+          "acceptable_clause_ids": [
+            "RPL-CMP-REG-001:A.1",
+            "RPL-CMP-REG-001:4.2",
+            "RPL-CMP-REG-001:2.7"
+          ],
+          "parent_tolerance": false,
+          "citation": "170 IAC 1-6-5",
+          "finding_type": "stale_citation",
+          "severity": "medium",
+          "s1_quote": "Each filing under this rule shall include the following: ... (D) Either: (i) an electronic mailing address; or (ii) a facsimile number. ... (c) The items listed in subsections (a) and (b) may be provided in: (1) electronic format ... or (2) paper format",
+          "s2_quote": "A filing under this rule must include the following: ... (D) An electronic mailing address. [fax option removed] ... (c) The items listed in subsection (a) shall be filed through the commission's electronic filing system. [paper option removed] [New items (4)\u2013(5) for CSP intrastate access tariffs added]",
+          "doc_value": "OBL-2024-0020 tracks 170 IAC 1-6-5 (administrative filing requirements). S2 makes substantive changes: fax eliminated, electronic filing system mandatory, new CSP provisions added. Document notes amendments are outside scope.",
+          "expected_action": "Update OBL-2024-0020 to reflect S2 1-6-5: fax eliminated from contact information requirements; electronic filing system now mandatory (paper option removed); new CSP intrastate access tariff provisions added (subsections (a)(4)\u2013(5), not applicable to RPL as electric utility). Confirm RPL filing procedures training (see RPL-REG-CAL-2025 EVT-2025-0005) is updated.",
+          "route_to": {
+            "owner": "P09",
+            "reviewer": "P08",
+            "approver": "P03"
+          },
+          "propagated_from": null
+        },
+        {
+          "finding_id": "EF-0011",
+          "clause_id": "RPL-CMP-REG-001:2.7",
+          "acceptable_clause_ids": [
+            "RPL-CMP-REG-001:2.7",
+            "RPL-CMP-REG-001:13.1"
+          ],
+          "parent_tolerance": false,
+          "citation": "170 IAC 4-1-16",
+          "finding_type": "informational",
+          "severity": "low",
+          "s1_quote": "[T10 implementation rows reference RPL-CS-PRO-004 and RPL-CS-PRO-011 as implementing documents for 4-1-16 obligations]",
+          "s2_quote": "[Substantively identical \u2014 readoption only, effective 2025-09-12]",
+          "doc_value": "Multiple OBL rows reference 170 IAC 4-1-16 via implementing procedures RPL-CS-PRO-004 and RPL-CS-PRO-011. S2 is a readoption; no obligation changes.",
+          "expected_action": "No content update required. Informational notice of readoption.",
+          "route_to": {
+            "owner": "P09",
+            "reviewer": "P08",
+            "approver": "P03"
+          },
+          "propagated_from": null
+        }
+      ],
+      "must_not_flag": [
+        "RPL-CMP-REG-001:1.1",
+        "RPL-CMP-REG-001:1.2",
+        "RPL-CMP-REG-001:1.3",
+        "RPL-CMP-REG-001:2.1",
+        "RPL-CMP-REG-001:2.2",
+        "RPL-CMP-REG-001:2.3",
+        "RPL-CMP-REG-001:2.4",
+        "RPL-CMP-REG-001:2.5",
+        "RPL-CMP-REG-001:2.6",
+        "RPL-CMP-REG-001:4.1",
+        "RPL-CMP-REG-001:5.1",
+        "RPL-CMP-REG-001:6.1",
+        "RPL-CMP-REG-001:7.1",
+        "RPL-CMP-REG-001:8.1",
+        "RPL-CMP-REG-001:9.1",
+        "RPL-CMP-REG-001:10.1",
+        "RPL-CMP-REG-001:11.1",
+        "RPL-CMP-REG-001:12.1"
+      ],
+      "quantified_impacts": [],
+      "decoys_correctly_unchanged": [
+        "170 IAC 1-7-3",
+        "170 IAC 4-1-16"
+      ]
+    },
+    {
+      "doc_id": "RPL-REG-CAL-2025",
+      "doc_title": "RPL Regulatory Compliance Calendar 2025",
+      "expected_status": "flagged",
+      "findings": [
+        {
+          "finding_id": "EF-0004",
+          "clause_id": "RPL-REG-CAL-2025:front-matter",
+          "acceptable_clause_ids": [
+            "RPL-REG-CAL-2025:front-matter",
+            "RPL-REG-CAL-2025:1.3",
+            "RPL-REG-CAL-2025:6.1",
+            "RPL-REG-CAL-2025:7.1",
+            "RPL-REG-CAL-2025:8.1",
+            "RPL-REG-CAL-2025:11.2"
+          ],
+          "parent_tolerance": false,
+          "citation": "170 IAC 1-6-3",
+          "finding_type": "stale_at_approval",
+          "severity": "medium",
+          "s1_quote": "LAGGING-AT-APPROVAL NOTICE: Note: 170 IAC 1-6-3, 1-6-4, and 1-6-5 were amended effective 2025-01-24, prior to this document's approval date of 2025-03-14.",
+          "s2_quote": "S2 \u00a7 3: New item (6) 'A decrease in: (A) a charge; or (B) a rate or rates.' added; prior items (6)\u2192(7), (7)\u2192(8), (8)\u2192(9) renumbered.",
+          "doc_value": "T11 was approved 2025-03-14, fifty days after S2 170 IAC 1-6-3 became effective (2025-01-24). Calendar events EVT-2025-0013 (Q2) and EVT-2025-0022 (Q3) cite 1-6-3 generally for administrative filing window reviews. EVT-2025-0025 cites 1-6-3(1) (new service rates \u2014 unchanged in S2). EVT-2025-0036 cites 1-6-3(4) (nonrecurring charges \u2014 unchanged in S2). Document acknowledges the lag and schedules EVT-2025-0011 (v1.3 update, due 2025-04-30) as remediation.",
+          "expected_action": "As part of v1.3 update (EVT-2025-0011): add event for new item (6) 'rate/charge decrease filings' under 1-6-3; confirm EVT-2025-0025 (1-6-3(1)) and EVT-2025-0036 (1-6-3(4)) reference correct unchanged subsections.",
+          "route_to": {
+            "owner": "P09",
+            "reviewer": "P08",
+            "approver": "P03"
+          },
+          "propagated_from": null
+        },
+        {
+          "finding_id": "EF-0005",
+          "clause_id": "RPL-REG-CAL-2025:front-matter",
+          "acceptable_clause_ids": [
+            "RPL-REG-CAL-2025:front-matter",
+            "RPL-REG-CAL-2025:1.3",
+            "RPL-REG-CAL-2025:11.2"
+          ],
+          "parent_tolerance": false,
+          "citation": "170 IAC 1-6-4",
+          "finding_type": "stale_at_approval",
+          "severity": "medium",
+          "s1_quote": "The following types of filings shall not be allowed under this rule: ... (5) SDCs.",
+          "s2_quote": "The following types of filings may not be allowed under this rule: ... [SDC item (5) removed; renumbering]",
+          "doc_value": "T11 was approved after S2 1-6-4 effective date. 1-6-4 is referenced in T11 only through the LAGGING-AT-APPROVAL notice and the remediation event EVT-2025-0011. No specific parameter from 1-6-4 is embedded in a calendar event (other than general compliance coverage). Document acknowledges the lag.",
+          "expected_action": "As part of v1.3 update (EVT-2025-0011): update 1-6-4 obligation description to reflect 'may not' instead of 'shall not' and removal of SDC from prohibited list.",
+          "route_to": {
+            "owner": "P09",
+            "reviewer": "P08",
+            "approver": "P03"
+          },
+          "propagated_from": null
+        },
+        {
+          "finding_id": "EF-0006",
+          "clause_id": "RPL-REG-CAL-2025:5.1",
+          "acceptable_clause_ids": [
+            "RPL-REG-CAL-2025:5.1",
+            "RPL-REG-CAL-2025:6.1",
+            "RPL-REG-CAL-2025:7.1",
+            "RPL-REG-CAL-2025:8.1",
+            "RPL-REG-CAL-2025:9.1",
+            "RPL-REG-CAL-2025:front-matter",
+            "RPL-REG-CAL-2025:1.3",
+            "RPL-REG-CAL-2025:11.2"
+          ],
+          "parent_tolerance": false,
+          "citation": "170 IAC 1-6-5",
+          "finding_type": "stale_at_approval",
+          "severity": "medium",
+          "s1_quote": "EVT-2025-0005: Annual refresher for Regulatory Affairs staff on 30-day filing requirements [170 IAC 1-6-5]",
+          "s2_quote": "S2 1-6-5: fax eliminated; electronic filing system now mandatory; new CSP intrastate access tariff provisions added (items (a)(4)\u2013(5)); verified statement exemption added (IC 8-1-2.6-1.5(d)).",
+          "doc_value": "T11 was approved after S2 1-6-5 effective date. EVT-2025-0005 (filing procedures training, 1-6-5); EVT-2025-0017 (IURC portal access, 1-6-5(c)(1)); EVT-2025-0029 and EVT-2025-0045 (OUCC same-day service, 1-6-5(b)) all cite 1-6-5 subsections. S2 eliminates fax from filing method options and requires electronic filing system only. The 1-6-5(c)(1) portal-access event is consistent with S2's mandatory electronic filing system. OUCC same-day service obligation (1-6-5(b)) is limited to non-intrastate-access tariffs in S2 \u2014 no impact on RPL (electric utility). Document acknowledges the lag.",
+          "expected_action": "As part of v1.3 update (EVT-2025-0011): update EVT-2025-0005 to reflect that fax is no longer an accepted filing method; confirm all staff are trained on mandatory electronic filing system (commission's electronic filing portal); confirm EVT-2025-0017 reflects S2 electronic filing system requirement.",
+          "route_to": {
+            "owner": "P09",
+            "reviewer": "P08",
+            "approver": "P03"
+          },
+          "propagated_from": null
+        },
+        {
+          "finding_id": "EF-0012",
+          "clause_id": "RPL-REG-CAL-2025:9.1",
+          "acceptable_clause_ids": [
+            "RPL-REG-CAL-2025:5.1",
+            "RPL-REG-CAL-2025:9.1"
+          ],
+          "parent_tolerance": false,
+          "citation": "170 IAC 4-1-16",
+          "finding_type": "informational",
+          "severity": "low",
+          "s1_quote": "EVT-2025-0006: Q1 compliance review \u2014 disconnection and reconnection procedures [170 IAC 4-1-16; 170 IAC 4-1-17]",
+          "s2_quote": "[Substantively identical \u2014 readoption only, effective 2025-09-12]",
+          "doc_value": "EVT-2025-0006 and EVT-2025-0041 (standing monthly event) cite 4-1-16 for disconnection/reconnection compliance monitoring. S2 is a readoption; no obligation changes.",
+          "expected_action": "No content update required. Informational notice of readoption.",
+          "route_to": {
+            "owner": "P09",
+            "reviewer": "P08",
+            "approver": "P03"
+          },
+          "propagated_from": null
+        }
+      ],
+      "must_not_flag": [
+        "RPL-REG-CAL-2025:1.1",
+        "RPL-REG-CAL-2025:1.2",
+        "RPL-REG-CAL-2025:2.1",
+        "RPL-REG-CAL-2025:2.2",
+        "RPL-REG-CAL-2025:3.1",
+        "RPL-REG-CAL-2025:3.2",
+        "RPL-REG-CAL-2025:4.1",
+        "RPL-REG-CAL-2025:4.2",
+        "RPL-REG-CAL-2025:AppA.1",
+        "RPL-REG-CAL-2025:AppB.1"
+      ],
+      "quantified_impacts": [],
+      "decoys_correctly_unchanged": [
+        "170 IAC 1-7-3",
+        "170 IAC 4-1-16"
+      ]
+    },
+    {
+      "doc_id": "RPL-LEG-RRS-001",
+      "doc_title": "RPL Regulatory Records Retention Schedule",
+      "expected_status": "cleared",
+      "cleared_rationale": "170 IAC 1-6-5 appears in one retention table entry (RRS-FIN-011: Rider and Adjustment Clause Records, 7-year retention). The citation identifies the regulation that generates the records; the S2 change to 1-6-5 (fax removed, electronic filing mandatory) does not alter the record category or the 7-year retention period. No other changed citations are in this document's pack.",
+      "findings": [
+        {
+          "finding_id": "EF-0013",
+          "clause_id": "RPL-LEG-RRS-001:A.1",
+          "acceptable_clause_ids": [
+            "RPL-LEG-RRS-001:A.1"
+          ],
+          "parent_tolerance": false,
+          "citation": "170 IAC 1-6-5",
+          "finding_type": "informational",
+          "severity": "low",
+          "s1_quote": "RRS-FIN-011 | Rider and Adjustment Clause Records | 7 years after final order | 170 IAC 1-6-5",
+          "s2_quote": "S2 1-6-5: fax removed, electronic filing required, CSP provisions added. Retention period and record category are not affected by these procedural changes.",
+          "doc_value": "Retention record RRS-FIN-011 cites 1-6-5 as the source regulation for rider and adjustment clause filing records. The 7-year retention period is established by RPL internal policy and not affected by the S2 procedural amendments.",
+          "expected_action": "No content update required. Informational notice of S2 change; confirm that electronic filing records (replacing fax records) are covered under the existing RRS-FIN-011 category.",
+          "route_to": {
+            "owner": "P09",
+            "reviewer": "P08",
+            "approver": "P03"
+          },
+          "propagated_from": null
+        }
+      ],
+      "must_not_flag": [
+        "RPL-LEG-RRS-001:1.0",
+        "RPL-LEG-RRS-001:1.1",
+        "RPL-LEG-RRS-001:1.2",
+        "RPL-LEG-RRS-001:1.3",
+        "RPL-LEG-RRS-001:1.4",
+        "RPL-LEG-RRS-001:2.1",
+        "RPL-LEG-RRS-001:2.2",
+        "RPL-LEG-RRS-001:2.3",
+        "RPL-LEG-RRS-001:3.1",
+        "RPL-LEG-RRS-001:3.2",
+        "RPL-LEG-RRS-001:3.3",
+        "RPL-LEG-RRS-001:A.1"
+      ],
+      "quantified_impacts": [],
+      "decoys_correctly_unchanged": []
+    }
+  ],
+  "scoring_summary": {
+    "total_expected_findings": 13,
+    "non_informational_findings": 6,
+    "informational_findings": 7,
+    "flagged_documents": [
+      "RPL-CMP-REG-001",
+      "RPL-REG-CAL-2025"
+    ],
+    "cleared_documents": [
+      "RPL-TAR-GRR-012",
+      "RPL-CS-PRO-004",
+      "RPL-CS-PRO-007",
+      "RPL-DO-PLN-002",
+      "RPL-CS-PRO-011",
+      "RPL-MTR-PGM-001",
+      "RPL-DCC-PRO-003",
+      "RPL-ENV-PRO-005",
+      "RPL-SAF-PRO-009",
+      "RPL-LEG-RRS-001"
+    ],
+    "finding_type_counts": {
+      "stale_citation": 3,
+      "stale_at_approval": 3,
+      "informational": 7,
+      "parameter_change": 0,
+      "required_content_change": 0,
+      "conflict": 0,
+      "new_requirement_gap": 0
+    },
+    "severity_counts": {
+      "high": 0,
+      "medium": 6,
+      "low": 7
+    },
+    "baseline_requirement": "A run against S1 must yield zero non-informational findings (T90 check 15). If the engine flags any must_not_flag clause against S1, that is a false positive."
+  }
+}

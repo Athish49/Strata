@@ -1,0 +1,1010 @@
+{
+  "doc_id": "RPL-DO-PLN-002",
+  "version": "2025.1",
+  "law_as_of": "2024-12-31",
+  "snapshot": "S1",
+  "approved_date": "2025-01-22",
+  "effective_date": "2025-01-27",
+  "owner_id": "P22",
+  "reviewer_id": "P21",
+  "approver_id": "P03",
+  "supersedes": "RPL-DO-PLN-002 v2024.2 (2024-07-15)",
+  "grounding_pack": "T16",
+  "value_ledger": [
+    {
+      "clause_id": "RPL-DO-PLN-002:4",
+      "field": "brush_stem_diameter_max_in",
+      "value": "6 inches DBH",
+      "source": "170 IAC 4-9-2(1)",
+      "pack_section": "170 IAC 4-9-2"
+    },
+    {
+      "clause_id": "RPL-DO-PLN-002:4",
+      "field": "implied_consent_window_weeks",
+      "value": "2 weeks after receiving notice",
+      "source": "170 IAC 4-9-2(6)",
+      "pack_section": "170 IAC 4-9-2"
+    },
+    {
+      "clause_id": "RPL-DO-PLN-002:4",
+      "field": "power_line_compatible_veg_max_height_ft",
+      "value": "12 feet",
+      "source": "170 IAC 4-9-2(8)",
+      "pack_section": "170 IAC 4-9-2"
+    },
+    {
+      "clause_id": "RPL-DO-PLN-002:7.1",
+      "field": "required_industry_standards",
+      "value": "ANSI A300; NESC (2002 edition per 170 IAC 4-1-26); Shigo Guide; ISA Best Management Practices",
+      "source": "170 IAC 4-9-7(a)",
+      "pack_section": "170 IAC 4-9-7"
+    },
+    {
+      "clause_id": "RPL-DO-PLN-002:7.2",
+      "field": "clearance_consideration_factors",
+      "value": "characteristics of locality; electrical facility; health of the tree",
+      "source": "170 IAC 4-9-7(b)",
+      "pack_section": "170 IAC 4-9-7"
+    },
+    {
+      "clause_id": "RPL-DO-PLN-002:7.3",
+      "field": "clearance_69kv_side_fast_ft",
+      "value": "15 ft",
+      "source": "company_practice",
+      "pack_section": null
+    },
+    {
+      "clause_id": "RPL-DO-PLN-002:7.3",
+      "field": "clearance_69kv_side_slow_ft",
+      "value": "10 ft",
+      "source": "company_practice",
+      "pack_section": null
+    },
+    {
+      "clause_id": "RPL-DO-PLN-002:7.3",
+      "field": "clearance_69kv_under_fast_ft",
+      "value": "12 ft",
+      "source": "company_practice",
+      "pack_section": null
+    },
+    {
+      "clause_id": "RPL-DO-PLN-002:7.3",
+      "field": "clearance_69kv_under_slow_ft",
+      "value": "8 ft",
+      "source": "company_practice",
+      "pack_section": null
+    },
+    {
+      "clause_id": "RPL-DO-PLN-002:7.3",
+      "field": "clearance_34kv_side_fast_ft",
+      "value": "12 ft",
+      "source": "company_practice",
+      "pack_section": null
+    },
+    {
+      "clause_id": "RPL-DO-PLN-002:7.3",
+      "field": "clearance_34kv_side_slow_ft",
+      "value": "8 ft",
+      "source": "company_practice",
+      "pack_section": null
+    },
+    {
+      "clause_id": "RPL-DO-PLN-002:7.3",
+      "field": "clearance_34kv_under_fast_ft",
+      "value": "10 ft",
+      "source": "company_practice",
+      "pack_section": null
+    },
+    {
+      "clause_id": "RPL-DO-PLN-002:7.3",
+      "field": "clearance_12kv_backbone_side_fast_ft",
+      "value": "10 ft",
+      "source": "company_practice",
+      "pack_section": null
+    },
+    {
+      "clause_id": "RPL-DO-PLN-002:7.3",
+      "field": "clearance_12kv_backbone_side_slow_ft",
+      "value": "6 ft",
+      "source": "company_practice",
+      "pack_section": null
+    },
+    {
+      "clause_id": "RPL-DO-PLN-002:7.3",
+      "field": "clearance_12kv_backbone_under_fast_ft",
+      "value": "8 ft",
+      "source": "company_practice",
+      "pack_section": null
+    },
+    {
+      "clause_id": "RPL-DO-PLN-002:7.3",
+      "field": "clearance_12kv_backbone_under_slow_ft",
+      "value": "5 ft",
+      "source": "company_practice",
+      "pack_section": null
+    },
+    {
+      "clause_id": "RPL-DO-PLN-002:7.3",
+      "field": "clearance_12kv_lateral_side_fast_ft",
+      "value": "8 ft",
+      "source": "company_practice",
+      "pack_section": null
+    },
+    {
+      "clause_id": "RPL-DO-PLN-002:7.3",
+      "field": "clearance_12kv_lateral_side_slow_ft",
+      "value": "5 ft",
+      "source": "company_practice",
+      "pack_section": null
+    },
+    {
+      "clause_id": "RPL-DO-PLN-002:7.3",
+      "field": "clearance_12kv_lateral_under_fast_ft",
+      "value": "6 ft",
+      "source": "company_practice",
+      "pack_section": null
+    },
+    {
+      "clause_id": "RPL-DO-PLN-002:7.3",
+      "field": "clearance_secondary_service_side_under_ft",
+      "value": "3 ft",
+      "source": "company_practice",
+      "pack_section": null
+    },
+    {
+      "clause_id": "RPL-DO-PLN-002:7.3",
+      "field": "clearance_locality_increase_max_ft",
+      "value": "up to 3 ft additional by crew foreman judgment",
+      "source": "company_practice",
+      "pack_section": null
+    },
+    {
+      "clause_id": "RPL-DO-PLN-002:7.4",
+      "field": "canopy_removal_consent_threshold_pct",
+      "value": "25%",
+      "source": "170 IAC 4-9-7(c)",
+      "pack_section": "170 IAC 4-9-7"
+    },
+    {
+      "clause_id": "RPL-DO-PLN-002:8.1",
+      "field": "trim_cycle_backbone_years",
+      "value": "4 years",
+      "source": "company_practice",
+      "pack_section": null
+    },
+    {
+      "clause_id": "RPL-DO-PLN-002:8.1",
+      "field": "trim_cycle_lateral_dominant_years",
+      "value": "5 years",
+      "source": "company_practice",
+      "pack_section": null
+    },
+    {
+      "clause_id": "RPL-DO-PLN-002:8.1",
+      "field": "trim_cycle_urban_ug_dominant_years",
+      "value": "6 years",
+      "source": "company_practice",
+      "pack_section": null
+    },
+    {
+      "clause_id": "RPL-DO-PLN-002:8.2",
+      "field": "backbone_total_oh_miles",
+      "value": "6,564",
+      "source": "company_practice",
+      "pack_section": null
+    },
+    {
+      "clause_id": "RPL-DO-PLN-002:8.2",
+      "field": "lateral_total_oh_miles",
+      "value": "7,133",
+      "source": "company_practice",
+      "pack_section": null
+    },
+    {
+      "clause_id": "RPL-DO-PLN-002:8.2",
+      "field": "urban_ug_total_oh_miles",
+      "value": "503",
+      "source": "company_practice",
+      "pack_section": null
+    },
+    {
+      "clause_id": "RPL-DO-PLN-002:8.2",
+      "field": "total_distribution_oh_miles",
+      "value": "14,200",
+      "source": "company_practice",
+      "pack_section": null
+    },
+    {
+      "clause_id": "RPL-DO-PLN-002:8.2",
+      "field": "annual_mile_target_distribution",
+      "value": "3,152 mi/yr",
+      "source": "company_practice",
+      "pack_section": null
+    },
+    {
+      "clause_id": "RPL-DO-PLN-002:8.2",
+      "field": "scheduled_oh_miles_2025",
+      "value": "3,169.7",
+      "source": "company_practice",
+      "pack_section": null
+    },
+    {
+      "clause_id": "RPL-DO-PLN-002:9.3",
+      "field": "routine_trim_hours_start",
+      "value": "07:00 local time",
+      "source": "company_practice",
+      "pack_section": null
+    },
+    {
+      "clause_id": "RPL-DO-PLN-002:9.3",
+      "field": "routine_trim_hours_end",
+      "value": "18:00 local time, Monday–Friday",
+      "source": "company_practice",
+      "pack_section": null
+    },
+    {
+      "clause_id": "RPL-DO-PLN-002:9.4",
+      "field": "communications_attacher_notice_lead_days",
+      "value": "5 business days before scheduled start",
+      "source": "company_practice",
+      "pack_section": null
+    },
+    {
+      "clause_id": "RPL-DO-PLN-002:10.2",
+      "field": "easement_doc_request_window_days",
+      "value": "5 business days of customer receipt of notice",
+      "source": "170 IAC 4-9-3(b)",
+      "pack_section": "170 IAC 4-9-3"
+    },
+    {
+      "clause_id": "RPL-DO-PLN-002:10.2",
+      "field": "easement_response_internal_target_days",
+      "value": "4 business days",
+      "source": "company_practice",
+      "pack_section": null
+    },
+    {
+      "clause_id": "RPL-DO-PLN-002:11.1",
+      "field": "routine_notice_minimum_lead_weeks",
+      "value": "2 calendar weeks",
+      "source": "170 IAC 4-9-4(a)",
+      "pack_section": "170 IAC 4-9-4"
+    },
+    {
+      "clause_id": "RPL-DO-PLN-002:11.3",
+      "field": "notice_letter_vm_f004_internal_lead_days",
+      "value": "21 calendar days before work start",
+      "source": "company_practice",
+      "pack_section": null
+    },
+    {
+      "clause_id": "RPL-DO-PLN-002:11.3",
+      "field": "door_hanger_lead_days",
+      "value": "3 calendar days before work start",
+      "source": "company_practice",
+      "pack_section": null
+    },
+    {
+      "clause_id": "RPL-DO-PLN-002:11.3",
+      "field": "notice_form_id",
+      "value": "VM-F-004 (Rev. 01/2025)",
+      "source": "internal_procedure",
+      "pack_section": null
+    },
+    {
+      "clause_id": "RPL-DO-PLN-002:11.3",
+      "field": "notice_batch_id_prefix",
+      "value": "VMN-2025-###",
+      "source": "internal_procedure",
+      "pack_section": null
+    },
+    {
+      "clause_id": "RPL-DO-PLN-002:11.6",
+      "field": "estimated_day_request_window_days",
+      "value": "3 calendar days of receiving notice",
+      "source": "170 IAC 4-9-4(e)",
+      "pack_section": "170 IAC 4-9-4"
+    },
+    {
+      "clause_id": "RPL-DO-PLN-002:11.6",
+      "field": "estimated_day_response_lead_days",
+      "value": "3 business days prior to vegetation management",
+      "source": "170 IAC 4-9-4(e)",
+      "pack_section": "170 IAC 4-9-4"
+    },
+    {
+      "clause_id": "RPL-DO-PLN-002:11.6",
+      "field": "customer_service_phone",
+      "value": "1-800-555-0142",
+      "source": "internal_procedure",
+      "pack_section": null
+    },
+    {
+      "clause_id": "RPL-DO-PLN-002:11.6",
+      "field": "contact_routing_internal_target_hours",
+      "value": "4 business hours",
+      "source": "company_practice",
+      "pack_section": null
+    },
+    {
+      "clause_id": "RPL-DO-PLN-002:12.1",
+      "field": "line_upgrade_notice_lead_days",
+      "value": "60 calendar days",
+      "source": "170 IAC 4-9-5(a)",
+      "pack_section": "170 IAC 4-9-5"
+    },
+    {
+      "clause_id": "RPL-DO-PLN-002:13.3",
+      "field": "stump_grind_depth_min_in",
+      "value": "4 inches below grade",
+      "source": "company_practice",
+      "pack_section": null
+    },
+    {
+      "clause_id": "RPL-DO-PLN-002:14.2",
+      "field": "hazard_tier1_response_target",
+      "value": "Remove or make safe within 24 hours of identification",
+      "source": "company_practice",
+      "pack_section": null
+    },
+    {
+      "clause_id": "RPL-DO-PLN-002:14.2",
+      "field": "hazard_tier2_dispatch_target_days",
+      "value": "5 business days",
+      "source": "company_practice",
+      "pack_section": null
+    },
+    {
+      "clause_id": "RPL-DO-PLN-002:14.2",
+      "field": "hazard_tier2_completion_target_days",
+      "value": "30 calendar days",
+      "source": "company_practice",
+      "pack_section": null
+    },
+    {
+      "clause_id": "RPL-DO-PLN-002:14.2",
+      "field": "hazard_tier1_proximity_ft",
+      "value": "within 3 ft of energized conductor",
+      "source": "company_practice",
+      "pack_section": null
+    },
+    {
+      "clause_id": "RPL-DO-PLN-002:14.2",
+      "field": "hazard_tier2_lean_angle_deg",
+      "value": "30 degrees or greater",
+      "source": "company_practice",
+      "pack_section": null
+    },
+    {
+      "clause_id": "RPL-DO-PLN-002:15.3",
+      "field": "herbicide_exclusion_buffer_ft",
+      "value": "25 feet",
+      "source": "company_practice",
+      "pack_section": null
+    },
+    {
+      "clause_id": "RPL-DO-PLN-002:16.1",
+      "field": "debris_removal_deadline_days",
+      "value": "3 calendar days",
+      "source": "170 IAC 4-9-7(e)",
+      "pack_section": "170 IAC 4-9-7"
+    },
+    {
+      "clause_id": "RPL-DO-PLN-002:18.1",
+      "field": "subtransmission_69kv_circuit_miles",
+      "value": "418",
+      "source": "company_practice",
+      "pack_section": null
+    },
+    {
+      "clause_id": "RPL-DO-PLN-002:18.2",
+      "field": "row_width_agricultural_ft",
+      "value": "40 feet each side of centerline",
+      "source": "company_practice",
+      "pack_section": null
+    },
+    {
+      "clause_id": "RPL-DO-PLN-002:18.2",
+      "field": "row_width_wooded_corridor_ft",
+      "value": "60 feet each side of centerline",
+      "source": "company_practice",
+      "pack_section": null
+    },
+    {
+      "clause_id": "RPL-DO-PLN-002:18.2",
+      "field": "row_width_near_substation_ft",
+      "value": "75 feet each side of centerline (within 100 ft of substation)",
+      "source": "company_practice",
+      "pack_section": null
+    },
+    {
+      "clause_id": "RPL-DO-PLN-002:18.3",
+      "field": "row_69kv_floor_management_cycle_years",
+      "value": "5 years",
+      "source": "company_practice",
+      "pack_section": null
+    },
+    {
+      "clause_id": "RPL-DO-PLN-002:18.4",
+      "field": "row_access_notice_lead_days",
+      "value": "10 business days",
+      "source": "company_practice",
+      "pack_section": null
+    },
+    {
+      "clause_id": "RPL-DO-PLN-002:19.2",
+      "field": "crew_audit_rate_target_pct",
+      "value": "5% of all WAM work orders per quarter",
+      "source": "company_practice",
+      "pack_section": null
+    },
+    {
+      "clause_id": "RPL-DO-PLN-002:19.3",
+      "field": "post_work_audit_sample_pct",
+      "value": "5% minimum random sample",
+      "source": "company_practice",
+      "pack_section": null
+    },
+    {
+      "clause_id": "RPL-DO-PLN-002:19.3",
+      "field": "post_work_audit_window_days",
+      "value": "30 calendar days of circuit completion",
+      "source": "company_practice",
+      "pack_section": null
+    },
+    {
+      "clause_id": "RPL-DO-PLN-002:19.3",
+      "field": "post_work_audit_pass_criteria",
+      "value": "90% of trim points within 10% of target clearance; zero debris non-compliance; zero ID violations",
+      "source": "company_practice",
+      "pack_section": null
+    },
+    {
+      "clause_id": "RPL-DO-PLN-002:T19",
+      "field": "kpi_post_work_audit_pass_rate",
+      "value": ">=90%",
+      "source": "company_practice",
+      "pack_section": null
+    },
+    {
+      "clause_id": "RPL-DO-PLN-002:T19",
+      "field": "kpi_debris_compliance_rate",
+      "value": ">=98%",
+      "source": "company_practice",
+      "pack_section": null
+    },
+    {
+      "clause_id": "RPL-DO-PLN-002:T19",
+      "field": "kpi_crew_id_compliance",
+      "value": "100%",
+      "source": "company_practice",
+      "pack_section": null
+    },
+    {
+      "clause_id": "RPL-DO-PLN-002:T19",
+      "field": "kpi_notice_lead_compliance",
+      "value": "100%",
+      "source": "company_practice",
+      "pack_section": null
+    },
+    {
+      "clause_id": "RPL-DO-PLN-002:T19",
+      "field": "kpi_completed_miles_vs_plan_pct",
+      "value": ">=95%",
+      "source": "company_practice",
+      "pack_section": null
+    },
+    {
+      "clause_id": "RPL-DO-PLN-002:20.1",
+      "field": "prework_objection_window_days",
+      "value": "5 business days of customer receipt of notice",
+      "source": "170 IAC 4-9-8(a)",
+      "pack_section": "170 IAC 4-9-8"
+    },
+    {
+      "clause_id": "RPL-DO-PLN-002:20.2",
+      "field": "prework_objection_response_days",
+      "value": "3 business days",
+      "source": "170 IAC 4-9-8(b)",
+      "pack_section": "170 IAC 4-9-8"
+    },
+    {
+      "clause_id": "RPL-DO-PLN-002:20.4",
+      "field": "prework_stay_expiry_days",
+      "value": "7 calendar days after utility provided proposed resolution",
+      "source": "170 IAC 4-9-8(d)",
+      "pack_section": "170 IAC 4-9-8"
+    },
+    {
+      "clause_id": "RPL-DO-PLN-002:20.3",
+      "field": "iurc_consumer_affairs_toll_free",
+      "value": "1-800-851-4268",
+      "source": "internal_procedure",
+      "pack_section": null
+    },
+    {
+      "clause_id": "RPL-DO-PLN-002:20.3",
+      "field": "iurc_consumer_affairs_local",
+      "value": "317-232-2712",
+      "source": "internal_procedure",
+      "pack_section": null
+    },
+    {
+      "clause_id": "RPL-DO-PLN-002:20.6",
+      "field": "postwork_dispute_response_days",
+      "value": "3 business days",
+      "source": "170 IAC 4-9-10(b)",
+      "pack_section": "170 IAC 4-9-10"
+    },
+    {
+      "clause_id": "RPL-DO-PLN-002:20.7",
+      "field": "dispute_record_retention_months",
+      "value": "6 months from final resolution",
+      "source": "170 IAC 16-1-4(b)",
+      "pack_section": "170 IAC 16-1-4"
+    },
+    {
+      "clause_id": "RPL-DO-PLN-002:20.7",
+      "field": "dispute_record_retention_rpl_internal_years",
+      "value": "3 years",
+      "source": "company_practice",
+      "pack_section": null
+    },
+    {
+      "clause_id": "RPL-DO-PLN-002:20.7",
+      "field": "dispute_log_form_id",
+      "value": "App-C Vegetation Dispute Log (RRS-DO-003)",
+      "source": "internal_procedure",
+      "pack_section": null
+    },
+    {
+      "clause_id": "RPL-DO-PLN-002:20.7",
+      "field": "dispute_log_id_prefix",
+      "value": "VDL-2025-####",
+      "source": "internal_procedure",
+      "pack_section": null
+    },
+    {
+      "clause_id": "RPL-DO-PLN-002:20.8",
+      "field": "iurc_informal_complaint_window_days",
+      "value": "7 days of date customer receives proposed resolution",
+      "source": "170 IAC 16-1-4(c)(5)",
+      "pack_section": "170 IAC 16-1-4"
+    },
+    {
+      "clause_id": "RPL-DO-PLN-002:20.8",
+      "field": "iurc_consumer_affairs_decision_days",
+      "value": "30 days of complaint submission date",
+      "source": "170 IAC 16-1-5(c)",
+      "pack_section": "170 IAC 16-1-5"
+    },
+    {
+      "clause_id": "RPL-DO-PLN-002:20.8",
+      "field": "director_review_request_window_days",
+      "value": "7 days of receipt of proposed informal resolution",
+      "source": "170 IAC 16-1-5(d)",
+      "pack_section": "170 IAC 16-1-5"
+    },
+    {
+      "clause_id": "RPL-DO-PLN-002:20.8",
+      "field": "commission_review_request_window_days",
+      "value": "20 days of receipt of director decision",
+      "source": "170 IAC 16-1-6(a)",
+      "pack_section": "170 IAC 16-1-6"
+    },
+    {
+      "clause_id": "RPL-DO-PLN-002:22.1",
+      "field": "iurc_annual_report_deadline",
+      "value": "March 31 annually",
+      "source": "170 IAC 4-9-7(g)",
+      "pack_section": "170 IAC 4-9-7"
+    },
+    {
+      "clause_id": "RPL-DO-PLN-002:2.3",
+      "field": "customer_contact_closure_target_pct",
+      "value": "90% within 10 calendar days",
+      "source": "company_practice",
+      "pack_section": null
+    },
+    {
+      "clause_id": "RPL-DO-PLN-002:2.3",
+      "field": "customer_contact_response_target",
+      "value": "1 business day of receipt",
+      "source": "company_practice",
+      "pack_section": null
+    },
+    {
+      "clause_id": "RPL-DO-PLN-002:2.3",
+      "field": "formal_dispute_escalation_target_per_year",
+      "value": "fewer than 30",
+      "source": "company_practice",
+      "pack_section": null
+    },
+    {
+      "clause_id": "RPL-DO-PLN-002:T24",
+      "field": "budget_2025_total_usd",
+      "value": "$41,600,000",
+      "source": "company_practice",
+      "pack_section": null
+    },
+    {
+      "clause_id": "RPL-DO-PLN-002:T24",
+      "field": "budget_2025_bdg001_routine_cycle_usd",
+      "value": "$27,940,000",
+      "source": "company_practice",
+      "pack_section": null
+    },
+    {
+      "clause_id": "RPL-DO-PLN-002:T24",
+      "field": "budget_2025_bdg002_hazard_tree_usd",
+      "value": "$6,180,000",
+      "source": "company_practice",
+      "pack_section": null
+    },
+    {
+      "clause_id": "RPL-DO-PLN-002:T24",
+      "field": "budget_2025_bdg003_ivm_usd",
+      "value": "$2,580,000",
+      "source": "company_practice",
+      "pack_section": null
+    },
+    {
+      "clause_id": "RPL-DO-PLN-002:T24",
+      "field": "budget_2025_bdg004_midcycle_usd",
+      "value": "$2,020,000",
+      "source": "company_practice",
+      "pack_section": null
+    },
+    {
+      "clause_id": "RPL-DO-PLN-002:T24",
+      "field": "budget_2025_bdg005_storm_emrg_usd",
+      "value": "$1,490,000",
+      "source": "company_practice",
+      "pack_section": null
+    },
+    {
+      "clause_id": "RPL-DO-PLN-002:T24",
+      "field": "budget_2025_bdg006_69kv_row_usd",
+      "value": "$910,000",
+      "source": "company_practice",
+      "pack_section": null
+    },
+    {
+      "clause_id": "RPL-DO-PLN-002:T24",
+      "field": "budget_2025_bdg007_qa_oversight_usd",
+      "value": "$390,000",
+      "source": "company_practice",
+      "pack_section": null
+    },
+    {
+      "clause_id": "RPL-DO-PLN-002:T24",
+      "field": "budget_2025_bdg008_customer_education_usd",
+      "value": "$90,000",
+      "source": "company_practice",
+      "pack_section": null
+    },
+    {
+      "clause_id": "RPL-DO-PLN-002:T24",
+      "field": "unit_cost_routine_trim_per_oh_mile",
+      "value": "$8,339/mi",
+      "source": "company_practice",
+      "pack_section": null
+    },
+    {
+      "clause_id": "RPL-DO-PLN-002:T24",
+      "field": "unit_cost_hazard_tree_removal",
+      "value": "$1,507/tree",
+      "source": "company_practice",
+      "pack_section": null
+    },
+    {
+      "clause_id": "RPL-DO-PLN-002:T24",
+      "field": "unit_cost_ivm_per_acre",
+      "value": "$806/acre",
+      "source": "company_practice",
+      "pack_section": null
+    },
+    {
+      "clause_id": "RPL-DO-PLN-002:T24",
+      "field": "unit_cost_midcycle_per_work_order",
+      "value": "$2,971/WO",
+      "source": "company_practice",
+      "pack_section": null
+    },
+    {
+      "clause_id": "RPL-DO-PLN-002:T24",
+      "field": "unit_cost_69kv_row_per_mile",
+      "value": "$21,667/ROW-mile",
+      "source": "company_practice",
+      "pack_section": null
+    },
+    {
+      "clause_id": "RPL-DO-PLN-002:T24",
+      "field": "unit_cost_qa_audit",
+      "value": "$1,219/audit",
+      "source": "company_practice",
+      "pack_section": null
+    },
+    {
+      "clause_id": "RPL-DO-PLN-002:T24",
+      "field": "unit_cost_education_campaign",
+      "value": "$15,000/campaign",
+      "source": "company_practice",
+      "pack_section": null
+    },
+    {
+      "clause_id": "RPL-DO-PLN-002:23",
+      "field": "budget_2024_actual_total_usd",
+      "value": "$41,642,488",
+      "source": "company_practice",
+      "pack_section": null
+    },
+    {
+      "clause_id": "RPL-DO-PLN-002:T1",
+      "field": "circuits_scheduled_2025",
+      "value": "111",
+      "source": "company_practice",
+      "pack_section": null
+    },
+    {
+      "clause_id": "RPL-DO-PLN-002:T1",
+      "field": "active_distribution_circuits",
+      "value": "528",
+      "source": "company_practice",
+      "pack_section": null
+    },
+    {
+      "clause_id": "RPL-DO-PLN-002:T23C",
+      "field": "tree_saifi_exmed_2024",
+      "value": "0.292",
+      "source": "company_practice",
+      "pack_section": null
+    },
+    {
+      "clause_id": "RPL-DO-PLN-002:T23C",
+      "field": "tree_share_of_saifi_exmed_2024_pct",
+      "value": "26.6%",
+      "source": "company_practice",
+      "pack_section": null
+    },
+    {
+      "clause_id": "RPL-DO-PLN-002:T23D",
+      "field": "customer_contacts_2024_total",
+      "value": "542",
+      "source": "company_practice",
+      "pack_section": null
+    },
+    {
+      "clause_id": "RPL-DO-PLN-002:T23D",
+      "field": "customer_contacts_2024_escalated",
+      "value": "47",
+      "source": "company_practice",
+      "pack_section": null
+    },
+    {
+      "clause_id": "RPL-DO-PLN-002:T23D",
+      "field": "customer_contacts_2024_iurc_cad_referrals",
+      "value": "1",
+      "source": "company_practice",
+      "pack_section": null
+    },
+    {
+      "clause_id": "RPL-DO-PLN-002:T26",
+      "field": "vm_work_notices_record_series",
+      "value": "RRS-DO-002",
+      "source": "internal_procedure",
+      "pack_section": null
+    },
+    {
+      "clause_id": "RPL-DO-PLN-002:T26",
+      "field": "vm_dispute_log_record_series",
+      "value": "RRS-DO-003",
+      "source": "internal_procedure",
+      "pack_section": null
+    },
+    {
+      "clause_id": "RPL-DO-PLN-002:T26",
+      "field": "iurc_outage_report_record_series",
+      "value": "RRS-DO-004",
+      "source": "internal_procedure",
+      "pack_section": null
+    }
+  ],
+  "out_of_scope_references": [
+    {
+      "clause_id": "RPL-DO-PLN-002:5.1",
+      "citation": "OSHA 29 CFR 1910.269",
+      "description": "Electric power generation, transmission, and distribution — Line-clearance tree trimming. RPL requires all contractor crews to comply; covered as company contractual requirement, not assessed under IAC scope.",
+      "reason": "Federal OSHA regulation; outside IAC vegetation management rule scope"
+    },
+    {
+      "clause_id": "RPL-DO-PLN-002:5.2",
+      "citation": "Indiana pesticide use regulations (Office of the Indiana State Chemist)",
+      "description": "Licensed applicators apply EPA-registered herbicide products under Indiana pesticide registration requirements.",
+      "reason": "State pesticide/chemist regulations; outside IAC 170 4-9 scope"
+    },
+    {
+      "clause_id": "RPL-DO-PLN-002:5.3",
+      "citation": "NERC FAC-003",
+      "description": "Transmission Vegetation Management. Not applicable — RPL owns no Bulk Electric System transmission facilities; 69 kV subtransmission is below BES threshold.",
+      "reason": "Not applicable to RPL; BES threshold not met"
+    }
+  ],
+  "company_practice_items": [
+    {
+      "clause_id": "RPL-DO-PLN-002:7.3",
+      "item": "RPL Clearance Specification Table",
+      "description": "Minimum clear distances (ft) by voltage class, trim direction, and species growth class. Locality factors may increase target clearance by up to 3 ft per crew foreman judgment."
+    },
+    {
+      "clause_id": "RPL-DO-PLN-002:8.1",
+      "item": "Trim Cycle Assignments",
+      "description": "Backbone circuits: 4-year cycle; single-phase lateral circuits: 5-year cycle; urban/UG-dominant circuits: 6-year cycle; 69 kV subtransmission ROW: 5-year floor management cycle."
+    },
+    {
+      "clause_id": "RPL-DO-PLN-002:9.3",
+      "item": "Hours of Work",
+      "description": "Routine cycle trimming performed 07:00–18:00 local time, Monday through Friday. Saturday requires P22 advance approval."
+    },
+    {
+      "clause_id": "RPL-DO-PLN-002:11.3",
+      "item": "Notice Sequence",
+      "description": "Internal standard of 21 calendar days for VM-F-004 letter mailing (vs. regulatory minimum 14 days); door hanger 3 calendar days before work start; day-of phone call for customers who requested estimated day."
+    },
+    {
+      "clause_id": "RPL-DO-PLN-002:13.3",
+      "item": "Stump Treatment Standard",
+      "description": "Stumps ground to at least 4 inches below grade; depression backfilled with topsoil. Chemical stump treatment alternative where mechanical grinding impractical."
+    },
+    {
+      "clause_id": "RPL-DO-PLN-002:14.2",
+      "item": "Hazard Tree Risk Tiers and Response Targets",
+      "description": "Tier 1 (Imminent): remove/make safe within 24 hours. Tier 2 (High): dispatch within 5 business days, complete removal within 30 calendar days. Tier 3 (Moderate): next scheduled cycle or mid-cycle program."
+    },
+    {
+      "clause_id": "RPL-DO-PLN-002:15.2",
+      "item": "IVM Herbicide Application",
+      "description": "Only EPA-registered products applied by licensed pesticide applicators. No product names in plan; approved-product list maintained by P22 and updated annually."
+    },
+    {
+      "clause_id": "RPL-DO-PLN-002:15.3",
+      "item": "IVM Sensitive Area Exclusions",
+      "description": "Herbicide application prohibited within 25 feet of open water, sinkholes, karst features, private wells, organic farming operations, and school or playground property."
+    },
+    {
+      "clause_id": "RPL-DO-PLN-002:15.4",
+      "item": "IVM Efficacy Audits",
+      "description": "IVM treatment results reviewed at 6-month and 24-month post-treatment intervals using OMS tree CI on treated circuits vs. pre-treatment baseline."
+    },
+    {
+      "clause_id": "RPL-DO-PLN-002:18.2",
+      "item": "69 kV ROW Width Standards",
+      "description": "Agricultural/open: 40 ft each side of centerline; wooded corridor: 60 ft; within 100 ft of substation: 75 ft."
+    },
+    {
+      "clause_id": "RPL-DO-PLN-002:18.3",
+      "item": "69 kV ROW Inspection Cycle",
+      "description": "Annual foot or helicopter inspection. Floor management cycle: 5 years for corridor interior with annual spot treatment. Work scheduled Q2–Q3 with Contractor B."
+    },
+    {
+      "clause_id": "RPL-DO-PLN-002:19.2",
+      "item": "Crew Audit Rate",
+      "description": "5% of all WAM work orders per quarter audited by P22 or designated RPL Forester."
+    },
+    {
+      "clause_id": "RPL-DO-PLN-002:19.3",
+      "item": "Post-Work Audit Sample",
+      "description": "Minimum 5% random sample of completed circuits within 30 calendar days of circuit completion. Pass criteria: >=90% of trim points within 10% of target clearance; zero debris or ID violations."
+    },
+    {
+      "clause_id": "RPL-DO-PLN-002:T19",
+      "item": "Contractor KPI Targets",
+      "description": "Post-work audit pass rate >=90%; debris compliance rate >=98%; crew ID compliance 100%; notice lead compliance 100%; completed miles vs. plan >=95%."
+    },
+    {
+      "clause_id": "RPL-DO-PLN-002:T24",
+      "item": "2025 Budget — Total and Line Items",
+      "description": "Total $41,600,000. Lines: routine cycle $27,940,000; hazard tree $6,180,000; IVM $2,580,000; mid-cycle $2,020,000; storm/emergency $1,490,000; 69 kV ROW $910,000; oversight/QA $390,000; customer education $90,000."
+    },
+    {
+      "clause_id": "RPL-DO-PLN-002:2.3",
+      "item": "Customer Contact Closure Targets",
+      "description": "Respond within 1 business day; close 90% of contacts within 10 calendar days; fewer than 30 formal dispute escalations per year."
+    }
+  ],
+  "interpretations": [],
+  "coverage": {
+    "170 IAC 4-1-1": {
+      "disposition": "considered_no_obligation",
+      "clauses": ["RPL-DO-PLN-002:4"]
+    },
+    "170 IAC 4-1-2": {
+      "disposition": "covered",
+      "clauses": ["RPL-DO-PLN-002:3"]
+    },
+    "170 IAC 4-1-26": {
+      "disposition": "covered",
+      "clauses": ["RPL-DO-PLN-002:7.1", "RPL-DO-PLN-002:7.2"]
+    },
+    "170 IAC 4-9-1": {
+      "disposition": "covered",
+      "clauses": ["RPL-DO-PLN-002:3", "RPL-DO-PLN-002:3.1"]
+    },
+    "170 IAC 4-9-2": {
+      "disposition": "covered",
+      "clauses": ["RPL-DO-PLN-002:4", "RPL-DO-PLN-002:T4"]
+    },
+    "170 IAC 4-9-3": {
+      "disposition": "covered",
+      "clauses": ["RPL-DO-PLN-002:10", "RPL-DO-PLN-002:10.1", "RPL-DO-PLN-002:10.2"]
+    },
+    "170 IAC 4-9-4": {
+      "disposition": "covered",
+      "clauses": ["RPL-DO-PLN-002:11", "RPL-DO-PLN-002:11.1", "RPL-DO-PLN-002:11.2", "RPL-DO-PLN-002:11.3", "RPL-DO-PLN-002:11.4", "RPL-DO-PLN-002:11.5", "RPL-DO-PLN-002:11.6", "RPL-DO-PLN-002:11.7"]
+    },
+    "170 IAC 4-9-5": {
+      "disposition": "covered",
+      "clauses": ["RPL-DO-PLN-002:12", "RPL-DO-PLN-002:12.1", "RPL-DO-PLN-002:12.2", "RPL-DO-PLN-002:12.3"]
+    },
+    "170 IAC 4-9-6": {
+      "disposition": "covered",
+      "clauses": ["RPL-DO-PLN-002:17", "RPL-DO-PLN-002:17.1", "RPL-DO-PLN-002:17.3"]
+    },
+    "170 IAC 4-9-7": {
+      "disposition": "covered",
+      "clauses": ["RPL-DO-PLN-002:7.1", "RPL-DO-PLN-002:7.2", "RPL-DO-PLN-002:7.4", "RPL-DO-PLN-002:7.5", "RPL-DO-PLN-002:13", "RPL-DO-PLN-002:13.1", "RPL-DO-PLN-002:13.2", "RPL-DO-PLN-002:16.1", "RPL-DO-PLN-002:16.2", "RPL-DO-PLN-002:22.1"]
+    },
+    "170 IAC 4-9-8": {
+      "disposition": "covered",
+      "clauses": ["RPL-DO-PLN-002:20.1", "RPL-DO-PLN-002:20.2", "RPL-DO-PLN-002:20.3", "RPL-DO-PLN-002:20.4"]
+    },
+    "170 IAC 4-9-9": {
+      "disposition": "covered",
+      "clauses": ["RPL-DO-PLN-002:20.5"]
+    },
+    "170 IAC 4-9-10": {
+      "disposition": "covered",
+      "clauses": ["RPL-DO-PLN-002:20.6"]
+    },
+    "170 IAC 4-9-11": {
+      "disposition": "covered",
+      "clauses": ["RPL-DO-PLN-002:21", "RPL-DO-PLN-002:T21"]
+    },
+    "170 IAC 4-9-12": {
+      "disposition": "covered",
+      "clauses": ["RPL-DO-PLN-002:13.4"]
+    },
+    "170 IAC 4-9-13": {
+      "disposition": "covered",
+      "clauses": ["RPL-DO-PLN-002:9.5"]
+    },
+    "170 IAC 16-1-1": {
+      "disposition": "covered",
+      "clauses": ["RPL-DO-PLN-002:20"]
+    },
+    "170 IAC 16-1-2": {
+      "disposition": "covered",
+      "clauses": ["RPL-DO-PLN-002:4", "RPL-DO-PLN-002:20"]
+    },
+    "170 IAC 16-1-3": {
+      "disposition": "covered",
+      "clauses": ["RPL-DO-PLN-002:20"]
+    },
+    "170 IAC 16-1-4": {
+      "disposition": "covered",
+      "clauses": ["RPL-DO-PLN-002:20.7", "RPL-DO-PLN-002:20.8", "RPL-DO-PLN-002:20.10"]
+    },
+    "170 IAC 16-1-5": {
+      "disposition": "covered",
+      "clauses": ["RPL-DO-PLN-002:20.8"]
+    },
+    "170 IAC 16-1-6": {
+      "disposition": "covered",
+      "clauses": ["RPL-DO-PLN-002:20.8"]
+    },
+    "170 IAC 16-1-7": {
+      "disposition": "covered",
+      "clauses": ["RPL-DO-PLN-002:20"]
+    }
+  }
+}
