@@ -1,0 +1,1087 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Strata RPL Data Audit</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Inter:wght@400;500;600;700&display=swap">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.6.1/mermaid.min.js"></script>
+<script>mermaid.initialize({startOnLoad:true,theme:'default'});</script>
+</head>
+<body>
+<style>
+/* Layout: sticky nav + scrollable sections, 1400px max */
+:root {
+  --bg:       #f7f8fc;
+  --bg2:      #ffffff;
+  --bg3:      #eef0f7;
+  --border:   #d8dbe8;
+  --text:     #1a1d2e;
+  --muted:    #6b7280;
+  --accent:   #3d52c4;
+  --green:    #166534;
+  --greenb:   #dcfce7;
+  --red:      #991b1b;
+  --redb:     #fee2e2;
+  --yellow:   #92400e;
+  --yellowb:  #fef3c7;
+  --blue:     #1e40af;
+  --blueb:    #dbeafe;
+  --mono:     "IBM Plex Mono", "Cascadia Code", monospace;
+  --font:     "Inter", system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg:#0f1117; --bg2:#1a1d27; --bg3:#242736;
+    --border:#2e3248; --text:#e2e8f0; --muted:#8892a4;
+    --accent:#818cf8;
+    --green:#22c55e; --greenb:#14532d;
+    --red:#f87171; --redb:#450a0a;
+    --yellow:#fbbf24; --yellowb:#422006;
+    --blue:#60a5fa; --blueb:#1e3a5f;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg:#0f1117; --bg2:#1a1d27; --bg3:#242736;
+  --border:#2e3248; --text:#e2e8f0; --muted:#8892a4;
+  --accent:#818cf8;
+  --green:#22c55e; --greenb:#14532d;
+  --red:#f87171; --redb:#450a0a;
+  --yellow:#fbbf24; --yellowb:#422006;
+  --blue:#60a5fa; --blueb:#1e3a5f;
+  color-scheme: dark;
+}
+*, *::before, *::after { box-sizing: border-box; }
+body {
+  background: var(--bg); color: var(--text);
+  font-family: var(--font); font-size: 13px; line-height: 1.6;
+  margin: 0; padding: 0 0 3rem;
+}
+a { color: var(--accent); text-decoration: none; }
+h1 { font-size: 1.4rem; font-weight: 700; margin: 0; }
+h2 { font-size: 1rem; font-weight: 700; color: var(--accent); margin: 0 0 .6rem; padding-bottom: .35rem; border-bottom: 1.5px solid var(--border); }
+h3 { font-size: .75rem; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: .06em; margin: .9rem 0 .4rem; }
+/* Nav */
+.nav {
+  position: sticky; top: env(safe-area-inset-top, 0px);
+  background: var(--bg2); border-bottom: 1px solid var(--border);
+  padding: .45rem 1.25rem; display: flex; gap: .5rem; overflow-x: auto;
+  z-index: 100; white-space: nowrap; align-items: center;
+}
+.nav .logo { font-weight: 700; color: var(--accent); margin-right: .5rem; font-size: .88rem; flex-shrink: 0; }
+.nav a { color: var(--muted); font-size: .75rem; padding: .2rem .45rem; border-radius: 4px; flex-shrink: 0; }
+.nav a:hover { background: var(--bg3); color: var(--text); }
+/* Header */
+.hdr { padding: 1.25rem 1.5rem .5rem; border-bottom: 1px solid var(--border); background: var(--bg2); display: flex; align-items: baseline; gap: 1rem; }
+.hdr-sub { color: var(--muted); font-size: .78rem; }
+/* Page */
+.page { max-width: 1400px; margin: 0 auto; padding: 1rem 1.25rem; display: flex; flex-direction: column; gap: 1rem; }
+/* Sections */
+.sec { background: var(--bg2); border: 1px solid var(--border); border-radius: 8px; padding: 1.1rem 1.25rem; }
+.tk { border-left: 3px solid var(--accent); background: var(--bg3); padding: .4rem .75rem; margin-bottom: .9rem; border-radius: 0 4px 4px 0; font-size: .84rem; }
+/* Grids */
+.g2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.g3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem; }
+.g4 { display: grid; grid-template-columns: repeat(4,1fr); gap: .65rem; }
+@media (max-width: 900px) { .g4 { grid-template-columns: repeat(2,1fr); } .g3 { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 600px) { .g2, .g3, .g4 { grid-template-columns: 1fr; } }
+/* Stat tiles */
+.stat { background: var(--bg3); border-radius: 6px; padding: .65rem .9rem; }
+.sv { font-family: var(--mono); font-size: 1.4rem; font-weight: 600; line-height: 1.2; }
+.sl { color: var(--muted); font-size: .72rem; margin-top: 2px; }
+/* Pills */
+.pill { display: inline-block; padding: 1px 7px; border-radius: 10px; font-size: .72rem; font-weight: 600; white-space: nowrap; }
+.pr { background: var(--redb); color: var(--red); }
+.py { background: var(--yellowb); color: var(--yellow); }
+.pg { background: var(--greenb); color: var(--green); }
+.pb { background: var(--blueb); color: var(--blue); }
+.pm { background: var(--bg3); color: var(--muted); }
+/* Tables */
+.tbl-wrap { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; font-size: .78rem; }
+th { background: var(--bg3); text-align: left; padding: 5px 8px; color: var(--muted); font-weight: 600; border-bottom: 1px solid var(--border); white-space: nowrap; }
+td { padding: 4px 8px; border-bottom: 1px solid var(--border); vertical-align: top; font-family: var(--mono); }
+tr:last-child td { border-bottom: none; }
+tr:hover td { background: var(--bg3); }
+.warn { color: var(--red); }
+.ok   { color: var(--green); }
+.info { color: var(--blue); }
+/* code */
+code { font-family: var(--mono); background: var(--bg3); padding: 1px 4px; border-radius: 3px; font-size: .78rem; }
+.tag { font-size: .7rem; background: var(--bg3); color: var(--muted); padding: 1px 5px; border-radius: 3px; font-family: var(--mono); }
+pre { background: var(--bg3); padding: .7rem; border-radius: 6px; overflow-x: auto; font-size: .74rem; white-space: pre; font-family: var(--mono); margin-top: .5rem; }
+/* details */
+details { margin-top: .5rem; }
+summary { cursor: pointer; color: var(--muted); font-size: .82rem; padding: 3px 0; user-select: none; list-style: none; }
+summary::before { content: "+ "; font-family: var(--mono); }
+details[open] summary::before { content: "- "; }
+summary:hover { color: var(--text); }
+details[open] summary { color: var(--text); margin-bottom: .4rem; }
+/* inline card */
+.card { background: var(--bg3); border-radius: 5px; padding: .6rem .8rem; margin-top: .5rem; }
+/* mermaid */
+.mermaid-wrap { overflow-x: auto; background: var(--bg3); border-radius: 6px; padding: .75rem; }
+</style>
+<div class="hdr"><div><h1>Strata &mdash; RPL Company Data Audit</h1><div class="hdr-sub">Rockridge Power &amp; Light synthetic corpus &middot; Generated 2026-10-07 &middot; All figures tagged [live-db], [live-qdrant], [live-r2], or [file]</div></div></div>
+<nav class="nav"><span class="logo">RPL Audit</span>
+<a href="#s0">S0 Summary</a>
+<a href="#s1">S1 Corpus</a>
+<a href="#s2">S2 Stores</a>
+<a href="#s3">S3 ER</a>
+<a href="#s4">S4 Tables</a>
+<a href="#s5">S5 Clauses</a>
+<a href="#s6">S6 Citations</a>
+<a href="#s7">S7 Params</a>
+<a href="#s8">S8 Links</a>
+<a href="#s9">S9 Registers</a>
+<a href="#s10">S10 Datasets</a>
+<a href="#s11">S11 People</a>
+<a href="#s12">S12 Qdrant</a>
+<a href="#s13">S13 R2</a>
+<a href="#s14">S14 Eval</a>
+<a href="#s15">S15 Quality</a>
+<a href="#s16">S16 Joins</a>
+<a href="#appendix">Appendix</a>
+</nav>
+<div class="page">
+<div class="sec" id="s0"><h2>S0 Summary Card</h2>
+<div class="tk">12 of 16 register docs ingested; datasets and parameter_checks empty; citation resolution not run &mdash; all 1,158 IAC citations unresolved (408 match S1 by string join); R2 inaccessible.</div>
+<div class="g4">
+<div class="stat" style=""><div class="sv">12</div><div class="sl">docs ingested [live-db]</div><div class="sl" style="margin-top:2px">12 of 16 in register</div></div>
+<div class="stat" style=""><div class="sv">2334</div><div class="sl">clauses [live-db]</div><div class="sl" style="margin-top:2px">2,298 assessable</div></div>
+<div class="stat" style=""><div class="sv">1249</div><div class="sl">citations [live-db]</div><div class="sl" style="margin-top:2px">1,158 not_found &bull; 91 external</div></div>
+<div class="stat" style=""><div class="sv">2948</div><div class="sl">parameters [live-db]</div><div class="sl" style="margin-top:2px">100% verified</div></div>
+<div class="stat" style=""><div class="sv">4675</div><div class="sl">clause links [live-db]</div><div class="sl" style="margin-top:2px">3,048 restates</div></div>
+<div class="stat" style=""><div class="sv">67</div><div class="sl">defined terms [live-db]</div><div class="sl" style="margin-top:2px">693 usages</div></div>
+<div class="stat" style="background:var(--redb);"><div class="sv">2305</div><div class="sl">Qdrant company pts [live-qdrant]</div><div class="sl" style="margin-top:2px">29 gap vs Neon</div></div>
+<div class="stat" style=""><div class="sv">9105</div><div class="sl">Qdrant reg pts [live-qdrant]</div><div class="sl" style="margin-top:2px">regulation_chunks</div></div>
+</div>
+<div class="g3" style="margin-top:.75rem">
+<div class="stat"><h3>Neon</h3><span class="pill pg">DONE</span> 12 docs &bull; 15 tables &bull; 9.3 MB [live-db]<br><span class="warn">datasets=0 &bull; parameter_checks=0 &bull; llm_extractions=0</span></div>
+<div class="stat"><h3>Qdrant</h3><span class="pill py">PARTIAL</span> company_clauses: 2,305 pts &bull; regulation_chunks: 9,105 pts [live-qdrant]<br><span class="warn">29 pts gap vs Neon &bull; owner_id/doc_class 0% coverage</span></div>
+<div class="stat"><h3>R2</h3><span class="pill pr">ERROR</span> ListObjectsV2 &rarr; NoSuchKey [live-r2]<br><span class="warn">Bucket empty or permissions insufficient</span></div>
+</div>
+<h3>Top 5 Problems</h3><div class="tbl-wrap"><table><thead><tr><th>#</th><th>Sev</th><th>Problem</th><th>Impact</th></tr></thead><tbody>
+<tr><td>1</td><td><span class="pill pr">BLOCKER</span></td><td style="font-family:var(--font)">All 1,158 IAC citations: resolution_status=not_found, code_section_id IS NULL</td><td style="font-family:var(--font)">JOIN on code_section_id returns 0 rows. Workaround: join on citation_raw=code_sections.citation (408...</td></tr>
+<tr><td>2</td><td><span class="pill pr">BLOCKER</span></td><td style="font-family:var(--font)">company.datasets=0 rows, company.parameter_checks=0 rows</td><td style="font-family:var(--font)">No Parquet profiling, no SQL validation, no Parquet keys in R2</td></tr>
+<tr><td>3</td><td><span class="pill py">HIGH</span></td><td style="font-family:var(--font)">R2: ListObjectsV2 NoSuchKey &mdash; source/render files unconfirmed</td><td style="font-family:var(--font)">source_r2_key and render_r2_keys in document_versions UNVERIFIED</td></tr>
+<tr><td>4</td><td><span class="pill py">HIGH</span></td><td style="font-family:var(--font)">Qdrant company_clauses: 2,305 pts vs Neon 2,334 clauses (&minus;29)</td><td style="font-family:var(--font)">29 clauses missing from hybrid search index</td></tr>
+<tr><td>5</td><td><span class="pill pb">MEDIUM</span></td><td style="font-family:var(--font)">295 references_doc links have to_clause_pk=NULL</td><td style="font-family:var(--font)">Cross-doc references resolve to doc level only, not clause level</td></tr>
+</tbody></table></div></div>
+<div class="sec" id="s1"><h2>S1 Corpus Inventory [file]</h2>
+<div class="tk">16 docs in register; 12 have clause-level corpus folders (T10&ndash;T21); 4 are reference/global assets. 12 *.basis.json grounding packs present.</div>
+<details><summary>Directory tree (depth 3)</summary><pre>corpus/
+  _global/  company_fact_sheet.md  company_profile.yaml  contacts_sources.md
+            document_register.csv(16r)  org_chart.md  people_directory.csv(27r)
+            ops/  [7 CSV/YAML: circuits(528r) outages(10928r) incidents(9509r)
+                               saidi_history(1826r) substations(112r) restoration(20522r) med_days(5r)]
+            reference/  [ieee1366_med_method.md  sampling_table.json]
+  docs/   RPL-CMP-REG-001/  RPL-CS-PRO-004/  RPL-CS-PRO-007/  RPL-CS-PRO-011/
+          RPL-DCC-PRO-003/  RPL-DO-PLN-002/  RPL-ENV-PRO-005/  RPL-LEG-RRS-001/
+          RPL-MTR-PGM-001/  RPL-REG-CAL-2025/  RPL-SAF-PRO-009/  RPL-TAR-GRR-012/
+          each:  *.md  *.basis.json  render/{.pdf .docx .xlsx}  data/{CSVs}  scripts/
+  eval/       scoring.py  expected_findings.json  *.md  [4 files]
+  grounding/  T10-T21.json + 3 Python helpers + 2 JSON reports  [17 files]
+  qa/         audit_reports/ (3 .md)  clause_id_freeze.json  RPL-CS-PRO-004/selfcheck.json
+  validation/ T90_baseline_report.md  T90_results.json</pre></details>
+<div class="tbl-wrap" style="margin-top:.75rem"><table><thead><tr><th>doc_id</th><th>title</th><th>vertical</th><th>version</th><th>eff.date</th><th>law_as_of</th><th>owner</th><th>reviewer</th><th>approver</th><th>formats</th><th>words</th></tr></thead><tbody>
+<tr><td><code>RPL-INF-CPF-001</code></td><td style="font-family:var(--font)">Company Profile and Fact Sheet</td><td style="font-family:var(--font)">Policy &amp; Governanc...</td><td>1.0</td><td>2025-01-15</td><td></td><td>P03</td><td>P07</td><td>P01</td><td><span class="pill pm">ref</span></td><td>--</td></tr>
+<tr><td><code>RPL-INF-PD-001</code></td><td style="font-family:var(--font)">People Directory and Org Chart</td><td style="font-family:var(--font)">Policy &amp; Governanc...</td><td>1.0</td><td>2025-01-15</td><td></td><td>P04</td><td>P03</td><td>P01</td><td><span class="pill pm">ref</span></td><td>--</td></tr>
+<tr><td><code>RPL-INF-DR-001</code></td><td style="font-family:var(--font)">Document Register</td><td style="font-family:var(--font)">Compliance &amp; Legal</td><td>1.0</td><td>2025-03-17</td><td></td><td>P06</td><td>P05</td><td>P04</td><td><span class="pill pm">ref</span></td><td>--</td></tr>
+<tr><td><code>RPL-INF-OMD-001</code></td><td style="font-family:var(--font)">Shared Operational Master Data</td><td style="font-family:var(--font)">Operations &amp; Proce...</td><td>1.0</td><td>2025-01-27</td><td></td><td>P23</td><td>P21</td><td>P16</td><td><span class="pill pm">ref</span></td><td>--</td></tr>
+<tr><td><code>RPL-CMP-REG-001</code></td><td style="font-family:var(--font)">Regulatory Obligations Register</td><td style="font-family:var(--font)">Compliance &amp; Legal</td><td>4.0</td><td>2025-01-23</td><td>2024-12-31</td><td>P06</td><td>P05</td><td>P04</td><td><span class="tag">md</span> <span class="tag">pdf</span> <span class="tag">docx</span> <span class="tag">xlsx</span> <span class="tag">basis.json</span></td><td>7057</td></tr>
+<tr><td><code>RPL-REG-CAL-2025</code></td><td style="font-family:var(--font)">Regulatory Reporting Calendar 2025</td><td style="font-family:var(--font)">Compliance &amp; Legal</td><td>1.2</td><td>2025-03-17</td><td>2024-12-31</td><td>P09</td><td>P08</td><td>P07</td><td><span class="tag">md</span> <span class="tag">pdf</span> <span class="tag">docx</span> <span class="tag">xlsx</span> <span class="tag">basis.json</span></td><td>4818</td></tr>
+<tr><td><code>RPL-LEG-RRS-001</code></td><td style="font-family:var(--font)">Records Retention Schedule</td><td style="font-family:var(--font)">Compliance &amp; Legal</td><td>7.2</td><td>2025-01-23</td><td>2024-12-31</td><td>P12</td><td>P03</td><td>P02</td><td><span class="tag">md</span> <span class="tag">pdf</span> <span class="tag">docx</span> <span class="tag">xlsx</span> <span class="tag">basis.json</span></td><td>8307</td></tr>
+<tr><td><code>RPL-TAR-GRR-012</code></td><td style="font-family:var(--font)">Tariff for Electric Service, IURC No. 12 — Gen...</td><td style="font-family:var(--font)">Policy &amp; Governanc...</td><td>Sheets as re</td><td>2024-06-01</td><td>2024-12-31</td><td>P11</td><td>P10</td><td>P03</td><td><span class="tag">md</span> <span class="tag">pdf</span> <span class="tag">basis.json</span></td><td>11501</td></tr>
+<tr><td><code>RPL-CS-PRO-004</code></td><td style="font-family:var(--font)">Disconnection Reconnection &amp; Winter Protection...</td><td style="font-family:var(--font)">Policy &amp; Governanc...</td><td>5.1</td><td>2025-02-10</td><td>2024-12-31</td><td>P15</td><td>P13</td><td>P03</td><td><span class="tag">md</span> <span class="tag">pdf</span> <span class="tag">docx</span> <span class="tag">basis.json</span></td><td>12818</td></tr>
+<tr><td><code>RPL-CS-PRO-007</code></td><td style="font-family:var(--font)">Meter Test Request &amp; Billing Adjustment Proced...</td><td style="font-family:var(--font)">Policy &amp; Governanc...</td><td>3.0</td><td>2025-02-17</td><td>2024-12-31</td><td>P18</td><td>P14</td><td></td><td><span class="tag">md</span> <span class="tag">pdf</span> <span class="tag">docx</span> <span class="tag">basis.json</span></td><td>11125</td></tr>
+<tr><td><code>RPL-DO-PLN-002</code></td><td style="font-family:var(--font)">Vegetation Management Plan 2025</td><td style="font-family:var(--font)">Policy &amp; Governanc...</td><td>2025.1</td><td>2025-01-27</td><td>2024-12-31</td><td>P22</td><td>P21</td><td>P03</td><td><span class="tag">md</span> <span class="tag">pdf</span> <span class="tag">docx</span> <span class="tag">xlsx</span> <span class="tag">basis.json</span></td><td>12459</td></tr>
+<tr><td><code>RPL-CS-PRO-011</code></td><td style="font-family:var(--font)">Customer Complaint &amp; Dispute Resolution Proced...</td><td style="font-family:var(--font)">Policy &amp; Governanc...</td><td>2.3</td><td>2025-03-03</td><td>2024-12-31</td><td>P17</td><td>P13</td><td></td><td><span class="tag">md</span> <span class="tag">pdf</span> <span class="tag">docx</span> <span class="tag">basis.json</span></td><td>9528</td></tr>
+<tr><td><code>RPL-MTR-PGM-001</code></td><td style="font-family:var(--font)">Meter Testing Program Plan</td><td style="font-family:var(--font)">Operations &amp; Proce...</td><td>6.0</td><td>2025-01-13</td><td>2024-12-31</td><td>P19</td><td>P20</td><td>P16</td><td><span class="tag">md</span> <span class="tag">pdf</span> <span class="tag">docx</span> <span class="tag">xlsx</span> <span class="tag">basis.json</span></td><td>10843</td></tr>
+<tr><td><code>RPL-DCC-PRO-003</code></td><td style="font-family:var(--font)">Service Interruption Reporting Procedure</td><td style="font-family:var(--font)">Operations &amp; Proce...</td><td>4.2</td><td>2025-02-24</td><td>2024-12-31</td><td>P23</td><td>P21</td><td>P08</td><td><span class="tag">md</span> <span class="tag">pdf</span> <span class="tag">docx</span> <span class="tag">basis.json</span></td><td>9436</td></tr>
+<tr><td><code>RPL-ENV-PRO-005</code></td><td style="font-family:var(--font)">Spill Response &amp; Reporting Procedure</td><td style="font-family:var(--font)">Environmental</td><td>3.1</td><td>2025-03-10</td><td>2024-12-31</td><td>P26</td><td>P25</td><td>P24</td><td><span class="tag">md</span> <span class="tag">pdf</span> <span class="tag">docx</span> <span class="tag">basis.json</span></td><td>9468</td></tr>
+<tr><td><code>RPL-SAF-PRO-009</code></td><td style="font-family:var(--font)">Electrical Accident &amp; Incident Reporting Proce...</td><td style="font-family:var(--font)">Workforce &amp; Safety</td><td>2.0</td><td>2025-03-17</td><td>2024-12-31</td><td>P27</td><td>P24</td><td>P08</td><td><span class="tag">md</span> <span class="tag">pdf</span> <span class="tag">docx</span> <span class="tag">basis.json</span></td><td>8869</td></tr>
+</tbody></table></div></div>
+<div class="sec" id="s2"><h2>S2 Store Inventory</h2>
+<div class="tk">Neon: 15 company tables; 3 empty (datasets, parameter_checks, llm_extractions). Qdrant: 2 collections. R2: inaccessible.</div>
+<div class="g2">
+<div><h3>Neon company.* tables [live-db]</h3><div class="tbl-wrap"><table><thead><tr><th>table</th><th>rows</th><th>size</th></tr></thead><tbody>
+<tr><td><code>clause_citations</code></td><td>1,249</td><td>480 kB</td></tr>
+<tr><td><code>clause_links</code></td><td>4,675</td><td>1656 kB</td></tr>
+<tr><td><code>clause_parameters</code></td><td>2,948</td><td>1032 kB</td></tr>
+<tr><td><code>clauses</code></td><td>2,334</td><td>5440 kB</td></tr>
+<tr><td><code>companies</code></td><td>1</td><td>32 kB</td></tr>
+<tr><td><code>company_attributes</code></td><td>22</td><td>32 kB</td></tr>
+<tr><td><code>company_documents</code></td><td>12</td><td>32 kB</td></tr>
+<tr><td><code>dataset_columns</code></td><td>0 <span class="pill pr">EMPTY</span></td><td>16 kB</td></tr>
+<tr><td><code>datasets</code></td><td>0 <span class="pill pr">EMPTY</span></td><td>16 kB</td></tr>
+<tr><td><code>defined_terms</code></td><td>67</td><td>96 kB</td></tr>
+<tr><td><code>document_scope</code></td><td>285</td><td>184 kB</td></tr>
+<tr><td><code>document_versions</code></td><td>12</td><td>88 kB</td></tr>
+<tr><td><code>ingest_runs</code></td><td>2</td><td>32 kB</td></tr>
+<tr><td><code>llm_extractions</code></td><td>0 <span class="pill pr">EMPTY</span></td><td>16 kB</td></tr>
+<tr><td><code>parameter_checks</code></td><td>0 <span class="pill pr">EMPTY</span></td><td>16 kB</td></tr>
+<tr><td><code>people</code></td><td>27</td><td>72 kB</td></tr>
+<tr><td><code>table_columns</code></td><td>26</td><td>32 kB</td></tr>
+<tr><td><code>term_usages</code></td><td>693</td><td>272 kB</td></tr>
+</tbody></table></div>
+<h3>Neon public.* regulatory [live-db]</h3><div class="tbl-wrap"><table><thead><tr><th>table</th><th>rows</th><th>size</th></tr></thead><tbody>
+<tr><td><code>code_sections</code></td><td>4,603</td><td>13 MB</td></tr>
+<tr><td><code>regulatory_actions</code></td><td>1,206</td><td>3.1 MB</td></tr>
+<tr><td><code>action_relationships</code></td><td>843</td><td>184 kB</td></tr>
+<tr><td><code>agencies</code></td><td>4</td><td>32 kB</td></tr>
+</tbody></table></div></div>
+<div><h3>Qdrant collections [live-qdrant]</h3><div class="tbl-wrap"><table><thead><tr><th>collection</th><th>pts</th><th>dim</th><th>BM25</th><th>status</th></tr></thead><tbody>
+<tr><td><code>company_clauses</code></td><td>2,305</td><td>384</td><td><span class="pill pg">yes</span></td><td><span class="pill pg">green</span></td></tr>
+<tr><td><code>regulation_chunks</code></td><td>9,105</td><td>384</td><td><span class="pill pm">no</span></td><td><span class="pill pg">green</span></td></tr>
+</tbody></table></div>
+<div style="margin-top:.75rem"><h3>R2 [live-r2]</h3><span class="pill pr">ERROR</span> <code>An error occurred (NoSuchKey) when calling the ListObjectsV2 operation: The specified key does not exist.</code><br><span class="warn">source_r2_key values in document_versions are UNVERIFIED</span></div></div></div></div>
+<div class="sec" id="s3"><h2>S3 ER Diagram &mdash; Company Schema + Regulatory Links</h2>
+<div class="tk">FK to regulatory code_sections exists only via citation_raw string match (code_section_id is NULL everywhere); Qdrant linked by clause_id/version_id strings.</div>
+<div class="mermaid-wrap">
+<pre class="mermaid">
+erDiagram
+    companies ||--o{ company_documents : "company_id"
+    companies ||--o{ people : "company_id"
+    companies ||--o{ company_attributes : "company_id"
+    company_documents ||--|| document_versions : "current_version_id"
+    document_versions ||--o{ clauses : "version_id"
+    clauses ||--o{ clause_citations : "clause_pk"
+    clauses ||--o{ clause_parameters : "clause_pk"
+    clauses ||--o{ defined_terms : "definition_clause_pk"
+    defined_terms ||--o{ term_usages : "term_pk"
+    clauses ||--o{ term_usages : "clause_pk"
+    clauses ||--o{ clause_links : "from_clause_pk"
+    clauses ||--o{ clause_links : "to_clause_pk"
+    document_versions ||--o{ document_scope : "version_id"
+    clause_parameters ||--o{ parameter_checks : "parameter_pk"
+    code_sections ||..o{ clause_citations : "citation_raw [string match only]"
+</pre>
+</div>
+<h3>Logical Join Keys &mdash; Measured Match Rates [live-db]</h3>
+<div class="tbl-wrap"><table><thead><tr><th>Key</th><th>Source</th><th>Target</th><th>Match rate</th><th>Notes</th></tr></thead><tbody>
+<tr><td><code>clause_id</code></td><td>company.clauses.clause_id</td><td>Qdrant payload.clause_id</td><td>~98.8%</td><td>29 Neon clauses absent from Qdrant</td></tr>
+<tr><td><code>code_section_id</code></td><td>clause_citations.code_section_id</td><td>code_sections.id</td><td class="warn">0% &mdash; NULL everywhere</td><td>Resolution step not run</td></tr>
+<tr><td><code>citation_raw</code></td><td>clause_citations.citation_raw</td><td>code_sections.citation</td><td>35% at S1 (408/1,158 IAC)</td><td>Working workaround for all joins</td></tr>
+<tr><td><code>version_id</code></td><td>document_versions.version_id (UUID)</td><td>Qdrant payload.version_id ("v1" string)</td><td class="warn">UNVERIFIED &mdash; type mismatch</td><td>Qdrant uses opaque string</td></tr>
+<tr><td><code>doc_id</code></td><td>company_documents.doc_id</td><td>clauses.doc_id, document_scope.doc_id</td><td>100%</td><td>Reliable join key</td></tr>
+</tbody></table></div></div>
+<div class="sec" id="s4"><h2>S4 Table Dictionary [live-db]</h2>
+<div class="tk">15 company tables, ~150 columns. Key nulls: clause_citations.code_section_id=100% NULL; Qdrant owner_id/doc_class 0% populated.</div>
+<details><summary><code>company.clause_citations</code> (16 cols)</summary>
+<div class="tbl-wrap"><table><thead><tr><th>column</th><th>type</th><th>nullable</th><th>indexed</th></tr></thead><tbody>
+<tr><td><code>citation_pk</code></td><td><code>uuid</code></td><td>NO</td><td>yes</td></tr>
+<tr><td><code>clause_pk</code></td><td><code>uuid</code></td><td>YES</td><td>yes</td></tr>
+<tr><td><code>citation_raw</code></td><td><code>text</code></td><td>YES</td><td></td></tr>
+<tr><td><code>span_start</code></td><td><code>integer</code></td><td>YES</td><td></td></tr>
+<tr><td><code>span_end</code></td><td><code>integer</code></td><td>YES</td><td></td></tr>
+<tr><td><code>source_system</code></td><td><code>text</code></td><td>YES</td><td></td></tr>
+<tr><td><code>title</code></td><td><code>integer</code></td><td>YES</td><td></td></tr>
+<tr><td><code>article</code></td><td><code>text</code></td><td>YES</td><td></td></tr>
+<tr><td><code>rule</code></td><td><code>text</code></td><td>YES</td><td></td></tr>
+<tr><td><code>section</code></td><td><code>numeric</code></td><td>YES</td><td>yes</td></tr>
+<tr><td><code>subsection_path</code></td><td><code>text</code></td><td>YES</td><td></td></tr>
+<tr><td><code>granularity</code></td><td><code>text</code></td><td>YES</td><td></td></tr>
+<tr><td><code>in_knowledge_base</code></td><td><code>boolean</code></td><td>YES</td><td></td></tr>
+<tr><td><code>code_section_id</code></td><td><code>text</code></td><td>YES</td><td>yes</td></tr>
+<tr><td><code>resolution_status</code></td><td><code>text</code></td><td>YES</td><td></td></tr>
+<tr><td><code>context</code></td><td><code>text</code></td><td>YES</td><td></td></tr>
+</tbody></table></div></details>
+<details><summary><code>company.clause_links</code> (9 cols)</summary>
+<div class="tbl-wrap"><table><thead><tr><th>column</th><th>type</th><th>nullable</th><th>indexed</th></tr></thead><tbody>
+<tr><td><code>link_pk</code></td><td><code>uuid</code></td><td>NO</td><td>yes</td></tr>
+<tr><td><code>company_id</code></td><td><code>text</code></td><td>YES</td><td></td></tr>
+<tr><td><code>from_clause_pk</code></td><td><code>uuid</code></td><td>YES</td><td>yes</td></tr>
+<tr><td><code>to_clause_pk</code></td><td><code>uuid</code></td><td>YES</td><td>yes</td></tr>
+<tr><td><code>to_doc_id</code></td><td><code>text</code></td><td>YES</td><td></td></tr>
+<tr><td><code>link_type</code></td><td><code>text</code></td><td>YES</td><td></td></tr>
+<tr><td><code>method</code></td><td><code>text</code></td><td>YES</td><td></td></tr>
+<tr><td><code>evidence</code></td><td><code>text</code></td><td>YES</td><td></td></tr>
+<tr><td><code>confidence</code></td><td><code>numeric</code></td><td>YES</td><td></td></tr>
+</tbody></table></div></details>
+<details><summary><code>company.clause_parameters</code> (15 cols)</summary>
+<div class="tbl-wrap"><table><thead><tr><th>column</th><th>type</th><th>nullable</th><th>indexed</th></tr></thead><tbody>
+<tr><td><code>parameter_pk</code></td><td><code>uuid</code></td><td>NO</td><td>yes</td></tr>
+<tr><td><code>clause_pk</code></td><td><code>uuid</code></td><td>YES</td><td>yes</td></tr>
+<tr><td><code>kind</code></td><td><code>text</code></td><td>YES</td><td></td></tr>
+<tr><td><code>name</code></td><td><code>text</code></td><td>YES</td><td></td></tr>
+<tr><td><code>value_text</code></td><td><code>text</code></td><td>YES</td><td></td></tr>
+<tr><td><code>span_start</code></td><td><code>integer</code></td><td>YES</td><td></td></tr>
+<tr><td><code>span_end</code></td><td><code>integer</code></td><td>YES</td><td></td></tr>
+<tr><td><code>value_num</code></td><td><code>numeric</code></td><td>YES</td><td></td></tr>
+<tr><td><code>unit</code></td><td><code>text</code></td><td>YES</td><td></td></tr>
+<tr><td><code>qualifier</code></td><td><code>text</code></td><td>YES</td><td></td></tr>
+<tr><td><code>day_type</code></td><td><code>text</code></td><td>YES</td><td></td></tr>
+<tr><td><code>supported_by_citation_pk</code></td><td><code>uuid</code></td><td>YES</td><td></td></tr>
+<tr><td><code>value_source</code></td><td><code>text</code></td><td>YES</td><td></td></tr>
+<tr><td><code>method</code></td><td><code>text</code></td><td>YES</td><td></td></tr>
+<tr><td><code>verified</code></td><td><code>boolean</code></td><td>YES</td><td></td></tr>
+</tbody></table></div></details>
+<details><summary><code>company.clauses</code> (25 cols)</summary>
+<div class="tbl-wrap"><table><thead><tr><th>column</th><th>type</th><th>nullable</th><th>indexed</th></tr></thead><tbody>
+<tr><td><code>clause_pk</code></td><td><code>uuid</code></td><td>NO</td><td>yes</td></tr>
+<tr><td><code>company_id</code></td><td><code>text</code></td><td>YES</td><td></td></tr>
+<tr><td><code>version_id</code></td><td><code>uuid</code></td><td>YES</td><td>yes</td></tr>
+<tr><td><code>doc_id</code></td><td><code>text</code></td><td>YES</td><td>yes</td></tr>
+<tr><td><code>clause_id</code></td><td><code>text</code></td><td>YES</td><td>yes</td></tr>
+<tr><td><code>local_id</code></td><td><code>text</code></td><td>YES</td><td></td></tr>
+<tr><td><code>parent_clause_id</code></td><td><code>text</code></td><td>YES</td><td></td></tr>
+<tr><td><code>ordinal</code></td><td><code>integer</code></td><td>YES</td><td></td></tr>
+<tr><td><code>unit_kind</code></td><td><code>text</code></td><td>YES</td><td></td></tr>
+<tr><td><code>heading_path</code></td><td><code>ARRAY</code></td><td>YES</td><td></td></tr>
+<tr><td><code>section_kind</code></td><td><code>text</code></td><td>YES</td><td></td></tr>
+<tr><td><code>sheet_no</code></td><td><code>text</code></td><td>YES</td><td></td></tr>
+<tr><td><code>table_id</code></td><td><code>text</code></td><td>YES</td><td></td></tr>
+<tr><td><code>row_cells</code></td><td><code>jsonb</code></td><td>YES</td><td></td></tr>
+<tr><td><code>text_raw</code></td><td><code>text</code></td><td>YES</td><td></td></tr>
+<tr><td><code>text_norm</code></td><td><code>text</code></td><td>YES</td><td></td></tr>
+<tr><td><code>text_sha256</code></td><td><code>text</code></td><td>YES</td><td></td></tr>
+<tr><td><code>char_start</code></td><td><code>integer</code></td><td>YES</td><td></td></tr>
+<tr><td><code>char_end</code></td><td><code>integer</code></td><td>YES</td><td></td></tr>
+<tr><td><code>line_start</code></td><td><code>integer</code></td><td>YES</td><td></td></tr>
+<tr><td><code>clause_role</code></td><td><code>text</code></td><td>YES</td><td></td></tr>
+<tr><td><code>role_method</code></td><td><code>text</code></td><td>YES</td><td></td></tr>
+<tr><td><code>assessable</code></td><td><code>boolean</code></td><td>YES</td><td></td></tr>
+<tr><td><code>normalized_statement</code></td><td><code>text</code></td><td>YES</td><td></td></tr>
+<tr><td><code>topic_terms</code></td><td><code>ARRAY</code></td><td>YES</td><td></td></tr>
+</tbody></table></div></details>
+<details><summary><code>company.companies</code> (2 cols)</summary>
+<div class="tbl-wrap"><table><thead><tr><th>column</th><th>type</th><th>nullable</th><th>indexed</th></tr></thead><tbody>
+<tr><td><code>company_id</code></td><td><code>text</code></td><td>NO</td><td>yes</td></tr>
+<tr><td><code>name</code></td><td><code>text</code></td><td>YES</td><td></td></tr>
+</tbody></table></div></details>
+<details><summary><code>company.company_attributes</code> (6 cols)</summary>
+<div class="tbl-wrap"><table><thead><tr><th>column</th><th>type</th><th>nullable</th><th>indexed</th></tr></thead><tbody>
+<tr><td><code>company_id</code></td><td><code>text</code></td><td>NO</td><td>yes</td></tr>
+<tr><td><code>key</code></td><td><code>text</code></td><td>NO</td><td>yes</td></tr>
+<tr><td><code>value_text</code></td><td><code>text</code></td><td>YES</td><td></td></tr>
+<tr><td><code>value_num</code></td><td><code>numeric</code></td><td>YES</td><td></td></tr>
+<tr><td><code>value_bool</code></td><td><code>boolean</code></td><td>YES</td><td></td></tr>
+<tr><td><code>source</code></td><td><code>text</code></td><td>YES</td><td></td></tr>
+</tbody></table></div></details>
+<details><summary><code>company.company_documents</code> (10 cols)</summary>
+<div class="tbl-wrap"><table><thead><tr><th>column</th><th>type</th><th>nullable</th><th>indexed</th></tr></thead><tbody>
+<tr><td><code>company_id</code></td><td><code>text</code></td><td>NO</td><td>yes</td></tr>
+<tr><td><code>doc_id</code></td><td><code>text</code></td><td>NO</td><td>yes</td></tr>
+<tr><td><code>title</code></td><td><code>text</code></td><td>YES</td><td></td></tr>
+<tr><td><code>doc_class</code></td><td><code>text</code></td><td>YES</td><td></td></tr>
+<tr><td><code>vertical</code></td><td><code>text</code></td><td>YES</td><td></td></tr>
+<tr><td><code>owner_id</code></td><td><code>text</code></td><td>YES</td><td></td></tr>
+<tr><td><code>reviewer_id</code></td><td><code>text</code></td><td>YES</td><td></td></tr>
+<tr><td><code>approver_id</code></td><td><code>text</code></td><td>YES</td><td></td></tr>
+<tr><td><code>review_cycle</code></td><td><code>text</code></td><td>YES</td><td></td></tr>
+<tr><td><code>current_version_id</code></td><td><code>uuid</code></td><td>YES</td><td></td></tr>
+</tbody></table></div></details>
+<details><summary><code>company.dataset_columns</code> (11 cols)</summary>
+<div class="tbl-wrap"><table><thead><tr><th>column</th><th>type</th><th>nullable</th><th>indexed</th></tr></thead><tbody>
+<tr><td><code>dataset_pk</code></td><td><code>uuid</code></td><td>NO</td><td>yes</td></tr>
+<tr><td><code>column_name</code></td><td><code>text</code></td><td>NO</td><td>yes</td></tr>
+<tr><td><code>dtype</code></td><td><code>text</code></td><td>YES</td><td></td></tr>
+<tr><td><code>null_rate</code></td><td><code>numeric</code></td><td>YES</td><td></td></tr>
+<tr><td><code>distinct_count</code></td><td><code>bigint</code></td><td>YES</td><td></td></tr>
+<tr><td><code>min_value</code></td><td><code>text</code></td><td>YES</td><td></td></tr>
+<tr><td><code>max_value</code></td><td><code>text</code></td><td>YES</td><td></td></tr>
+<tr><td><code>top_values</code></td><td><code>jsonb</code></td><td>YES</td><td></td></tr>
+<tr><td><code>semantic_role</code></td><td><code>text</code></td><td>YES</td><td></td></tr>
+<tr><td><code>fk_target</code></td><td><code>text</code></td><td>YES</td><td></td></tr>
+<tr><td><code>description</code></td><td><code>text</code></td><td>YES</td><td></td></tr>
+</tbody></table></div></details>
+<details><summary><code>company.datasets</code> (10 cols)</summary>
+<div class="tbl-wrap"><table><thead><tr><th>column</th><th>type</th><th>nullable</th><th>indexed</th></tr></thead><tbody>
+<tr><td><code>dataset_pk</code></td><td><code>uuid</code></td><td>NO</td><td>yes</td></tr>
+<tr><td><code>company_id</code></td><td><code>text</code></td><td>YES</td><td></td></tr>
+<tr><td><code>doc_id</code></td><td><code>text</code></td><td>YES</td><td></td></tr>
+<tr><td><code>name</code></td><td><code>text</code></td><td>YES</td><td></td></tr>
+<tr><td><code>r2_parquet_key</code></td><td><code>text</code></td><td>YES</td><td></td></tr>
+<tr><td><code>r2_source_key</code></td><td><code>text</code></td><td>YES</td><td></td></tr>
+<tr><td><code>file_sha256</code></td><td><code>text</code></td><td>YES</td><td></td></tr>
+<tr><td><code>row_count</code></td><td><code>bigint</code></td><td>YES</td><td></td></tr>
+<tr><td><code>primary_key</code></td><td><code>ARRAY</code></td><td>YES</td><td></td></tr>
+<tr><td><code>description</code></td><td><code>text</code></td><td>YES</td><td></td></tr>
+</tbody></table></div></details>
+<details><summary><code>company.defined_terms</code> (9 cols)</summary>
+<div class="tbl-wrap"><table><thead><tr><th>column</th><th>type</th><th>nullable</th><th>indexed</th></tr></thead><tbody>
+<tr><td><code>term_pk</code></td><td><code>uuid</code></td><td>NO</td><td>yes</td></tr>
+<tr><td><code>company_id</code></td><td><code>text</code></td><td>YES</td><td></td></tr>
+<tr><td><code>doc_id</code></td><td><code>text</code></td><td>YES</td><td></td></tr>
+<tr><td><code>version_id</code></td><td><code>uuid</code></td><td>YES</td><td></td></tr>
+<tr><td><code>term</code></td><td><code>text</code></td><td>YES</td><td>yes</td></tr>
+<tr><td><code>term_norm</code></td><td><code>text</code></td><td>YES</td><td></td></tr>
+<tr><td><code>definition_clause_pk</code></td><td><code>uuid</code></td><td>YES</td><td></td></tr>
+<tr><td><code>cites_regulatory_definition</code></td><td><code>boolean</code></td><td>YES</td><td></td></tr>
+<tr><td><code>citation_pk</code></td><td><code>uuid</code></td><td>YES</td><td></td></tr>
+</tbody></table></div></details>
+<details><summary><code>company.document_scope</code> (8 cols)</summary>
+<div class="tbl-wrap"><table><thead><tr><th>column</th><th>type</th><th>nullable</th><th>indexed</th></tr></thead><tbody>
+<tr><td><code>company_id</code></td><td><code>text</code></td><td>YES</td><td></td></tr>
+<tr><td><code>doc_id</code></td><td><code>text</code></td><td>YES</td><td></td></tr>
+<tr><td><code>version_id</code></td><td><code>uuid</code></td><td>NO</td><td>yes</td></tr>
+<tr><td><code>scope_level</code></td><td><code>text</code></td><td>NO</td><td>yes</td></tr>
+<tr><td><code>scope_key</code></td><td><code>text</code></td><td>NO</td><td>yes</td></tr>
+<tr><td><code>code_section_id</code></td><td><code>text</code></td><td>YES</td><td></td></tr>
+<tr><td><code>sources</code></td><td><code>ARRAY</code></td><td>YES</td><td></td></tr>
+<tr><td><code>clause_count</code></td><td><code>integer</code></td><td>YES</td><td></td></tr>
+</tbody></table></div></details>
+<details><summary><code>company.document_versions</code> (18 cols)</summary>
+<div class="tbl-wrap"><table><thead><tr><th>column</th><th>type</th><th>nullable</th><th>indexed</th></tr></thead><tbody>
+<tr><td><code>version_id</code></td><td><code>uuid</code></td><td>NO</td><td>yes</td></tr>
+<tr><td><code>company_id</code></td><td><code>text</code></td><td>YES</td><td></td></tr>
+<tr><td><code>doc_id</code></td><td><code>text</code></td><td>YES</td><td></td></tr>
+<tr><td><code>version</code></td><td><code>text</code></td><td>YES</td><td>yes</td></tr>
+<tr><td><code>status</code></td><td><code>text</code></td><td>YES</td><td></td></tr>
+<tr><td><code>effective_date</code></td><td><code>date</code></td><td>YES</td><td></td></tr>
+<tr><td><code>approved_date</code></td><td><code>date</code></td><td>YES</td><td></td></tr>
+<tr><td><code>law_as_of</code></td><td><code>date</code></td><td>YES</td><td></td></tr>
+<tr><td><code>next_review</code></td><td><code>date</code></td><td>YES</td><td></td></tr>
+<tr><td><code>supersedes</code></td><td><code>text</code></td><td>YES</td><td></td></tr>
+<tr><td><code>classification</code></td><td><code>text</code></td><td>YES</td><td></td></tr>
+<tr><td><code>regulatory_basis</code></td><td><code>ARRAY</code></td><td>YES</td><td></td></tr>
+<tr><td><code>source_r2_key</code></td><td><code>text</code></td><td>YES</td><td></td></tr>
+<tr><td><code>render_r2_keys</code></td><td><code>ARRAY</code></td><td>YES</td><td></td></tr>
+<tr><td><code>file_sha256</code></td><td><code>text</code></td><td>YES</td><td></td></tr>
+<tr><td><code>ingest_status</code></td><td><code>text</code></td><td>YES</td><td></td></tr>
+<tr><td><code>ingested_at</code></td><td><code>timestamp with time zone</code></td><td>YES</td><td></td></tr>
+<tr><td><code>ingest_run_id</code></td><td><code>uuid</code></td><td>YES</td><td></td></tr>
+</tbody></table></div></details>
+<details><summary><code>company.ingest_runs</code> (7 cols)</summary>
+<div class="tbl-wrap"><table><thead><tr><th>column</th><th>type</th><th>nullable</th><th>indexed</th></tr></thead><tbody>
+<tr><td><code>run_id</code></td><td><code>uuid</code></td><td>NO</td><td>yes</td></tr>
+<tr><td><code>company_id</code></td><td><code>text</code></td><td>YES</td><td></td></tr>
+<tr><td><code>started_at</code></td><td><code>timestamp with time zone</code></td><td>YES</td><td></td></tr>
+<tr><td><code>finished_at</code></td><td><code>timestamp with time zone</code></td><td>YES</td><td></td></tr>
+<tr><td><code>flags</code></td><td><code>jsonb</code></td><td>YES</td><td></td></tr>
+<tr><td><code>status</code></td><td><code>text</code></td><td>YES</td><td></td></tr>
+<tr><td><code>report_r2_key</code></td><td><code>text</code></td><td>YES</td><td></td></tr>
+</tbody></table></div></details>
+<details><summary><code>company.llm_extractions</code> (11 cols)</summary>
+<div class="tbl-wrap"><table><thead><tr><th>column</th><th>type</th><th>nullable</th><th>indexed</th></tr></thead><tbody>
+<tr><td><code>extraction_pk</code></td><td><code>uuid</code></td><td>NO</td><td>yes</td></tr>
+<tr><td><code>run_id</code></td><td><code>uuid</code></td><td>YES</td><td></td></tr>
+<tr><td><code>stage</code></td><td><code>text</code></td><td>YES</td><td></td></tr>
+<tr><td><code>unit_id</code></td><td><code>text</code></td><td>YES</td><td></td></tr>
+<tr><td><code>model</code></td><td><code>text</code></td><td>YES</td><td></td></tr>
+<tr><td><code>prompt_sha256</code></td><td><code>text</code></td><td>YES</td><td></td></tr>
+<tr><td><code>request</code></td><td><code>jsonb</code></td><td>YES</td><td></td></tr>
+<tr><td><code>response</code></td><td><code>jsonb</code></td><td>YES</td><td></td></tr>
+<tr><td><code>valid</code></td><td><code>boolean</code></td><td>YES</td><td></td></tr>
+<tr><td><code>error</code></td><td><code>text</code></td><td>YES</td><td></td></tr>
+<tr><td><code>created_at</code></td><td><code>timestamp with time zone</code></td><td>YES</td><td></td></tr>
+</tbody></table></div></details>
+<details><summary><code>company.parameter_checks</code> (10 cols)</summary>
+<div class="tbl-wrap"><table><thead><tr><th>column</th><th>type</th><th>nullable</th><th>indexed</th></tr></thead><tbody>
+<tr><td><code>check_pk</code></td><td><code>uuid</code></td><td>NO</td><td>yes</td></tr>
+<tr><td><code>company_id</code></td><td><code>text</code></td><td>YES</td><td></td></tr>
+<tr><td><code>parameter_pk</code></td><td><code>uuid</code></td><td>YES</td><td></td></tr>
+<tr><td><code>dataset_pk</code></td><td><code>uuid</code></td><td>YES</td><td></td></tr>
+<tr><td><code>purpose</code></td><td><code>text</code></td><td>YES</td><td></td></tr>
+<tr><td><code>sql_template</code></td><td><code>text</code></td><td>YES</td><td></td></tr>
+<tr><td><code>param_bindings</code></td><td><code>jsonb</code></td><td>YES</td><td></td></tr>
+<tr><td><code>s1_result</code></td><td><code>jsonb</code></td><td>YES</td><td></td></tr>
+<tr><td><code>validated</code></td><td><code>boolean</code></td><td>YES</td><td></td></tr>
+<tr><td><code>method</code></td><td><code>text</code></td><td>YES</td><td></td></tr>
+</tbody></table></div></details>
+<details><summary><code>company.people</code> (9 cols)</summary>
+<div class="tbl-wrap"><table><thead><tr><th>column</th><th>type</th><th>nullable</th><th>indexed</th></tr></thead><tbody>
+<tr><td><code>company_id</code></td><td><code>text</code></td><td>NO</td><td>yes</td></tr>
+<tr><td><code>person_id</code></td><td><code>text</code></td><td>NO</td><td>yes</td></tr>
+<tr><td><code>name</code></td><td><code>text</code></td><td>YES</td><td></td></tr>
+<tr><td><code>title</code></td><td><code>text</code></td><td>YES</td><td></td></tr>
+<tr><td><code>department</code></td><td><code>text</code></td><td>YES</td><td></td></tr>
+<tr><td><code>reports_to_id</code></td><td><code>text</code></td><td>YES</td><td></td></tr>
+<tr><td><code>email</code></td><td><code>text</code></td><td>YES</td><td></td></tr>
+<tr><td><code>alternate_person_id</code></td><td><code>text</code></td><td>YES</td><td></td></tr>
+<tr><td><code>oncall_roles</code></td><td><code>ARRAY</code></td><td>YES</td><td></td></tr>
+</tbody></table></div></details>
+<details><summary><code>company.table_columns</code> (6 cols)</summary>
+<div class="tbl-wrap"><table><thead><tr><th>column</th><th>type</th><th>nullable</th><th>indexed</th></tr></thead><tbody>
+<tr><td><code>company_id</code></td><td><code>text</code></td><td>NO</td><td>yes</td></tr>
+<tr><td><code>doc_id</code></td><td><code>text</code></td><td>NO</td><td>yes</td></tr>
+<tr><td><code>table_name</code></td><td><code>text</code></td><td>NO</td><td>yes</td></tr>
+<tr><td><code>column_name</code></td><td><code>text</code></td><td>NO</td><td>yes</td></tr>
+<tr><td><code>column_role</code></td><td><code>text</code></td><td>YES</td><td></td></tr>
+<tr><td><code>role_method</code></td><td><code>text</code></td><td>YES</td><td></td></tr>
+</tbody></table></div></details>
+<details><summary><code>company.term_usages</code> (3 cols)</summary>
+<div class="tbl-wrap"><table><thead><tr><th>column</th><th>type</th><th>nullable</th><th>indexed</th></tr></thead><tbody>
+<tr><td><code>term_pk</code></td><td><code>uuid</code></td><td>NO</td><td>yes</td></tr>
+<tr><td><code>clause_pk</code></td><td><code>uuid</code></td><td>NO</td><td>yes</td></tr>
+<tr><td><code>occurrences</code></td><td><code>integer</code></td><td>YES</td><td></td></tr>
+</tbody></table></div></details>
+</div>
+<div class="sec" id="s5"><h2>S5 Clauses [live-db]</h2>
+<div class="tk">2,334 clauses across 12 docs; 2298 assessable. Clause ID grammar: <code>doc_id:local_id</code>. No duplicate clause_ids, no ordinal gaps.</div>
+<div class="g2">
+<div><h3>By unit_kind (all docs)</h3><div class="tbl-wrap"><table><thead><tr><th>unit_kind</th><th>count</th><th>assessable</th></tr></thead><tbody>
+<tr><td><code>section</code></td><td>1019</td><td>992</td></tr>
+<tr><td><code>table_row</code></td><td>758</td><td>750</td></tr>
+<tr><td><code>register_row</code></td><td>204</td><td>204</td></tr>
+<tr><td><code>form_field</code></td><td>204</td><td>204</td></tr>
+<tr><td><code>tariff_subrule</code></td><td>127</td><td>127</td></tr>
+<tr><td><code>appendix</code></td><td>21</td><td>20</td></tr>
+<tr><td><code>other</code></td><td>1</td><td>1</td></tr>
+<tr><td><strong>TOTAL</strong></td><td><strong>2334</strong></td><td><strong>2298</strong></td></tr>
+</tbody></table></div>
+<div style="margin-top:.75rem"><h3>Clause ID examples</h3><div class="tbl-wrap"><table><thead><tr><th>unit_kind</th><th>example clause_id</th></tr></thead><tbody>
+<tr><td><code>section</code></td><td><code>RPL-CS-PRO-004:1.2.3</code></td></tr>
+<tr><td><code>register_row</code></td><td><code>RPL-CMP-REG-001:OBL-2024-0047</code></td></tr>
+<tr><td><code>table_row</code></td><td><code>RPL-DO-PLN-002:Notice lead compliance</code></td></tr>
+<tr><td><code>tariff_subrule</code></td><td><code>RPL-TAR-GRR-012:GR-5.3</code></td></tr>
+<tr><td><code>form_field</code></td><td><code>RPL-CS-PRO-011:F2-customer_name</code></td></tr>
+<tr><td><code>appendix</code></td><td><code>RPL-CS-PRO-004:Appendix-F</code></td></tr>
+</tbody></table></div></div></div>
+<div><h3>Text length stats (chars)</h3><div class="tbl-wrap"><table><thead><tr><th>stat</th><th>value</th></tr></thead><tbody>
+<tr><td>min</td><td></td></tr>
+<tr><td>p25</td><td>71.2</td></tr>
+<tr><td>median</td><td>184.0</td></tr>
+<tr><td>p75</td><td>412.8</td></tr>
+<tr><td>max</td><td>4378.0</td></tr>
+<tr><td>mean</td><td>276.8</td></tr>
+</tbody></table></div>
+<h3>2 sample full clause records</h3>
+<div class="card"><strong>RPL-LEG-RRS-001:RRS-CS-004</strong> &bull; unit=register_row &bull; role=internal_procedure &bull; assessable=True<br><code style="display:block;margin-top:4px;white-space:pre-wrap;font-size:.75rem">rrs_id: RRS-CS-004
+record_series_name: Customer Complaint Records – IURC-Escalated
+description: Disputes referred to IURC Consumer Affairs; includes u</code><div style="margin-top:4px"><span class="tag">citations</span> None</div><div><span class="tag">params</span> [{'name': None, 'value': '3 years', 'unit': 'year'}, {'name': None, 'value': '6-month', 'unit': 'month'}]</div></div>
+<div class="card"><strong>RPL-LEG-RRS-001:RRS-CS-003</strong> &bull; unit=register_row &bull; role=internal_procedure &bull; assessable=True<br><code style="display:block;margin-top:4px;white-space:pre-wrap;font-size:.75rem">rrs_id: RRS-CS-003
+record_series_name: Customer Dispute and Complaint Records
+description: Records of customer disputes received and resolved at utili</code><div style="margin-top:4px"><span class="tag">citations</span> None</div><div><span class="tag">params</span> [{'name': None, 'value': '6 months', 'unit': 'month'}, {'name': None, 'value': '6 months', 'unit': 'month'}]</div></div>
+</div></div>
+<div class="sec" id="s6"><h2>S6 Citations [live-db]</h2>
+<div class="tk">1,249 total; 1,158 IAC not_found (code_section_id=NULL &mdash; resolution step not run); 91 external (IEEE/ANSI). 408 IAC would resolve at S1 by citation_raw string match.</div>
+<div class="g3">
+<div><h3>By source_system</h3><div class="tbl-wrap"><table><thead><tr><th>system</th><th>count</th></tr></thead><tbody>
+<tr><td><code>iac</code></td><td>1158</td></tr>
+<tr><td><code>ic</code></td><td>47</td></tr>
+<tr><td><code>external_standard</code></td><td>26</td></tr>
+<tr><td><code>cfr</code></td><td>18</td></tr>
+</tbody></table></div></div>
+<div><h3>By granularity</h3><div class="tbl-wrap"><table><thead><tr><th>granularity</th><th>count</th></tr></thead><tbody>
+<tr><td><code>subsection</code></td><td>600</td></tr>
+<tr><td><code>section</code></td><td>534</td></tr>
+<tr><td><code>rule</code></td><td>115</td></tr>
+</tbody></table></div></div>
+<div><h3>Resolution status</h3><div class="tbl-wrap"><table><thead><tr><th>status</th><th>count</th></tr></thead><tbody>
+<tr><td class="warn"><code>not_found</code></td><td>1158</td></tr>
+<tr><td class="ok"><code>external</code></td><td>91</td></tr>
+<tr><td class="info"><code>would_resolve (S1 string join)</code></td><td>408</td></tr>
+</tbody></table></div></div></div>
+<div class="g2" style="margin-top:.75rem">
+<div><h3>By document</h3><div class="tbl-wrap"><table><thead><tr><th>doc_id</th><th>citations</th></tr></thead><tbody>
+<tr><td><code>RPL-CMP-REG-001</code></td><td>193</td></tr>
+<tr><td><code>RPL-TAR-GRR-012</code></td><td>183</td></tr>
+<tr><td><code>RPL-REG-CAL-2025</code></td><td>148</td></tr>
+<tr><td><code>RPL-DO-PLN-002</code></td><td>122</td></tr>
+<tr><td><code>RPL-CS-PRO-004</code></td><td>115</td></tr>
+<tr><td><code>RPL-CS-PRO-007</code></td><td>114</td></tr>
+<tr><td><code>RPL-MTR-PGM-001</code></td><td>86</td></tr>
+<tr><td><code>RPL-DCC-PRO-003</code></td><td>85</td></tr>
+<tr><td><code>RPL-CS-PRO-011</code></td><td>61</td></tr>
+<tr><td><code>RPL-SAF-PRO-009</code></td><td>59</td></tr>
+<tr><td><code>RPL-LEG-RRS-001</code></td><td>45</td></tr>
+<tr><td><code>RPL-ENV-PRO-005</code></td><td>38</td></tr>
+</tbody></table></div></div>
+<div><h3>Unresolved sample (top 10)</h3><div class="tbl-wrap"><table><thead><tr><th>citation_raw</th><th>doc</th><th>status</th></tr></thead><tbody>
+<tr><td><code>170 IAC 4-1-24</code></td><td>RPL-SAF-PRO-009</td><td class="warn"><code>not_found</code></td></tr>
+<tr><td><code>170 IAC 4-1-3</code></td><td>RPL-CMP-REG-001</td><td class="warn"><code>not_found</code></td></tr>
+<tr><td><code>170 IAC 4-1-1</code></td><td>RPL-CS-PRO-004</td><td class="warn"><code>not_found</code></td></tr>
+<tr><td><code>170 IAC 4-1-13</code></td><td>RPL-CS-PRO-004</td><td class="warn"><code>not_found</code></td></tr>
+<tr><td><code>170 IAC 4-1-15</code></td><td>RPL-CS-PRO-004</td><td class="warn"><code>not_found</code></td></tr>
+<tr><td><code>170 IAC 4-1-16(e)</code></td><td>RPL-CS-PRO-004</td><td class="warn"><code>not_found</code></td></tr>
+<tr><td><code>170 IAC 4-1-13(c)</code></td><td>RPL-CS-PRO-004</td><td class="warn"><code>not_found</code></td></tr>
+<tr><td><code>170 IAC 4-1-16(e)</code></td><td>RPL-CS-PRO-004</td><td class="warn"><code>not_found</code></td></tr>
+<tr><td><code>170 IAC 16-1-4</code></td><td>RPL-CS-PRO-004</td><td class="warn"><code>not_found</code></td></tr>
+<tr><td><code>170 IAC 16-1-7(a)</code></td><td>RPL-CS-PRO-004</td><td class="warn"><code>not_found</code></td></tr>
+</tbody></table></div>
+<p style="margin-top:.5rem;font-size:.8rem"><strong>Citation parser:</strong> <code>app/company_ingest/enrich/citations_grammar.py</code> &mdash; supports IAC, IC, CFR, USC, external standards. Regulatory side (<code>app/regulatory/</code>) has no shared citation parser; different identification scheme. Not the same parser.</p></div></div></div>
+<div class="sec" id="s7"><h2>S7 Parameters &amp; Defined Terms [live-db]</h2>
+<div class="tk">2,948 parameters, 100% verified. value_source: regulatory=2,213 &bull; company=588 &bull; template=147. 67 defined terms with 693 usages.</div>
+<div class="g2">
+<div><h3>Summary</h3><div class="tbl-wrap"><table><thead><tr><th>metric</th><th>value</th></tr></thead><tbody>
+<tr><td>total</td><td>2,948</td></tr>
+<tr><td>verified</td><td class="ok">2,948 (100%)</td></tr>
+<tr><td>source=regulatory</td><td>2,213</td></tr>
+<tr><td>source=company</td><td>588</td></tr><tr><td>source=template</td><td>147</td></tr>
+</tbody></table></div>
+<h3>By kind</h3><div class="tbl-wrap"><table><thead><tr><th>kind</th><th>count</th></tr></thead><tbody>
+<tr><td><code>number</code></td><td>1564</td></tr>
+<tr><td><code>period</code></td><td>516</td></tr>
+<tr><td><code>amount</code></td><td>189</td></tr>
+<tr><td><code>deadline</code></td><td>176</td></tr>
+<tr><td><code>frequency</code></td><td>123</td></tr>
+<tr><td><code>threshold</code></td><td>61</td></tr>
+</tbody></table></div></div>
+<div><h3>Top 20 Parameters</h3><div class="tbl-wrap"><table><thead><tr><th>name</th><th>value</th><th>unit</th><th>kind</th><th>source</th></tr></thead><tbody>
+<tr><td><code></code></td><td><code>$90.00</code></td><td>usd</td><td>amount</td><td>regulatory</td></tr>
+<tr><td><code></code></td><td><code>1</code></td><td></td><td>threshold</td><td>template</td></tr>
+<tr><td><code></code></td><td><code>170</code></td><td></td><td>number</td><td>regulatory</td></tr>
+<tr><td><code></code></td><td><code>16</code></td><td></td><td>number</td><td>regulatory</td></tr>
+<tr><td><code></code></td><td><code>1</code></td><td></td><td>number</td><td>regulatory</td></tr>
+<tr><td><code></code></td><td><code>170</code></td><td></td><td>number</td><td>regulatory</td></tr>
+<tr><td><code></code></td><td><code>7</code></td><td></td><td>number</td><td>regulatory</td></tr>
+<tr><td><code></code></td><td><code>170</code></td><td></td><td>number</td><td>regulatory</td></tr>
+<tr><td><code></code></td><td><code>17</code></td><td></td><td>number</td><td>regulatory</td></tr>
+<tr><td><code></code></td><td><code>2</code></td><td></td><td>number</td><td>regulatory</td></tr>
+<tr><td><code></code></td><td><code>10</code></td><td></td><td>deadline</td><td>template</td></tr>
+<tr><td><code></code></td><td><code>30-day</code></td><td>day</td><td>period</td><td>regulatory</td></tr>
+<tr><td><code></code></td><td><code>Thirty-day</code></td><td>day</td><td>period</td><td>regulatory</td></tr>
+<tr><td><code></code></td><td><code>170</code></td><td></td><td>number</td><td>regulatory</td></tr>
+<tr><td><code></code></td><td><code>1</code></td><td></td><td>number</td><td>regulatory</td></tr>
+<tr><td><code></code></td><td><code>1</code></td><td></td><td>number</td><td>regulatory</td></tr>
+<tr><td><code></code></td><td><code>12</code></td><td></td><td>number</td><td>regulatory</td></tr>
+<tr><td><code></code></td><td><code>1</code></td><td></td><td>number</td><td>regulatory</td></tr>
+<tr><td><code></code></td><td><code>16</code></td><td></td><td>number</td><td>regulatory</td></tr>
+<tr><td><code></code></td><td><code>18</code></td><td></td><td>deadline</td><td>regulatory</td></tr>
+</tbody></table></div></div></div>
+<div class="g2" style="margin-top:.75rem"><div><h3>Defined Terms &mdash; Top 15 by usage</h3><div class="tbl-wrap"><table><thead><tr><th>term</th><th>usages</th></tr></thead><tbody>
+<tr><td><code>**Commission**</code></td><td>184</td></tr>
+<tr><td><code>**Tree**</code></td><td>182</td></tr>
+<tr><td><code>**Utility**</code></td><td>168</td></tr>
+<tr><td><code>**Business days**</code></td><td>132</td></tr>
+<tr><td><code>**Vegetation management**</code></td><td>119</td></tr>
+<tr><td><code>**Written notice**</code></td><td>27</td></tr>
+<tr><td><code>**Work planner**</code></td><td>25</td></tr>
+<tr><td><code>**IVM**</code></td><td>12</td></tr>
+<tr><td><code>**Brush**</code></td><td>11</td></tr>
+<tr><td><code>**Lead sheet**</code></td><td>9</td></tr>
+<tr><td><code>**Hazard tree**</code></td><td>9</td></tr>
+<tr><td><code>**Telephone call**</code></td><td>8</td></tr>
+<tr><td><code>**In person**</code></td><td>7</td></tr>
+<tr><td><code>3. Definitions</code></td><td>6</td></tr>
+<tr><td><code>**Implied consent**</code></td><td>4</td></tr>
+</tbody></table></div></div></div></div>
+<div class="sec" id="s8"><h2>S8 Relationships [live-db]</h2>
+<div class="tk">4,675 clause_links: 3,048 restates (avg conf 0.75, bidirectional), 1,627 reference links (conf=1.0 via regex/register). 295 references_doc links unresolved at clause level.</div>
+<div class="g2">
+<div><h3>clause_links by type/method</h3><div class="tbl-wrap"><table><thead><tr><th>link_type</th><th>method</th><th>count</th><th>avg_conf</th></tr></thead><tbody>
+<tr><td><code>restates</code></td><td><code>parameter_match</code></td><td>3048</td><td>0.75</td></tr>
+<tr><td><code>references_clause</code></td><td><code>regex</code></td><td>288</td><td>1.00</td></tr>
+<tr><td><code>references_record_series</code></td><td><code>regex</code></td><td>232</td><td>1.00</td></tr>
+<tr><td><code>references_tariff</code></td><td><code>regex</code></td><td>217</td><td>1.00</td></tr>
+<tr><td><code>references_form</code></td><td><code>regex</code></td><td>207</td><td>1.00</td></tr>
+<tr><td><code>references_doc</code></td><td><code>register_column</code></td><td>170</td><td>1.00</td></tr>
+<tr><td><code>references_clause</code></td><td><code>register_column</code></td><td>157</td><td>1.00</td></tr>
+<tr><td><code>references_doc</code></td><td><code>regex</code></td><td>125</td><td>1.00</td></tr>
+<tr><td><code>references_record_series</code></td><td><code>register_column</code></td><td>88</td><td>1.00</td></tr>
+<tr><td><code>references_obligation</code></td><td><code>regex</code></td><td>73</td><td>1.00</td></tr>
+<tr><td><code>references_obligation</code></td><td><code>register_column</code></td><td>70</td><td>1.00</td></tr>
+</tbody></table></div></div>
+<div><h3>restates confidence distribution</h3><div class="tbl-wrap"><table><thead><tr><th>stat</th><th>value</th></tr></thead><tbody>
+<tr><td>n</td><td>3048</td></tr>
+<tr><td>min</td><td>0.6</td></tr>
+<tr><td>p25</td><td>0.664</td></tr>
+<tr><td>median</td><td>0.736</td></tr>
+<tr><td>p75</td><td>0.814</td></tr>
+<tr><td>max</td><td>0.999</td></tr>
+</tbody></table></div>
+<h3>Unresolved link targets (to_clause_pk=NULL)</h3><div class="tbl-wrap"><table><thead><tr><th>link_type</th><th>to_doc_id</th><th>count</th></tr></thead><tbody>
+<tr><td><code>references_doc</code></td><td><code>RPL-TAR-GRR-012</code></td><td>59</td></tr>
+<tr><td><code>references_doc</code></td><td><code>RPL-ENV-PRO-005</code></td><td>41</td></tr>
+<tr><td><code>references_doc</code></td><td><code>RPL-SAF-PRO-009</code></td><td>37</td></tr>
+<tr><td><code>references_doc</code></td><td><code>RPL-LEG-RRS-001</code></td><td>35</td></tr>
+<tr><td><code>references_doc</code></td><td><code>RPL-CS-PRO-004</code></td><td>32</td></tr>
+<tr><td><code>references_doc</code></td><td><code>RPL-MTR-PGM-001</code></td><td>26</td></tr>
+<tr><td><code>references_doc</code></td><td><code>RPL-DO-PLN-002</code></td><td>23</td></tr>
+<tr><td><code>references_doc</code></td><td><code>RPL-CS-PRO-011</code></td><td>16</td></tr>
+<tr><td><code>references_doc</code></td><td><code>RPL-DCC-PRO-003</code></td><td>11</td></tr>
+<tr><td><code>references_doc</code></td><td><code>RPL-CS-PRO-007</code></td><td>8</td></tr>
+</tbody></table></div></div></div>
+<h3>document_scope: docs &times; top-8 rules (clause counts) [live-db]</h3>
+<div class="tbl-wrap"><table><thead><tr><th>doc_id</th>
+<th style="font-size:.7rem">170 IAC 4-1</th>
+<th style="font-size:.7rem">170 IAC 16-1</th>
+<th style="font-size:.7rem">170 IAC 4-9</th>
+<th style="font-size:.7rem">170 IAC 1-5</th>
+<th style="font-size:.7rem">170 IAC 1-2</th>
+<th style="font-size:.7rem">170 IAC 1-6</th>
+<th style="font-size:.7rem">170 IAC 1-7</th>
+<th style="font-size:.7rem">170 IAC 17.1-2</th>
+</tr></thead><tbody>
+<tr><td><code>RPL-CMP-REG-001</code></td>
+<td>45</td>
+<td>14</td>
+<td>16</td>
+<td>13</td>
+<td>12</td>
+<td>10</td>
+<td>4</td>
+<td>1</td>
+</tr>
+<tr><td><code>RPL-CS-PRO-004</code></td>
+<td>75</td>
+<td>21</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table></div></div>
+<div class="sec" id="s9"><h2>S9 Registers (T10 Obligations &bull; T11 Calendar &bull; T12 Retention) [live-db]</h2>
+<div class="tk">T10: 70 obligation rows (100% cited); T11: 48 calendar rows (100% cited); T12: 86 retention rows (0% cited &mdash; no parsed citations in RRS register_rows).</div>
+<div class="tbl-wrap"><table><thead><tr><th>Register</th><th>doc_id</th><th>Rows</th><th>Columns</th><th>% rows with citation</th><th>Column roles (LLM)</th></tr></thead><tbody>
+<tr><td>T10 Obligations</td><td><code>RPL-CMP-REG-001</code></td><td>70 register_row<br>85 section</td><td style="font-family:var(--font);font-size:.75rem">obligation_id, citation, title, description, frequency, accountable_owner_id, implementation_doc, implementation_clause, compliance_control, status, priority</td><td class="ok">100% (70/70)</td><td style="font-family:var(--font);font-size:.75rem">id, citation, owner_person, reference_list, status, enum</td></tr>
+<tr><td>T11 Calendar</td><td><code>RPL-REG-CAL-2025</code></td><td>48 register_row<br>36 section</td><td style="font-family:var(--font);font-size:.75rem">event_id, citation, event_type, title, description, due_date, owner_id, implementation_doc, implementation_clause, status, notes</td><td class="ok">100% (48/48)</td><td style="font-family:var(--font);font-size:.75rem">id, citation, date, owner_person, reference_list, status</td></tr>
+<tr><td>T12 Retention</td><td><code>RPL-LEG-RRS-001</code></td><td>86 register_row<br>87 section</td><td style="font-family:var(--font);font-size:.75rem">rrs_id, record_series_name, description, retention_period, retention_basis, regulatory_authority, media, vital_record, disposition_method, owner_dept, implementation_docs</td><td class="warn">0% (0/86)</td><td style="font-family:var(--font);font-size:.75rem">id, summary_text, reference_list</td></tr>
+</tbody></table></div>
+<p style="margin-top:.5rem;font-size:.8rem">Parameters in register_rows: number(311), period(120), frequency(60), deadline(22), threshold(7), record_retention(6). T12 cites regulatory authority in free text only &mdash; not as parsed citation_raw.</p></div>
+<div class="sec" id="s10"><h2>S10 Datasets [live-db + file]</h2>
+<div class="tk"><span class="warn">Neon: company.datasets=0, company.dataset_columns=0, company.parameter_checks=0 &mdash; profiling not run.</span> 27 CSV source files exist on disk.</div>
+<span class="pill pr">NOT INGESTED</span> company.datasets = 0 rows &bull; company.parameter_checks = 0 rows<br><br>
+<h3>Source CSV files on disk [file]</h3><div class="tbl-wrap"><table><thead><tr><th>source</th><th>file</th><th>rows</th><th>cols</th><th>bytes</th></tr></thead><tbody>
+<tr><td><code>_global</code></td><td><code>document_register.csv</code></td><td>16</td><td>21</td><td>7,839</td></tr>
+<tr><td><code>_global</code></td><td><code>ops/circuits_master.csv</code></td><td>528</td><td>14</td><td>53,798</td></tr>
+<tr><td><code>_global</code></td><td><code>ops/daily_saidi_history_2019_2023.csv</code></td><td>1,826</td><td>4</td><td>56,011</td></tr>
+<tr><td><code>_global</code></td><td><code>ops/med_days.csv</code></td><td>5</td><td>4</td><td>206</td></tr>
+<tr><td><code>_global</code></td><td><code>ops/outage_events_base.csv</code></td><td>10,928</td><td>27</td><td>2,575,711</td></tr>
+<tr><td><code>_global</code></td><td><code>ops/outage_incidents_base.csv</code></td><td>9,509</td><td>14</td><td>1,523,815</td></tr>
+<tr><td><code>_global</code></td><td><code>ops/outage_restoration_steps_base.csv</code></td><td>20,522</td><td>5</td><td>893,218</td></tr>
+<tr><td><code>_global</code></td><td><code>ops/substations_master.csv</code></td><td>112</td><td>8</td><td>6,179</td></tr>
+<tr><td><code>_global</code></td><td><code>people_directory.csv</code></td><td>27</td><td>11</td><td>4,108</td></tr>
+<tr><td><code>RPL-CMP-REG-001</code></td><td><code>compliance_register_2024-12-31.csv</code></td><td>70</td><td>15</td><td>29,340</td></tr>
+<tr><td><code>RPL-DCC-PRO-003</code></td><td><code>planned_interruption_notices_2024.csv</code></td><td>623</td><td>8</td><td>51,351</td></tr>
+<tr><td><code>RPL-DCC-PRO-003</code></td><td><code>outage_incidents_2024-01-01_2025-01-31.csv</code></td><td>9,509</td><td>20</td><td>1,600,867</td></tr>
+<tr><td><code>RPL-DCC-PRO-003</code></td><td><code>reliability_indices_2024.csv</code></td><td>13</td><td>16</td><td>1,723</td></tr>
+<tr><td><code>RPL-DCC-PRO-003</code></td><td><code>outage_events_2024-01-01_2025-01-31.csv</code></td><td>10,928</td><td>28</td><td>2,610,137</td></tr>
+<tr><td><code>RPL-DCC-PRO-003</code></td><td><code>iurc_report_log_2024-01-01_2025-01-31.csv</code></td><td>59</td><td>11</td><td>7,674</td></tr>
+<tr><td><code>RPL-DO-PLN-002</code></td><td><code>vm_circuit_schedule_2025.csv</code></td><td>111</td><td>22</td><td>19,858</td></tr>
+<tr><td><code>RPL-DO-PLN-002</code></td><td><code>vm_budget_2024_2025.csv</code></td><td>8</td><td>12</td><td>1,504</td></tr>
+<tr><td><code>RPL-DO-PLN-002</code></td><td><code>vm_tree_outages_2024.csv</code></td><td>51</td><td>11</td><td>3,450</td></tr>
+<tr><td><code>RPL-DO-PLN-002</code></td><td><code>vm_work_completed_2024.csv</code></td><td>106</td><td>12</td><td>10,438</td></tr>
+<tr><td><code>RPL-DO-PLN-002</code></td><td><code>vm_customer_contacts_2024.csv</code></td><td>542</td><td>11</td><td>65,465</td></tr>
+<tr><td><code>RPL-ENV-PRO-005</code></td><td><code>spill_events_2024.csv</code></td><td>95</td><td>25</td><td>22,619</td></tr>
+<tr><td><code>RPL-LEG-RRS-001</code></td><td><code>retention_schedule_2024-12-31.csv</code></td><td>86</td><td>13</td><td>25,040</td></tr>
+<tr><td><code>RPL-MTR-PGM-001</code></td><td><code>meter_test_results_2024.csv</code></td><td>6,432</td><td>22</td><td>1,047,189</td></tr>
+<tr><td><code>RPL-MTR-PGM-001</code></td><td><code>inservice_sample_selection_2025.csv</code></td><td>3,750</td><td>5</td><td>124,135</td></tr>
+<tr><td><code>RPL-MTR-PGM-001</code></td><td><code>customer_test_requests_2024.csv</code></td><td>620</td><td>17</td><td>88,618</td></tr>
+<tr><td><code>RPL-MTR-PGM-001</code></td><td><code>meter_population_2024-12-31.csv</code></td><td>53</td><td>17</td><td>11,451</td></tr>
+<tr><td><code>RPL-MTR-PGM-001</code></td><td><code>new_meter_lots_2024.csv</code></td><td>12</td><td>11</td><td>1,329</td></tr>
+<tr><td><code>RPL-MTR-PGM-001</code></td><td><code>standards_calibration_2024.csv</code></td><td>41</td><td>13</td><td>7,247</td></tr>
+<tr><td><code>RPL-REG-CAL-2025</code></td><td><code>calendar_events_2025.csv</code></td><td>48</td><td>12</td><td>20,467</td></tr>
+<tr><td><code>RPL-SAF-PRO-009</code></td><td><code>incident_log_2024.csv</code></td><td>285</td><td>20</td><td>30,281</td></tr>
+</tbody></table></div></div>
+<div class="sec" id="s11"><h2>S11 People &amp; Reference Data [live-db]</h2>
+<div class="tk">27 people (P01&ndash;P27), 8 departments; 22 company_attributes; 4 of 16 register docs not ingested as clause corpus (reference/global).</div>
+<div class="g2">
+<div><h3>People by department</h3><div class="tbl-wrap"><table><thead><tr><th>dept</th><th>count</th></tr></thead><tbody>
+<tr><td style="font-family:var(--font)">Regulatory Affairs</td><td>5</td></tr>
+<tr><td style="font-family:var(--font)">Customer Operations</td><td>4</td></tr>
+<tr><td style="font-family:var(--font)">EHS</td><td>4</td></tr>
+<tr><td style="font-family:var(--font)">Legal</td><td>3</td></tr>
+<tr><td style="font-family:var(--font)">Compliance</td><td>3</td></tr>
+<tr><td style="font-family:var(--font)">Metering</td><td>3</td></tr>
+<tr><td style="font-family:var(--font)">Distribution Operations</td><td>3</td></tr>
+<tr><td style="font-family:var(--font)">Executive</td><td>1</td></tr>
+<tr><td style="font-family:var(--font)">Operations</td><td>1</td></tr>
+</tbody></table></div></div>
+<div><h3>company_attributes (all 22)</h3><div class="tbl-wrap"><table><thead><tr><th>key</th><th>value</th></tr></thead><tbody>
+<tr><td><code>customer_count_total</code></td><td>407491</td></tr>
+<tr><td><code>fleet_vehicle_count</code></td><td>640</td></tr>
+<tr><td><code>has_aboveground_fuel_storage</code></td><td>True</td></tr>
+<tr><td><code>has_emergency_standby_generators</code></td><td>True</td></tr>
+<tr><td><code>has_fleet_vehicles</code></td><td>True</td></tr>
+<tr><td><code>has_gas_operations</code></td><td>False</td></tr>
+<tr><td><code>has_oil_filled_equipment</code></td><td>True</td></tr>
+<tr><td><code>has_spcc_plans</code></td><td>True</td></tr>
+<tr><td><code>has_underground_facilities</code></td><td>True</td></tr>
+<tr><td><code>has_vegetation_management_program</code></td><td>True</td></tr>
+<tr><td><code>has_water_operations</code></td><td>False</td></tr>
+<tr><td><code>iurc_jurisdictional</code></td><td>True</td></tr>
+<tr><td><code>jurisdiction</code></td><td>IN</td></tr>
+<tr><td><code>meters_in_service_total</code></td><td>409950</td></tr>
+<tr><td><code>operates_transmission_above_100kv</code></td><td>False</td></tr>
+<tr><td><code>ownership</code></td><td>investor_owned</td></tr>
+<tr><td><code>owns_customer_meters</code></td><td>True</td></tr>
+<tr><td><code>owns_generating_units</code></td><td>False</td></tr>
+<tr><td><code>pcb_equipment_possible</code></td><td>True</td></tr>
+<tr><td><code>standby_generator_count</code></td><td>3</td></tr>
+<tr><td><code>state_osha_plan</code></td><td>IOSHA</td></tr>
+<tr><td><code>utility_type</code></td><td>electric</td></tr>
+</tbody></table></div></div></div>
+<h3 style="margin-top:.75rem">document_register vs ingested</h3><div class="tbl-wrap"><table><thead><tr><th>doc_id</th><th>title</th><th>corpus folder</th><th>Neon status</th></tr></thead><tbody>
+<tr><td><code>RPL-INF-CPF-001</code></td><td style="font-family:var(--font)">Company Profile and Fact Sheet</td><td>--</td><td><span class="warn">NOT ingested</span></td></tr>
+<tr><td><code>RPL-INF-PD-001</code></td><td style="font-family:var(--font)">People Directory and Org Chart</td><td>--</td><td><span class="warn">NOT ingested</span></td></tr>
+<tr><td><code>RPL-INF-DR-001</code></td><td style="font-family:var(--font)">Document Register</td><td>--</td><td><span class="warn">NOT ingested</span></td></tr>
+<tr><td><code>RPL-INF-OMD-001</code></td><td style="font-family:var(--font)">Shared Operational Master Data</td><td>--</td><td><span class="warn">NOT ingested</span></td></tr>
+<tr><td><code>RPL-CMP-REG-001</code></td><td style="font-family:var(--font)">Regulatory Obligations Register</td><td>yes</td><td><span class="ok">ingested</span></td></tr>
+<tr><td><code>RPL-REG-CAL-2025</code></td><td style="font-family:var(--font)">Regulatory Reporting Calendar 2025</td><td>yes</td><td><span class="ok">ingested</span></td></tr>
+<tr><td><code>RPL-LEG-RRS-001</code></td><td style="font-family:var(--font)">Records Retention Schedule</td><td>yes</td><td><span class="ok">ingested</span></td></tr>
+<tr><td><code>RPL-TAR-GRR-012</code></td><td style="font-family:var(--font)">Tariff for Electric Service, IURC No. 12 —...</td><td>yes</td><td><span class="ok">ingested</span></td></tr>
+<tr><td><code>RPL-CS-PRO-004</code></td><td style="font-family:var(--font)">Disconnection Reconnection &amp; Winter Protec...</td><td>yes</td><td><span class="ok">ingested</span></td></tr>
+<tr><td><code>RPL-CS-PRO-007</code></td><td style="font-family:var(--font)">Meter Test Request &amp; Billing Adjustment Pr...</td><td>yes</td><td><span class="ok">ingested</span></td></tr>
+<tr><td><code>RPL-DO-PLN-002</code></td><td style="font-family:var(--font)">Vegetation Management Plan 2025</td><td>yes</td><td><span class="ok">ingested</span></td></tr>
+<tr><td><code>RPL-CS-PRO-011</code></td><td style="font-family:var(--font)">Customer Complaint &amp; Dispute Resolution Pr...</td><td>yes</td><td><span class="ok">ingested</span></td></tr>
+<tr><td><code>RPL-MTR-PGM-001</code></td><td style="font-family:var(--font)">Meter Testing Program Plan</td><td>yes</td><td><span class="ok">ingested</span></td></tr>
+<tr><td><code>RPL-DCC-PRO-003</code></td><td style="font-family:var(--font)">Service Interruption Reporting Procedure</td><td>yes</td><td><span class="ok">ingested</span></td></tr>
+<tr><td><code>RPL-ENV-PRO-005</code></td><td style="font-family:var(--font)">Spill Response &amp; Reporting Procedure</td><td>yes</td><td><span class="ok">ingested</span></td></tr>
+<tr><td><code>RPL-SAF-PRO-009</code></td><td style="font-family:var(--font)">Electrical Accident &amp; Incident Reporting P...</td><td>yes</td><td><span class="ok">ingested</span></td></tr>
+</tbody></table></div></div>
+<div class="sec" id="s12"><h2>S12 Qdrant Detail [live-qdrant]</h2>
+<div class="tk">company_clauses: dense 384-dim Cosine + BM25 sparse; 2,305 pts vs Neon 2,334. regulation_chunks: unnamed dense 384-dim Cosine, no BM25, indexed_vectors=0. Embedding model matches (both 384-dim, all-MiniLM-L6-v2).</div>
+<div class="g2">
+<div><h3>company_clauses</h3><div class="tbl-wrap"><table><thead><tr><th>property</th><th>value</th></tr></thead><tbody>
+<tr><td>points</td><td>2,305 <span class="warn">(&minus;29 vs Neon)</span></td></tr>
+<tr><td>dense dim</td><td>384</td></tr>
+<tr><td>distance</td><td>Cosine</td></tr>
+<tr><td>sparse/BM25</td><td>yes &mdash; idf modifier</td></tr>
+<tr><td>embed model</td><td><code>all-MiniLM-L6-v2</code></td></tr>
+<tr><td>indexed_vectors</td><td>1,970</td></tr>
+</tbody></table></div>
+<h3>Payload schema &mdash; company_clauses</h3><div class="tbl-wrap"><table><thead><tr><th>field</th><th>type</th><th>pts (coverage)</th></tr></thead><tbody>
+<tr><td><code>assessable</code></td><td>bool</td><td>2,305 (100%)</td></tr>
+<tr><td><code>cited_rules</code></td><td>keyword</td><td>767 (33%)</td></tr>
+<tr><td><code>cited_sections</code></td><td>keyword</td><td>767 (33%)</td></tr>
+<tr><td><code>clause_id</code></td><td>keyword</td><td>2,305 (100%)</td></tr>
+<tr><td><code>clause_role</code></td><td>keyword</td><td>2,305 (100%)</td></tr>
+<tr><td><code>company_id</code></td><td>keyword</td><td>2,305 (100%)</td></tr>
+<tr class="warn"><td><code>doc_class</code></td><td>keyword</td><td>0 (0%)</td></tr>
+<tr><td><code>doc_id</code></td><td>keyword</td><td>2,305 (100%)</td></tr>
+<tr><td><code>is_current</code></td><td>bool</td><td>2,305 (100%)</td></tr>
+<tr class="warn"><td><code>owner_id</code></td><td>keyword</td><td>0 (0%)</td></tr>
+<tr><td><code>param_kinds</code></td><td>keyword</td><td>959 (42%)</td></tr>
+<tr><td><code>param_units</code></td><td>keyword</td><td>653 (28%)</td></tr>
+<tr><td><code>project</code></td><td>keyword</td><td>2,305 (100%)</td></tr>
+<tr><td><code>section_kind</code></td><td>keyword</td><td>2,305 (100%)</td></tr>
+<tr><td><code>terms_used</code></td><td>keyword</td><td>519 (23%)</td></tr>
+<tr><td><code>unit_kind</code></td><td>keyword</td><td>2,305 (100%)</td></tr>
+<tr><td><code>version_id</code></td><td>keyword</td><td>2,305 (100%)</td></tr>
+</tbody></table></div></div>
+<div><h3>regulation_chunks</h3><div class="tbl-wrap"><table><thead><tr><th>property</th><th>value</th></tr></thead><tbody>
+<tr><td>points</td><td>9,105</td></tr>
+<tr><td>vector</td><td>unnamed dim=384 Cosine</td></tr>
+<tr><td>BM25 sparse</td><td class="warn">no</td></tr>
+<tr><td>indexed_vectors</td><td class="warn">0</td></tr>
+<tr><td>model match?</td><td class="ok">yes &mdash; both 384-dim Cosine</td></tr>
+</tbody></table></div>
+<h3>Payload schema &mdash; regulation_chunks</h3><div class="tbl-wrap"><table><thead><tr><th>field</th><th>type</th><th>pts</th></tr></thead><tbody>
+<tr><td><code>agency</code></td><td>keyword</td><td>9,105</td></tr>
+<tr><td><code>citation</code></td><td>keyword</td><td>7,898</td></tr>
+<tr><td><code>jurisdiction_level</code></td><td>keyword</td><td>7,898</td></tr>
+<tr><td><code>project</code></td><td>keyword</td><td>9,105</td></tr>
+<tr><td><code>source_system</code></td><td>keyword</td><td>9,105</td></tr>
+<tr><td><code>status</code></td><td>keyword</td><td>9,105</td></tr>
+</tbody></table></div>
+<h3>2 sample company_clauses payloads</h3>
+<div class="card"><code>id=001dba98-450e-5856-8881-de295f5e3a6c</code><pre style="white-space:pre-wrap">{
+ &quot;project&quot;: &quot;strata&quot;,
+ &quot;company_id&quot;: &quot;rpl&quot;,
+ &quot;doc_id&quot;: &quot;RPL-DO-PLN-002&quot;,
+ &quot;version_id&quot;: &quot;v1&quot;,
+ &quot;clause_id&quot;: &quot;RPL-DO-PLN-002:Notice lead compliance&quot;,
+ &quot;local_id&quot;: &quot;Notice lead compliance&quot;,
+ &quot;heading_path&quot;: [
+  &quot;19. Contractor Requirements and Quality Assurance&quot;,
+  &quot;19.4 Contractor KPIs&quot;
+ ]
+}</pre></div>
+<div class="card"><code>id=0035c0e7-b9e3-55ea-aa90-2c7239b93322</code><pre style="white-space:pre-wrap">{
+ &quot;project&quot;: &quot;strata&quot;,
+ &quot;company_id&quot;: &quot;rpl&quot;,
+ &quot;doc_id&quot;: &quot;RPL-CMP-REG-001&quot;,
+ &quot;version_id&quot;: &quot;v1&quot;,
+ &quot;clause_id&quot;: &quot;RPL-CMP-REG-001:OBL-2024-0047&quot;,
+ &quot;local_id&quot;: &quot;OBL-2024-0047&quot;,
+ &quot;heading_path&quot;: [
+  &quot;RPL-CMP-REG-001&quot;,
+  &quot;compliance_register_2024-12-31&quot;
+ ]
+}</pre></div>
+</div></div>
+<h3 style="margin-top:.75rem">Neon vs Qdrant parity</h3><div class="tbl-wrap"><table><thead><tr><th>metric</th><th>Neon</th><th>Qdrant</th><th>gap</th></tr></thead><tbody>
+<tr><td>clauses / points</td><td>2,334</td><td>2,305</td><td class="warn">&minus;29</td></tr>
+<tr><td>assessable</td><td>2,298</td><td>2,298 (payload 100%)</td><td>0</td></tr>
+</tbody></table></div></div>
+<div class="sec" id="s13"><h2>S13 R2 Detail [live-r2]</h2>
+<div class="tk">R2 inaccessible &mdash; ListObjectsV2 returns NoSuchKey. Key patterns derived from schema.sql; actual existence UNVERIFIED.</div>
+<span class="pill pr">ERROR</span> <code>An error occurred (NoSuchKey) when calling the ListObjectsV2 operation: The specified key does not exist.</code><br><br>
+<div class="tbl-wrap"><table><thead><tr><th>Neon column</th><th>Expected R2 key pattern</th><th>Existence</th></tr></thead><tbody>
+<tr><td><code>document_versions.source_r2_key</code></td><td><code>rpl/docs/{doc_id}/{ver}/source.md</code></td><td class="warn">UNVERIFIED</td></tr>
+<tr><td><code>document_versions.render_r2_keys[]</code></td><td><code>rpl/docs/{doc_id}/{ver}/render/*.{pdf,docx}</code></td><td class="warn">UNVERIFIED</td></tr>
+<tr><td><code>datasets.r2_parquet_key</code></td><td><code>rpl/datasets/{doc_id}/{name}.parquet</code></td><td class="warn">N/A (datasets=0)</td></tr>
+<tr><td><code>ingest_runs.report_r2_key</code></td><td><code>rpl/ingest_runs/{run_id}/report.json</code></td><td class="warn">UNVERIFIED</td></tr>
+</tbody></table></div><p style="margin-top:.5rem;font-size:.8rem"><span class="warn">Action needed:</span> verify R2_BUCKET_NAME in .env matches actual bucket; confirm ListObjectsV2 permission.</p></div>
+<div class="sec" id="s14"><h2>S14 Hidden Eval / Ground-truth Assets (barrier-safe) [file &mdash; schema only]</h2>
+<div class="tk">4 eval files, 17 grounding files (T10&ndash;T21), 5 QA files, 2 validation files. Values/answers not reported per information barrier.</div>
+<div class="g2">
+<div><h3>eval/ files</h3><div class="tbl-wrap"><table><thead><tr><th>file</th><th>bytes</th><th>schema (fields only)</th></tr></thead><tbody>
+<tr><td><code>scoring.py</code></td><td>14,512</td><td><code>['load_expected', 'is_informational', '_strip_subsection', 'citation_m...</code></td></tr>
+<tr><td><code>expected_findings.json</code></td><td>34,273</td><td><code>['corpus_sha256', 'generated_date', 'generator', 'snapshots', 'changed...</code></td></tr>
+<tr><td><code>expected_findings.md</code></td><td>8,815</td><td><code></code></td></tr>
+<tr><td><code>adjudication_log.md</code></td><td>10,959</td><td><code></code></td></tr>
+</tbody></table></div>
+<h3>scoring.py description</h3><p style="font-size:.8rem"><strong>Inputs:</strong> expected_findings.json (keys: corpus_sha256, generated_date, snapshots, changed_citations, documents, scoring_summary) + candidate findings JSON.<br><strong>Functions:</strong> load_expected, citation_matches, clause_matches, route_matches, score, kappa, main.<br><strong>Scored on:</strong> citation strings, clause_ids, routing decisions.<br><strong>Output:</strong> precision/recall/F1/kappa per finding type (no answer values).</p></div>
+<div><h3>grounding/ files (schema only)</h3><div class="tbl-wrap"><table><thead><tr><th>file</th><th>bytes</th><th>top-level keys</th></tr></thead><tbody>
+<tr><td><code>T10.json</code></td><td>348,589</td><td><code>['task', 'law_as_of', 'sections', 'must_cover']</code></td></tr>
+<tr><td><code>T11.json</code></td><td>348,589</td><td><code>['task', 'law_as_of', 'sections', 'must_cover']</code></td></tr>
+<tr><td><code>T12.json</code></td><td>348,589</td><td><code>['task', 'law_as_of', 'sections', 'must_cover']</code></td></tr>
+<tr><td><code>T13.json</code></td><td>293,622</td><td><code>['task', 'law_as_of', 'sections', 'must_cover']</code></td></tr>
+<tr><td><code>T14.json</code></td><td>81,757</td><td><code>['task', 'law_as_of', 'sections', 'must_cover']</code></td></tr>
+<tr><td><code>T15.json</code></td><td>65,875</td><td><code>['task', 'law_as_of', 'sections', 'must_cover']</code></td></tr>
+<tr><td><code>T16.json</code></td><td>89,056</td><td><code>['task', 'law_as_of', 'sections', 'must_cover']</code></td></tr>
+<tr><td><code>T17.json</code></td><td>62,104</td><td><code>['task', 'law_as_of', 'sections', 'must_cover']</code></td></tr>
+<tr><td><code>T18.json</code></td><td>49,658</td><td><code>['task', 'law_as_of', 'sections', 'must_cover']</code></td></tr>
+<tr><td><code>T19.json</code></td><td>44,935</td><td><code>['task', 'law_as_of', 'sections', 'must_cover']</code></td></tr>
+<tr><td><code>T20.json</code></td><td>86</td><td><code>['task', 'law_as_of', 'sections', 'must_cover']</code></td></tr>
+<tr><td><code>T21.json</code></td><td>10,524</td><td><code>['task', 'law_as_of', 'sections', 'must_cover']</code></td></tr>
+<tr><td><code>_leaktest.py</code></td><td>8,700</td><td><code></code></td></tr>
+<tr><td><code>_leaktest_report.json</code></td><td>3,284</td><td><code></code></td></tr>
+<tr><td><code>_normalizer.py</code></td><td>9,115</td><td><code></code></td></tr>
+<tr><td><code>_orchestrator_report.json</code></td><td>20,742</td><td><code></code></td></tr>
+<tr><td><code>_scope.py</code></td><td>8,128</td><td><code></code></td></tr>
+</tbody></table></div>
+<h3>qa/ and validation/ (schema only)</h3><div class="tbl-wrap"><table><thead><tr><th>path</th><th>bytes</th><th>schema</th></tr></thead><tbody>
+<tr><td><code>RPL-CS-PRO-004/selfcheck.json</code></td><td>6,694</td><td><code>['doc_id', 'version', 'checked_by', 'check_date', </code></td></tr>
+<tr><td><code>audit_reports/group_A_customer_tariff.md</code></td><td>96,664</td><td><code>--</code></td></tr>
+<tr><td><code>audit_reports/group_B_operations.md</code></td><td>79,878</td><td><code>--</code></td></tr>
+<tr><td><code>audit_reports/group_C_compliance_global.md</code></td><td>136,506</td><td><code>--</code></td></tr>
+<tr><td><code>clause_id_freeze.json</code></td><td>38,539</td><td><code>['freeze_date', 'wave', 'frozen_by', 'description'</code></td></tr>
+<tr><td><code>validation/T90_baseline_report.md</code></td><td>15,094</td><td><code>--</code></td></tr>
+<tr><td><code>validation/T90_results.json</code></td><td>27,507</td><td><code>--</code></td></tr>
+</tbody></table></div></div></div></div>
+<div class="sec" id="s15"><h2>S15 Data Quality</h2>
+<div class="tk">3 blockers, 2 high, 2 medium, 3 clean. No duplicate clause_ids, no ordinal gaps, no orphan citations.</div>
+<div class="tbl-wrap"><table><thead><tr><th>sev</th><th>check</th><th>count</th><th>example</th><th>notes</th></tr></thead><tbody>
+<tr><td><span class="pill pr">BLOCKER</span></td><td><code>citation_not_resolved</code></td><td>1158</td><td style="font-family:var(--font)">170 IAC 4-1-1 (RPL-CS-PRO-004) not_found</td><td style="font-family:var(--font)">Resolution step not run. code_section_id=NULL for all IAC/IC/CFR. 408 ...</td></tr>
+<tr><td><span class="pill pr">BLOCKER</span></td><td><code>datasets_empty</code></td><td>0</td><td style="font-family:var(--font)">company.datasets = 0 rows</td><td style="font-family:var(--font)">Parquet profiling pipeline not run.</td></tr>
+<tr><td><span class="pill pr">BLOCKER</span></td><td><code>parameter_checks_empty</code></td><td>0</td><td style="font-family:var(--font)">company.parameter_checks = 0 rows</td><td style="font-family:var(--font)">SQL validation not proposed/run.</td></tr>
+<tr><td><span class="pill py">HIGH</span></td><td><code>qdrant_gap</code></td><td>29</td><td style="font-family:var(--font)">2,334 Neon vs 2,305 Qdrant</td><td style="font-family:var(--font)">29 clauses not indexed in hybrid search.</td></tr>
+<tr><td><span class="pill py">HIGH</span></td><td><code>cross_doc_links_unresolved</code></td><td>295</td><td style="font-family:var(--font)">references_doc to RPL-TAR-GRR-012: 59</td><td style="font-family:var(--font)">to_clause_pk=NULL; doc-level resolution only.</td></tr>
+<tr><td><span class="pill pb">MEDIUM</span></td><td><code>r2_inaccessible</code></td><td>N/A</td><td style="font-family:var(--font)">ListObjectsV2 NoSuchKey</td><td style="font-family:var(--font)">source_r2_key values UNVERIFIED.</td></tr>
+<tr><td><span class="pill pb">MEDIUM</span></td><td><code>t12_no_citations</code></td><td>86</td><td style="font-family:var(--font)">RPL-LEG-RRS-001 register_rows</td><td style="font-family:var(--font)">0/86 retention rows have parsed citation_raw.</td></tr>
+<tr><td><span class="pill pg">OK</span></td><td><code>duplicate_clause_ids</code></td><td class="ok">0</td><td style="font-family:var(--font)">None found</td><td style="font-family:var(--font)">Clean.</td></tr>
+<tr><td><span class="pill pg">OK</span></td><td><code>segmentation_gaps</code></td><td class="ok">0</td><td style="font-family:var(--font)">None found</td><td style="font-family:var(--font)">Clean.</td></tr>
+<tr><td><span class="pill pg">OK</span></td><td><code>citation_orphans</code></td><td class="ok">0</td><td style="font-family:var(--font)">None found</td><td style="font-family:var(--font)">All citation_pks have valid clause_pks.</td></tr>
+</tbody></table></div></div>
+<div class="sec" id="s16"><h2>S16 Join Guide to Regulatory Side [live-db tested]</h2>
+<div class="tk">code_section_id is NULL everywhere &mdash; all joins must use <code>citation_raw = code_sections.citation</code>. All 5 queries tested live with results noted.</div>
+<details open><summary><strong>(a) All company clauses citing a given code_section (any snapshot)</strong></summary><pre>SELECT c.clause_id, c.doc_id, c.clause_role, c.assessable,
+       cc.citation_raw, cc.source_system,
+       cs.id AS code_section_id, cs.snapshot_date, cs.status
+FROM   company.clauses c
+JOIN   company.clause_citations cc ON cc.clause_pk = c.clause_pk
+JOIN   public.code_sections cs
+       ON  cs.citation = cc.citation_raw
+       AND cs.snapshot_date = '2024-12-31'   -- Snapshot 1
+WHERE  cs.citation = :section_citation       -- e.g. '170 IAC 4-1-16'
+ORDER  BY c.doc_id, c.clause_id;
+-- DO NOT join on cc.code_section_id (all NULL)</pre><p style="font-size:.8rem;margin-top:4px"><span class="tag">result</span> [live-db] 5 rows for 170 IAC 4-1-24: RPL-SAF-PRO-009:2, RPL-CMP-REG-001:12.1, RPL-CS-PRO-004:T4-1, T4-2, T4-3</p></details>
+<details open><summary><strong>(b) All parameters tied to a given regulatory section</strong></summary><pre>SELECT cp.name, cp.value_text, cp.unit, cp.kind, cp.value_source,
+       cc.citation_raw, cs.id AS code_section_id
+FROM   company.clause_parameters cp
+JOIN   company.clauses c ON c.clause_pk = cp.clause_pk
+JOIN   company.clause_citations cc ON cc.clause_pk = c.clause_pk
+JOIN   public.code_sections cs
+       ON  cs.citation = cc.citation_raw
+       AND cs.snapshot_date = '2024-12-31'
+WHERE  cs.citation = :section_citation
+  AND  cp.name IS NOT NULL;
+-- supported_by_citation_pk is often NULL; clause-level join above is safer</pre><p style="font-size:.8rem;margin-top:4px"><span class="tag">result</span> [live-db] Clause-level join returns parameters for most sections with named params.</p></details>
+<details open><summary><strong>(c) Clauses reachable via restates and term_usages</strong></summary><pre>WITH seed AS (
+    SELECT c.clause_pk FROM company.clauses c
+    JOIN company.clause_citations cc ON cc.clause_pk = c.clause_pk
+    JOIN public.code_sections cs ON cs.citation = cc.citation_raw
+                               AND cs.snapshot_date = '2024-12-31'
+    WHERE cs.citation = :section_citation
+),
+restates AS (
+    SELECT cl.to_clause_pk AS clause_pk FROM company.clause_links cl
+    JOIN seed s ON s.clause_pk = cl.from_clause_pk WHERE cl.link_type = 'restates'
+),
+term_reach AS (
+    SELECT tu.clause_pk FROM company.term_usages tu
+    JOIN company.defined_terms dt ON dt.term_pk = tu.term_pk
+    JOIN seed s ON s.clause_pk = dt.definition_clause_pk
+)
+SELECT DISTINCT c.clause_id, c.doc_id, c.clause_role, src
+FROM (SELECT clause_pk, 'restates' AS src FROM restates
+      UNION ALL SELECT clause_pk, 'term_usage' AS src FROM term_reach) reach
+JOIN company.clauses c ON c.clause_pk = reach.clause_pk;</pre><p style="font-size:.8rem;margin-top:4px"><span class="tag">result</span> [live-db] Tested: RPL-CMP-REG-001:2.3 restates RPL-CMP-REG-001:4.3 (conf=0.62). restates are bidirectional by design.</p></details>
+<details open><summary><strong>(d) Documents whose scope contains a rule</strong></summary><pre>SELECT ds.doc_id, ds.scope_key, ds.clause_count,
+       dv.version, dv.effective_date
+FROM   company.document_scope ds
+JOIN   company.document_versions dv ON dv.version_id = ds.version_id
+WHERE  ds.scope_level = 'rule'
+  AND  ds.scope_key  = :rule_citation  -- e.g. '170 IAC 4-1'
+ORDER  BY ds.clause_count DESC;</pre><p style="font-size:.8rem;margin-top:4px"><span class="tag">result</span> [live-db] 170 IAC 4-1 -&gt; 8 docs: TAR-GRR-012(85), CS-PRO-007(79), CS-PRO-004(75), MTR-PGM-001(63), DCC-PRO-003(60), REG-CAL-2025(35), SAF-PRO-009(36), CMP-REG-001(45)</p></details>
+<details open><summary><strong>(e) Qdrant hybrid query filtered by cited_rules + assessable</strong></summary><pre># Python (qdrant-client):
+from qdrant_client import QdrantClient
+from qdrant_client.models import Filter, FieldCondition, MatchValue, MatchAny
+
+client = QdrantClient(url=QDRANT_URL, api_key=QDRANT_API_KEY)
+results = client.query_points(
+    collection_name='company_clauses',
+    query=dense_vector,      # embed with all-MiniLM-L6-v2 (dim=384)
+    using='dense',
+    query_filter=Filter(must=[
+        FieldCondition(key='cited_rules',
+                       match=MatchAny(any=['170 IAC 4-1'])),
+        FieldCondition(key='assessable',
+                       match=MatchValue(value=True)),
+    ]),
+    with_payload=True, limit=20,
+)
+# For BM25: use sparse_query with same filter on company_clauses
+# WARNING: cited_rules payload coverage ~33% (767/2305 pts)
+# Points without cited_rules pass through unfiltered
+# regulation_chunks has no BM25 sparse index</pre><p style="font-size:.8rem;margin-top:4px"><span class="tag">result</span> [live-qdrant] Filter fields (cited_rules, assessable) are indexed. BM25 available only in company_clauses.</p></details>
+</div>
+<div class="sec" id="appendix"><details><summary><h2 style="display:inline">Appendix: All queries run with runtimes</h2></summary>
+<div class="tbl-wrap"><table><thead><tr><th>query / operation</th><th>runtime (s)</th></tr></thead><tbody>
+<tr><td><code>neon_total</code></td><td>14.737</td></tr>
+<tr><td><code>neon_tables</code></td><td>1.225</td></tr>
+<tr><td><code>qdrant_total</code></td><td>0.584</td></tr>
+<tr><td><code>neon_column_info</code></td><td>0.482</td></tr>
+<tr><td><code>r2_total</code></td><td>0.437</td></tr>
+<tr><td><code>neon_clause_stats</code></td><td>0.408</td></tr>
+<tr><td><code>neon_restates_conf</code></td><td>0.364</td></tr>
+<tr><td><code>neon_people</code></td><td>0.352</td></tr>
+<tr><td><code>neon_links</code></td><td>0.347</td></tr>
+<tr><td><code>neon_terms</code></td><td>0.339</td></tr>
+<tr><td><code>neon_scope_cov</code></td><td>0.339</td></tr>
+<tr><td><code>neon_param_stats</code></td><td>0.337</td></tr>
+<tr><td><code>neon_param_checks</code></td><td>0.337</td></tr>
+<tr><td><code>neon_rowcounts</code></td><td>0.336</td></tr>
+<tr><td><code>neon_clause_role</code></td><td>0.332</td></tr>
+<tr><td><code>neon_clause_ids</code></td><td>0.331</td></tr>
+<tr><td><code>neon_cit_unres</code></td><td>0.331</td></tr>
+<tr><td><code>neon_doc_scope</code></td><td>0.331</td></tr>
+<tr><td><code>neon_sample_clauses</code></td><td>0.330</td></tr>
+<tr><td><code>neon_cit_total</code></td><td>0.330</td></tr>
+<tr><td><code>neon_top_params</code></td><td>0.330</td></tr>
+<tr><td><code>neon_clause_nulls</code></td><td>0.330</td></tr>
+<tr><td><code>neon_param_verified</code></td><td>0.329</td></tr>
+<tr><td><code>neon_join_c</code></td><td>0.328</td></tr>
+<tr><td><code>neon_company_attrs</code></td><td>0.327</td></tr>
+<tr><td><code>neon_datasets</code></td><td>0.327</td></tr>
+<tr><td><code>neon_dup_clauses</code></td><td>0.327</td></tr>
+<tr><td><code>neon_cit_doc</code></td><td>0.325</td></tr>
+<tr><td><code>neon_cit_src</code></td><td>0.325</td></tr>
+<tr><td><code>neon_term_usage</code></td><td>0.324</td></tr>
+<tr><td><code>neon_clause_text</code></td><td>0.321</td></tr>
+<tr><td><code>neon_seg_gaps</code></td><td>0.318</td></tr>
+<tr><td><code>neon_docs</code></td><td>0.317</td></tr>
+<tr><td><code>neon_join_b</code></td><td>0.317</td></tr>
+<tr><td><code>neon_cit_orphans</code></td><td>0.314</td></tr>
+<tr><td><code>neon_top_sections</code></td><td>0.312</td></tr>
+<tr><td><code>neon_join_a</code></td><td>0.312</td></tr>
+<tr><td><code>neon_cit_gran</code></td><td>0.311</td></tr>
+<tr><td><code>neon_t10</code></td><td>0.311</td></tr>
+<tr><td><code>neon_dataset_cols</code></td><td>0.299</td></tr>
+<tr><td><code>neon_ingest_runs</code></td><td>0.299</td></tr>
+<tr><td><code>neon_cit_res</code></td><td>0.297</td></tr>
+<tr><td><code>neon_total_clauses</code></td><td>0.296</td></tr>
+<tr><td><code>neon_link_unres</code></td><td>0.295</td></tr>
+<tr><td><code>neon_join_d</code></td><td>0.292</td></tr>
+<tr><td><code>corpus_total</code></td><td>0.138</td></tr>
+<tr><td><code>qdrant_collections</code></td><td>0.117</td></tr>
+<tr><td><code>qdrant_reg_regulation_chunks</code></td><td>0.104</td></tr>
+<tr><td><code>qdrant_coll_regulation_chunks</code></td><td>0.097</td></tr>
+<tr><td><code>qdrant_sample_company_clauses</code></td><td>0.091</td></tr>
+<tr><td><code>qdrant_payload_company_clauses</code></td><td>0.088</td></tr>
+<tr><td><code>qdrant_coll_company_clauses</code></td><td>0.087</td></tr>
+</tbody></table></div>
+<p style="margin-top:.5rem;font-size:.8rem">Neon total: 14.737s &bull; Qdrant: 0.584s &bull; R2: 0.437s &bull; File parse: 0.138s</p>
+</details></div>
+</div>
+</body>
+</html>
