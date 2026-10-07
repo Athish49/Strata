@@ -7,17 +7,32 @@ Inputs merged: `frontend_brief.md` (from the backend agent), the product owner's
 
 ## 0. How to use this document
 
-This is the single source of truth for the agent building the Strata frontend. It is self-contained; `frontend_brief.md` is kept beside it for provenance.
+This is the single source of truth for the agent building the Strata frontend. It is self-contained. Supporting files in `frontend_development_docs/`:
+- `README.md`: reading order and the kickoff prompt.
+- `frontend_brief.md`: the backend agent's brief, kept for provenance.
+- `reference/`: the KB and company-data audits (2026-10-07). Use them for data shapes and realistic values.
+
+### 0.1 Hard boundaries for this phase
+1. **All code lives in `frontend/`.** It is a standalone Next.js project, and `frontend/` is the **deploy root** (Vercel "Root Directory" = `frontend`).
+   - No `package.json`, lockfile, workspace file, CI config or tooling at the repo root.
+   - The app must install, build and run when `frontend/` is the only folder present.
+2. **Never create, modify or delete anything outside `frontend/`.** The backend folders are under active development by another agent. The only exception is `frontend_development_docs/`, and only when the owner asks.
+3. **No integrations in this phase.**
+   - No calls to the backend, no API base URL, no proxy rewrites, no environment variables pointing at services.
+   - No database, Qdrant or R2 access.
+   - Every data domain (KB, engine, company) is served by the in-app mock layer (§6).
+   - The `StrataApi` interface is designed so a live implementation can be added later without touching pages.
+4. **Nothing at runtime or build time may import from outside `frontend/`.** The one-off fixture script (§6.4) may read the corpus files in `../backend` **read-only**, on a developer's machine. It writes JSON into `frontend/fixtures/`, which is committed. The app only ever reads the committed fixtures.
 
 **Precedence when sources disagree**
 1. This spec.
 2. `development_docs/frontend_brief.md`. It is canonical for anything about the analysis engine (runs, changes, findings, evidence) that this spec does not override.
-3. The backend code on `main`. Endpoint shapes there win over guesses in either document.
+3. The backend code on `main`, as a **read-only reference** for shapes and field names. Endpoint shapes there win over guesses in either document when designing fixtures.
 
 Every deliberate departure from the brief is listed in §3 with a reason.
 
 **Rules for the build agent**
-- Build everything against the typed data layer in §6. The backend's analysis engine (`/engine/*`) does not exist yet. Mock it behind the same interface the live client will use.
+- Build everything against the typed data layer in §6, served entirely by mocks. The backend's analysis engine (`/engine/*`) does not exist yet, and even the existing KB endpoints are not called in this phase.
 - **Information barrier.** Never read, copy or derive fixtures from these paths:
   - `backend/app/company/corpus/eval/**`
   - `backend/app/company/corpus/grounding/**`
@@ -117,7 +132,8 @@ The four `RPL-INF-*` register entries (company profile, people directory, docume
 | D10 | Document page right panel | Tabs for flags, citations, key values, details | A findings rail, ordered by position | **The brief's findings rail is primary.** Document metadata sits in the header. A clause-details popover (citations, values, defined terms) is a P2 addition (§9.4). |
 | D11 | Tariff vertical | Suggested moving it to Revenue & Pricing | Policy | **Keep the backend's vertical (Policy & Governance Documents).** |
 | D12 | Run awareness | Not considered | `?run=` on every page; SIMULATED mode | **Adopted globally**, KB pages included (they keep the param in every link and show change badges for the selected run). |
-| D13 | Brief's version-history endpoint | — | `GET /diff/version-history/{ss}/{citation}` | The real route is **`GET /diff/{source_system}/{citation}`**. Use the real one and flag it to the backend owner. |
+| D13 | Brief's version-history endpoint | — | `GET /diff/version-history/{ss}/{citation}` | The real route is **`GET /diff/{source_system}/{citation}`**. Record the real route in the contract notes for future wiring and flag it to the backend owner. |
+| D14 | Integration | — | Live polling, live KB endpoints | **Not in this phase.** Everything is mocked inside `frontend/` (§0.1). Polling and running states are exercised against the mock layer. |
 
 ---
 
@@ -127,7 +143,8 @@ The stack is the de-facto standard for agent-built React apps in 2026. Agents pr
 
 | Concern | Choice | Notes |
 |---|---|---|
-| Framework | **Next.js 16 (App Router)** + **React 19** | Use the latest 16.x stable at scaffold time. Deploy target: Vercel, per `architecture.md`. |
+| Framework | **Next.js 16 (App Router)** + **React 19** | Use the latest 16.x stable at scaffold time. Deploy target: Vercel, with Root Directory `frontend`. |
+| Runtime | **Node.js LTS** | Pin it in `frontend/.nvmrc` and in `engines` in `frontend/package.json`. |
 | Language | **TypeScript**, `strict: true` | No `any` in app code. |
 | Package manager | **pnpm** | |
 | Styling | **Tailwind CSS v4** | Utility classes only, no CSS-in-JS. Semantic tokens are CSS variables (§11.3). |
@@ -138,7 +155,7 @@ The stack is the de-facto standard for agent-built React apps in 2026. Agents pr
 | Tables and grids | **TanStack Table v8** | Lists, ledgers, the KB tables. The matrix may be a plain CSS grid driven by the same data. |
 | Long lists | **@tanstack/react-virtual** | Use only where needed: the reader for long documents, cleared ledgers, KB section lists. |
 | Contract and validation | **zod** | One schema per API entity. Types are inferred from the schemas, and fixtures are validated in tests. |
-| Text diff (client) | **diff** (jsdiff) | **Only** for the what-if live preview. Everything else renders server-provided `diff_segments`. |
+| Text diff (client) | **diff** (jsdiff) | In the UI, **only** for the what-if live preview. Everything else renders the `diff_segments` provided by the data layer. The fixture script also uses it to generate consistent `diff_segments`. |
 | Command palette | **cmdk** (shadcn `Command`) | Global search, ⌘K. |
 | Split panes | **react-resizable-panels** (shadcn `Resizable`) | Changes master–detail, reader + findings rail. |
 | Drawer, dialogs, popovers, tooltips | shadcn `Sheet`, `Dialog`, `Popover`, `Tooltip`, `HoverCard` | The evidence drawer is a `Sheet`. |
@@ -156,8 +173,13 @@ The stack is the de-facto standard for agent-built React apps in 2026. Agents pr
 
 ### 5.1 Layout
 
+`frontend/` is a self-contained project root. Scaffold it with `pnpm create next-app frontend` from the repo root, then work only inside it.
+
 ```
-frontend/
+frontend/                                # deploy root; nothing outside this folder is touched
+  package.json  pnpm-lock.yaml  .nvmrc  next.config.ts  tsconfig.json
+  eslint.config.mjs  .prettierrc  components.json  playwright.config.ts  vitest.config.ts
+  .gitignore  README.md                  # README: how to run, test, and deploy with Root Directory = frontend
   app/
     (marketing)/page.tsx                 # "/" landing
     app/                                 # "/app/*" product
@@ -189,24 +211,22 @@ frontend/
   lib/
     api/
       schemas/                           # zod schemas = the contract (§6.3)
-      client.ts                          # StrataApi interface
-      live/                              # fetch implementations
-      mock/                              # mock implementations + fixtures loader
+      client.ts                          # StrataApi interface + the single place that picks the implementation
+      mock/                              # mock implementation + fixtures loader (the only implementation in this phase)
       queries.ts                         # TanStack Query keys + hooks
     labels.ts                            # every enum → display label (§11)
     sentences.ts                         # plain-English sentence builders (§11.4)
     status.ts                            # document status derivation (§11.5)
     verticals.ts                         # 14 verticals + backend mapping (§5.3)
     run-context.tsx                      # current run from ?run=, SIMULATED flag
-  fixtures/                              # JSON, validated by zod in tests
+  fixtures/                              # committed JSON, validated by zod in tests; the app's only data source
   scripts/
-    build-fixtures.ts                    # corpus → company fixtures (§6.4)
-    snapshot-kb.ts                       # optional: live KB API → fixtures
+    build-fixtures.ts                    # one-off, dev-only: reads ../backend corpus read-only → writes fixtures/ (§6.4)
   tests/{unit,e2e}/
 ```
 
 ### 5.2 Conventions
-- Server components only for static shells and the marketing page. Product pages render client components that fetch through TanStack Query, so the mock and live sources behave the same.
+- Server components only for static shells and the marketing page. Product pages render client components that read through TanStack Query hooks, so swapping in a live implementation later changes nothing in the pages.
 - **Never render raw JSON. Never display internal ids (uuids).** Show clause ids (`RPL-CS-PRO-004:7.2`), citations (`170 IAC 4-1-16`), doc ids and people's names. Uuids may appear in URLs only.
 - All display strings for enums come from `lib/labels.ts`. Components never format enums inline.
 - Dates are ISO in data and formatted as `Feb 5, 2025` in the UI. For changes show the **publication date** (with its `date_basis`). There are no effective-date countdowns.
@@ -243,18 +263,22 @@ Each sample has an owner drawn from the 27 people, and the status "Not monitored
 
 ## 6. Data layer
 
-### 6.1 Two data domains, independently switchable
+### 6.1 Three data domains, all mocked in this phase
 
-| Domain | Backend today | Source in v1 build |
+| Domain | Backend today (reference only) | Source in this phase |
 |---|---|---|
-| **KB**: regulations, actions, diffs, version history, semantic search | **Exists** on `main` (FastAPI): `/regulations`, `/actions`, `/diff`, `/timeline`, `/search`, `/impact` | `live` when `STRATA_API_BASE_URL` is set and reachable, else `mock` |
-| **Engine**: runs, changes ledger, candidates, findings, rollups, matrix, radar, what-if, scores, reader | **Not built yet** (`/engine/*`; contract will be `api_ui.md`) | `mock` |
+| **KB**: agencies, regulations, actions, diffs, version history | Exists on `main` (FastAPI): `/regulations`, `/actions`, `/diff`, `/timeline`, `/search`, `/impact`. **Not called.** | `mock` |
+| **Engine**: runs, changes ledger, candidates, findings, rollups, matrix, radar, what-if, scores, reader | Not built yet (`/engine/*`; contract will be `api_ui.md`) | `mock` |
 | **Company**: documents, clauses, people, attributes | Neon `company.*`, no HTTP endpoints yet | `mock` (fixtures built from the corpus, §6.4) |
 
-Configuration: `NEXT_PUBLIC_SOURCE_KB=live|mock`, `NEXT_PUBLIC_SOURCE_ENGINE=mock|live`, `NEXT_PUBLIC_SOURCE_COMPANY=mock|live`. Live calls go through a Next.js rewrite (`/api/strata/:path* → ${STRATA_API_BASE_URL}/:path*`), so there is no CORS setup and no secret in the browser. A dev-only badge in the top bar shows which domains are mocked.
+There is no environment configuration, no rewrites and no network access to the backend. The mock layer is the only data source, and the app works fully offline.
 
 ### 6.2 The `StrataApi` interface
-One TypeScript interface, two implementations (`live/`, `mock/`). Components and hooks only see the interface. Wiring the real backend later means implementing `live/` for the engine and company domains, and nothing else changes.
+One TypeScript interface, grouped by domain (`kb`, `engine`, `company`), with one implementation in this phase (`mock/`).
+- Components and hooks only see the interface, through `lib/api/queries.ts`.
+- `lib/api/client.ts` is the single place that chooses the implementation.
+- Wiring the backend later means adding a `live/` implementation that returns the same zod-validated shapes, and changing that one place. Pages, hooks and components do not change.
+- Do not create `live/` or any fetch code now.
 
 Mock behavior:
 - 150–400 ms artificial latency, so loading states are real.
@@ -337,7 +361,12 @@ Field names follow the brief exactly. Items marked **(A#)** are the backend addi
 - Person: `person_id, name, title, department, reports_to_id`
 - CompanyAttribute: `key, value, source`
 
-**KB (existing endpoints; shapes from the code on `main`)**
+**KB**
+- **Agency:** `agency_id, name, level, geo, domains[], codebook_titles[], section_count, action_count, s1_snapshot, s2_snapshot, last_sync_at, has_activity_feed`. The 610/675 codebook-only entries have `agency_id` null and `has_activity_feed` false.
+- **CodeSection:** `citation, source_system, title_number, part_or_article, rule_key, section_number, heading, body_text, status (approved | repealed), snapshot_date, owning_agency, amendment_source?, federal_refs[], iac_cross_refs[]`
+- **RegulatoryAction:** `source_system, source_id, agency, action_type, status, date_published, title, abstract, cfr_references[], legal_refs[], docket_ids[], rin?, din?, source_url, related[{source_id, relationship_type: related_to | supersedes | corrects}]`
+
+Model the mock KB methods on the existing endpoints on `main`, read from `backend/app/api/regulatory/*.py` for reference only, so a later live implementation maps one-to-one:
 - `GET /regulations?source_system&agency&jurisdiction_level&status&search&page&limit≤200`
 - `GET /regulations/{source_system}/{citation}`
 - `GET /actions?source_system&agency&status&action_type&date_from&date_to&search&page&limit≤200`
@@ -345,13 +374,14 @@ Field names follow the brief exactly. Items marked **(A#)** are the backend addi
 - `GET /diff/{source_system}/{citation}`: version history
 - `GET /diff/{source_system}/{citation}/compare?date_a&date_b`: raw line diff
 - `GET /timeline/{source_system}/{citation}`
-- `GET /search?q&source_system&agency&status&k≤50`: semantic search
 
-The live KB client writes zod schemas for these from the actual responses (via `scripts/snapshot-kb.ts`), not from guesses.
+Keep pagination parameters in the mock method signatures even though fixtures are small.
 
 ### 6.4 Fixtures
 
-**Company fixtures**, generated by `scripts/build-fixtures.ts` from files on `main`:
+All fixtures are committed JSON under `frontend/fixtures/`. The app reads nothing else.
+
+**Company fixtures** are generated once by `frontend/scripts/build-fixtures.ts`. It reads these corpus files in `../backend/app/company/` **read-only** and writes JSON to `frontend/fixtures/company/`. Re-run it manually if the corpus changes; never wire it into `build`, `dev` or CI.
 - `corpus/_global/document_register.csv`: document metadata (skip `RPL-INF-*`).
 - `corpus/_global/people_directory.csv`: people.
 - `corpus/_global/company_profile.yaml`: company attributes, e.g. `owns_generating_units=false`, `has_gas_operations=false`, standby generator count.
@@ -364,7 +394,17 @@ The live KB client writes zod schemas for these from the actual responses (via `
   - Appendices become `appendix` clauses.
 - `corpus/docs/<doc_id>/data/*.csv` for the three registers: `register_row` clauses with `row_cells` and ids like `RPL-CMP-REG-001:OBL-2024-0047`.
 
-Preferred alternative: a JSON export of `company.clauses` for the 12 docs from the backend owner (ask B1). It has the real clause ids and the builder becomes unnecessary. Either way, clause ids in engine fixtures must exist in the company fixtures.
+Later, a JSON export of `company.clauses` from the backend owner (ask B1) can replace the generated clauses, since it carries the real clause ids. Do not request or wait for it in this phase. Either way, clause ids in engine fixtures must exist in the company fixtures.
+
+**KB fixtures** are hand-authored, with real citations where the repo provides them:
+- **Agencies:** FERC, EPA, IURC and IDEM, plus the 610 and 675 codebook-only entries. Counts and snapshot dates come from `frontend_development_docs/reference/kb_audit_government.html` (e.g. 170 IAC: 647 sections; Federal Register: 990 actions; IURC: 42 orders, 138 investigations, 19 rulemakings; IDEM: 17 rulemakings).
+- **Sections:** the full set of citations RPL actually cites (parsed from the documents' `regulatory_basis` front matter and in-text citations), plus about 20 representative sections per other codebook title, so every agency tree has depth.
+  - Body text is short placeholder text with `"placeholder": true`.
+  - Mark some sections as repealed so the toggle has something to hide.
+- **Actions:** about 8–15 per stream. They are plausible but invented, carry `"placeholder": true`, and include at least one supersedes and one corrects chain.
+- **Version history:** two entries (S1, S2) for every changed section in the engine fixtures.
+
+Placeholder flags never render in the UI. They exist so that whoever wires the backend later can find every invented value.
 
 **Engine fixtures** are hand-authored, internally consistent and invented (see the information barrier in §0).
 
@@ -388,9 +428,7 @@ Presets (instant, SIMULATED):
 
 Score report: values on or above target, with baseline 0 findings.
 
-Section text (S1/S2) for in-footprint and preset sections:
-- If the live KB is reachable, `scripts/snapshot-kb.ts` pulls the real text and diff.
-- Otherwise author short placeholder text, and set `"placeholder": true` on the fixture so it's obvious.
+Section text (S1/S2) for in-footprint and preset sections is hand-authored. It must be long enough for the diff, collapse and quote-highlight features to be exercised (several paragraphs for at least one section), and it carries `"placeholder": true`. `diff_segments` must be consistent with the S1 and S2 text: generate them in the fixture script with jsdiff, not by hand.
 
 **Invariants** are checked by a Vitest suite over the fixtures:
 - Funnel sums add up.
@@ -405,7 +443,7 @@ Section text (S1/S2) for in-footprint and preset sections:
 ### 6.5 Run context
 - `?run=<run_id>` lives on every `/app` URL. Missing means the latest `kb` run. Every internal link preserves it (`<AppLink>` helper).
 - `RunContext` exposes `run` and `isSimulated` (`kind === 'whatif'`). It feeds the RunSelector, the SimulatedBanner and query keys (every engine query key includes `run_id`).
-- While `run.status === 'running'`, poll `GET /engine/runs/{id}` every 2 s. When the run succeeds, invalidate that run's queries.
+- While `run.status === 'running'`, poll the run (`api.engine.getRun`, the future `GET /engine/runs/{id}`) every 2 s. When the run succeeds, invalidate that run's queries. In this phase the mock advances the run's stages over time, so polling is real.
 
 ---
 
@@ -481,7 +519,7 @@ Component: `FutureFeatureButton`. It renders disabled, with a small "Soon" marke
 The evidence card also opens as a drawer on any page via `?finding=<findingId>`. The full page and the drawer share one component.
 
 ### 8.2 Shell
-- **Top bar:** Strata wordmark (links to `/app`) · **RunSelector** (`Real wave · S1→S2` / `Baseline` / `What-if: <title>` plus each run's status) · **global search** (placeholder "Search doc id, clause id, citation…") · dev-only data-source badge.
+- **Top bar:** Strata wordmark (links to `/app`) · **RunSelector** (`Real wave · S1→S2` / `Baseline` / `What-if: <title>` plus each run's status) · **global search** (placeholder "Search doc id, clause id, citation…").
 - **Left nav:**
   - **Analysis:** Overview · Changes · Documents · Impact Matrix · Radar · What-if · Trust
   - **Knowledge base:** Regulations · Company
@@ -491,7 +529,7 @@ The evidence card also opens as a drawer on any page via `?finding=<findingId>`.
 
 ### 8.3 Global search (cmdk)
 - Results are grouped as **Documents** (doc id, title), **Clauses** (clause id plus a heading snippet), **Changed sections** (citation, heading, class), **Regulations** (KB sections and agencies) and **People**.
-- Matching is exact or prefix for ids and citations, fuzzy for titles. With the live KB, a final group "Search regulation text for '<q>'" calls `/search`.
+- Matching is exact or prefix for ids and citations, fuzzy for titles. All matching runs client-side over an index built from the fixtures. Full-text semantic search over regulation text (the backend's `/search`) is a later integration and gets no placeholder.
 - Selecting a result navigates there, keeping `?run=`.
 
 ### 8.4 Future-feature buttons (complete list; all disabled)
@@ -526,7 +564,7 @@ Each page lists **Purpose · Data · Layout and contents · Interactions · Stat
 2. **The problem.** Regulations change constantly, most changes are noise, and the real ones hide inside long rules and long company documents.
 3. **How it works:** six short steps mirroring §1. Detect changes → Remove noise → Find dependent clauses → Judge each clause → Prove it with verified quotes → Route to owners. Add the line "Flags, never edits. Proves what it cleared."
 4. **Coverage.** Agencies (FERC, EPA, IURC, IDEM) with "more coming", and the 14 verticals.
-5. **Trust.** Precision, recall and baseline 0, as described claims. Use real numbers only once the score report is live; until then describe the method without figures.
+5. **Trust.** Precision, recall and baseline 0, as described claims. In this phase describe the method without figures. The scores in the fixtures are mock values and must not appear on the marketing page.
 6. **Product preview.** A static screenshot of the reader and the evidence card, captured from the running app.
 7. **Closing CTA.**
 
@@ -558,7 +596,7 @@ Each page lists **Purpose · Data · Layout and contents · Interactions · Stat
 - The empty real wave shows the success copy.
 
 ### 9.2 Changes (`/app/changes[/changeId]`): "What changed in the law"
-**Data:** change records for the run, plus candidates for the selected change. Raw diff via the existing `/diff/.../compare`.
+**Data:** change records for the run, plus candidates for the selected change, plus the raw line diff from `api.kb.compare`.
 
 **Layout:** resizable master–detail.
 
@@ -580,7 +618,7 @@ Each page lists **Purpose · Data · Layout and contents · Interactions · Stat
    - **Side-by-side**: S1 left, S2 right, synchronized scrolling.
 
    It collapses unchanged runs longer than 300 characters ("… 1,240 unchanged characters …", expandable) and has a "Change 1 of 3 ↑↓" navigator.
-   For noise classes: a neutral explanation banner ("Only the readoption stamp changed") and a **Show raw diff** toggle that calls `/diff/{ss}/{citation}/compare`.
+   For noise classes: a neutral explanation banner ("Only the readoption stamp changed") and a **Show raw diff** toggle that loads the line diff (`api.kb.compare`, modeled on `/diff/{ss}/{citation}/compare`).
 4. **Impacted clauses (the ledger for this change).** Every candidate, grouped by outcome: findings by verdict first, then **Cleared (n)**, collapsed, each with its reason.
    - Each row: clause id, doc chip, match-path icon and a one-line reason.
    - A finding row opens the evidence drawer. A cleared row links to the clause in the reader.
@@ -765,7 +803,7 @@ Each page lists **Purpose · Data · Layout and contents · Interactions · Stat
   - last sync
   - "N changed in this run" (links to Changes filtered to that agency)
 - A disabled **"+ Add agency"** card ends each section (Federal suggestions: NERC, DOE, OSHA, PHMSA; State suggestion: OUCC). A disabled **Add jurisdiction** button sits in the page header.
-- Data: B2 (agencies with counts and last sync), with a mock fallback.
+- Data: `api.kb.listAgencies()` from fixtures. Future endpoint: B2.
 
 ### 9.11 Agency page (`/app/regulations/[agencyId]`)
 - **Header:** name, level, domains, codebook titles, snapshot dates, last sync. Future button: Add data source.
@@ -774,20 +812,20 @@ Each page lists **Purpose · Data · Layout and contents · Interactions · Stat
   - Each section row shows citation, heading, and a "Changed in this run" badge with its ClassPill.
   - Repealed sections are hidden behind a toggle.
   - Search within the agency.
-  - Data: `/regulations?agency=` (paged), or B3 for the tree.
+  - Data: `api.kb.listSections({agency})` from fixtures. Future endpoints: `/regulations?agency=` or B3.
 - **Tab "Activity":**
   - Actions with **stream chips** (FERC/EPA: Federal Register; IURC: Orders · Investigations · Rulemakings; IDEM: Rulemakings).
   - Filters: action type, status, date.
-  - Data: `/actions?agency=&source_system=`.
+  - Data: `api.kb.listActions({agency, source_system})` from fixtures. Future endpoint: `/actions`.
 - Codebook-only cards (610/675) open the same page with the Activity tab disabled and the caption "No activity feed tracked".
 
 ### 9.12 Regulation section (`/app/regulations/sections/[ss]/[...citation]`)
 - Citation, heading, agency, status (approved / repealed), snapshot.
 - The full text in the document serif, with an outline for long text. Bodies can reach ~150k characters, so sections are collapsible.
-- A **snapshot switcher** and a "Compare S1 ↔ S2" DiffView (from `/diff/.../compare`). Version history comes from `/diff/{ss}/{citation}`.
+- A **snapshot switcher** and a "Compare S1 ↔ S2" DiffView. Version history and the comparison come from the mock KB methods modeled on `/diff/{ss}/{citation}` and `/diff/{ss}/{citation}/compare`.
 - **Amended by:** a link to the amending action (`amendment_source`).
 - **Cross-references:** federal and IAC cross-refs as links.
-- **Cited by RPL:** clauses and documents citing this section, grouped by vertical (B4, mock fallback).
+- **Cited by RPL:** clauses and documents citing this section, grouped by vertical (from the company fixtures' citations; future endpoint B4).
 - If the section changed in the current run: a callout "Changed in this run — view analysis" → Changes detail.
 
 ### 9.13 Regulatory action (`/app/regulations/actions/[ss]/[...sourceId]`)
@@ -909,7 +947,7 @@ Each milestone ends with lint, typecheck and unit tests green, plus its acceptan
 
 | M | Scope | Done when |
 |---|---|---|
-| M0 | Scaffold: Next.js + TS + Tailwind + shadcn (Radix) + the libraries in §4. Shell (sidebar, top bar, breadcrumbs, RunSelector, SimulatedBanner). zod schemas, the `StrataApi` interface, the mock adapter, fixture builder, fixture invariant tests, run context, labels, sentences, status | The shell renders. Switching `?run=` changes the banner. Fixtures pass the invariants. |
+| M0 | Scaffold `frontend/` as a standalone project (§0.1, §5.1) with Next.js + TS + Tailwind + shadcn (Radix) + the libraries in §4, and a `frontend/README.md` covering run, test and deploy (Vercel Root Directory = `frontend`). Shell (sidebar, top bar, breadcrumbs, RunSelector, SimulatedBanner). zod schemas, the `StrataApi` interface, the mock adapter, fixture builder, fixture invariant tests, run context, labels, sentences, status | The shell renders. Switching `?run=` changes the banner. Fixtures pass the invariants. `git status` shows changes only under `frontend/`. `pnpm build` passes from inside `frontend/`. |
 | M1 | Overview | §9.1 acceptance |
 | M2 | Changes (tree + DiffView + ledger) | §9.2 acceptance |
 | M3 | Documents board + vertical page + reader (ClauseRenderer, overlays, rail, minimap, keyboard) | §9.3–9.4 acceptance |
@@ -918,14 +956,16 @@ Each milestone ends with lint, typecheck and unit tests green, plus its acceptan
 | M6 | Impact matrix | §9.6 acceptance |
 | M7 | Trust | §9.9 |
 | M8 | Radar | §9.7 acceptance |
-| M9 | Knowledge base: Regulations overview, agency, section and action pages (live KB when reachable), Company profile | §9.10–9.14 |
+| M9 | Knowledge base: Regulations overview, agency, section and action pages, Company profile (all from fixtures) | §9.10–9.14 |
 | M10 | Global search, marketing landing, Playwright demo script (§12) green | §8.3, §9.0, §12 |
 
 M1–M8 follow the brief's order. M9–M10 are the owner's additions.
 
 ---
 
-## 14. Backend coordination
+## 14. Backend coordination (for later; not part of this phase)
+
+Nothing in this section blocks the build. It records what the backend will need to provide when the frontend is wired up, so the mock shapes stay aligned.
 
 **Brief §9 additions, confirmed as needed by this spec:**
 - **A1** `GET /engine/documents/{doc_id}/reader?run_id=`
@@ -951,6 +991,8 @@ M1–M8 follow the brief's order. M9–M10 are the owner's additions.
 ---
 
 ## 15. Out of scope for v1 (do not build)
+- Any backend integration in this phase: API calls, proxies, environment configuration for services, database, vector store or object storage access (§0.1).
+- Any change outside `frontend/`.
 - Chart or visualization libraries, graph or network visualizations.
 - A document editor, or tracked changes on company documents. The product flags, it never edits.
 - Chat or "Ask AI", notifications, user accounts, auth, roles.
@@ -965,4 +1007,3 @@ M1–M8 follow the brief's order. M9–M10 are the owner's additions.
 1. Final names for the IAC 610 and 675 agencies. (Default: codebook-only cards labeled by title.)
 2. Should the matrix include sample (unmonitored) documents as greyed rows? (Default: no.)
 3. Is the Radar "Docs covering the same rule" computed by the backend or the client? (Default: backend field.)
-4. Which hosting URL does `STRATA_API_BASE_URL` point to for the demo? (Default: unset, so the KB is mocked too.)
