@@ -1,0 +1,38 @@
+{
+  "files": [
+    {
+      "file": "spill_events_2024.csv",
+      "rows": 95,
+      "columns": [
+        "event_id",
+        "discovered_ts",
+        "stopped_ts",
+        "utc_offset",
+        "service_center",
+        "county",
+        "source_type",
+        "rpl_classification",
+        "substance",
+        "pcb_status_code",
+        "volume_released_gal",
+        "volume_recovered_gal",
+        "receiving_medium",
+        "special_area_flag",
+        "cause",
+        "reportable",
+        "decision_row",
+        "exclusion_applied",
+        "idem_report_ts",
+        "idem_incident_no",
+        "update_count",
+        "third_party_notice_required",
+        "third_party_notice_ts",
+        "closed_date",
+        "compliance_confirmation_requested"
+      ],
+      "sha256": "80aaaefdd5ceb1e2419263c67aa5c5b3a459fb4afbade371b74db8c246e45b77",
+      "generator_script": "scripts/generate_spill_data.py",
+      "seed": 2024
+    }
+  ]
+}

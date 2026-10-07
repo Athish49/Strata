@@ -1,0 +1,805 @@
+{
+  "packs": {
+    "T13": {
+      "scope_count": 57,
+      "context_count": 6,
+      "active_count": 62,
+      "high_count": 16,
+      "genuine_changed_count": 5,
+      "repealed_in_s2_count": 0,
+      "renumbered_count": 0,
+      "changed_citations": [
+        {
+          "citation": "170 IAC 1-6-3",
+          "change_type": "changed",
+          "s2_citation": "170 IAC 1-6-3",
+          "s2_effective_date": "2025-01-24",
+          "diff_classification": "other"
+        },
+        {
+          "citation": "170 IAC 1-6-4",
+          "change_type": "changed",
+          "s2_citation": "170 IAC 1-6-4",
+          "s2_effective_date": "2025-01-24",
+          "diff_classification": "other"
+        },
+        {
+          "citation": "170 IAC 1-7-3",
+          "change_type": "changed",
+          "s2_citation": "170 IAC 1-7-3",
+          "s2_effective_date": "2023-05-25",
+          "diff_classification": "other"
+        },
+        {
+          "citation": "170 IAC 4-1-16",
+          "change_type": "changed",
+          "s2_citation": "170 IAC 4-1-16",
+          "s2_effective_date": "2025-09-12",
+          "diff_classification": "other"
+        },
+        {
+          "citation": "170 IAC 1-6-5",
+          "change_type": "changed",
+          "s2_citation": "170 IAC 1-6-5",
+          "s2_effective_date": "2025-01-24",
+          "diff_classification": "qualifier"
+        }
+      ],
+      "new_in_scope_s2": [],
+      "decoys_in_pack": [
+        "170 IAC 1-2-10",
+        "170 IAC 16-1-1",
+        "170 IAC 16-1-4",
+        "170 IAC 4-1-15",
+        "170 IAC 4-1-2",
+        "170 IAC 4-1-24",
+        "170 IAC 4-1-29",
+        "170 IAC 4-1-3",
+        "170 IAC 4-1-7",
+        "170 IAC 4-1-8",
+        "170 IAC 4-1-9"
+      ],
+      "date_conflicts_with_approval": [
+        {
+          "citation": "170 IAC 1-7-3",
+          "s2_effective_date": "2023-05-25",
+          "approval_date": "2024-05-15"
+        }
+      ],
+      "absent_topics": [],
+      "is_cleared": false
+    },
+    "T14": {
+      "scope_count": 11,
+      "context_count": 2,
+      "active_count": 13,
+      "high_count": 5,
+      "genuine_changed_count": 1,
+      "repealed_in_s2_count": 0,
+      "renumbered_count": 0,
+      "changed_citations": [
+        {
+          "citation": "170 IAC 4-1-16",
+          "change_type": "changed",
+          "s2_citation": "170 IAC 4-1-16",
+          "s2_effective_date": "2025-09-12",
+          "diff_classification": "other"
+        }
+      ],
+      "new_in_scope_s2": [],
+      "decoys_in_pack": [
+        "170 IAC 16-1-1",
+        "170 IAC 16-1-4",
+        "170 IAC 4-1-15"
+      ],
+      "date_conflicts_with_approval": [],
+      "absent_topics": [
+        {
+          "topic": "Winter disconnection protection (temperature-based)",
+          "expected_rule": "IC 8-1-2-122 or 170 IAC 4-1-16 subsection",
+          "reason": "No separate section found; governed by statute (\u00a72.7 applies)."
+        }
+      ],
+      "is_cleared": false
+    },
+    "T15": {
+      "scope_count": 11,
+      "context_count": 2,
+      "active_count": 13,
+      "high_count": 4,
+      "genuine_changed_count": 0,
+      "repealed_in_s2_count": 0,
+      "renumbered_count": 0,
+      "changed_citations": [],
+      "new_in_scope_s2": [],
+      "decoys_in_pack": [
+        "170 IAC 4-1-7",
+        "170 IAC 4-1-8",
+        "170 IAC 4-1-9"
+      ],
+      "date_conflicts_with_approval": [],
+      "absent_topics": [],
+      "is_cleared": true
+    },
+    "T16": {
+      "scope_count": 21,
+      "context_count": 2,
+      "active_count": 23,
+      "high_count": 4,
+      "genuine_changed_count": 0,
+      "repealed_in_s2_count": 0,
+      "renumbered_count": 0,
+      "changed_citations": [],
+      "new_in_scope_s2": [],
+      "decoys_in_pack": [
+        "170 IAC 16-1-1",
+        "170 IAC 16-1-4",
+        "170 IAC 4-9-12"
+      ],
+      "date_conflicts_with_approval": [],
+      "absent_topics": [],
+      "is_cleared": true
+    },
+    "T17": {
+      "scope_count": 10,
+      "context_count": 2,
+      "active_count": 11,
+      "high_count": 4,
+      "genuine_changed_count": 1,
+      "repealed_in_s2_count": 0,
+      "renumbered_count": 0,
+      "changed_citations": [
+        {
+          "citation": "170 IAC 4-1-16",
+          "change_type": "changed",
+          "s2_citation": "170 IAC 4-1-16",
+          "s2_effective_date": "2025-09-12",
+          "diff_classification": "other"
+        }
+      ],
+      "new_in_scope_s2": [],
+      "decoys_in_pack": [
+        "170 IAC 16-1-1",
+        "170 IAC 16-1-4"
+      ],
+      "date_conflicts_with_approval": [],
+      "absent_topics": [],
+      "is_cleared": false
+    },
+    "T18": {
+      "scope_count": 9,
+      "context_count": 2,
+      "active_count": 11,
+      "high_count": 5,
+      "genuine_changed_count": 0,
+      "repealed_in_s2_count": 0,
+      "renumbered_count": 0,
+      "changed_citations": [],
+      "new_in_scope_s2": [],
+      "decoys_in_pack": [
+        "170 IAC 4-1-3",
+        "170 IAC 4-1-7",
+        "170 IAC 4-1-8",
+        "170 IAC 4-1-9"
+      ],
+      "date_conflicts_with_approval": [],
+      "absent_topics": [],
+      "is_cleared": true
+    },
+    "T19": {
+      "scope_count": 4,
+      "context_count": 4,
+      "active_count": 8,
+      "high_count": 3,
+      "genuine_changed_count": 0,
+      "repealed_in_s2_count": 0,
+      "renumbered_count": 0,
+      "changed_citations": [],
+      "new_in_scope_s2": [],
+      "decoys_in_pack": [
+        "170 IAC 4-1-24",
+        "170 IAC 4-1-3"
+      ],
+      "date_conflicts_with_approval": [],
+      "absent_topics": [],
+      "is_cleared": true
+    },
+    "T20": {
+      "scope_count": 0,
+      "context_count": 0,
+      "active_count": 0,
+      "high_count": 0,
+      "genuine_changed_count": 0,
+      "repealed_in_s2_count": 0,
+      "renumbered_count": 0,
+      "changed_citations": [],
+      "new_in_scope_s2": [],
+      "decoys_in_pack": [],
+      "date_conflicts_with_approval": [],
+      "absent_topics": [
+        {
+          "topic": "Petroleum and chemical spill response/notification",
+          "expected_rule": "327 IAC 2-6.1",
+          "reason": "Rule 327 IAC 2-6.1 is absent from the S1 snapshot; not ingested into the database."
+        }
+      ],
+      "is_cleared": true
+    },
+    "T21": {
+      "scope_count": 2,
+      "context_count": 2,
+      "active_count": 4,
+      "high_count": 3,
+      "genuine_changed_count": 0,
+      "repealed_in_s2_count": 0,
+      "renumbered_count": 0,
+      "changed_citations": [],
+      "new_in_scope_s2": [],
+      "decoys_in_pack": [
+        "170 IAC 4-1-24",
+        "170 IAC 4-1-3"
+      ],
+      "date_conflicts_with_approval": [],
+      "absent_topics": [],
+      "is_cleared": true
+    },
+    "T10": {
+      "scope_count": 70,
+      "context_count": 6,
+      "active_count": 75,
+      "high_count": 17,
+      "genuine_changed_count": 5,
+      "repealed_in_s2_count": 0,
+      "renumbered_count": 0,
+      "changed_citations": [
+        {
+          "citation": "170 IAC 1-7-3",
+          "change_type": "changed",
+          "s2_citation": "170 IAC 1-7-3",
+          "s2_effective_date": "2023-05-25",
+          "diff_classification": "other"
+        },
+        {
+          "citation": "170 IAC 4-1-16",
+          "change_type": "changed",
+          "s2_citation": "170 IAC 4-1-16",
+          "s2_effective_date": "2025-09-12",
+          "diff_classification": "other"
+        },
+        {
+          "citation": "170 IAC 1-6-5",
+          "change_type": "changed",
+          "s2_citation": "170 IAC 1-6-5",
+          "s2_effective_date": "2025-01-24",
+          "diff_classification": "qualifier"
+        },
+        {
+          "citation": "170 IAC 1-6-3",
+          "change_type": "changed",
+          "s2_citation": "170 IAC 1-6-3",
+          "s2_effective_date": "2025-01-24",
+          "diff_classification": "other"
+        },
+        {
+          "citation": "170 IAC 1-6-4",
+          "change_type": "changed",
+          "s2_citation": "170 IAC 1-6-4",
+          "s2_effective_date": "2025-01-24",
+          "diff_classification": "other"
+        }
+      ],
+      "new_in_scope_s2": [],
+      "decoys_in_pack": [
+        "170 IAC 1-2-10",
+        "170 IAC 16-1-1",
+        "170 IAC 16-1-4",
+        "170 IAC 4-1-15",
+        "170 IAC 4-1-2",
+        "170 IAC 4-1-24",
+        "170 IAC 4-1-29",
+        "170 IAC 4-1-3",
+        "170 IAC 4-1-7",
+        "170 IAC 4-1-8",
+        "170 IAC 4-1-9",
+        "170 IAC 4-9-12"
+      ],
+      "date_conflicts_with_approval": [
+        {
+          "citation": "170 IAC 1-7-3",
+          "s2_effective_date": "2023-05-25",
+          "approval_date": "2025-03-13"
+        },
+        {
+          "citation": "170 IAC 1-6-5",
+          "s2_effective_date": "2025-01-24",
+          "approval_date": "2025-03-13"
+        },
+        {
+          "citation": "170 IAC 1-6-3",
+          "s2_effective_date": "2025-01-24",
+          "approval_date": "2025-03-13"
+        },
+        {
+          "citation": "170 IAC 1-6-4",
+          "s2_effective_date": "2025-01-24",
+          "approval_date": "2025-03-13"
+        }
+      ],
+      "absent_topics": [],
+      "is_cleared": false
+    },
+    "T11": {
+      "scope_count": 70,
+      "context_count": 6,
+      "active_count": 75,
+      "high_count": 17,
+      "genuine_changed_count": 5,
+      "repealed_in_s2_count": 0,
+      "renumbered_count": 0,
+      "changed_citations": [
+        {
+          "citation": "170 IAC 1-7-3",
+          "change_type": "changed",
+          "s2_citation": "170 IAC 1-7-3",
+          "s2_effective_date": "2023-05-25",
+          "diff_classification": "other"
+        },
+        {
+          "citation": "170 IAC 4-1-16",
+          "change_type": "changed",
+          "s2_citation": "170 IAC 4-1-16",
+          "s2_effective_date": "2025-09-12",
+          "diff_classification": "other"
+        },
+        {
+          "citation": "170 IAC 1-6-5",
+          "change_type": "changed",
+          "s2_citation": "170 IAC 1-6-5",
+          "s2_effective_date": "2025-01-24",
+          "diff_classification": "qualifier"
+        },
+        {
+          "citation": "170 IAC 1-6-3",
+          "change_type": "changed",
+          "s2_citation": "170 IAC 1-6-3",
+          "s2_effective_date": "2025-01-24",
+          "diff_classification": "other"
+        },
+        {
+          "citation": "170 IAC 1-6-4",
+          "change_type": "changed",
+          "s2_citation": "170 IAC 1-6-4",
+          "s2_effective_date": "2025-01-24",
+          "diff_classification": "other"
+        }
+      ],
+      "new_in_scope_s2": [],
+      "decoys_in_pack": [
+        "170 IAC 1-2-10",
+        "170 IAC 16-1-1",
+        "170 IAC 16-1-4",
+        "170 IAC 4-1-15",
+        "170 IAC 4-1-2",
+        "170 IAC 4-1-24",
+        "170 IAC 4-1-29",
+        "170 IAC 4-1-3",
+        "170 IAC 4-1-7",
+        "170 IAC 4-1-8",
+        "170 IAC 4-1-9",
+        "170 IAC 4-9-12"
+      ],
+      "date_conflicts_with_approval": [
+        {
+          "citation": "170 IAC 1-7-3",
+          "s2_effective_date": "2023-05-25",
+          "approval_date": "2025-03-14"
+        },
+        {
+          "citation": "170 IAC 1-6-5",
+          "s2_effective_date": "2025-01-24",
+          "approval_date": "2025-03-14"
+        },
+        {
+          "citation": "170 IAC 1-6-3",
+          "s2_effective_date": "2025-01-24",
+          "approval_date": "2025-03-14"
+        },
+        {
+          "citation": "170 IAC 1-6-4",
+          "s2_effective_date": "2025-01-24",
+          "approval_date": "2025-03-14"
+        }
+      ],
+      "absent_topics": [],
+      "is_cleared": false
+    },
+    "T12": {
+      "scope_count": 70,
+      "context_count": 6,
+      "active_count": 75,
+      "high_count": 17,
+      "genuine_changed_count": 5,
+      "repealed_in_s2_count": 0,
+      "renumbered_count": 0,
+      "changed_citations": [
+        {
+          "citation": "170 IAC 1-7-3",
+          "change_type": "changed",
+          "s2_citation": "170 IAC 1-7-3",
+          "s2_effective_date": "2023-05-25",
+          "diff_classification": "other"
+        },
+        {
+          "citation": "170 IAC 4-1-16",
+          "change_type": "changed",
+          "s2_citation": "170 IAC 4-1-16",
+          "s2_effective_date": "2025-09-12",
+          "diff_classification": "other"
+        },
+        {
+          "citation": "170 IAC 1-6-5",
+          "change_type": "changed",
+          "s2_citation": "170 IAC 1-6-5",
+          "s2_effective_date": "2025-01-24",
+          "diff_classification": "qualifier"
+        },
+        {
+          "citation": "170 IAC 1-6-3",
+          "change_type": "changed",
+          "s2_citation": "170 IAC 1-6-3",
+          "s2_effective_date": "2025-01-24",
+          "diff_classification": "other"
+        },
+        {
+          "citation": "170 IAC 1-6-4",
+          "change_type": "changed",
+          "s2_citation": "170 IAC 1-6-4",
+          "s2_effective_date": "2025-01-24",
+          "diff_classification": "other"
+        }
+      ],
+      "new_in_scope_s2": [],
+      "decoys_in_pack": [
+        "170 IAC 1-2-10",
+        "170 IAC 16-1-1",
+        "170 IAC 16-1-4",
+        "170 IAC 4-1-15",
+        "170 IAC 4-1-2",
+        "170 IAC 4-1-24",
+        "170 IAC 4-1-29",
+        "170 IAC 4-1-3",
+        "170 IAC 4-1-7",
+        "170 IAC 4-1-8",
+        "170 IAC 4-1-9",
+        "170 IAC 4-9-12"
+      ],
+      "date_conflicts_with_approval": [
+        {
+          "citation": "170 IAC 1-7-3",
+          "s2_effective_date": "2023-05-25",
+          "approval_date": "2025-03-14"
+        },
+        {
+          "citation": "170 IAC 1-6-5",
+          "s2_effective_date": "2025-01-24",
+          "approval_date": "2025-03-14"
+        },
+        {
+          "citation": "170 IAC 1-6-3",
+          "s2_effective_date": "2025-01-24",
+          "approval_date": "2025-03-14"
+        },
+        {
+          "citation": "170 IAC 1-6-4",
+          "s2_effective_date": "2025-01-24",
+          "approval_date": "2025-03-14"
+        }
+      ],
+      "absent_topics": [],
+      "is_cleared": false
+    }
+  },
+  "s1_snapshot_date": "2024-12-31",
+  "s2_snapshot_date": "2025-12-31",
+  "s1_total_rows": 3205,
+  "s2_total_rows": 1068,
+  "status_mapping": {
+    "approved": "active",
+    "repealed": "repealed"
+  },
+  "global_changed_citations": [
+    "170 IAC 1-3-5",
+    "170 IAC 1-5-1",
+    "170 IAC 1-5-2",
+    "170 IAC 1-5-5",
+    "170 IAC 1-6-2",
+    "170 IAC 1-6-3",
+    "170 IAC 1-6-4",
+    "170 IAC 1-6-5",
+    "170 IAC 1-6-6",
+    "170 IAC 1-6-7",
+    "170 IAC 1-6-8",
+    "170 IAC 1-7-3",
+    "170 IAC 1-7-5",
+    "170 IAC 4-1-16",
+    "170 IAC 4-3-1",
+    "170 IAC 4-3-12",
+    "170 IAC 4-5-1",
+    "170 IAC 4-6-21",
+    "170 IAC 4-7-2",
+    "170 IAC 4-8-7",
+    "170 IAC 5-1-16",
+    "170 IAC 5-1-9",
+    "170 IAC 5-5-2",
+    "170 IAC 5-5-3",
+    "170 IAC 6-1-16",
+    "326 IAC 1-1-3",
+    "326 IAC 1-2-18",
+    "326 IAC 1-2-29",
+    "326 IAC 1-2-32",
+    "326 IAC 1-2-52",
+    "326 IAC 1-2-6",
+    "326 IAC 1-3-4",
+    "326 IAC 1-5-4",
+    "326 IAC 1-6-1",
+    "326 IAC 1-8-1",
+    "326 IAC 11-3-2",
+    "326 IAC 11-6-7",
+    "326 IAC 19-3-2",
+    "326 IAC 19-3-5",
+    "326 IAC 2-10-1",
+    "326 IAC 2-11-2",
+    "326 IAC 2-13-1",
+    "326 IAC 2-2-1",
+    "326 IAC 2-2-6",
+    "326 IAC 2-3-1",
+    "326 IAC 2-3-2",
+    "326 IAC 2-6-2",
+    "326 IAC 2-6-4",
+    "326 IAC 2-6-5",
+    "326 IAC 2-7-1",
+    "326 IAC 2-7-10",
+    "326 IAC 2-7-11",
+    "326 IAC 2-7-12",
+    "326 IAC 2-7-19",
+    "326 IAC 2-7-2",
+    "326 IAC 2-7-4",
+    "326 IAC 2-7-5",
+    "326 IAC 2-8-16",
+    "326 IAC 2-8-2",
+    "326 IAC 2-8-3",
+    "326 IAC 2-8-4",
+    "326 IAC 2-9-7",
+    "326 IAC 2-9-8",
+    "326 IAC 20-4-1",
+    "326 IAC 20-48-2",
+    "326 IAC 20-7-1",
+    "326 IAC 20-89-1",
+    "326 IAC 20-9-1",
+    "326 IAC 21-1-1",
+    "326 IAC 23-1-11",
+    "326 IAC 23-1-12",
+    "326 IAC 23-1-27",
+    "326 IAC 23-1-32",
+    "326 IAC 23-1-34",
+    "326 IAC 23-1-48",
+    "326 IAC 23-1-5",
+    "326 IAC 23-1-52",
+    "326 IAC 23-1-54",
+    "326 IAC 23-1-55",
+    "326 IAC 23-1-58",
+    "326 IAC 23-1-6",
+    "326 IAC 23-1-60",
+    "326 IAC 23-1-61",
+    "326 IAC 23-1-62",
+    "326 IAC 23-1-69",
+    "326 IAC 23-1-7",
+    "326 IAC 24-6-1",
+    "326 IAC 24-7-1",
+    "326 IAC 26-1-3",
+    "326 IAC 3-4-3",
+    "326 IAC 3-5-5",
+    "326 IAC 3-7-2",
+    "326 IAC 4-1-4",
+    "326 IAC 4-3-5",
+    "326 IAC 5-1-3",
+    "326 IAC 6-3-1",
+    "326 IAC 6-3-2",
+    "326 IAC 6-4-1",
+    "326 IAC 6-5-4",
+    "326 IAC 6-6-2",
+    "326 IAC 6-6-5",
+    "326 IAC 8-11-2",
+    "326 IAC 8-21-3",
+    "326 IAC 8-22-7",
+    "327 IAC 8-1-3",
+    "327 IAC 8-10-1",
+    "327 IAC 8-10-5",
+    "327 IAC 8-11-1",
+    "327 IAC 8-12-3",
+    "327 IAC 8-3-1",
+    "327 IAC 8-3-2",
+    "327 IAC 8-3-4",
+    "327 IAC 8-4-2",
+    "327 IAC 8-6-1",
+    "675 IAC 20-2-13",
+    "675 IAC 20-2-14",
+    "675 IAC 20-2-15",
+    "675 IAC 20-2-16",
+    "675 IAC 20-2-20",
+    "675 IAC 20-2-9",
+    "675 IAC 20-3-6",
+    "675 IAC 20-5-2",
+    "675 IAC 20-5-24",
+    "675 IAC 30-1-1",
+    "675 IAC 30-1-2",
+    "675 IAC 30-1-4",
+    "675 IAC 30-1-5",
+    "675 IAC 30-10-1",
+    "675 IAC 30-10-10",
+    "675 IAC 30-10-11",
+    "675 IAC 30-10-12",
+    "675 IAC 30-10-13",
+    "675 IAC 30-10-14",
+    "675 IAC 30-10-15",
+    "675 IAC 30-10-16",
+    "675 IAC 30-10-2",
+    "675 IAC 30-10-3",
+    "675 IAC 30-10-4",
+    "675 IAC 30-10-5",
+    "675 IAC 30-10-6",
+    "675 IAC 30-10-7",
+    "675 IAC 30-10-8",
+    "675 IAC 30-10-9",
+    "675 IAC 30-11-1",
+    "675 IAC 30-11-2",
+    "675 IAC 30-11-3",
+    "675 IAC 30-11-4",
+    "675 IAC 30-11-5",
+    "675 IAC 30-11-6",
+    "675 IAC 30-3-10",
+    "675 IAC 30-3-11",
+    "675 IAC 30-3-12",
+    "675 IAC 30-3-13",
+    "675 IAC 30-3-15",
+    "675 IAC 30-3-17",
+    "675 IAC 30-3-18",
+    "675 IAC 30-3-19",
+    "675 IAC 30-3-20",
+    "675 IAC 30-3-21",
+    "675 IAC 30-3-23",
+    "675 IAC 30-3-3",
+    "675 IAC 30-3-5",
+    "675 IAC 30-3-7",
+    "675 IAC 30-3-9",
+    "675 IAC 30-4-1",
+    "675 IAC 30-4-10",
+    "675 IAC 30-4-11",
+    "675 IAC 30-4-14",
+    "675 IAC 30-4-15",
+    "675 IAC 30-4-16",
+    "675 IAC 30-4-17",
+    "675 IAC 30-4-18",
+    "675 IAC 30-4-19",
+    "675 IAC 30-4-2",
+    "675 IAC 30-4-20",
+    "675 IAC 30-4-23",
+    "675 IAC 30-4-25",
+    "675 IAC 30-4-26",
+    "675 IAC 30-4-27",
+    "675 IAC 30-4-29",
+    "675 IAC 30-4-3",
+    "675 IAC 30-4-30",
+    "675 IAC 30-4-31",
+    "675 IAC 30-4-32",
+    "675 IAC 30-4-33",
+    "675 IAC 30-4-34",
+    "675 IAC 30-4-35",
+    "675 IAC 30-4-36",
+    "675 IAC 30-4-38",
+    "675 IAC 30-4-39",
+    "675 IAC 30-4-4",
+    "675 IAC 30-4-40",
+    "675 IAC 30-4-41",
+    "675 IAC 30-4-42",
+    "675 IAC 30-4-44",
+    "675 IAC 30-4-45",
+    "675 IAC 30-4-47",
+    "675 IAC 30-4-49",
+    "675 IAC 30-4-5",
+    "675 IAC 30-4-50",
+    "675 IAC 30-4-51",
+    "675 IAC 30-4-6",
+    "675 IAC 30-5-1",
+    "675 IAC 30-5-10",
+    "675 IAC 30-5-11",
+    "675 IAC 30-5-12",
+    "675 IAC 30-5-13",
+    "675 IAC 30-5-14",
+    "675 IAC 30-5-15",
+    "675 IAC 30-5-2",
+    "675 IAC 30-5-4",
+    "675 IAC 30-5-5",
+    "675 IAC 30-5-6",
+    "675 IAC 30-5-7",
+    "675 IAC 30-5-8",
+    "675 IAC 30-5-9",
+    "675 IAC 30-6-1",
+    "675 IAC 30-6-2",
+    "675 IAC 30-7-1",
+    "675 IAC 30-7-2",
+    "675 IAC 30-8-1",
+    "675 IAC 30-8-10",
+    "675 IAC 30-8-11",
+    "675 IAC 30-8-12",
+    "675 IAC 30-8-13",
+    "675 IAC 30-8-14",
+    "675 IAC 30-8-15",
+    "675 IAC 30-8-16",
+    "675 IAC 30-8-2",
+    "675 IAC 30-8-3",
+    "675 IAC 30-8-4",
+    "675 IAC 30-8-5",
+    "675 IAC 30-8-6",
+    "675 IAC 30-8-7",
+    "675 IAC 30-8-8",
+    "675 IAC 30-8-9"
+  ],
+  "global_repealed_in_s2": [
+    "326 IAC 2-7-16",
+    "326 IAC 2-8-12",
+    "327 IAC 8-3-8"
+  ],
+  "global_renumbered": {
+    "610 IAC 10-1-1": "610 IAC 12-1-1",
+    "326 IAC 17-2-1": "610 IAC 12-1-1",
+    "610 IAC 6-1-1": "610 IAC 12-1-1",
+    "610 IAC 9-1-1": "610 IAC 12-1-1",
+    "610 IAC 8-1-1": "610 IAC 12-1-1"
+  },
+  "decoys": [
+    "170 IAC 1-2-10",
+    "170 IAC 16-1-1",
+    "170 IAC 16-1-4",
+    "170 IAC 4-1-15",
+    "170 IAC 4-1-2",
+    "170 IAC 4-1-24",
+    "170 IAC 4-1-29",
+    "170 IAC 4-1-3",
+    "170 IAC 4-1-7",
+    "170 IAC 4-1-8",
+    "170 IAC 4-1-9",
+    "170 IAC 4-9-12"
+  ],
+  "high_set": [
+    "170 IAC 1-2-10",
+    "170 IAC 1-6-3",
+    "170 IAC 1-6-4",
+    "170 IAC 1-6-5",
+    "170 IAC 1-7-3",
+    "170 IAC 16-1-1",
+    "170 IAC 16-1-4",
+    "170 IAC 4-1-15",
+    "170 IAC 4-1-16",
+    "170 IAC 4-1-2",
+    "170 IAC 4-1-24",
+    "170 IAC 4-1-29",
+    "170 IAC 4-1-3",
+    "170 IAC 4-1-7",
+    "170 IAC 4-1-8",
+    "170 IAC 4-1-9",
+    "170 IAC 4-9-12"
+  ],
+  "low_confidence_subsection_sections": [],
+  "cleared_packs": [
+    "T15",
+    "T16",
+    "T18",
+    "T19",
+    "T20",
+    "T21"
+  ],
+  "db_issues": [
+    "Rule 327 IAC 2-6.1 (T20 scope: Petroleum/Chemical Spill Response) is absent from the S1 and S2 snapshots. The T20 grounding pack will have no sections."
+  ]
+}

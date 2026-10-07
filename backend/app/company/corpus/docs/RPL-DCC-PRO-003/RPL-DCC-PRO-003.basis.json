@@ -1,0 +1,843 @@
+{
+  "doc_id": "RPL-DCC-PRO-003",
+  "version": "4.2",
+  "effective_date": "2025-02-24",
+  "law_as_of": "2024-12-31",
+  "grounding_pack": "T19.json",
+  "generated_by": "T19 task executor",
+  "generated_ts": "2025-02-24T00:00:00-05:00",
+  "preliminary_data_note": "2024 reliability data is preliminary \u2014 extracted 2025-02-10",
+  "clauses": [
+    {
+      "id": "RPL-DCC-PRO-003:1",
+      "section": "1",
+      "heading": "Purpose",
+      "disposition": "covered"
+    },
+    {
+      "id": "RPL-DCC-PRO-003:2",
+      "section": "2",
+      "heading": "Scope",
+      "disposition": "covered"
+    },
+    {
+      "id": "RPL-DCC-PRO-003:2.1",
+      "section": "2.1",
+      "heading": "In Scope",
+      "disposition": "covered"
+    },
+    {
+      "id": "RPL-DCC-PRO-003:2.2",
+      "section": "2.2",
+      "heading": "Out of Scope",
+      "disposition": "covered"
+    },
+    {
+      "id": "RPL-DCC-PRO-003:3",
+      "section": "3",
+      "heading": "Definitions",
+      "disposition": "covered"
+    },
+    {
+      "id": "RPL-DCC-PRO-003:3.1",
+      "citation": "170 IAC 4-1-23(a)(1)",
+      "heading": "Business days",
+      "disposition": "verbatim"
+    },
+    {
+      "id": "RPL-DCC-PRO-003:3.2",
+      "citation": "170 IAC 4-1-23(a)(7)",
+      "heading": "Nonbusiness days",
+      "disposition": "verbatim"
+    },
+    {
+      "id": "RPL-DCC-PRO-003:3.3",
+      "citation": "170 IAC 4-1-23(a)(2)",
+      "heading": "Customer",
+      "disposition": "verbatim"
+    },
+    {
+      "id": "RPL-DCC-PRO-003:3.4",
+      "citation": "170 IAC 4-1-23(a)(4)",
+      "heading": "Customer of record",
+      "disposition": "verbatim"
+    },
+    {
+      "id": "RPL-DCC-PRO-003:3.5",
+      "citation": "170 IAC 4-1-23(a)(5)",
+      "heading": "Interruption",
+      "disposition": "verbatim"
+    },
+    {
+      "id": "RPL-DCC-PRO-003:3.6",
+      "citation": "170 IAC 4-1-23(a)(10)",
+      "heading": "Sustained service interruption",
+      "disposition": "verbatim"
+    },
+    {
+      "id": "RPL-DCC-PRO-003:3.7",
+      "heading": "Momentary interruption",
+      "disposition": "company_practice"
+    },
+    {
+      "id": "RPL-DCC-PRO-003:3.8",
+      "citation": "170 IAC 4-1-23(a)(8)",
+      "heading": "Planned service interruption",
+      "disposition": "verbatim"
+    },
+    {
+      "id": "RPL-DCC-PRO-003:3.9",
+      "heading": "Outage incident",
+      "disposition": "company_practice"
+    },
+    {
+      "id": "RPL-DCC-PRO-003:3.10",
+      "heading": "Outage event",
+      "disposition": "company_practice"
+    },
+    {
+      "id": "RPL-DCC-PRO-003:3.11",
+      "heading": "Customer minutes of interruption",
+      "disposition": "company_practice"
+    },
+    {
+      "id": "RPL-DCC-PRO-003:3.12",
+      "citation": "170 IAC 4-1-23(a)(12)",
+      "heading": "SAIFI",
+      "disposition": "verbatim"
+    },
+    {
+      "id": "RPL-DCC-PRO-003:3.13",
+      "citation": "170 IAC 4-1-23(a)(11)",
+      "heading": "SAIDI",
+      "disposition": "verbatim"
+    },
+    {
+      "id": "RPL-DCC-PRO-003:3.14",
+      "citation": "170 IAC 4-1-23(a)(3)",
+      "heading": "CAIDI",
+      "disposition": "verbatim"
+    },
+    {
+      "id": "RPL-DCC-PRO-003:3.15",
+      "heading": "Major event (MED)",
+      "disposition": "company_practice"
+    },
+    {
+      "id": "RPL-DCC-PRO-003:3.16",
+      "heading": "TMED",
+      "disposition": "company_practice"
+    },
+    {
+      "id": "RPL-DCC-PRO-003:3.17",
+      "citation": "170 IAC 4-1-23(a)(6)",
+      "heading": "Investor-owned utility",
+      "disposition": "verbatim"
+    },
+    {
+      "id": "RPL-DCC-PRO-003:3.18",
+      "citation": "170 IAC 4-1-23(a)(9)",
+      "heading": "REMC",
+      "disposition": "verbatim"
+    },
+    {
+      "id": "RPL-DCC-PRO-003:3.19",
+      "heading": "State Form 54646",
+      "disposition": "company_practice"
+    },
+    {
+      "id": "RPL-DCC-PRO-003:3.20",
+      "heading": "Restoration step",
+      "disposition": "company_practice"
+    },
+    {
+      "id": "RPL-DCC-PRO-003:4",
+      "section": "4",
+      "heading": "Regulatory Basis",
+      "disposition": "covered"
+    },
+    {
+      "id": "RPL-DCC-PRO-003:5",
+      "section": "5",
+      "heading": "Roles and Responsibilities",
+      "disposition": "covered"
+    },
+    {
+      "id": "RPL-DCC-PRO-003:6",
+      "section": "6",
+      "heading": "Outage Data Capture in OMS",
+      "disposition": "covered"
+    },
+    {
+      "id": "RPL-DCC-PRO-003:7",
+      "section": "7",
+      "heading": "Reportability Determination",
+      "disposition": "covered"
+    },
+    {
+      "id": "RPL-DCC-PRO-003:7.1",
+      "citation": "170 IAC 4-1-23(a)(6)",
+      "heading": "Applicability",
+      "disposition": "covered"
+    },
+    {
+      "id": "RPL-DCC-PRO-003:7.2",
+      "citation": "170 IAC 4-1-23(b)(1)(A)",
+      "heading": "Reporting Threshold",
+      "disposition": "verbatim"
+    },
+    {
+      "id": "RPL-DCC-PRO-003:7.3",
+      "citation": "170 IAC 4-1-23(b)(1)",
+      "heading": "Threshold Crossed Timestamp",
+      "disposition": "covered"
+    },
+    {
+      "id": "RPL-DCC-PRO-003:7.4",
+      "heading": "Determination Workflow",
+      "disposition": "company_practice"
+    },
+    {
+      "id": "RPL-DCC-PRO-003:8",
+      "section": "8",
+      "heading": "Initial Report",
+      "disposition": "covered"
+    },
+    {
+      "id": "RPL-DCC-PRO-003:8.1",
+      "citation": "170 IAC 4-1-23(b)(2)",
+      "heading": "Timing",
+      "disposition": "verbatim"
+    },
+    {
+      "id": "RPL-DCC-PRO-003:8.2",
+      "citation": "170 IAC 4-1-23(b)(3)",
+      "heading": "Channel",
+      "disposition": "verbatim"
+    },
+    {
+      "id": "RPL-DCC-PRO-003:8.3",
+      "heading": "State Form 54646 Field Mapping",
+      "disposition": "company_practice"
+    },
+    {
+      "id": "RPL-DCC-PRO-003:9",
+      "section": "9",
+      "heading": "Update Reports",
+      "disposition": "covered"
+    },
+    {
+      "id": "RPL-DCC-PRO-003:9.1",
+      "citation": "170 IAC 4-1-23(b)(1)",
+      "heading": "Frequency",
+      "disposition": "verbatim"
+    },
+    {
+      "id": "RPL-DCC-PRO-003:10",
+      "section": "10",
+      "heading": "Final Report",
+      "disposition": "covered"
+    },
+    {
+      "id": "RPL-DCC-PRO-003:10.1",
+      "citation": "170 IAC 4-1-23(b)(1)",
+      "heading": "Trigger",
+      "disposition": "verbatim"
+    },
+    {
+      "id": "RPL-DCC-PRO-003:10.3",
+      "citation": "170 IAC 4-1-23(b)(5)",
+      "heading": "Post-Final Actions",
+      "disposition": "covered"
+    },
+    {
+      "id": "RPL-DCC-PRO-003:11",
+      "section": "11",
+      "heading": "Restoration Priorities",
+      "disposition": "covered"
+    },
+    {
+      "id": "RPL-DCC-PRO-003:11.1",
+      "citation": "170 IAC 4-1-23(d)",
+      "heading": "Regulatory Priority",
+      "disposition": "verbatim"
+    },
+    {
+      "id": "RPL-DCC-PRO-003:11.3",
+      "citation": "170 IAC 4-1-23(d)",
+      "heading": "Emergency Procedures",
+      "disposition": "verbatim"
+    },
+    {
+      "id": "RPL-DCC-PRO-003:12",
+      "section": "12",
+      "heading": "Planned Interruptions",
+      "disposition": "covered"
+    },
+    {
+      "id": "RPL-DCC-PRO-003:12.1",
+      "citation": "170 IAC 4-1-23(c)",
+      "heading": "Advance Notice Obligation",
+      "disposition": "verbatim"
+    },
+    {
+      "id": "RPL-DCC-PRO-003:13",
+      "section": "13",
+      "heading": "Storm Mode",
+      "disposition": "covered"
+    },
+    {
+      "id": "RPL-DCC-PRO-003:13.3",
+      "citation": "170 IAC 4-1-23(b)(4)",
+      "heading": "Extreme Emergency Reporting Schedule",
+      "disposition": "verbatim"
+    },
+    {
+      "id": "RPL-DCC-PRO-003:14",
+      "section": "14",
+      "heading": "Interruption Records",
+      "disposition": "covered"
+    },
+    {
+      "id": "RPL-DCC-PRO-003:14.1",
+      "citation": "170 IAC 4-1-3",
+      "heading": "Records Table",
+      "disposition": "verbatim"
+    },
+    {
+      "id": "RPL-DCC-PRO-003:15",
+      "section": "15",
+      "heading": "Annual Reliability Indices",
+      "disposition": "covered"
+    },
+    {
+      "id": "RPL-DCC-PRO-003:15.1",
+      "citation": "170 IAC 4-1-23(e)",
+      "heading": "Filing Requirement",
+      "disposition": "verbatim"
+    },
+    {
+      "id": "RPL-DCC-PRO-003:15.2",
+      "citation": "170 IAC 4-1-23(e)",
+      "heading": "Required Report Content",
+      "disposition": "verbatim"
+    },
+    {
+      "id": "RPL-DCC-PRO-003:15.3",
+      "heading": "TMED Derivation",
+      "disposition": "company_practice"
+    },
+    {
+      "id": "RPL-DCC-PRO-003:15.4",
+      "heading": "2024 Annual Reliability Indices",
+      "disposition": "covered"
+    },
+    {
+      "id": "RPL-DCC-PRO-003:16",
+      "section": "16",
+      "heading": "Worst-Performing Circuits Review",
+      "disposition": "covered"
+    },
+    {
+      "id": "RPL-DCC-PRO-003:17",
+      "section": "17",
+      "heading": "Tree-Related Outage Data Handoff",
+      "disposition": "covered"
+    },
+    {
+      "id": "RPL-DCC-PRO-003:17.1",
+      "citation": "170 IAC 4-9-7(g)",
+      "heading": "Annual Reporting Obligation",
+      "disposition": "verbatim"
+    },
+    {
+      "id": "RPL-DCC-PRO-003:18",
+      "section": "18",
+      "heading": "2024 Performance Summary",
+      "disposition": "covered"
+    },
+    {
+      "id": "RPL-DCC-PRO-003:19",
+      "section": "19",
+      "heading": "Training and Drills",
+      "disposition": "covered"
+    },
+    {
+      "id": "RPL-DCC-PRO-003:20",
+      "section": "20",
+      "heading": "Related Documents",
+      "disposition": "covered"
+    },
+    {
+      "id": "RPL-DCC-PRO-003:21",
+      "section": "21",
+      "heading": "Revision History",
+      "disposition": "covered"
+    },
+    {
+      "id": "RPL-DCC-PRO-003:22",
+      "section": "22",
+      "heading": "Approval Block",
+      "disposition": "covered"
+    },
+    {
+      "id": "RPL-DCC-PRO-003:App-A",
+      "heading": "Completed State Form 54646 Example",
+      "disposition": "covered"
+    },
+    {
+      "id": "RPL-DCC-PRO-003:App-B",
+      "heading": "DCC Reporting Checklist",
+      "disposition": "covered"
+    },
+    {
+      "id": "RPL-DCC-PRO-003:App-C",
+      "heading": "Notification Contact Sheet",
+      "disposition": "covered"
+    },
+    {
+      "id": "RPL-DCC-PRO-003:App-D",
+      "heading": "OMS Cause-Code Table",
+      "disposition": "covered"
+    },
+    {
+      "id": "RPL-DCC-PRO-003:App-E",
+      "heading": "Data Dictionary",
+      "disposition": "covered"
+    }
+  ],
+  "regulatory_coverage": {
+    "170 IAC 4-1-2": {
+      "heading": "Applicability",
+      "priority": "HIGH",
+      "disposition": "covered",
+      "doc_sections": [
+        "\u00a72.1",
+        "\u00a77.1"
+      ],
+      "notes": "RPL confirmed as IOU subject to this article"
+    },
+    "170 IAC 4-1-3": {
+      "heading": "Retention of records",
+      "priority": "HIGH",
+      "disposition": "covered",
+      "doc_sections": [
+        "\u00a714"
+      ],
+      "notes": "Minimum 3 years for all interruption records; 7-year separate requirement for reliability data under 4-1-23(f)"
+    },
+    "170 IAC 4-1-23(a)": {
+      "heading": "Definitions",
+      "priority": "HIGH",
+      "disposition": "verbatim",
+      "doc_sections": [
+        "\u00a73"
+      ],
+      "notes": "All statutory definitions reproduced with section cross-references"
+    },
+    "170 IAC 4-1-23(b)(1)(A)": {
+      "heading": "IOU reportability threshold",
+      "priority": "HIGH",
+      "disposition": "verbatim",
+      "doc_sections": [
+        "\u00a77.2"
+      ],
+      "notes": "Threshold: 2 hours AND min(2% customers, 5000). Effective RPL threshold = 5000 customers"
+    },
+    "170 IAC 4-1-23(b)(2)(A)": {
+      "heading": "Business day reporting intervals",
+      "priority": "HIGH",
+      "disposition": "verbatim",
+      "doc_sections": [
+        "\u00a78.1"
+      ],
+      "notes": "6am/9am/11am/2pm/4pm/9pm EST"
+    },
+    "170 IAC 4-1-23(b)(2)(B)": {
+      "heading": "Nonbusiness day reporting intervals",
+      "priority": "HIGH",
+      "disposition": "verbatim",
+      "doc_sections": [
+        "\u00a78.1"
+      ],
+      "notes": "6am/2pm/9pm EST"
+    },
+    "170 IAC 4-1-23(b)(3)": {
+      "heading": "Channel (email preferred)",
+      "priority": "HIGH",
+      "disposition": "verbatim",
+      "doc_sections": [
+        "\u00a78.2"
+      ],
+      "notes": "Preferred method: email. Telephone coordinated in advance."
+    },
+    "170 IAC 4-1-23(b)(4)": {
+      "heading": "Extreme emergency schedule",
+      "priority": "MEDIUM",
+      "disposition": "covered",
+      "doc_sections": [
+        "\u00a78.1",
+        "\u00a713.3"
+      ]
+    },
+    "170 IAC 4-1-23(b)(5)": {
+      "heading": "Further information request",
+      "priority": "MEDIUM",
+      "disposition": "covered",
+      "doc_sections": [
+        "\u00a710.3"
+      ]
+    },
+    "170 IAC 4-1-23(b)(6)": {
+      "heading": "Interruptible rate exclusion",
+      "priority": "MEDIUM",
+      "disposition": "covered",
+      "doc_sections": [
+        "\u00a72.2",
+        "\u00a77.2",
+        "\u00a712.1"
+      ]
+    },
+    "170 IAC 4-1-23(c)": {
+      "heading": "Planned interruption advance notice",
+      "priority": "HIGH",
+      "disposition": "verbatim",
+      "doc_sections": [
+        "\u00a712.1"
+      ],
+      "notes": "> 1 hour triggers notice obligation"
+    },
+    "170 IAC 4-1-23(d)": {
+      "heading": "Restoration priorities and emergency procedures",
+      "priority": "HIGH",
+      "disposition": "verbatim",
+      "doc_sections": [
+        "\u00a711.1",
+        "\u00a711.3"
+      ]
+    },
+    "170 IAC 4-1-23(e)": {
+      "heading": "Annual reliability indices report",
+      "priority": "HIGH",
+      "disposition": "verbatim",
+      "doc_sections": [
+        "\u00a715.1",
+        "\u00a715.2"
+      ],
+      "notes": "March 1 annual deadline; SAIDI/SAIFI/CAIDI with and without major events; 3-year data on first report"
+    },
+    "170 IAC 4-1-23(f)": {
+      "heading": "Reliability data retention \u2014 7 years",
+      "priority": "HIGH",
+      "disposition": "verbatim",
+      "doc_sections": [
+        "\u00a714.1"
+      ],
+      "notes": "7-year retention for CAIDI/SAIDI/SAIFI data and supporting records"
+    },
+    "170 IAC 4-1-24": {
+      "heading": "Accident reports",
+      "priority": "HIGH",
+      "disposition": "cross-referenced",
+      "doc_sections": [
+        "\u00a74 (T4-10)",
+        "\u00a72.2"
+      ],
+      "notes": "Out-of-scope for this procedure; cross-referenced to RPL-SAF-PRO-009. Immediate telephone notice required for fatality; written follow-up."
+    },
+    "170 IAC 4-9-7(g)": {
+      "heading": "Tree-related outage report",
+      "priority": "HIGH",
+      "disposition": "verbatim",
+      "doc_sections": [
+        "\u00a717.1"
+      ],
+      "notes": "March 31 annual deadline; 5 content elements required"
+    },
+    "170 IAC 4-1-1": {
+      "disposition": "context",
+      "clauses": [
+        "RPL-DCC-PRO-003:2"
+      ]
+    },
+    "170 IAC 4-1-23": {
+      "disposition": "covered",
+      "clauses": [
+        "RPL-DCC-PRO-003:3"
+      ]
+    },
+    "170 IAC 4-9-1": {
+      "disposition": "covered",
+      "clauses": [
+        "RPL-DCC-PRO-003:3"
+      ]
+    },
+    "170 IAC 4-9-2": {
+      "disposition": "covered",
+      "clauses": [
+        "RPL-DCC-PRO-003:3"
+      ]
+    },
+    "170 IAC 4-9-7": {
+      "disposition": "covered",
+      "clauses": [
+        "RPL-DCC-PRO-003:3"
+      ]
+    }
+  },
+  "parameters": {
+    "customers_served_denominator": 407491,
+    "pct_threshold": 0.02,
+    "flat_threshold": 5000,
+    "effective_customer_threshold": 5000,
+    "duration_threshold_min": 120,
+    "planned_notice_trigger_min": 60,
+    "records_retention_years": 3,
+    "reliability_data_retention_years": 7,
+    "customers_served_annual_2024": 405805,
+    "tmed_saidi_min": 137.1872,
+    "annual_report_deadline": "March 1",
+    "tree_report_deadline": "March 31",
+    "reporting_intervals_business_days": [
+      "06:00",
+      "09:00",
+      "11:00",
+      "14:00",
+      "16:00",
+      "21:00"
+    ],
+    "reporting_intervals_nonbusiness_days": [
+      "06:00",
+      "14:00",
+      "21:00"
+    ],
+    "timezone": "EST (Indianapolis time)"
+  },
+  "value_ledger": {
+    "tmed": {
+      "value": 137.1872,
+      "unit": "min/customer/day",
+      "source": "reliability_facts.yaml:tmed_saidi_min",
+      "method": "IEEE 1366 \u00a72.5\u03b2 from 2019-2023 daily SAIDI"
+    },
+    "med_dates_2024": {
+      "values": [
+        "2024-03-15",
+        "2024-05-22",
+        "2024-07-04",
+        "2024-08-09",
+        "2024-12-23"
+      ],
+      "source": "reliability_facts.yaml:med_dates_2024"
+    },
+    "ex_med_saifi_2024": {
+      "value": 1.0987,
+      "source": "reliability_facts.yaml:annual_2024.ex_med.saifi"
+    },
+    "ex_med_saidi_2024": {
+      "value": 138.3058,
+      "unit": "min/customer",
+      "source": "reliability_facts.yaml:annual_2024.ex_med.saidi"
+    },
+    "ex_med_caidi_2024": {
+      "value": 125.8813,
+      "unit": "min",
+      "source": "reliability_facts.yaml:annual_2024.ex_med.caidi"
+    },
+    "with_med_saifi_2024": {
+      "value": 1.5723,
+      "source": "reliability_facts.yaml:annual_2024.with_med.saifi"
+    },
+    "with_med_saidi_2024": {
+      "value": 262.1955,
+      "unit": "min/customer",
+      "source": "reliability_facts.yaml:annual_2024.with_med.saidi"
+    },
+    "with_med_caidi_2024": {
+      "value": 166.7592,
+      "unit": "min",
+      "source": "reliability_facts.yaml:annual_2024.with_med.caidi"
+    },
+    "customers_served_annual_2024": {
+      "value": 405805,
+      "source": "reliability_facts.yaml:customers_served_annual_2024"
+    },
+    "vegetation_ci_2024": {
+      "value": 213856,
+      "source": "reliability_facts.yaml:vegetation_2024.ci"
+    },
+    "vegetation_cmi_2024": {
+      "value": 40238410,
+      "source": "reliability_facts.yaml:vegetation_2024.cmi"
+    },
+    "vegetation_saifi_2024": {
+      "value": 0.527,
+      "source": "reliability_facts.yaml:vegetation_2024.saifi"
+    },
+    "vegetation_saidi_2024": {
+      "value": 99.157,
+      "unit": "min/customer",
+      "source": "reliability_facts.yaml:vegetation_2024.saidi"
+    },
+    "vegetation_inside_row_ci_2024": {
+      "value": 127457,
+      "source": "reliability_facts.yaml:vegetation_2024.inside_row_ci"
+    },
+    "vegetation_outside_row_ci_2024": {
+      "value": 44526,
+      "source": "reliability_facts.yaml:vegetation_2024.outside_row_ci"
+    }
+  },
+  "interpretations": [
+    {
+      "id": "INT-001",
+      "regulation": "170 IAC 4-1-23(b)(1)(A)",
+      "question": "What is the effective customer threshold for RPL as an IOU?",
+      "answer": "5,000 customers. Rule: lesser of (2% of customers served) or 5,000. 2% of 407,491 = 8,149. min(8149, 5000) = 5,000.",
+      "impact": "\u00a77.2 decision table, \u00a718.2 reportable incident determination"
+    },
+    {
+      "id": "INT-002",
+      "regulation": "170 IAC 4-1-23(b)(1)(A)",
+      "question": "Does both the duration (2 hours) AND customer (5,000) criterion need to be met for reportability?",
+      "answer": "Yes. The rule uses 'and' \u2014 both must be met simultaneously. A 3-hour outage affecting 4,000 customers is not reportable. A 1-hour outage affecting 6,000 customers is not reportable.",
+      "impact": "\u00a77.2 decision table; INC-2024-00003 excluded (peak 3,529 < 5,000)"
+    },
+    {
+      "id": "INT-003",
+      "regulation": "170 IAC 4-1-23(a)(10)",
+      "question": "Can RPL define its own momentary threshold?",
+      "answer": "Yes. The regulation allows utilities to define their own threshold of 5 minutes or less. RPL applies the default statutory 5-minute threshold.",
+      "impact": "\u00a73.6, \u00a73.7"
+    },
+    {
+      "id": "INT-004",
+      "regulation": "170 IAC 4-1-23(e)",
+      "question": "What is the annual report filing deadline?",
+      "answer": "On or before March 1 of each year. The report must include SAIDI, CAIDI, SAIFI with and without major events; definition of major event; and number of customers used.",
+      "impact": "\u00a715.1, regulatory calendar RPL-REG-CAL-2025"
+    },
+    {
+      "id": "INT-005",
+      "regulation": "170 IAC 4-1-23(f)",
+      "question": "What retention period applies to reliability indices data?",
+      "answer": "At least 7 years for CAIDI, SAIDI, SAIFI data and supporting records. Note: the base records retention rule at 170 IAC 4-1-3 specifies at least 3 years, but 4-1-23(f) sets a higher 7-year standard specifically for reliability indices data.",
+      "impact": "\u00a714.1; two separate retention periods tracked in RRS-DCC-001 and RRS-DCC-002"
+    },
+    {
+      "id": "INT-006",
+      "regulation": "170 IAC 4-1-23(c)",
+      "question": "When does the planned interruption notice obligation arise?",
+      "answer": "When service is expected to be interrupted for more than 1 hour. Exceptions: emergencies; interruptible tariff customers.",
+      "impact": "\u00a712.1, planned_interruption_notices_2024.csv (exception_code column)"
+    },
+    {
+      "id": "INT-007",
+      "regulation": "IEEE 1366 \u00a72.5\u03b2",
+      "question": "Which begin-date convention is used for MED classification?",
+      "answer": "Events accrue to the begin date (start_ts date). If a storm starts on a non-MED day and ends on a MED day, its CI/CMI are counted as non-MED. If it starts on a MED day, all CI/CMI are excluded from ex-MED indices regardless of which day they actually restored.",
+      "impact": "\u00a715.3 TMED derivation; med_flag assignment in outage_events_2024 dataset"
+    },
+    {
+      "id": "INT-008",
+      "regulation": "170 IAC 4-1-23(b)(1)(A)",
+      "question": "Is INC-2024-00003 (July 4 storm, peak 3,529 customers) reportable?",
+      "answer": "No. Although it is a MED day, peak_customers_out = 3,529 < 5,000 effective threshold. Both criteria must be met. It contributes to MED day SAIDI but is not an IURC reportable incident.",
+      "impact": "\u00a718.2 reportable incident count = 10, not 11"
+    }
+  ],
+  "app_a_example": {
+    "incident_id": "INC-2024-00001",
+    "date": "2024-03-15",
+    "med_day": true,
+    "peak_customers_out": 26471,
+    "counties_affected": 14,
+    "initial_report_ts": "2024-03-15T02:47:00-05:00",
+    "threshold_crossed_ts": "2024-03-15T02:02:00-05:00",
+    "final_report_ts": "2024-03-16T21:00:00-05:00",
+    "restored_ts": "2024-03-16T20:32:00-05:00",
+    "duration_hrs": 44.5,
+    "cause": "vegetation (wind storm)",
+    "update_report_count": 7,
+    "total_reports": 9
+  },
+  "section_2_7_cases": [
+    {
+      "case": "Planned interruption: customer growth (new construction)",
+      "disposition": "Not reportable under \u00a77.2 (planned exclusion); notice required if > 1 hour (\u00a712.1); logged in planned_interruption_notices_2024.csv"
+    },
+    {
+      "case": "Interruptible rate customer curtailment",
+      "disposition": "Not reportable. Excluded by 170 IAC 4-1-23(b)(6) when pursuant to service agreement."
+    },
+    {
+      "case": "Peak < 5,000 customers, duration > 2 hours",
+      "disposition": "Not reportable. Both criteria must be met. E.g., 4,800 customers for 6 hours = not reportable."
+    },
+    {
+      "case": "Peak >= 5,000 customers, duration < 2 hours",
+      "disposition": "Not reportable. Both criteria must be met. E.g., 7,000 customers for 90 minutes = not reportable."
+    },
+    {
+      "case": "Momentary interruption (< 5 minutes)",
+      "disposition": "Not a sustained service interruption under \u00a73.6. Counted in MAIFI, not in SAIFI/SAIDI. Not reportable."
+    },
+    {
+      "case": "Outage affecting < 5,000 customers that escalates to > 5,000",
+      "disposition": "DCC Shift Supervisor re-evaluates reportability as peak rises. If both thresholds ultimately met, incident is reportable from the moment both are met."
+    }
+  ],
+  "data_artifacts": {
+    "outage_incidents": {
+      "file": "data/outage_incidents_2024-01-01_2025-01-31.csv",
+      "rows": 9509,
+      "generator": "scripts/generate_outage_data.py",
+      "seed": 2024
+    },
+    "outage_events": {
+      "file": "data/outage_events_2024-01-01_2025-01-31.csv",
+      "rows": 10928,
+      "generator": "scripts/generate_outage_data.py",
+      "seed": 2024
+    },
+    "iurc_report_log": {
+      "file": "data/iurc_report_log_2024-01-01_2025-01-31.csv",
+      "rows": 59,
+      "generator": "scripts/generate_outage_data.py",
+      "seed": 2024
+    },
+    "planned_interruption_notices": {
+      "file": "data/planned_interruption_notices_2024.csv",
+      "rows": 623,
+      "generator": "scripts/generate_outage_data.py",
+      "seed": 2024
+    },
+    "reliability_indices": {
+      "file": "data/reliability_indices_2024.csv",
+      "rows": 13,
+      "generator": "scripts/generate_outage_data.py",
+      "seed": 2024
+    }
+  },
+  "reportable_incidents": {
+    "count": 10,
+    "incident_ids": [
+      "INC-2024-00001",
+      "INC-2024-00002",
+      "INC-2024-00004",
+      "INC-2024-00005",
+      "INC-2024-02209",
+      "INC-2024-02592",
+      "INC-2024-03211",
+      "INC-2024-04492",
+      "INC-2024-05377",
+      "INC-2024-07845"
+    ],
+    "wide_window_incidents": [
+      "INC-2024-00004",
+      "INC-2024-02592"
+    ],
+    "wide_window_pct_of_reportable": 20.0,
+    "note": "Wide-window = > 60% of allowed reporting window used. 2 of 10 = 20% >= 15% required by spec."
+  }
+}

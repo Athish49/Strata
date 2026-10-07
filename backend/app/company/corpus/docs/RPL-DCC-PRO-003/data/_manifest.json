@@ -1,0 +1,47 @@
+{
+  "generated": "2025-02-10",
+  "generator": "scripts/generate_outage_data.py",
+  "seed": 2024,
+  "files": [
+    {
+      "file": "outage_incidents_2024-01-01_2025-01-31.csv",
+      "rows": 9509,
+      "columns": 20,
+      "sha256": "cd7edc97bb43101e4ec8aff08b286f6bd08459fe381c533a7bbdbffbc04ca00b",
+      "generator_script": "scripts/generate_outage_data.py",
+      "seed": 2024
+    },
+    {
+      "file": "outage_events_2024-01-01_2025-01-31.csv",
+      "rows": 10928,
+      "columns": 28,
+      "sha256": "8a80fc9c4cd30106c8a9f33f41fcd8329fb295ef95aa6ec6e0ae859d0c4f7b21",
+      "generator_script": "scripts/generate_outage_data.py",
+      "seed": 2024
+    },
+    {
+      "file": "iurc_report_log_2024-01-01_2025-01-31.csv",
+      "rows": 59,
+      "columns": 11,
+      "sha256": "7767f652837d00e95584f67a616517c9870b9302c828bce63e7ec4739a2340b6",
+      "generator_script": "scripts/generate_outage_data.py",
+      "seed": 2024
+    },
+    {
+      "file": "planned_interruption_notices_2024.csv",
+      "rows": 623,
+      "columns": 8,
+      "sha256": "ff821bf7af428689aeb04cd4e1c5bb70cada94e9d6e27531e5e1968091873c46",
+      "generator_script": "scripts/generate_outage_data.py",
+      "seed": 2024
+    },
+    {
+      "file": "reliability_indices_2024.csv",
+      "rows": 13,
+      "columns": 16,
+      "sha256": "95d2768169863ce4a1ceed6daf145a2048aefb436d9ba35bd6fbf6a03f8b0bdc",
+      "generator_script": "scripts/generate_outage_data.py",
+      "seed": 2024
+    }
+  ]
+}

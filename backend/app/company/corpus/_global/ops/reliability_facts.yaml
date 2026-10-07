@@ -1,0 +1,222 @@
+generated_by: generate_ops_master.py
+seed: 2024
+customers_served_annual_2024: 405805
+customers_served_monthly_2024:
+  1: 403997
+  2: 404305
+  3: 404593
+  4: 404900
+  5: 405198
+  6: 405507
+  7: 405805
+  8: 406114
+  9: 406423
+  10: 406722
+  11: 407031
+  12: 407331
+tmed_saidi_min: 137.1872
+med_dates_2024:
+- '2024-03-15'
+- '2024-05-22'
+- '2024-07-04'
+- '2024-08-09'
+- '2024-12-23'
+annual_2024:
+  with_med:
+    ci: 638033
+    cmi: 106400234
+    saifi: 1.5723
+    saidi: 262.1955
+    caidi: 166.7592
+  ex_med:
+    ci: 445864
+    cmi: 56125189
+    saifi: 1.0987
+    saidi: 138.3058
+    caidi: 125.8813
+monthly_2024:
+  '1':
+    with_med:
+      ci: 25923
+      cmi: 3504259
+      saifi: 0.0642
+      saidi: 8.674
+      caidi: 135.109
+    ex_med:
+      ci: 25923
+      cmi: 3504259
+      saifi: 0.0642
+      saidi: 8.674
+      caidi: 135.109
+    customers_served: 403997
+  '2':
+    with_med:
+      ci: 20033
+      cmi: 2665890
+      saifi: 0.0495
+      saidi: 6.5938
+      caidi: 133.2081
+    ex_med:
+      ci: 20033
+      cmi: 2665890
+      saifi: 0.0495
+      saidi: 6.5938
+      caidi: 133.2081
+    customers_served: 404305
+  '3':
+    with_med:
+      ci: 121684
+      cmi: 19939697
+      saifi: 0.3008
+      saidi: 49.2833
+      caidi: 163.8408
+    ex_med:
+      ci: 35200
+      cmi: 4237907
+      saifi: 0.087
+      saidi: 10.4745
+      caidi: 120.3966
+    customers_served: 404593
+  '4':
+    with_med:
+      ci: 42655
+      cmi: 7105623
+      saifi: 0.1053
+      saidi: 17.5491
+      caidi: 166.6581
+    ex_med:
+      ci: 42655
+      cmi: 7105623
+      saifi: 0.1053
+      saidi: 17.5491
+      caidi: 166.6581
+    customers_served: 404900
+  '5':
+    with_med:
+      ci: 87605
+      cmi: 14875684
+      saifi: 0.2162
+      saidi: 36.7121
+      caidi: 169.8062
+    ex_med:
+      ci: 54429
+      cmi: 6513915
+      saifi: 0.1343
+      saidi: 16.0759
+      caidi: 119.7014
+    customers_served: 405198
+  '6':
+    with_med:
+      ci: 55515
+      cmi: 6070983
+      saifi: 0.1369
+      saidi: 14.9713
+      caidi: 109.3594
+    ex_med:
+      ci: 55515
+      cmi: 6070983
+      saifi: 0.1369
+      saidi: 14.9713
+      caidi: 109.3594
+    customers_served: 405507
+  '7':
+    with_med:
+      ci: 85028
+      cmi: 16027047
+      saifi: 0.2095
+      saidi: 39.4945
+      caidi: 188.5179
+    ex_med:
+      ci: 64928
+      cmi: 8544464
+      saifi: 0.16
+      saidi: 21.0556
+      caidi: 131.5975
+    customers_served: 405805
+  '8':
+    with_med:
+      ci: 60083
+      cmi: 10663929
+      saifi: 0.1479
+      saidi: 26.2585
+      caidi: 177.5423
+    ex_med:
+      ci: 31419
+      cmi: 3245236
+      saifi: 0.0774
+      saidi: 7.9909
+      caidi: 103.2416
+    customers_served: 406114
+  '9':
+    with_med:
+      ci: 35413
+      cmi: 3319003
+      saifi: 0.0871
+      saidi: 8.1664
+      caidi: 93.7589
+    ex_med:
+      ci: 35413
+      cmi: 3319003
+      saifi: 0.0871
+      saidi: 8.1664
+      caidi: 93.7589
+    customers_served: 406423
+  '10':
+    with_med:
+      ci: 30631
+      cmi: 4669077
+      saifi: 0.0753
+      saidi: 11.4798
+      caidi: 152.4542
+    ex_med:
+      ci: 30631
+      cmi: 4669077
+      saifi: 0.0753
+      saidi: 11.4798
+      caidi: 152.4542
+    customers_served: 406722
+  '11':
+    with_med:
+      ci: 18896
+      cmi: 1702462
+      saifi: 0.0464
+      saidi: 4.1826
+      caidi: 90.1422
+    ex_med:
+      ci: 18896
+      cmi: 1702462
+      saifi: 0.0464
+      saidi: 4.1826
+      caidi: 90.1422
+    customers_served: 407031
+  '12':
+    with_med:
+      ci: 54567
+      cmi: 15856580
+      saifi: 0.134
+      saidi: 38.928
+      caidi: 290.5075
+    ex_med:
+      ci: 30822
+      cmi: 4546370
+      saifi: 0.0757
+      saidi: 11.1614
+      caidi: 147.4425
+    customers_served: 407331
+vegetation_2024:
+  ci: 213856
+  cmi: 40238410
+  saifi: 0.527
+  saidi: 99.157
+  inside_row_ci: 127457
+  outside_row_ci: 44526
+vegetation_2022_summary:
+  saifi: 0.28
+  saidi: 38.5
+  inside_row_pct: 62
+  outside_row_pct: 38
+vegetation_2023_summary:
+  saifi: 0.31
+  saidi: 41.2
+  inside_row_pct: 59
+  outside_row_pct: 41

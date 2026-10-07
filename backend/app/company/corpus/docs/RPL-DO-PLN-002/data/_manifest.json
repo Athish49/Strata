@@ -1,0 +1,47 @@
+{
+  "doc_id": "RPL-DO-PLN-002",
+  "generated_by": "scripts/generate_vm_data.py",
+  "seed": 2024,
+  "files": [
+    {
+      "file": "vm_circuit_schedule_2025.csv",
+      "rows": 111,
+      "columns": 22,
+      "sha256": "651e15a3398894d39116e4484e67de5a9f16e598dff9e0d3bc8e72f7f0ac7b5d",
+      "generator_script": "scripts/generate_vm_data.py",
+      "seed": 2024
+    },
+    {
+      "file": "vm_work_completed_2024.csv",
+      "rows": 106,
+      "columns": 12,
+      "sha256": "600711713bcea2daebcb574ace855e48a79d3503b91b52caf555291f21dd610b",
+      "generator_script": "scripts/generate_vm_data.py",
+      "seed": 2024
+    },
+    {
+      "file": "vm_tree_outages_2024.csv",
+      "rows": 51,
+      "columns": 11,
+      "sha256": "7c4fd90bc1dc2f7702c44360fec5a38deafbd87d645d52edbcd27bff9e0da6b4",
+      "generator_script": "scripts/generate_vm_data.py",
+      "seed": 2024
+    },
+    {
+      "file": "vm_budget_2024_2025.csv",
+      "rows": 8,
+      "columns": 12,
+      "sha256": "45382f807370ccb34dd0ee2e73b546d993957d22c0eea25ff563e12dd6cf07d0",
+      "generator_script": "scripts/generate_vm_data.py",
+      "seed": 2024
+    },
+    {
+      "file": "vm_customer_contacts_2024.csv",
+      "rows": 542,
+      "columns": 11,
+      "sha256": "e50d9e2faf66c14e0fcae411f013048047a9f48c818eae210629a32f787b39aa",
+      "generator_script": "scripts/generate_vm_data.py",
+      "seed": 2024
+    }
+  ]
+}

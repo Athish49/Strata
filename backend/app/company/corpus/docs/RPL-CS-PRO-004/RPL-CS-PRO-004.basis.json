@@ -1,0 +1,795 @@
+{
+  "schema_version": "2.0",
+  "doc_id": "RPL-CS-PRO-004",
+  "version": "5.1",
+  "law_as_of": "2024-12-31",
+  "grounding_pack": "corpus/grounding/T14.json",
+  "doc_sha256": "<to be computed by validate.py>",
+  "default_route": {"owner": "P15", "reviewer": "P13", "approver": "P03"},
+  "clauses": [
+    {
+      "clause_id": "RPL-CS-PRO-004:3.3",
+      "clause_type": "definition",
+      "text_sha256": "<computed>",
+      "line_start": 0,
+      "citations": ["170 IAC 4-1-1(c)"],
+      "subsection_labels": ["(c)"],
+      "assessed": true,
+      "route_override": null,
+      "depends_on": [],
+      "cross_doc_refs": [],
+      "parameters": [
+        {
+          "parameter_id": "RPL-CS-PRO-004:3.3#p1",
+          "kind": "applicability",
+          "name": "Customer definition — residential scope",
+          "doc_value": "persons who have agreed to pay for electric service exclusively for residential purposes",
+          "unit": "n/a",
+          "qualifier": "limited to",
+          "day_type": "n/a",
+          "s1_quote": "for the purposes of sections 13(d), 15, and 16 of this rule, the term shall be limited to mean persons who have agreed to pay for such service exclusively for residential purposes",
+          "s1_span": [0, 180],
+          "derived": null
+        }
+      ]
+    },
+    {
+      "clause_id": "RPL-CS-PRO-004:3.5",
+      "clause_type": "definition",
+      "text_sha256": "<computed>",
+      "line_start": 0,
+      "citations": ["170 IAC 4-1-13(c)"],
+      "subsection_labels": ["(c)"],
+      "assessed": true,
+      "route_override": null,
+      "depends_on": [],
+      "cross_doc_refs": [],
+      "parameters": [
+        {
+          "parameter_id": "RPL-CS-PRO-004:3.5#p1",
+          "kind": "period",
+          "name": "Delinquency period",
+          "doc_value": "seventeen (17) days after the initial bill is postmarked",
+          "unit": "days",
+          "qualifier": "within",
+          "day_type": "calendar",
+          "s1_quote": "a bill is considered delinquent unless payment is received within seventeen (17) days after the initial bill is postmarked",
+          "s1_span": [0, 120],
+          "derived": null
+        }
+      ]
+    },
+    {
+      "clause_id": "RPL-CS-PRO-004:3.6",
+      "clause_type": "definition",
+      "text_sha256": "<computed>",
+      "line_start": 0,
+      "citations": ["170 IAC 4-1-1(e)", "170 IAC 4-1-13(c)"],
+      "subsection_labels": ["(e)", "(c)"],
+      "assessed": true,
+      "route_override": null,
+      "depends_on": [],
+      "cross_doc_refs": [],
+      "parameters": [
+        {
+          "parameter_id": "RPL-CS-PRO-004:3.6#p1",
+          "kind": "threshold",
+          "name": "Late payment charge — first $3",
+          "doc_value": "ten percent (10%) of the first three dollars ($3)",
+          "unit": "percent",
+          "qualifier": "not to exceed",
+          "day_type": "n/a",
+          "s1_quote": "the late payment charge shall not exceed ten percent (10%) of the first three dollars ($3) and three percent (3%) of the excess of three dollars ($3)",
+          "s1_span": [0, 160],
+          "derived": null
+        },
+        {
+          "parameter_id": "RPL-CS-PRO-004:3.6#p2",
+          "kind": "threshold",
+          "name": "Late payment charge — excess over $3",
+          "doc_value": "three percent (3%) of the excess of three dollars ($3)",
+          "unit": "percent",
+          "qualifier": "not to exceed",
+          "day_type": "n/a",
+          "s1_quote": "the late payment charge shall not exceed ten percent (10%) of the first three dollars ($3) and three percent (3%) of the excess of three dollars ($3)",
+          "s1_span": [0, 160],
+          "derived": null
+        }
+      ]
+    },
+    {
+      "clause_id": "RPL-CS-PRO-004:8.2",
+      "clause_type": "regulatory_restatement",
+      "text_sha256": "<computed>",
+      "line_start": 0,
+      "citations": ["170 IAC 4-1-16(e)"],
+      "subsection_labels": ["(e)"],
+      "assessed": true,
+      "route_override": null,
+      "depends_on": [],
+      "cross_doc_refs": [],
+      "parameters": [
+        {
+          "parameter_id": "RPL-CS-PRO-004:8.2#p1",
+          "kind": "period",
+          "name": "Residential disconnect notice period",
+          "doc_value": "fourteen (14) days prior written notice",
+          "unit": "days",
+          "qualifier": "at least",
+          "day_type": "calendar",
+          "s1_quote": "electric service to any residential customer shall not be disconnected for a violation of any rule or regulation of a utility or for the nonpayment of a bill, except after fourteen (14) days prior written notice to the customer",
+          "s1_span": [0, 220],
+          "derived": null
+        }
+      ]
+    },
+    {
+      "clause_id": "RPL-CS-PRO-004:9.5",
+      "clause_type": "regulatory_restatement",
+      "text_sha256": "<computed>",
+      "line_start": 0,
+      "citations": ["170 IAC 4-1-16(c)"],
+      "subsection_labels": ["(c)"],
+      "assessed": true,
+      "route_override": null,
+      "depends_on": [],
+      "cross_doc_refs": [],
+      "parameters": [
+        {
+          "parameter_id": "RPL-CS-PRO-004:9.5#p1",
+          "kind": "period",
+          "name": "Medical certificate postponement — first",
+          "doc_value": "ten (10) days",
+          "unit": "days",
+          "qualifier": "postpone for",
+          "day_type": "calendar",
+          "s1_quote": "a utility shall postpone the disconnection of service for ten (10) days if, prior to the disconnect date specified in the disconnect notice, the customer provides the utility with a medical statement",
+          "s1_span": [0, 210],
+          "derived": null
+        }
+      ]
+    },
+    {
+      "clause_id": "RPL-CS-PRO-004:9.6",
+      "clause_type": "regulatory_restatement",
+      "text_sha256": "<computed>",
+      "line_start": 0,
+      "citations": ["170 IAC 4-1-16(c)"],
+      "subsection_labels": ["(c)"],
+      "assessed": true,
+      "route_override": null,
+      "depends_on": [],
+      "cross_doc_refs": [],
+      "parameters": [
+        {
+          "parameter_id": "RPL-CS-PRO-004:9.6#p1",
+          "kind": "period",
+          "name": "Medical certificate postponement — renewal",
+          "doc_value": "one (1) additional ten (10) day period",
+          "unit": "days",
+          "qualifier": "continued for",
+          "day_type": "calendar",
+          "s1_quote": "the postponement of disconnection shall be continued for one (1) additional ten (10) day period upon the provision of an additional such medical statement",
+          "s1_span": [0, 170],
+          "derived": null
+        }
+      ]
+    },
+    {
+      "clause_id": "RPL-CS-PRO-004:10.2",
+      "clause_type": "regulatory_restatement",
+      "text_sha256": "<computed>",
+      "line_start": 0,
+      "citations": ["170 IAC 4-1-16.6(a)"],
+      "subsection_labels": ["(a)"],
+      "assessed": true,
+      "route_override": null,
+      "depends_on": [],
+      "cross_doc_refs": [],
+      "parameters": [
+        {
+          "parameter_id": "RPL-CS-PRO-004:10.2#p1",
+          "kind": "period",
+          "name": "Winter protection period start",
+          "doc_value": "December 1",
+          "unit": "date",
+          "qualifier": "during the period from",
+          "day_type": "calendar",
+          "s1_quote": "during the period from december 1 through march 15, disconnect electric residential service to any customer who either is receiving or who is eligible for and has applied for assistance under ic 4-4-33",
+          "s1_span": [0, 210],
+          "derived": null
+        },
+        {
+          "parameter_id": "RPL-CS-PRO-004:10.2#p2",
+          "kind": "period",
+          "name": "Winter protection period end",
+          "doc_value": "March 15",
+          "unit": "date",
+          "qualifier": "through",
+          "day_type": "calendar",
+          "s1_quote": "during the period from december 1 through march 15, disconnect electric residential service to any customer who either is receiving or who is eligible for and has applied for assistance under ic 4-4-33",
+          "s1_span": [0, 210],
+          "derived": null
+        }
+      ]
+    },
+    {
+      "clause_id": "RPL-CS-PRO-004:10.3",
+      "clause_type": "regulatory_restatement",
+      "text_sha256": "<computed>",
+      "line_start": 0,
+      "citations": ["170 IAC 4-1-16.6(b)"],
+      "subsection_labels": ["(b)"],
+      "assessed": true,
+      "route_override": null,
+      "depends_on": [],
+      "cross_doc_refs": [],
+      "parameters": [
+        {
+          "parameter_id": "RPL-CS-PRO-004:10.3#p1",
+          "kind": "condition",
+          "name": "Application-pending protection trigger",
+          "doc_value": "eligibility being determined by IHCDA or designee after submission of complete application",
+          "unit": "n/a",
+          "qualifier": "if",
+          "day_type": "n/a",
+          "s1_quote": "the customers' eligibility to receive benefits pursuant to ic 4-4-33 is being determined by the indiana housing and community development authority or its designee after the submission of a complete application for benefits by the customer",
+          "s1_span": [0, 260],
+          "derived": null
+        }
+      ]
+    },
+    {
+      "clause_id": "RPL-CS-PRO-004:11.2",
+      "clause_type": "regulatory_restatement",
+      "text_sha256": "<computed>",
+      "line_start": 0,
+      "citations": ["170 IAC 4-1-16(c)(2)"],
+      "subsection_labels": ["(c)"],
+      "assessed": true,
+      "route_override": null,
+      "depends_on": [],
+      "cross_doc_refs": [],
+      "parameters": [
+        {
+          "parameter_id": "RPL-CS-PRO-004:11.2#p1",
+          "kind": "threshold",
+          "name": "Payment arrangement down payment — dollar cap",
+          "doc_value": "not to exceed ten dollars ($10) or one-tenth (1/10) of the bill, whichever is less",
+          "unit": "dollars",
+          "qualifier": "not to exceed",
+          "day_type": "n/a",
+          "s1_quote": "pays a reasonable portion (not to exceed ten dollars ($10) or one-tenth (1/10) of the bill, whichever is less, unless the customer agrees to a greater portion) of the bill",
+          "s1_span": [0, 180],
+          "derived": null
+        },
+        {
+          "parameter_id": "RPL-CS-PRO-004:11.2#p2",
+          "kind": "period",
+          "name": "Payment arrangement term — financial hardship",
+          "doc_value": "three (3) months",
+          "unit": "months",
+          "qualifier": "within",
+          "day_type": "calendar",
+          "s1_quote": "agrees to pay the remainder of the outstanding bill within three (3) months",
+          "s1_span": [0, 80],
+          "derived": null
+        },
+        {
+          "parameter_id": "RPL-CS-PRO-004:11.2#p3",
+          "kind": "period",
+          "name": "Payment arrangement breach lookback",
+          "doc_value": "twelve (12) months",
+          "unit": "months",
+          "qualifier": "within the past",
+          "day_type": "calendar",
+          "s1_quote": "has not breached any similar agreement with the utility made pursuant to this section within the past twelve (12) months",
+          "s1_span": [0, 130],
+          "derived": null
+        }
+      ]
+    },
+    {
+      "clause_id": "RPL-CS-PRO-004:11.3",
+      "clause_type": "regulatory_restatement",
+      "text_sha256": "<computed>",
+      "line_start": 0,
+      "citations": ["170 IAC 4-1-16(c)(3)"],
+      "subsection_labels": ["(c)"],
+      "assessed": true,
+      "route_override": null,
+      "depends_on": [],
+      "cross_doc_refs": [],
+      "parameters": [
+        {
+          "parameter_id": "RPL-CS-PRO-004:11.3#p1",
+          "kind": "threshold",
+          "name": "Utility-error arrangement down payment",
+          "doc_value": "not to exceed an amount equal to the customer's average bill for the six (6) bills immediately preceding the bill in question",
+          "unit": "bills",
+          "qualifier": "not to exceed average of",
+          "day_type": "n/a",
+          "s1_quote": "pays a reasonable portion of the bill, not to exceed an amount equal to the customer's average bill for the six (6) bills immediately preceding the bill in question",
+          "s1_span": [0, 175],
+          "derived": null
+        }
+      ]
+    },
+    {
+      "clause_id": "RPL-CS-PRO-004:11.8",
+      "clause_type": "regulatory_restatement",
+      "text_sha256": "<computed>",
+      "line_start": 0,
+      "citations": ["170 IAC 4-1-15(e)"],
+      "subsection_labels": ["(e)"],
+      "assessed": true,
+      "route_override": null,
+      "depends_on": [],
+      "cross_doc_refs": [],
+      "parameters": [
+        {
+          "parameter_id": "RPL-CS-PRO-004:11.8#p1",
+          "kind": "threshold",
+          "name": "Deposit cap — fraction of annual billings",
+          "doc_value": "one-sixth (1/6) of the expected annual billings",
+          "unit": "fraction",
+          "qualifier": "not to exceed",
+          "day_type": "n/a",
+          "s1_quote": "the amount of such deposit may not exceed an amount equal to one-sixth ( 1 /6) of the expected annual billings for the customer at the address at which service is rendered",
+          "s1_span": [0, 160],
+          "derived": null
+        },
+        {
+          "parameter_id": "RPL-CS-PRO-004:11.8#p2",
+          "kind": "threshold",
+          "name": "Deposit installment threshold",
+          "doc_value": "seventy dollars ($70)",
+          "unit": "dollars",
+          "qualifier": "greater than",
+          "day_type": "n/a",
+          "s1_quote": "the utility shall provide the customer with two (2) monthly billing cycles (approximately sixty (60) days) in which to pay any deposit that exceeds seventy dollars ($70)",
+          "s1_span": [0, 160],
+          "derived": null
+        },
+        {
+          "parameter_id": "RPL-CS-PRO-004:11.8#p3",
+          "kind": "period",
+          "name": "Deposit payment period for deposits > $70",
+          "doc_value": "two (2) monthly billing cycles (approximately sixty (60) days)",
+          "unit": "billing cycles",
+          "qualifier": "within",
+          "day_type": "calendar",
+          "s1_quote": "the utility shall provide the customer with two (2) monthly billing cycles (approximately sixty (60) days) in which to pay any deposit that exceeds seventy dollars ($70)",
+          "s1_span": [0, 160],
+          "derived": null
+        }
+      ]
+    },
+    {
+      "clause_id": "RPL-CS-PRO-004:12.5",
+      "clause_type": "regulatory_restatement",
+      "text_sha256": "<computed>",
+      "line_start": 0,
+      "citations": ["170 IAC 4-1-16(d)"],
+      "subsection_labels": ["(d)"],
+      "assessed": true,
+      "route_override": null,
+      "depends_on": [],
+      "cross_doc_refs": [],
+      "parameters": [
+        {
+          "parameter_id": "RPL-CS-PRO-004:12.5#p1",
+          "kind": "period",
+          "name": "Permitted disconnection hours — start",
+          "doc_value": "8:00 a.m.",
+          "unit": "time",
+          "qualifier": "not before",
+          "day_type": "n/a",
+          "s1_quote": "no utility may disconnect service unless it is done between the hours of 8:00 a.m. and 3:00 p.m., prevailing local time",
+          "s1_span": [0, 100],
+          "derived": null
+        },
+        {
+          "parameter_id": "RPL-CS-PRO-004:12.5#p2",
+          "kind": "period",
+          "name": "Permitted disconnection hours — end",
+          "doc_value": "3:00 p.m.",
+          "unit": "time",
+          "qualifier": "not after",
+          "day_type": "n/a",
+          "s1_quote": "no utility may disconnect service unless it is done between the hours of 8:00 a.m. and 3:00 p.m., prevailing local time",
+          "s1_span": [0, 100],
+          "derived": null
+        }
+      ]
+    },
+    {
+      "clause_id": "RPL-CS-PRO-004:12.9",
+      "clause_type": "regulatory_restatement",
+      "text_sha256": "<computed>",
+      "line_start": 0,
+      "citations": ["170 IAC 4-1-16(f)(3)"],
+      "subsection_labels": ["(f)"],
+      "assessed": true,
+      "route_override": null,
+      "depends_on": [],
+      "cross_doc_refs": [],
+      "parameters": [
+        {
+          "parameter_id": "RPL-CS-PRO-004:12.9#p1",
+          "kind": "period",
+          "name": "Field contact record retention minimum",
+          "doc_value": "at least thirty (30) days",
+          "unit": "days",
+          "qualifier": "at least",
+          "day_type": "calendar",
+          "s1_quote": "make a record thereof to be maintained for at least thirty (30) days",
+          "s1_span": [0, 70],
+          "derived": null
+        }
+      ]
+    },
+    {
+      "clause_id": "RPL-CS-PRO-004:13.3",
+      "clause_type": "regulatory_restatement",
+      "text_sha256": "<computed>",
+      "line_start": 0,
+      "citations": ["170 IAC 4-1-16(g)"],
+      "subsection_labels": ["(g)"],
+      "assessed": true,
+      "route_override": null,
+      "depends_on": [],
+      "cross_doc_refs": [],
+      "parameters": [
+        {
+          "parameter_id": "RPL-CS-PRO-004:13.3#p1",
+          "kind": "period",
+          "name": "Reconnection timing — regulatory minimum",
+          "doc_value": "within one (1) working day",
+          "unit": "working days",
+          "qualifier": "within",
+          "day_type": "working",
+          "s1_quote": "the utility must reconnect the service to the customer or user as soon as reasonably possible but at least within one (1) working day after it is requested to do so if the customer has satisfied the requirements of this rule",
+          "s1_span": [0, 195],
+          "derived": null
+        }
+      ]
+    },
+    {
+      "clause_id": "RPL-CS-PRO-004:14.3",
+      "clause_type": "regulatory_restatement",
+      "text_sha256": "<computed>",
+      "line_start": 0,
+      "citations": ["170 IAC 16-1-4(c)(5)", "170 IAC 16-1-4(c)(6)"],
+      "subsection_labels": [],
+      "assessed": true,
+      "route_override": null,
+      "depends_on": [],
+      "cross_doc_refs": [],
+      "parameters": [
+        {
+          "parameter_id": "RPL-CS-PRO-004:14.3#p1",
+          "kind": "period",
+          "name": "Customer window to file IURC informal complaint",
+          "doc_value": "within seven (7) days of receiving RPL's proposed resolution",
+          "unit": "days",
+          "qualifier": "within",
+          "day_type": "calendar",
+          "s1_quote": "advise the customer that if he or she is not satisfied with the utility's proposed resolution, the customer may submit an informal complaint to consumer affairs within seven (7) days of the date the proposed resolution is received",
+          "s1_span": [0, 230],
+          "derived": null
+        }
+      ]
+    },
+    {
+      "clause_id": "RPL-CS-PRO-004:14.4",
+      "clause_type": "regulatory_restatement",
+      "text_sha256": "<computed>",
+      "line_start": 0,
+      "citations": ["170 IAC 16-1-7(a)"],
+      "subsection_labels": ["(a)"],
+      "assessed": true,
+      "route_override": null,
+      "depends_on": [],
+      "cross_doc_refs": [],
+      "parameters": [
+        {
+          "parameter_id": "RPL-CS-PRO-004:14.4#p1",
+          "kind": "period",
+          "name": "Post-decision disconnection hold",
+          "doc_value": "not sooner than ten (10) days after a decision by consumer affairs or the commission",
+          "unit": "days",
+          "qualifier": "not sooner than",
+          "day_type": "calendar",
+          "s1_quote": "sooner than ten (10) days after a decision by consumer affairs or the commission",
+          "s1_span": [0, 100],
+          "derived": null
+        }
+      ]
+    },
+    {
+      "clause_id": "RPL-CS-PRO-004:14.5",
+      "clause_type": "regulatory_restatement",
+      "text_sha256": "<computed>",
+      "line_start": 0,
+      "citations": ["170 IAC 16-1-7(b)"],
+      "subsection_labels": ["(b)"],
+      "assessed": true,
+      "route_override": null,
+      "depends_on": [],
+      "cross_doc_refs": [],
+      "parameters": [
+        {
+          "parameter_id": "RPL-CS-PRO-004:14.5#p1",
+          "kind": "threshold",
+          "name": "Undisputed payment amount — fraction of annual billing",
+          "doc_value": "one-twelfth (1/12) of the estimated annual billing",
+          "unit": "fraction",
+          "qualifier": "equal to",
+          "day_type": "n/a",
+          "s1_quote": "if a customer and utility cannot agree what portion of the charges in a bill is undisputed, to avoid disconnection, the customer should pay on the disputed bill an amount equal to one-twelfth (1/12) of the estimated annual billing for service to be rendered to the customer",
+          "s1_span": [0, 270],
+          "derived": null
+        },
+        {
+          "parameter_id": "RPL-CS-PRO-004:14.5#p2",
+          "kind": "period",
+          "name": "Billing history for undisputed estimate (12+ month customers)",
+          "doc_value": "twelve (12) months immediately preceding the disputed bill",
+          "unit": "months",
+          "qualifier": "for",
+          "day_type": "calendar",
+          "s1_quote": "for a customer who has been a customer for at least twelve (12) months, the estimate will be based on the customer's average bill for the twelve (12) months immediately preceding the disputed bill",
+          "s1_span": [0, 185],
+          "derived": null
+        }
+      ]
+    },
+    {
+      "clause_id": "RPL-CS-PRO-004:14.6",
+      "clause_type": "regulatory_restatement",
+      "text_sha256": "<computed>",
+      "line_start": 0,
+      "citations": ["170 IAC 16-1-4(b)"],
+      "subsection_labels": ["(b)"],
+      "assessed": true,
+      "route_override": null,
+      "depends_on": [],
+      "cross_doc_refs": [],
+      "parameters": [
+        {
+          "parameter_id": "RPL-CS-PRO-004:14.6#p1",
+          "kind": "period",
+          "name": "Dispute records retention",
+          "doc_value": "six (6) months from the date of final resolution",
+          "unit": "months",
+          "qualifier": "for a period of",
+          "day_type": "calendar",
+          "s1_quote": "the utility shall retain records of disputes received under this rule and the resolutions thereof for a period of six (6) months from the date of final resolution of the dispute under this rule",
+          "s1_span": [0, 190],
+          "derived": null
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "citation": "170 IAC 4-1-1",
+      "disposition": "covered",
+      "coverage_priority": "standard",
+      "clause_ids": ["RPL-CS-PRO-004:3.2", "RPL-CS-PRO-004:3.3", "RPL-CS-PRO-004:3.4", "RPL-CS-PRO-004:3.5", "RPL-CS-PRO-004:3.6"],
+      "reason": null
+    },
+    {
+      "citation": "170 IAC 4-1-2",
+      "disposition": "covered",
+      "coverage_priority": "high",
+      "clause_ids": ["RPL-CS-PRO-004:2.2"],
+      "reason": null
+    },
+    {
+      "citation": "170 IAC 4-1-13",
+      "disposition": "covered",
+      "coverage_priority": "standard",
+      "clause_ids": ["RPL-CS-PRO-004:3.5", "RPL-CS-PRO-004:6.1", "RPL-CS-PRO-004:8.2"],
+      "reason": null
+    },
+    {
+      "citation": "170 IAC 4-1-14",
+      "disposition": "considered_no_obligation",
+      "coverage_priority": "standard",
+      "clause_ids": [],
+      "reason": "Billing adjustment rules are the primary subject of RPL-CS-PRO-007 (T15). This procedure references billing error as a disconnection-deferral condition at clause 11.3 (170 IAC 4-1-16(c)(3)), which is the relevant operational intersection."
+    },
+    {
+      "citation": "170 IAC 4-1-15",
+      "disposition": "covered",
+      "coverage_priority": "high",
+      "clause_ids": ["RPL-CS-PRO-004:11.8"],
+      "reason": null
+    },
+    {
+      "citation": "170 IAC 4-1-16",
+      "disposition": "covered",
+      "coverage_priority": "high",
+      "clause_ids": [
+        "RPL-CS-PRO-004:2.6",
+        "RPL-CS-PRO-004:3.7",
+        "RPL-CS-PRO-004:7.1",
+        "RPL-CS-PRO-004:8.2",
+        "RPL-CS-PRO-004:8.3",
+        "RPL-CS-PRO-004:8.4",
+        "RPL-CS-PRO-004:8.5",
+        "RPL-CS-PRO-004:8.6",
+        "RPL-CS-PRO-004:8.7",
+        "RPL-CS-PRO-004:8.8",
+        "RPL-CS-PRO-004:9.2",
+        "RPL-CS-PRO-004:9.5",
+        "RPL-CS-PRO-004:9.6",
+        "RPL-CS-PRO-004:11.2",
+        "RPL-CS-PRO-004:11.3",
+        "RPL-CS-PRO-004:12.5",
+        "RPL-CS-PRO-004:12.6",
+        "RPL-CS-PRO-004:12.8",
+        "RPL-CS-PRO-004:12.9",
+        "RPL-CS-PRO-004:12.10",
+        "RPL-CS-PRO-004:12.11",
+        "RPL-CS-PRO-004:12.14",
+        "RPL-CS-PRO-004:13.2",
+        "RPL-CS-PRO-004:13.3",
+        "RPL-CS-PRO-004:13.7",
+        "RPL-CS-PRO-004:13.8"
+      ],
+      "reason": null
+    },
+    {
+      "citation": "170 IAC 4-1-16.6",
+      "disposition": "covered",
+      "coverage_priority": "high",
+      "clause_ids": [
+        "RPL-CS-PRO-004:10.2",
+        "RPL-CS-PRO-004:10.3",
+        "RPL-CS-PRO-004:10.4",
+        "RPL-CS-PRO-004:10.8"
+      ],
+      "reason": null
+    },
+    {
+      "citation": "170 IAC 16-1-1",
+      "disposition": "covered",
+      "coverage_priority": "high",
+      "clause_ids": ["RPL-CS-PRO-004:14.1"],
+      "reason": null
+    },
+    {
+      "citation": "170 IAC 16-1-2",
+      "disposition": "covered",
+      "coverage_priority": "standard",
+      "clause_ids": ["RPL-CS-PRO-004:3.18", "RPL-CS-PRO-004:3.19"],
+      "reason": null
+    },
+    {
+      "citation": "170 IAC 16-1-3",
+      "disposition": "covered",
+      "coverage_priority": "standard",
+      "clause_ids": ["RPL-CS-PRO-004:14.2"],
+      "reason": null
+    },
+    {
+      "citation": "170 IAC 16-1-4",
+      "disposition": "covered",
+      "coverage_priority": "high",
+      "clause_ids": ["RPL-CS-PRO-004:14.2", "RPL-CS-PRO-004:14.3", "RPL-CS-PRO-004:14.6", "RPL-CS-PRO-004:16.5"],
+      "reason": null
+    },
+    {
+      "citation": "170 IAC 16-1-5",
+      "disposition": "covered",
+      "coverage_priority": "standard",
+      "clause_ids": ["RPL-CS-PRO-004:14.3", "RPL-CS-PRO-004:14.4"],
+      "reason": null
+    },
+    {
+      "citation": "170 IAC 16-1-6",
+      "disposition": "covered",
+      "coverage_priority": "standard",
+      "clause_ids": ["RPL-CS-PRO-004:14.4"],
+      "reason": null
+    },
+    {
+      "citation": "170 IAC 16-1-7",
+      "disposition": "covered",
+      "coverage_priority": "standard",
+      "clause_ids": ["RPL-CS-PRO-004:14.4", "RPL-CS-PRO-004:14.5"],
+      "reason": null
+    }
+  ],
+  "interpretations": [
+    {
+      "clause_id": "RPL-CS-PRO-004:3.2",
+      "question": "170 IAC 4-1-16.5 defines 'disconnect' for EAP purposes — does it apply to RPL's main disconnection rule?",
+      "position": "170 IAC 4-1-16.5 provides definitions specifically for the home energy assistance context (170 IAC 4-1). RPL applies those definitions consistently throughout its EAP and winter protection procedures, as they are more specific for that context.",
+      "pack_citations_considered": ["170 IAC 4-1-16.5", "170 IAC 4-1-1"],
+      "rationale": "More protective reading applies EAP definitions broadly."
+    },
+    {
+      "clause_id": "RPL-CS-PRO-004:3.15",
+      "question": "The pack does not define 'business day' or 'company holidays' for disconnection purposes. What constitutes a business day for RPL?",
+      "position": "RPL defines business day as Monday through Friday excluding RPL Company holidays, which are the nine days listed in Section 3.15. This is consistent with 170 IAC 16-1-3(b) time computation rules and represents company practice.",
+      "pack_citations_considered": ["170 IAC 16-1-3(b)"],
+      "rationale": "Company practice aligned to IAC time computation rule."
+    },
+    {
+      "clause_id": "RPL-CS-PRO-004:9.3",
+      "question": "170 IAC 4-1-16(c) does not specify whether medical notice may be oral. How does RPL handle oral medical claims?",
+      "position": "RPL accepts oral medical claims as triggering an immediate suspension of disconnection, followed by a written certificate requirement. This is the most protective reading of the regulation.",
+      "pack_citations_considered": ["170 IAC 4-1-16(c)"],
+      "rationale": "More protective reading; aligns with utility industry practice for customer-facing rules."
+    }
+  ],
+  "out_of_scope_references": [],
+  "value_ledger": [
+    {"clause_id": "RPL-CS-PRO-004:3.5", "text": "17 days", "source": "pack", "ref": "170 IAC 4-1-13(c)"},
+    {"clause_id": "RPL-CS-PRO-004:3.6", "text": "10%", "source": "pack", "ref": "170 IAC 4-1-13(c)"},
+    {"clause_id": "RPL-CS-PRO-004:3.6", "text": "$3", "source": "pack", "ref": "170 IAC 4-1-13(c)"},
+    {"clause_id": "RPL-CS-PRO-004:3.6", "text": "3%", "source": "pack", "ref": "170 IAC 4-1-13(c)"},
+    {"clause_id": "RPL-CS-PRO-004:8.2", "text": "14 days", "source": "pack", "ref": "170 IAC 4-1-16(e)"},
+    {"clause_id": "RPL-CS-PRO-004:9.5", "text": "10 days", "source": "pack", "ref": "170 IAC 4-1-16(c)"},
+    {"clause_id": "RPL-CS-PRO-004:9.6", "text": "10 days", "source": "pack", "ref": "170 IAC 4-1-16(c)"},
+    {"clause_id": "RPL-CS-PRO-004:10.2", "text": "December 1", "source": "pack", "ref": "170 IAC 4-1-16.6(a)"},
+    {"clause_id": "RPL-CS-PRO-004:10.2", "text": "March 15", "source": "pack", "ref": "170 IAC 4-1-16.6(a)"},
+    {"clause_id": "RPL-CS-PRO-004:11.2", "text": "$10", "source": "pack", "ref": "170 IAC 4-1-16(c)(2)"},
+    {"clause_id": "RPL-CS-PRO-004:11.2", "text": "1/10", "source": "pack", "ref": "170 IAC 4-1-16(c)(2)"},
+    {"clause_id": "RPL-CS-PRO-004:11.2", "text": "3 months", "source": "pack", "ref": "170 IAC 4-1-16(c)(2)"},
+    {"clause_id": "RPL-CS-PRO-004:11.2", "text": "12 months", "source": "pack", "ref": "170 IAC 4-1-16(c)(2)"},
+    {"clause_id": "RPL-CS-PRO-004:11.3", "text": "6 bills", "source": "pack", "ref": "170 IAC 4-1-16(c)(3)"},
+    {"clause_id": "RPL-CS-PRO-004:11.3", "text": "2 months", "source": "pack", "ref": "170 IAC 4-1-16(c)(3)"},
+    {"clause_id": "RPL-CS-PRO-004:11.8", "text": "1/6", "source": "pack", "ref": "170 IAC 4-1-15(e)"},
+    {"clause_id": "RPL-CS-PRO-004:11.8", "text": "$70", "source": "pack", "ref": "170 IAC 4-1-15(e)"},
+    {"clause_id": "RPL-CS-PRO-004:11.8", "text": "60 days", "source": "pack", "ref": "170 IAC 4-1-15(e)"},
+    {"clause_id": "RPL-CS-PRO-004:12.5", "text": "8:00 a.m.", "source": "pack", "ref": "170 IAC 4-1-16(d)"},
+    {"clause_id": "RPL-CS-PRO-004:12.5", "text": "3:00 p.m.", "source": "pack", "ref": "170 IAC 4-1-16(d)"},
+    {"clause_id": "RPL-CS-PRO-004:12.9", "text": "30 days", "source": "pack", "ref": "170 IAC 4-1-16(f)(3)"},
+    {"clause_id": "RPL-CS-PRO-004:13.3", "text": "1 working day", "source": "pack", "ref": "170 IAC 4-1-16(g)"},
+    {"clause_id": "RPL-CS-PRO-004:13.7", "text": "$10.00", "source": "section1.6", "ref": "Table F F-1"},
+    {"clause_id": "RPL-CS-PRO-004:13.7", "text": "$45.00", "source": "section1.6", "ref": "Table F F-2"},
+    {"clause_id": "RPL-CS-PRO-004:13.7", "text": "$70.00", "source": "section1.6", "ref": "Table F F-3"},
+    {"clause_id": "RPL-CS-PRO-004:13.7", "text": "$120.00", "source": "section1.6", "ref": "Table F F-4"},
+    {"clause_id": "RPL-CS-PRO-004:13.7", "text": "$165.00", "source": "section1.6", "ref": "Table F F-5"},
+    {"clause_id": "RPL-CS-PRO-004:14.3", "text": "7 days", "source": "pack", "ref": "170 IAC 16-1-4(c)(5)"},
+    {"clause_id": "RPL-CS-PRO-004:14.4", "text": "10 days", "source": "pack", "ref": "170 IAC 16-1-7(a)"},
+    {"clause_id": "RPL-CS-PRO-004:14.5", "text": "1/12", "source": "pack", "ref": "170 IAC 16-1-7(b)"},
+    {"clause_id": "RPL-CS-PRO-004:14.5", "text": "12 months", "source": "pack", "ref": "170 IAC 16-1-7(b)"},
+    {"clause_id": "RPL-CS-PRO-004:14.6", "text": "6 months", "source": "pack", "ref": "170 IAC 16-1-4(b)"},
+    {"clause_id": "RPL-CS-PRO-004:App-B.F11", "text": "$10.00", "source": "section1.6", "ref": "Table F F-1"},
+    {"clause_id": "RPL-CS-PRO-004:App-B.F11", "text": "$45.00", "source": "section1.6", "ref": "Table F F-2"},
+    {"clause_id": "RPL-CS-PRO-004:App-B.F11", "text": "$70.00", "source": "section1.6", "ref": "Table F F-3"},
+    {"clause_id": "RPL-CS-PRO-004:App-B.F11", "text": "$120.00", "source": "section1.6", "ref": "Table F F-4"},
+    {"clause_id": "RPL-CS-PRO-004:16.3", "text": "50", "source": "company_practice", "ref": "Monthly audit sample size"},
+    {"clause_id": "RPL-CS-PRO-004:11.6", "text": "$500", "source": "company_practice", "ref": "3-month plan upper limit"},
+    {"clause_id": "RPL-CS-PRO-004:11.6", "text": "$1,500", "source": "company_practice", "ref": "6-month plan upper limit"}
+  ],
+  "gaps": [],
+  "sources": [],
+  "company_practice_values": [
+    {
+      "clause_id": "RPL-CS-PRO-004:11.6",
+      "name": "Payment arrangement tiers",
+      "value": "3-month plan up to $500; 6-month plan $501-$1,500; 12-month plan over $1,500",
+      "benchmark_source": "Typical midsize electric utility collection practice"
+    },
+    {
+      "clause_id": "RPL-CS-PRO-004:16.3",
+      "name": "Monthly audit sample size",
+      "value": "50 disconnections",
+      "benchmark_source": "Company practice; aligns with regulatory expectation of systematic compliance monitoring"
+    }
+  ],
+  "considered_no_obligation": [
+    {
+      "citation": "170 IAC 4-1-14",
+      "reason": "Billing adjustments are governed by RPL-CS-PRO-007 (T15); this procedure references the utility-error scenario only as a disconnection deferral condition per 170 IAC 4-1-16(c)(3)"
+    }
+  ],
+  "notes": "170 IAC 4-1-16.5 provides definitions for the EAP context only and is covered implicitly through the use of EAP-specific terms in clauses 3.11, 10.2, and 10.3. 170 IAC 4-1-16.6 is in the pack with full text including December 1 through March 15 dates and was cited directly per the pre-flight note."
+}

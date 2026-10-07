@@ -1,0 +1,543 @@
+contact_id,received_date,channel,circuit_id,category,escalated_to_second_rep,iurc_cad_referral,resolution,closed_date,days_to_close,iurc_info_provided
+VMC-2024-0001,2024-04-18,phone,LAF-018-6,notice_question,N,N,Information provided by contact center.,2024-04-19,1,N
+VMC-2024-0002,2024-06-27,in-person,CRW-001-1,tree_health,N,N,ISA arborist assessment completed; customer notified.,2024-07-23,26,N
+VMC-2024-0003,2024-12-05,phone,LAF-023-2,tree_health,N,N,ISA arborist assessment completed; customer notified.,2024-12-31,27,N
+VMC-2024-0004,2024-01-02,phone,LAF-016-3,easement_documentation_request,N,N,Easement copy provided within 5 business days.,2024-01-27,25,N
+VMC-2024-0005,2024-07-10,web,LAF-012-1,notice_question,N,N,Information provided by contact center.,2024-07-15,5,N
+VMC-2024-0006,2024-05-22,phone,DAN-014-1,removal_dispute,N,N,Second-representative review completed; dispute resolved.,2024-06-07,16,N
+VMC-2024-0007,2024-02-19,letter,FRK-005-1,tree_health,N,N,ISA arborist assessment completed; customer notified.,2024-03-01,11,N
+VMC-2024-0008,2024-07-06,phone,LAF-038-5,notice_question,N,N,Information provided by contact center.,2024-07-10,4,N
+VMC-2024-0009,2024-02-15,letter,LAF-011-4,storm_debris,N,N,Advised: storm debris not an RPL obligation (170 IAC 4-9-7(f)).,2024-03-12,26,N
+VMC-2024-0010,2024-02-26,web,THT-009-1,debris,N,N,Debris removed within 3 calendar days.,2024-03-19,22,N
+VMC-2024-0011,2024-12-02,web,THT-010-1,notice_question,N,N,Information provided by contact center.,2024-12-03,1,N
+VMC-2024-0012,2024-07-02,phone,LAF-032-1,notice_question,N,N,Information provided by contact center.,2024-07-03,1,N
+VMC-2024-0013,2024-08-14,phone,LAF-034-2,storm_debris,N,N,Advised: storm debris not an RPL obligation (170 IAC 4-9-7(f)).,2024-08-26,12,N
+VMC-2024-0014,2024-07-06,web,LAF-030-2,debris,N,N,Debris removed within 3 calendar days.,2024-07-22,16,N
+VMC-2024-0015,2024-11-26,phone,THT-005-2,debris,N,N,Debris removed within 3 calendar days.,2024-12-22,26,N
+VMC-2024-0016,2024-12-04,in-person,DAN-019-3,storm_debris,N,N,Advised: storm debris not an RPL obligation (170 IAC 4-9-7(f)).,2024-12-13,9,N
+VMC-2024-0017,2024-07-09,in-person,LAF-038-5,debris,N,N,Debris removed within 3 calendar days.,2024-08-01,23,N
+VMC-2024-0018,2024-12-19,web,DAN-009-1,property_damage,N,N,Claim filed under RPL-CLM-PRO-001.,2024-12-22,3,N
+VMC-2024-0019,2024-09-28,in-person,DAN-018-1,debris,N,N,Debris removed within 3 calendar days.,2024-10-11,13,N
+VMC-2024-0020,2024-02-08,letter,DAN-021-3,notice_question,N,N,Information provided by contact center.,2024-02-09,1,N
+VMC-2024-0021,2024-11-19,email,LAF-032-2,debris,N,N,Debris removed within 3 calendar days.,2024-11-24,5,N
+VMC-2024-0022,2024-02-28,web,LAF-021-3,debris,N,N,Debris removed within 3 calendar days.,2024-03-14,15,N
+VMC-2024-0023,2024-01-21,letter,CRW-002-1,debris,N,N,Debris removed within 3 calendar days.,2024-02-04,14,N
+VMC-2024-0024,2024-03-14,in-person,FRK-005-1,customer_request_trim,N,N,Customer trim order added to mid-cycle schedule.,2024-03-27,13,N
+VMC-2024-0025,2024-07-14,phone,CRW-005-1,debris,N,N,Debris removed within 3 calendar days.,2024-08-07,24,N
+VMC-2024-0026,2024-08-07,web,CRW-005-2,notice_question,N,N,Information provided by contact center.,2024-08-09,2,N
+VMC-2024-0027,2024-06-21,web,DAN-001-4,debris,N,N,Debris removed within 3 calendar days.,2024-07-15,24,N
+VMC-2024-0028,2024-10-28,web,CRW-015-1,notice_question,N,N,Information provided by contact center.,2024-10-31,3,N
+VMC-2024-0029,2024-07-10,letter,LAF-003-2,notice_question,N,N,Information provided by contact center.,2024-07-12,2,N
+VMC-2024-0030,2024-01-05,letter,DAN-008-3,debris,N,N,Debris removed within 3 calendar days.,2024-01-16,11,N
+VMC-2024-0031,2024-06-18,in-person,THT-018-5,notice_question,N,N,Information provided by contact center.,2024-06-22,4,N
+VMC-2024-0032,2024-07-19,phone,DAN-007-5,notice_question,N,N,Information provided by contact center.,2024-07-23,4,N
+VMC-2024-0033,2024-07-05,phone,DAN-021-4,refusal_of_work,N,N,Work rescheduled; consent obtained.,2024-08-02,28,N
+VMC-2024-0034,2024-12-22,web,DAN-015-1,notice_question,N,N,Information provided by contact center.,2024-12-24,2,N
+VMC-2024-0035,2024-06-12,web,THT-017-5,debris,N,N,Debris removed within 3 calendar days.,2024-07-11,29,N
+VMC-2024-0036,2024-08-28,phone,LAF-006-2,tree_health,N,N,ISA arborist assessment completed; customer notified.,2024-09-17,20,N
+VMC-2024-0037,2024-02-22,email,CRW-007-3,notice_question,N,N,Information provided by contact center.,2024-02-26,4,N
+VMC-2024-0038,2024-08-12,email,CRW-007-3,notice_question,N,N,Information provided by contact center.,2024-08-14,2,N
+VMC-2024-0039,2024-08-11,web,LAF-009-4,removal_dispute,N,N,Second-representative review completed; dispute resolved.,2024-08-31,20,N
+VMC-2024-0040,2024-11-02,in-person,CRW-001-3,notice_question,N,N,Information provided by contact center.,2024-11-05,3,N
+VMC-2024-0041,2024-12-05,phone,LAF-028-4,notice_question,N,N,Information provided by contact center.,2024-12-06,1,N
+VMC-2024-0042,2024-04-05,email,FRK-001-3,debris,N,N,Debris removed within 3 calendar days.,2024-04-28,23,N
+VMC-2024-0043,2024-01-25,web,LAF-018-5,notice_question,N,N,Information provided by contact center.,2024-01-28,3,N
+VMC-2024-0044,2024-12-20,phone,DAN-015-5,tree_health,N,N,ISA arborist assessment completed; customer notified.,2024-12-31,21,N
+VMC-2024-0045,2024-01-20,phone,LAF-026-2,notice_question,N,N,Information provided by contact center.,2024-01-23,3,N
+VMC-2024-0046,2024-02-16,letter,FRK-007-3,notice_question,N,N,Information provided by contact center.,2024-02-21,5,N
+VMC-2024-0047,2024-09-01,email,LAF-022-3,notice_question,N,N,Information provided by contact center.,2024-09-02,1,N
+VMC-2024-0048,2024-05-03,phone,DAN-021-3,other,N,N,Referred to appropriate department.,2024-05-04,1,N
+VMC-2024-0049,2024-06-02,in-person,LAF-031-5,notice_question,N,N,Information provided by contact center.,2024-06-07,5,N
+VMC-2024-0050,2024-05-08,email,LAF-004-6,notice_question,N,N,Information provided by contact center.,2024-05-10,2,N
+VMC-2024-0051,2024-12-14,in-person,DAN-017-4,notice_question,N,N,Information provided by contact center.,2024-12-15,1,N
+VMC-2024-0052,2024-08-25,email,CRW-014-5,notice_question,N,N,Information provided by contact center.,2024-08-27,2,N
+VMC-2024-0053,2024-11-23,phone,LAF-034-3,property_damage,Y,N,Claim filed under RPL-CLM-PRO-001.,2024-12-06,13,N
+VMC-2024-0054,2024-04-06,letter,CRW-004-2,refusal_of_work,N,N,Work rescheduled; consent obtained.,2024-05-01,25,N
+VMC-2024-0055,2024-01-20,email,THT-012-4,easement_documentation_request,N,N,Easement copy provided within 5 business days.,2024-02-10,21,N
+VMC-2024-0056,2024-11-14,in-person,LAF-004-6,customer_request_trim,N,N,Customer trim order added to mid-cycle schedule.,2024-11-30,16,N
+VMC-2024-0057,2024-12-25,letter,LAF-029-1,easement_documentation_request,N,N,Easement copy provided within 5 business days.,2024-12-31,20,N
+VMC-2024-0058,2024-09-04,web,CRW-017-2,debris,N,N,Debris removed within 3 calendar days.,2024-09-21,17,N
+VMC-2024-0059,2024-02-29,phone,DAN-011-3,debris,N,N,Debris removed within 3 calendar days.,2024-03-07,7,N
+VMC-2024-0060,2024-10-12,email,FRK-001-3,notice_question,N,N,Information provided by contact center.,2024-10-17,5,N
+VMC-2024-0061,2024-07-21,phone,LAF-001-3,tree_health,N,N,ISA arborist assessment completed; customer notified.,2024-08-13,23,N
+VMC-2024-0062,2024-03-04,email,DAN-012-4,customer_request_trim,N,N,Customer trim order added to mid-cycle schedule.,2024-04-03,30,N
+VMC-2024-0063,2024-09-01,in-person,DAN-007-4,notice_question,N,N,Information provided by contact center.,2024-09-04,3,N
+VMC-2024-0064,2024-04-08,phone,LAF-032-3,refusal_of_work,Y,N,Work rescheduled; consent obtained.,2024-04-13,5,N
+VMC-2024-0065,2024-11-11,phone,DAN-004-3,notice_question,N,N,Information provided by contact center.,2024-11-16,5,N
+VMC-2024-0066,2024-04-04,email,THT-007-1,notice_question,N,N,Information provided by contact center.,2024-04-05,1,N
+VMC-2024-0067,2024-12-01,phone,DAN-014-2,debris,N,N,Debris removed within 3 calendar days.,2024-12-12,11,N
+VMC-2024-0068,2024-04-18,letter,CRW-015-2,customer_request_trim,N,N,Customer trim order added to mid-cycle schedule.,2024-05-08,20,N
+VMC-2024-0069,2024-04-15,email,CRW-008-3,notice_question,N,N,Information provided by contact center.,2024-04-20,5,N
+VMC-2024-0070,2024-01-31,phone,CRW-013-1,notice_question,N,N,Information provided by contact center.,2024-02-04,4,N
+VMC-2024-0071,2024-11-07,phone,THT-008-4,property_damage,N,N,Claim filed under RPL-CLM-PRO-001.,2024-11-20,13,N
+VMC-2024-0072,2024-11-30,in-person,LAF-023-2,tree_health,N,N,ISA arborist assessment completed; customer notified.,2024-12-05,5,N
+VMC-2024-0073,2024-04-09,web,DAN-016-5,debris,N,N,Debris removed within 3 calendar days.,2024-04-20,11,N
+VMC-2024-0074,2024-06-09,in-person,DAN-025-1,notice_question,N,N,Information provided by contact center.,2024-06-11,2,N
+VMC-2024-0075,2024-06-23,web,THT-004-2,other,N,N,Referred to appropriate department.,2024-06-27,4,N
+VMC-2024-0076,2024-12-09,web,CRW-001-4,notice_question,N,N,Information provided by contact center.,2024-12-12,3,N
+VMC-2024-0077,2024-05-10,email,THT-019-5,notice_question,N,N,Information provided by contact center.,2024-05-12,2,N
+VMC-2024-0078,2024-06-03,web,CRW-010-1,notice_question,N,N,Information provided by contact center.,2024-06-04,1,N
+VMC-2024-0079,2024-02-20,phone,THT-007-4,notice_question,N,N,Information provided by contact center.,2024-02-21,1,N
+VMC-2024-0080,2024-03-23,in-person,LAF-022-5,debris,N,N,Debris removed within 3 calendar days.,2024-03-29,6,N
+VMC-2024-0081,2024-10-15,in-person,LAF-002-1,refusal_of_work,N,N,Work rescheduled; consent obtained.,2024-11-14,30,N
+VMC-2024-0082,2024-05-17,in-person,CRW-007-5,customer_request_trim,N,N,Customer trim order added to mid-cycle schedule.,2024-06-07,21,N
+VMC-2024-0083,2024-02-09,email,LAF-019-4,refusal_of_work,N,N,Work rescheduled; consent obtained.,2024-02-23,14,N
+VMC-2024-0084,2024-10-29,letter,LAF-025-2,easement_documentation_request,N,N,Easement copy provided within 5 business days.,2024-11-18,20,N
+VMC-2024-0085,2024-11-05,phone,CRW-007-4,property_damage,Y,N,Claim filed under RPL-CLM-PRO-001.,2024-11-23,18,N
+VMC-2024-0086,2024-09-01,letter,CRW-014-3,other,N,N,Referred to appropriate department.,2024-09-02,1,N
+VMC-2024-0087,2024-10-28,web,THT-003-1,notice_question,N,N,Information provided by contact center.,2024-11-02,5,N
+VMC-2024-0088,2024-01-09,phone,THT-019-2,storm_debris,N,N,Advised: storm debris not an RPL obligation (170 IAC 4-9-7(f)).,2024-02-07,29,N
+VMC-2024-0089,2024-03-14,email,THT-008-1,debris,N,N,Debris removed within 3 calendar days.,2024-03-26,12,N
+VMC-2024-0090,2024-11-25,web,CRW-018-3,notice_question,N,N,Information provided by contact center.,2024-11-27,2,N
+VMC-2024-0091,2024-10-31,web,LAF-028-3,notice_question,N,N,Information provided by contact center.,2024-11-02,2,N
+VMC-2024-0092,2024-01-30,letter,LAF-003-3,tree_health,N,N,ISA arborist assessment completed; customer notified.,2024-02-14,15,N
+VMC-2024-0093,2024-05-18,phone,DAN-021-1,debris,N,N,Debris removed within 3 calendar days.,2024-06-17,30,N
+VMC-2024-0094,2024-12-28,phone,CRW-010-3,storm_debris,N,N,Advised: storm debris not an RPL obligation (170 IAC 4-9-7(f)).,2024-12-31,8,N
+VMC-2024-0095,2024-09-15,letter,THT-002-2,customer_request_trim,N,N,Customer trim order added to mid-cycle schedule.,2024-10-04,19,N
+VMC-2024-0096,2024-02-21,web,LAF-007-2,refusal_of_work,N,N,Work rescheduled; consent obtained.,2024-03-07,15,N
+VMC-2024-0097,2024-02-26,in-person,LAF-021-4,notice_question,N,N,Information provided by contact center.,2024-02-28,2,N
+VMC-2024-0098,2024-01-14,email,THT-007-2,property_damage,Y,N,Claim filed under RPL-CLM-PRO-001.,2024-02-06,23,N
+VMC-2024-0099,2024-07-02,phone,LAF-002-4,notice_question,N,N,Information provided by contact center.,2024-07-03,1,N
+VMC-2024-0100,2024-12-29,letter,LAF-002-4,debris,N,N,Debris removed within 3 calendar days.,2024-12-31,25,N
+VMC-2024-0101,2024-11-22,phone,THT-008-3,debris,N,N,Debris removed within 3 calendar days.,2024-11-24,2,N
+VMC-2024-0102,2024-08-05,web,LAF-026-1,easement_documentation_request,N,N,Easement copy provided within 5 business days.,2024-09-02,28,N
+VMC-2024-0103,2024-08-26,email,THT-013-5,notice_question,N,N,Information provided by contact center.,2024-08-27,1,N
+VMC-2024-0104,2024-09-28,email,LAF-012-6,tree_health,N,N,ISA arborist assessment completed; customer notified.,2024-09-29,1,N
+VMC-2024-0105,2024-11-17,email,CRW-016-4,debris,N,N,Debris removed within 3 calendar days.,2024-12-12,25,N
+VMC-2024-0106,2024-03-01,phone,DAN-016-1,debris,N,N,Debris removed within 3 calendar days.,2024-03-25,24,N
+VMC-2024-0107,2024-11-01,letter,CRW-017-2,notice_question,N,N,Information provided by contact center.,2024-11-03,2,N
+VMC-2024-0108,2024-10-19,phone,DAN-024-6,notice_question,N,N,Information provided by contact center.,2024-10-23,4,N
+VMC-2024-0109,2024-07-12,in-person,THT-007-4,refusal_of_work,Y,N,Work rescheduled; consent obtained.,2024-07-26,14,N
+VMC-2024-0110,2024-10-28,web,LAF-012-1,notice_question,N,N,Information provided by contact center.,2024-10-31,3,N
+VMC-2024-0111,2024-07-12,web,DAN-016-4,other,N,N,Referred to appropriate department.,2024-07-13,1,N
+VMC-2024-0112,2024-12-10,web,DAN-019-3,property_damage,Y,N,Claim filed under RPL-CLM-PRO-001.,2024-12-12,2,N
+VMC-2024-0113,2024-10-13,phone,LAF-038-1,other,N,N,Referred to appropriate department.,2024-10-16,3,N
+VMC-2024-0114,2024-08-24,email,LAF-021-1,storm_debris,N,N,Advised: storm debris not an RPL obligation (170 IAC 4-9-7(f)).,2024-09-18,25,N
+VMC-2024-0115,2024-05-03,in-person,THT-012-3,notice_question,N,N,Information provided by contact center.,2024-05-04,1,N
+VMC-2024-0116,2024-02-07,phone,CRW-013-3,refusal_of_work,N,N,Work rescheduled; consent obtained.,2024-02-13,6,N
+VMC-2024-0117,2024-08-12,email,LAF-001-5,notice_question,N,N,Information provided by contact center.,2024-08-16,4,N
+VMC-2024-0118,2024-02-15,in-person,FRK-003-4,notice_question,N,N,Information provided by contact center.,2024-02-18,3,N
+VMC-2024-0119,2024-05-25,in-person,DAN-016-1,customer_request_trim,N,N,Customer trim order added to mid-cycle schedule.,2024-06-14,20,N
+VMC-2024-0120,2024-07-24,letter,LAF-027-1,property_damage,Y,N,Claim filed under RPL-CLM-PRO-001.,2024-07-29,5,N
+VMC-2024-0121,2024-11-27,letter,FRK-007-4,debris,N,N,Debris removed within 3 calendar days.,2024-12-06,9,N
+VMC-2024-0122,2024-10-02,phone,DAN-017-1,customer_request_trim,N,N,Customer trim order added to mid-cycle schedule.,2024-10-07,5,N
+VMC-2024-0123,2024-11-07,phone,LAF-029-3,tree_health,N,N,ISA arborist assessment completed; customer notified.,2024-12-04,27,N
+VMC-2024-0124,2024-10-06,email,THT-011-5,storm_debris,N,N,Advised: storm debris not an RPL obligation (170 IAC 4-9-7(f)).,2024-11-01,26,N
+VMC-2024-0125,2024-09-11,letter,THT-009-1,debris,N,N,Debris removed within 3 calendar days.,2024-10-05,24,N
+VMC-2024-0126,2024-01-17,phone,DAN-026-1,customer_request_trim,N,N,Customer trim order added to mid-cycle schedule.,2024-01-28,11,N
+VMC-2024-0127,2024-09-24,email,THT-014-4,removal_dispute,N,N,Second-representative review completed; dispute resolved.,2024-09-25,1,N
+VMC-2024-0128,2024-04-18,letter,CRW-017-2,refusal_of_work,Y,N,Work rescheduled; consent obtained.,2024-04-30,12,N
+VMC-2024-0129,2024-10-20,email,LAF-034-5,notice_question,N,N,Information provided by contact center.,2024-10-21,1,N
+VMC-2024-0130,2024-11-24,web,CRW-018-3,easement_documentation_request,N,N,Easement copy provided within 5 business days.,2024-12-19,25,N
+VMC-2024-0131,2024-11-30,phone,CRW-018-6,notice_question,N,N,Information provided by contact center.,2024-12-04,4,N
+VMC-2024-0132,2024-02-22,in-person,THT-007-1,notice_question,N,N,Information provided by contact center.,2024-02-24,2,N
+VMC-2024-0133,2024-11-12,phone,LAF-031-2,customer_request_trim,N,N,Customer trim order added to mid-cycle schedule.,2024-11-25,13,N
+VMC-2024-0134,2024-09-12,letter,THT-005-4,property_damage,N,N,Claim filed under RPL-CLM-PRO-001.,2024-10-04,22,N
+VMC-2024-0135,2024-01-19,web,DAN-024-6,notice_question,N,N,Information provided by contact center.,2024-01-24,5,N
+VMC-2024-0136,2024-06-14,email,LAF-012-1,debris,N,N,Debris removed within 3 calendar days.,2024-07-08,24,N
+VMC-2024-0137,2024-12-30,email,LAF-022-4,customer_request_trim,N,N,Customer trim order added to mid-cycle schedule.,2024-12-31,28,N
+VMC-2024-0138,2024-09-07,letter,THT-018-4,debris,N,N,Debris removed within 3 calendar days.,2024-09-14,7,N
+VMC-2024-0139,2024-01-24,in-person,THT-004-1,refusal_of_work,N,N,Work rescheduled; consent obtained.,2024-02-16,23,N
+VMC-2024-0140,2024-11-16,letter,DAN-014-2,customer_request_trim,N,N,Customer trim order added to mid-cycle schedule.,2024-11-23,7,N
+VMC-2024-0141,2024-10-09,letter,LAF-003-1,storm_debris,N,N,Advised: storm debris not an RPL obligation (170 IAC 4-9-7(f)).,2024-10-11,2,N
+VMC-2024-0142,2024-05-12,letter,DAN-016-1,notice_question,N,N,Information provided by contact center.,2024-05-17,5,N
+VMC-2024-0143,2024-03-09,letter,THT-018-5,tree_health,N,N,ISA arborist assessment completed; customer notified.,2024-03-27,18,N
+VMC-2024-0144,2024-10-21,phone,CRW-005-3,tree_health,N,N,ISA arborist assessment completed; customer notified.,2024-10-24,3,N
+VMC-2024-0145,2024-09-28,in-person,LAF-013-2,property_damage,Y,N,Claim filed under RPL-CLM-PRO-001.,2024-10-10,12,N
+VMC-2024-0146,2024-05-03,phone,LAF-014-2,notice_question,N,N,Information provided by contact center.,2024-05-08,5,N
+VMC-2024-0147,2024-08-07,email,CRW-012-5,debris,N,N,Debris removed within 3 calendar days.,2024-08-31,24,N
+VMC-2024-0148,2024-03-14,letter,LAF-016-3,tree_health,N,N,ISA arborist assessment completed; customer notified.,2024-04-01,18,N
+VMC-2024-0149,2024-11-24,letter,FRK-004-3,debris,N,N,Debris removed within 3 calendar days.,2024-12-16,22,N
+VMC-2024-0150,2024-07-11,email,LAF-018-2,storm_debris,N,N,Advised: storm debris not an RPL obligation (170 IAC 4-9-7(f)).,2024-07-14,3,N
+VMC-2024-0151,2024-08-24,in-person,CRW-012-1,easement_documentation_request,N,N,Easement copy provided within 5 business days.,2024-08-30,6,N
+VMC-2024-0152,2024-04-03,in-person,LAF-034-5,notice_question,N,N,Information provided by contact center.,2024-04-04,1,N
+VMC-2024-0153,2024-10-28,web,DAN-013-1,tree_health,N,N,ISA arborist assessment completed; customer notified.,2024-11-26,29,N
+VMC-2024-0154,2024-03-20,letter,LAF-009-3,debris,N,N,Debris removed within 3 calendar days.,2024-04-10,21,N
+VMC-2024-0155,2024-02-20,email,LAF-038-5,storm_debris,N,N,Advised: storm debris not an RPL obligation (170 IAC 4-9-7(f)).,2024-03-14,23,N
+VMC-2024-0156,2024-05-14,phone,DAN-015-2,removal_dispute,Y,N,Second-representative review completed; dispute resolved.,2024-05-15,1,N
+VMC-2024-0157,2024-10-03,email,LAF-024-3,customer_request_trim,N,N,Customer trim order added to mid-cycle schedule.,2024-10-31,28,N
+VMC-2024-0158,2024-08-14,letter,CRW-003-1,customer_request_trim,N,N,Customer trim order added to mid-cycle schedule.,2024-09-03,20,N
+VMC-2024-0159,2024-08-06,in-person,LAF-003-2,debris,N,N,Debris removed within 3 calendar days.,2024-08-11,5,N
+VMC-2024-0160,2024-04-03,in-person,THT-017-1,debris,N,N,Debris removed within 3 calendar days.,2024-05-01,28,N
+VMC-2024-0161,2024-10-26,phone,DAN-002-2,property_damage,N,N,Claim filed under RPL-CLM-PRO-001.,2024-10-29,3,N
+VMC-2024-0162,2024-09-03,letter,LAF-037-2,storm_debris,N,N,Advised: storm debris not an RPL obligation (170 IAC 4-9-7(f)).,2024-09-18,15,N
+VMC-2024-0163,2024-11-11,letter,DAN-003-2,refusal_of_work,N,N,Work rescheduled; consent obtained.,2024-11-29,18,N
+VMC-2024-0164,2024-11-26,letter,THT-008-2,notice_question,N,N,Information provided by contact center.,2024-11-27,1,N
+VMC-2024-0165,2024-09-30,in-person,LAF-034-1,notice_question,N,N,Information provided by contact center.,2024-10-02,2,N
+VMC-2024-0166,2024-06-11,phone,CRW-017-1,easement_documentation_request,N,N,Easement copy provided within 5 business days.,2024-06-14,3,N
+VMC-2024-0167,2024-06-30,letter,LAF-036-5,notice_question,N,N,Information provided by contact center.,2024-07-02,2,N
+VMC-2024-0168,2024-09-03,letter,CRW-002-1,notice_question,N,N,Information provided by contact center.,2024-09-04,1,N
+VMC-2024-0169,2024-08-20,in-person,THT-010-3,notice_question,N,N,Information provided by contact center.,2024-08-24,4,N
+VMC-2024-0170,2024-09-13,email,LAF-026-1,debris,N,N,Debris removed within 3 calendar days.,2024-09-14,1,N
+VMC-2024-0171,2024-12-20,web,FRK-006-5,refusal_of_work,N,N,Work rescheduled; consent obtained.,2024-12-26,6,N
+VMC-2024-0172,2024-07-09,in-person,DAN-024-6,removal_dispute,Y,N,Second-representative review completed; dispute resolved.,2024-07-24,15,N
+VMC-2024-0173,2024-06-10,letter,LAF-012-1,notice_question,N,N,Information provided by contact center.,2024-06-15,5,N
+VMC-2024-0174,2024-09-06,in-person,LAF-031-4,debris,N,N,Debris removed within 3 calendar days.,2024-09-25,19,N
+VMC-2024-0175,2024-10-22,in-person,THT-009-2,notice_question,N,N,Information provided by contact center.,2024-10-24,2,N
+VMC-2024-0176,2024-09-27,letter,THT-007-1,easement_documentation_request,N,N,Easement copy provided within 5 business days.,2024-10-25,28,N
+VMC-2024-0177,2024-02-03,web,LAF-039-3,notice_question,N,N,Information provided by contact center.,2024-02-05,2,N
+VMC-2024-0178,2024-10-07,web,LAF-006-2,notice_question,N,N,Information provided by contact center.,2024-10-08,1,N
+VMC-2024-0179,2024-05-28,phone,CRW-015-3,debris,N,N,Debris removed within 3 calendar days.,2024-06-21,24,N
+VMC-2024-0180,2024-06-25,web,LAF-023-2,customer_request_trim,N,N,Customer trim order added to mid-cycle schedule.,2024-07-19,24,N
+VMC-2024-0181,2024-03-25,web,DAN-014-2,notice_question,N,N,Information provided by contact center.,2024-03-27,2,N
+VMC-2024-0182,2024-12-03,in-person,LAF-039-6,property_damage,Y,N,Claim filed under RPL-CLM-PRO-001.,2024-12-11,8,N
+VMC-2024-0183,2024-05-06,in-person,DAN-016-4,tree_health,N,N,ISA arborist assessment completed; customer notified.,2024-05-15,9,N
+VMC-2024-0184,2024-09-09,in-person,THT-019-4,customer_request_trim,N,N,Customer trim order added to mid-cycle schedule.,2024-09-24,15,N
+VMC-2024-0185,2024-11-14,phone,DAN-025-3,debris,N,N,Debris removed within 3 calendar days.,2024-11-16,2,N
+VMC-2024-0186,2024-11-25,letter,LAF-024-3,notice_question,N,N,Information provided by contact center.,2024-11-28,3,N
+VMC-2024-0187,2024-05-10,in-person,FRK-002-2,property_damage,N,N,Claim filed under RPL-CLM-PRO-001.,2024-05-22,12,N
+VMC-2024-0188,2024-11-23,in-person,DAN-018-4,refusal_of_work,Y,N,Work rescheduled; consent obtained.,2024-12-13,20,N
+VMC-2024-0189,2024-08-30,phone,CRW-012-4,notice_question,N,N,Information provided by contact center.,2024-09-02,3,N
+VMC-2024-0190,2024-11-30,web,LAF-016-3,refusal_of_work,Y,N,Work rescheduled; consent obtained.,2024-12-17,17,N
+VMC-2024-0191,2024-07-23,phone,LAF-030-1,tree_health,N,N,ISA arborist assessment completed; customer notified.,2024-08-01,9,N
+VMC-2024-0192,2024-06-21,in-person,LAF-009-4,notice_question,N,N,Information provided by contact center.,2024-06-23,2,N
+VMC-2024-0193,2024-06-20,email,THT-003-4,removal_dispute,N,N,Second-representative review completed; dispute resolved.,2024-06-30,10,N
+VMC-2024-0194,2024-04-18,letter,DAN-006-4,storm_debris,N,N,Advised: storm debris not an RPL obligation (170 IAC 4-9-7(f)).,2024-05-12,24,N
+VMC-2024-0195,2024-08-02,web,LAF-010-3,debris,N,N,Debris removed within 3 calendar days.,2024-08-14,12,N
+VMC-2024-0196,2024-01-19,email,THT-005-3,easement_documentation_request,N,N,Easement copy provided within 5 business days.,2024-02-04,16,N
+VMC-2024-0197,2024-08-27,web,DAN-025-3,debris,N,N,Debris removed within 3 calendar days.,2024-09-11,15,N
+VMC-2024-0198,2024-09-27,web,LAF-020-1,storm_debris,N,N,Advised: storm debris not an RPL obligation (170 IAC 4-9-7(f)).,2024-10-05,8,N
+VMC-2024-0199,2024-09-08,web,CRW-004-1,property_damage,N,N,Claim filed under RPL-CLM-PRO-001.,2024-09-15,7,N
+VMC-2024-0200,2024-08-24,web,CRW-005-4,notice_question,N,N,Information provided by contact center.,2024-08-25,1,N
+VMC-2024-0201,2024-12-06,phone,THT-016-1,debris,N,N,Debris removed within 3 calendar days.,2024-12-31,25,N
+VMC-2024-0202,2024-08-15,in-person,CRW-004-2,debris,N,N,Debris removed within 3 calendar days.,2024-09-05,21,N
+VMC-2024-0203,2024-01-26,letter,DAN-010-6,debris,N,N,Debris removed within 3 calendar days.,2024-02-22,27,N
+VMC-2024-0204,2024-11-22,web,DAN-020-1,debris,N,N,Debris removed within 3 calendar days.,2024-12-21,29,N
+VMC-2024-0205,2024-07-29,letter,DAN-023-1,customer_request_trim,N,N,Customer trim order added to mid-cycle schedule.,2024-08-04,6,N
+VMC-2024-0206,2024-07-07,in-person,LAF-034-4,removal_dispute,N,N,Second-representative review completed; dispute resolved.,2024-07-24,17,N
+VMC-2024-0207,2024-08-31,web,LAF-008-1,notice_question,N,N,Information provided by contact center.,2024-09-05,5,N
+VMC-2024-0208,2024-04-15,phone,CRW-007-6,notice_question,N,N,Information provided by contact center.,2024-04-18,3,N
+VMC-2024-0209,2024-09-17,phone,THT-007-5,refusal_of_work,N,N,Work rescheduled; consent obtained.,2024-09-24,7,N
+VMC-2024-0210,2024-12-05,web,LAF-018-4,debris,N,N,Debris removed within 3 calendar days.,2024-12-19,14,N
+VMC-2024-0211,2024-04-25,phone,LAF-039-4,customer_request_trim,N,N,Customer trim order added to mid-cycle schedule.,2024-05-22,27,N
+VMC-2024-0212,2024-08-28,web,THT-019-1,notice_question,N,N,Information provided by contact center.,2024-09-02,5,N
+VMC-2024-0213,2024-04-02,web,THT-001-2,notice_question,N,N,Information provided by contact center.,2024-04-06,4,N
+VMC-2024-0214,2024-04-01,phone,DAN-015-4,tree_health,N,N,ISA arborist assessment completed; customer notified.,2024-04-10,9,N
+VMC-2024-0215,2024-02-23,web,THT-007-1,customer_request_trim,N,N,Customer trim order added to mid-cycle schedule.,2024-02-24,1,N
+VMC-2024-0216,2024-01-16,phone,THT-017-5,tree_health,N,N,ISA arborist assessment completed; customer notified.,2024-01-17,1,N
+VMC-2024-0217,2024-04-26,web,LAF-004-4,notice_question,N,N,Information provided by contact center.,2024-05-01,5,N
+VMC-2024-0218,2024-01-24,web,LAF-030-4,tree_health,N,N,ISA arborist assessment completed; customer notified.,2024-02-19,26,N
+VMC-2024-0219,2024-06-23,web,LAF-021-4,customer_request_trim,N,N,Customer trim order added to mid-cycle schedule.,2024-07-11,18,N
+VMC-2024-0220,2024-05-25,email,LAF-031-6,tree_health,N,N,ISA arborist assessment completed; customer notified.,2024-06-08,14,N
+VMC-2024-0221,2024-10-12,letter,FRK-004-4,easement_documentation_request,N,N,Easement copy provided within 5 business days.,2024-10-25,13,N
+VMC-2024-0222,2024-02-13,phone,CRW-010-2,customer_request_trim,N,N,Customer trim order added to mid-cycle schedule.,2024-02-25,12,N
+VMC-2024-0223,2024-09-16,in-person,LAF-021-3,easement_documentation_request,N,N,Easement copy provided within 5 business days.,2024-10-08,22,N
+VMC-2024-0224,2024-09-03,web,THT-021-4,other,N,N,Referred to appropriate department.,2024-09-04,1,N
+VMC-2024-0225,2024-04-20,phone,THT-013-3,notice_question,N,N,Information provided by contact center.,2024-04-22,2,N
+VMC-2024-0226,2024-06-29,email,DAN-024-5,refusal_of_work,Y,N,Work rescheduled; consent obtained.,2024-07-27,28,N
+VMC-2024-0227,2024-11-27,email,DAN-001-5,tree_health,N,N,ISA arborist assessment completed; customer notified.,2024-12-15,18,N
+VMC-2024-0228,2024-01-26,web,LAF-026-1,property_damage,Y,N,Claim filed under RPL-CLM-PRO-001.,2024-02-18,23,N
+VMC-2024-0229,2024-01-10,phone,LAF-027-3,easement_documentation_request,N,N,Easement copy provided within 5 business days.,2024-01-28,18,N
+VMC-2024-0230,2024-06-11,phone,FRK-003-3,debris,N,N,Debris removed within 3 calendar days.,2024-07-10,29,N
+VMC-2024-0231,2024-05-17,phone,THT-004-4,customer_request_trim,N,N,Customer trim order added to mid-cycle schedule.,2024-06-14,28,N
+VMC-2024-0232,2024-05-03,web,CRW-004-4,removal_dispute,N,N,Second-representative review completed; dispute resolved.,2024-05-07,4,N
+VMC-2024-0233,2024-03-14,in-person,THT-008-1,debris,N,N,Debris removed within 3 calendar days.,2024-04-05,22,N
+VMC-2024-0234,2024-08-11,phone,DAN-010-5,property_damage,N,N,Claim filed under RPL-CLM-PRO-001.,2024-08-17,6,N
+VMC-2024-0235,2024-12-16,email,DAN-007-3,customer_request_trim,N,N,Customer trim order added to mid-cycle schedule.,2024-12-31,18,N
+VMC-2024-0236,2024-10-17,in-person,CRW-013-2,notice_question,N,N,Information provided by contact center.,2024-10-22,5,N
+VMC-2024-0237,2024-11-18,letter,CRW-005-2,debris,N,N,Debris removed within 3 calendar days.,2024-12-16,28,N
+VMC-2024-0238,2024-10-26,web,LAF-020-4,refusal_of_work,N,N,Work rescheduled; consent obtained.,2024-11-08,13,N
+VMC-2024-0239,2024-11-11,letter,DAN-009-3,removal_dispute,N,N,Second-representative review completed; dispute resolved.,2024-12-11,30,N
+VMC-2024-0240,2024-03-29,web,CRW-004-4,removal_dispute,N,N,Second-representative review completed; dispute resolved.,2024-04-16,18,N
+VMC-2024-0241,2024-01-20,phone,DAN-007-1,notice_question,N,N,Information provided by contact center.,2024-01-21,1,N
+VMC-2024-0242,2024-12-29,web,FRK-001-3,debris,N,N,Debris removed within 3 calendar days.,2024-12-31,25,N
+VMC-2024-0243,2024-12-27,web,LAF-002-4,property_damage,N,N,Claim filed under RPL-CLM-PRO-001.,2024-12-29,2,N
+VMC-2024-0244,2024-02-20,letter,DAN-021-4,removal_dispute,Y,N,Second-representative review completed; dispute resolved.,2024-02-24,4,N
+VMC-2024-0245,2024-01-20,phone,DAN-004-3,debris,N,N,Debris removed within 3 calendar days.,2024-01-24,4,N
+VMC-2024-0246,2024-05-31,web,FRK-003-1,tree_health,N,N,ISA arborist assessment completed; customer notified.,2024-06-29,29,N
+VMC-2024-0247,2024-07-28,email,LAF-022-5,customer_request_trim,N,N,Customer trim order added to mid-cycle schedule.,2024-07-31,3,N
+VMC-2024-0248,2024-01-29,in-person,LAF-003-4,debris,N,N,Debris removed within 3 calendar days.,2024-02-01,3,N
+VMC-2024-0249,2024-12-14,web,DAN-011-2,notice_question,N,N,Information provided by contact center.,2024-12-19,5,N
+VMC-2024-0250,2024-08-04,email,DAN-009-4,customer_request_trim,N,N,Customer trim order added to mid-cycle schedule.,2024-08-30,26,N
+VMC-2024-0251,2024-09-25,web,DAN-012-4,notice_question,N,N,Information provided by contact center.,2024-09-30,5,N
+VMC-2024-0252,2024-12-28,email,DAN-024-1,debris,N,N,Debris removed within 3 calendar days.,2024-12-31,3,N
+VMC-2024-0253,2024-11-13,email,THT-021-1,notice_question,N,N,Information provided by contact center.,2024-11-15,2,N
+VMC-2024-0254,2024-09-17,email,DAN-018-2,notice_question,N,N,Information provided by contact center.,2024-09-21,4,N
+VMC-2024-0255,2024-04-23,web,LAF-023-1,notice_question,N,N,Information provided by contact center.,2024-04-25,2,N
+VMC-2024-0256,2024-01-22,web,THT-001-4,removal_dispute,N,N,Second-representative review completed; dispute resolved.,2024-01-27,5,N
+VMC-2024-0257,2024-03-12,email,DAN-002-6,easement_documentation_request,N,N,Easement copy provided within 5 business days.,2024-04-09,28,N
+VMC-2024-0258,2024-01-25,letter,FRK-004-2,storm_debris,N,N,Advised: storm debris not an RPL obligation (170 IAC 4-9-7(f)).,2024-02-10,16,N
+VMC-2024-0259,2024-09-05,in-person,LAF-029-4,debris,N,N,Debris removed within 3 calendar days.,2024-09-17,12,N
+VMC-2024-0260,2024-05-10,email,LAF-032-4,debris,N,N,Debris removed within 3 calendar days.,2024-05-16,6,N
+VMC-2024-0261,2024-04-20,in-person,LAF-018-4,debris,N,N,Debris removed within 3 calendar days.,2024-05-07,17,N
+VMC-2024-0262,2024-11-07,in-person,LAF-009-2,debris,N,N,Debris removed within 3 calendar days.,2024-11-24,17,N
+VMC-2024-0263,2024-09-17,phone,DAN-024-5,notice_question,N,N,Information provided by contact center.,2024-09-22,5,N
+VMC-2024-0264,2024-06-14,web,THT-005-5,storm_debris,N,N,Advised: storm debris not an RPL obligation (170 IAC 4-9-7(f)).,2024-07-01,17,N
+VMC-2024-0265,2024-09-04,phone,THT-002-5,notice_question,N,N,Information provided by contact center.,2024-09-07,3,N
+VMC-2024-0266,2024-10-14,email,DAN-005-1,easement_documentation_request,N,N,Easement copy provided within 5 business days.,2024-10-24,10,N
+VMC-2024-0267,2024-06-08,phone,LAF-013-3,debris,N,N,Debris removed within 3 calendar days.,2024-06-18,10,N
+VMC-2024-0268,2024-11-08,letter,THT-014-5,customer_request_trim,N,N,Customer trim order added to mid-cycle schedule.,2024-11-23,15,N
+VMC-2024-0269,2024-01-24,email,THT-005-4,notice_question,N,N,Information provided by contact center.,2024-01-27,3,N
+VMC-2024-0270,2024-06-16,in-person,DAN-006-3,removal_dispute,N,N,Second-representative review completed; dispute resolved.,2024-06-22,6,N
+VMC-2024-0271,2024-07-25,phone,CRW-018-4,debris,N,N,Debris removed within 3 calendar days.,2024-08-17,23,N
+VMC-2024-0272,2024-02-05,letter,DAN-005-3,easement_documentation_request,N,N,Easement copy provided within 5 business days.,2024-02-22,17,N
+VMC-2024-0273,2024-05-27,web,LAF-017-4,notice_question,N,N,Information provided by contact center.,2024-05-29,2,N
+VMC-2024-0274,2024-02-04,letter,DAN-001-1,tree_health,N,N,ISA arborist assessment completed; customer notified.,2024-03-02,27,N
+VMC-2024-0275,2024-03-30,phone,THT-004-3,property_damage,Y,N,Claim filed under RPL-CLM-PRO-001.,2024-04-02,3,N
+VMC-2024-0276,2024-02-23,letter,LAF-022-5,notice_question,N,N,Information provided by contact center.,2024-02-26,3,N
+VMC-2024-0277,2024-07-27,in-person,CRW-001-1,removal_dispute,N,N,Second-representative review completed; dispute resolved.,2024-07-29,2,N
+VMC-2024-0278,2024-10-22,phone,LAF-006-1,easement_documentation_request,N,N,Easement copy provided within 5 business days.,2024-11-16,25,N
+VMC-2024-0279,2024-04-07,in-person,DAN-013-5,other,N,N,Referred to appropriate department.,2024-04-10,3,N
+VMC-2024-0280,2024-01-03,email,LAF-027-2,refusal_of_work,N,N,Work rescheduled; consent obtained.,2024-01-25,22,N
+VMC-2024-0281,2024-10-19,in-person,LAF-004-5,notice_question,N,N,Information provided by contact center.,2024-10-24,5,N
+VMC-2024-0282,2024-01-10,in-person,THT-012-2,property_damage,N,N,Claim filed under RPL-CLM-PRO-001.,2024-01-31,21,N
+VMC-2024-0283,2024-01-30,email,LAF-025-3,easement_documentation_request,N,N,Easement copy provided within 5 business days.,2024-02-21,22,N
+VMC-2024-0284,2024-06-04,in-person,LAF-014-4,removal_dispute,N,N,Second-representative review completed; dispute resolved.,2024-06-26,22,N
+VMC-2024-0285,2024-07-23,in-person,LAF-006-4,storm_debris,N,N,Advised: storm debris not an RPL obligation (170 IAC 4-9-7(f)).,2024-07-28,5,N
+VMC-2024-0286,2024-02-18,letter,CRW-005-3,debris,N,N,Debris removed within 3 calendar days.,2024-03-18,29,N
+VMC-2024-0287,2024-07-31,phone,THT-012-3,notice_question,N,N,Information provided by contact center.,2024-08-01,1,N
+VMC-2024-0288,2024-01-02,web,LAF-036-1,notice_question,N,N,Information provided by contact center.,2024-01-05,3,N
+VMC-2024-0289,2024-06-29,phone,CRW-007-6,debris,N,N,Debris removed within 3 calendar days.,2024-07-11,12,N
+VMC-2024-0290,2024-07-26,web,DAN-007-5,customer_request_trim,N,N,Customer trim order added to mid-cycle schedule.,2024-08-07,12,N
+VMC-2024-0291,2024-06-16,web,DAN-012-4,notice_question,N,N,Information provided by contact center.,2024-06-18,2,N
+VMC-2024-0292,2024-03-09,phone,LAF-004-5,notice_question,N,N,Information provided by contact center.,2024-03-14,5,N
+VMC-2024-0293,2024-05-23,web,THT-007-5,debris,N,N,Debris removed within 3 calendar days.,2024-06-07,15,N
+VMC-2024-0294,2024-05-31,email,CRW-001-1,notice_question,N,N,Information provided by contact center.,2024-06-05,5,N
+VMC-2024-0295,2024-07-28,phone,DAN-020-1,notice_question,N,N,Information provided by contact center.,2024-07-31,3,N
+VMC-2024-0296,2024-10-05,phone,CRW-015-4,tree_health,N,N,ISA arborist assessment completed; customer notified.,2024-10-30,25,N
+VMC-2024-0297,2024-12-29,web,LAF-036-1,notice_question,N,N,Information provided by contact center.,2024-12-31,4,N
+VMC-2024-0298,2024-12-27,phone,THT-018-4,notice_question,N,N,Information provided by contact center.,2024-12-30,3,N
+VMC-2024-0299,2024-03-18,phone,LAF-029-5,customer_request_trim,N,N,Customer trim order added to mid-cycle schedule.,2024-03-23,5,N
+VMC-2024-0300,2024-06-24,phone,LAF-039-5,debris,N,N,Debris removed within 3 calendar days.,2024-06-29,5,N
+VMC-2024-0301,2024-06-24,in-person,DAN-022-4,customer_request_trim,N,N,Customer trim order added to mid-cycle schedule.,2024-07-15,21,N
+VMC-2024-0302,2024-01-30,web,LAF-009-4,notice_question,N,N,Information provided by contact center.,2024-02-01,2,N
+VMC-2024-0303,2024-11-25,web,DAN-009-2,property_damage,Y,N,Claim filed under RPL-CLM-PRO-001.,2024-12-02,7,N
+VMC-2024-0304,2024-06-23,web,LAF-016-1,storm_debris,N,N,Advised: storm debris not an RPL obligation (170 IAC 4-9-7(f)).,2024-07-05,12,N
+VMC-2024-0305,2024-02-13,web,DAN-011-2,notice_question,N,N,Information provided by contact center.,2024-02-17,4,N
+VMC-2024-0306,2024-07-24,phone,DAN-005-5,notice_question,N,N,Information provided by contact center.,2024-07-26,2,N
+VMC-2024-0307,2024-03-28,web,DAN-011-2,removal_dispute,Y,N,Second-representative review completed; dispute resolved.,2024-03-29,1,N
+VMC-2024-0308,2024-04-03,web,DAN-011-2,property_damage,N,N,Claim filed under RPL-CLM-PRO-001.,2024-04-20,17,N
+VMC-2024-0309,2024-11-30,phone,LAF-030-4,storm_debris,N,N,Advised: storm debris not an RPL obligation (170 IAC 4-9-7(f)).,2024-12-19,19,N
+VMC-2024-0310,2024-11-18,in-person,FRK-003-2,customer_request_trim,N,N,Customer trim order added to mid-cycle schedule.,2024-12-04,16,N
+VMC-2024-0311,2024-06-21,email,DAN-010-2,other,N,N,Referred to appropriate department.,2024-06-25,4,N
+VMC-2024-0312,2024-10-14,in-person,LAF-039-1,notice_question,N,N,Information provided by contact center.,2024-10-17,3,N
+VMC-2024-0313,2024-01-10,phone,THT-008-3,tree_health,N,N,ISA arborist assessment completed; customer notified.,2024-01-31,21,N
+VMC-2024-0314,2024-09-23,in-person,THT-011-5,debris,N,N,Debris removed within 3 calendar days.,2024-10-04,11,N
+VMC-2024-0315,2024-07-15,web,CRW-001-2,storm_debris,N,N,Advised: storm debris not an RPL obligation (170 IAC 4-9-7(f)).,2024-08-08,24,N
+VMC-2024-0316,2024-04-14,web,THT-015-1,refusal_of_work,N,N,Work rescheduled; consent obtained.,2024-05-11,27,N
+VMC-2024-0317,2024-07-24,email,DAN-002-4,debris,N,N,Debris removed within 3 calendar days.,2024-08-23,30,N
+VMC-2024-0318,2024-02-09,phone,LAF-020-2,removal_dispute,Y,N,Second-representative review completed; dispute resolved.,2024-02-13,4,N
+VMC-2024-0319,2024-02-16,phone,LAF-037-2,storm_debris,N,N,Advised: storm debris not an RPL obligation (170 IAC 4-9-7(f)).,2024-02-26,10,N
+VMC-2024-0320,2024-09-02,letter,LAF-039-4,notice_question,N,N,Information provided by contact center.,2024-09-06,4,N
+VMC-2024-0321,2024-11-01,web,LAF-011-4,notice_question,N,N,Information provided by contact center.,2024-11-05,4,N
+VMC-2024-0322,2024-12-26,email,THT-013-5,customer_request_trim,N,N,Customer trim order added to mid-cycle schedule.,2024-12-31,23,N
+VMC-2024-0323,2024-04-29,email,LAF-034-4,notice_question,N,N,Information provided by contact center.,2024-05-02,3,N
+VMC-2024-0324,2024-06-14,phone,CRW-017-3,debris,N,N,Debris removed within 3 calendar days.,2024-07-11,27,N
+VMC-2024-0325,2024-10-09,letter,DAN-024-4,notice_question,N,N,Information provided by contact center.,2024-10-12,3,N
+VMC-2024-0326,2024-05-25,phone,CRW-012-2,easement_documentation_request,N,N,Easement copy provided within 5 business days.,2024-06-04,10,N
+VMC-2024-0327,2024-07-02,in-person,THT-006-2,notice_question,N,N,Information provided by contact center.,2024-07-04,2,N
+VMC-2024-0328,2024-02-10,letter,DAN-019-5,notice_question,N,N,Information provided by contact center.,2024-02-11,1,N
+VMC-2024-0329,2024-04-26,email,DAN-020-3,tree_health,N,N,ISA arborist assessment completed; customer notified.,2024-05-18,22,N
+VMC-2024-0330,2024-10-20,in-person,LAF-034-1,debris,N,N,Debris removed within 3 calendar days.,2024-10-22,2,N
+VMC-2024-0331,2024-07-24,in-person,FRK-004-3,debris,N,N,Debris removed within 3 calendar days.,2024-08-13,20,N
+VMC-2024-0332,2024-03-07,letter,DAN-001-1,debris,N,N,Debris removed within 3 calendar days.,2024-04-02,26,N
+VMC-2024-0333,2024-12-08,letter,LAF-033-5,customer_request_trim,N,N,Customer trim order added to mid-cycle schedule.,2024-12-12,4,N
+VMC-2024-0334,2024-02-03,letter,THT-006-4,storm_debris,N,N,Advised: storm debris not an RPL obligation (170 IAC 4-9-7(f)).,2024-02-28,25,N
+VMC-2024-0335,2024-09-25,web,LAF-039-3,easement_documentation_request,N,N,Easement copy provided within 5 business days.,2024-09-28,3,N
+VMC-2024-0336,2024-07-31,email,DAN-025-1,debris,N,N,Debris removed within 3 calendar days.,2024-08-07,7,N
+VMC-2024-0337,2024-03-09,phone,DAN-009-3,tree_health,N,N,ISA arborist assessment completed; customer notified.,2024-04-06,28,N
+VMC-2024-0338,2024-05-18,email,CRW-016-4,removal_dispute,Y,N,Second-representative review completed; dispute resolved.,2024-06-03,16,N
+VMC-2024-0339,2024-01-16,phone,CRW-018-6,notice_question,N,N,Information provided by contact center.,2024-01-18,2,N
+VMC-2024-0340,2024-06-18,letter,LAF-034-4,other,N,N,Referred to appropriate department.,2024-06-19,1,N
+VMC-2024-0341,2024-08-14,letter,THT-017-1,debris,N,N,Debris removed within 3 calendar days.,2024-08-16,2,N
+VMC-2024-0342,2024-12-07,web,THT-009-3,debris,N,N,Debris removed within 3 calendar days.,2024-12-15,8,N
+VMC-2024-0343,2024-06-20,in-person,LAF-005-4,tree_health,N,N,ISA arborist assessment completed; customer notified.,2024-07-08,18,N
+VMC-2024-0344,2024-03-26,phone,DAN-002-2,customer_request_trim,N,N,Customer trim order added to mid-cycle schedule.,2024-04-13,18,N
+VMC-2024-0345,2024-04-19,letter,DAN-019-3,notice_question,N,N,Information provided by contact center.,2024-04-20,1,N
+VMC-2024-0346,2024-07-25,letter,LAF-011-2,notice_question,N,N,Information provided by contact center.,2024-07-28,3,N
+VMC-2024-0347,2024-03-06,in-person,CRW-015-3,notice_question,N,N,Information provided by contact center.,2024-03-08,2,N
+VMC-2024-0348,2024-10-11,phone,LAF-032-5,debris,N,N,Debris removed within 3 calendar days.,2024-11-09,29,N
+VMC-2024-0349,2024-01-20,phone,THT-008-5,customer_request_trim,N,N,Customer trim order added to mid-cycle schedule.,2024-02-16,27,N
+VMC-2024-0350,2024-03-17,web,DAN-003-3,tree_health,N,N,ISA arborist assessment completed; customer notified.,2024-03-30,13,N
+VMC-2024-0351,2024-09-22,in-person,THT-022-1,notice_question,N,N,Information provided by contact center.,2024-09-27,5,N
+VMC-2024-0352,2024-01-18,in-person,DAN-023-3,debris,N,N,Debris removed within 3 calendar days.,2024-01-27,9,N
+VMC-2024-0353,2024-05-07,letter,LAF-026-2,debris,N,N,Debris removed within 3 calendar days.,2024-05-11,4,N
+VMC-2024-0354,2024-02-02,web,FRK-001-1,debris,N,N,Debris removed within 3 calendar days.,2024-03-02,29,N
+VMC-2024-0355,2024-08-23,in-person,DAN-016-2,notice_question,N,N,Information provided by contact center.,2024-08-25,2,N
+VMC-2024-0356,2024-06-23,email,THT-020-5,notice_question,N,N,Information provided by contact center.,2024-06-25,2,N
+VMC-2024-0357,2024-06-04,email,DAN-025-1,debris,N,N,Debris removed within 3 calendar days.,2024-06-11,7,N
+VMC-2024-0358,2024-09-11,web,LAF-026-3,notice_question,N,N,Information provided by contact center.,2024-09-16,5,N
+VMC-2024-0359,2024-09-07,email,LAF-010-3,debris,N,N,Debris removed within 3 calendar days.,2024-09-17,10,N
+VMC-2024-0360,2024-10-16,phone,THT-008-4,notice_question,N,N,Information provided by contact center.,2024-10-17,1,N
+VMC-2024-0361,2024-04-21,web,DAN-007-2,tree_health,N,N,ISA arborist assessment completed; customer notified.,2024-04-26,5,N
+VMC-2024-0362,2024-05-09,phone,LAF-031-2,notice_question,N,N,Information provided by contact center.,2024-05-11,2,N
+VMC-2024-0363,2024-12-22,web,DAN-008-1,debris,N,N,Debris removed within 3 calendar days.,2024-12-31,28,N
+VMC-2024-0364,2024-08-13,in-person,DAN-015-2,notice_question,N,N,Information provided by contact center.,2024-08-18,5,N
+VMC-2024-0365,2024-01-10,web,LAF-013-1,easement_documentation_request,N,N,Easement copy provided within 5 business days.,2024-01-26,16,N
+VMC-2024-0366,2024-12-13,phone,FRK-005-2,notice_question,N,N,Information provided by contact center.,2024-12-14,1,N
+VMC-2024-0367,2024-07-08,in-person,CRW-007-3,tree_health,N,N,ISA arborist assessment completed; customer notified.,2024-07-28,20,N
+VMC-2024-0368,2024-03-31,letter,LAF-038-2,other,N,N,Referred to appropriate department.,2024-04-02,2,N
+VMC-2024-0369,2024-12-13,web,DAN-014-1,customer_request_trim,N,N,Customer trim order added to mid-cycle schedule.,2024-12-31,28,N
+VMC-2024-0370,2024-09-03,web,CRW-007-2,notice_question,N,N,Information provided by contact center.,2024-09-08,5,N
+VMC-2024-0371,2024-09-19,letter,CRW-015-2,easement_documentation_request,N,N,Easement copy provided within 5 business days.,2024-10-13,24,N
+VMC-2024-0372,2024-05-24,phone,LAF-016-2,property_damage,Y,N,Claim filed under RPL-CLM-PRO-001.,2024-06-22,29,N
+VMC-2024-0373,2024-04-09,in-person,CRW-011-2,notice_question,N,N,Information provided by contact center.,2024-04-14,5,N
+VMC-2024-0374,2024-04-18,letter,LAF-021-4,debris,N,N,Debris removed within 3 calendar days.,2024-05-01,13,N
+VMC-2024-0375,2024-11-22,in-person,DAN-004-1,refusal_of_work,Y,N,Work rescheduled; consent obtained.,2024-12-16,24,N
+VMC-2024-0376,2024-09-07,email,LAF-017-1,notice_question,N,N,Information provided by contact center.,2024-09-10,3,N
+VMC-2024-0377,2024-12-05,phone,DAN-001-7,customer_request_trim,N,N,Customer trim order added to mid-cycle schedule.,2024-12-28,23,N
+VMC-2024-0378,2024-07-05,in-person,CRW-017-2,notice_question,N,N,Information provided by contact center.,2024-07-08,3,N
+VMC-2024-0379,2024-01-21,phone,DAN-015-3,notice_question,N,N,Information provided by contact center.,2024-01-26,5,N
+VMC-2024-0380,2024-08-29,letter,DAN-007-4,customer_request_trim,N,N,Customer trim order added to mid-cycle schedule.,2024-09-19,21,N
+VMC-2024-0381,2024-04-06,letter,THT-007-6,customer_request_trim,N,N,Customer trim order added to mid-cycle schedule.,2024-04-07,1,N
+VMC-2024-0382,2024-04-06,letter,CRW-007-3,refusal_of_work,N,N,Work rescheduled; consent obtained.,2024-04-11,5,N
+VMC-2024-0383,2024-01-21,web,CRW-008-3,debris,N,N,Debris removed within 3 calendar days.,2024-02-12,22,N
+VMC-2024-0384,2024-06-17,letter,CRW-017-4,customer_request_trim,N,N,Customer trim order added to mid-cycle schedule.,2024-07-13,26,N
+VMC-2024-0385,2024-03-02,letter,THT-020-5,notice_question,N,N,Information provided by contact center.,2024-03-03,1,N
+VMC-2024-0386,2024-08-03,in-person,DAN-014-1,debris,N,N,Debris removed within 3 calendar days.,2024-08-23,20,N
+VMC-2024-0387,2024-09-28,in-person,LAF-033-4,notice_question,N,N,Information provided by contact center.,2024-09-30,2,N
+VMC-2024-0388,2024-05-01,web,CRW-011-3,refusal_of_work,N,N,Work rescheduled; consent obtained.,2024-05-03,2,N
+VMC-2024-0389,2024-12-21,email,DAN-018-2,property_damage,N,N,Claim filed under RPL-CLM-PRO-001.,2024-12-27,6,N
+VMC-2024-0390,2024-06-15,letter,LAF-023-3,customer_request_trim,N,N,Customer trim order added to mid-cycle schedule.,2024-07-04,19,N
+VMC-2024-0391,2024-12-07,letter,DAN-006-2,tree_health,N,N,ISA arborist assessment completed; customer notified.,2024-12-31,24,N
+VMC-2024-0392,2024-12-27,letter,DAN-013-5,notice_question,N,N,Information provided by contact center.,2024-12-30,3,N
+VMC-2024-0393,2024-09-26,email,THT-007-1,property_damage,Y,N,Claim filed under RPL-CLM-PRO-001.,2024-10-24,28,N
+VMC-2024-0394,2024-11-27,in-person,LAF-027-1,property_damage,N,N,Claim filed under RPL-CLM-PRO-001.,2024-12-06,9,N
+VMC-2024-0395,2024-03-11,letter,LAF-031-2,customer_request_trim,N,N,Customer trim order added to mid-cycle schedule.,2024-04-08,28,N
+VMC-2024-0396,2024-05-06,letter,DAN-014-3,tree_health,N,N,ISA arborist assessment completed; customer notified.,2024-05-29,23,N
+VMC-2024-0397,2024-10-08,in-person,CRW-008-1,notice_question,N,N,Information provided by contact center.,2024-10-09,1,N
+VMC-2024-0398,2024-12-06,letter,THT-021-4,customer_request_trim,N,N,Customer trim order added to mid-cycle schedule.,2024-12-07,1,N
+VMC-2024-0399,2024-02-01,web,DAN-016-3,notice_question,N,N,Information provided by contact center.,2024-02-05,4,N
+VMC-2024-0400,2024-11-19,web,DAN-019-3,customer_request_trim,N,N,Customer trim order added to mid-cycle schedule.,2024-12-19,30,N
+VMC-2024-0401,2024-09-01,phone,LAF-007-2,refusal_of_work,N,N,Work rescheduled; consent obtained.,2024-09-24,23,N
+VMC-2024-0402,2024-02-16,web,LAF-013-4,customer_request_trim,N,N,Customer trim order added to mid-cycle schedule.,2024-03-04,17,N
+VMC-2024-0403,2024-05-06,email,THT-021-4,property_damage,Y,N,Claim filed under RPL-CLM-PRO-001.,2024-05-23,17,N
+VMC-2024-0404,2024-08-12,letter,LAF-034-1,property_damage,N,N,Claim filed under RPL-CLM-PRO-001.,2024-08-26,14,N
+VMC-2024-0405,2024-12-09,in-person,LAF-039-2,property_damage,Y,N,Claim filed under RPL-CLM-PRO-001.,2024-12-31,29,N
+VMC-2024-0406,2024-01-22,email,DAN-013-2,debris,N,N,Debris removed within 3 calendar days.,2024-02-17,26,N
+VMC-2024-0407,2024-06-22,web,LAF-024-2,other,N,N,Referred to appropriate department.,2024-06-26,4,N
+VMC-2024-0408,2024-03-17,email,LAF-029-3,easement_documentation_request,N,N,Easement copy provided within 5 business days.,2024-04-07,21,N
+VMC-2024-0409,2024-11-30,letter,CRW-012-2,debris,N,N,Debris removed within 3 calendar days.,2024-12-04,4,N
+VMC-2024-0410,2024-07-20,web,DAN-013-4,other,N,N,Referred to appropriate department.,2024-07-24,4,N
+VMC-2024-0411,2024-12-21,web,FRK-001-3,debris,N,N,Debris removed within 3 calendar days.,2024-12-31,28,N
+VMC-2024-0412,2024-01-24,letter,LAF-003-2,notice_question,N,N,Information provided by contact center.,2024-01-27,3,N
+VMC-2024-0413,2024-04-07,in-person,DAN-009-4,tree_health,N,N,ISA arborist assessment completed; customer notified.,2024-04-23,16,N
+VMC-2024-0414,2024-05-15,in-person,DAN-011-1,notice_question,N,N,Information provided by contact center.,2024-05-17,2,N
+VMC-2024-0415,2024-01-06,phone,LAF-023-3,notice_question,N,N,Information provided by contact center.,2024-01-08,2,N
+VMC-2024-0416,2024-07-15,letter,LAF-032-2,property_damage,N,N,Claim filed under RPL-CLM-PRO-001.,2024-08-07,23,N
+VMC-2024-0417,2024-08-23,web,FRK-002-2,notice_question,N,N,Information provided by contact center.,2024-08-27,4,N
+VMC-2024-0418,2024-02-14,letter,LAF-024-4,notice_question,N,N,Information provided by contact center.,2024-02-18,4,N
+VMC-2024-0419,2024-06-08,in-person,LAF-022-1,notice_question,N,N,Information provided by contact center.,2024-06-09,1,N
+VMC-2024-0420,2024-03-08,web,LAF-008-2,property_damage,Y,N,Claim filed under RPL-CLM-PRO-001.,2024-03-21,13,N
+VMC-2024-0421,2024-02-10,web,CRW-016-3,notice_question,N,N,Information provided by contact center.,2024-02-14,4,N
+VMC-2024-0422,2024-08-15,letter,LAF-020-4,refusal_of_work,Y,N,Work rescheduled; consent obtained.,2024-08-31,16,N
+VMC-2024-0423,2024-04-08,phone,LAF-028-1,notice_question,N,N,Information provided by contact center.,2024-04-10,2,N
+VMC-2024-0424,2024-11-30,web,LAF-027-4,tree_health,N,N,ISA arborist assessment completed; customer notified.,2024-12-10,10,N
+VMC-2024-0425,2024-04-27,email,LAF-014-1,notice_question,N,N,Information provided by contact center.,2024-05-01,4,N
+VMC-2024-0426,2024-05-13,email,LAF-003-3,notice_question,N,N,Information provided by contact center.,2024-05-15,2,N
+VMC-2024-0427,2024-01-29,phone,CRW-018-2,storm_debris,N,N,Advised: storm debris not an RPL obligation (170 IAC 4-9-7(f)).,2024-02-20,22,N
+VMC-2024-0428,2024-09-14,in-person,FRK-007-2,property_damage,N,N,Claim filed under RPL-CLM-PRO-001.,2024-09-18,4,N
+VMC-2024-0429,2024-12-09,phone,THT-004-4,storm_debris,N,N,Advised: storm debris not an RPL obligation (170 IAC 4-9-7(f)).,2024-12-31,27,N
+VMC-2024-0430,2024-01-09,letter,LAF-023-2,debris,N,N,Debris removed within 3 calendar days.,2024-01-26,17,N
+VMC-2024-0431,2024-04-20,phone,LAF-037-1,tree_health,N,N,ISA arborist assessment completed; customer notified.,2024-05-08,18,N
+VMC-2024-0432,2024-05-22,email,DAN-018-4,storm_debris,N,N,Advised: storm debris not an RPL obligation (170 IAC 4-9-7(f)).,2024-05-31,9,N
+VMC-2024-0433,2024-10-14,web,CRW-010-2,notice_question,N,N,Information provided by contact center.,2024-10-15,1,N
+VMC-2024-0434,2024-07-25,email,FRK-003-3,notice_question,N,N,Information provided by contact center.,2024-07-30,5,N
+VMC-2024-0435,2024-05-19,email,LAF-018-3,refusal_of_work,N,N,Work rescheduled; consent obtained.,2024-06-03,15,N
+VMC-2024-0436,2024-03-25,letter,LAF-017-2,customer_request_trim,N,N,Customer trim order added to mid-cycle schedule.,2024-04-10,16,N
+VMC-2024-0437,2024-12-21,letter,LAF-004-3,notice_question,N,N,Information provided by contact center.,2024-12-26,5,N
+VMC-2024-0438,2024-09-13,email,LAF-034-5,removal_dispute,N,N,Second-representative review completed; dispute resolved.,2024-10-04,21,N
+VMC-2024-0439,2024-06-06,email,LAF-004-5,notice_question,N,N,Information provided by contact center.,2024-06-08,2,N
+VMC-2024-0440,2024-06-25,letter,FRK-002-4,refusal_of_work,N,N,Work rescheduled; consent obtained.,2024-07-12,17,N
+VMC-2024-0441,2024-04-23,letter,THT-014-5,notice_question,N,N,Information provided by contact center.,2024-04-24,1,N
+VMC-2024-0442,2024-03-02,email,DAN-011-1,refusal_of_work,N,N,Work rescheduled; consent obtained.,2024-03-17,15,N
+VMC-2024-0443,2024-09-10,in-person,DAN-006-4,customer_request_trim,N,N,Customer trim order added to mid-cycle schedule.,2024-09-18,8,N
+VMC-2024-0444,2024-06-06,phone,LAF-036-2,refusal_of_work,N,N,Work rescheduled; consent obtained.,2024-06-20,14,N
+VMC-2024-0445,2024-03-25,in-person,DAN-010-7,property_damage,Y,N,Claim filed under RPL-CLM-PRO-001.,2024-04-03,9,N
+VMC-2024-0446,2024-03-04,letter,THT-016-4,easement_documentation_request,N,N,Easement copy provided within 5 business days.,2024-03-26,22,N
+VMC-2024-0447,2024-09-10,phone,DAN-007-2,notice_question,N,N,Information provided by contact center.,2024-09-12,2,N
+VMC-2024-0448,2024-01-23,phone,LAF-039-1,customer_request_trim,N,N,Customer trim order added to mid-cycle schedule.,2024-01-28,5,N
+VMC-2024-0449,2024-06-08,web,DAN-019-6,notice_question,N,N,Information provided by contact center.,2024-06-11,3,N
+VMC-2024-0450,2024-08-10,letter,DAN-006-2,notice_question,N,N,Information provided by contact center.,2024-08-15,5,N
+VMC-2024-0451,2024-05-25,letter,THT-005-3,property_damage,Y,Y,Claim filed under RPL-CLM-PRO-001.,2024-06-01,7,Y
+VMC-2024-0452,2024-06-15,letter,DAN-017-2,storm_debris,N,N,Advised: storm debris not an RPL obligation (170 IAC 4-9-7(f)).,2024-07-09,24,N
+VMC-2024-0453,2024-08-15,letter,LAF-036-3,notice_question,N,N,Information provided by contact center.,2024-08-17,2,N
+VMC-2024-0454,2024-08-04,email,THT-014-3,customer_request_trim,N,N,Customer trim order added to mid-cycle schedule.,2024-09-01,28,N
+VMC-2024-0455,2024-01-04,in-person,LAF-022-1,debris,N,N,Debris removed within 3 calendar days.,2024-01-06,2,N
+VMC-2024-0456,2024-01-11,phone,CRW-010-5,easement_documentation_request,N,N,Easement copy provided within 5 business days.,2024-02-07,27,N
+VMC-2024-0457,2024-12-12,letter,LAF-037-2,refusal_of_work,N,N,Work rescheduled; consent obtained.,2024-12-30,18,N
+VMC-2024-0458,2024-03-16,letter,THT-013-5,storm_debris,N,N,Advised: storm debris not an RPL obligation (170 IAC 4-9-7(f)).,2024-03-22,6,N
+VMC-2024-0459,2024-08-08,email,LAF-005-3,refusal_of_work,Y,N,Work rescheduled; consent obtained.,2024-08-21,13,N
+VMC-2024-0460,2024-07-04,web,DAN-002-3,refusal_of_work,N,N,Work rescheduled; consent obtained.,2024-07-28,24,N
+VMC-2024-0461,2024-07-16,email,CRW-016-2,notice_question,N,N,Information provided by contact center.,2024-07-18,2,N
+VMC-2024-0462,2024-06-04,web,THT-001-2,tree_health,N,N,ISA arborist assessment completed; customer notified.,2024-06-26,22,N
+VMC-2024-0463,2024-01-22,web,DAN-009-3,notice_question,N,N,Information provided by contact center.,2024-01-23,1,N
+VMC-2024-0464,2024-04-12,phone,CRW-015-4,notice_question,N,N,Information provided by contact center.,2024-04-14,2,N
+VMC-2024-0465,2024-05-09,web,THT-005-1,notice_question,N,N,Information provided by contact center.,2024-05-11,2,N
+VMC-2024-0466,2024-10-29,web,DAN-009-3,easement_documentation_request,N,N,Easement copy provided within 5 business days.,2024-11-26,28,N
+VMC-2024-0467,2024-05-25,email,DAN-021-1,other,N,N,Referred to appropriate department.,2024-05-28,3,N
+VMC-2024-0468,2024-11-27,web,LAF-028-1,notice_question,N,N,Information provided by contact center.,2024-11-29,2,N
+VMC-2024-0469,2024-06-14,letter,LAF-007-4,notice_question,N,N,Information provided by contact center.,2024-06-19,5,N
+VMC-2024-0470,2024-10-28,phone,LAF-031-5,notice_question,N,N,Information provided by contact center.,2024-11-02,5,N
+VMC-2024-0471,2024-09-02,in-person,DAN-004-1,debris,N,N,Debris removed within 3 calendar days.,2024-09-21,19,N
+VMC-2024-0472,2024-07-16,in-person,THT-008-2,notice_question,N,N,Information provided by contact center.,2024-07-17,1,N
+VMC-2024-0473,2024-09-10,letter,CRW-007-5,customer_request_trim,N,N,Customer trim order added to mid-cycle schedule.,2024-09-22,12,N
+VMC-2024-0474,2024-01-13,phone,DAN-008-4,property_damage,N,N,Claim filed under RPL-CLM-PRO-001.,2024-02-09,27,N
+VMC-2024-0475,2024-12-11,phone,LAF-038-3,notice_question,N,N,Information provided by contact center.,2024-12-15,4,N
+VMC-2024-0476,2024-12-27,email,LAF-033-2,notice_question,N,N,Information provided by contact center.,2024-12-31,4,N
+VMC-2024-0477,2024-04-25,phone,LAF-029-2,storm_debris,N,N,Advised: storm debris not an RPL obligation (170 IAC 4-9-7(f)).,2024-05-13,18,N
+VMC-2024-0478,2024-12-06,letter,DAN-006-2,notice_question,N,N,Information provided by contact center.,2024-12-07,1,N
+VMC-2024-0479,2024-12-04,letter,LAF-016-3,storm_debris,N,N,Advised: storm debris not an RPL obligation (170 IAC 4-9-7(f)).,2024-12-20,16,N
+VMC-2024-0480,2024-10-09,phone,LAF-038-1,notice_question,N,N,Information provided by contact center.,2024-10-10,1,N
+VMC-2024-0481,2024-11-15,web,THT-019-2,notice_question,N,N,Information provided by contact center.,2024-11-19,4,N
+VMC-2024-0482,2024-12-06,letter,DAN-020-3,notice_question,N,N,Information provided by contact center.,2024-12-11,5,N
+VMC-2024-0483,2024-12-26,letter,DAN-015-2,notice_question,N,N,Information provided by contact center.,2024-12-31,5,N
+VMC-2024-0484,2024-08-31,web,CRW-003-4,notice_question,N,N,Information provided by contact center.,2024-09-02,2,N
+VMC-2024-0485,2024-11-14,web,FRK-006-3,notice_question,N,N,Information provided by contact center.,2024-11-15,1,N
+VMC-2024-0486,2024-04-12,in-person,LAF-027-2,debris,N,N,Debris removed within 3 calendar days.,2024-04-15,3,N
+VMC-2024-0487,2024-11-01,letter,LAF-014-3,debris,N,N,Debris removed within 3 calendar days.,2024-11-27,26,N
+VMC-2024-0488,2024-12-22,letter,LAF-018-4,notice_question,N,N,Information provided by contact center.,2024-12-24,2,N
+VMC-2024-0489,2024-04-04,letter,THT-008-3,notice_question,N,N,Information provided by contact center.,2024-04-07,3,N
+VMC-2024-0490,2024-05-18,web,DAN-021-3,notice_question,N,N,Information provided by contact center.,2024-05-19,1,N
+VMC-2024-0491,2024-12-26,web,DAN-021-3,refusal_of_work,Y,N,Work rescheduled; consent obtained.,2024-12-31,7,N
+VMC-2024-0492,2024-05-25,in-person,THT-004-4,storm_debris,N,N,Advised: storm debris not an RPL obligation (170 IAC 4-9-7(f)).,2024-06-21,27,N
+VMC-2024-0493,2024-09-14,letter,LAF-024-3,refusal_of_work,N,N,Work rescheduled; consent obtained.,2024-09-17,3,N
+VMC-2024-0494,2024-01-19,phone,DAN-009-4,debris,N,N,Debris removed within 3 calendar days.,2024-01-29,10,N
+VMC-2024-0495,2024-08-21,web,LAF-029-1,tree_health,N,N,ISA arborist assessment completed; customer notified.,2024-09-02,12,N
+VMC-2024-0496,2024-12-13,letter,DAN-017-2,notice_question,N,N,Information provided by contact center.,2024-12-14,1,N
+VMC-2024-0497,2024-03-12,web,LAF-029-2,removal_dispute,N,N,Second-representative review completed; dispute resolved.,2024-03-26,14,N
+VMC-2024-0498,2024-12-20,email,DAN-009-4,customer_request_trim,N,N,Customer trim order added to mid-cycle schedule.,2024-12-24,4,N
+VMC-2024-0499,2024-01-28,in-person,THT-014-4,easement_documentation_request,N,N,Easement copy provided within 5 business days.,2024-02-10,13,N
+VMC-2024-0500,2024-12-17,in-person,FRK-003-4,removal_dispute,N,N,Second-representative review completed; dispute resolved.,2024-12-31,26,N
+VMC-2024-0501,2024-11-24,phone,CRW-017-4,debris,N,N,Debris removed within 3 calendar days.,2024-12-09,15,N
+VMC-2024-0502,2024-01-06,email,LAF-027-1,notice_question,N,N,Information provided by contact center.,2024-01-08,2,N
+VMC-2024-0503,2024-05-18,in-person,DAN-021-1,property_damage,N,N,Claim filed under RPL-CLM-PRO-001.,2024-06-05,18,N
+VMC-2024-0504,2024-07-10,email,THT-017-5,other,N,N,Referred to appropriate department.,2024-07-14,4,N
+VMC-2024-0505,2024-06-06,in-person,LAF-007-3,tree_health,N,N,ISA arborist assessment completed; customer notified.,2024-07-02,26,N
+VMC-2024-0506,2024-06-19,phone,THT-002-5,debris,N,N,Debris removed within 3 calendar days.,2024-06-23,4,N
+VMC-2024-0507,2024-03-15,web,LAF-031-1,notice_question,N,N,Information provided by contact center.,2024-03-19,4,N
+VMC-2024-0508,2024-09-30,web,LAF-010-1,debris,N,N,Debris removed within 3 calendar days.,2024-10-19,19,N
+VMC-2024-0509,2024-12-02,phone,DAN-025-4,notice_question,N,N,Information provided by contact center.,2024-12-04,2,N
+VMC-2024-0510,2024-09-11,phone,FRK-003-3,easement_documentation_request,N,N,Easement copy provided within 5 business days.,2024-09-27,16,N
+VMC-2024-0511,2024-06-13,phone,LAF-010-1,property_damage,Y,N,Claim filed under RPL-CLM-PRO-001.,2024-07-10,27,N
+VMC-2024-0512,2024-12-27,email,THT-018-3,easement_documentation_request,N,N,Easement copy provided within 5 business days.,2024-12-31,28,N
+VMC-2024-0513,2024-03-14,web,DAN-012-4,removal_dispute,Y,N,Second-representative review completed; dispute resolved.,2024-03-22,8,N
+VMC-2024-0514,2024-05-23,web,LAF-023-4,debris,N,N,Debris removed within 3 calendar days.,2024-06-11,19,N
+VMC-2024-0515,2024-08-18,email,DAN-002-3,refusal_of_work,Y,N,Work rescheduled; consent obtained.,2024-09-13,26,N
+VMC-2024-0516,2024-03-19,email,CRW-016-1,notice_question,N,N,Information provided by contact center.,2024-03-23,4,N
+VMC-2024-0517,2024-04-22,email,THT-008-5,debris,N,N,Debris removed within 3 calendar days.,2024-05-14,22,N
+VMC-2024-0518,2024-03-25,phone,THT-022-4,notice_question,N,N,Information provided by contact center.,2024-03-30,5,N
+VMC-2024-0519,2024-03-24,email,DAN-001-3,notice_question,N,N,Information provided by contact center.,2024-03-25,1,N
+VMC-2024-0520,2024-10-19,in-person,LAF-009-4,notice_question,N,N,Information provided by contact center.,2024-10-23,4,N
+VMC-2024-0521,2024-02-28,letter,CRW-007-1,tree_health,N,N,ISA arborist assessment completed; customer notified.,2024-03-23,24,N
+VMC-2024-0522,2024-02-23,letter,FRK-002-4,notice_question,N,N,Information provided by contact center.,2024-02-27,4,N
+VMC-2024-0523,2024-10-25,letter,THT-015-2,storm_debris,N,N,Advised: storm debris not an RPL obligation (170 IAC 4-9-7(f)).,2024-11-11,17,N
+VMC-2024-0524,2024-07-10,letter,LAF-039-1,removal_dispute,N,N,Second-representative review completed; dispute resolved.,2024-08-04,25,N
+VMC-2024-0525,2024-08-10,in-person,LAF-011-1,removal_dispute,N,N,Second-representative review completed; dispute resolved.,2024-09-05,26,N
+VMC-2024-0526,2024-03-22,phone,DAN-025-2,debris,N,N,Debris removed within 3 calendar days.,2024-04-14,23,N
+VMC-2024-0527,2024-07-29,web,THT-012-1,notice_question,N,N,Information provided by contact center.,2024-08-03,5,N
+VMC-2024-0528,2024-06-30,letter,THT-001-4,debris,N,N,Debris removed within 3 calendar days.,2024-07-14,14,N
+VMC-2024-0529,2024-04-20,letter,DAN-016-4,notice_question,N,N,Information provided by contact center.,2024-04-23,3,N
+VMC-2024-0530,2024-02-22,email,THT-016-2,tree_health,N,N,ISA arborist assessment completed; customer notified.,2024-03-16,23,N
+VMC-2024-0531,2024-09-23,in-person,LAF-032-1,notice_question,N,N,Information provided by contact center.,2024-09-25,2,N
+VMC-2024-0532,2024-06-14,email,LAF-018-6,refusal_of_work,N,N,Work rescheduled; consent obtained.,2024-07-02,18,N
+VMC-2024-0533,2024-11-09,letter,LAF-033-4,notice_question,N,N,Information provided by contact center.,2024-11-14,5,N
+VMC-2024-0534,2024-01-03,letter,DAN-015-2,tree_health,N,N,ISA arborist assessment completed; customer notified.,2024-01-18,15,N
+VMC-2024-0535,2024-04-11,web,DAN-014-1,debris,N,N,Debris removed within 3 calendar days.,2024-05-04,23,N
+VMC-2024-0536,2024-10-12,email,LAF-005-4,debris,N,N,Debris removed within 3 calendar days.,2024-10-29,17,N
+VMC-2024-0537,2024-02-09,letter,CRW-011-1,refusal_of_work,N,N,Work rescheduled; consent obtained.,2024-03-03,23,N
+VMC-2024-0538,2024-01-08,phone,LAF-026-2,debris,N,N,Debris removed within 3 calendar days.,2024-01-16,8,N
+VMC-2024-0539,2024-12-22,email,LAF-019-3,tree_health,N,N,ISA arborist assessment completed; customer notified.,2024-12-24,2,N
+VMC-2024-0540,2024-07-16,letter,LAF-006-2,notice_question,N,N,Information provided by contact center.,2024-07-18,2,N
+VMC-2024-0541,2024-06-23,web,CRW-002-3,customer_request_trim,N,N,Customer trim order added to mid-cycle schedule.,2024-07-14,21,N
+VMC-2024-0542,2024-06-23,phone,LAF-022-4,notice_question,N,N,Information provided by contact center.,2024-06-28,5,N

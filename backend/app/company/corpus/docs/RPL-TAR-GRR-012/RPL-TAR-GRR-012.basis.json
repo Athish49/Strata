@@ -1,0 +1,443 @@
+{
+  "doc_id": "RPL-TAR-GRR-012",
+  "version": "2024-06-01",
+  "law_as_of": "2024-12-31",
+  "snapshot": "S1",
+  "approved_date": "2024-05-15",
+  "effective_date": "2024-06-01",
+  "owner_id": "P11",
+  "reviewer_id": "P10",
+  "approver_id": "P03",
+  "supersedes": "IURC No. 12 eff. 2021-10-01",
+  "grounding_pack": "T13",
+  "value_ledger": [
+    {
+      "id": "VL-001",
+      "rule": "R11.2",
+      "topic": "Bill delinquency period",
+      "value": "17 days after postmark",
+      "citation": "170 IAC 4-1-13(c)"
+    },
+    {
+      "id": "VL-002",
+      "rule": "R11.3",
+      "topic": "Late payment charge maximum",
+      "value": "10% of first $3 plus 3% of excess of $3",
+      "citation": "170 IAC 4-1-13(c)"
+    },
+    {
+      "id": "VL-003",
+      "rule": "R10.3",
+      "topic": "New applicant deposit maximum",
+      "value": "1/6 of estimated annual cost of service",
+      "citation": "170 IAC 4-1-15(c)"
+    },
+    {
+      "id": "VL-004",
+      "rule": "R10.3",
+      "topic": "Deposit installment threshold",
+      "value": "$70",
+      "citation": "170 IAC 4-1-15(c)"
+    },
+    {
+      "id": "VL-005",
+      "rule": "R10.3",
+      "topic": "Deposit installment period (new applicant)",
+      "value": "no less than 8 weeks",
+      "citation": "170 IAC 4-1-15(c)"
+    },
+    {
+      "id": "VL-006",
+      "rule": "R10.5",
+      "topic": "Existing customer deposit maximum",
+      "value": "1/6 of expected annual billings",
+      "citation": "170 IAC 4-1-15(e)"
+    },
+    {
+      "id": "VL-007",
+      "rule": "R10.5",
+      "topic": "Existing customer deposit installment window",
+      "value": "2 monthly billing cycles (approximately 60 days) for deposits >$70",
+      "citation": "170 IAC 4-1-15(e)"
+    },
+    {
+      "id": "VL-008",
+      "rule": "R10.6",
+      "topic": "Deposit interest rate",
+      "value": "6% per annum for deposits held more than 12 months",
+      "citation": "170 IAC 4-1-15(f)(1)"
+    },
+    {
+      "id": "VL-009",
+      "rule": "R10.7",
+      "topic": "Deposit refund \u2014 satisfactory payment period",
+      "value": "9 successive months OR 10 out of 12 consecutive months without late payment in 2 consecutive months",
+      "citation": "170 IAC 4-1-15(g)(1)"
+    },
+    {
+      "id": "VL-010",
+      "rule": "R10.7",
+      "topic": "Deposit refund after termination",
+      "value": "Within 15 days after payment of final bill",
+      "citation": "170 IAC 4-1-15(g)(3)(b)"
+    },
+    {
+      "id": "VL-011",
+      "rule": "R13.3",
+      "topic": "Residential disconnection notice period",
+      "value": "14 days prior written notice",
+      "citation": "170 IAC 4-1-16(e)"
+    },
+    {
+      "id": "VL-012",
+      "rule": "R13.4",
+      "topic": "Disconnection hours",
+      "value": "8:00 a.m. to 3:00 p.m. prevailing local time",
+      "citation": "170 IAC 4-1-16(d)"
+    },
+    {
+      "id": "VL-013",
+      "rule": "R13.6",
+      "topic": "LIHEAP winter moratorium period",
+      "value": "December 1 through March 15",
+      "citation": "170 IAC 4-1-16.6(a)"
+    },
+    {
+      "id": "VL-014",
+      "rule": "R13.7",
+      "topic": "Medical postponement of disconnection",
+      "value": "10 days, extendable one additional 10-day period",
+      "citation": "170 IAC 4-1-16(c)"
+    },
+    {
+      "id": "VL-015",
+      "rule": "R13.5",
+      "topic": "Hardship plan minimum payment",
+      "value": "Not to exceed $10 or 1/10 of bill, whichever is less",
+      "citation": "170 IAC 4-1-16(c)(2)(A)"
+    },
+    {
+      "id": "VL-016",
+      "rule": "R13.5",
+      "topic": "Hardship plan payment period",
+      "value": "3 months",
+      "citation": "170 IAC 4-1-16(c)(2)(B)"
+    },
+    {
+      "id": "VL-017",
+      "rule": "R13.9",
+      "topic": "Reconnection time after conditions satisfied",
+      "value": "1 working day",
+      "citation": "170 IAC 4-1-16(g)"
+    },
+    {
+      "id": "VL-018",
+      "rule": "R09.4",
+      "topic": "Watthour meter average accuracy tolerance",
+      "value": "Average error not over 2%, plus or minus",
+      "citation": "170 IAC 4-1-9(b)(1)(A)"
+    },
+    {
+      "id": "VL-019",
+      "rule": "R09.4",
+      "topic": "Watthour meter full load tolerance",
+      "value": "Error at full load not over 1%, plus or minus",
+      "citation": "170 IAC 4-1-9(b)(1)(B)"
+    },
+    {
+      "id": "VL-020",
+      "rule": "R09.4",
+      "topic": "Watthour meter light load tolerance",
+      "value": "Error at light load not over 3%, plus or minus",
+      "citation": "170 IAC 4-1-9(b)(1)(C)"
+    },
+    {
+      "id": "VL-021",
+      "rule": "R09.6",
+      "topic": "Periodic meter test interval",
+      "value": "Not more than 16 years",
+      "citation": "170 IAC 4-1-10(b)"
+    },
+    {
+      "id": "VL-022",
+      "rule": "R09.7",
+      "topic": "Written meter test report delivery",
+      "value": "Within 10 days after test is complete",
+      "citation": "170 IAC 4-1-11(d)"
+    },
+    {
+      "id": "VL-023",
+      "rule": "R09.7",
+      "topic": "Meter test appeal filing period",
+      "value": "5 days from date of written report",
+      "citation": "170 IAC 4-1-11(e)"
+    },
+    {
+      "id": "VL-024",
+      "rule": "R12.2",
+      "topic": "Fast meter billing adjustment period",
+      "value": "Period meter was fast or 1 year, whichever is shorter",
+      "citation": "170 IAC 4-1-14(A)(1)"
+    },
+    {
+      "id": "VL-025",
+      "rule": "R12.3",
+      "topic": "Slow/stopped meter back-billing period",
+      "value": "1/2 of period since last test or 1 year, whichever is shorter",
+      "citation": "170 IAC 4-1-14(A)(2)"
+    },
+    {
+      "id": "VL-026",
+      "rule": "R12.4",
+      "topic": "Other billing error adjustment period",
+      "value": "Known date of error or 1 year, whichever is shorter",
+      "citation": "170 IAC 4-1-14(B)"
+    },
+    {
+      "id": "VL-027",
+      "rule": "R12.1",
+      "topic": "Billing adjustment error threshold \u2014 watthour",
+      "value": ">3% error",
+      "citation": "170 IAC 4-1-14(A)"
+    },
+    {
+      "id": "VL-028",
+      "rule": "R12.1",
+      "topic": "Billing adjustment error threshold \u2014 demand",
+      "value": ">4% error",
+      "citation": "170 IAC 4-1-14(A)"
+    },
+    {
+      "id": "VL-029",
+      "rule": "R06.1",
+      "topic": "Standard frequency",
+      "value": "60 Hz nominal",
+      "citation": "170 IAC 4-1-19"
+    },
+    {
+      "id": "VL-030",
+      "rule": "R06.3",
+      "topic": "Residential voltage tolerance",
+      "value": "+/- 5% of nominal; total variation \u22646% in cities >2,500 pop, \u22648% elsewhere",
+      "citation": "170 IAC 4-1-20(A)(1)"
+    },
+    {
+      "id": "VL-031",
+      "rule": "R13.10",
+      "topic": "Customer appeal period to Consumer Affairs",
+      "value": "7 days from receipt of utility's proposed resolution",
+      "citation": "170 IAC 16-1-4(c)(5)"
+    },
+    {
+      "id": "VL-032",
+      "rule": "R13.10",
+      "topic": "Consumer Affairs decision period",
+      "value": "30 days from complaint submission",
+      "citation": "170 IAC 16-1-5(c)(5)"
+    },
+    {
+      "id": "VL-033",
+      "rule": "R13.10",
+      "topic": "Commission review request period",
+      "value": "20 days from Consumer Affairs director decision",
+      "citation": "170 IAC 16-1-6(a)"
+    },
+    {
+      "id": "VL-034",
+      "rule": "R13.11",
+      "topic": "Disconnect moratorium during dispute",
+      "value": "No disconnect while under review; or sooner than 10 days after decision",
+      "citation": "170 IAC 16-1-7(a)"
+    },
+    {
+      "id": "VL-035",
+      "rule": "R13.11",
+      "topic": "Undisputed amount for dispute protection",
+      "value": "1/12 of estimated annual billing",
+      "citation": "170 IAC 16-1-7(b)"
+    },
+    {
+      "id": "VL-036",
+      "rule": "R03.1",
+      "topic": "Records retention minimum",
+      "value": "3 years",
+      "citation": "170 IAC 4-1-3"
+    },
+    {
+      "id": "VL-037",
+      "rule": "R03.5",
+      "topic": "Dispute records retention",
+      "value": "6 months from date of final resolution",
+      "citation": "170 IAC 16-1-4(b)"
+    },
+    {
+      "id": "VL-038",
+      "rule": "R14.5",
+      "topic": "Reliability data retention",
+      "value": "Minimum 7 years",
+      "citation": "170 IAC 4-1-23(f)"
+    },
+    {
+      "id": "VL-039",
+      "rule": "R13.5",
+      "topic": "Prior-location unpaid bill prohibition period",
+      "value": "Less than 45 days unpaid",
+      "citation": "170 IAC 4-1-16(c)(1)(B)"
+    },
+    {
+      "id": "VL-040",
+      "rule": "R13.8",
+      "topic": "Pre-disconnection employee record retention",
+      "value": "At least 30 days",
+      "citation": "170 IAC 4-1-16(f)(3)"
+    },
+    {
+      "id": "VL-041",
+      "rule": "R10.2",
+      "topic": "Prior utility customer lookback for creditworthiness",
+      "value": "2 years",
+      "citation": "170 IAC 4-1-15(b)(1)"
+    },
+    {
+      "id": "VL-042",
+      "rule": "R10.2",
+      "topic": "Outstanding bill lookback for creditworthiness",
+      "value": "4 years",
+      "citation": "170 IAC 4-1-15(b)(1)(A)"
+    },
+    {
+      "id": "VL-043",
+      "rule": "R09.3",
+      "topic": "New meter installation test window",
+      "value": "Within 60 days of installation",
+      "citation": "170 IAC 4-1-6(c)"
+    },
+    {
+      "id": "VL-044",
+      "rule": "R09.10",
+      "topic": "Reference standard calibration interval",
+      "value": "At least once every 2 years",
+      "citation": "170 IAC 4-1-7(C)"
+    },
+    {
+      "id": "VL-045",
+      "rule": "R13.1",
+      "topic": "Customer disconnection notice advance",
+      "value": "At least 3 days in advance",
+      "citation": "170 IAC 4-1-16(a)(1)"
+    }
+  ],
+  "out_of_scope_references": [
+    {
+      "citation": "170 IAC 1-5-2 through 170 IAC 1-5-16",
+      "reason": "General rate case procedures; not directly restated in tariff rules \u2014 referenced as context for rate change filings"
+    },
+    {
+      "citation": "170 IAC 1-7-1 through 170 IAC 1-7-3",
+      "reason": "Outside-boundary rate review procedures; procedural rules not restated in tariff"
+    },
+    {
+      "citation": "170 IAC 4-1-26 through 170 IAC 4-1-30",
+      "reason": "Line construction specifications; referenced generically in Rule 6.8"
+    }
+  ],
+  "company_practice_items": [
+    {
+      "id": "CP-001",
+      "rule": "R09.9",
+      "description": "AMI opt-out program \u2014 company practice, charges set via Cause No. 99012",
+      "basis": "Company policy authorized by Commission; Table F F-11"
+    },
+    {
+      "id": "CP-002",
+      "rule": "R04.1",
+      "description": "Account establishment charge (F-12: $15.00) \u2014 company practice",
+      "basis": "Table F as approved in Cause No. 99012"
+    },
+    {
+      "id": "CP-003",
+      "rule": "R08.2",
+      "description": "Meter tampering investigation charge (F-8: $100 minimum)",
+      "basis": "Table F as approved in Cause No. 99012"
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "INT-001",
+      "rule": "R13.6",
+      "text": "170 IAC 4-1-16.6 winter moratorium covers both actual LIHEAP recipients and those who are eligible and have applied; Rule 13.6 captures both categories expressly."
+    },
+    {
+      "id": "INT-002",
+      "rule": "R12.5",
+      "text": "Rule 12.5 integrates the billing adjustment for utility error (170 IAC 4-1-14) with the disconnection prohibition for large bills due to utility error (170 IAC 4-1-16(c)(3)), as these provisions operate together in practice."
+    }
+  ],
+  "coverage": {
+    "170 IAC 1-2-1": "R02.3",
+    "170 IAC 1-2-2": "R02.3",
+    "170 IAC 1-2-3": "R02.3",
+    "170 IAC 1-2-7": "R02.3 (by implication \u2014 change of ownership procedures)",
+    "170 IAC 1-2-9": "R02.3",
+    "170 IAC 1-2-10": "R01.D01",
+    "170 IAC 1-2-11": "R02.3",
+    "170 IAC 1-2-12": "R02.3",
+    "170 IAC 1-6-1": "R02.3",
+    "170 IAC 1-6-2": "R01.D20",
+    "170 IAC 1-6-3": "R16.1",
+    "170 IAC 1-6-4": "R02.3",
+    "170 IAC 1-6-5": "R02.3",
+    "170 IAC 4-1-1": "R01.D03, R01.D07, R01.D09",
+    "170 IAC 4-1-2": "R02.1",
+    "170 IAC 4-1-3": "R03.1",
+    "170 IAC 4-1-4": "R03.2",
+    "170 IAC 4-1-5": "R09.1, R09.2",
+    "170 IAC 4-1-6": "R09.3",
+    "170 IAC 4-1-7": "R09.10, R03.3",
+    "170 IAC 4-1-8": "R09.5",
+    "170 IAC 4-1-9": "R09.4",
+    "170 IAC 4-1-10": "R09.6",
+    "170 IAC 4-1-11": "R09.7",
+    "170 IAC 4-1-12": "R09.8",
+    "170 IAC 4-1-13": "R11.1 through R11.6",
+    "170 IAC 4-1-14": "R12.1 through R12.4",
+    "170 IAC 4-1-15": "R10.1 through R10.8",
+    "170 IAC 4-1-16": "R13.1 through R13.9",
+    "170 IAC 4-1-16.5": "R01.D07",
+    "170 IAC 4-1-16.6": "R13.6",
+    "170 IAC 4-1-18": "R04.3, R04.4",
+    "170 IAC 4-1-19": "R06.1",
+    "170 IAC 4-1-20": "R06.3",
+    "170 IAC 4-1-21": "R06.4",
+    "170 IAC 4-1-22": "R06.6",
+    "170 IAC 4-1-23": "R14.1 through R14.5",
+    "170 IAC 4-1-24": "R14.6",
+    "170 IAC 4-1-25": "R06.7",
+    "170 IAC 16-1-1": "R02.2",
+    "170 IAC 16-1-2": "R01.D23",
+    "170 IAC 16-1-3": "R01.D24",
+    "170 IAC 16-1-4": "R11.8, R13.10",
+    "170 IAC 16-1-5": "R13.10",
+    "170 IAC 16-1-6": "R13.10",
+    "170 IAC 16-1-7": "R12.6, R13.11",
+    "170 IAC 1-5-1": "R02.3",
+    "170 IAC 1-5-2": "R02.3",
+    "170 IAC 1-5-4": "R02.3",
+    "170 IAC 1-5-6": "R02.3",
+    "170 IAC 1-5-9": "R02.3",
+    "170 IAC 1-5-10": "R02.3",
+    "170 IAC 1-5-11": "R02.3",
+    "170 IAC 1-5-12": "R02.3",
+    "170 IAC 1-5-13": "R02.3",
+    "170 IAC 1-5-16": "R02.3",
+    "170 IAC 1-7-1": "R02.3",
+    "170 IAC 1-7-2": "R02.3",
+    "170 IAC 1-7-3": "R02.3",
+    "170 IAC 4-1-17": "R06.2",
+    "170 IAC 4-1-26": "R06.8",
+    "170 IAC 4-1-27": "R06.8",
+    "170 IAC 4-1-28": "R06.8",
+    "170 IAC 4-1-29": "R06.8",
+    "170 IAC 4-1-30": "R06.8"
+  }
+}

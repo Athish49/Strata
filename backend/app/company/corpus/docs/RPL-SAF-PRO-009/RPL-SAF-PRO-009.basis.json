@@ -1,0 +1,600 @@
+{
+  "schema_version": "2.0",
+  "doc_id": "RPL-SAF-PRO-009",
+  "version": "2.0",
+  "law_as_of": "2024-12-31",
+  "grounding_pack": "corpus/grounding/T21.json",
+  "doc_sha256": "<computed at QA pass>",
+  "default_route": {
+    "owner": "P27",
+    "reviewer": "P24",
+    "approver": "P08"
+  },
+  "clauses": [
+    {
+      "clause_id": "RPL-SAF-PRO-009:2.1",
+      "clause_type": "regulatory_restatement",
+      "text_sha256": "<computed>",
+      "line_start": 63,
+      "citations": ["170 IAC 4-1-2"],
+      "subsection_labels": [],
+      "assessed": true,
+      "route_override": null,
+      "depends_on": [],
+      "cross_doc_refs": ["RPL-CMP-REG-001"],
+      "parameters": [
+        {
+          "parameter_id": "RPL-SAF-PRO-009:2.1#p1",
+          "kind": "applicability",
+          "name": "rule applicability",
+          "doc_value": "any electrical public utility subject to IURC jurisdiction",
+          "unit": "n/a",
+          "qualifier": "shall apply to",
+          "day_type": "n/a",
+          "s1_quote": "These rules shall apply to any electrical public utility subject to the jurisdiction of the commission pursuant to the provisions of the Public Service Commission Act [ IC 8-1-2 ]",
+          "s1_span": [141, 320],
+          "derived": null
+        }
+      ]
+    },
+    {
+      "clause_id": "RPL-SAF-PRO-009:3.1",
+      "clause_type": "regulatory_restatement",
+      "text_sha256": "<computed>",
+      "line_start": 90,
+      "citations": ["170 IAC 4-1-1"],
+      "subsection_labels": [],
+      "assessed": true,
+      "route_override": null,
+      "depends_on": [],
+      "cross_doc_refs": [],
+      "parameters": [
+        {
+          "parameter_id": "RPL-SAF-PRO-009:3.1#p1",
+          "kind": "party",
+          "name": "Commission definition",
+          "doc_value": "the Indiana utility regulatory commission",
+          "unit": "n/a",
+          "qualifier": "means",
+          "day_type": "n/a",
+          "s1_quote": "\"Commission\" means the Indiana utility regulatory commission.",
+          "s1_span": [248, 305],
+          "derived": null
+        }
+      ]
+    },
+    {
+      "clause_id": "RPL-SAF-PRO-009:8.1.1",
+      "clause_type": "regulatory_restatement",
+      "text_sha256": "<computed>",
+      "line_start": 270,
+      "citations": ["170 IAC 4-1-24"],
+      "subsection_labels": [],
+      "assessed": true,
+      "route_override": null,
+      "depends_on": [],
+      "cross_doc_refs": ["RPL-REG-CAL-2025"],
+      "parameters": [
+        {
+          "parameter_id": "RPL-SAF-PRO-009:8.1.1#p1",
+          "kind": "condition",
+          "name": "IURC reporting trigger",
+          "doc_value": "accident attended with loss of human life occurs within this state upon its premises, or directly or indirectly arising from or connected with its maintenance or operation",
+          "unit": "n/a",
+          "qualifier": "whenever",
+          "day_type": "n/a",
+          "s1_quote": "whenever an accident attended with loss of human life occurs within this state upon its premises, or directly or indirectly arising from or connected with its maintenance or operation, give immediate notice thereof to the commission",
+          "s1_span": [365, 584],
+          "derived": null
+        }
+      ]
+    },
+    {
+      "clause_id": "RPL-SAF-PRO-009:9.2",
+      "clause_type": "regulatory_restatement",
+      "text_sha256": "<computed>",
+      "line_start": 310,
+      "citations": ["170 IAC 4-1-24"],
+      "subsection_labels": [],
+      "assessed": true,
+      "route_override": null,
+      "depends_on": ["RPL-SAF-PRO-009:8.1.1"],
+      "cross_doc_refs": [],
+      "parameters": [
+        {
+          "parameter_id": "RPL-SAF-PRO-009:9.2#p1",
+          "kind": "condition",
+          "name": "business-day telephone timing",
+          "doc_value": "as soon as possible after being informed of such an accident",
+          "unit": "n/a",
+          "qualifier": "as soon as possible",
+          "day_type": "n/a",
+          "s1_quote": "as soon as possible after being informed of such an accident, and if such accident occurs during a regular business day, inform the commission by telephone of pertinent details of the accident including the name of the deceased",
+          "s1_span": [783, 1000],
+          "derived": null
+        },
+        {
+          "parameter_id": "RPL-SAF-PRO-009:9.2#p2",
+          "kind": "content_element",
+          "name": "telephone content — pertinent details",
+          "doc_value": "pertinent details of the accident",
+          "unit": "n/a",
+          "qualifier": "including",
+          "day_type": "n/a",
+          "s1_quote": "inform the commission by telephone of pertinent details of the accident including the name of the deceased",
+          "s1_span": [896, 1000],
+          "derived": null
+        },
+        {
+          "parameter_id": "RPL-SAF-PRO-009:9.2#p3",
+          "kind": "content_element",
+          "name": "telephone content — name of deceased",
+          "doc_value": "name of the deceased",
+          "unit": "n/a",
+          "qualifier": "including",
+          "day_type": "n/a",
+          "s1_quote": "including the name of the deceased",
+          "s1_span": [968, 1001],
+          "derived": null
+        }
+      ]
+    },
+    {
+      "clause_id": "RPL-SAF-PRO-009:9.3",
+      "clause_type": "regulatory_restatement",
+      "text_sha256": "<computed>",
+      "line_start": 340,
+      "citations": ["170 IAC 4-1-24"],
+      "subsection_labels": [],
+      "assessed": true,
+      "route_override": null,
+      "depends_on": ["RPL-SAF-PRO-009:8.2"],
+      "cross_doc_refs": [],
+      "parameters": [
+        {
+          "parameter_id": "RPL-SAF-PRO-009:9.3#p1",
+          "kind": "condition",
+          "name": "non-business-day telephone timing",
+          "doc_value": "as early as practical the first business day following the accident",
+          "unit": "n/a",
+          "qualifier": "as early as practical",
+          "day_type": "calendar",
+          "s1_quote": "If the accident occurs during a period other than a regular business day the commission shall be so informed as early as practical the first business day following the accident.",
+          "s1_span": [1001, 1169],
+          "derived": null
+        }
+      ]
+    },
+    {
+      "clause_id": "RPL-SAF-PRO-009:9.4",
+      "clause_type": "regulatory_restatement",
+      "text_sha256": "<computed>",
+      "line_start": 360,
+      "citations": ["170 IAC 4-1-24"],
+      "subsection_labels": [],
+      "assessed": true,
+      "route_override": null,
+      "depends_on": ["RPL-SAF-PRO-009:9.2"],
+      "cross_doc_refs": [],
+      "parameters": [
+        {
+          "parameter_id": "RPL-SAF-PRO-009:9.4#p1",
+          "kind": "condition",
+          "name": "written report trigger",
+          "doc_value": "as soon as all pertinent information has been accumulated",
+          "unit": "n/a",
+          "qualifier": "as soon as",
+          "day_type": "n/a",
+          "s1_quote": "a written report of the fatal accident as soon as all pertinent information has been accumulated, such report will be filed in the appropriate commission files and available upon proper request or order",
+          "s1_span": [1170, 1367],
+          "derived": null
+        }
+      ]
+    },
+    {
+      "clause_id": "RPL-SAF-PRO-009:14.1",
+      "clause_type": "regulatory_restatement",
+      "text_sha256": "<computed>",
+      "line_start": 440,
+      "citations": ["170 IAC 4-1-3"],
+      "subsection_labels": [],
+      "assessed": true,
+      "route_override": null,
+      "depends_on": [],
+      "cross_doc_refs": ["RPL-LEG-RRS-001"],
+      "parameters": [
+        {
+          "parameter_id": "RPL-SAF-PRO-009:14.1#p1",
+          "kind": "period",
+          "name": "records retention minimum",
+          "doc_value": "at least three years",
+          "unit": "years",
+          "qualifier": "at least",
+          "day_type": "calendar",
+          "s1_quote": "All records required by these rules shall be preserved for at least three years except as otherwise provided herein or by IC 8-1-2-40",
+          "s1_span": [0, 135],
+          "derived": null
+        }
+      ]
+    },
+    {
+      "clause_id": "RPL-SAF-PRO-009:14.2",
+      "clause_type": "regulatory_restatement",
+      "text_sha256": "<computed>",
+      "line_start": 445,
+      "citations": ["170 IAC 4-1-3"],
+      "subsection_labels": [],
+      "assessed": true,
+      "route_override": null,
+      "depends_on": ["RPL-SAF-PRO-009:14.1"],
+      "cross_doc_refs": [],
+      "parameters": [
+        {
+          "parameter_id": "RPL-SAF-PRO-009:14.2#p1",
+          "kind": "condition",
+          "name": "records location — within state",
+          "doc_value": "within the State at the principal place of business",
+          "unit": "n/a",
+          "qualifier": "shall be kept",
+          "day_type": "n/a",
+          "s1_quote": "Such records shall be kept within the State at the principal place of business of the public utility, or at such other places as the utility shall designate after notification to the commission, and shall be open for examination by the commission or its representatives.",
+          "s1_span": [136, 396],
+          "derived": null
+        },
+        {
+          "parameter_id": "RPL-SAF-PRO-009:14.2#p2",
+          "kind": "condition",
+          "name": "records open for examination",
+          "doc_value": "open for examination by the commission or its representatives",
+          "unit": "n/a",
+          "qualifier": "shall be",
+          "day_type": "n/a",
+          "s1_quote": "shall be open for examination by the commission or its representatives",
+          "s1_span": [325, 396],
+          "derived": null
+        }
+      ]
+    },
+    {
+      "clause_id": "RPL-SAF-PRO-009:14.3",
+      "clause_type": "regulatory_restatement",
+      "text_sha256": "<computed>",
+      "line_start": 450,
+      "citations": ["170 IAC 4-1-3"],
+      "subsection_labels": [],
+      "assessed": true,
+      "route_override": null,
+      "depends_on": ["RPL-SAF-PRO-009:14.2"],
+      "cross_doc_refs": [],
+      "parameters": [
+        {
+          "parameter_id": "RPL-SAF-PRO-009:14.3#p1",
+          "kind": "condition",
+          "name": "commission notification of records location",
+          "doc_value": "notify the commission of the office at which such records are kept",
+          "unit": "n/a",
+          "qualifier": "shall notify",
+          "day_type": "n/a",
+          "s1_quote": "Each public utility shall notify the commission of the office at which such records are kept.",
+          "s1_span": [397, 489],
+          "derived": null
+        }
+      ]
+    },
+    {
+      "clause_id": "RPL-SAF-PRO-009:2.2.1",
+      "clause_type": "out_of_scope_reference",
+      "text_sha256": "<computed>",
+      "line_start": 72,
+      "citations": [],
+      "subsection_labels": [],
+      "assessed": false,
+      "route_override": null,
+      "depends_on": [],
+      "cross_doc_refs": [],
+      "parameters": []
+    },
+    {
+      "clause_id": "RPL-SAF-PRO-009:2.2.6",
+      "clause_type": "out_of_scope_reference",
+      "text_sha256": "<computed>",
+      "line_start": 82,
+      "citations": [],
+      "subsection_labels": [],
+      "assessed": false,
+      "route_override": null,
+      "depends_on": [],
+      "cross_doc_refs": [],
+      "parameters": []
+    },
+    {
+      "clause_id": "RPL-SAF-PRO-009:8.3",
+      "clause_type": "internal_procedure",
+      "text_sha256": "<computed>",
+      "line_start": 285,
+      "citations": ["170 IAC 4-1-24"],
+      "subsection_labels": [],
+      "assessed": true,
+      "route_override": null,
+      "depends_on": ["RPL-SAF-PRO-009:8.1.1"],
+      "cross_doc_refs": ["RPL-CMP-REG-001", "RPL-REG-CAL-2025"],
+      "parameters": []
+    },
+    {
+      "clause_id": "RPL-SAF-PRO-009:3.3",
+      "clause_type": "company_position",
+      "text_sha256": "<computed>",
+      "line_start": 97,
+      "citations": [],
+      "subsection_labels": [],
+      "assessed": false,
+      "route_override": null,
+      "depends_on": [],
+      "cross_doc_refs": [],
+      "parameters": [
+        {
+          "parameter_id": "RPL-SAF-PRO-009:3.3#p1",
+          "kind": "condition",
+          "name": "IURC business hours — definition",
+          "doc_value": "8:15 a.m. to 4:45 p.m. ET",
+          "unit": "n/a",
+          "qualifier": "Company position",
+          "day_type": "n/a",
+          "s1_quote": null,
+          "s1_span": null,
+          "derived": null
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "citation": "170 IAC 4-1-1",
+      "disposition": "covered",
+      "coverage_priority": "standard",
+      "clause_ids": ["RPL-SAF-PRO-009:3.1"],
+      "reason": null
+    },
+    {
+      "citation": "170 IAC 4-1-2",
+      "disposition": "covered",
+      "coverage_priority": "high",
+      "clause_ids": ["RPL-SAF-PRO-009:2.1"],
+      "reason": null
+    },
+    {
+      "citation": "170 IAC 4-1-3",
+      "disposition": "covered",
+      "coverage_priority": "high",
+      "clause_ids": ["RPL-SAF-PRO-009:14.1", "RPL-SAF-PRO-009:14.2", "RPL-SAF-PRO-009:14.3"],
+      "reason": null
+    },
+    {
+      "citation": "170 IAC 4-1-24",
+      "disposition": "covered",
+      "coverage_priority": "high",
+      "clause_ids": [
+        "RPL-SAF-PRO-009:8.1.1",
+        "RPL-SAF-PRO-009:8.3",
+        "RPL-SAF-PRO-009:9.2",
+        "RPL-SAF-PRO-009:9.2.1",
+        "RPL-SAF-PRO-009:9.2.2",
+        "RPL-SAF-PRO-009:9.3",
+        "RPL-SAF-PRO-009:9.4"
+      ],
+      "reason": null
+    }
+  ],
+  "interpretations": [
+    {
+      "clause_id": "RPL-SAF-PRO-009:3.3",
+      "question": "What constitutes a 'regular business day' for purposes of the IURC telephone notification timing branches in 170 IAC 4-1-24?",
+      "position": "RPL defines 'regular business day' as a day on which the IURC is open for business: Monday through Friday, not a State of Indiana public holiday, between 8:15 a.m. and 4:45 p.m. ET. Weekends and Indiana state holidays are outside regular business hours.",
+      "pack_citations_considered": ["170 IAC 4-1-24"],
+      "rationale": "170 IAC 4-1-24 uses the phrase 'regular business day' without defining it. The IURC's published operating hours (§1.6 Table X: 8:15 a.m.–4:45 p.m. ET, Monday–Friday) represent the most operationally direct definition because the telephone notice must reach the Commission. RPL has chosen the reading that extends the notification obligation most broadly: any accident outside these hours triggers the after-hours branch, ensuring the Commission is notified as soon as it is open to receive the call."
+    },
+    {
+      "clause_id": "RPL-SAF-PRO-009:7.2",
+      "question": "When a Tier 1 hospitalized event results in the patient's death, at what point does the IURC notification obligation in 170 IAC 4-1-24 attach?",
+      "position": "The notification obligation attaches at the time RPL is informed that the person has died. The clock under 170 IAC 4-1-24 ('as soon as possible after being informed of such an accident') runs from when RPL is informed of the fatal outcome, not from the original incident time.",
+      "pack_citations_considered": ["170 IAC 4-1-24"],
+      "rationale": "170 IAC 4-1-24 refers to 'an accident attended with loss of human life.' A hospitalization that later results in death meets this condition upon the death occurring. The pack's telephone timing ('as soon as possible after being informed') is triggered by RPL being informed — which in a delayed-death scenario is when RPL learns of the fatality."
+    },
+    {
+      "clause_id": "RPL-SAF-PRO-009:8.1.1",
+      "question": "Does the IURC reporting requirement in 170 IAC 4-1-24 apply when the deceased is a third-party member of the public (not an RPL employee or contractor) who contacts RPL distribution facilities?",
+      "position": "Yes. 170 IAC 4-1-24 applies whenever an accident attended with loss of human life arises 'directly or indirectly' from the utility's 'maintenance or operation.' Contact with an energized RPL distribution facility by a member of the public is an event arising from RPL's maintenance or operation of that facility.",
+      "pack_citations_considered": ["170 IAC 4-1-24"],
+      "rationale": "The pack uses the broad nexus 'directly or indirectly arising from or connected with its maintenance or operation,' which encompasses incidents involving members of the public who contact RPL distribution equipment. RPL reads this broadly to include the CUST category."
+    }
+  ],
+  "out_of_scope_references": [
+    {
+      "clause_id": "RPL-SAF-PRO-009:2.2.1",
+      "reference": "IC 8-1-2-114",
+      "note": "Underlying statutory duty; outside the v1 knowledge layer; not assessed"
+    },
+    {
+      "clause_id": "RPL-SAF-PRO-009:2.2.6",
+      "reference": "IC 8-1-2-40",
+      "note": "Records preservation statute referenced in 170 IAC 4-1-3; outside the v1 knowledge layer; not assessed"
+    },
+    {
+      "clause_id": "RPL-SAF-PRO-009:2.2.2",
+      "reference": "IOSHA/OSHA (29 CFR 1904; 29 CFR 1910.269)",
+      "note": "Workplace injury recordkeeping and severe-injury reporting; outside the v1 knowledge layer; governed by RPL-SAF-PRO-010"
+    },
+    {
+      "clause_id": "RPL-SAF-PRO-009:2.2.3",
+      "reference": "49 CFR Part 382 (DOT post-accident drug and alcohol testing for CDL drivers)",
+      "note": "Outside the v1 knowledge layer; governed by RPL-HR-PRO-015"
+    },
+    {
+      "clause_id": "RPL-SAF-PRO-009:2.2.4",
+      "reference": "IC 8-1-26-18 (Indiana 811 damage reporting)",
+      "note": "Outside the v1 knowledge layer; governed by RPL-DO-PRO-020"
+    }
+  ],
+  "value_ledger": [
+    {
+      "clause_id": "RPL-SAF-PRO-009:14.1",
+      "text": "three years",
+      "source": "pack",
+      "ref": "170 IAC 4-1-3: 'preserved for at least three years'"
+    },
+    {
+      "clause_id": "RPL-SAF-PRO-009:8.2",
+      "text": "8:15 a.m. to 4:45 p.m. ET",
+      "source": "section1.6",
+      "ref": "§1.6 Table X — IURC office hours"
+    },
+    {
+      "clause_id": "RPL-SAF-PRO-009:8.2",
+      "text": "January 1, January 20, May 26, July 4, September 1, November 27, November 28, December 24, December 25",
+      "source": "section1.6",
+      "ref": "§1.6 Table X — 2025 State of Indiana public holidays"
+    },
+    {
+      "clause_id": "RPL-SAF-PRO-009:7.3",
+      "text": "within 1 hour",
+      "source": "company_practice",
+      "ref": "Internal performance target, Tier 1 DCC notification (company practice, labeled as such)"
+    },
+    {
+      "clause_id": "RPL-SAF-PRO-009:7.3",
+      "text": "within 2 hours",
+      "source": "company_practice",
+      "ref": "Internal performance target, Tier 2 DCC notification (company practice, labeled as such)"
+    },
+    {
+      "clause_id": "RPL-SAF-PRO-009:7.3",
+      "text": "within 4 hours",
+      "source": "company_practice",
+      "ref": "Internal performance target, Tier 3 DCC notification (company practice, labeled as such)"
+    },
+    {
+      "clause_id": "RPL-SAF-PRO-009:6.5",
+      "text": "within 2 hours",
+      "source": "company_practice",
+      "ref": "EHS-IMS incident report open target (company practice)"
+    },
+    {
+      "clause_id": "RPL-SAF-PRO-009:6.5",
+      "text": "24 hours",
+      "source": "company_practice",
+      "ref": "EHS-F-101 completion target (company practice)"
+    },
+    {
+      "clause_id": "RPL-SAF-PRO-009:11.1",
+      "text": "45 calendar days",
+      "source": "company_practice",
+      "ref": "Tier 1 investigation completion target (company practice, labeled Internal performance target)"
+    },
+    {
+      "clause_id": "RPL-SAF-PRO-009:11.1",
+      "text": "30 calendar days",
+      "source": "company_practice",
+      "ref": "Tier 2 investigation completion target (company practice, labeled Internal performance target)"
+    },
+    {
+      "clause_id": "RPL-SAF-PRO-009:11.1",
+      "text": "14 calendar days",
+      "source": "company_practice",
+      "ref": "Tier 3 investigation completion target (company practice, labeled Internal performance target)"
+    },
+    {
+      "clause_id": "RPL-SAF-PRO-009:11.1",
+      "text": "7 calendar days",
+      "source": "company_practice",
+      "ref": "Tier 4 investigation completion target (company practice, labeled Internal performance target)"
+    },
+    {
+      "clause_id": "RPL-SAF-PRO-009:12.2",
+      "text": "30 calendar days",
+      "source": "company_practice",
+      "ref": "Tier 1 initial CAPA corrective action target (company practice)"
+    },
+    {
+      "clause_id": "RPL-SAF-PRO-009:12.2",
+      "text": "90 calendar days",
+      "source": "company_practice",
+      "ref": "Tier 1 systemic CAPA target (company practice)"
+    },
+    {
+      "clause_id": "RPL-SAF-PRO-009:12.2",
+      "text": "60 calendar days",
+      "source": "company_practice",
+      "ref": "Tier 2 CAPA target (company practice)"
+    },
+    {
+      "clause_id": "RPL-SAF-PRO-009:12.3",
+      "text": "90 days",
+      "source": "company_practice",
+      "ref": "CAPA effectiveness review period (company practice)"
+    },
+    {
+      "clause_id": "RPL-SAF-PRO-009:11.2",
+      "text": "48 hours",
+      "source": "company_practice",
+      "ref": "Witness statement collection target (company practice)"
+    },
+    {
+      "clause_id": "RPL-SAF-PRO-009:15",
+      "text": "3 years",
+      "source": "company_practice",
+      "ref": "SAF-T-06 supervisor refresher cycle (company practice)"
+    }
+  ],
+  "gaps": [],
+  "sources": [
+    {
+      "url": "https://www.puc.pa.gov/documents/utility-files/275/UCTA-8_Electric_Accident_Report_8-2023.pdf",
+      "title": "PA PUC Electric Accident Report Form UCTA-8",
+      "accessed": "not accessed — noted as structure-only reference in task; not used for values",
+      "used_for": "structure",
+      "notes": "Not opened; noted as contaminated for values per spec §2.1. Form layout patterns informed EHS-F-101 and EHS-F-102 design without opening the document."
+    },
+    {
+      "url": "https://www.osha.gov/sites/default/files/OSHA-RK-Forms-Package.pdf",
+      "title": "OSHA Forms 300/301",
+      "accessed": "not accessed for values — referenced in task for EHS-F-101 Part B field layout",
+      "used_for": "structure",
+      "notes": "OSHA 301-style fields noted for employee Part B; no OSHA values imported."
+    }
+  ],
+  "company_practice_values": [
+    {
+      "clause_id": "RPL-SAF-PRO-009:7.3",
+      "name": "Tier 1 internal notification target",
+      "value": "1 hour",
+      "benchmark_source": "Industry practice for Tier 1 utility incidents; no external source"
+    },
+    {
+      "clause_id": "RPL-SAF-PRO-009:11.1",
+      "name": "Tier 1 investigation completion target",
+      "value": "45 calendar days",
+      "benchmark_source": "Company practice; consistent with IURC-jurisdictional utility practice"
+    }
+  ],
+  "considered_no_obligation": [],
+  "worked_examples": [
+    {
+      "clause_id": "RPL-SAF-PRO-009:App-D",
+      "script": "scripts/generate_incident_data.py",
+      "inputs": {
+        "incident_id": "INC-2024-00142",
+        "event_ts": "2024-08-13T10:30",
+        "category": "CUST",
+        "tier": "1",
+        "injury_severity": "fatal"
+      },
+      "outputs": {
+        "iurc_reportable": "Y",
+        "business_hours": "Y",
+        "iurc_phone_ts": "2024-08-13T11:05",
+        "iurc_written_ts": "2024-08-21T09:00"
+      }
+    }
+  ],
+  "notes": "Table S-INC codes in this document (VEH, ENRG, FALL, STRIK, FIRE, CUST, DIGN, EQP, PROP, NMSSSIF, OTHER) follow the task-prompt definition, which takes precedence as the orchestrator's direction. These differ from the general §1.6 Table S-INC codes (INJ-EMP, PUB-CON, etc.). Reported to orchestrator for reconciliation with sibling documents. Person titles used verbatim from people_directory.csv: P08 = Manager Regulatory Affairs; P09 = Regulatory Affairs Analyst; P24 = Director Environmental Health & Safety; P27 = Manager Safety. Prompt titles (VP EHS, Director Regulatory Affairs, Manager Regulatory Compliance, VP Legal) corrected to CSV titles."
+}

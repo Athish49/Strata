@@ -1,0 +1,28 @@
+person_id,name,title,department,reports_to_id,email,phone_ext,location,document_roles,oncall_roles,alternate_person_id
+P01,William Hartley,President & Chief Operating Officer,Executive,,william.hartley@rockridge-pl.example,4001,LAF,,,
+P02,Catherine Brandt,Vice President & General Counsel,Legal,P01,catherine.brandt@rockridge-pl.example,4002,LAF,RPL-LEG-RRS-001:approver,,P01
+P03,Jonathan Pierce,Senior Counsel Regulatory,Legal,P02,jonathan.pierce@rockridge-pl.example,4003,LAF,RPL-TAR-GRR-012:approver;RPL-CS-PRO-004:approver;RPL-DO-PLN-002:approver;RPL-LEG-RRS-001:reviewer,,P02
+P04,Margaret Ellison,Chief Compliance Officer,Compliance,P01,margaret.ellison@rockridge-pl.example,4004,LAF,RPL-CMP-REG-001:approver,,P01
+P05,David Okafor,Manager Regulatory Compliance,Compliance,P04,david.okafor@rockridge-pl.example,4005,LAF,RPL-CMP-REG-001:reviewer,,P04
+P06,Priya Raman,Senior Compliance Analyst,Compliance,P05,priya.raman@rockridge-pl.example,4006,LAF,RPL-CMP-REG-001:owner,,P05
+P07,Thomas Whitfield,Vice President Regulatory & Government Affairs,Regulatory Affairs,P01,thomas.whitfield@rockridge-pl.example,4007,LAF,RPL-REG-CAL-2025:approver,,P08
+P08,Elena Vasquez,Manager Regulatory Affairs,Regulatory Affairs,P07,elena.vasquez@rockridge-pl.example,4008,LAF,RPL-REG-CAL-2025:reviewer;RPL-DCC-PRO-003:approver;RPL-SAF-PRO-009:approver,REG-ONCALL,P07
+P09,Marcus Lee,Regulatory Affairs Analyst,Regulatory Affairs,P08,marcus.lee@rockridge-pl.example,4009,LAF,RPL-REG-CAL-2025:owner,,P08
+P10,Robert Haskins,Manager Rates & Tariffs,Regulatory Affairs,P07,robert.haskins@rockridge-pl.example,4010,LAF,RPL-TAR-GRR-012:reviewer,,P08
+P11,Aisha Thompson,Senior Rates & Tariffs Analyst,Regulatory Affairs,P10,aisha.thompson@rockridge-pl.example,4011,LAF,RPL-TAR-GRR-012:owner,,P10
+P12,Linda Nguyen,Records & Information Manager,Legal,P02,linda.nguyen@rockridge-pl.example,4012,LAF,RPL-LEG-RRS-001:owner,,P03
+P13,Karen Mitchell,Director Customer Service,Customer Operations,P16,karen.mitchell@rockridge-pl.example,4013,LAF,RPL-CS-PRO-004:reviewer;RPL-CS-PRO-011:reviewer,,P16
+P14,Steven Park,Director Customer Operations,Customer Operations,P16,steven.park@rockridge-pl.example,4014,LAF,RPL-CS-PRO-007:reviewer,,P16
+P15,Jasmine Carter,Supervisor Credit & Collections,Customer Operations,P14,jasmine.carter@rockridge-pl.example,4015,LAF,RPL-CS-PRO-004:owner,,P13
+P16,Michael Brennan,Vice President Operations,Operations,P01,michael.brennan@rockridge-pl.example,4016,LAF,RPL-MTR-PGM-001:approver,,P01
+P17,Brian Kowalski,Manager Customer Advocacy & Complaint Resolution,Customer Operations,P13,brian.kowalski@rockridge-pl.example,4017,LAF,RPL-CS-PRO-011:owner,,P13
+P18,Luis Hernandez,Supervisor Metering Services,Metering,P20,luis.hernandez@rockridge-pl.example,4018,THT,RPL-CS-PRO-007:owner,,P20
+P19,Gregory Walsh,Manager Meter Shop & Standards Laboratory,Metering,P20,gregory.walsh@rockridge-pl.example,4019,LAF,RPL-MTR-PGM-001:owner,,P20
+P20,Angela Ruiz,Director Metering,Metering,P16,angela.ruiz@rockridge-pl.example,4020,LAF,RPL-MTR-PGM-001:reviewer,,P16
+P21,Patrick O'Neill,Director Distribution Operations,Distribution Operations,P16,patrick.oneill@rockridge-pl.example,4021,LAF,RPL-DO-PLN-002:reviewer;RPL-DCC-PRO-003:reviewer,,P16
+P22,Rachel Stein,Manager Vegetation Management Program,Distribution Operations,P21,rachel.stein@rockridge-pl.example,4022,CRW,RPL-DO-PLN-002:owner,,P21
+P23,Kevin Adeyemi,Manager Distribution Control Center,Distribution Operations,P21,kevin.adeyemi@rockridge-pl.example,4023,LAF,RPL-DCC-PRO-003:owner,DCC-ESCALATION,P21
+P24,Sandra Kim,Director Environmental Health & Safety,EHS,P16,sandra.kim@rockridge-pl.example,4024,LAF,RPL-ENV-PRO-005:approver;RPL-SAF-PRO-009:reviewer,,P16
+P25,Daniel Foster,Manager Environmental Services,EHS,P24,daniel.foster@rockridge-pl.example,4025,LAF,RPL-ENV-PRO-005:reviewer,ENV-ONCALL,P24
+P26,Hannah Brooks,Senior Environmental Specialist,EHS,P25,hannah.brooks@rockridge-pl.example,4026,LAF,RPL-ENV-PRO-005:owner,ENV-ONCALL,P25
+P27,Tyrone Jackson,Manager Safety,EHS,P24,tyrone.jackson@rockridge-pl.example,4027,LAF,RPL-SAF-PRO-009:owner,SAF-ONCALL,P24

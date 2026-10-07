@@ -1,0 +1,113 @@
+substation_id,substation_name,service_center,county,primary_kv,supply_69kv_line_id,transformer_count,circuit_count
+LAF-001,Knightsville,LAF,Tippecanoe,12.47,69KV-LAF-001,3,5
+LAF-002,Burnettsville,LAF,Tippecanoe,12.47,69KV-LAF-002,3,4
+LAF-003,Marshall,LAF,Tippecanoe,34.5,69KV-LAF-003,3,5
+LAF-004,Cory,LAF,Tippecanoe,12.47,69KV-LAF-004,1,6
+LAF-005,Buffalo,LAF,Tippecanoe,12.47,69KV-LAF-005,3,6
+LAF-006,Wabash,LAF,Tippecanoe,12.47,69KV-LAF-006,2,4
+LAF-007,Dana,LAF,Tippecanoe,12.47,69KV-LAF-007,1,5
+LAF-008,Pittsboro,LAF,Tippecanoe,12.47,69KV-LAF-008,3,4
+LAF-009,Brookston,LAF,Tippecanoe,12.47,69KV-LAF-009,1,5
+LAF-010,Stockwell,LAF,Tippecanoe,12.47,69KV-LAF-010,1,4
+LAF-011,Benton County,LAF,Tippecanoe,12.47,69KV-LAF-011,1,5
+LAF-012,Attica,LAF,Tippecanoe,12.47,69KV-LAF-012,2,6
+LAF-013,Riley,LAF,Tippecanoe,12.47,69KV-LAF-013,1,4
+LAF-014,Boone County,LAF,Tippecanoe,12.47,69KV-LAF-014,1,4
+LAF-015,Alamo West,LAF,Tippecanoe,12.47,69KV-LAF-015,3,4
+LAF-016,Chalmers West,LAF,Tippecanoe,12.47,69KV-LAF-016,3,4
+LAF-017,Diamond,LAF,Tippecanoe,12.47,69KV-LAF-017,1,4
+LAF-018,Perrysville,LAF,Tippecanoe,12.47,69KV-LAF-018,1,6
+LAF-019,Michigantown,LAF,Tippecanoe,12.47,69KV-LAF-019,3,4
+LAF-020,Hillsboro,LAF,Tippecanoe,12.47,69KV-LAF-020,2,5
+LAF-021,Brownsburg,LAF,Tippecanoe,12.47,69KV-LAF-021,1,4
+LAF-022,Pimento,LAF,Tippecanoe,12.47,69KV-LAF-022,3,6
+LAF-023,Rosedale,LAF,Tippecanoe,12.47,69KV-LAF-023,1,4
+LAF-024,Newport,LAF,Tippecanoe,12.47,69KV-LAF-024,2,4
+LAF-025,Staunton,LAF,Tippecanoe,12.47,69KV-LAF-025,3,4
+LAF-026,Otterbein,LAF,Tippecanoe,12.47,69KV-LAF-026,1,5
+LAF-027,Dayton,LAF,Tippecanoe,12.47,69KV-LAF-027,3,4
+LAF-028,Lafayette West,LAF,Tippecanoe,12.47,69KV-LAF-028,3,4
+LAF-029,Whitestown,LAF,Tippecanoe,12.47,69KV-LAF-029,2,5
+THT-001,Idaville,THT,Vigo,12.47,69KV-THT-001,1,5
+THT-002,Hendricks South,THT,Vigo,12.47,69KV-THT-002,1,5
+THT-003,Clinton County,THT,Vigo,34.5,69KV-THT-003,1,4
+THT-004,Cementon,THT,Vigo,12.47,69KV-THT-004,3,4
+THT-005,Clinton Falls,THT,Vigo,34.5,69KV-THT-005,1,6
+THT-006,Wolcott,THT,Vigo,12.47,69KV-THT-006,1,5
+THT-007,Zionsville,THT,Vigo,12.47,69KV-THT-007,3,6
+THT-008,Hillsboro 8,THT,Vigo,12.47,69KV-THT-008,1,5
+THT-009,Ingle,THT,Vigo,12.47,69KV-THT-009,3,4
+THT-010,Alamo East,THT,Vigo,12.47,69KV-THT-010,2,4
+THT-011,Coal Creek,THT,Vigo,12.47,69KV-THT-011,1,5
+THT-012,Lodi 12,THT,Vigo,12.47,69KV-THT-012,1,6
+THT-013,Wingate,THT,Vigo,34.5,69KV-THT-013,2,5
+THT-014,Bowers,THT,Vigo,12.47,69KV-THT-014,1,5
+THT-015,West Terre Haute,THT,Vigo,12.47,69KV-THT-015,1,4
+THT-016,Reynolds,THT,Vigo,12.47,69KV-THT-016,3,4
+THT-017,Covington,THT,Vigo,12.47,69KV-THT-017,1,5
+DAN-001,Danville,DAN,Hendricks,12.47,69KV-DAN-001,3,7
+DAN-002,Wingate North,DAN,Hendricks,12.47,69KV-DAN-002,2,6
+DAN-003,Lafayette South,DAN,Hendricks,12.47,69KV-DAN-003,1,4
+DAN-004,Battle Ground,DAN,Hendricks,12.47,69KV-DAN-004,2,5
+DAN-005,Shadeland,DAN,Hendricks,12.47,69KV-DAN-005,1,5
+DAN-006,Montezuma,DAN,Hendricks,12.47,69KV-DAN-006,3,4
+DAN-007,Fountain Park 7,DAN,Hendricks,12.47,69KV-DAN-007,3,6
+DAN-008,Turkey Run,DAN,Hendricks,12.47,69KV-DAN-008,1,4
+DAN-009,Darlington,DAN,Hendricks,12.47,69KV-DAN-009,1,4
+DAN-010,Cayuga 10,DAN,Hendricks,12.47,69KV-DAN-010,3,7
+DAN-011,Lafayette East,DAN,Hendricks,12.47,69KV-DAN-011,2,4
+DAN-012,Sedalia 12,DAN,Hendricks,12.47,69KV-DAN-012,2,4
+DAN-013,Walton,DAN,Hendricks,34.5,69KV-DAN-013,2,6
+DAN-014,Jamestown,DAN,Hendricks,12.47,69KV-DAN-014,1,4
+DAN-015,Lewis,DAN,Boone,12.47,69KV-DAN-015,1,5
+DAN-016,Plainfield,DAN,Boone,12.47,69KV-DAN-016,3,5
+DAN-017,Idaville 3,DAN,Boone,12.47,69KV-DAN-017,3,4
+DAN-018,Wildcat 4,DAN,Boone,12.47,69KV-DAN-018,1,5
+DAN-019,Wea Creek 5,DAN,Boone,12.47,69KV-DAN-019,1,6
+DAN-020,Fountain Park,DAN,Boone,12.47,69KV-DAN-020,2,4
+DAN-021,Frankfort,DAN,Boone,12.47,69KV-DAN-021,3,4
+DAN-022,Big Creek,DAN,Boone,12.47,69KV-DAN-022,2,5
+DAN-023,Buck Creek,DAN,Boone,12.47,69KV-DAN-023,1,4
+DAN-024,Rockville 10,DAN,Boone,34.5,69KV-DAN-024,1,6
+DAN-025,Avon,DAN,Boone,12.47,69KV-DAN-025,2,5
+DAN-026,Forest,DAN,Boone,12.47,69KV-DAN-026,3,4
+CRW-001,Waynetown,CRW,Putnam,12.47,69KV-CRW-001,1,4
+CRW-002,Chalmers,CRW,Putnam,12.47,69KV-CRW-002,3,4
+CRW-003,Romney,CRW,Putnam,12.47,69KV-CRW-003,1,4
+CRW-004,Brazil,CRW,Putnam,12.47,69KV-CRW-004,2,5
+CRW-005,Fontanet,CRW,Putnam,12.47,69KV-CRW-005,2,4
+CRW-006,Roachdale,CRW,Fountain,12.47,69KV-CRW-006,1,5
+CRW-007,Kirklin,CRW,Fountain,12.47,69KV-CRW-007,1,6
+CRW-008,Newtown,CRW,Fountain,34.5,69KV-CRW-008,1,4
+LAF-030,Otterbein 1,LAF,Warren,12.47,69KV-LAF-030,2,4
+LAF-031,Pine Creek,LAF,Warren,34.5,69KV-LAF-031,1,7
+LAF-032,Terre Haute,LAF,Warren,12.47,69KV-LAF-032,2,5
+LAF-033,Monticello East,LAF,Benton,12.47,69KV-LAF-033,1,5
+LAF-034,Lafayette North,LAF,Benton,34.5,69KV-LAF-034,1,5
+LAF-035,Seelyville,LAF,Benton,34.5,69KV-LAF-035,3,4
+LAF-036,Indian Creek,LAF,Carroll,34.5,69KV-LAF-036,1,5
+LAF-037,Covington East,LAF,Carroll,12.47,69KV-LAF-037,1,4
+LAF-038,Frankfort East,LAF,Carroll,12.47,69KV-LAF-038,1,5
+LAF-039,Tippecanoe,LAF,Carroll,12.47,69KV-LAF-039,3,6
+FRK-001,Linden,FRK,Clinton,12.47,69KV-FRK-001,1,4
+FRK-002,Carroll County,FRK,Clinton,12.47,69KV-FRK-002,2,4
+FRK-003,Fountain North,FRK,Clinton,12.47,69KV-FRK-003,3,4
+FRK-004,Lebanon,FRK,Clinton,12.47,69KV-FRK-004,2,4
+FRK-005,Warren County 5,FRK,Clinton,34.5,69KV-FRK-005,1,4
+FRK-006,Wildcat 6,FRK,Clinton,12.47,69KV-FRK-006,3,5
+CRW-009,Alamo,CRW,Montgomery,12.47,69KV-CRW-009,3,4
+CRW-010,Knightsville 2,CRW,Montgomery,12.47,69KV-CRW-010,3,5
+CRW-011,New Market,CRW,Montgomery,12.47,69KV-CRW-011,3,4
+CRW-012,Yeddo,CRW,Montgomery,12.47,69KV-CRW-012,3,5
+CRW-013,Thorntown,CRW,Montgomery,34.5,69KV-CRW-013,1,4
+CRW-014,Fountain County,CRW,Montgomery,12.47,69KV-CRW-014,1,5
+CRW-015,Monticello 7,CRW,Montgomery,12.47,69KV-CRW-015,1,4
+CRW-016,Vermillion County,CRW,Parke,34.5,69KV-CRW-016,2,4
+CRW-017,New Richmond,CRW,Parke,12.47,69KV-CRW-017,2,4
+CRW-018,Brookfield,CRW,Parke,12.47,69KV-CRW-018,3,6
+THT-018,Wallace,THT,Vermillion,34.5,69KV-THT-018,3,5
+THT-019,West Terre Haute 2,THT,Vermillion,12.47,69KV-THT-019,1,6
+THT-020,Sedalia,THT,Vermillion,12.47,69KV-THT-020,1,5
+THT-021,Monon 4,THT,Vermillion,12.47,69KV-THT-021,2,4
+THT-022,Flora,THT,Vermillion,12.47,69KV-THT-022,3,5
+FRK-007,Veedersburg,FRK,White,12.47,69KV-FRK-007,3,4

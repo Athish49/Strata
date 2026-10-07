@@ -1,0 +1,34 @@
+{
+  "standard": "ANSI/ASQC Standard Z1.9",
+  "edition": "1993",
+  "table": "Table A-2 — Sample Size Code Letters and Sample Sizes (Variables Sampling, Normal Inspection)",
+  "inspection_level": "II",
+  "prepared_by": "Corpus Orchestrator",
+  "date": "2025-10-06",
+  "paywall_status": "PAYWALLED — exact table values not independently verifiable from the original document",
+  "orchestrator_instruction": "Per Appendix O item O-6: this file is supplied as the sampling reference for T18. However, because ANSI/ASQC Z1.9-1993 is a paywalled document and the exact Table A-2 values cannot be independently verified, the T18 agent must follow the fallback rule from the T18 spec: 'If no such file is supplied, or the pack names no standard, RPL's sample-size table is written as company practice (labeled, no citation) and recorded in basis as internal_procedure.' Apply that rule: write RPL's sample-size table as COMPANY PRACTICE, label it explicitly as 'Internal procedure: RPL Meter Sampling Plan (based on variables-sampling principles consistent with ANSI/ASQC Z1.9-1993 Inspection Level II)', and record in basis as 'internal_procedure'. Do NOT assert that specific numeric values come from the standard unless you have verified them from the actual document.",
+  "citation_in_pack": "170 IAC 4-1-10 (c): 'a number of meters to be tested as specified in Table A-2, ANSI/ASQC Standard Z1.9, dated 1993, using Inspection Level II'",
+  "t18_action": "company_practice",
+  "basis_source": "internal_procedure",
+  "note": "The standard name and edition are cited per the pack. The sample-size values below are indicative only (from widely-published academic descriptions of the standard's principles) and must be labeled as company practice in the T18 document. They are provided here solely as a plausible starting point for RPL's internal sampling plan.",
+  "indicative_values_company_practice": {
+    "description": "RPL Internal Meter Sampling Plan — consistent with ANSI/ASQC Z1.9-1993 Inspection Level II principles (company practice; not a reproduction of the standard)",
+    "lot_sizes": [
+      {"lot_size_min": 2,      "lot_size_max": 8,      "code_letter": "B", "sample_size": 3},
+      {"lot_size_min": 9,      "lot_size_max": 15,     "code_letter": "C", "sample_size": 4},
+      {"lot_size_min": 16,     "lot_size_max": 25,     "code_letter": "D", "sample_size": 5},
+      {"lot_size_min": 26,     "lot_size_max": 50,     "code_letter": "E", "sample_size": 7},
+      {"lot_size_min": 51,     "lot_size_max": 90,     "code_letter": "F", "sample_size": 10},
+      {"lot_size_min": 91,     "lot_size_max": 150,    "code_letter": "G", "sample_size": 15},
+      {"lot_size_min": 151,    "lot_size_max": 280,    "code_letter": "H", "sample_size": 25},
+      {"lot_size_min": 281,    "lot_size_max": 500,    "code_letter": "I", "sample_size": 35},
+      {"lot_size_min": 501,    "lot_size_max": 1200,   "code_letter": "J", "sample_size": 50},
+      {"lot_size_min": 1201,   "lot_size_max": 3200,   "code_letter": "K", "sample_size": 75},
+      {"lot_size_min": 3201,   "lot_size_max": 10000,  "code_letter": "L", "sample_size": 100},
+      {"lot_size_min": 10001,  "lot_size_max": 35000,  "code_letter": "M", "sample_size": 150},
+      {"lot_size_min": 35001,  "lot_size_max": 150000, "code_letter": "N", "sample_size": 200},
+      {"lot_size_min": 150001, "lot_size_max": 500000, "code_letter": "P", "sample_size": 300},
+      {"lot_size_min": 500001, "lot_size_max": null,   "code_letter": "Q", "sample_size": 400}
+    ]
+  }
+}

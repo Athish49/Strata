@@ -1,0 +1,139 @@
+{
+  "status": "PASS",
+  "tests": {
+    "a_no_s2_shingles": {
+      "result": "PASS",
+      "description": "No pack contains any S2-only 6-word shingle",
+      "issue_count": 0,
+      "issues": []
+    },
+    "b_no_s2_only_citations": {
+      "result": "PASS",
+      "description": "No pack contains any citation that exists only in S2",
+      "issue_count": 0,
+      "issues": []
+    },
+    "c_no_extra_fields": {
+      "result": "PASS",
+      "description": "No pack field other than the specified schema fields",
+      "issue_count": 0,
+      "issues": []
+    },
+    "d_high_counts": {
+      "result": "PASS",
+      "description": "Per-pack high counts >= 2 where possible",
+      "issue_count": 0,
+      "issues": []
+    }
+  },
+  "pack_results": {
+    "T10": {
+      "sections_total": 76,
+      "active_sections": 75,
+      "high_sections": 17,
+      "test_a_issues": [],
+      "test_b_issues": [],
+      "test_c_issues": [],
+      "test_d_issue": null
+    },
+    "T11": {
+      "sections_total": 76,
+      "active_sections": 75,
+      "high_sections": 17,
+      "test_a_issues": [],
+      "test_b_issues": [],
+      "test_c_issues": [],
+      "test_d_issue": null
+    },
+    "T12": {
+      "sections_total": 76,
+      "active_sections": 75,
+      "high_sections": 17,
+      "test_a_issues": [],
+      "test_b_issues": [],
+      "test_c_issues": [],
+      "test_d_issue": null
+    },
+    "T13": {
+      "sections_total": 63,
+      "active_sections": 62,
+      "high_sections": 16,
+      "test_a_issues": [],
+      "test_b_issues": [],
+      "test_c_issues": [],
+      "test_d_issue": null
+    },
+    "T14": {
+      "sections_total": 13,
+      "active_sections": 13,
+      "high_sections": 5,
+      "test_a_issues": [],
+      "test_b_issues": [],
+      "test_c_issues": [],
+      "test_d_issue": null
+    },
+    "T15": {
+      "sections_total": 13,
+      "active_sections": 13,
+      "high_sections": 4,
+      "test_a_issues": [],
+      "test_b_issues": [],
+      "test_c_issues": [],
+      "test_d_issue": null
+    },
+    "T16": {
+      "sections_total": 23,
+      "active_sections": 23,
+      "high_sections": 4,
+      "test_a_issues": [],
+      "test_b_issues": [],
+      "test_c_issues": [],
+      "test_d_issue": null
+    },
+    "T17": {
+      "sections_total": 12,
+      "active_sections": 11,
+      "high_sections": 4,
+      "test_a_issues": [],
+      "test_b_issues": [],
+      "test_c_issues": [],
+      "test_d_issue": null
+    },
+    "T18": {
+      "sections_total": 11,
+      "active_sections": 11,
+      "high_sections": 5,
+      "test_a_issues": [],
+      "test_b_issues": [],
+      "test_c_issues": [],
+      "test_d_issue": null
+    },
+    "T19": {
+      "sections_total": 8,
+      "active_sections": 8,
+      "high_sections": 3,
+      "test_a_issues": [],
+      "test_b_issues": [],
+      "test_c_issues": [],
+      "test_d_issue": null
+    },
+    "T20": {
+      "sections_total": 0,
+      "active_sections": 0,
+      "high_sections": 0,
+      "test_a_issues": [],
+      "test_b_issues": [],
+      "test_c_issues": [],
+      "test_d_issue": null
+    },
+    "T21": {
+      "sections_total": 4,
+      "active_sections": 4,
+      "high_sections": 3,
+      "test_a_issues": [],
+      "test_b_issues": [],
+      "test_c_issues": [],
+      "test_d_issue": null
+    }
+  }
+}

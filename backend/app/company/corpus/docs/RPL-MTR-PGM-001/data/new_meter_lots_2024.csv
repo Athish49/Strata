@@ -1,0 +1,13 @@
+lot_id,vendor_family,technology,form,meter_class,received_date,lot_size,sample_size,sample_failures,lot_result,disposition
+LOT-NA-2024-054,Vendor_B,solid_state_AMI,2S,CL320,2024-12-09,3295,100,0,accepted,placed_in_inventory
+LOT-NA-2024-055,Vendor_A,solid_state_AMI,2S,CL320,2024-07-03,3972,100,0,accepted,placed_in_inventory
+LOT-NA-2024-056,Vendor_C,solid_state_AMI,2S,CL320,2024-08-20,1025,50,0,accepted,placed_in_inventory
+LOT-NA-2024-057,Vendor_A,solid_state_AMI,9S,CL20,2024-01-18,1306,75,0,accepted,placed_in_inventory
+LOT-NA-2024-058,Vendor_B,solid_state_AMI,2S,CL200,2024-01-18,1145,50,0,accepted,placed_in_inventory
+LOT-NA-2024-059,Vendor_C,solid_state_AMI,16S,CL200,2024-09-03,3927,100,0,accepted,placed_in_inventory
+LOT-NA-2024-060,Vendor_A,solid_state_AMI,16S,CL200,2024-10-12,1593,75,0,accepted,placed_in_inventory
+LOT-NA-2024-061,Vendor_A,solid_state_AMI,12S,CL200,2024-04-24,795,50,0,accepted,placed_in_inventory
+LOT-NA-2024-062,Vendor_B,solid_state_AMI,2S,CL200,2024-06-09,3841,100,0,accepted,placed_in_inventory
+LOT-NA-2024-063,Vendor_C,solid_state_AMI,2S,CL200,2024-01-05,1492,75,0,accepted,placed_in_inventory
+LOT-NA-2024-064,Vendor_C,solid_state_AMI,16S,CL200,2024-09-22,637,50,0,accepted,placed_in_inventory
+LOT-NA-2024-065,Vendor_B,solid_state_AMI,12S,CL200,2024-03-09,1250,75,0,accepted,placed_in_inventory

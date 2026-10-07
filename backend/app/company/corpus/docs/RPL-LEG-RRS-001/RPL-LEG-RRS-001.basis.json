@@ -1,0 +1,561 @@
+{
+  "doc_id": "RPL-LEG-RRS-001",
+  "version": "7.2",
+  "law_as_of": "2024-12-31",
+  "snapshot": "S1",
+  "approved_date": "2025-01-23",
+  "effective_date": "2025-01-23",
+  "o3_applied": true,
+  "o3_note": "Approval and effective dates moved to 2025-01-23 per O-3",
+  "owner_id": "P03",
+  "owner_name": "Jonathan Pierce",
+  "owner_title": "Senior Counsel Regulatory",
+  "reviewer_id": "P08",
+  "reviewer_name": "Elena Vasquez",
+  "reviewer_title": "Manager Regulatory Affairs",
+  "approver_id": "P24",
+  "approver_name": "Sandra Kim",
+  "approver_title": "Director Environmental Health & Safety",
+  "supersedes": "RPL-LEG-RRS-001 v7.1 (2024-04-01)",
+  "grounding_pack": "T12",
+  "wave3_references_freeze": "/corpus/qa/clause_id_freeze.json",
+  "record_series_count": 86,
+  "wave2_clause_ref_populated": 55,
+  "value_ledger": [
+    {
+      "rrs_id": "RRS-CS-003",
+      "field": "retention_period",
+      "value": "6 months from final resolution",
+      "source": "170 IAC 16-1-4(b)",
+      "citation": "170 IAC 16-1-4",
+      "note": "Minimum statutory requirement; company practice extends to 3 years for IURC-escalated cases (RRS-CS-004)"
+    },
+    {
+      "rrs_id": "RRS-MTR-001",
+      "field": "retention_period",
+      "value": "Permanent",
+      "source": "170 IAC 4-1-4(b)",
+      "citation": "170 IAC 4-1-4",
+      "note": "Permanent records for each meter: year of purchase, identification, and record of last test"
+    },
+    {
+      "rrs_id": "RRS-DO-001",
+      "field": "retention_period",
+      "value": "3 years",
+      "source": "170 IAC 4-1-23; 170 IAC 4-1-3",
+      "citation": "170 IAC 4-1-23",
+      "note": "Service interruption timing and records per 170 IAC 4-1-23"
+    },
+    {
+      "rrs_id": "RRS-ENV-004",
+      "field": "retention_period",
+      "value": "25 years",
+      "source": "40 CFR 761.180(b)(1)",
+      "citation": "40 CFR 761.180",
+      "note": "PCB disposal manifests and certificates of disposal; 25-year federal requirement"
+    },
+    {
+      "rrs_id": "RRS-SAF-003",
+      "field": "retention_period",
+      "value": "Duration of employment + 30 years",
+      "source": "29 CFR 1910.1020",
+      "citation": "29 CFR 1910.1020",
+      "note": "Occupational medical records; 30-year post-employment for latent disease"
+    },
+    {
+      "rrs_id": "RRS-SAF-001",
+      "field": "retention_period",
+      "value": "5 years from end of calendar year",
+      "source": "29 CFR 1904.33",
+      "citation": "29 CFR 1904.33",
+      "note": "OSHA 300 logs, 300A summaries, 301 reports"
+    },
+    {
+      "rrs_id": "RRS-DO-005",
+      "field": "retention_period",
+      "value": "3 years",
+      "source": "170 IAC 4-9-8; 170 IAC 4-9-9; 170 IAC 4-1-3",
+      "citation": "170 IAC 4-9",
+      "note": "Vegetation management dispute resolution records"
+    }
+  ],
+  "out_of_scope_references": [
+    {
+      "citation": "170 IAC 1-2-1",
+      "note": "Governs separate tariff schedule filing per location/service; used in Section 2.6 for scope rationale, not a direct retention requirement"
+    },
+    {
+      "citation": "170 IAC 4-1-10",
+      "note": "Periodic meter testing schedule (16-year program); informs metering program but is a testing standard, not a standalone retention rule"
+    }
+  ],
+  "company_practice_items": [
+    "RRS-CS-002: 7 years after closure (exceeds 3-year IURC minimum)",
+    "RRS-CS-004: 3 years for IURC-escalated complaints (exceeds 6-month minimum per 170 IAC 16-1-4)",
+    "RRS-CS-006: Life of account + 7 years (no specific IURC retention rule for service agreements)",
+    "RRS-DO-003: Permanent for GIS/system maps (operational necessity)",
+    "RRS-DO-004: 7 years for work orders (aligns with FERC plant records)",
+    "RRS-DO-008: 3 years for underground locate records",
+    "RRS-DO-009: 10 years for substation maintenance records",
+    "RRS-DO-010: 7 years for DCC logs",
+    "RRS-FIN-001: 10 years for general ledger (exceeds FERC minimum)",
+    "RRS-FIN-005: 7 years for tax returns (covers longest SOL)",
+    "RRS-FIN-008: 7 years for bank records",
+    "RRS-FIN-009: 7 years for accounts payable",
+    "RRS-GEN-007: 7 years for cybersecurity incident records (IC 24-4.9 breach law)"
+  ],
+  "interpretations": [
+    {
+      "issue": "170 IAC 4-1-3 vs. longer specific periods",
+      "resolution": "Applied dual-requirement rule (Section 5.3): longer of applicable periods governs; 3-year minimum is a floor, not a cap"
+    },
+    {
+      "issue": "170 IAC 16-1-4(b) 6-month dispute record minimum",
+      "resolution": "6-month minimum applied for routine utility-level disputes (RRS-CS-003); company practice extended to 3 years for IURC-escalated matters (RRS-CS-004)"
+    },
+    {
+      "issue": "170 IAC 4-1-4(b) permanent meter records",
+      "resolution": "Interpreted as covering both active and retired meters; RRS-MTR-001 and RRS-MTR-008 designated permanent"
+    }
+  ],
+  "coverage": {
+    "iurc_iac_sections_used": [
+      "170 IAC 1-2-1",
+      "170 IAC 1-5-2",
+      "170 IAC 1-5-9",
+      "170 IAC 1-5-11",
+      "170 IAC 1-6-5",
+      "170 IAC 4-1-3",
+      "170 IAC 4-1-4",
+      "170 IAC 4-1-7",
+      "170 IAC 4-1-10",
+      "170 IAC 4-1-11",
+      "170 IAC 4-1-21",
+      "170 IAC 4-1-23",
+      "170 IAC 4-1-24",
+      "170 IAC 4-9-4",
+      "170 IAC 4-9-8",
+      "170 IAC 4-9-9",
+      "170 IAC 16-1-4"
+    ],
+    "ferc_sections_used": [
+      "18 CFR 125.2",
+      "18 CFR 35.19a"
+    ],
+    "epa_sections_used": [
+      "40 CFR 112.7(e)",
+      "40 CFR 112.12",
+      "40 CFR 261.180",
+      "40 CFR 262.40",
+      "40 CFR 280",
+      "40 CFR 122.41"
+    ],
+    "iosha_sections_used": [
+      "29 CFR 1904.33",
+      "29 CFR 1910.20",
+      "29 CFR 1910.146(e)(6)",
+      "29 CFR 1910.147",
+      "29 CFR 1910.332"
+    ],
+    "indiana_code_sections_used": [
+      "IC 8-1-2-40",
+      "IC 8-1-2-86",
+      "IC 23-1-52-1",
+      "IC 24-4.9",
+      "IC 34-11-2-7",
+      "IC 6-8.1-5-2",
+      "IC 6-3-4-8"
+    ],
+    "wave2_docs_cross_referenced": [
+      "RPL-TAR-GRR-012",
+      "RPL-CS-PRO-004",
+      "RPL-CS-PRO-007",
+      "RPL-CS-PRO-011",
+      "RPL-MTR-PGM-001",
+      "RPL-DO-PLN-002",
+      "RPL-DCC-PRO-003",
+      "RPL-ENV-PRO-005",
+      "RPL-SAF-PRO-009"
+    ],
+    "170 IAC 1-2-11": {
+      "disposition": "covered",
+      "implementing_document": "RPL-TAR-GRR-012",
+      "note": "Covered through implementing procedure"
+    },
+    "170 IAC 1-5-2": {
+      "disposition": "covered",
+      "implementing_document": "RPL-TAR-GRR-012",
+      "note": "Covered through implementing procedure"
+    },
+    "170 IAC 1-5-6": {
+      "disposition": "covered",
+      "implementing_document": "RPL-TAR-GRR-012",
+      "note": "Covered through implementing procedure"
+    },
+    "170 IAC 1-6-2": {
+      "disposition": "covered",
+      "implementing_document": "RPL-CS-PRO-004",
+      "note": "Covered through implementing procedure"
+    },
+    "170 IAC 4-1-15": {
+      "disposition": "covered",
+      "implementing_document": "RPL-CS-PRO-004",
+      "note": "Covered through implementing procedure"
+    },
+    "170 IAC 1-5-12": {
+      "disposition": "covered",
+      "implementing_document": "RPL-TAR-GRR-012",
+      "note": "Covered through implementing procedure"
+    },
+    "170 IAC 4-1-3": {
+      "disposition": "covered",
+      "implementing_document": "RPL-CS-PRO-007",
+      "note": "Covered through implementing procedure"
+    },
+    "170 IAC 4-1-29": {
+      "disposition": "covered",
+      "implementing_document": "RPL-CS-PRO-004",
+      "note": "Covered through implementing procedure"
+    },
+    "170 IAC 16-1-5": {
+      "disposition": "covered",
+      "implementing_document": "RPL-CS-PRO-004",
+      "note": "Covered through implementing procedure"
+    },
+    "170 IAC 1-2-3": {
+      "disposition": "covered",
+      "implementing_document": "RPL-TAR-GRR-012",
+      "note": "Covered through implementing procedure"
+    },
+    "170 IAC 1-5-13": {
+      "disposition": "covered",
+      "implementing_document": "RPL-TAR-GRR-012",
+      "note": "Covered through implementing procedure"
+    },
+    "170 IAC 4-1-18": {
+      "disposition": "covered",
+      "implementing_document": "RPL-CS-PRO-004",
+      "note": "Covered through implementing procedure"
+    },
+    "170 IAC 4-1-19": {
+      "disposition": "covered",
+      "implementing_document": "RPL-CS-PRO-004",
+      "note": "Covered through implementing procedure"
+    },
+    "170 IAC 4-9-9": {
+      "disposition": "covered",
+      "implementing_document": "RPL-DO-PLN-002",
+      "note": "Covered through implementing procedure"
+    },
+    "170 IAC 4-1-11": {
+      "disposition": "covered",
+      "implementing_document": "RPL-CS-PRO-004",
+      "note": "Covered through implementing procedure"
+    },
+    "170 IAC 4-1-25": {
+      "disposition": "covered",
+      "implementing_document": "RPL-CS-PRO-004",
+      "note": "Covered through implementing procedure"
+    },
+    "170 IAC 1-7-2": {
+      "disposition": "covered",
+      "implementing_document": "RPL-TAR-GRR-012",
+      "note": "Covered through implementing procedure"
+    },
+    "170 IAC 4-9-2": {
+      "disposition": "covered",
+      "implementing_document": "RPL-DO-PLN-002",
+      "note": "Covered through implementing procedure"
+    },
+    "170 IAC 1-6-4": {
+      "disposition": "covered",
+      "implementing_document": "RPL-CS-PRO-004",
+      "note": "Covered through implementing procedure"
+    },
+    "170 IAC 1-5-11": {
+      "disposition": "covered",
+      "implementing_document": "RPL-TAR-GRR-012",
+      "note": "Covered through implementing procedure"
+    },
+    "170 IAC 1-6-5": {
+      "disposition": "covered",
+      "implementing_document": "RPL-CS-PRO-004",
+      "note": "Covered through implementing procedure"
+    },
+    "170 IAC 1-5-10": {
+      "disposition": "covered",
+      "implementing_document": "RPL-TAR-GRR-012",
+      "note": "Covered through implementing procedure"
+    },
+    "170 IAC 4-9-7": {
+      "disposition": "covered",
+      "implementing_document": "RPL-DO-PLN-002",
+      "note": "Covered through implementing procedure"
+    },
+    "170 IAC 4-9-8": {
+      "disposition": "covered",
+      "implementing_document": "RPL-DO-PLN-002",
+      "note": "Covered through implementing procedure"
+    },
+    "170 IAC 4-9-5": {
+      "disposition": "covered",
+      "implementing_document": "RPL-DO-PLN-002",
+      "note": "Covered through implementing procedure"
+    },
+    "170 IAC 4-1-14": {
+      "disposition": "covered",
+      "implementing_document": "RPL-CS-PRO-004",
+      "note": "Covered through implementing procedure"
+    },
+    "170 IAC 1-2-2": {
+      "disposition": "covered",
+      "implementing_document": "RPL-TAR-GRR-012",
+      "note": "Covered through implementing procedure"
+    },
+    "170 IAC 4-9-11": {
+      "disposition": "covered",
+      "implementing_document": "RPL-DO-PLN-002",
+      "note": "Covered through implementing procedure"
+    },
+    "170 IAC 4-1-23": {
+      "disposition": "covered",
+      "implementing_document": "RPL-CS-PRO-004",
+      "note": "Covered through implementing procedure"
+    },
+    "170 IAC 4-9-13": {
+      "disposition": "covered",
+      "implementing_document": "RPL-DO-PLN-002",
+      "note": "Covered through implementing procedure"
+    },
+    "170 IAC 16-1-3": {
+      "disposition": "covered",
+      "implementing_document": "RPL-CS-PRO-004",
+      "note": "Covered through implementing procedure"
+    },
+    "170 IAC 1-5-1": {
+      "disposition": "covered",
+      "implementing_document": "RPL-TAR-GRR-012",
+      "note": "Covered through implementing procedure"
+    },
+    "170 IAC 4-1-27": {
+      "disposition": "covered",
+      "implementing_document": "RPL-CS-PRO-004",
+      "note": "Covered through implementing procedure"
+    },
+    "170 IAC 4-1-21": {
+      "disposition": "covered",
+      "implementing_document": "RPL-CS-PRO-004",
+      "note": "Covered through implementing procedure"
+    },
+    "170 IAC 4-1-5": {
+      "disposition": "covered",
+      "implementing_document": "RPL-MTR-PGM-001",
+      "note": "Covered through implementing procedure"
+    },
+    "170 IAC 1-5-4": {
+      "disposition": "covered",
+      "implementing_document": "RPL-TAR-GRR-012",
+      "note": "Covered through implementing procedure"
+    },
+    "170 IAC 4-1-17": {
+      "disposition": "covered",
+      "implementing_document": "RPL-CS-PRO-004",
+      "note": "Covered through implementing procedure"
+    },
+    "170 IAC 1-6-3": {
+      "disposition": "covered",
+      "implementing_document": "RPL-CS-PRO-004",
+      "note": "Covered through implementing procedure"
+    },
+    "170 IAC 16-1-1": {
+      "disposition": "covered",
+      "implementing_document": "RPL-CS-PRO-004",
+      "note": "Covered through implementing procedure"
+    },
+    "170 IAC 4-1-7": {
+      "disposition": "covered",
+      "implementing_document": "RPL-CS-PRO-007",
+      "note": "Covered through implementing procedure"
+    },
+    "170 IAC 1-2-1": {
+      "disposition": "covered",
+      "implementing_document": "RPL-TAR-GRR-012",
+      "note": "Covered through implementing procedure"
+    },
+    "170 IAC 1-5-9": {
+      "disposition": "covered",
+      "implementing_document": "RPL-TAR-GRR-012",
+      "note": "Covered through implementing procedure"
+    },
+    "170 IAC 4-1-28": {
+      "disposition": "covered",
+      "implementing_document": "RPL-CS-PRO-004",
+      "note": "Covered through implementing procedure"
+    },
+    "170 IAC 1-6-1": {
+      "disposition": "covered",
+      "implementing_document": "RPL-CS-PRO-004",
+      "note": "Covered through implementing procedure"
+    },
+    "170 IAC 1-2-7": {
+      "disposition": "covered",
+      "implementing_document": "RPL-TAR-GRR-012",
+      "note": "Covered through implementing procedure"
+    },
+    "170 IAC 4-1-10": {
+      "disposition": "covered",
+      "implementing_document": "RPL-CS-PRO-004",
+      "note": "Covered through implementing procedure"
+    },
+    "170 IAC 4-1-30": {
+      "disposition": "covered",
+      "implementing_document": "RPL-CS-PRO-007",
+      "note": "Covered through implementing procedure"
+    },
+    "170 IAC 1-7-3": {
+      "disposition": "covered",
+      "implementing_document": "RPL-TAR-GRR-012",
+      "note": "Covered through implementing procedure"
+    },
+    "170 IAC 4-9-3": {
+      "disposition": "covered",
+      "implementing_document": "RPL-DO-PLN-002",
+      "note": "Covered through implementing procedure"
+    },
+    "170 IAC 1-5-16": {
+      "disposition": "covered",
+      "implementing_document": "RPL-TAR-GRR-012",
+      "note": "Covered through implementing procedure"
+    },
+    "170 IAC 4-1-26": {
+      "disposition": "covered",
+      "implementing_document": "RPL-CS-PRO-004",
+      "note": "Covered through implementing procedure"
+    },
+    "170 IAC 4-1-12": {
+      "disposition": "covered",
+      "implementing_document": "RPL-CS-PRO-004",
+      "note": "Covered through implementing procedure"
+    },
+    "170 IAC 4-1-24": {
+      "disposition": "covered",
+      "implementing_document": "RPL-CS-PRO-004",
+      "note": "Covered through implementing procedure"
+    },
+    "170 IAC 1-2-9": {
+      "disposition": "covered",
+      "implementing_document": "RPL-TAR-GRR-012",
+      "note": "Covered through implementing procedure"
+    },
+    "170 IAC 4-9-12": {
+      "disposition": "covered",
+      "implementing_document": "RPL-DO-PLN-002",
+      "note": "Covered through implementing procedure"
+    },
+    "170 IAC 1-7-1": {
+      "disposition": "covered",
+      "implementing_document": "RPL-TAR-GRR-012",
+      "note": "Covered through implementing procedure"
+    },
+    "170 IAC 4-1-9": {
+      "disposition": "covered",
+      "implementing_document": "RPL-CS-PRO-007",
+      "note": "Covered through implementing procedure"
+    },
+    "170 IAC 4-1-22": {
+      "disposition": "covered",
+      "implementing_document": "RPL-CS-PRO-004",
+      "note": "Covered through implementing procedure"
+    },
+    "170 IAC 4-1-4": {
+      "disposition": "covered",
+      "implementing_document": "RPL-MTR-PGM-001",
+      "note": "Covered through implementing procedure"
+    },
+    "170 IAC 4-9-1": {
+      "disposition": "covered",
+      "implementing_document": "RPL-DO-PLN-002",
+      "note": "Covered through implementing procedure"
+    },
+    "170 IAC 4-9-6": {
+      "disposition": "covered",
+      "implementing_document": "RPL-DO-PLN-002",
+      "note": "Covered through implementing procedure"
+    },
+    "170 IAC 1-2-10": {
+      "disposition": "covered",
+      "implementing_document": "RPL-TAR-GRR-012",
+      "note": "Covered through implementing procedure"
+    },
+    "170 IAC 1-2-12": {
+      "disposition": "covered",
+      "implementing_document": "RPL-TAR-GRR-012",
+      "note": "Covered through implementing procedure"
+    },
+    "170 IAC 4-1-20": {
+      "disposition": "covered",
+      "implementing_document": "RPL-CS-PRO-004",
+      "note": "Covered through implementing procedure"
+    },
+    "170 IAC 4-9-10": {
+      "disposition": "covered",
+      "implementing_document": "RPL-DO-PLN-002",
+      "note": "Covered through implementing procedure"
+    },
+    "170 IAC 16-1-4": {
+      "disposition": "covered",
+      "implementing_document": "RPL-CS-PRO-004",
+      "note": "Covered through implementing procedure"
+    },
+    "170 IAC 4-1-13": {
+      "disposition": "covered",
+      "implementing_document": "RPL-CS-PRO-004",
+      "note": "Covered through implementing procedure"
+    },
+    "170 IAC 4-1-1": {
+      "disposition": "covered",
+      "implementing_document": "RPL-CS-PRO-004",
+      "note": "Covered through implementing procedure"
+    },
+    "170 IAC 4-1-6": {
+      "disposition": "covered",
+      "implementing_document": "RPL-MTR-PGM-001",
+      "note": "Covered through implementing procedure"
+    },
+    "170 IAC 16-1-6": {
+      "disposition": "covered",
+      "implementing_document": "RPL-CS-PRO-004",
+      "note": "Covered through implementing procedure"
+    },
+    "170 IAC 16-1-7": {
+      "disposition": "covered",
+      "implementing_document": "RPL-CS-PRO-004",
+      "note": "Covered through implementing procedure"
+    },
+    "170 IAC 16-1-2": {
+      "disposition": "covered",
+      "implementing_document": "RPL-CS-PRO-004",
+      "note": "Covered through implementing procedure"
+    },
+    "170 IAC 4-1-16": {
+      "disposition": "covered",
+      "implementing_document": "RPL-CS-PRO-004",
+      "note": "Covered through implementing procedure"
+    },
+    "170 IAC 4-1-2": {
+      "disposition": "covered",
+      "implementing_document": "RPL-CS-PRO-004",
+      "note": "Covered through implementing procedure"
+    },
+    "170 IAC 4-1-8": {
+      "disposition": "covered",
+      "implementing_document": "RPL-CS-PRO-007",
+      "note": "Covered through implementing procedure"
+    },
+    "170 IAC 4-9-4": {
+      "disposition": "covered",
+      "implementing_document": "RPL-DO-PLN-002",
+      "note": "Covered through implementing procedure"
+    }
+  }
+}
