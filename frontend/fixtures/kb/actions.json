@@ -1,1 +1,1616 @@
-[]
+[
+ {
+  "source_system": "federal_register",
+  "source_id": "2025-02101",
+  "agency": "ferc",
+  "stream": "federal_register",
+  "action_type": "proposed_rule",
+  "status": "in_progress",
+  "date_published": "2025-02-04",
+  "title": "Transmission Planning and Cost Allocation; Notice of Proposed Rulemaking",
+  "abstract": "The Commission proposes revisions to long-term regional transmission planning requirements. This summary is invented placeholder text for the Strata demo.",
+  "cfr_references": [
+   "18 CFR 35.28",
+   "18 CFR 35.34"
+  ],
+  "legal_refs": [],
+  "docket_ids": [
+   "RM25-4-000"
+  ],
+  "rin": "1902-AF99",
+  "din": null,
+  "source_url": "https://example.invalid/strata-placeholder/federal_register/2025-02101",
+  "related": [],
+  "placeholder": true
+ },
+ {
+  "source_system": "federal_register",
+  "source_id": "2025-04418",
+  "agency": "ferc",
+  "stream": "federal_register",
+  "action_type": "final_rule",
+  "status": "approved",
+  "date_published": "2025-04-18",
+  "title": "Market-Based Rate Authority; Final Rule",
+  "abstract": "Updates reporting of changes in status for market-based rate sellers. This summary is invented placeholder text for the Strata demo.",
+  "cfr_references": [
+   "18 CFR 35.41",
+   "18 CFR 35.42"
+  ],
+  "legal_refs": [],
+  "docket_ids": [
+   "RM24-6-000"
+  ],
+  "rin": "1902-AF88",
+  "din": null,
+  "source_url": "https://example.invalid/strata-placeholder/federal_register/2025-04418",
+  "related": [
+   {
+    "source_id": "2025-02101",
+    "relationship_type": "related_to"
+   }
+  ],
+  "placeholder": true
+ },
+ {
+  "source_system": "federal_register",
+  "source_id": "2025-05630",
+  "agency": "ferc",
+  "stream": "federal_register",
+  "action_type": "correction",
+  "status": "approved",
+  "date_published": "2025-05-12",
+  "title": "Market-Based Rate Authority; Correction",
+  "abstract": "Corrects a section reference in the final rule. This summary is invented placeholder text for the Strata demo.",
+  "cfr_references": [
+   "18 CFR 35.42"
+  ],
+  "legal_refs": [],
+  "docket_ids": [
+   "RM24-6-000"
+  ],
+  "rin": null,
+  "din": null,
+  "source_url": "https://example.invalid/strata-placeholder/federal_register/2025-05630",
+  "related": [
+   {
+    "source_id": "2025-04418",
+    "relationship_type": "corrects"
+   }
+  ],
+  "placeholder": true
+ },
+ {
+  "source_system": "federal_register",
+  "source_id": "2025-07220",
+  "agency": "ferc",
+  "stream": "federal_register",
+  "action_type": "advance_notice",
+  "status": "in_progress",
+  "date_published": "2025-07-03",
+  "title": "Large Load Interconnection; Advance Notice of Proposed Rulemaking",
+  "abstract": "The Commission seeks comment on interconnection of large loads to the transmission system. This summary is invented placeholder text for the Strata demo.",
+  "cfr_references": [
+   "18 CFR 35.36"
+  ],
+  "legal_refs": [],
+  "docket_ids": [
+   "RM26-4-000"
+  ],
+  "rin": null,
+  "din": null,
+  "source_url": "https://example.invalid/strata-placeholder/federal_register/2025-07220",
+  "related": [],
+  "placeholder": true
+ },
+ {
+  "source_system": "federal_register",
+  "source_id": "2025-09905",
+  "agency": "ferc",
+  "stream": "federal_register",
+  "action_type": "final_rule",
+  "status": "approved",
+  "date_published": "2025-09-22",
+  "title": "Open Access Transmission Tariff Reforms; Final Rule",
+  "abstract": "Revises pro forma tariff provisions for transmission service requests. This summary is invented placeholder text for the Strata demo.",
+  "cfr_references": [
+   "18 CFR 35.28",
+   "18 CFR 37.5",
+   "18 CFR 37.6"
+  ],
+  "legal_refs": [],
+  "docket_ids": [
+   "RM24-9-000"
+  ],
+  "rin": null,
+  "din": null,
+  "source_url": "https://example.invalid/strata-placeholder/federal_register/2025-09905",
+  "related": [
+   {
+    "source_id": "2025-02101",
+    "relationship_type": "supersedes"
+   }
+  ],
+  "placeholder": true
+ },
+ {
+  "source_system": "federal_register",
+  "source_id": "2025-11877",
+  "agency": "ferc",
+  "stream": "federal_register",
+  "action_type": "final_rule",
+  "status": "approved",
+  "date_published": "2025-11-14",
+  "title": "Standards for Business Practices of Interstate Natural Gas Pipelines and Electric Utilities",
+  "abstract": "Incorporates by reference updated NAESB business practice standards. This summary is invented placeholder text for the Strata demo.",
+  "cfr_references": [
+   "18 CFR 38.2",
+   "18 CFR 38.3"
+  ],
+  "legal_refs": [],
+  "docket_ids": [
+   "RM05-5-000"
+  ],
+  "rin": null,
+  "din": null,
+  "source_url": "https://example.invalid/strata-placeholder/federal_register/2025-11877",
+  "related": [],
+  "placeholder": true
+ },
+ {
+  "source_system": "federal_register",
+  "source_id": "2026-00412",
+  "agency": "ferc",
+  "stream": "federal_register",
+  "action_type": "proposed_rule",
+  "status": "in_progress",
+  "date_published": "2026-01-09",
+  "title": "Standards of Conduct for Transmission Providers; Notice of Proposed Rulemaking",
+  "abstract": "Proposes to streamline the standards of conduct. This summary is invented placeholder text for the Strata demo.",
+  "cfr_references": [
+   "18 CFR 37.3",
+   "18 CFR 37.4"
+  ],
+  "legal_refs": [],
+  "docket_ids": [
+   "RM26-7-000"
+  ],
+  "rin": null,
+  "din": null,
+  "source_url": "https://example.invalid/strata-placeholder/federal_register/2026-00412",
+  "related": [],
+  "placeholder": true
+ },
+ {
+  "source_system": "federal_register",
+  "source_id": "2026-02755",
+  "agency": "ferc",
+  "stream": "federal_register",
+  "action_type": "interim_final_rule",
+  "status": "approved",
+  "date_published": "2026-02-20",
+  "title": "Rate Schedule Filing Procedures; Interim Final Rule",
+  "abstract": "Temporary procedures for electronic filing of rate schedule changes. This summary is invented placeholder text for the Strata demo.",
+  "cfr_references": [
+   "18 CFR 35.12",
+   "18 CFR 35.13"
+  ],
+  "legal_refs": [],
+  "docket_ids": [
+   "RM26-9-000"
+  ],
+  "rin": null,
+  "din": null,
+  "source_url": "https://example.invalid/strata-placeholder/federal_register/2026-02755",
+  "related": [
+   {
+    "source_id": "2025-09905",
+    "relationship_type": "related_to"
+   }
+  ],
+  "placeholder": true
+ },
+ {
+  "source_system": "federal_register",
+  "source_id": "2026-04188",
+  "agency": "ferc",
+  "stream": "federal_register",
+  "action_type": "direct_final_rule",
+  "status": "approved",
+  "date_published": "2026-04-02",
+  "title": "Refund Procedures; Direct Final Rule",
+  "abstract": "Technical update to refund interest computation. This summary is invented placeholder text for the Strata demo.",
+  "cfr_references": [
+   "18 CFR 35.19a"
+  ],
+  "legal_refs": [],
+  "docket_ids": [
+   "RM26-12-000"
+  ],
+  "rin": null,
+  "din": null,
+  "source_url": "https://example.invalid/strata-placeholder/federal_register/2026-04188",
+  "related": [],
+  "placeholder": true
+ },
+ {
+  "source_system": "federal_register",
+  "source_id": "2026-06091",
+  "agency": "ferc",
+  "stream": "federal_register",
+  "action_type": "final_rule",
+  "status": "approved",
+  "date_published": "2026-06-17",
+  "title": "Transmission Planning and Cost Allocation; Final Rule",
+  "abstract": "Final rule following the 2025 proposal; withdraws the earlier proposed approach. This summary is invented placeholder text for the Strata demo.",
+  "cfr_references": [
+   "18 CFR 35.28",
+   "18 CFR 35.34"
+  ],
+  "legal_refs": [],
+  "docket_ids": [
+   "RM25-4-000"
+  ],
+  "rin": null,
+  "din": null,
+  "source_url": "https://example.invalid/strata-placeholder/federal_register/2026-06091",
+  "related": [
+   {
+    "source_id": "2025-02101",
+    "relationship_type": "supersedes"
+   },
+   {
+    "source_id": "2025-09905",
+    "relationship_type": "related_to"
+   }
+  ],
+  "placeholder": true
+ },
+ {
+  "source_system": "federal_register",
+  "source_id": "2026-07304",
+  "agency": "ferc",
+  "stream": "federal_register",
+  "action_type": "correction",
+  "status": "approved",
+  "date_published": "2026-07-08",
+  "title": "Transmission Planning and Cost Allocation; Correction",
+  "abstract": "Corrects effective-date language in the final rule. This summary is invented placeholder text for the Strata demo.",
+  "cfr_references": [
+   "18 CFR 35.28"
+  ],
+  "legal_refs": [],
+  "docket_ids": [
+   "RM25-4-000"
+  ],
+  "rin": null,
+  "din": null,
+  "source_url": "https://example.invalid/strata-placeholder/federal_register/2026-07304",
+  "related": [
+   {
+    "source_id": "2026-06091",
+    "relationship_type": "corrects"
+   }
+  ],
+  "placeholder": true
+ },
+ {
+  "source_system": "federal_register",
+  "source_id": "2026-08812",
+  "agency": "ferc",
+  "stream": "federal_register",
+  "action_type": "proposed_rule",
+  "status": "in_progress",
+  "date_published": "2026-08-25",
+  "title": "Generator Interconnection Procedures; Notice of Proposed Rulemaking",
+  "abstract": "Following the advance notice, proposes pro forma large load and generator procedures. This summary is invented placeholder text for the Strata demo.",
+  "cfr_references": [
+   "18 CFR 35.36",
+   "18 CFR 35.28"
+  ],
+  "legal_refs": [],
+  "docket_ids": [
+   "RM26-4-000"
+  ],
+  "rin": null,
+  "din": null,
+  "source_url": "https://example.invalid/strata-placeholder/federal_register/2026-08812",
+  "related": [
+   {
+    "source_id": "2025-07220",
+    "relationship_type": "related_to"
+   }
+  ],
+  "placeholder": true
+ },
+ {
+  "source_system": "federal_register",
+  "source_id": "2025-03317",
+  "agency": "epa",
+  "stream": "federal_register",
+  "action_type": "proposed_rule",
+  "status": "in_progress",
+  "date_published": "2025-03-06",
+  "title": "Standards of Performance for Stationary Combustion Turbines; Proposed Rule",
+  "abstract": "Proposes revised NOx limits for new stationary combustion turbines. This summary is invented placeholder text for the Strata demo.",
+  "cfr_references": [
+   "40 CFR 60.4300",
+   "40 CFR 60.4320"
+  ],
+  "legal_refs": [],
+  "docket_ids": [
+   "EPA-HQ-OAR-2024-0419"
+  ],
+  "rin": "2060-AV12",
+  "din": null,
+  "source_url": "https://example.invalid/strata-placeholder/federal_register/2025-03317",
+  "related": [],
+  "placeholder": true
+ },
+ {
+  "source_system": "federal_register",
+  "source_id": "2025-06114",
+  "agency": "epa",
+  "stream": "federal_register",
+  "action_type": "final_rule",
+  "status": "approved",
+  "date_published": "2025-06-10",
+  "title": "Standards of Performance for Stationary Combustion Turbines; Final Rule",
+  "abstract": "Finalizes revised NOx limits for turbines. This summary is invented placeholder text for the Strata demo.",
+  "cfr_references": [
+   "40 CFR 60.4300",
+   "40 CFR 60.4320",
+   "40 CFR 60.4333"
+  ],
+  "legal_refs": [],
+  "docket_ids": [
+   "EPA-HQ-OAR-2024-0419"
+  ],
+  "rin": "2060-AV12",
+  "din": null,
+  "source_url": "https://example.invalid/strata-placeholder/federal_register/2025-06114",
+  "related": [
+   {
+    "source_id": "2025-03317",
+    "relationship_type": "supersedes"
+   }
+  ],
+  "placeholder": true
+ },
+ {
+  "source_system": "federal_register",
+  "source_id": "2025-07712",
+  "agency": "epa",
+  "stream": "federal_register",
+  "action_type": "correction",
+  "status": "approved",
+  "date_published": "2025-07-21",
+  "title": "Stationary Combustion Turbines; Correction",
+  "abstract": "Corrects a limit in table 1. This summary is invented placeholder text for the Strata demo.",
+  "cfr_references": [
+   "40 CFR 60.4320"
+  ],
+  "legal_refs": [],
+  "docket_ids": [
+   "EPA-HQ-OAR-2024-0419"
+  ],
+  "rin": null,
+  "din": null,
+  "source_url": "https://example.invalid/strata-placeholder/federal_register/2025-07712",
+  "related": [
+   {
+    "source_id": "2025-06114",
+    "relationship_type": "corrects"
+   }
+  ],
+  "placeholder": true
+ },
+ {
+  "source_system": "federal_register",
+  "source_id": "2025-08840",
+  "agency": "epa",
+  "stream": "federal_register",
+  "action_type": "advance_notice",
+  "status": "in_progress",
+  "date_published": "2025-08-12",
+  "title": "Greenhouse Gas Standards for Fossil Fuel-Fired Units; Advance Notice",
+  "abstract": "Seeks information on carbon dioxide standards review. This summary is invented placeholder text for the Strata demo.",
+  "cfr_references": [
+   "40 CFR 60.5508",
+   "40 CFR 60.5520"
+  ],
+  "legal_refs": [],
+  "docket_ids": [
+   "EPA-HQ-OAR-2025-0124"
+  ],
+  "rin": null,
+  "din": null,
+  "source_url": "https://example.invalid/strata-placeholder/federal_register/2025-08840",
+  "related": [],
+  "placeholder": true
+ },
+ {
+  "source_system": "federal_register",
+  "source_id": "2025-10190",
+  "agency": "epa",
+  "stream": "federal_register",
+  "action_type": "final_rule",
+  "status": "approved",
+  "date_published": "2025-10-30",
+  "title": "National Emission Standards for Stationary Reciprocating Engines; Final Rule",
+  "abstract": "Amends emergency engine operating provisions. This summary is invented placeholder text for the Strata demo.",
+  "cfr_references": [
+   "40 CFR 63.6590",
+   "40 CFR 63.6603",
+   "40 CFR 63.6640"
+  ],
+  "legal_refs": [],
+  "docket_ids": [
+   "EPA-HQ-OAR-2024-0300"
+  ],
+  "rin": null,
+  "din": null,
+  "source_url": "https://example.invalid/strata-placeholder/federal_register/2025-10190",
+  "related": [],
+  "placeholder": true
+ },
+ {
+  "source_system": "federal_register",
+  "source_id": "2026-00977",
+  "agency": "epa",
+  "stream": "federal_register",
+  "action_type": "proposed_rule",
+  "status": "in_progress",
+  "date_published": "2026-01-15",
+  "title": "Mercury and Air Toxics Standards Review; Proposed Rule",
+  "abstract": "Proposes revisions to MATS requirements for electric utility steam generating units. This summary is invented placeholder text for the Strata demo.",
+  "cfr_references": [
+   "40 CFR 63.9980",
+   "40 CFR 63.10000",
+   "40 CFR 63.10005"
+  ],
+  "legal_refs": [],
+  "docket_ids": [
+   "EPA-HQ-OAR-2025-0310"
+  ],
+  "rin": null,
+  "din": null,
+  "source_url": "https://example.invalid/strata-placeholder/federal_register/2026-00977",
+  "related": [],
+  "placeholder": true
+ },
+ {
+  "source_system": "federal_register",
+  "source_id": "2026-02140",
+  "agency": "epa",
+  "stream": "federal_register",
+  "action_type": "interim_final_rule",
+  "status": "approved",
+  "date_published": "2026-02-11",
+  "title": "Acid Rain Program Allowance Tracking; Interim Final Rule",
+  "abstract": "Interim updates to allowance tracking procedures. This summary is invented placeholder text for the Strata demo.",
+  "cfr_references": [
+   "40 CFR 73.20",
+   "40 CFR 73.30",
+   "40 CFR 72.90"
+  ],
+  "legal_refs": [],
+  "docket_ids": [
+   "EPA-HQ-OAR-2026-0011"
+  ],
+  "rin": null,
+  "din": null,
+  "source_url": "https://example.invalid/strata-placeholder/federal_register/2026-02140",
+  "related": [],
+  "placeholder": true
+ },
+ {
+  "source_system": "federal_register",
+  "source_id": "2026-03611",
+  "agency": "epa",
+  "stream": "federal_register",
+  "action_type": "direct_final_rule",
+  "status": "approved",
+  "date_published": "2026-03-24",
+  "title": "Acid Rain Program; Direct Final Rule",
+  "abstract": "Technical updates to designated representative provisions. This summary is invented placeholder text for the Strata demo.",
+  "cfr_references": [
+   "40 CFR 72.20"
+  ],
+  "legal_refs": [],
+  "docket_ids": [
+   "EPA-HQ-OAR-2026-0014"
+  ],
+  "rin": null,
+  "din": null,
+  "source_url": "https://example.invalid/strata-placeholder/federal_register/2026-03611",
+  "related": [
+   {
+    "source_id": "2026-02140",
+    "relationship_type": "related_to"
+   }
+  ],
+  "placeholder": true
+ },
+ {
+  "source_system": "federal_register",
+  "source_id": "2026-05022",
+  "agency": "epa",
+  "stream": "federal_register",
+  "action_type": "final_rule",
+  "status": "approved",
+  "date_published": "2026-05-19",
+  "title": "Greenhouse Gas Standards for Fossil Fuel-Fired Units; Final Rule",
+  "abstract": "Finalizes revised carbon dioxide standards; withdraws prior advance notice approach. This summary is invented placeholder text for the Strata demo.",
+  "cfr_references": [
+   "40 CFR 60.5508",
+   "40 CFR 60.5520"
+  ],
+  "legal_refs": [],
+  "docket_ids": [
+   "EPA-HQ-OAR-2025-0124"
+  ],
+  "rin": null,
+  "din": null,
+  "source_url": "https://example.invalid/strata-placeholder/federal_register/2026-05022",
+  "related": [
+   {
+    "source_id": "2025-08840",
+    "relationship_type": "supersedes"
+   }
+  ],
+  "placeholder": true
+ },
+ {
+  "source_system": "federal_register",
+  "source_id": "2026-06450",
+  "agency": "epa",
+  "stream": "federal_register",
+  "action_type": "correction",
+  "status": "approved",
+  "date_published": "2026-06-30",
+  "title": "Greenhouse Gas Standards; Correction",
+  "abstract": "Corrects applicability date. This summary is invented placeholder text for the Strata demo.",
+  "cfr_references": [
+   "40 CFR 60.5508"
+  ],
+  "legal_refs": [],
+  "docket_ids": [
+   "EPA-HQ-OAR-2025-0124"
+  ],
+  "rin": null,
+  "din": null,
+  "source_url": "https://example.invalid/strata-placeholder/federal_register/2026-06450",
+  "related": [
+   {
+    "source_id": "2026-05022",
+    "relationship_type": "corrects"
+   }
+  ],
+  "placeholder": true
+ },
+ {
+  "source_system": "federal_register",
+  "source_id": "2026-09133",
+  "agency": "epa",
+  "stream": "federal_register",
+  "action_type": "proposed_rule",
+  "status": "in_progress",
+  "date_published": "2026-09-29",
+  "title": "Stationary Source Notification and Recordkeeping Requirements; Proposed Rule",
+  "abstract": "Proposes electronic recordkeeping updates. This summary is invented placeholder text for the Strata demo.",
+  "cfr_references": [
+   "40 CFR 60.7",
+   "40 CFR 60.8"
+  ],
+  "legal_refs": [],
+  "docket_ids": [
+   "EPA-HQ-OAR-2026-0201"
+  ],
+  "rin": null,
+  "din": null,
+  "source_url": "https://example.invalid/strata-placeholder/federal_register/2026-09133",
+  "related": [],
+  "placeholder": true
+ },
+ {
+  "source_system": "iurc_gaos",
+  "source_id": "GAO-2024-03",
+  "agency": "iurc",
+  "stream": "iurc_gaos",
+  "action_type": "order",
+  "status": "approved",
+  "date_published": "2024-06-12",
+  "title": "General Administrative Order 2024-3: Electronic Filing",
+  "abstract": "Establishes electronic filing procedures. This summary is invented placeholder text for the Strata demo.",
+  "cfr_references": [],
+  "legal_refs": [
+   "170 IAC 1-2-7"
+  ],
+  "docket_ids": [
+   "GAO-2024-03"
+  ],
+  "rin": null,
+  "din": null,
+  "source_url": "https://example.invalid/strata-placeholder/iurc_gaos/GAO-2024-03",
+  "related": [],
+  "placeholder": true
+ },
+ {
+  "source_system": "iurc_gaos",
+  "source_id": "GAO-2024-05",
+  "agency": "iurc",
+  "stream": "iurc_gaos",
+  "action_type": "order",
+  "status": "approved",
+  "date_published": "2024-09-03",
+  "title": "General Administrative Order 2024-5: Public Comment Procedures",
+  "abstract": "Prescribes how public comments are accepted. This summary is invented placeholder text for the Strata demo.",
+  "cfr_references": [],
+  "legal_refs": [
+   "170 IAC 1-5-6"
+  ],
+  "docket_ids": [
+   "GAO-2024-05"
+  ],
+  "rin": null,
+  "din": null,
+  "source_url": "https://example.invalid/strata-placeholder/iurc_gaos/GAO-2024-05",
+  "related": [],
+  "placeholder": true
+ },
+ {
+  "source_system": "iurc_gaos",
+  "source_id": "GAO-2024-07",
+  "agency": "iurc",
+  "stream": "iurc_gaos",
+  "action_type": "order",
+  "status": "approved",
+  "date_published": "2024-12-10",
+  "title": "General Administrative Order 2024-7: Winter Disconnection Reporting",
+  "abstract": "Requires utilities to report winter-period disconnections monthly. This summary is invented placeholder text for the Strata demo.",
+  "cfr_references": [],
+  "legal_refs": [
+   "170 IAC 4-1-16",
+   "170 IAC 4-1-16.6"
+  ],
+  "docket_ids": [
+   "GAO-2024-07"
+  ],
+  "rin": null,
+  "din": null,
+  "source_url": "https://example.invalid/strata-placeholder/iurc_gaos/GAO-2024-07",
+  "related": [],
+  "placeholder": true
+ },
+ {
+  "source_system": "iurc_gaos",
+  "source_id": "GAO-2025-01",
+  "agency": "iurc",
+  "stream": "iurc_gaos",
+  "action_type": "order",
+  "status": "approved",
+  "date_published": "2025-01-22",
+  "title": "General Administrative Order 2025-1: Administrative Filing Review",
+  "abstract": "Clarifies review of administrative filings. This summary is invented placeholder text for the Strata demo.",
+  "cfr_references": [],
+  "legal_refs": [
+   "170 IAC 1-6-3",
+   "170 IAC 1-6-4"
+  ],
+  "docket_ids": [
+   "GAO-2025-01"
+  ],
+  "rin": null,
+  "din": null,
+  "source_url": "https://example.invalid/strata-placeholder/iurc_gaos/GAO-2025-01",
+  "related": [],
+  "placeholder": true
+ },
+ {
+  "source_system": "iurc_gaos",
+  "source_id": "GAO-2025-02",
+  "agency": "iurc",
+  "stream": "iurc_gaos",
+  "action_type": "order",
+  "status": "approved",
+  "date_published": "2025-03-18",
+  "title": "General Administrative Order 2025-2: Informal Complaint Reporting",
+  "abstract": "Revises quarterly informal complaint reporting. This summary is invented placeholder text for the Strata demo.",
+  "cfr_references": [],
+  "legal_refs": [
+   "170 IAC 16-1-3",
+   "170 IAC 16-1-7"
+  ],
+  "docket_ids": [
+   "GAO-2025-02"
+  ],
+  "rin": null,
+  "din": null,
+  "source_url": "https://example.invalid/strata-placeholder/iurc_gaos/GAO-2025-02",
+  "related": [],
+  "placeholder": true
+ },
+ {
+  "source_system": "iurc_gaos",
+  "source_id": "GAO-2025-04",
+  "agency": "iurc",
+  "stream": "iurc_gaos",
+  "action_type": "order",
+  "status": "approved",
+  "date_published": "2025-06-09",
+  "title": "General Administrative Order 2025-4: Winter Disconnection Reporting (Revised)",
+  "abstract": "Replaces GAO 2024-7 with a quarterly report. This summary is invented placeholder text for the Strata demo.",
+  "cfr_references": [],
+  "legal_refs": [
+   "170 IAC 4-1-16",
+   "170 IAC 4-1-16.6"
+  ],
+  "docket_ids": [
+   "GAO-2025-04"
+  ],
+  "rin": null,
+  "din": null,
+  "source_url": "https://example.invalid/strata-placeholder/iurc_gaos/GAO-2025-04",
+  "related": [
+   {
+    "source_id": "GAO-2024-07",
+    "relationship_type": "supersedes"
+   }
+  ],
+  "placeholder": true
+ },
+ {
+  "source_system": "iurc_gaos",
+  "source_id": "GAO-2025-05",
+  "agency": "iurc",
+  "stream": "iurc_gaos",
+  "action_type": "order",
+  "status": "approved",
+  "date_published": "2025-07-14",
+  "title": "General Administrative Order 2025-5: Correction to GAO 2025-4",
+  "abstract": "Corrects a due date in the revised order. This summary is invented placeholder text for the Strata demo.",
+  "cfr_references": [],
+  "legal_refs": [
+   "170 IAC 4-1-16"
+  ],
+  "docket_ids": [
+   "GAO-2025-05"
+  ],
+  "rin": null,
+  "din": null,
+  "source_url": "https://example.invalid/strata-placeholder/iurc_gaos/GAO-2025-05",
+  "related": [
+   {
+    "source_id": "GAO-2025-04",
+    "relationship_type": "corrects"
+   }
+  ],
+  "placeholder": true
+ },
+ {
+  "source_system": "iurc_gaos",
+  "source_id": "GAO-2025-07",
+  "agency": "iurc",
+  "stream": "iurc_gaos",
+  "action_type": "order",
+  "status": "approved",
+  "date_published": "2025-10-02",
+  "title": "General Administrative Order 2025-7: Reliability Reporting",
+  "abstract": "Updates reliability reporting forms. This summary is invented placeholder text for the Strata demo.",
+  "cfr_references": [],
+  "legal_refs": [
+   "170 IAC 4-1-29",
+   "170 IAC 4-1-23"
+  ],
+  "docket_ids": [
+   "GAO-2025-07"
+  ],
+  "rin": null,
+  "din": null,
+  "source_url": "https://example.invalid/strata-placeholder/iurc_gaos/GAO-2025-07",
+  "related": [],
+  "placeholder": true
+ },
+ {
+  "source_system": "iurc_gaos",
+  "source_id": "GAO-2026-01",
+  "agency": "iurc",
+  "stream": "iurc_gaos",
+  "action_type": "order",
+  "status": "approved",
+  "date_published": "2026-02-05",
+  "title": "General Administrative Order 2026-1: Customer Deposit Practices",
+  "abstract": "Guidance on deposit refunds. This summary is invented placeholder text for the Strata demo.",
+  "cfr_references": [],
+  "legal_refs": [
+   "170 IAC 4-1-13"
+  ],
+  "docket_ids": [
+   "GAO-2026-01"
+  ],
+  "rin": null,
+  "din": null,
+  "source_url": "https://example.invalid/strata-placeholder/iurc_gaos/GAO-2026-01",
+  "related": [],
+  "placeholder": true
+ },
+ {
+  "source_system": "iurc_gaos",
+  "source_id": "GAO-2026-03",
+  "agency": "iurc",
+  "stream": "iurc_gaos",
+  "action_type": "order",
+  "status": "approved",
+  "date_published": "2026-06-03",
+  "title": "General Administrative Order 2026-3: Meter Testing Records",
+  "abstract": "Clarifies meter test record retention. This summary is invented placeholder text for the Strata demo.",
+  "cfr_references": [],
+  "legal_refs": [
+   "170 IAC 4-1-20",
+   "170 IAC 4-1-21"
+  ],
+  "docket_ids": [
+   "GAO-2026-03"
+  ],
+  "rin": null,
+  "din": null,
+  "source_url": "https://example.invalid/strata-placeholder/iurc_gaos/GAO-2026-03",
+  "related": [],
+  "placeholder": true
+ },
+ {
+  "source_system": "iurc_investigations",
+  "source_id": "IURC-46001",
+  "agency": "iurc",
+  "stream": "iurc_investigations",
+  "action_type": "commission_investigation",
+  "status": "in_progress",
+  "date_published": "2023-01-18",
+  "title": "Commission Investigation into Utility Winter Disconnection Practices",
+  "abstract": "An invented summary of the investigation or order. This summary is invented placeholder text for the Strata demo.",
+  "cfr_references": [],
+  "legal_refs": [
+   "170 IAC 4-1-16",
+   "170 IAC 4-1-16.6"
+  ],
+  "docket_ids": [
+   "Cause No. 46001"
+  ],
+  "rin": null,
+  "din": null,
+  "source_url": "https://example.invalid/strata-placeholder/iurc_investigations/IURC-46001",
+  "related": [],
+  "placeholder": true
+ },
+ {
+  "source_system": "iurc_investigations",
+  "source_id": "IURC-46110",
+  "agency": "iurc",
+  "stream": "iurc_investigations",
+  "action_type": "commission_investigation",
+  "status": "approved",
+  "date_published": "2023-08-02",
+  "title": "Investigation into Reliability Reporting Practices",
+  "abstract": "An invented summary of the investigation or order. This summary is invented placeholder text for the Strata demo.",
+  "cfr_references": [],
+  "legal_refs": [
+   "170 IAC 4-1-29",
+   "170 IAC 4-1-23"
+  ],
+  "docket_ids": [
+   "Cause No. 46110"
+  ],
+  "rin": null,
+  "din": null,
+  "source_url": "https://example.invalid/strata-placeholder/iurc_investigations/IURC-46110",
+  "related": [],
+  "placeholder": true
+ },
+ {
+  "source_system": "iurc_investigations",
+  "source_id": "IURC-46225",
+  "agency": "iurc",
+  "stream": "iurc_investigations",
+  "action_type": "order",
+  "status": "approved",
+  "date_published": "2024-02-27",
+  "title": "Order Concluding Reliability Reporting Investigation",
+  "abstract": "An invented summary of the investigation or order. This summary is invented placeholder text for the Strata demo.",
+  "cfr_references": [],
+  "legal_refs": [
+   "170 IAC 4-1-29"
+  ],
+  "docket_ids": [
+   "Cause No. 46225"
+  ],
+  "rin": null,
+  "din": null,
+  "source_url": "https://example.invalid/strata-placeholder/iurc_investigations/IURC-46225",
+  "related": [
+   {
+    "source_id": "IURC-46110",
+    "relationship_type": "supersedes"
+   }
+  ],
+  "placeholder": true
+ },
+ {
+  "source_system": "iurc_investigations",
+  "source_id": "IURC-46301",
+  "agency": "iurc",
+  "stream": "iurc_investigations",
+  "action_type": "commission_investigation",
+  "status": "in_progress",
+  "date_published": "2024-07-09",
+  "title": "Investigation into Large Load Interconnection Policies",
+  "abstract": "An invented summary of the investigation or order. This summary is invented placeholder text for the Strata demo.",
+  "cfr_references": [],
+  "legal_refs": [
+   "170 IAC 7-1-1"
+  ],
+  "docket_ids": [
+   "Cause No. 46301"
+  ],
+  "rin": null,
+  "din": null,
+  "source_url": "https://example.invalid/strata-placeholder/iurc_investigations/IURC-46301",
+  "related": [],
+  "placeholder": true
+ },
+ {
+  "source_system": "iurc_investigations",
+  "source_id": "IURC-46388",
+  "agency": "iurc",
+  "stream": "iurc_investigations",
+  "action_type": "commission_investigation",
+  "status": "blocked_suspended",
+  "date_published": "2024-10-15",
+  "title": "Investigation into Customer Deposit Practices",
+  "abstract": "An invented summary of the investigation or order. This summary is invented placeholder text for the Strata demo.",
+  "cfr_references": [],
+  "legal_refs": [
+   "170 IAC 4-1-13"
+  ],
+  "docket_ids": [
+   "Cause No. 46388"
+  ],
+  "rin": null,
+  "din": null,
+  "source_url": "https://example.invalid/strata-placeholder/iurc_investigations/IURC-46388",
+  "related": [],
+  "placeholder": true
+ },
+ {
+  "source_system": "iurc_investigations",
+  "source_id": "IURC-46402",
+  "agency": "iurc",
+  "stream": "iurc_investigations",
+  "action_type": "order",
+  "status": "approved",
+  "date_published": "2024-11-21",
+  "title": "Order Reopening Customer Deposit Investigation",
+  "abstract": "An invented summary of the investigation or order. This summary is invented placeholder text for the Strata demo.",
+  "cfr_references": [],
+  "legal_refs": [
+   "170 IAC 4-1-13"
+  ],
+  "docket_ids": [
+   "Cause No. 46402"
+  ],
+  "rin": null,
+  "din": null,
+  "source_url": "https://example.invalid/strata-placeholder/iurc_investigations/IURC-46402",
+  "related": [
+   {
+    "source_id": "IURC-46388",
+    "relationship_type": "related_to"
+   }
+  ],
+  "placeholder": true
+ },
+ {
+  "source_system": "iurc_investigations",
+  "source_id": "IURC-46519",
+  "agency": "iurc",
+  "stream": "iurc_investigations",
+  "action_type": "order",
+  "status": "approved",
+  "date_published": "2025-03-04",
+  "title": "Order Concluding Winter Disconnection Investigation",
+  "abstract": "An invented summary of the investigation or order. This summary is invented placeholder text for the Strata demo.",
+  "cfr_references": [],
+  "legal_refs": [
+   "170 IAC 4-1-16"
+  ],
+  "docket_ids": [
+   "Cause No. 46519"
+  ],
+  "rin": null,
+  "din": null,
+  "source_url": "https://example.invalid/strata-placeholder/iurc_investigations/IURC-46519",
+  "related": [
+   {
+    "source_id": "IURC-46001",
+    "relationship_type": "supersedes"
+   }
+  ],
+  "placeholder": true
+ },
+ {
+  "source_system": "iurc_investigations",
+  "source_id": "IURC-46520",
+  "agency": "iurc",
+  "stream": "iurc_investigations",
+  "action_type": "order",
+  "status": "approved",
+  "date_published": "2025-03-25",
+  "title": "Corrected Order Concluding Winter Disconnection Investigation",
+  "abstract": "An invented summary of the investigation or order. This summary is invented placeholder text for the Strata demo.",
+  "cfr_references": [],
+  "legal_refs": [
+   "170 IAC 4-1-16"
+  ],
+  "docket_ids": [
+   "Cause No. 46520"
+  ],
+  "rin": null,
+  "din": null,
+  "source_url": "https://example.invalid/strata-placeholder/iurc_investigations/IURC-46520",
+  "related": [
+   {
+    "source_id": "IURC-46519",
+    "relationship_type": "corrects"
+   }
+  ],
+  "placeholder": true
+ },
+ {
+  "source_system": "iurc_investigations",
+  "source_id": "IURC-46644",
+  "agency": "iurc",
+  "stream": "iurc_investigations",
+  "action_type": "commission_investigation",
+  "status": "in_progress",
+  "date_published": "2025-09-10",
+  "title": "Investigation into Informal Complaint Handling Timelines",
+  "abstract": "An invented summary of the investigation or order. This summary is invented placeholder text for the Strata demo.",
+  "cfr_references": [],
+  "legal_refs": [
+   "170 IAC 16-1-4",
+   "170 IAC 16-1-6"
+  ],
+  "docket_ids": [
+   "Cause No. 46644"
+  ],
+  "rin": null,
+  "din": null,
+  "source_url": "https://example.invalid/strata-placeholder/iurc_investigations/IURC-46644",
+  "related": [],
+  "placeholder": true
+ },
+ {
+  "source_system": "iurc_investigations",
+  "source_id": "IURC-46790",
+  "agency": "iurc",
+  "stream": "iurc_investigations",
+  "action_type": "commission_investigation",
+  "status": "in_progress",
+  "date_published": "2026-04-14",
+  "title": "Investigation into Estimated Billing Practices",
+  "abstract": "An invented summary of the investigation or order. This summary is invented placeholder text for the Strata demo.",
+  "cfr_references": [],
+  "legal_refs": [
+   "170 IAC 4-1-7",
+   "170 IAC 4-1-8"
+  ],
+  "docket_ids": [
+   "Cause No. 46790"
+  ],
+  "rin": null,
+  "din": null,
+  "source_url": "https://example.invalid/strata-placeholder/iurc_investigations/IURC-46790",
+  "related": [],
+  "placeholder": true
+ },
+ {
+  "source_system": "iurc_investigations",
+  "source_id": "IURC-46855",
+  "agency": "iurc",
+  "stream": "iurc_investigations",
+  "action_type": "order",
+  "status": "approved",
+  "date_published": "2026-09-02",
+  "title": "Order Scheduling Technical Conference on Large Loads",
+  "abstract": "An invented summary of the investigation or order. This summary is invented placeholder text for the Strata demo.",
+  "cfr_references": [],
+  "legal_refs": [
+   "170 IAC 7-1-1"
+  ],
+  "docket_ids": [
+   "Cause No. 46855"
+  ],
+  "rin": null,
+  "din": null,
+  "source_url": "https://example.invalid/strata-placeholder/iurc_investigations/IURC-46855",
+  "related": [
+   {
+    "source_id": "IURC-46301",
+    "relationship_type": "related_to"
+   }
+  ],
+  "placeholder": true
+ },
+ {
+  "source_system": "iurc_rulemakings",
+  "source_id": "IURC-RM-23-04",
+  "agency": "iurc",
+  "stream": "iurc_rulemakings",
+  "action_type": "proposed_rule",
+  "status": "approved",
+  "date_published": "2023-12-20",
+  "title": "Proposed Rule: Informal Complaint Procedures",
+  "abstract": "An invented summary of the proposed IURC rule. This summary is invented placeholder text for the Strata demo.",
+  "cfr_references": [],
+  "legal_refs": [
+   "170 IAC 16-1-3",
+   "170 IAC 16-1-4",
+   "170 IAC 16-1-5"
+  ],
+  "docket_ids": [
+   "LSA #23-441"
+  ],
+  "rin": null,
+  "din": null,
+  "source_url": "https://example.invalid/strata-placeholder/iurc_rulemakings/IURC-RM-23-04",
+  "related": [],
+  "placeholder": true
+ },
+ {
+  "source_system": "iurc_rulemakings",
+  "source_id": "IURC-RM-24-07",
+  "agency": "iurc",
+  "stream": "iurc_rulemakings",
+  "action_type": "proposed_rule",
+  "status": "approved",
+  "date_published": "2024-05-08",
+  "title": "Proposed Rule: Administrative Filing Readoption",
+  "abstract": "An invented summary of the proposed IURC rule. This summary is invented placeholder text for the Strata demo.",
+  "cfr_references": [],
+  "legal_refs": [
+   "170 IAC 1-6-3",
+   "170 IAC 1-6-4",
+   "170 IAC 1-6-5"
+  ],
+  "docket_ids": [
+   "LSA #24-120"
+  ],
+  "rin": null,
+  "din": null,
+  "source_url": "https://example.invalid/strata-placeholder/iurc_rulemakings/IURC-RM-24-07",
+  "related": [],
+  "placeholder": true
+ },
+ {
+  "source_system": "iurc_rulemakings",
+  "source_id": "IURC-RM-24-09",
+  "agency": "iurc",
+  "stream": "iurc_rulemakings",
+  "action_type": "proposed_rule",
+  "status": "approved",
+  "date_published": "2024-08-19",
+  "title": "Proposed Rule: Informal Complaint Rule Readoption",
+  "abstract": "An invented summary of the proposed IURC rule. This summary is invented placeholder text for the Strata demo.",
+  "cfr_references": [],
+  "legal_refs": [
+   "170 IAC 16-1-4",
+   "170 IAC 16-1-7"
+  ],
+  "docket_ids": [
+   "LSA #24-214"
+  ],
+  "rin": null,
+  "din": null,
+  "source_url": "https://example.invalid/strata-placeholder/iurc_rulemakings/IURC-RM-24-09",
+  "related": [
+   {
+    "source_id": "IURC-RM-23-04",
+    "relationship_type": "supersedes"
+   }
+  ],
+  "placeholder": true
+ },
+ {
+  "source_system": "iurc_rulemakings",
+  "source_id": "IURC-RM-24-11",
+  "agency": "iurc",
+  "stream": "iurc_rulemakings",
+  "action_type": "proposed_rule",
+  "status": "approved",
+  "date_published": "2024-10-31",
+  "title": "Proposed Rule: Disconnection Rule Readoption",
+  "abstract": "An invented summary of the proposed IURC rule. This summary is invented placeholder text for the Strata demo.",
+  "cfr_references": [],
+  "legal_refs": [
+   "170 IAC 4-1-16",
+   "170 IAC 4-1-13"
+  ],
+  "docket_ids": [
+   "LSA #24-309"
+  ],
+  "rin": null,
+  "din": null,
+  "source_url": "https://example.invalid/strata-placeholder/iurc_rulemakings/IURC-RM-24-11",
+  "related": [],
+  "placeholder": true
+ },
+ {
+  "source_system": "iurc_rulemakings",
+  "source_id": "IURC-RM-25-02",
+  "agency": "iurc",
+  "stream": "iurc_rulemakings",
+  "action_type": "proposed_rule",
+  "status": "in_progress",
+  "date_published": "2025-04-15",
+  "title": "Proposed Rule: Disconnection Notice Content Revisions",
+  "abstract": "An invented summary of the proposed IURC rule. This summary is invented placeholder text for the Strata demo.",
+  "cfr_references": [],
+  "legal_refs": [
+   "170 IAC 4-1-15",
+   "170 IAC 4-1-16"
+  ],
+  "docket_ids": [
+   "LSA #25-077"
+  ],
+  "rin": null,
+  "din": null,
+  "source_url": "https://example.invalid/strata-placeholder/iurc_rulemakings/IURC-RM-25-02",
+  "related": [
+   {
+    "source_id": "IURC-RM-24-11",
+    "relationship_type": "related_to"
+   }
+  ],
+  "placeholder": true
+ },
+ {
+  "source_system": "iurc_rulemakings",
+  "source_id": "IURC-RM-25-03",
+  "agency": "iurc",
+  "stream": "iurc_rulemakings",
+  "action_type": "proposed_rule",
+  "status": "in_progress",
+  "date_published": "2025-05-28",
+  "title": "Corrected Proposed Rule: Disconnection Notice Content Revisions",
+  "abstract": "An invented summary of the proposed IURC rule. This summary is invented placeholder text for the Strata demo.",
+  "cfr_references": [],
+  "legal_refs": [
+   "170 IAC 4-1-15"
+  ],
+  "docket_ids": [
+   "LSA #25-077"
+  ],
+  "rin": null,
+  "din": null,
+  "source_url": "https://example.invalid/strata-placeholder/iurc_rulemakings/IURC-RM-25-03",
+  "related": [
+   {
+    "source_id": "IURC-RM-25-02",
+    "relationship_type": "corrects"
+   }
+  ],
+  "placeholder": true
+ },
+ {
+  "source_system": "iurc_rulemakings",
+  "source_id": "IURC-RM-25-06",
+  "agency": "iurc",
+  "stream": "iurc_rulemakings",
+  "action_type": "proposed_rule",
+  "status": "in_progress",
+  "date_published": "2025-09-09",
+  "title": "Proposed Rule: Reliability Reporting Revisions",
+  "abstract": "An invented summary of the proposed IURC rule. This summary is invented placeholder text for the Strata demo.",
+  "cfr_references": [],
+  "legal_refs": [
+   "170 IAC 4-1-29",
+   "170 IAC 4-1-23"
+  ],
+  "docket_ids": [
+   "LSA #25-290"
+  ],
+  "rin": null,
+  "din": null,
+  "source_url": "https://example.invalid/strata-placeholder/iurc_rulemakings/IURC-RM-25-06",
+  "related": [],
+  "placeholder": true
+ },
+ {
+  "source_system": "iurc_rulemakings",
+  "source_id": "IURC-RM-26-01",
+  "agency": "iurc",
+  "stream": "iurc_rulemakings",
+  "action_type": "proposed_rule",
+  "status": "in_progress",
+  "date_published": "2026-03-17",
+  "title": "Proposed Rule: Large Load Interconnection",
+  "abstract": "An invented summary of the proposed IURC rule. This summary is invented placeholder text for the Strata demo.",
+  "cfr_references": [],
+  "legal_refs": [
+   "170 IAC 7-1-1"
+  ],
+  "docket_ids": [
+   "LSA #26-051"
+  ],
+  "rin": null,
+  "din": null,
+  "source_url": "https://example.invalid/strata-placeholder/iurc_rulemakings/IURC-RM-26-01",
+  "related": [],
+  "placeholder": true
+ },
+ {
+  "source_system": "iurc_rulemakings",
+  "source_id": "IURC-RM-26-04",
+  "agency": "iurc",
+  "stream": "iurc_rulemakings",
+  "action_type": "proposed_rule",
+  "status": "in_progress",
+  "date_published": "2026-10-28",
+  "title": "Proposed Rule: Customer Deposit Revisions",
+  "abstract": "An invented summary of the proposed IURC rule. This summary is invented placeholder text for the Strata demo.",
+  "cfr_references": [],
+  "legal_refs": [
+   "170 IAC 4-1-13"
+  ],
+  "docket_ids": [
+   "LSA #26-190"
+  ],
+  "rin": null,
+  "din": null,
+  "source_url": "https://example.invalid/strata-placeholder/iurc_rulemakings/IURC-RM-26-04",
+  "related": [
+   {
+    "source_id": "IURC-RM-26-01",
+    "relationship_type": "related_to"
+   }
+  ],
+  "placeholder": true
+ },
+ {
+  "source_system": "idem_rulemakings",
+  "source_id": "IDEM-LSA-24-218",
+  "agency": "idem",
+  "stream": "idem_rulemakings",
+  "action_type": "rulemaking",
+  "status": "approved",
+  "date_published": "2024-08-14",
+  "title": "Air Pollution Control: Emergency Engine Operating Hours",
+  "abstract": "An invented summary of the IDEM rulemaking. This summary is invented placeholder text for the Strata demo.",
+  "cfr_references": [],
+  "legal_refs": [
+   "326 IAC 2-8-4",
+   "326 IAC 2-8-9"
+  ],
+  "docket_ids": [
+   "LSA-24-218"
+  ],
+  "rin": null,
+  "din": null,
+  "source_url": "https://example.invalid/strata-placeholder/idem_rulemakings/IDEM-LSA-24-218",
+  "related": [],
+  "placeholder": true
+ },
+ {
+  "source_system": "idem_rulemakings",
+  "source_id": "IDEM-LSA-24-301",
+  "agency": "idem",
+  "stream": "idem_rulemakings",
+  "action_type": "final_rule",
+  "status": "approved",
+  "date_published": "2024-11-06",
+  "title": "Air Pollution Control: Emergency Engine Operating Hours (Final)",
+  "abstract": "An invented summary of the IDEM rulemaking. This summary is invented placeholder text for the Strata demo.",
+  "cfr_references": [],
+  "legal_refs": [
+   "326 IAC 2-8-4"
+  ],
+  "docket_ids": [
+   "LSA-24-301"
+  ],
+  "rin": null,
+  "din": null,
+  "source_url": "https://example.invalid/strata-placeholder/idem_rulemakings/IDEM-LSA-24-301",
+  "related": [
+   {
+    "source_id": "IDEM-LSA-24-218",
+    "relationship_type": "supersedes"
+   }
+  ],
+  "placeholder": true
+ },
+ {
+  "source_system": "idem_rulemakings",
+  "source_id": "IDEM-LSA-24-302",
+  "agency": "idem",
+  "stream": "idem_rulemakings",
+  "action_type": "final_rule",
+  "status": "approved",
+  "date_published": "2024-11-20",
+  "title": "Correction: Emergency Engine Operating Hours",
+  "abstract": "An invented summary of the IDEM rulemaking. This summary is invented placeholder text for the Strata demo.",
+  "cfr_references": [],
+  "legal_refs": [
+   "326 IAC 2-8-4"
+  ],
+  "docket_ids": [
+   "LSA-24-302"
+  ],
+  "rin": null,
+  "din": null,
+  "source_url": "https://example.invalid/strata-placeholder/idem_rulemakings/IDEM-LSA-24-302",
+  "related": [
+   {
+    "source_id": "IDEM-LSA-24-301",
+    "relationship_type": "corrects"
+   }
+  ],
+  "placeholder": true
+ },
+ {
+  "source_system": "idem_rulemakings",
+  "source_id": "IDEM-LSA-25-055",
+  "agency": "idem",
+  "stream": "idem_rulemakings",
+  "action_type": "rulemaking",
+  "status": "approved",
+  "date_published": "2025-02-12",
+  "title": "Water Pollution Control: Spill Reporting Updates",
+  "abstract": "An invented summary of the IDEM rulemaking. This summary is invented placeholder text for the Strata demo.",
+  "cfr_references": [],
+  "legal_refs": [
+   "327 IAC 2-6.1-3",
+   "327 IAC 2-6.1-7"
+  ],
+  "docket_ids": [
+   "LSA-25-055"
+  ],
+  "rin": null,
+  "din": null,
+  "source_url": "https://example.invalid/strata-placeholder/idem_rulemakings/IDEM-LSA-25-055",
+  "related": [],
+  "placeholder": true
+ },
+ {
+  "source_system": "idem_rulemakings",
+  "source_id": "IDEM-LSA-25-140",
+  "agency": "idem",
+  "stream": "idem_rulemakings",
+  "action_type": "final_rule",
+  "status": "approved",
+  "date_published": "2025-05-07",
+  "title": "Water Pollution Control: Spill Reporting Updates (Final)",
+  "abstract": "An invented summary of the IDEM rulemaking. This summary is invented placeholder text for the Strata demo.",
+  "cfr_references": [],
+  "legal_refs": [
+   "327 IAC 2-6.1-3",
+   "327 IAC 2-6.1-7"
+  ],
+  "docket_ids": [
+   "LSA-25-140"
+  ],
+  "rin": null,
+  "din": null,
+  "source_url": "https://example.invalid/strata-placeholder/idem_rulemakings/IDEM-LSA-25-140",
+  "related": [
+   {
+    "source_id": "IDEM-LSA-25-055",
+    "relationship_type": "supersedes"
+   }
+  ],
+  "placeholder": true
+ },
+ {
+  "source_system": "idem_rulemakings",
+  "source_id": "IDEM-LSA-25-233",
+  "agency": "idem",
+  "stream": "idem_rulemakings",
+  "action_type": "rulemaking",
+  "status": "approved",
+  "date_published": "2025-08-27",
+  "title": "Air Pollution Control: Part 70 Permit Revisions",
+  "abstract": "An invented summary of the IDEM rulemaking. This summary is invented placeholder text for the Strata demo.",
+  "cfr_references": [],
+  "legal_refs": [
+   "326 IAC 2-7-1",
+   "326 IAC 2-7-5"
+  ],
+  "docket_ids": [
+   "LSA-25-233"
+  ],
+  "rin": null,
+  "din": null,
+  "source_url": "https://example.invalid/strata-placeholder/idem_rulemakings/IDEM-LSA-25-233",
+  "related": [],
+  "placeholder": true
+ },
+ {
+  "source_system": "idem_rulemakings",
+  "source_id": "IDEM-LSA-26-012",
+  "agency": "idem",
+  "stream": "idem_rulemakings",
+  "action_type": "rulemaking",
+  "status": "in_progress",
+  "date_published": "2026-01-21",
+  "title": "Water Pollution Control: Stormwater Revisions",
+  "abstract": "An invented summary of the IDEM rulemaking. This summary is invented placeholder text for the Strata demo.",
+  "cfr_references": [],
+  "legal_refs": [
+   "327 IAC 5-4-6",
+   "327 IAC 15-5-1"
+  ],
+  "docket_ids": [
+   "LSA-26-012"
+  ],
+  "rin": null,
+  "din": null,
+  "source_url": "https://example.invalid/strata-placeholder/idem_rulemakings/IDEM-LSA-26-012",
+  "related": [
+   {
+    "source_id": "IDEM-LSA-25-140",
+    "relationship_type": "related_to"
+   }
+  ],
+  "placeholder": true
+ },
+ {
+  "source_system": "idem_rulemakings",
+  "source_id": "IDEM-LSA-26-090",
+  "agency": "idem",
+  "stream": "idem_rulemakings",
+  "action_type": "rulemaking",
+  "status": "in_progress",
+  "date_published": "2026-05-13",
+  "title": "Air Pollution Control: NSPS Incorporation Update",
+  "abstract": "An invented summary of the IDEM rulemaking. This summary is invented placeholder text for the Strata demo.",
+  "cfr_references": [],
+  "legal_refs": [
+   "326 IAC 12-1-1"
+  ],
+  "docket_ids": [
+   "LSA-26-090"
+  ],
+  "rin": null,
+  "din": null,
+  "source_url": "https://example.invalid/strata-placeholder/idem_rulemakings/IDEM-LSA-26-090",
+  "related": [],
+  "placeholder": true
+ },
+ {
+  "source_system": "idem_rulemakings",
+  "source_id": "IDEM-LSA-26-118",
+  "agency": "idem",
+  "stream": "idem_rulemakings",
+  "action_type": "final_rule",
+  "status": "in_progress",
+  "date_published": "2026-10-15",
+  "title": "Air Pollution Control: Opacity Limitations",
+  "abstract": "An invented summary of the IDEM rulemaking. This summary is invented placeholder text for the Strata demo.",
+  "cfr_references": [],
+  "legal_refs": [
+   "326 IAC 5-1-2"
+  ],
+  "docket_ids": [
+   "LSA-26-118"
+  ],
+  "rin": null,
+  "din": null,
+  "source_url": "https://example.invalid/strata-placeholder/idem_rulemakings/IDEM-LSA-26-118",
+  "related": [
+   {
+    "source_id": "IDEM-LSA-26-090",
+    "relationship_type": "related_to"
+   }
+  ],
+  "placeholder": true
+ }
+]

@@ -39,7 +39,9 @@ export function FutureCue({ id, variant, onDark, side, label, className }: Futur
   const f = FUTURE_FEATURES[id];
   if (!SHOW_FUTURE_CUES || !f) return null;
   const v = variant ?? f.variant;
-  const Icon = (icons as Record<string, React.ComponentType<{ className?: string; strokeWidth?: number }>>)[f.icon] ?? Circle;
+  // House rule: no "AI sparkle" icons anywhere.
+  const iconName = f.icon === "Sparkles" || f.icon === "Sparkle" ? "MessageSquareText" : f.icon;
+  const Icon = (icons as Record<string, React.ComponentType<{ className?: string; strokeWidth?: number }>>)[iconName] ?? Circle;
   const text = label ?? f.label;
   const muted = onDark ? "text-sidebar-muted" : "text-ink-4";
   const ico = <Icon className={cn("size-4 shrink-0", muted)} strokeWidth={1.5} />;
@@ -175,7 +177,7 @@ export function FutureCue({ id, variant, onDark, side, label, className }: Futur
     <Tooltip>
       <TooltipTrigger asChild>{node}</TooltipTrigger>
       <TooltipContent side={side ?? (v === "nav" ? "right" : "top")}>
-        <div className="font-medium">{f.label}</div>
+        <div className="font-medium">{text}</div>
         <div className="mt-0.5 text-white/90">{f.tooltip}</div>
         <div className="mt-1 text-ink-4">Coming soon</div>
       </TooltipContent>

@@ -1,1 +1,124 @@
-{"name":"Rockridge Power & Light","type":"","state":"","customers":0,"regulator":"","attributes":[]}
+{
+  "name": "Rockridge Power & Light Company",
+  "type": "Investor-owned electric distribution utility",
+  "state": "Indiana",
+  "customers": 407491,
+  "regulator": "Indiana Utility Regulatory Commission (IURC)",
+  "attributes": [
+    {
+      "key": "jurisdiction",
+      "value": "IN",
+      "source": "company_profile.yaml"
+    },
+    {
+      "key": "utility_type",
+      "value": "electric",
+      "source": "company_profile.yaml"
+    },
+    {
+      "key": "ownership",
+      "value": "investor_owned",
+      "source": "company_profile.yaml"
+    },
+    {
+      "key": "owns_generating_units",
+      "value": false,
+      "source": "company_profile.yaml"
+    },
+    {
+      "key": "operates_transmission_above_100kv",
+      "value": false,
+      "source": "company_profile.yaml"
+    },
+    {
+      "key": "has_gas_operations",
+      "value": false,
+      "source": "company_profile.yaml"
+    },
+    {
+      "key": "has_water_operations",
+      "value": false,
+      "source": "company_profile.yaml"
+    },
+    {
+      "key": "customer_count_total",
+      "value": 407491,
+      "source": "company_profile.yaml"
+    },
+    {
+      "key": "has_emergency_standby_generators",
+      "value": true,
+      "source": "company_profile.yaml"
+    },
+    {
+      "key": "standby_generator_count",
+      "value": 3,
+      "source": "company_profile.yaml"
+    },
+    {
+      "key": "has_oil_filled_equipment",
+      "value": true,
+      "source": "company_profile.yaml"
+    },
+    {
+      "key": "has_underground_facilities",
+      "value": true,
+      "source": "company_profile.yaml"
+    },
+    {
+      "key": "iurc_jurisdictional",
+      "value": true,
+      "source": "company_profile.yaml"
+    },
+    {
+      "key": "has_fleet_vehicles",
+      "value": true,
+      "source": "company_profile.yaml"
+    },
+    {
+      "key": "fleet_vehicle_count",
+      "value": 640,
+      "source": "company_profile.yaml"
+    },
+    {
+      "key": "has_aboveground_fuel_storage",
+      "value": true,
+      "source": "company_profile.yaml"
+    },
+    {
+      "key": "has_spcc_plans",
+      "value": true,
+      "source": "company_profile.yaml"
+    },
+    {
+      "key": "pcb_equipment_possible",
+      "value": true,
+      "source": "company_profile.yaml"
+    },
+    {
+      "key": "state_osha_plan",
+      "value": "IOSHA",
+      "source": "company_profile.yaml"
+    },
+    {
+      "key": "owns_customer_meters",
+      "value": true,
+      "source": "company_profile.yaml"
+    },
+    {
+      "key": "meters_in_service_total",
+      "value": 409950,
+      "source": "company_profile.yaml"
+    },
+    {
+      "key": "has_vegetation_management_program",
+      "value": true,
+      "source": "company_profile.yaml"
+    },
+    {
+      "key": "grid_membership",
+      "value": "MISO",
+      "source": "company_profile.yaml"
+    }
+  ]
+}

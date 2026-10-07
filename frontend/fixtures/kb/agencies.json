@@ -1,1 +1,146 @@
-[]
+[
+ {
+  "agency_id": "ferc",
+  "slug": "ferc",
+  "name": "Federal Energy Regulatory Commission",
+  "level": "federal",
+  "geo": "US",
+  "domains": [
+   "energy",
+   "electricity"
+  ],
+  "codebook_titles": [
+   "18 CFR 35",
+   "18 CFR 37",
+   "18 CFR 38"
+  ],
+  "section_count": 63,
+  "action_count": 312,
+  "s1_snapshot": "2025-01-02",
+  "s2_snapshot": "2026-10-02",
+  "last_sync_at": "2026-10-07",
+  "has_activity_feed": true,
+  "streams": [
+   "federal_register"
+  ]
+ },
+ {
+  "agency_id": "epa",
+  "slug": "epa",
+  "name": "Environmental Protection Agency",
+  "level": "federal",
+  "geo": "US",
+  "domains": [
+   "environment",
+   "energy"
+  ],
+  "codebook_titles": [
+   "40 CFR 60",
+   "40 CFR 63",
+   "40 CFR 72",
+   "40 CFR 73"
+  ],
+  "section_count": 267,
+  "action_count": 678,
+  "s1_snapshot": "2025-01-02",
+  "s2_snapshot": "2026-10-02",
+  "last_sync_at": "2026-10-07",
+  "has_activity_feed": true,
+  "streams": [
+   "federal_register"
+  ]
+ },
+ {
+  "agency_id": "iurc",
+  "slug": "iurc",
+  "name": "Indiana Utility Regulatory Commission",
+  "level": "state",
+  "geo": "IN",
+  "domains": [
+   "energy",
+   "electricity",
+   "utilities",
+   "telecom"
+  ],
+  "codebook_titles": [
+   "170 IAC"
+  ],
+  "section_count": 647,
+  "action_count": 199,
+  "s1_snapshot": "2024-12-31",
+  "s2_snapshot": "2025-12-31",
+  "last_sync_at": "2026-10-07",
+  "has_activity_feed": true,
+  "streams": [
+   "iurc_gaos",
+   "iurc_investigations",
+   "iurc_rulemakings"
+  ]
+ },
+ {
+  "agency_id": "idem",
+  "slug": "idem",
+  "name": "Indiana Department of Environmental Management",
+  "level": "state",
+  "geo": "IN",
+  "domains": [
+   "environment",
+   "air quality",
+   "water quality"
+  ],
+  "codebook_titles": [
+   "326 IAC",
+   "327 IAC"
+  ],
+  "section_count": 2072,
+  "action_count": 17,
+  "s1_snapshot": "2024-12-31",
+  "s2_snapshot": "2025-12-31",
+  "last_sync_at": "2026-10-07",
+  "has_activity_feed": true,
+  "streams": [
+   "idem_rulemakings"
+  ]
+ },
+ {
+  "agency_id": null,
+  "slug": "iac-610",
+  "name": "610 IAC — Labor",
+  "level": "state",
+  "geo": "IN",
+  "domains": [
+   "labor"
+  ],
+  "codebook_titles": [
+   "610 IAC"
+  ],
+  "section_count": 169,
+  "action_count": 0,
+  "s1_snapshot": "2024-12-31",
+  "s2_snapshot": "2025-12-31",
+  "last_sync_at": "2026-10-07",
+  "has_activity_feed": false,
+  "streams": []
+ },
+ {
+  "agency_id": null,
+  "slug": "iac-675",
+  "name": "675 IAC — Fire & Building Safety",
+  "level": "state",
+  "geo": "IN",
+  "domains": [
+   "fire safety",
+   "building safety"
+  ],
+  "codebook_titles": [
+   "675 IAC"
+  ],
+  "section_count": 1385,
+  "action_count": 0,
+  "s1_snapshot": "2024-12-31",
+  "s2_snapshot": "2025-12-31",
+  "last_sync_at": "2026-10-07",
+  "has_activity_feed": false,
+  "streams": []
+ }
+]
