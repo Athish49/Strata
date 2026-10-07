@@ -35,45 +35,69 @@ Render free tier sleeps the service after 15 minutes of no inbound requests. Thi
 
 ### Project Structure (Backend)
 
+Organized by **domain** so each future layer (company/knowledge ingestion, agentic layer, monitoring) gets a sibling folder under `app/` without colliding with regulatory code. Shared infrastructure (`services/`, `db.py`) lives at the root and is used by all domains.
+
 ```
-strata-backend/
+backend/
 ├── app/
-│   ├── main.py                    # FastAPI app entry point
-│   ├── config.py                  # Environment variables, DB URLs
+│   ├── main.py                         # FastAPI entry point, router registration
+│   ├── config.py                       # All env settings (reads from .env)
+│   ├── db.py                           # Shared DB engine + session factory (Neon)
+│   │
 │   ├── api/
-│   │   ├── regulations.py         # /regulations endpoints
-│   │   ├── actions.py             # /actions endpoints
-│   │   ├── diff.py                # /diff endpoints
-│   │   ├── timeline.py            # /timeline endpoints
-│   │   ├── impact.py              # /impact endpoints
-│   │   ├── search.py              # /search (vector) endpoints
-│   │   └── jobs.py                # /jobs/ingest trigger endpoint
-│   ├── adapters/
-│   │   ├── base.py                # SourceAdapter interface
-│   │   ├── ecfr.py                # eCFR adapter → CodeSection
-│   │   ├── federal_register.py    # FR API adapter → RegulatoryAction
-│   │   ├── oac.py                 # OAC scraper → CodeSection
-│   │   └── puco_dis.py            # PUCO DIS scraper → RegulatoryAction
-│   ├── ingestion/
-│   │   ├── pipeline.py            # Validation, dedup, status mapping
-│   │   ├── change_detector.py     # Hash-diff for codebook sources
-│   │   ├── version_chain.py       # Links new snapshots to prior versions
-│   │   └── stitcher.py            # Cross-reference linking engine
-│   ├── models/
-│   │   ├── code_section.py        # SQLAlchemy model
-│   │   ├── regulatory_action.py   # SQLAlchemy model
-│   │   ├── agency.py              # Agency registry model
-│   │   ├── sync_state.py          # Adapter sync cursor model
-│   │   └── relationship.py        # Action relationship model
-│   ├── services/
-│   │   ├── vector.py              # Qdrant client wrapper
-│   │   └── storage.py             # Cloudflare R2 client wrapper
-│   └── db.py                      # Database connection (Neon)
-├── migrations/                    # Alembic migrations
+│   │   └── regulatory/                 # Regulatory domain HTTP route handlers
+│   │       ├── __init__.py
+│   │       ├── regulations.py          # /regulations endpoints
+│   │       ├── actions.py              # /actions endpoints
+│   │       ├── diff.py                 # /diff endpoints
+│   │       ├── timeline.py             # /timeline endpoints
+│   │       ├── impact.py               # /impact endpoints
+│   │       ├── search.py               # /search (vector) endpoints
+│   │       └── jobs.py                 # /jobs/ingest trigger endpoint
+│   │
+│   ├── regulatory/                     # All regulatory ingestion domain code
+│   │   ├── adapters/                   # Source-specific data pullers
+│   │   │   ├── base.py                 # SourceAdapter abstract interface
+│   │   │   ├── ecfr.py                 # eCFR adapter → CodeSection
+│   │   │   ├── federal_register.py     # FR API adapter → RegulatoryAction
+│   │   │   ├── oac.py                  # OAC scraper → CodeSection
+│   │   │   └── puco_dis.py             # PUCO DIS scraper → RegulatoryAction
+│   │   ├── ingestion/                  # Pipeline, dedup, versioning, stitching
+│   │   │   ├── pipeline.py             # Validation, orchestration, status mapping
+│   │   │   ├── change_detector.py      # Hash-diff for codebook sources
+│   │   │   ├── version_chain.py        # Links snapshots to prior versions
+│   │   │   ├── stitcher.py             # Cross-reference linking engine
+│   │   │   └── embedder.py             # Chunking + Qdrant upsert for reg text
+│   │   └── models/                     # SQLAlchemy models for this domain
+│   │       ├── __init__.py             # Imports all models, exposes Base
+│   │       ├── code_section.py
+│   │       ├── regulatory_action.py
+│   │       ├── relationship.py
+│   │       ├── agency.py
+│   │       └── sync_state.py
+│   │
+│   └── services/                       # Shared infra clients (used by all domains)
+│       ├── vector.py                   # Qdrant client wrapper
+│       └── storage.py                  # Cloudflare R2 client wrapper
+│
+├── scripts/                            # Operational + seed scripts (not app code)
+│   ├── setup_qdrant.py                 # Create Qdrant collection + indexes
+│   ├── seed_agencies.py                # Insert agency registry rows
+│   ├── seed_phase1.py                  # Baseline ingestion run (2025-01-02)
+│   └── seed_phase2.py                  # Update ingestion run (2025-07-01)
+│
+├── migrations/                         # Alembic migration files
+├── alembic.ini
 ├── requirements.txt
-├── render.yaml                    # Render service config
+├── render.yaml                         # Render service config
 └── .env.example
 ```
+
+**Structure rationale:**
+- `app/regulatory/` owns all regulatory-specific code. Future domains (`knowledge/`, `agents/`, `monitoring/`) are added as sibling folders — no existing code needs reorganization.
+- `app/api/regulatory/` namespaces routes by domain. Future `api/agents/`, `api/monitoring/` follow the same pattern.
+- `app/services/` holds shared infra clients that every domain imports.
+- `scripts/` holds operational scripts that are run directly, not imported as app code.
 
 ### Environment Variables
 
@@ -179,7 +203,7 @@ Store raw source data for audit, replay, and debugging. Not queried in normal op
 ### Bucket Structure
 
 ```
-strata-raw/
+strata/                              ← bucket name (R2_BUCKET_NAME=strata)
 ├── ecfr/
 │   ├── 2025-01-02/
 │   │   ├── title-18.xml
@@ -217,10 +241,10 @@ strata-raw/
 
 ### First-Time Setup
 
-1. **Neon:** Create project `strata`, database `strata`. Run Alembic migrations to create tables. Seed agency registry.
-2. **Qdrant Cloud:** Create cluster, create `regulation_chunks` collection with correct vector config.
-3. **Cloudflare R2:** Create bucket `strata-raw`.
-4. **Render:** Create web service from GitHub repo. Set environment variables. Deploy.
+1. **Neon:** Project and database (`neondb`) are already provisioned. Run Alembic migrations to create tables. Seed agency registry.
+2. **Qdrant Cloud:** Cluster (`Athish_Personal_Projects`) is already provisioned. Run `scripts/setup_qdrant.py` to create the `regulation_chunks` collection with correct vector config and project payload index.
+3. **Cloudflare R2:** Bucket `strata` is already provisioned. No setup needed.
+4. **Render:** Create web service from GitHub repo. Set all environment variables from `.env`. Deploy.
 5. **Render Cron:** Create cron job pointing to `https://<service>.onrender.com/jobs/ingest` on daily schedule.
 
 ### Ingestion Runs

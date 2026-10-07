@@ -83,7 +83,7 @@ daily_sync():
   documents = FR_API.search(
     agencies=[tracked_slugs],
     publication_date_gte=last_date,
-    types=['RULE', 'PRORULE', 'NOTICE'],
+    types=['RULE', 'PRORULE'],   # NOTICE excluded — no regulation changes, ~60-70% of volume
     per_page=100,
     order='newest'
   )

@@ -1,0 +1,33 @@
+services:
+  - type: web
+    name: strata-backend
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: DATABASE_URL
+        sync: false
+      - key: QDRANT_URL
+        sync: false
+      - key: QDRANT_API_KEY
+        sync: false
+      - key: QDRANT_PROJECT_TAG
+        value: strata
+      - key: R2_ENDPOINT
+        sync: false
+      - key: R2_ACCESS_KEY_ID
+        sync: false
+      - key: R2_SECRET_ACCESS_KEY
+        sync: false
+      - key: R2_BUCKET_NAME
+        value: strata
+    healthCheckPath: /health
+
+  - type: cron
+    name: strata-ingestion-cron
+    env: python
+    plan: free
+    schedule: "0 6 * * *"
+    buildCommand: pip install -r requirements.txt
+    startCommand: python -c "import httpx; r = httpx.post('https://strata-backend.onrender.com/jobs/ingest', timeout=300); print(r.status_code, r.text[:500])"
