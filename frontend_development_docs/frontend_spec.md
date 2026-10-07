@@ -42,8 +42,8 @@ Every deliberate departure from the brief is listed in §3 with a reason.
   - `tools/offline_eval/**`
   
   They hold the engine's answer key. Mock findings must be invented scenarios, not the expected answers.
-- Visual design (color values, radii, shadows, spacing scale, imagery) is **deliberately out of scope** for this document. Use shadcn/ui defaults and the semantic tokens in §11.3 as named placeholders. A separate design pass will fill them in.
-- Do not build anything in §15 (out of scope), even as a stub, unless §8.4 asks for a disabled future-feature button.
+- **Visual design is specified in §17** (Harvey-inspired: monochrome, serif titles, hairlines, status-only color). Style shadcn/ui components to it; never leave shadcn defaults visible.
+- **Future-capability cues are specified in §18.** Build every cue in the catalog and nothing beyond it. Do not build anything in §15 (out of scope), even as a stub, except where §18 lists a disabled cue for it.
 
 ---
 
@@ -128,12 +128,17 @@ The four `RPL-INF-*` register entries (company profile, people directory, docume
 | D6 | IAC 610 / 675 | Unknown owners | 610 = labor, 675 = fire/building | Show them under State as **codebook-only cards**: "610 IAC — Labor" and "675 IAC — Fire & Building Safety", each with "No activity feed". There is no agency record yet, so don't invent agency names. |
 | D7 | Original PDF view | "View original PDF" button | Do not build PDF rendering | **Disabled future button** "View original file". The reader renders from clauses only. |
 | D8 | Upcoming deadlines on Home | From the Reporting Calendar | No compliance countdown; show publication dates only | **Dropped.** |
-| D9 | Ask AI / chat, notifications, user accounts | Considered | Do not build | **No placeholders for these either.** Future buttons use only the capabilities in §8.4. |
+| D9 | Ask AI / chat, notifications, integrations, multi-company | Considered | Do not build | **Not built. They appear only as disabled cues** (§18), at the owner's direction, to signal where the platform is going. None of them has any behavior. |
 | D10 | Document page right panel | Tabs for flags, citations, key values, details | A findings rail, ordered by position | **The brief's findings rail is primary.** Document metadata sits in the header. A clause-details popover (citations, values, defined terms) is a P2 addition (§9.4). |
 | D11 | Tariff vertical | Suggested moving it to Revenue & Pricing | Policy | **Keep the backend's vertical (Policy & Governance Documents).** |
 | D12 | Run awareness | Not considered | `?run=` on every page; SIMULATED mode | **Adopted globally**, KB pages included (they keep the param in every link and show change badges for the selected run). |
 | D13 | Brief's version-history endpoint | — | `GET /diff/version-history/{ss}/{citation}` | The real route is **`GET /diff/{source_system}/{citation}`**. Record the real route in the contract notes for future wiring and flag it to the backend owner. |
 | D14 | Integration | — | Live polling, live KB endpoints | **Not in this phase.** Everything is mocked inside `frontend/` (§0.1). Polling and running states are exercised against the mock layer. |
+| D15 | Look and feel | — | Calm, dense; reference Harvey, Linear, GitHub diffs; red/blue/violet/amber/slate/green verdict colors | **Harvey-inspired monochrome system (§17).** Color is used only for status: red, green and one muted amber. |
+| D16 | Verdict colors | — | Five distinct verdict hues | Reduced to red (action required), amber (review), ink/ink-2/ink-3 neutrals with icons (update citation / relaxed / info) and green (cleared). The pill text and icon always carry the meaning. |
+| D17 | SIMULATED mode | — | Amber banner and striped pill | **Neutral diagonal hatch plus a "Simulated" tag.** Amber is reserved for "needs review". |
+| D18 | Top bar | — | Top bar with RunSelector and search | **No top bar** (Harvey layout). Search lives in the sidebar header (⌘K). The RunSelector sits at the right of every analysis page header. |
+| D19 | Future cues | 1–2 disabled buttons per page | — | **Expanded into a curated catalog (§18)**: at most 3 per page plus a few shell cues, all disabled, from one registry. |
 
 ---
 
@@ -147,7 +152,7 @@ The stack is the de-facto standard for agent-built React apps in 2026. Agents pr
 | Runtime | **Node.js LTS** | Pin it in `frontend/.nvmrc` and in `engines` in `frontend/package.json`. |
 | Language | **TypeScript**, `strict: true` | No `any` in app code. |
 | Package manager | **pnpm** | |
-| Styling | **Tailwind CSS v4** | Utility classes only, no CSS-in-JS. Semantic tokens are CSS variables (§11.3). |
+| Styling | **Tailwind CSS v4** | Utility classes only, no CSS-in-JS. Design tokens are CSS variables exposed via `@theme` (§17.2). |
 | Components | **shadcn/ui** (CLI v4), **Radix primitives** | Base UI is now shadcn's default, but the brief specifies Radix. Pick Radix once, at init. The components are copied into the repo and owned by us. |
 | Icons | **lucide-react** | Match-path icons are in §11.2. |
 | Server state | **TanStack Query v5** | Caching; `refetchInterval: 2000` while a run is `running`; mutations for reviews and what-if. |
@@ -160,7 +165,7 @@ The stack is the de-facto standard for agent-built React apps in 2026. Agents pr
 | Split panes | **react-resizable-panels** (shadcn `Resizable`) | Changes master–detail, reader + findings rail. |
 | Drawer, dialogs, popovers, tooltips | shadcn `Sheet`, `Dialog`, `Popover`, `Tooltip`, `HoverCard` | The evidence drawer is a `Sheet`. |
 | Toasts | **sonner** (shadcn) | Review saved, run started or finished. |
-| Fonts | `next/font` | Three roles: UI sans, document serif, mono for ids (§11.3). Families are picked in the design pass. |
+| Fonts | `next/font/google` | **Source Serif 4** (display and document), **Inter** (UI), **JetBrains Mono** (ids) (§17.3). |
 | Unit tests | **Vitest** + **React Testing Library** | Label dictionaries, sentence builders, status derivation, fixture invariants. |
 | E2E tests | **Playwright** | The demo script in §12 is the e2e suite. Chromium is preinstalled in the cloud environment, so use `executablePath: '/opt/pw-browsers/chromium'` if versions mismatch, and never run `playwright install`. |
 | Lint and format | ESLint (`next` config) + Prettier + `prettier-plugin-tailwindcss` | |
@@ -183,7 +188,7 @@ frontend/                                # deploy root; nothing outside this fol
   app/
     (marketing)/page.tsx                 # "/" landing
     app/                                 # "/app/*" product
-      layout.tsx                         # AppShell: sidebar, top bar, SimulatedBanner, providers
+      layout.tsx                         # AppShell: dark sidebar, main canvas, SimulatedBanner, providers
       page.tsx                           # Overview
       changes/page.tsx                   # tree + empty detail
       changes/[changeId]/page.tsx        # tree + change detail
@@ -207,7 +212,7 @@ frontend/                                # deploy root; nothing outside this fol
     engine/                              # VerdictPill, ClassPill, DiffView, QuoteHighlight, TraceChain, Minimap, EvidenceDrawer, FunnelBar, MatrixGrid, RouteChips, TrustBadges, ...
     documents/                           # DocCard, VerticalSection, ClauseRenderer, FindingsRail, ...
     kb/                                  # AgencyCard, SectionTree, ActionList, ...
-    common/                              # EmptyState, ErrorState, StatTile, FutureFeatureButton, PersonChip, ...
+    common/                              # EmptyState, ErrorState, StatTile, FutureCue, PersonChip, ...
   lib/
     api/
       schemas/                           # zod schemas = the contract (§6.3)
@@ -218,6 +223,7 @@ frontend/                                # deploy root; nothing outside this fol
     sentences.ts                         # plain-English sentence builders (§11.4)
     status.ts                            # document status derivation (§11.5)
     verticals.ts                         # 14 verticals + backend mapping (§5.3)
+    future-features.ts                   # future-cue registry (§18)
     run-context.tsx                      # current run from ?run=, SIMULATED flag
   fixtures/                              # committed JSON, validated by zod in tests; the app's only data source
   scripts/
@@ -230,7 +236,7 @@ frontend/                                # deploy root; nothing outside this fol
 - **Never render raw JSON. Never display internal ids (uuids).** Show clause ids (`RPL-CS-PRO-004:7.2`), citations (`170 IAC 4-1-16`), doc ids and people's names. Uuids may appear in URLs only.
 - All display strings for enums come from `lib/labels.ts`. Components never format enums inline.
 - Dates are ISO in data and formatted as `Feb 5, 2025` in the UI. For changes show the **publication date** (with its `date_basis`). There are no effective-date countdowns.
-- Citations and clause ids always render in the mono role, and legal and document text in the serif role (§11.3).
+- Citations and clause ids always render in the mono role, and legal and document text in the serif role (§17.3).
 
 ### 5.3 The 14 verticals (fixed order)
 
@@ -458,7 +464,7 @@ Section text (S1/S2) for in-footprint and preset sections is hand-authored. It m
    - `Decided by rule`, or `AI judgment · 82%`
    - `Evidence unverified — review`
    - "Why this clause was found", the match path in plain words.
-5. **One semantic language everywhere.** A verdict maps to one token that is reused in pills, document highlights, minimap ticks, matrix cells and funnel bars (§11.3).
+5. **One semantic language everywhere.** A verdict maps to one token that is reused in pills, document highlights, minimap ticks, matrix cells and funnel bars (§17.2).
 6. **Plain English first, legal text second.** Lead with a sentence ("Clause states 10 business days; the rule now requires 14."), then show the text.
 7. **Calm, dense, professional.** No decorative motion. Transitions only where they aid orientation (drawer open, highlight pulse).
 8. **Not overwhelming for a first-time user.** One primary action per screen. Progressive disclosure: collapsed groups and drawers rather than more pages. Consistent list → detail patterns. Breadcrumbs below the top level. Every count is clickable to the filtered list it summarizes.
@@ -468,7 +474,7 @@ Section text (S1/S2) for in-footprint and preset sections is hand-authored. It m
 - **Empty:** explain why, and offer the next useful action. Never a blank panel. The Overview's empty real wave is a *success* state (§9.1).
 - **Error:** a plain sentence, a retry, and which data source failed.
 - **Running:** the stage stepper or progress in context. Pages that read the run show "Results will appear when the run finishes".
-- **Simulated:** a persistent banner ("SIMULATED — What-if: <title>. These results are not real regulatory changes.") with a "Back to real wave" action. The run pill in the top bar is marked SIMULATED.
+- **Simulated:** a persistent banner ("SIMULATED — What-if: <title>. These results are not real regulatory changes.") with a "Back to real wave" action. The RunSelector in the page header shows the "Simulated" tag.
 - **Not monitored** (sample docs): a status pill and a disabled "Start monitoring" button. No reader link.
 
 ### 7.3 Keyboard
@@ -488,8 +494,8 @@ Section text (S1/S2) for in-footprint and preset sections is hand-authored. It m
 ### 7.5 Responsiveness
 Desktop-first (≥1280 px). Usable on tablet (≥768 px): the rails collapse into toggled panels. Mobile is not required for `/app`. The marketing page must be fully responsive.
 
-### 7.6 Future-feature buttons
-Component: `FutureFeatureButton`. It renders disabled, with a small "Soon" marker and a tooltip describing the capability ("Connect SharePoint, Google Drive or Box to keep documents in sync"). It is never clickable and never opens a dialog. Use at most 1–2 per page, placed beside the data they would act on. The full list is in §8.4. Nothing else may be stubbed.
+### 7.6 Future-capability cues
+Rendered by `<FutureCue id="…" />` from the registry in `lib/future-features.ts`. Rules, variants and the full catalog are in §18. Nothing outside that catalog may be stubbed.
 
 ---
 
@@ -519,12 +525,17 @@ Component: `FutureFeatureButton`. It renders disabled, with a small "Soon" marke
 The evidence card also opens as a drawer on any page via `?finding=<findingId>`. The full page and the drawer share one component.
 
 ### 8.2 Shell
-- **Top bar:** Strata wordmark (links to `/app`) · **RunSelector** (`Real wave · S1→S2` / `Baseline` / `What-if: <title>` plus each run's status) · **global search** (placeholder "Search doc id, clause id, citation…").
-- **Left nav:**
+There is no top bar; the layout follows Harvey (§17.5).
+- **Sidebar:**
+  - **Header:** the "Strata" wordmark (links to `/app`), a search icon button (opens ⌘K; placeholder "Search doc id, clause id, citation…") and the notifications future cue.
   - **Analysis:** Overview · Changes · Documents · Impact Matrix · Radar · What-if · Trust
   - **Knowledge base:** Regulations · Company
-  - Badges: Documents shows the number of documents needing action in the current run. Changes shows the in-footprint count.
-- **SimulatedBanner** below the top bar whenever `isSimulated`.
+  - **Recents:** the last 4 visited items.
+  - **Coming soon:** future cues (§18.2).
+  - **Footer:** the company chip with the workspace-switcher cue.
+  - Badges: Documents shows the number of documents needing action in the current run. Changes shows the in-footprint count. Badges are small neutral counts; the documents-needing-action badge is red-soft when above zero.
+- **RunSelector:** a select control (`Real wave · S1→S2 ▾`) at the right of every analysis page header (`Baseline`, `What-if: <title>` and each run's status in the menu). Knowledge-base pages show it too, since change badges depend on the run.
+- **SimulatedBanner:** pinned to the top of the main area whenever `isSimulated`.
 - **Breadcrumbs** on every page below the top level, e.g. `Documents › Policy & Governance Documents › RPL-CS-PRO-004`.
 
 ### 8.3 Global search (cmdk)
@@ -532,23 +543,8 @@ The evidence card also opens as a drawer on any page via `?finding=<findingId>`.
 - Matching is exact or prefix for ids and citations, fuzzy for titles. All matching runs client-side over an index built from the fixtures. Full-text semantic search over regulation text (the backend's `/search`) is a later integration and gets no placeholder.
 - Selecting a result navigates there, keeping `?run=`.
 
-### 8.4 Future-feature buttons (complete list; all disabled)
-
-| Page | Button(s) |
-|---|---|
-| Overview | Export summary |
-| Changes | Export change ledger |
-| Documents board | Connect document source · Upload document |
-| Vertical page | Upload document. Sample rows: Start monitoring |
-| Reader | View original file · Export findings |
-| Evidence card | Send to ticketing (Jira / ServiceNow) · Reassign |
-| Impact matrix | Export matrix |
-| Radar | Map to a document |
-| What-if | Compare scenarios |
-| Trust | Download audit log |
-| Regulations overview | "+ Add agency" card in Federal (suggestions: NERC, DOE, OSHA, PHMSA) and in State (suggestion: OUCC) · Add jurisdiction (e.g. Ohio PUCO) |
-| Agency page | Add data source |
-| Company profile | Edit profile |
+### 8.4 Future-capability cues
+See §18.2 for the complete per-page catalog. That catalog replaces the earlier list of future buttons.
 
 ---
 
@@ -588,7 +584,7 @@ Each page lists **Purpose · Data · Layout and contents · Interactions · Stat
 
 **States:** a running run shows the stepper in place of the funnel. Simulated shows the banner, and the funnel uses the what-if run.
 
-**Future button:** Export summary.
+Future cues: §18.2.
 
 **Acceptance**
 - Funnel numbers equal `run.stats`.
@@ -628,7 +624,7 @@ Each page lists **Purpose · Data · Layout and contents · Interactions · Stat
 - With no selection, the detail pane shows a short guide and the 3 most-cited changes.
 - If filters hide everything: "No changes match these filters" with a reset.
 
-**Future button:** Export change ledger.
+Future cues: §18.2.
 
 **Acceptance (demo):**
 - Opening the 94-clause cosmetic change shows the neutral banner, a stamp-only diff and "Cleared (94)" with reasons.
@@ -648,13 +644,13 @@ Each page lists **Purpose · Data · Layout and contents · Interactions · Stat
   - "Two-signature document" where applicable
 - Sample docs in empty verticals render as compact rows with a "Not monitored" pill, owner, and a disabled "Start monitoring" button.
 - Filters (URL): status, vertical, owner. Sort: needs action first.
-- Future buttons: Connect document source · Upload document.
+- Future cues: §18.2.
 
 **Vertical page** (`/app/documents/verticals/[vertical]`)
 - Header: name, one-sentence description, counts.
 - Table (TanStack): doc id, title, type, version, owner, next review, status, findings. Flagged rows sort first.
 - Empty vertical (samples only): explain that these documents are not yet monitored.
-- Future button: Upload document.
+- Future cues: §18.2.
 
 **Acceptance**
 - All 14 verticals render.
@@ -669,7 +665,7 @@ Each page lists **Purpose · Data · Layout and contents · Interactions · Stat
 - Title, doc id, version, effective / approved / law-as-of dates.
 - Status pill and the rollup sentence.
 - **RouteChips**: owner → reviewer → approver with names and titles, or "Two-signature document".
-- Future buttons: View original file · Export findings.
+- Future cues: §18.2.
 
 **Center: the document**, rendered from clauses in `ordinal` order by **ClauseRenderer**:
 - Headings come from `heading_path`, de-duplicated so consecutive clauses don't repeat headings.
@@ -722,7 +718,7 @@ Each page lists **Purpose · Data · Layout and contents · Interactions · Stat
    - **Accept** / **Reject** buttons. Reject requires a note.
    - The review history is listed.
    - Mock mode persists reviews in the session.
-   - Future buttons: Send to ticketing · Reassign.
+   - Future cues: §18.2.
 
 **Acceptance**
 - No section renders without its data.
@@ -742,7 +738,7 @@ Each page lists **Purpose · Data · Layout and contents · Interactions · Stat
 - Toggle (URL): **Show noise columns**.
 - A legend for the cell states.
 - Read-only.
-- Future button: Export matrix.
+- Future cues: §18.2.
 
 **Acceptance**
 - In the real wave, no cell shows action-required, and the ✓ cells show where checking happened.
@@ -757,7 +753,7 @@ Each page lists **Purpose · Data · Layout and contents · Interactions · Stat
   - an affected-activity sentence, the reason, and the S2 quote
   - "Docs covering the same rule" chips
 - **Screened out item:** a reason line (e.g. "owns_generating_units = false").
-- Future button: Map to a document.
+- Future cues: §18.2.
 
 **Acceptance:** the demo's 326 IAC standby-generator item appears under Possibly applicable, and the EPA turbine rule appears under Screened out.
 
@@ -773,7 +769,7 @@ Each page lists **Purpose · Data · Layout and contents · Interactions · Stat
 - **Run impact →** shows the **StageStepper**: Delta → Characterize → Candidates → Judge → Ledger. Counts appear as each stage finishes (from `run.progress`), and it polls every 2 s.
 - On success: **Open results**. This switches `?run=` to the what-if run and goes to Overview in SIMULATED mode.
 - Presets run instantly: clicking one goes straight to results.
-- Future button: Compare scenarios.
+- Future cues: §18.2.
 
 **Acceptance**
 - A custom edit shows the diff preview live, and Run shows stage progress, then results.
@@ -789,7 +785,7 @@ Each page lists **Purpose · Data · Layout and contents · Interactions · Stat
   - Every finding carries verified quotes.
   - Every change has a recorded outcome.
 - Counts: decided by rule vs AI, and LLM calls.
-- Future button: Download audit log.
+- Future cues: §18.2.
 
 ### 9.10 Regulations: agencies overview (`/app/regulations`)
 **Purpose.** Show which government sources Strata monitors (the owner's "government data landing page").
@@ -802,11 +798,11 @@ Each page lists **Purpose · Data · Layout and contents · Interactions · Stat
   - snapshot dates (S1 → S2)
   - last sync
   - "N changed in this run" (links to Changes filtered to that agency)
-- A disabled **"+ Add agency"** card ends each section (Federal suggestions: NERC, DOE, OSHA, PHMSA; State suggestion: OUCC). A disabled **Add jurisdiction** button sits in the page header.
+- Future cues (§18.2): an "Add agency" card ends each section, "Add jurisdiction" sits in the page header, and a compact "More source types" row sits below the agencies.
 - Data: `api.kb.listAgencies()` from fixtures. Future endpoint: B2.
 
 ### 9.11 Agency page (`/app/regulations/[agencyId]`)
-- **Header:** name, level, domains, codebook titles, snapshot dates, last sync. Future button: Add data source.
+- **Header:** name, level, domains, codebook titles, snapshot dates, last sync. Future cues: §18.2.
 - **Tab "Rules in force":**
   - A tree: Title → Part/Article → Rule → Section.
   - Each section row shows citation, heading, and a "Changed in this run" badge with its ClassPill.
@@ -837,7 +833,7 @@ Each page lists **Purpose · Data · Layout and contents · Interactions · Stat
 - Company header: name, type (electric distribution, investor-owned), state, customers, regulator.
 - **Attributes table** (key, value, source) from `company_profile.yaml`. These are the keys Radar cites, and each attribute has an anchor so Radar chips can link straight to it.
 - **People:** a directory table (name, title, department), plus a simple reporting tree. Each person shows the documents they own, review or approve.
-- Future button: Edit profile.
+- Future cues: §18.2.
 
 ### 9.15 Global search
 See §8.3.
@@ -868,7 +864,8 @@ Brief components (required):
 
 Additional components:
 - **Shell:** `AppShell`, `Sidebar`, `TopBar`, `GlobalSearch`, `Breadcrumbs`, `AppLink` (preserves `?run=`).
-- **Common:** `StatTile`, `EmptyState`, `ErrorState`, `FutureFeatureButton`, `PersonChip`, `AttributeChip`, `DocChip`, `CitationText`.
+- **Common:** `StatTile`, `EmptyState`, `ErrorState`, `FutureCue` (variants in §18.1), `PersonChip`, `AttributeChip`, `DocChip`, `CitationText`, `InfoStrip`, `PageHeader` (breadcrumbs, caption, serif title, actions, RunSelector), `Toolbar`.
+- **Shell additions:** `Recents`, `CompanyChip`, `IconRail` (collapsed sidebar).
 - **Engine:** `MatchPathIcon`, `DirectionChip`, `ValueChangeChip`, `StageStepper`, `TimelineStrip`, `LedgerList` (grouped findings / cleared), `ScoreFigure`.
 - **Documents:** `VerticalSection`, `DocCard`, `SampleDocRow`, `DocStatusPill`, `VerdictMiniBar`, `ClauseRenderer` (one sub-renderer per `unit_kind`), `FindingsRail`.
 - **KB:** `AgencyCard`, `AddAgencyCard`, `SectionTree`, `ActionList`, `StreamChips`.
@@ -900,7 +897,7 @@ Additional components:
 | `register_hop` | `git-branch` | "Linked through <register row / form / tariff rule ref>" |
 | `value_echo` | `repeat` | "Restates the old value (<old value>) without citing it" |
 
-### 11.3 Semantic tokens (names only; values come in the design pass)
+### 11.3 Semantic tokens (values and rendering in §17.2)
 - Verdicts: `--verdict-action-required`, `--verdict-optional-relaxed`, `--verdict-update-citation`, `--verdict-review`, `--verdict-info`, `--state-cleared`.
 - Noise: `--noise`.
 - Diff: `--diff-delete`, `--diff-insert`. Always paired with strikethrough and underline.
@@ -947,7 +944,7 @@ Each milestone ends with lint, typecheck and unit tests green, plus its acceptan
 
 | M | Scope | Done when |
 |---|---|---|
-| M0 | Scaffold `frontend/` as a standalone project (§0.1, §5.1) with Next.js + TS + Tailwind + shadcn (Radix) + the libraries in §4, and a `frontend/README.md` covering run, test and deploy (Vercel Root Directory = `frontend`). Shell (sidebar, top bar, breadcrumbs, RunSelector, SimulatedBanner). zod schemas, the `StrataApi` interface, the mock adapter, fixture builder, fixture invariant tests, run context, labels, sentences, status | The shell renders. Switching `?run=` changes the banner. Fixtures pass the invariants. `git status` shows changes only under `frontend/`. `pnpm build` passes from inside `frontend/`. |
+| M0 | Scaffold `frontend/` as a standalone project (§0.1, §5.1) with Next.js + TS + Tailwind + shadcn (Radix) + the libraries in §4, and a `frontend/README.md` covering run, test and deploy (Vercel Root Directory = `frontend`). The §17 design tokens and fonts. Shell (dark sidebar with Recents and the shell future cues, icon rail, PageHeader with breadcrumbs and RunSelector, SimulatedBanner). The `FutureCue` registry. zod schemas, the `StrataApi` interface, the mock adapter, fixture builder, fixture invariant tests, run context, labels, sentences, status | The shell renders. Switching `?run=` changes the banner. Fixtures pass the invariants. `git status` shows changes only under `frontend/`. `pnpm build` passes from inside `frontend/`. |
 | M1 | Overview | §9.1 acceptance |
 | M2 | Changes (tree + DiffView + ledger) | §9.2 acceptance |
 | M3 | Documents board + vertical page + reader (ClauseRenderer, overlays, rail, minimap, keyboard) | §9.3–9.4 acceptance |
@@ -999,7 +996,8 @@ Nothing in this section blocks the build. It records what the backend will need 
 - PDF or DOCX rendering of original documents.
 - Quantified dataset impacts (operational CSVs).
 - Compliance countdowns or effective-date timers (show publication dates only).
-- Visual design specifics in this phase: palettes, gradients, radii, shadows, illustration. These are delivered by the design pass on top of the §11.3 tokens.
+- Gradients, illustrations, stock imagery, emoji, colored icons, or any color outside §17.2.
+- Harvey's name, logo, proprietary fonts or verbatim copy. The look is inspired by Harvey, never copied.
 
 ---
 
@@ -1007,3 +1005,311 @@ Nothing in this section blocks the build. It records what the backend will need 
 1. Final names for the IAC 610 and 675 agencies. (Default: codebook-only cards labeled by title.)
 2. Should the matrix include sample (unmonitored) documents as greyed rows? (Default: no.)
 3. Is the Radar "Docs covering the same rule" computed by the backend or the client? (Default: backend field.)
+
+---
+
+## 17. Visual design system
+
+### 17.1 Direction
+The product must **feel like Harvey**: sharp, quiet, institutional. Think legal-grade software, not a startup dashboard. The reference screenshots the owner chose show four things:
+- a near-black sidebar beside a warm off-white canvas;
+- large serif page titles and big serif figures;
+- hairline-bordered white cards and tables;
+- a monochrome palette in which **color appears only to mean something**: red for problems, green for resolved or positive, and one muted warm tone for "needs attention".
+
+Rules that follow from this:
+1. **Monochrome first.** Everything is warm neutrals and ink. Status color is the only color.
+2. **Typography carries the hierarchy**, not boxes or color: a serif for titles, figures and documents; a neutral sans for UI; a mono for ids.
+3. **Hairlines, not shadows.** Separation comes from 1px borders and background steps. Shadows appear only on floating layers (popover, drawer, tooltip).
+4. **No decoration:** no gradients, illustrations, emoji, glassmorphism, colored icons or marketing flourishes inside the app.
+5. **Dense where data lives, generous around headings.** Tables and lists are compact. Page titles and the verdict sentence get air.
+6. **Sentence case everywhere.** No all-caps, except the tiny "Soon" and "Simulated" tags.
+
+**Inspired by, never copied.** Do not use Harvey's name, logo, "H" mark, proprietary fonts (HarveySerif, HarveySans and the like) or verbatim UI copy. Strata has its own wordmark, set in the display serif.
+
+### 17.2 Color tokens (light theme only)
+Define these as CSS variables in `app/globals.css` and expose them through Tailwind v4 `@theme`. shadcn's `--background`, `--foreground`, `--border` and so on map onto these. All text pairs below meet WCAG AA (checked); the disabled grey is exempt.
+
+| Token | Value | Use |
+|---|---|---|
+| `--canvas` | `#F7F6F3` | App background (warm off-white) |
+| `--surface` | `#FFFFFF` | Cards, tables, drawer, popovers |
+| `--surface-muted` | `#F1F0EC` | Table group rows, hover, tab track, code/quote wells |
+| `--border` | `#E7E5E0` | Hairlines |
+| `--border-strong` | `#D6D3CC` | Inputs, control outlines, dashed cue cards |
+| `--ink` | `#141413` | Primary text, primary button, focus ring |
+| `--ink-2` | `#52504B` | Secondary text, icons |
+| `--ink-3` | `#6F6C66` | Labels, captions, axis text, table headers (4.6:1 or better on every surface) |
+| `--ink-4` | `#A8A59E` | Disabled and future-cue text only |
+| `--sidebar` | `#0F0F0E` | Sidebar background |
+| `--sidebar-fg` | `#EDECE8` | Sidebar text |
+| `--sidebar-muted` | `#9A978F` | Sidebar section labels, secondary items |
+| `--sidebar-active` | `#252523` | Active nav item background |
+| `--sidebar-border` | `#232321` | Sidebar dividers |
+| `--red` / `--red-soft` / `--red-line` | `#B42318` / `#FDECEA` / `#F5C2BD` | Action required, diff deletions, negative deltas |
+| `--green` / `--green-soft` | `#1E6B45` / `#E8F3EC` | Cleared, diff insertions, positive deltas, pass marks |
+| `--amber` / `--amber-soft` | `#8A5317` / `#FBF0E2` | "Needs review" only: low confidence or unverified evidence |
+
+**Semantic mapping** (the brief's single color language, reduced to Harvey's palette). Every component reads these; none picks its own color.
+
+| Semantic token | Maps to | Rendering |
+|---|---|---|
+| `--verdict-action-required` | red | Soft red pill; red left border on the clause; red tick and dot |
+| `--verdict-review` | amber | Soft amber pill; amber border, tick and dot |
+| `--verdict-update-citation` | ink | Neutral pill with ink text and a `quote` icon; ink border, tick and dot |
+| `--verdict-optional-relaxed` | ink-2 | Outlined neutral pill with an `arrow-down-right` icon; ink-2 border, tick and dot |
+| `--verdict-info` | ink-3 | Muted neutral pill; ink-3 tick and dot |
+| `--state-cleared` | green | Soft green pill; green ✓ gutter marker; green figure for "clauses cleared" |
+| `--noise` | ink-4 texture | Hatched or dotted fill (see 17.6), never a solid color |
+| `--diff-delete` / `--diff-insert` | red / green | Red text with strikethrough and a red-soft background; green text with underline and a green-soft background |
+| `--simulated` | ink hatch | Diagonal hatch pattern plus the "Simulated" tag. **Not amber**, which is reserved for review. |
+
+### 17.3 Typography
+Fonts are loaded with `next/font/google`. They are open-source stand-ins for Harvey's proprietary faces.
+
+| Role | Family | Used for |
+|---|---|---|
+| Display and document serif | **Source Serif 4** (variable, optical sizing on) | Page titles, big figures, the verdict sentence, company-document and legal text, the wordmark |
+| UI sans | **Inter** (tabular numerals in tables and counts) | Everything else |
+| Mono | **JetBrains Mono** | Citations, clause ids, doc ids, DINs |
+
+| Style | Spec |
+|---|---|
+| Wordmark | Serif 24/28, weight 500, sidebar-fg |
+| Page title | Serif 36/44, weight 400, tracking −0.015em, ink |
+| Page caption (above title) | Sans 13/18, ink-3, e.g. "Real wave · S1 Dec 31, 2024 → S2 Dec 31, 2025" |
+| Big figure | Serif 48/52, weight 400, ink. Delta beside it in sans 13 medium, green or red with an arrow. |
+| Verdict sentence | Serif 22/30, weight 400; the key values in weight 600 |
+| Card or section title | Sans 18/24, weight 500, ink. Subtitle sans 14/20, ink-3. |
+| Body UI | Sans 14/20, ink |
+| Dense table | Sans 13/18 |
+| Label or header | Sans 12/16, weight 500, ink-3 |
+| Sidebar item | Sans 15/20, sidebar-fg. Section label sans 13/16, sidebar-muted. |
+| Reader document text | Serif 16/26, ink, measure ≤ 72ch |
+| Evidence pane text | Serif 15/24 |
+| Mono | 12.5/18 (13/18 in headers) |
+
+### 17.4 Shape, spacing, elevation, motion
+- **Radii:** cards and drawer 12px · buttons, inputs and selects 8px · pills and badges 6px · tags 4px · minimap ticks 1px.
+- **Spacing:** 4px base. Page padding 40px horizontal and 32px top. Card padding 24px. Grid gaps 16px or 24px. Section spacing 40px.
+- **Borders:** 1px `--border` on cards, tables and dividers; column dividers inside tables, as in Harvey review tables.
+- **Elevation:** none on cards. Popover, dropdown and tooltip get `0 4px 16px rgba(20,20,19,.08)`. The drawer gets `0 8px 32px rgba(20,20,19,.12)` and a 1px left border.
+- **Motion:** 150 ms ease-out for hover and state changes, 200 ms for the drawer slide, and a single 600 ms highlight pulse when jumping to a clause. Respect `prefers-reduced-motion` (no slide, no pulse). Nothing else animates.
+- **Icons:** lucide at 16px (14px in dense tables), stroke 1.5, ink-2. Never colored, except the status ✓ and arrow in deltas.
+
+### 17.5 Layout and component styling
+**App shell**
+- **Sidebar:** fixed, 264px, `--sidebar`, full height.
+  - **Header row:** the "Strata" wordmark, then search and notification (future cue) icon buttons on the right.
+  - **Primary nav:** Overview · Changes · Documents · Impact Matrix · Radar · What-if · Trust. Each is an icon plus a label; the active item is a `--sidebar-active` rounded (8px) row.
+  - **Knowledge base** section: Regulations · Company.
+  - **Recents** section: the last 4 visited documents, changes or findings, kept in `sessionStorage` (wrapped in try/catch). Each row has a small bullet and an ellipsis-truncated label.
+  - **Coming soon** section: future cues (§18.1).
+  - **Footer:** the company chip ("Rockridge Power & Light", with a square monogram "R"), plus the workspace-switcher future cue.
+- **Icon rail (64px):** the sidebar collapses to it via a toggle. The reader collapses it automatically to give the document room, as in the reference's agent-builder screen.
+- **Main area:** `--canvas`. Content max-width is 1440px for dashboards; the reader, changes and matrix pages are full width.
+- **Page header:** caption (optional) above a serif title on the left; actions on the right. Secondary buttons first, then **at most one** primary (ink) button. Breadcrumbs sit above the caption in ink-3 with `›` separators, the current page in ink.
+- **Info strip:** a full-width white card under the header with a small monogram icon and one sentence. Example: "1 change needs review across 3 documents." It links to the filtered view. Use it at most once per page, and only when there's something actionable.
+
+**Components**
+- **Cards:** `--surface`, hairline border, radius 12, padding 24. The title row has a title and subtitle on the left and select controls on the right. Footer rows (legend or actions) sit under a hairline divider.
+- **Buttons:**
+  - Primary: ink background, white text, h-36, radius 8, sans 14 medium.
+  - Secondary: surface, `--border-strong`, ink text.
+  - Ghost: text only, ink-2, with surface-muted on hover.
+  - Icon buttons: 32×32.
+- **Select controls** (period, filter): surface, `--border-strong`, h-32, radius 8, label plus a 14px `chevron-down`.
+- **Tabs:** segmented. The track is transparent and the active tab is a surface pill with a hairline border; inactive tabs are ink-3 and turn ink on hover. Use them on the agency, radar and company pages.
+- **Toolbar** (above tables, in Harvey review-table style): a row of ghost icon-plus-label actions separated by 1px vertical dividers, h-44, with a hairline bottom border.
+- **Tables:**
+  - Header row h-40: icon plus label in label style, with filter and sort icons that appear on hover.
+  - Rows h-40 (h-32 compact for ledgers and the matrix). A leading row-number column in ink-3, and checkbox selection only where an action exists.
+  - **Group rows:** `--surface-muted` band with an icon, the name in weight 500, "· n items" in ink-3, and a chevron.
+  - Cells truncate with an ellipsis and show a tooltip with the full text.
+  - Hover: surface-muted.
+- **Pills:** soft background with matching text, sans 12 medium, h-22, radius 6, horizontal padding 8. Status pills use the semantic tokens. Neutral pills: surface-muted with ink-2 text.
+- **Tags** (ClassPill noise, "Simulated", "Soon"): 11px medium, radius 4, 1px border.
+- **Tooltips:** ink background, white sans 12, radius 6, max-width 280px.
+- **Drawer** (evidence card): 640px wide (resizable to 880px), `--surface`, a sticky header with the verdict sentence and a close button, and sections separated by hairlines.
+- **Empty states:** text only. A serif 20 line, a sans 14 ink-3 explanation and one action. No illustrations.
+- **Skeletons:** `--surface-muted` blocks with a subtle shimmer, disabled under reduced motion.
+
+### 17.6 Data marks without a chart library
+All of these are plain divs and CSS, styled to match the reference's hairline bars.
+- **"Your data" bars** (funnel substantive and in-footprint stages, verdict mini-bars): a solid ink fill, or the hairline texture `repeating-linear-gradient(90deg, var(--ink) 0 1px, transparent 1px 3px)` for large bars.
+- **Noise bars:** a dotted or hatched texture in ink-4 (`repeating-linear-gradient(45deg, var(--ink-4) 0 1px, transparent 1px 4px)`), with a legend entry "Noise".
+- **Funnel:** horizontal bars as in the reference's "Top power users" card. The stage label is on the left in sans 13 ink-2, the bar fills proportionally, and the value sits to its right in sans 12 ink-3 ("491 substantive"). "Clauses cleared" is a separate serif big figure in green.
+- **Minimap:** a 6px track with 3px × 2px ticks in the verdict tokens.
+- **Matrix cells:** a 10px dot in the verdict token with a count, a green ✓ for cleared, or empty.
+- **Timeline strip and trace chain:** hairline connectors between 8px nodes (ink) and small bordered cards.
+- **Stage stepper:** a vertical list as in the reference's agent-builder progress. A done stage shows a ✓ in ink plus a count, the running stage a spinner ring, and pending stages a hollow ring in ink-4.
+
+### 17.7 Marketing landing styling
+- Dark-first, like Harvey's site: a warm near-black (`#0F0E0D`) hero with an ivory (`#FAFAF9`) serif headline at 72/76 (40/44 on mobile).
+- Sections alternate between dark and `--canvas`.
+- Product screenshots are framed as in the owner's references: the app screenshot on a dark field with a very subtle grain (an inline SVG noise filter at about 6% opacity). This is the only texture allowed.
+- Buttons: ivory-on-dark primary with radius 4px. The marketing site uses sharp corners; the app uses 8px.
+- No stock imagery, logos of customers we don't have, or testimonials.
+
+---
+
+## 18. Future-capability cues
+
+### 18.1 Purpose and rules
+These are disabled UI affordances that show what Strata could do next, so a first-time viewer senses a broad, cutting-edge platform without reading a roadmap. They replace the earlier short list of future buttons.
+
+1. **They never work.** No click handler, dialog, toast or navigation. Hover and focus show a tooltip; that's all.
+2. **At most 3 per page**, not counting the shell. One cluster per page is ideal. They are **never** the primary button, and never placed inside the evidence panes or between a verdict and its proof.
+3. **Each one sits beside the data it would act on**, so its meaning is obvious without reading.
+4. **They are visually quieter than real controls:**
+   - ink-4 label and icon;
+   - a "Soon" tag (11px medium, ink-3, 1px `--border-strong`, radius 4);
+   - normal cursor, since `not-allowed` reads as an error.
+5. **Accessibility:**
+   - render with `aria-disabled="true"`, not the `disabled` attribute, so they stay focusable and the tooltip works;
+   - include screen-reader text "(coming soon)";
+   - Enter and Space do nothing.
+6. **Tooltip copy:** the label in weight 500, one outcome-focused line of at most 90 characters, then "Coming soon" in ink-3. Plain words, no "AI-powered" fluff.
+7. **Single registry.** Every cue is defined once in `lib/future-features.ts` (`id, label, tooltip, icon, variant`) and rendered by `<FutureCue id="…" />`. A constant `SHOW_FUTURE_CUES` (default `true`) hides them all at once for a no-cues demo.
+
+**Variants of `FutureCue`:**
+- `button`: secondary-button shape.
+- `toolbar`: a toolbar item.
+- `inline-add`: "+ Label" ghost text, as in the reference's "+ Add source".
+- `card`: a dashed `--border-strong` card with a plus icon.
+- `nav`: a sidebar item.
+- `icon`: an icon button.
+- `chip`: a filter chip.
+- `menu-item`: a row in a dropdown or the command palette.
+
+### 18.2 Catalog
+Copy is final unless the owner edits it. Ids are stable.
+
+**Shell (on every page)**
+
+| id | Variant · placement | Label | Tooltip |
+|---|---|---|---|
+| `notifications` | icon · sidebar header (bell) | Alerts | Get alerted the moment a rule your documents depend on changes. |
+| `assistant` | nav · sidebar "Coming soon" | Assistant | Ask questions across regulations and your documents, with cited answers. |
+| `agents` | nav · sidebar "Coming soon" | Agents | Automate recurring work, like monthly obligation reviews or filing prep. |
+| `integrations` | nav · sidebar "Coming soon" | Integrations | Connect SharePoint, Google Drive, Box, Jira and ServiceNow. |
+| `workspace-switcher` | icon · company chip chevron | Switch company | Monitor several operating companies and affiliates from one workspace. |
+| `search-ask` | menu-item · last row of ⌘K results | Ask Strata "‹query›" | Get a cited answer instead of a list of results. |
+
+**Overview**
+
+| id | Variant · placement | Label | Tooltip |
+|---|---|---|---|
+| `schedule-briefing` | button · page header | Schedule briefing | Email a one-page summary of every regulatory wave to leadership. |
+| `export-report` | button · page header | Export report | Download a board-ready PDF of this wave's impact. |
+| `continuous-monitoring` | menu-item · RunSelector, under a "Coming soon" divider | Continuous monitoring | Analyze changes the day they're published, not snapshot to snapshot. |
+
+**Changes**
+
+| id | Variant · placement | Label | Tooltip |
+|---|---|---|---|
+| `proposed-rules` | chip · tree filter row | Proposed rules | See which clauses a proposed rule would affect before it becomes final. |
+| `watch` | button · change detail header | Watch | Follow this section and get alerted on any future change. |
+| `impact-memo` | button · change detail header | Draft impact memo | Generate a counsel-ready memo of this change and every clause it touches. |
+
+**Documents board**
+
+| id | Variant · placement | Label | Tooltip |
+|---|---|---|---|
+| `connect-source` | button · page header | Connect source | Keep documents in sync from SharePoint, Google Drive, Box or iManage. |
+| `upload-document` | button · page header | Upload | Add a document; Strata splits it into clauses and files it in the right vertical. |
+| `coverage-gaps` | toolbar · board toolbar | Find coverage gaps | Find rules RPL is subject to that no document covers yet. |
+
+**Vertical page**
+
+| id | Variant · placement | Label | Tooltip |
+|---|---|---|---|
+| `invite-team` | button · page header | Invite team | Give this department's owners and reviewers their own view. |
+| `upload-document` | button · page header | Upload | (as above) |
+| `start-monitoring` | inline-add · each sample-doc row | Start monitoring | Check this document against every future regulatory change. |
+
+**Document reader**
+
+| id | Variant · placement | Label | Tooltip |
+|---|---|---|---|
+| `ask-document` | toolbar · reader toolbar | Ask | Ask about this document and get answers cited to its clauses. |
+| `export-redline` | toolbar · reader toolbar | Export redline | Send suggested updates to Word as tracked changes for the owner. |
+| `view-original` | toolbar · reader toolbar | Original file | View the source PDF or Word file beside its clauses. |
+| `version-history` | icon · chevron on the version chip in the header (counts toward the 3 only if the toolbar is crowded; prefer keeping it) | Version history | Compare this document with its earlier versions. |
+
+**Evidence card**
+
+| id | Variant · placement | Label | Tooltip |
+|---|---|---|---|
+| `draft-rewrite` | inline-add · after the "Suggested update — not applied" chip | Draft full rewrite | Draft a complete replacement clause that satisfies the new rule. |
+| `create-task` | button · routing section | Create task | Open a tracked task in Jira or ServiceNow for the owner. |
+| `request-signoff` | button · routing section | Request sign-off | Collect owner, reviewer and approver sign-off with an audit trail. |
+
+**Impact matrix**
+
+| id | Variant · placement | Label | Tooltip |
+|---|---|---|---|
+| `ai-column` | toolbar · matrix toolbar | Add column | Ask one question of every document and see each answer in its row. |
+| `export-matrix` | toolbar · matrix toolbar | Export | Download this matrix as a spreadsheet. |
+
+**Radar**
+
+| id | Variant · placement | Label | Tooltip |
+|---|---|---|---|
+| `map-document` | inline-add · each "Possibly applicable" item | Map to document | Link this rule to the document that should cover it. |
+| `assign-review` | inline-add · each "Possibly applicable" or "Unclear" item | Assign | Ask a colleague to confirm whether this applies to RPL. |
+
+**What-if**
+
+| id | Variant · placement | Label | Tooltip |
+|---|---|---|---|
+| `from-proposed-rule` | card · last card in the preset list | Start from a proposed rule | Load an open IURC or Federal Register proposal as a scenario. |
+| `compare-scenarios` | button · page header | Compare | Put two scenarios side by side. |
+
+**Trust**
+
+| id | Variant · placement | Label | Tooltip |
+|---|---|---|---|
+| `evidence-pack` | button · page header | Export evidence pack | Package every decision, quote and review for auditors or regulators. |
+| `review-sampling` | inline-add · Method card | Set up review sampling | Route a random sample of AI decisions to a human reviewer each wave. |
+
+**Regulations overview**
+
+| id | Variant · placement | Label | Tooltip |
+|---|---|---|---|
+| `add-agency-federal` | card · end of Federal (subtitle "NERC, OSHA, DOE…") | Add agency | Track another federal agency's rules and actions for RPL. |
+| `add-agency-state` | card · end of State (subtitle "OUCC, Indiana DNR…") | Add agency | Track another Indiana agency's rules and actions for RPL. |
+| `add-jurisdiction` | button · page header | Add jurisdiction | Monitor another state, such as Ohio, Illinois or Michigan. |
+| `more-sources` | one compact row of 3 small cards below the agencies, under the heading "More source types": Indiana General Assembly · MISO tariff & manuals · Court & commission decisions | (card titles) | Track bills before they amend the Indiana Code. · Track MISO tariff and business-practice changes. · Track decisions that reinterpret your rules. |
+
+(`more-sources` counts as one cue for the per-page limit.)
+
+**Agency page**
+
+| id | Variant · placement | Label | Tooltip |
+|---|---|---|---|
+| `track-docket` | toolbar · Activity tab | Track docket | Follow an IURC cause or FERC docket and see every new filing. |
+| `add-data-source` | button · page header | Add data source | Add another feed for this agency, such as guidance or FAQs. |
+
+**Regulation section**
+
+| id | Variant · placement | Label | Tooltip |
+|---|---|---|---|
+| `watch` | button · page header | Watch | (as above) |
+| `add-note` | button · page header | Add note | Leave an internal interpretation note for your team. |
+
+**Regulatory action**
+
+| id | Variant · placement | Label | Tooltip |
+|---|---|---|---|
+| `comment-letter` | button · page header, **only when `action_type` is a proposed rule or advance notice** | Draft comment letter | Draft comments on an open rulemaking, grounded in RPL's documents. |
+| `track-docket` | button · page header | Track docket | (as above) |
+
+**Company profile**
+
+| id | Variant · placement | Label | Tooltip |
+|---|---|---|---|
+| `edit-profile` | button · page header | Edit profile | Correct an attribute and Radar re-screens every change automatically. |
+| `sync-directory` | inline-add · People section header | Sync directory | Keep people and roles in sync with Workday or Okta. |
+
+**Marketing landing.** No disabled controls. Add a calm **"What's next"** section of four items, as plain content: Assistant with cited answers · Early warning on proposed rules · Integrations with your document and ticketing systems · Multi-company monitoring.
