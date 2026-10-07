@@ -1025,6 +1025,8 @@ Rules that follow from this:
 5. **Dense where data lives, generous around headings.** Tables and lists are compact. Page titles and the verdict sentence get air.
 6. **Sentence case everywhere.** No all-caps, except the tiny "Soon" and "Simulated" tags.
 
+**Reference screenshots:** `frontend_development_docs/reference/design/` holds four Harvey screenshots, plus a README mapping each one to Strata pages. Study them before building any UI. They are the target for overall feel; this section is the target for exact values.
+
 **Inspired by, never copied.** Do not use Harvey's name, logo, "H" mark, proprietary fonts (HarveySerif, HarveySans and the like) or verbatim UI copy. Strata has its own wordmark, set in the display serif.
 
 ### 17.2 Color tokens (light theme only)

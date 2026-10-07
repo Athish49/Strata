@@ -10,11 +10,12 @@ Everything the agent building the Strata frontend needs to read. Nothing in this
 | `frontend_brief.md` | The backend agent's brief on how the analysis engine's results should be shown | Canonical for engine UX where the spec is silent. Where it asks for live endpoints or polling of the backend, spec §0.1 overrides it: everything is mocked in this phase. |
 | `reference/kb_audit_government.html` | Audit of the regulatory knowledge base (tables, counts, snapshots, agencies) | Reference for realistic fixture values |
 | `reference/company_data_audit.html` | Audit of RPL's company data (documents, clauses, citations, parameters, people) | Reference for realistic fixture values |
+| `reference/design/` | Four Harvey screenshots plus a README saying what to take from each and which Strata page it maps to | **The target look and feel.** Spec §17 gives the exact values. |
 
 ## Reading order
 1. `frontend_spec.md` §0–§3: boundaries, product and decisions.
 2. `frontend_brief.md`, all of it.
-3. `frontend_spec.md` §4 onward. Read §17 (design) and §18 (cues) before building any UI.
+3. `frontend_spec.md` §4 onward. Read §17 (design), `reference/design/` (screenshots) and §18 (cues) before building any UI.
 4. The `reference/` audits, when building fixtures.
 
 ## Hard rules (summary of spec §0)
@@ -27,4 +28,4 @@ Everything the agent building the Strata frontend needs to read. Nothing in this
 
 ## Kickoff prompt for the build agent
 
-> You are building the Strata frontend. Read `frontend_development_docs/README.md`, then `frontend_spec.md` and `frontend_brief.md` in full before writing any code. Follow the spec's §0.1 boundaries strictly: all work goes inside `frontend/`, nothing outside it changes, and there is no backend integration (everything is mocked from committed fixtures). Build milestone by milestone in the order of spec §13. At the end of each milestone, run lint, typecheck and tests, check that `git status` shows changes only under `frontend/`, commit, and report what was done against that milestone's acceptance criteria. Start with M0.
+> You are building the Strata frontend. Read `frontend_development_docs/README.md`, then `frontend_spec.md` and `frontend_brief.md` in full before writing any code. Follow the spec's §0.1 boundaries strictly: all work goes inside `frontend/`, nothing outside it changes, and there is no backend integration (everything is mocked from committed fixtures). Before any UI work, open every screenshot in `frontend_development_docs/reference/design/` and match their look and feel. Build milestone by milestone in the order of spec §13. At the end of each milestone, run lint, typecheck and tests, check that `git status` shows changes only under `frontend/`, commit, and report what was done against that milestone's acceptance criteria. Start with M0.
