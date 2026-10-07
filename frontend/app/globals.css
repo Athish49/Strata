@@ -138,10 +138,12 @@ body {
 .mark-hairline {
   background-image: repeating-linear-gradient(90deg, var(--ink) 0 1px, transparent 1px 3px);
 }
-.mark-noise {
+.mark-noise,
+.noise-hatch {
   background-image: repeating-linear-gradient(45deg, var(--ink-4) 0 1px, transparent 1px 4px);
 }
-.mark-simulated {
+.mark-simulated,
+.simulated-hatch {
   background-image: repeating-linear-gradient(135deg, var(--ink) 0 1px, transparent 1px 6px);
 }
 
@@ -174,5 +176,12 @@ body {
   }
   * {
     transition-duration: 0ms !important;
+  }
+}
+
+@keyframes sheet-in {
+  from {
+    transform: translateX(24px);
+    opacity: 0;
   }
 }

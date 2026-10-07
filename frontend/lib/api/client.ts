@@ -1,3 +1,4 @@
+import { mockApi } from "./mock";
 import type {
   Agency,
   Candidate,
@@ -104,3 +105,6 @@ export interface StrataApi {
   engine: EngineApi;
   company: CompanyApi;
 }
+
+/** The single place that picks the StrataApi implementation. */
+export const api: StrataApi = mockApi;
