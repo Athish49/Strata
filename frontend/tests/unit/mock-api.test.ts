@@ -126,6 +126,8 @@ describe("scenarios and custom runs", () => {
     expect(run.status).toBe("running");
     expect(run.title).toBe("Custom test");
     runSchema.parse(run);
+    // Results must not appear before the run finishes.
+    expect(await api.engine.listFindings(run.run_id)).toEqual([]);
 
     const stages: string[] = [];
     const step = 500;
@@ -137,7 +139,6 @@ describe("scenarios and custom runs", () => {
       vi.advanceTimersByTime(step);
     }
     expect(stages).toEqual(["delta", "characterize", "candidates", "judge", "ledger"]);
-    expect(await api.engine.listFindings(run.run_id)).toEqual([]);
 
     vi.advanceTimersByTime(CUSTOM_RUN_MS);
     const done = (await api.engine.getRun(run.run_id))!;

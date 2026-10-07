@@ -4,12 +4,12 @@
  *
  * Inputs: fixtures/kb/{sections,versions}.json, fixtures/company/{documents,profile}.json and clauses/*.json.
  * Output is deterministic. All findings/candidates/radar items are INVENTED demo scenarios.
- * diff_segments are produced with jsdiff (diffWords) from s1_text / s2_text, never by hand.
+ * diff_segments are produced with jsdiff (diffWordsWithSpace) from s1_text / s2_text, never by hand.
  */
 import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { diffWords } from "diff";
+import { diffWordsWithSpace } from "diff";
 import {
   candidateSchema,
   changeRecordSchema,
@@ -66,7 +66,7 @@ const changeId = (_ss: string, cit: string) => `chg-${slug(cit)}`;
 
 function segments(s1: string, s2: string): DiffSegment[] {
   const out: DiffSegment[] = [];
-  for (const p of diffWords(s1, s2)) {
+  for (const p of diffWordsWithSpace(s1, s2)) {
     const op = p.added ? "insert" : p.removed ? "delete" : "equal";
     const last = out[out.length - 1];
     if (last && last.op === op) last.text += p.value;
@@ -665,9 +665,7 @@ for (const f of FOOT) {
 }
 
 // out-of-footprint substantive-type
-let seq = 0;
 for (const s of SUBS) {
-  seq++;
   const cit = s.cit;
   const sec = secBy.get(cit)!;
   const ss = sec.source_system;

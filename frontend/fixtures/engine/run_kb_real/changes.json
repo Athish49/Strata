@@ -115,19 +115,19 @@
       },
       {
         "op": "insert",
-        "text": ", "
+        "text": ","
       },
       {
         "op": "equal",
-        "text": "and is effective thirty (30) days after the utility submits it to the commission unless the commission, by order, suspends the filing"
+        "text": " and is effective thirty (30) days after the utility submits it to the commission unless the commission, by order, suspends the filing"
       },
       {
         "op": "insert",
-        "text": ", "
+        "text": ","
       },
       {
         "op": "equal",
-        "text": "sets it for hearing, or rejects it.\n\n(b) A utility shall serve a copy of each administrative filing on the office of utility consumer counselor on the same day it is submitted to the commission.\n\n(c) A utility shall not place an administrative filing into effect before the thirty (30) day period ends, except upon written approval of the commission secretary.\n\n(Indiana Utility Regulatory Commission; 170 IAC 1-6-3; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722)"
+        "text": " sets it for hearing, or rejects it.\n\n(b) A utility shall serve a copy of each administrative filing on the office of utility consumer counselor on the same day it is submitted to the commission.\n\n(c) A utility shall not place an administrative filing into effect before the thirty (30) day period ends, except upon written approval of the commission secretary.\n\n(Indiana Utility Regulatory Commission; 170 IAC 1-6-3; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722)"
       }
     ],
     "s1_text": "170 IAC 1-6-3 Administrative filings; timing\n\n(a) A filing described in this rule is an administrative filing and is effective thirty (30) days after the utility submits it to the commission unless the commission, by order, suspends the filing sets it for hearing, or rejects it.\n\n(b) A utility shall serve a copy of each administrative filing on the office of utility consumer counselor on the same day it is submitted to the commission.\n\n(c) A utility shall not place an administrative filing into effect before the thirty (30) day period ends, except upon written approval of the commission secretary.\n\n(Indiana Utility Regulatory Commission; 170 IAC 1-6-3; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722)",
@@ -249,19 +249,19 @@
       },
       {
         "op": "insert",
-        "text": ", "
+        "text": ","
       },
       {
         "op": "equal",
-        "text": "and shall provide the account history, the notices issued"
+        "text": " and shall provide the account history, the notices issued"
       },
       {
         "op": "insert",
-        "text": ", "
+        "text": ","
       },
       {
         "op": "equal",
-        "text": "and a statement of its position.\n\n(c) The division shall issue a written determination, and the utility shall comply with that determination or file a formal complaint under 170 IAC 1-1.1.\n\n(Indiana Utility Regulatory Commission; 170 IAC 16-1-4; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722)"
+        "text": " and a statement of its position.\n\n(c) The division shall issue a written determination, and the utility shall comply with that determination or file a formal complaint under 170 IAC 1-1.1.\n\n(Indiana Utility Regulatory Commission; 170 IAC 16-1-4; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722)"
       }
     ],
     "s1_text": "(a) A customer who is dissatisfied with the utility's response to an informal complaint may request that the commission's consumer affairs division review the matter.\n\n(b) The utility shall respond to a consumer affairs inquiry within ten (10) days and shall provide the account history, the notices issued and a statement of its position.\n\n(c) The division shall issue a written determination, and the utility shall comply with that determination or file a formal complaint under 170 IAC 1-1.1.\n\n(Indiana Utility Regulatory Commission; 170 IAC 16-1-4; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722)",
@@ -387,11 +387,19 @@
       },
       {
         "op": "insert",
-        "text": "one hundred"
+        "text": "one"
       },
       {
         "op": "equal",
-        "text": " ("
+        "text": " "
+      },
+      {
+        "op": "insert",
+        "text": "hundred "
+      },
+      {
+        "op": "equal",
+        "text": "("
       },
       {
         "op": "delete",
@@ -822,11 +830,11 @@
       },
       {
         "op": "insert",
-        "text": "-half "
+        "text": "-half"
       },
       {
         "op": "equal",
-        "text": "("
+        "text": " ("
       },
       {
         "op": "delete",
@@ -879,11 +887,11 @@
     "diff_segments": [
       {
         "op": "equal",
-        "text": "327 IAC 15-6-1 Industrial stormwater; Rule 6\n\n(a) This rule covers stormwater discharges associated with industrial activity.\n\n(b) A permittee shall collect quarterly stormwater samples "
+        "text": "327 IAC 15-6-1 Industrial stormwater; Rule 6\n\n(a) This rule covers stormwater discharges associated with industrial activity.\n\n(b) A permittee shall collect quarterly stormwater samples"
       },
       {
         "op": "insert",
-        "text": "and shall post each result on a public website within thirty (30) days"
+        "text": " and shall post each result on a public website within thirty (30) days"
       },
       {
         "op": "equal",
@@ -1144,7 +1152,7 @@
       },
       {
         "op": "delete",
-        "text": "one hundred twenty"
+        "text": "one"
       },
       {
         "op": "insert",
@@ -1152,7 +1160,15 @@
       },
       {
         "op": "equal",
-        "text": " ("
+        "text": " "
+      },
+      {
+        "op": "delete",
+        "text": "hundred twenty "
+      },
+      {
+        "op": "equal",
+        "text": "("
       },
       {
         "op": "delete",
@@ -1270,11 +1286,11 @@
     "diff_segments": [
       {
         "op": "equal",
-        "text": "(a) A transmission provider shall post specified information on its OASIS.\n\n(b) The provider shall post planned outages when they are scheduled "
+        "text": "(a) A transmission provider shall post specified information on its OASIS.\n\n(b) The provider shall post planned outages when they are scheduled"
       },
       {
         "op": "insert",
-        "text": "and shall update the posting within one (1) business day of any change"
+        "text": " and shall update the posting within one (1) business day of any change"
       },
       {
         "op": "equal",
@@ -1396,11 +1412,11 @@
     "diff_segments": [
       {
         "op": "equal",
-        "text": "170 IAC 6-1-1 Energy efficiency programs; applicability\n\n(a) This rule applies to an electric utility that offers an energy efficiency program.\n\n(b) A utility shall file an annual program report with the commission "
+        "text": "170 IAC 6-1-1 Energy efficiency programs; applicability\n\n(a) This rule applies to an electric utility that offers an energy efficiency program.\n\n(b) A utility shall file an annual program report with the commission"
       },
       {
         "op": "insert",
-        "text": "and shall include verified savings by customer class"
+        "text": " and shall include verified savings by customer class"
       },
       {
         "op": "equal",
@@ -1702,11 +1718,23 @@
       },
       {
         "op": "delete",
-        "text": "Emission offset (obsolete)"
+        "text": "Emission"
       },
       {
         "op": "insert",
-        "text": "[Section repealed"
+        "text": "[Section"
+      },
+      {
+        "op": "equal",
+        "text": " "
+      },
+      {
+        "op": "delete",
+        "text": "offset (obsolete)"
+      },
+      {
+        "op": "insert",
+        "text": "repealed"
       },
       {
         "op": "equal",
@@ -1756,11 +1784,23 @@
       },
       {
         "op": "delete",
-        "text": "Stack height (obsolete)"
+        "text": "Stack"
       },
       {
         "op": "insert",
-        "text": "[Section repealed"
+        "text": "[Section"
+      },
+      {
+        "op": "equal",
+        "text": " "
+      },
+      {
+        "op": "delete",
+        "text": "height (obsolete)"
+      },
+      {
+        "op": "insert",
+        "text": "repealed"
       },
       {
         "op": "equal",
@@ -1810,11 +1850,23 @@
       },
       {
         "op": "delete",
-        "text": "Spill prevention (obsolete)"
+        "text": "Spill"
       },
       {
         "op": "insert",
-        "text": "[Section repealed"
+        "text": "[Section"
+      },
+      {
+        "op": "equal",
+        "text": " "
+      },
+      {
+        "op": "delete",
+        "text": "prevention (obsolete)"
+      },
+      {
+        "op": "insert",
+        "text": "repealed"
       },
       {
         "op": "equal",
@@ -1864,11 +1916,23 @@
       },
       {
         "op": "delete",
-        "text": "Sludge disposal (obsolete)"
+        "text": "Sludge"
       },
       {
         "op": "insert",
-        "text": "[Section repealed"
+        "text": "[Section"
+      },
+      {
+        "op": "equal",
+        "text": " "
+      },
+      {
+        "op": "delete",
+        "text": "disposal (obsolete)"
+      },
+      {
+        "op": "insert",
+        "text": "repealed"
       },
       {
         "op": "equal",
@@ -1914,15 +1978,35 @@
     "diff_segments": [
       {
         "op": "delete",
-        "text": "Excess emissions penalty (obsolete). This section text is placeholder sample content written for the Strata demo"
+        "text": "Excess"
       },
       {
         "op": "insert",
-        "text": "[Section removed"
+        "text": "[Section"
       },
       {
         "op": "equal",
-        "text": " and "
+        "text": " "
+      },
+      {
+        "op": "delete",
+        "text": "emissions"
+      },
+      {
+        "op": "insert",
+        "text": "removed"
+      },
+      {
+        "op": "equal",
+        "text": " "
+      },
+      {
+        "op": "delete",
+        "text": "penalty (obsolete). This section text is placeholder sample content written for the Strata demo "
+      },
+      {
+        "op": "equal",
+        "text": "and "
       },
       {
         "op": "delete",
@@ -1976,15 +2060,35 @@
     "diff_segments": [
       {
         "op": "delete",
-        "text": "Auctions (obsolete). This section text is placeholder sample content written for the Strata demo"
+        "text": "Auctions"
       },
       {
         "op": "insert",
-        "text": "[Section removed"
+        "text": "[Section"
       },
       {
         "op": "equal",
-        "text": " and "
+        "text": " "
+      },
+      {
+        "op": "delete",
+        "text": "(obsolete)."
+      },
+      {
+        "op": "insert",
+        "text": "removed"
+      },
+      {
+        "op": "equal",
+        "text": " "
+      },
+      {
+        "op": "delete",
+        "text": "This section text is placeholder sample content written for the Strata demo "
+      },
+      {
+        "op": "equal",
+        "text": "and "
       },
       {
         "op": "delete",
@@ -2347,11 +2451,11 @@
     "diff_segments": [
       {
         "op": "equal",
-        "text": "Source: IC 13-14-8\n\n(a) This section applies to each person, facility, or filing described in applicability.\n\n(b) The responsible person shall maintain records, reports, and notices required by this section and shall make them available on request.\n\n(c) Definitions used in this section are in section 2 of this part.\n\n"
+        "text": "Source: IC 13-14-8\n\n(a) This section applies to each person, facility, or filing described in applicability.\n\n(b) The responsible person shall maintain records, reports, and notices required by this section and shall make them available on request.\n\n(c) Definitions used in this section are in section 2 of this part."
       },
       {
         "op": "insert",
-        "text": "[Editorial: paragraph headings reformatted; no text change.]"
+        "text": "\n\n[Editorial: paragraph headings reformatted; no text change.]"
       }
     ],
     "s1_text": "Source: IC 13-14-8\n\n(a) This section applies to each person, facility, or filing described in applicability.\n\n(b) The responsible person shall maintain records, reports, and notices required by this section and shall make them available on request.\n\n(c) Definitions used in this section are in section 2 of this part.",
@@ -2380,11 +2484,11 @@
     "diff_segments": [
       {
         "op": "equal",
-        "text": "Source: IC 13-14-8\n\n(a) This section applies to each person, facility, or filing described in applicability.\n\n(b) The responsible person shall maintain records, reports, and notices required by this section and shall make them available on request.\n\n(c) Definitions used in this section are in section 2 of this part.\n\n"
+        "text": "Source: IC 13-14-8\n\n(a) This section applies to each person, facility, or filing described in applicability.\n\n(b) The responsible person shall maintain records, reports, and notices required by this section and shall make them available on request.\n\n(c) Definitions used in this section are in section 2 of this part."
       },
       {
         "op": "insert",
-        "text": "[Editorial: paragraph headings reformatted; no text change.]"
+        "text": "\n\n[Editorial: paragraph headings reformatted; no text change.]"
       }
     ],
     "s1_text": "Source: IC 13-14-8\n\n(a) This section applies to each person, facility, or filing described in applicability.\n\n(b) The responsible person shall maintain records, reports, and notices required by this section and shall make them available on request.\n\n(c) Definitions used in this section are in section 2 of this part.",
@@ -2417,11 +2521,11 @@
       },
       {
         "op": "insert",
-        "text": "; IC 13-15-1\n\n"
+        "text": "; IC 13-15-1"
       },
       {
         "op": "equal",
-        "text": "(a) This section applies to each person, facility, or filing described in definitions; air quality.\n\n(b) The responsible person shall maintain records, reports, and notices required by this section and shall make them available on request.\n\n(c) Definitions used in this section are in section 2 of this rule.\n\n(Indiana Department of Environmental Management; 326 IAC 1-2-2; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722)"
+        "text": "\n\n(a) This section applies to each person, facility, or filing described in definitions; air quality.\n\n(b) The responsible person shall maintain records, reports, and notices required by this section and shall make them available on request.\n\n(c) Definitions used in this section are in section 2 of this rule.\n\n(Indiana Department of Environmental Management; 326 IAC 1-2-2; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722)"
       }
     ],
     "s1_text": "326 IAC 1-2-2 Definitions; air quality\n\nAuthority: IC 13-14-8\n\n(a) This section applies to each person, facility, or filing described in definitions; air quality.\n\n(b) The responsible person shall maintain records, reports, and notices required by this section and shall make them available on request.\n\n(c) Definitions used in this section are in section 2 of this rule.\n\n(Indiana Department of Environmental Management; 326 IAC 1-2-2; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722)",
@@ -2454,11 +2558,11 @@
       },
       {
         "op": "insert",
-        "text": "; IC 13-15-1\n\n"
+        "text": "; IC 13-15-1"
       },
       {
         "op": "equal",
-        "text": "(a) This section applies to each person, facility, or filing described in water quality standards; narrative criteria.\n\n(b) The responsible person shall maintain records, reports, and notices required by this section and shall make them available on request.\n\n(c) Definitions used in this section are in section 2 of this rule.\n\n(Indiana Department of Environmental Management; 327 IAC 2-1-6; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722)"
+        "text": "\n\n(a) This section applies to each person, facility, or filing described in water quality standards; narrative criteria.\n\n(b) The responsible person shall maintain records, reports, and notices required by this section and shall make them available on request.\n\n(c) Definitions used in this section are in section 2 of this rule.\n\n(Indiana Department of Environmental Management; 327 IAC 2-1-6; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722)"
       }
     ],
     "s1_text": "327 IAC 2-1-6 Water quality standards; narrative criteria\n\nAuthority: IC 13-14-8\n\n(a) This section applies to each person, facility, or filing described in water quality standards; narrative criteria.\n\n(b) The responsible person shall maintain records, reports, and notices required by this section and shall make them available on request.\n\n(c) Definitions used in this section are in section 2 of this rule.\n\n(Indiana Department of Environmental Management; 327 IAC 2-1-6; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722)",
@@ -2491,11 +2595,11 @@
       },
       {
         "op": "insert",
-        "text": "; IC 13-15-1\n\n"
+        "text": "; IC 13-15-1"
       },
       {
         "op": "equal",
-        "text": "(a) This section applies to each person, facility, or filing described in definitions.\n\n(b) The responsible person shall maintain records, reports, and notices required by this section and shall make them available on request.\n\n(c) Definitions used in this section are in section 2 of this part."
+        "text": "\n\n(a) This section applies to each person, facility, or filing described in definitions.\n\n(b) The responsible person shall maintain records, reports, and notices required by this section and shall make them available on request.\n\n(c) Definitions used in this section are in section 2 of this part."
       }
     ],
     "s1_text": "Source: IC 13-14-8\n\n(a) This section applies to each person, facility, or filing described in definitions.\n\n(b) The responsible person shall maintain records, reports, and notices required by this section and shall make them available on request.\n\n(c) Definitions used in this section are in section 2 of this part.",
@@ -2528,11 +2632,11 @@
       },
       {
         "op": "insert",
-        "text": ", "
+        "text": ","
       },
       {
         "op": "equal",
-        "text": "and notices required by this section and shall make them available on request.\n\n(c) Definitions used in this section are in section 2 of this rule.\n\n(Indiana Department of Environmental Management; 326 IAC 2-5.1-2; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722)"
+        "text": " and notices required by this section and shall make them available on request.\n\n(c) Definitions used in this section are in section 2 of this rule.\n\n(Indiana Department of Environmental Management; 326 IAC 2-5.1-2; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722)"
       }
     ],
     "s1_text": "326 IAC 2-5.1-2 Permit review; PSD\n\nAuthority: IC 13-14-8\n\n(a) This section applies to each person, facility, or filing described in permit review; psd.\n\n(b) The responsible person shall maintain records, reports and notices required by this section and shall make them available on request.\n\n(c) Definitions used in this section are in section 2 of this rule.\n\n(Indiana Department of Environmental Management; 326 IAC 2-5.1-2; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722)",
@@ -2565,11 +2669,11 @@
       },
       {
         "op": "insert",
-        "text": ", "
+        "text": ","
       },
       {
         "op": "equal",
-        "text": "and notices required by this section and shall make them available on request.\n\n(c) Definitions used in this section are in section 2 of this rule.\n\n(Indiana Department of Environmental Management; 327 IAC 5-2-3; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722)"
+        "text": " and notices required by this section and shall make them available on request.\n\n(c) Definitions used in this section are in section 2 of this rule.\n\n(Indiana Department of Environmental Management; 327 IAC 5-2-3; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722)"
       }
     ],
     "s1_text": "327 IAC 5-2-3 NPDES permit applications\n\nAuthority: IC 13-14-8\n\n(a) This section applies to each person, facility, or filing described in npdes permit applications.\n\n(b) The responsible person shall maintain records, reports and notices required by this section and shall make them available on request.\n\n(c) Definitions used in this section are in section 2 of this rule.\n\n(Indiana Department of Environmental Management; 327 IAC 5-2-3; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722)",
@@ -2602,11 +2706,11 @@
       },
       {
         "op": "insert",
-        "text": ", "
+        "text": ","
       },
       {
         "op": "equal",
-        "text": "and notices required by this section and shall make them available on request.\n\n(c) Definitions used in this section are in section 2 of this part."
+        "text": " and notices required by this section and shall make them available on request.\n\n(c) Definitions used in this section are in section 2 of this part."
       }
     ],
     "s1_text": "Source: IC 13-14-8\n\n(a) This section applies to each person, facility, or filing described in notification and recordkeeping.\n\n(b) The responsible person shall maintain records, reports and notices required by this section and shall make them available on request.\n\n(c) Definitions used in this section are in section 2 of this part.",
@@ -2639,11 +2743,11 @@
       },
       {
         "op": "insert",
-        "text": ", "
+        "text": ","
       },
       {
         "op": "equal",
-        "text": "and notices required by this section and shall make them available on request.\n\n(c) Definitions used in this section are in section 2 of this part."
+        "text": " and notices required by this section and shall make them available on request.\n\n(c) Definitions used in this section are in section 2 of this part."
       }
     ],
     "s1_text": "Source: IC 13-14-8\n\n(a) This section applies to each person, facility, or filing described in definitions.\n\n(b) The responsible person shall maintain records, reports and notices required by this section and shall make them available on request.\n\n(c) Definitions used in this section are in section 2 of this part.",
@@ -2676,11 +2780,11 @@
       },
       {
         "op": "insert",
-        "text": "(a) "
+        "text": "(a)"
       },
       {
         "op": "equal",
-        "text": "of this rule.\n\n(Indiana Department of Environmental Management; 326 IAC 2-7-1; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722)"
+        "text": " of this rule.\n\n(Indiana Department of Environmental Management; 326 IAC 2-7-1; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722)"
       }
     ],
     "s1_text": "326 IAC 2-7-1 Part 70 permits; definitions\n\nAuthority: IC 13-14-8\n\n(a) This section applies to each person, facility, or filing described in part 70 permits; definitions.\n\n(b) The responsible person shall maintain records, reports, and notices required by this section and shall make them available on request.\n\n(c) Definitions used in this section are in section 2 of this rule.\n\n(Indiana Department of Environmental Management; 326 IAC 2-7-1; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722)",
@@ -2713,11 +2817,11 @@
       },
       {
         "op": "insert",
-        "text": "(a) "
+        "text": "(a)"
       },
       {
         "op": "equal",
-        "text": "of this rule.\n\n(Indiana Department of Environmental Management; 327 IAC 5-4-1; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722)"
+        "text": " of this rule.\n\n(Indiana Department of Environmental Management; 327 IAC 5-4-1; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722)"
       }
     ],
     "s1_text": "327 IAC 5-4-1 Stormwater; applicability\n\nAuthority: IC 13-14-8\n\n(a) This section applies to each person, facility, or filing described in stormwater; applicability.\n\n(b) The responsible person shall maintain records, reports, and notices required by this section and shall make them available on request.\n\n(c) Definitions used in this section are in section 2 of this rule.\n\n(Indiana Department of Environmental Management; 327 IAC 5-4-1; filed Mar 3, 2008, 3:20 p.m.: 31 IR 1722)",
@@ -2750,11 +2854,11 @@
       },
       {
         "op": "insert",
-        "text": "(a) "
+        "text": "(a)"
       },
       {
         "op": "equal",
-        "text": "of this part."
+        "text": " of this part."
       }
     ],
     "s1_text": "Source: IC 13-14-8\n\n(a) This section applies to each person, facility, or filing described in performance tests.\n\n(b) The responsible person shall maintain records, reports, and notices required by this section and shall make them available on request.\n\n(c) Definitions used in this section are in section 2 of this part.",
@@ -2787,11 +2891,11 @@
       },
       {
         "op": "insert",
-        "text": "(a) "
+        "text": "(a)"
       },
       {
         "op": "equal",
-        "text": "of this part."
+        "text": " of this part."
       }
     ],
     "s1_text": "Source: IC 13-14-8\n\n(a) This section applies to each person, facility, or filing described in definitions.\n\n(b) The responsible person shall maintain records, reports, and notices required by this section and shall make them available on request.\n\n(c) Definitions used in this section are in section 2 of this part.",
