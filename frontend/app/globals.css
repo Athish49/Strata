@@ -1,0 +1,178 @@
+@import "tailwindcss";
+
+/* Strata design tokens — spec §17.2. Light theme only. */
+:root {
+  --canvas: #f7f6f3;
+  --surface: #ffffff;
+  --surface-muted: #f1f0ec;
+  --border: #e7e5e0;
+  --border-strong: #d6d3cc;
+  --ink: #141413;
+  --ink-2: #52504b;
+  --ink-3: #6f6c66;
+  --ink-4: #a8a59e;
+  --sidebar: #0f0f0e;
+  --sidebar-fg: #edece8;
+  --sidebar-muted: #9a978f;
+  --sidebar-active: #252523;
+  --sidebar-border: #232321;
+  --red: #b42318;
+  --red-soft: #fdecea;
+  --red-line: #f5c2bd;
+  --green: #1e6b45;
+  --green-soft: #e8f3ec;
+  --amber: #8a5317;
+  --amber-soft: #fbf0e2;
+
+  /* Semantic: one verdict → token map, used by every component (§11.3). */
+  --verdict-action-required: var(--red);
+  --verdict-review: var(--amber);
+  --verdict-update-citation: var(--ink);
+  --verdict-optional-relaxed: var(--ink-2);
+  --verdict-info: var(--ink-3);
+  --state-cleared: var(--green);
+  --noise: var(--ink-4);
+  --diff-delete: var(--red);
+  --diff-insert: var(--green);
+  --simulated: var(--ink);
+
+  /* shadcn mapping */
+  --background: var(--canvas);
+  --foreground: var(--ink);
+  --card: var(--surface);
+  --card-foreground: var(--ink);
+  --popover: var(--surface);
+  --popover-foreground: var(--ink);
+  --primary: var(--ink);
+  --primary-foreground: #ffffff;
+  --secondary: var(--surface);
+  --secondary-foreground: var(--ink);
+  --muted: var(--surface-muted);
+  --muted-foreground: var(--ink-3);
+  --accent: var(--surface-muted);
+  --accent-foreground: var(--ink);
+  --destructive: var(--red);
+  --input: var(--border-strong);
+  --ring: var(--ink);
+  --radius: 8px;
+
+  --shadow-float: 0 4px 16px rgba(20, 20, 19, 0.08);
+  --shadow-drawer: 0 8px 32px rgba(20, 20, 19, 0.12);
+}
+
+@theme inline {
+  --color-canvas: var(--canvas);
+  --color-surface: var(--surface);
+  --color-surface-muted: var(--surface-muted);
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+  --color-ink: var(--ink);
+  --color-ink-2: var(--ink-2);
+  --color-ink-3: var(--ink-3);
+  --color-ink-4: var(--ink-4);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-fg: var(--sidebar-fg);
+  --color-sidebar-muted: var(--sidebar-muted);
+  --color-sidebar-active: var(--sidebar-active);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-red: var(--red);
+  --color-red-soft: var(--red-soft);
+  --color-red-line: var(--red-line);
+  --color-green: var(--green);
+  --color-green-soft: var(--green-soft);
+  --color-amber: var(--amber);
+  --color-amber-soft: var(--amber-soft);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-source-serif), ui-serif, Georgia, serif;
+  --font-mono: var(--font-jetbrains-mono), ui-monospace, monospace;
+
+  --radius-card: 12px;
+  --radius-control: 8px;
+  --radius-pill: 6px;
+  --radius-tag: 4px;
+
+  --shadow-float: var(--shadow-float);
+  --shadow-drawer: var(--shadow-drawer);
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background: var(--canvas);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 20px;
+  -webkit-font-smoothing: antialiased;
+  font-feature-settings: "tnum" 1, "cv11" 1;
+}
+
+:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 2px;
+}
+
+/* Data marks (§17.6) — CSS only. */
+.mark-hairline {
+  background-image: repeating-linear-gradient(90deg, var(--ink) 0 1px, transparent 1px 3px);
+}
+.mark-noise {
+  background-image: repeating-linear-gradient(45deg, var(--ink-4) 0 1px, transparent 1px 4px);
+}
+.mark-simulated {
+  background-image: repeating-linear-gradient(135deg, var(--ink) 0 1px, transparent 1px 6px);
+}
+
+/* Skeleton shimmer, disabled under reduced motion. */
+.skeleton {
+  background: var(--surface-muted);
+  border-radius: 6px;
+  animation: shimmer 1.6s ease-in-out infinite;
+}
+@keyframes shimmer {
+  50% {
+    opacity: 0.55;
+  }
+}
+@keyframes pulse-highlight {
+  0% {
+    background-color: var(--surface-muted);
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+.pulse-highlight {
+  animation: pulse-highlight 600ms ease-out 1;
+}
+@media (prefers-reduced-motion: reduce) {
+  .skeleton,
+  .pulse-highlight {
+    animation: none;
+  }
+  * {
+    transition-duration: 0ms !important;
+  }
+}
