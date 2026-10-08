@@ -11,3 +11,16 @@
 
 # Playwright MCP dumps
 **/.playwright-mcp/
+
+# Dependencies and build output (any depth)
+**/node_modules/
+**/.next/
+**/.next-*/
+
+# Test output and caches
+**/test-results/
+**/playwright-report/
+**/.pytest_cache/
+
+# Logs
+**/*.log
