@@ -1,10 +1,6 @@
-import { PageContainer, PageHeader } from "@/components/shell/PageHeader";
+"use client";
+import { WhatIfStudio } from "@/components/whatif/WhatIfStudio";
 
-// Placeholder route; replaced by the owning milestone.
 export default function Page() {
-  return (
-    <PageContainer>
-      <PageHeader title="What-if studio" caption="What-if" />
-    </PageContainer>
-  );
+  return <WhatIfStudio />;
 }

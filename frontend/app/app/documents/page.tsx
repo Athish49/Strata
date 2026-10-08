@@ -1,10 +1,5 @@
-import { PageContainer, PageHeader } from "@/components/shell/PageHeader";
+import { DocumentsBoard } from "@/components/documents/board/DocumentsBoard";
 
-// Placeholder route; replaced by the owning milestone.
 export default function Page() {
-  return (
-    <PageContainer>
-      <PageHeader title="Documents" caption="Documents" />
-    </PageContainer>
-  );
+  return <DocumentsBoard />;
 }

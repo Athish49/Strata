@@ -42,6 +42,7 @@ export const DIRECTION_LABELS: Record<Direction, string> = {
   removed: "Removed",
   clarified: "Clarified",
   style_only: "Style only",
+  mixed: "Mixed",
 };
 
 export const SEVERITY_LABELS: Record<Severity, string> = {
@@ -105,9 +106,9 @@ export function runKindLabel(run: Pick<Run, "kind" | "title">): string {
 }
 
 /** "Decided by rule" or "AI judgment · 82%". Confidence is 0..1. */
-export function decidedByLabel(decidedBy: "rule" | "ai", confidence?: number): string {
+export function decidedByLabel(decidedBy: "rule" | "ai", confidence?: number | null): string {
   if (decidedBy === "rule") return "Decided by rule";
-  return confidence === undefined ? "AI judgment" : `AI judgment · ${formatConfidence(confidence)}`;
+  return confidence === undefined || confidence === null ? "AI judgment" : `AI judgment · ${formatConfidence(confidence)}`;
 }
 
 export function applicableLabel(a: Applicable): string {

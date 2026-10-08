@@ -44,7 +44,7 @@ const defs: FutureFeature[] = [
   { id: "ask-document", label: "Ask", tooltip: "Ask about this document and get answers cited to its clauses.", icon: "MessageSquare", variant: "toolbar" },
   { id: "export-redline", label: "Export redline", tooltip: "Send suggested updates to Word as tracked changes for the owner.", icon: "FileDiff", variant: "toolbar" },
   { id: "view-original", label: "Original file", tooltip: "View the source PDF or Word file beside its clauses.", icon: "FileSearch", variant: "toolbar" },
-  { id: "version-history", label: "Version history", tooltip: "Compare this document with its earlier versions.", icon: "History", variant: "icon" },
+  { id: "version-history", label: "Version history", tooltip: "Compare this document with its earlier versions.", icon: "Clock", variant: "icon" },
   { id: "draft-rewrite", label: "Draft full rewrite", tooltip: "Draft a complete replacement clause that satisfies the new rule.", icon: "PenLine", variant: "inline-add" },
   { id: "create-task", label: "Create task", tooltip: "Open a tracked task in Jira or ServiceNow for the owner.", icon: "ListChecks", variant: "button" },
   { id: "request-signoff", label: "Request sign-off", tooltip: "Collect owner, reviewer and approver sign-off with an audit trail.", icon: "BadgeCheck", variant: "button" },

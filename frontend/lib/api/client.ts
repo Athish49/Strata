@@ -1,3 +1,4 @@
+import { httpApi } from "./http";
 import { mockApi } from "./mock";
 import type {
   Agency,
@@ -8,6 +9,7 @@ import type {
   CompanyProfile,
   DocRollup,
   DocumentMeta,
+  EditableSection,
   Finding,
   LineDiff,
   MatrixCell,
@@ -18,6 +20,7 @@ import type {
   Run,
   Scenario,
   ScoreReport,
+  SectionS1Text,
   VersionEntry,
 } from "./schemas";
 
@@ -88,8 +91,14 @@ export interface EngineApi {
   saveScenario(s: Omit<Scenario, "scenario_id" | "is_preset" | "last_run_id"> & { scenario_id?: string }): Promise<Scenario>;
   /** Presets finish instantly; custom scenarios advance through the five stages (~8–10 s). */
   startWhatIf(scenario_id: string): Promise<Run>;
-  getScore(): Promise<ScoreReport>;
-  submitReview(finding_id: string, decision: "accept" | "reject", note?: string): Promise<Finding>;
+/** null when the run has no score report (what-if runs are never scored). */
+  getScore(run_id: string): Promise<ScoreReport | null>;
+  /** person_id defaults to the finding's routed reviewer when omitted. */
+  submitReview(finding_id: string, decision: "accept" | "reject", note?: string, person_id?: string): Promise<Finding>;
+  /** Sections cited by at least one company clause: the what-if section picker. */
+  listEditableSections(): Promise<EditableSection[]>;
+  /** The S1 (baseline) text of a section, the starting point of a what-if edit. */
+  getSectionS1Text(source_system: string, citation: string): Promise<SectionS1Text | null>;
 }
 
 export interface CompanyApi {
@@ -107,4 +116,4 @@ export interface StrataApi {
 }
 
 /** The single place that picks the StrataApi implementation. */
-export const api: StrataApi = mockApi;
+export const api: StrataApi = process.env.NEXT_PUBLIC_STRATA_DATA === "http" ? httpApi : mockApi;

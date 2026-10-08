@@ -1,10 +1,11 @@
 import { PageContainer, PageHeader } from "@/components/shell/PageHeader";
+import { MatrixView } from "@/components/matrix/MatrixView";
 
-// Placeholder route; replaced by the owning milestone.
 export default function Page() {
   return (
-    <PageContainer>
-      <PageHeader title="Impact matrix" caption="Impact matrix" />
+    <PageContainer full>
+      <PageHeader title="Impact matrix" caption="Which documents each changed rule touches" />
+      <MatrixView />
     </PageContainer>
   );
 }

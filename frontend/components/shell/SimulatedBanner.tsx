@@ -5,7 +5,17 @@ import { useRunContext } from "@/lib/run-context";
 
 /** Pinned to the top of the main area whenever the current run is a what-if. */
 export function SimulatedBanner() {
-  const { run, isSimulated, setRunId } = useRunContext();
+  const { run, isSimulated, invalidRun, setRunId } = useRunContext();
+  if (invalidRun) {
+    return (
+      <div role="alert" className="flex min-h-11 shrink-0 items-center gap-3 border-b border-border bg-surface px-5 py-2">
+        <p className="min-w-0 flex-1 text-[14px] text-ink">This run link is not valid, so the latest real wave is shown instead.</p>
+        <Button variant="secondary" size="sm" onClick={() => setRunId(null)}>
+          Use the latest real wave
+        </Button>
+      </div>
+    );
+  }
   if (!isSimulated) return null;
   return (
     <div role="status" className="flex h-11 shrink-0 items-stretch border-b border-ink bg-surface">

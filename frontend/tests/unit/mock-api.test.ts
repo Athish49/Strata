@@ -38,7 +38,8 @@ describe("mock api shapes", () => {
       expect(Array.isArray(m.cells)).toBe(true);
     }
     z.array(scenarioSchema).parse(await api.engine.listScenarios());
-    scoreReportSchema.parse(await api.engine.getScore());
+    scoreReportSchema.parse(await api.engine.getScore("run_kb_real"));
+    expect(await api.engine.getScore("run_whatif_preset_a")).toBeNull();
   });
 
   it("returns schema-valid company and kb data", async () => {

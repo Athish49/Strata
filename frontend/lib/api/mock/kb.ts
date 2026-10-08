@@ -40,7 +40,8 @@ export const kbApi: KbApi = {
           (!q.status || s.status === q.status) &&
           (!q.search || includes(`${s.citation} ${s.heading} ${s.body_text}`, q.search)),
       );
-      return paginate(items, q);
+      const page = paginate(items, q);
+      return { ...page, items: page.items.map((s) => ({ ...s, body_text: "" })) };
     }),
 
   getSection: (source_system, citation) =>
@@ -59,11 +60,11 @@ export const kbApi: KbApi = {
             (!q.status || a.status === q.status) &&
             (!q.action_type || a.action_type === q.action_type) &&
             (!q.stream || a.stream === q.stream) &&
-            (!q.date_from || a.date_published >= q.date_from) &&
-            (!q.date_to || a.date_published <= q.date_to) &&
+            (!q.date_from || (a.date_published ?? "") >= q.date_from) &&
+            (!q.date_to || (a.date_published ?? "") <= q.date_to) &&
             (!q.search || includes(`${a.title} ${a.abstract} ${a.source_id}`, q.search)),
         )
-        .sort((a, b) => b.date_published.localeCompare(a.date_published));
+        .sort((a, b) => (b.date_published ?? "").localeCompare(a.date_published ?? ""));
       return paginate(items, q);
     }),
 

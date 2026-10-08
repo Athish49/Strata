@@ -1,10 +1,5 @@
-import { PageContainer, PageHeader } from "@/components/shell/PageHeader";
+import { TrustPage } from "@/components/overview/TrustPage";
 
-// Placeholder route; replaced by the owning milestone.
 export default function Page() {
-  return (
-    <PageContainer>
-      <PageHeader title="Trust scorecard" caption="Trust" />
-    </PageContainer>
-  );
+  return <TrustPage />;
 }

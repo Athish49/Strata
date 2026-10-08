@@ -21,6 +21,8 @@ export const runStatsSchema = z.object({
   substantive: z.number(),
   noise: z.number(),
   in_footprint: z.number(),
+  /** Real (non-noise) changes inside the footprint; the rest of `in_footprint` is noise. Absent on older payloads. */
+  in_footprint_real: z.number().nullable().optional(),
   obligation_changed: z.number(),
   candidates_by_path: z.record(z.string(), z.number()),
   findings_by_verdict: z.record(z.string(), z.number()),
@@ -45,6 +47,7 @@ export const runSchema = z.object({
     .object({ stage: stageSchema, done: z.number(), total: z.number(), message: z.string() })
     .nullable()
     .optional(),
+  error: z.string().nullable().optional(),
   stats: runStatsSchema,
 });
 export type Run = z.infer<typeof runSchema>;
@@ -81,16 +84,16 @@ export const changeRecordSchema = z.object({
   diff_segments: z.array(diffSegmentSchema),
   s1_text: z.string(),
   s2_text: z.string(),
-  published_date: isoDate,
-  date_basis: z.string(),
+  published_date: isoDate.nullable(),
+  date_basis: z.string().nullable(),
   din: z.string().nullable().optional(),
   s1_snapshot: isoDate,
   s2_snapshot: isoDate,
   in_footprint: z.boolean(),
   cited_clause_count: z.number(),
   characterization: characterizationSchema.nullable().optional(),
-  disposition: z.string(),
-  disposition_reason: z.string(),
+  disposition: z.string().nullable(),
+  disposition_reason: z.string().nullable(),
   placeholder: placeholderFlag,
 });
 export type ChangeRecord = z.infer<typeof changeRecordSchema>;
@@ -132,7 +135,7 @@ export const findingSchema = z.object({
   finding_type: z.string(),
   verdict: verdictSchema,
   severity: severitySchema,
-  confidence: z.number().min(0).max(1),
+  confidence: z.number().min(0).max(1).nullable(),
   decided_by: z.enum(["rule", "ai"]),
   required_change: z.object({ from_text: z.string(), to_text: z.string() }),
   quotes: z.object({ s1: quoteSchema, s2: quoteSchema, clause: quoteSchema }),
@@ -143,14 +146,21 @@ export const findingSchema = z.object({
   propagated_from: z.string().nullable().optional(),
   stale_at_approval: z.boolean(),
   doc_approved_date: isoDate.nullable(),
-  rule_published_date: isoDate,
+  rule_published_date: isoDate.nullable(),
   route: z.object({
     owner: personSchema,
     reviewer: personSchema,
     approver: personSchema.nullable(),
   }),
   reviews: z.array(
-    z.object({ decision: z.enum(["accept", "reject"]), note: z.string().nullable().optional(), at: isoDate }),
+    z.object({
+      review_id: z.string().optional(),
+      decision: z.enum(["accept", "reject"]),
+      note: z.string().nullable().optional(),
+      at: isoDate,
+      /** Reviewer's name (from the route). */
+      by: z.string().nullable().optional(),
+    }),
   ),
 });
 export type Finding = z.infer<typeof findingSchema>;
@@ -164,6 +174,8 @@ export const docRollupSchema = z.object({
   /** Per noise/real class counts of changes considered, used for the cleared line. */
   considered_by_class: z.record(z.string(), z.number()).default({}),
   cleared_reason: z.string().nullable().optional(),
+  /** Findings of this document with at least one saved review. */
+  reviewed: z.number().optional(),
 });
 export type DocRollup = z.infer<typeof docRollupSchema>;
 
@@ -201,7 +213,9 @@ export const scoreReportSchema = z.object({
   fp_rate_must_not_flag: z.number(),
   routing_accuracy: z.number(),
   targets: z.object({ precision: z.number(), recall: z.number(), fp_rate: z.number(), routing: z.number() }),
-  baseline_findings: z.number(),
+  baseline_findings: z.number().nullable(),
+  /** Document-level agreement: documents whose flagged/cleared status equals the expected one. */
+  doc_agreement: z.object({ agree: z.number(), total: z.number() }).nullable().optional(),
   decided_by: z.object({ rule: z.number(), ai: z.number() }),
   llm_calls: z.number(),
 });
@@ -227,5 +241,16 @@ export const matrixCellSchema = z.object({
   n_cleared: z.number(),
 });
 export type MatrixCell = z.infer<typeof matrixCellSchema>;
+
+export const editableSectionSchema = z.object({
+  citation: z.string(),
+  source_system: sourceSystemSchema,
+  heading: z.string(),
+  cited_clause_count: z.number(),
+});
+export type EditableSection = z.infer<typeof editableSectionSchema>;
+
+export const sectionS1TextSchema = z.object({ citation: z.string(), heading: z.string(), s1_text: z.string() });
+export type SectionS1Text = z.infer<typeof sectionS1TextSchema>;
 
 export { noiseClassSchema };

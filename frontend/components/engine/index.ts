@@ -1,0 +1,22 @@
+// Shared engine UI primitives. See each file for the documented props interface.
+export { VerdictPill, type VerdictPillProps } from "./VerdictPill";
+export { ClassPill, type ClassPillProps } from "./ClassPill";
+export { SeverityMark, type SeverityMarkProps } from "./SeverityMark";
+export { DirectionChip, type DirectionChipProps } from "./DirectionChip";
+export { ValueChangeChip, type ValueChangeChipProps } from "./ValueChangeChip";
+export { MatchPathIcon, type MatchPathIconProps } from "./MatchPathIcon";
+export { TrustBadges, LOW_CONFIDENCE, type TrustBadgesProps } from "./TrustBadges";
+export { QuoteHighlight, resolveQuoteRange, type QuoteHighlightProps, type QuoteInput } from "./QuoteHighlight";
+export { DiffView, changeGroupStarts, type DiffViewProps, type DiffMode } from "./DiffView";
+export { TraceChain, defaultTraceHref, type TraceChainProps } from "./TraceChain";
+export { Minimap, type MinimapProps, type MinimapTick } from "./Minimap";
+export { FunnelBar, type FunnelBarProps } from "./FunnelBar";
+export { MatrixGrid, type MatrixGridProps, type MatrixCellInfo } from "./MatrixGrid";
+export { RouteChips, type RouteChipsProps } from "./RouteChips";
+export { StageStepper, stageStates, STAGES, type StageStepperProps } from "./StageStepper";
+export { TimelineStrip, type TimelineStripProps, type TimelinePoint } from "./TimelineStrip";
+export { LedgerList, type LedgerListProps, type LedgerRow } from "./LedgerList";
+export { ScoreFigure, type ScoreFigureProps } from "./ScoreFigure";
+export { EvidenceCardBody, type EvidenceCardBodyProps } from "./EvidenceCardBody";
+export { EvidenceDrawer, EvidenceDrawerView, type EvidenceDrawerProps, type EvidenceDrawerViewProps } from "./EvidenceDrawer";
+export { findingHeadline, firstSentence, cleanRationale, hasLongRequiredChange, SHORT_TEXT } from "./findingLine";

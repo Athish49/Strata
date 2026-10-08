@@ -1,10 +1,5 @@
-import { PageContainer, PageHeader } from "@/components/shell/PageHeader";
+import { RadarPage } from "@/components/radar/RadarPage";
 
-// Placeholder route; replaced by the owning milestone.
 export default function Page() {
-  return (
-    <PageContainer>
-      <PageHeader title="Changes your documents don't cite" caption="Radar" />
-    </PageContainer>
-  );
+  return <RadarPage />;
 }

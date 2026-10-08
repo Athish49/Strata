@@ -1,11 +1,13 @@
 import type {
   Annotation,
   ChangeRecord,
+  EditableSection,
   Finding,
   MatrixCell,
   Run,
   RunStats,
   Scenario,
+  SectionS1Text,
   Stage,
   Verdict,
 } from "../schemas";
@@ -26,6 +28,8 @@ const STAGES: { stage: Stage; end: number }[] = [
   { stage: "judge", end: 0.85 },
   { stage: "ledger", end: 1 },
 ];
+
+const lightChange = (c: ChangeRecord): ChangeRecord => ({ ...c, diff_segments: [], s1_text: "", s2_text: "" });
 
 const clone = <T,>(v: T): T => JSON.parse(JSON.stringify(v)) as T;
 const emptyData = (): RunData => ({ changes: [], candidates: [], findings: [], rollups: [], radar: [] });
@@ -156,6 +160,28 @@ function allScenarios(): Scenario[] {
   return [...fixtures().scenarios, ...getState().scenarios];
 }
 
+function allFixtureChanges(): ChangeRecord[] {
+  return Object.values(fixtures().runData).flatMap((d) => d.changes);
+}
+
+function s1FromChanges(source_system: string, citation: string): string | undefined {
+  return allFixtureChanges().find((c) => c.source_system === source_system && c.citation === citation && c.s1_text)?.s1_text;
+}
+
+/** Sections cited by at least one company clause, most-cited first. */
+function editableSections(): EditableSection[] {
+  const by = new Map<string, EditableSection>();
+  for (const c of allFixtureChanges()) {
+    if (c.cited_clause_count <= 0) continue;
+    const key = `${c.source_system}|${c.citation}`;
+    const cur = by.get(key);
+    if (!cur || c.cited_clause_count > cur.cited_clause_count) {
+      by.set(key, { citation: c.citation, source_system: c.source_system, heading: c.heading, cited_clause_count: c.cited_clause_count });
+    }
+  }
+  return [...by.values()].sort((a, b) => b.cited_clause_count - a.cited_clause_count || a.citation.localeCompare(b.citation));
+}
+
 // ---------- API ----------
 
 export const engineApi: EngineApi = {
@@ -170,7 +196,7 @@ export const engineApi: EngineApi = {
       return cr ? customRunSnapshot(cr) : null;
     }),
 
-  listChanges: (run_id) => withLatency(() => dataFor(run_id)?.changes ?? []),
+  listChanges: (run_id) => withLatency(() => (dataFor(run_id)?.changes ?? []).map(lightChange)),
 
   getChange: (run_id, change_id) =>
     withLatency(() => dataFor(run_id)?.changes.find((c) => c.change_id === change_id) ?? null),
@@ -245,9 +271,9 @@ export const engineApi: EngineApi = {
         .documents.filter((d) => d.monitored)
         .sort((a, b) => a.doc_id.localeCompare(b.doc_id));
       const docIds = new Set(docs.map((d) => d.doc_id));
-      const changes: ChangeRecord[] = data.changes.filter(
-        (c) => c.in_footprint && (opts?.include_noise || !NOISE.has(c.change_class)),
-      );
+      const changes: ChangeRecord[] = data.changes
+        .filter((c) => c.in_footprint && (opts?.include_noise || !NOISE.has(c.change_class)))
+        .map(lightChange);
       const changeIds = new Set(changes.map((c) => c.change_id));
       const cells = new Map<string, MatrixCell>();
       for (const cand of data.candidates) {
@@ -323,7 +349,21 @@ export const engineApi: EngineApi = {
       return customRunSnapshot(cr);
     }),
 
-  getScore: () => withLatency(() => fixtures().score),
+  getScore: (run_id) =>
+    withLatency(() => {
+      const run = fixtures().runs.find((r) => r.run_id === run_id);
+      return run && run.kind !== "whatif" ? fixtures().score : null;
+    }),
+
+  listEditableSections: () => withLatency(() => editableSections()),
+
+  getSectionS1Text: (source_system, citation) =>
+    withLatency((): SectionS1Text | null => {
+      const sec = editableSections().find((s) => s.source_system === source_system && s.citation === citation);
+      const text = fixtures().versions[`${source_system}|${citation}`]?.[0]?.text ?? s1FromChanges(source_system, citation);
+      if (!sec || text === undefined) return null;
+      return { citation, heading: sec.heading, s1_text: text };
+    }),
 
   submitReview: (finding_id, decision, note) =>
     withLatency(() => {
@@ -334,7 +374,7 @@ export const engineApi: EngineApi = {
       }
       if (!found) throw new Error(`Unknown finding ${finding_id}`);
       const st = getState();
-      (st.reviews[finding_id] ??= []).push({ decision, note: note ?? null, at: new Date().toISOString() });
+      (st.reviews[finding_id] ??= []).push({ decision, note: note ?? null, at: new Date().toISOString(), by: found.route.reviewer?.name ?? found.route.owner.name });
       persist();
       return withReviews(found);
     }),

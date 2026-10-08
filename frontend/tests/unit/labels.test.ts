@@ -21,7 +21,8 @@ describe("labels", () => {
   it("direction labels", () => {
     expect(L.directionLabel("new_requirement")).toBe("New requirement");
     expect(L.directionLabel("style_only")).toBe("Style only");
-    expect(Object.keys(L.DIRECTION_LABELS)).toHaveLength(6);
+    expect(Object.keys(L.DIRECTION_LABELS)).toHaveLength(7);
+    expect(L.directionLabel("mixed")).toBe("Mixed");
   });
   it("run kind", () => {
     expect(L.runKindLabel({ kind: "kb", title: "x" })).toBe("Real wave · S1→S2");

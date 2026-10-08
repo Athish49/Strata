@@ -24,8 +24,8 @@ export function PageHeader({
   return (
     <header className={cn("mb-6", className)}>
       {breadcrumbs && breadcrumbs.length > 0 && <Breadcrumbs items={breadcrumbs} />}
-      <div className="flex items-end justify-between gap-6">
-        <div className="min-w-0">
+      <div className="flex flex-wrap items-end justify-between gap-x-6 gap-y-3">
+        <div className="min-w-0 shrink-0">
           {caption && <div className="mb-1 text-[13px] leading-[18px] text-ink-3">{caption}</div>}
           <h1 className="font-serif text-[36px] font-normal leading-[44px] tracking-[-0.015em] text-ink">{title}</h1>
         </div>

@@ -162,7 +162,7 @@ for (const letter of ["a", "b"] as const) {
         if (doc.two_signature) expect(f.route.approver).toBeNull();
         else expect(f.route.approver?.person_id).toBe(doc.approver?.person_id);
         expect(f.doc_approved_date).toBe(doc.approved_date);
-        expect(f.stale_at_approval).toBe(f.rule_published_date < (doc.approved_date ?? ""));
+        expect(f.stale_at_approval).toBe((f.rule_published_date ?? "") < (doc.approved_date ?? ""));
         expect(f.reviews).toEqual([]);
         if (f.propagated_from) {
           expect(ids.has(f.propagated_from)).toBe(true);

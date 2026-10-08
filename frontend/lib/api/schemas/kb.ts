@@ -48,7 +48,7 @@ export const regulatoryActionSchema = z.object({
   stream: z.string(),
   action_type: z.string(),
   status: z.string(),
-  date_published: isoDate,
+  date_published: isoDate.nullable(),
   title: z.string(),
   abstract: z.string(),
   cfr_references: z.array(z.string()).default([]),

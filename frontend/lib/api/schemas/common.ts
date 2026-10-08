@@ -29,6 +29,7 @@ export const directionSchema = z.enum([
   "removed",
   "clarified",
   "style_only",
+  "mixed",
 ]);
 export type Direction = z.infer<typeof directionSchema>;
 

@@ -20,7 +20,9 @@ export const qk = {
   matrix: (runId: string, includeNoise: boolean) => ["engine", runId, "matrix", includeNoise] as const,
   radar: (runId: string) => ["engine", runId, "radar"] as const,
   scenarios: () => ["engine", "scenarios"] as const,
-  score: () => ["engine", "score"] as const,
+  score: (runId: string) => ["engine", runId, "score"] as const,
+  editableSections: () => ["engine", "editable-sections"] as const,
+  sectionS1Text: (ss: string, citation: string) => ["engine", "section-s1-text", ss, citation] as const,
   documents: () => ["company", "documents"] as const,
   document: (docId: string) => ["company", "document", docId] as const,
   clauses: (docId: string) => ["company", "clauses", docId] as const,
@@ -125,8 +127,20 @@ export function useScenarios() {
   return useQuery({ queryKey: qk.scenarios(), queryFn: () => api.engine.listScenarios() });
 }
 
-export function useScore() {
-  return useQuery({ queryKey: qk.score(), queryFn: () => api.engine.getScore() });
+export function useScore(runId: Nullable<string>) {
+  return useQuery({ queryKey: qk.score(runId ?? ""), queryFn: () => api.engine.getScore(runId as string), enabled: !!runId });
+}
+
+export function useEditableSections() {
+  return useQuery({ queryKey: qk.editableSections(), queryFn: () => api.engine.listEditableSections() });
+}
+
+export function useSectionS1Text(sourceSystem: Nullable<string>, citation: Nullable<string>) {
+  return useQuery({
+    queryKey: qk.sectionS1Text(sourceSystem ?? "", citation ?? ""),
+    queryFn: () => api.engine.getSectionS1Text(sourceSystem as string, citation as string),
+    enabled: !!sourceSystem && !!citation,
+  });
 }
 
 // ---------- company ----------
@@ -209,8 +223,8 @@ export function useCompare(sourceSystem: Nullable<string>, citation: Nullable<st
 export function useSubmitReview() {
   const qc = useQueryClient();
   return useMutation({
-    mutationFn: (v: { findingId: string; decision: "accept" | "reject"; note?: string }) =>
-      api.engine.submitReview(v.findingId, v.decision, v.note),
+    mutationFn: (v: { findingId: string; decision: "accept" | "reject"; note?: string; personId?: string }) =>
+      api.engine.submitReview(v.findingId, v.decision, v.note, v.personId),
     onSuccess: (f: Finding) => {
       qc.setQueryData(qk.finding(f.finding_id), f);
       void qc.invalidateQueries({ queryKey: ["engine", f.run_id, "findings"] });

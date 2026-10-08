@@ -145,8 +145,8 @@ describe("real wave changes", () => {
     for (const c of real.changes) {
       expect(c.cited_clause_count).toBe(real.candidates.filter((x) => x.change_id === c.change_id).length);
       if (!c.in_footprint) expect(c.cited_clause_count).toBe(0);
-      expect(c.disposition.length).toBeGreaterThan(0);
-      expect(c.disposition_reason.length).toBeGreaterThan(0);
+      expect((c.disposition ?? "").length).toBeGreaterThan(0);
+      expect((c.disposition_reason ?? "").length).toBeGreaterThan(0);
     }
   });
 });
