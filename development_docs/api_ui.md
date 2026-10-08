@@ -1,5 +1,7 @@
 # Strata v1 — API & UI
 
+> **Superseded.** The UI contract is now `ui_wiring_contract.md`; the `/engine/ui/*` and `/company/*` endpoints are the live UI API. The `/engine/*` routes below remain for runs and what-if. In the UI endpoints, quote spans are plain-text offsets into the displayed text, not diff coordinates.
+
 ## 1. API (FastAPI, prefix `/engine`, JSON, no auth)
 All list endpoints take `run_id`. If it is omitted, use the latest `done` run of `kind='kb'`.
 

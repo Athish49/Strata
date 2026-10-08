@@ -1,0 +1,82 @@
+[
+  {
+    "run_id": "run_whatif_preset_a",
+    "doc_id": "RPL-CMP-REG-001",
+    "status": "flagged",
+    "counts_by_verdict": {
+      "review": 1
+    },
+    "changes_considered": 1,
+    "considered_by_class": {
+      "substantive": 1
+    },
+    "cleared_reason": null
+  },
+  {
+    "run_id": "run_whatif_preset_a",
+    "doc_id": "RPL-CS-PRO-004",
+    "status": "flagged",
+    "counts_by_verdict": {
+      "action_required": 4,
+      "review": 3,
+      "update_citation": 1,
+      "info": 2
+    },
+    "changes_considered": 1,
+    "considered_by_class": {
+      "substantive": 1
+    },
+    "cleared_reason": null
+  },
+  {
+    "run_id": "run_whatif_preset_a",
+    "doc_id": "RPL-REG-CAL-2025",
+    "status": "flagged",
+    "counts_by_verdict": {
+      "review": 1,
+      "info": 1
+    },
+    "changes_considered": 1,
+    "considered_by_class": {
+      "substantive": 1
+    },
+    "cleared_reason": null
+  },
+  {
+    "run_id": "run_whatif_preset_a",
+    "doc_id": "RPL-TAR-GRR-012",
+    "status": "flagged",
+    "counts_by_verdict": {
+      "action_required": 1
+    },
+    "changes_considered": 1,
+    "considered_by_class": {
+      "substantive": 1
+    },
+    "cleared_reason": null
+  },
+  {
+    "run_id": "run_whatif_preset_a",
+    "doc_id": "RPL-CS-PRO-011",
+    "status": "flagged",
+    "counts_by_verdict": {
+      "action_required": 1
+    },
+    "changes_considered": 1,
+    "considered_by_class": {
+      "substantive": 1
+    },
+    "cleared_reason": null
+  },
+  {
+    "run_id": "run_whatif_preset_a",
+    "doc_id": "RPL-DO-PLN-002",
+    "status": "cleared",
+    "counts_by_verdict": {},
+    "changes_considered": 1,
+    "considered_by_class": {
+      "substantive": 1
+    },
+    "cleared_reason": "The only 14-day figures are vegetation-work notices governed by a different rule."
+  }
+]

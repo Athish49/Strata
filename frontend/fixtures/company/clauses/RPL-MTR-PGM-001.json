@@ -1,0 +1,5099 @@
+[
+  {
+    "clause_id": "RPL-MTR-PGM-001:HEADER",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 1,
+    "heading_path": [],
+    "unit_kind": "section",
+    "text_raw": "> Uncontrolled when printed — verify the current version in DCS before use.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:HEADER~c1",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 2,
+    "heading_path": [
+      "Table of Contents"
+    ],
+    "unit_kind": "section",
+    "text_raw": "1. Purpose\n2. Scope\n3. Definitions\n4. Regulatory Basis and Industry Standards\n5. Organization and Roles\n6. Meter Records\n7. Meter Location and Accessibility Standards\n8. New and Repaired Meter Acceptance\n9. In-Service Testing Program\n10. Accuracy Limits and Average-Accuracy Method\n11. Test Equipment and Standards\n12. AMI Meter Health Monitoring\n13. Customer-Requested and Commission-Supervised Tests\n14. 2024 Program Results (Preliminary — Data Extracted 2025-01-03)\n15. 2025 Test Plan\n16. Program KPIs\n17. Records and Retention\n18. Training and Technician Qualification\n19. Related Documents\n20. Revision History\n21. Approval Block\n\nAppendices:\n- App-A: Meter Test Report MTR-F-011 Layout\n- App-B: Group Acceptance Worksheet\n- App-C: Standards Certification Register Summary\n- App-D: Data Dictionary",
+    "row_cells": null,
+    "parent_clause_id": "RPL-MTR-PGM-001:HEADER"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:1",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 3,
+    "heading_path": [
+      "1. Purpose"
+    ],
+    "unit_kind": "section",
+    "text_raw": "1. Purpose\n\nThis Meter Testing Program Plan describes how Rockridge Power & Light Company (RPL) ensures the accuracy, integrity, and regulatory compliance of its meter population. The plan governs new-meter acceptance testing, in-service testing (periodic and statistical sampling), test equipment calibration and traceability, customer-requested testing, and annual program reporting. It applies to all 409,950 revenue meters in RPL's service territory as of 2024-12-31.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:2",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 4,
+    "heading_path": [
+      "2. Scope"
+    ],
+    "unit_kind": "section",
+    "text_raw": "2. Scope\n\nTable 2-1: Meter Fleet Inventory as of 2024-12-31\n\nAMI subtotal: 371,200 · AMR subtotal: 31,400 · Electromechanical subtotal: 7,350\n\nTransformer-rated meters (16S, 12S CT-connected): approximately 6,400–8,600 units within the counts above. Install years: AMI 2016–2024 (deployment wave 2017–2021); AMR 2005–2015; electromechanical (EM) 1972–2004.\n\nThis plan applies to all meters listed above operated within RPL's 14-county service territory in west-central Indiana. Meters installed at customer-owned substations operating under separate metering agreements are included for testing purposes. This plan does not govern revenue metering owned by third-party generators (none, as RPL owns no generating units).",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T2-1",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 5,
+    "heading_path": [
+      "2. Scope"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "T2-1 | Solid-state AMI | 2S CL200 | Residential / small commercial | 319,232 | Vendor A (≈70%), Vendor B",
+    "row_cells": {
+      "ID": "T2-1",
+      "Technology": "Solid-state AMI",
+      "Form / Class": "2S CL200",
+      "Service Type": "Residential / small commercial",
+      "Count": "319,232",
+      "Vendor Family": "Vendor A (≈70%), Vendor B"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:2"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T2-2",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 6,
+    "heading_path": [
+      "2. Scope"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "T2-2 | Solid-state AMI | 2S CL320 | Commercial | 7,424 | Vendor A",
+    "row_cells": {
+      "ID": "T2-2",
+      "Technology": "Solid-state AMI",
+      "Form / Class": "2S CL320",
+      "Service Type": "Commercial",
+      "Count": "7,424",
+      "Vendor Family": "Vendor A"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:2"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T2-3",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 7,
+    "heading_path": [
+      "2. Scope"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "T2-3 | Solid-state AMI | 12S CL200 | Commercial / small industrial | 14,848 | Vendor A, Vendor B",
+    "row_cells": {
+      "ID": "T2-3",
+      "Technology": "Solid-state AMI",
+      "Form / Class": "12S CL200",
+      "Service Type": "Commercial / small industrial",
+      "Count": "14,848",
+      "Vendor Family": "Vendor A, Vendor B"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:2"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T2-4",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 8,
+    "heading_path": [
+      "2. Scope"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "T2-4 | Solid-state AMI | 16S CL200/CL320 | Commercial / industrial | 14,848 | Vendor A, Vendor B",
+    "row_cells": {
+      "ID": "T2-4",
+      "Technology": "Solid-state AMI",
+      "Form / Class": "16S CL200/CL320",
+      "Service Type": "Commercial / industrial",
+      "Count": "14,848",
+      "Vendor Family": "Vendor A, Vendor B"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:2"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T2-5",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 9,
+    "heading_path": [
+      "2. Scope"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "T2-5 | Solid-state AMI | 9S CL20 | Small commercial | 9,280 | Vendor B",
+    "row_cells": {
+      "ID": "T2-5",
+      "Technology": "Solid-state AMI",
+      "Form / Class": "9S CL20",
+      "Service Type": "Small commercial",
+      "Count": "9,280",
+      "Vendor Family": "Vendor B"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:2"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T2-6",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 10,
+    "heading_path": [
+      "2. Scope"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "T2-6 | Solid-state AMI | 3S / 4S / 1S | Miscellaneous | 5,568 | Vendor A, Vendor B",
+    "row_cells": {
+      "ID": "T2-6",
+      "Technology": "Solid-state AMI",
+      "Form / Class": "3S / 4S / 1S",
+      "Service Type": "Miscellaneous",
+      "Count": "5,568",
+      "Vendor Family": "Vendor A, Vendor B"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:2"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T2-7",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 11,
+    "heading_path": [
+      "2. Scope"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "T2-7 | Solid-state AMR | 2S CL200 | Residential | 28,260 | Vendor B, Vendor C",
+    "row_cells": {
+      "ID": "T2-7",
+      "Technology": "Solid-state AMR",
+      "Form / Class": "2S CL200",
+      "Service Type": "Residential",
+      "Count": "28,260",
+      "Vendor Family": "Vendor B, Vendor C"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:2"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T2-8",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 12,
+    "heading_path": [
+      "2. Scope"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "T2-8 | Solid-state AMR | 12S / 16S | Commercial | 2,198 | Vendor B, Vendor C",
+    "row_cells": {
+      "ID": "T2-8",
+      "Technology": "Solid-state AMR",
+      "Form / Class": "12S / 16S",
+      "Service Type": "Commercial",
+      "Count": "2,198",
+      "Vendor Family": "Vendor B, Vendor C"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:2"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T2-9",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 13,
+    "heading_path": [
+      "2. Scope"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "T2-9 | Solid-state AMR | 9S | Small commercial | 942 | Vendor C",
+    "row_cells": {
+      "ID": "T2-9",
+      "Technology": "Solid-state AMR",
+      "Form / Class": "9S",
+      "Service Type": "Small commercial",
+      "Count": "942",
+      "Vendor Family": "Vendor C"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:2"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T2-10",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 14,
+    "heading_path": [
+      "2. Scope"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "T2-10 | Electromechanical | 2S CL200 | Residential (rural) | 6,836 | Vendor C, legacy-other",
+    "row_cells": {
+      "ID": "T2-10",
+      "Technology": "Electromechanical",
+      "Form / Class": "2S CL200",
+      "Service Type": "Residential (rural)",
+      "Count": "6,836",
+      "Vendor Family": "Vendor C, legacy-other"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:2"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T2-11",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 15,
+    "heading_path": [
+      "2. Scope"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "T2-11 | Electromechanical | 1S / 12S | Small residential / commercial | 514 | Vendor C, legacy-other",
+    "row_cells": {
+      "ID": "T2-11",
+      "Technology": "Electromechanical",
+      "Form / Class": "1S / 12S",
+      "Service Type": "Small residential / commercial",
+      "Count": "514",
+      "Vendor Family": "Vendor C, legacy-other"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:2"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T2.r12",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 16,
+    "heading_path": [
+      "2. Scope"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "TOTAL | 409,950",
+    "row_cells": {
+      "ID": "",
+      "Technology": "TOTAL",
+      "Form / Class": "",
+      "Service Type": "",
+      "Count": "409,950",
+      "Vendor Family": ""
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:2"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:3",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 17,
+    "heading_path": [
+      "3. Definitions"
+    ],
+    "unit_kind": "section",
+    "text_raw": "3. Definitions",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:3.1",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 18,
+    "heading_path": [
+      "3. Definitions"
+    ],
+    "unit_kind": "section",
+    "text_raw": "3.1 As-Found Accuracy — The measured percentage registration of a meter at the time it is removed from service or tested in place, before any adjustment. (170 IAC 4-1-8(a))",
+    "row_cells": null,
+    "parent_clause_id": "RPL-MTR-PGM-001:3"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:3.2",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 19,
+    "heading_path": [
+      "3. Definitions"
+    ],
+    "unit_kind": "section",
+    "text_raw": "3.2 As-Left Accuracy — The measured percentage registration of a meter after adjustment, confirming it meets accuracy limits before being returned to service. After any meter has been adjusted, the \"as left\" accuracy of the meter shall be determined by tests at each load. (170 IAC 4-1-8(c))",
+    "row_cells": null,
+    "parent_clause_id": "RPL-MTR-PGM-001:3"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:3.3",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 20,
+    "heading_path": [
+      "3. Definitions"
+    ],
+    "unit_kind": "section",
+    "text_raw": "3.3 Average Accuracy (Average Percentage Registration) — The arithmetic mean of the percentage registration at light load (LL) and at full load (FL): Average percentage accuracy = (FL + LL) ÷ 2. (170 IAC 4-1-8(a))",
+    "row_cells": null,
+    "parent_clause_id": "RPL-MTR-PGM-001:3"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:3.4",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 21,
+    "heading_path": [
+      "3. Definitions"
+    ],
+    "unit_kind": "section",
+    "text_raw": "3.4 Full Load (FL) — For self-contained meters: a load of approximately one hundred percent (100%) of the rated test amperes of the meter. For meters used with current transformers: approximately one hundred percent (100%) of either the meter test amperes or the secondary current rating of the current transformers. (170 IAC 4-1-8(a))",
+    "row_cells": null,
+    "parent_clause_id": "RPL-MTR-PGM-001:3"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:3.5",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 22,
+    "heading_path": [
+      "3. Definitions"
+    ],
+    "unit_kind": "section",
+    "text_raw": "3.5 Light Load (LL) — For self-contained meters: a load of approximately ten percent (10%) of the rated test amperes of the meter. For CT-metered installations: approximately ten percent (10%) of the selected full load current. (170 IAC 4-1-8(a))",
+    "row_cells": null,
+    "parent_clause_id": "RPL-MTR-PGM-001:3"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:3.6",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 23,
+    "heading_path": [
+      "3. Definitions"
+    ],
+    "unit_kind": "section",
+    "text_raw": "3.6 Homogeneous Group — A subdivision of the in-service meter population with similar operating characteristics, formed by manufacturer, model family, technology type, form factor, service class, and install-year band, used for Method B statistical sampling under 170 IAC 4-1-10(c). (170 IAC 4-1-10(c)(1))",
+    "row_cells": null,
+    "parent_clause_id": "RPL-MTR-PGM-001:3"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:3.7",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 24,
+    "heading_path": [
+      "3. Definitions"
+    ],
+    "unit_kind": "section",
+    "text_raw": "3.7 Lot — A subset of meters within a homogeneous group from which an annual sample is drawn for quality control testing. No lot size shall be less than three hundred one (301) meters. (170 IAC 4-1-10(c)(2))",
+    "row_cells": null,
+    "parent_clause_id": "RPL-MTR-PGM-001:3"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:3.8",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 25,
+    "heading_path": [
+      "3. Definitions"
+    ],
+    "unit_kind": "section",
+    "text_raw": "3.8 Sample — The set of meters randomly drawn from a lot for accuracy testing under Method B. Sample size is determined per RPL's internal sampling plan (§9.3). (170 IAC 4-1-10(c)(3))",
+    "row_cells": null,
+    "parent_clause_id": "RPL-MTR-PGM-001:3"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:3.9",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 26,
+    "heading_path": [
+      "3. Definitions"
+    ],
+    "unit_kind": "section",
+    "text_raw": "3.9 Acceptable Quality Level (AQL) — The acceptance criterion for lot testing: 2.50 AQL (normal inspection) per the Double Specification Limit–Variability Unknown–Standard Deviation Method. (170 IAC 4-1-10(c)(4))",
+    "row_cells": null,
+    "parent_clause_id": "RPL-MTR-PGM-001:3"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:3.10",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 27,
+    "heading_path": [
+      "3. Definitions"
+    ],
+    "unit_kind": "section",
+    "text_raw": "3.10 Upper Specification Limit (U) and Lower Specification Limit (L) — For Method B lot testing, U = one hundred two percent (102%) and L = ninety-eight percent (98%) average accuracy at full load. (170 IAC 4-1-10(c)(5))",
+    "row_cells": null,
+    "parent_clause_id": "RPL-MTR-PGM-001:3"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:3.11",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 28,
+    "heading_path": [
+      "3. Definitions"
+    ],
+    "unit_kind": "section",
+    "text_raw": "3.11 Method A (Periodic Testing) — The in-service testing method under which all meters are tested on a fixed schedule of not more than sixteen (16) years. (170 IAC 4-1-10(b))",
+    "row_cells": null,
+    "parent_clause_id": "RPL-MTR-PGM-001:3"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:3.12",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 29,
+    "heading_path": [
+      "3. Definitions"
+    ],
+    "unit_kind": "section",
+    "text_raw": "3.12 Method B (Quality Control / Statistical Sampling) — The optional in-service testing method under which meters are divided into homogeneous groups and lots, and a statistical sample is drawn annually and tested against the AQL criterion. (170 IAC 4-1-10(c))",
+    "row_cells": null,
+    "parent_clause_id": "RPL-MTR-PGM-001:3"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:3.13",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 30,
+    "heading_path": [
+      "3. Definitions"
+    ],
+    "unit_kind": "section",
+    "text_raw": "3.13 Power-Factor Test — A test of a watthour meter at 100% of manufacturer's rated test current at 50% lagging power factor, required for non-self-contained meters used on circuits supplying inductive load. Error must not exceed two percent (2%), plus or minus. (170 IAC 4-1-9(b)(5))",
+    "row_cells": null,
+    "parent_clause_id": "RPL-MTR-PGM-001:3"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:3.14",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 31,
+    "heading_path": [
+      "3. Definitions"
+    ],
+    "unit_kind": "section",
+    "text_raw": "3.14 Test Board (Shop Test Board) — A fixed automated test station in the Meter Shop & Standards Laboratory used to test multiple meters simultaneously. Test boards are calibrated against RPL reference standards.",
+    "row_cells": null,
+    "parent_clause_id": "RPL-MTR-PGM-001:3"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:3.15",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 32,
+    "heading_path": [
+      "3. Definitions"
+    ],
+    "unit_kind": "section",
+    "text_raw": "3.15 Reference Standard — A permanently mounted watthour meter or instrument in the Meter Shop & Standards Laboratory used for no other purpose than checking portable standards. Reference standards shall be tested and adjusted, if necessary, at least once every two years by a recognized standardizing laboratory. (170 IAC 4-1-7(C))",
+    "row_cells": null,
+    "parent_clause_id": "RPL-MTR-PGM-001:3"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:3.16",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 33,
+    "heading_path": [
+      "3. Definitions"
+    ],
+    "unit_kind": "section",
+    "text_raw": "3.16 Portable Standard — A portable watthour meter standard used for field testing. Must be accompanied at all times by a certificate or calibration card signed by the proper authority, giving the date of last certification. If found in error more than one percent (1%) plus or minus, it shall be tested, adjusted, and certified before further use. (170 IAC 4-1-7(D))",
+    "row_cells": null,
+    "parent_clause_id": "RPL-MTR-PGM-001:3"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:3.17",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 34,
+    "heading_path": [
+      "3. Definitions"
+    ],
+    "unit_kind": "section",
+    "text_raw": "3.17 Self-Contained Meter — A meter that measures load current directly without instrument transformers. AMI 2S, AMR 2S, and EM 2S/1S meters are self-contained.",
+    "row_cells": null,
+    "parent_clause_id": "RPL-MTR-PGM-001:3"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:3.18",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 35,
+    "heading_path": [
+      "3. Definitions"
+    ],
+    "unit_kind": "section",
+    "text_raw": "3.18 Transformer-Rated (CT) Meter — A meter used in conjunction with current transformers and/or potential transformers. RPL's 12S, 16S, and 9S meters are transformer-rated.",
+    "row_cells": null,
+    "parent_clause_id": "RPL-MTR-PGM-001:3"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:3.19",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 36,
+    "heading_path": [
+      "3. Definitions"
+    ],
+    "unit_kind": "section",
+    "text_raw": "3.19 Weighted Accuracy — For groups with non-uniform test loads, accuracy weighted by energy contribution at each test point. RPL applies this for multi-element CT meters.",
+    "row_cells": null,
+    "parent_clause_id": "RPL-MTR-PGM-001:3"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:3.20",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 37,
+    "heading_path": [
+      "3. Definitions"
+    ],
+    "unit_kind": "section",
+    "text_raw": "3.20 Functional Failure — A meter defect that does not affect accuracy registration but impairs metering function: display failure, register failure, communications failure, disconnect switch failure, or physical damage.",
+    "row_cells": null,
+    "parent_clause_id": "RPL-MTR-PGM-001:3"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:4",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 38,
+    "heading_path": [
+      "4. Regulatory Basis and Industry Standards"
+    ],
+    "unit_kind": "section",
+    "text_raw": "4. Regulatory Basis and Industry Standards",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:4.1",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 39,
+    "heading_path": [
+      "4. Regulatory Basis and Industry Standards"
+    ],
+    "unit_kind": "section",
+    "text_raw": "4.1 Indiana Administrative Code (170 IAC 4-1), Law as of 2024-12-31",
+    "row_cells": null,
+    "parent_clause_id": "RPL-MTR-PGM-001:4"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T4-1",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 40,
+    "heading_path": [
+      "4. Regulatory Basis and Industry Standards"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "T4-1 | 170 IAC 4-1-3 | Retention of records | Minimum 3-year retention; records kept in Indiana; open to IURC inspection",
+    "row_cells": {
+      "ID": "T4-1",
+      "Citation": "170 IAC 4-1-3",
+      "Heading": "Retention of records",
+      "Key Requirements Covered Here": "Minimum 3-year retention; records kept in Indiana; open to IURC inspection"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:4.1"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T4-2",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 41,
+    "heading_path": [
+      "4. Regulatory Basis and Industry Standards"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "T4-2 | 170 IAC 4-1-4 | Records and reports of meter purchases and tests | Test record content; permanent meter records; annual tabulations if required",
+    "row_cells": {
+      "ID": "T4-2",
+      "Citation": "170 IAC 4-1-4",
+      "Heading": "Records and reports of meter purchases and tests",
+      "Key Requirements Covered Here": "Test record content; permanent meter records; annual tabulations if required"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:4.1"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T4-3",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 42,
+    "heading_path": [
+      "4. Regulatory Basis and Industry Standards"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "T4-3 | 170 IAC 4-1-5 | Location of meters; accessibility | Outdoor preference; indoor standards; mounting height; accessibility",
+    "row_cells": {
+      "ID": "T4-3",
+      "Citation": "170 IAC 4-1-5",
+      "Heading": "Location of meters; accessibility",
+      "Key Requirements Covered Here": "Outdoor preference; indoor standards; mounting height; accessibility"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:4.1"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T4-4",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 43,
+    "heading_path": [
+      "4. Regulatory Basis and Industry Standards"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "T4-4 | 170 IAC 4-1-6 | Service watthour meters; inspection and repair | New meter testing; removed-meter inspection; 60-day installation testing",
+    "row_cells": {
+      "ID": "T4-4",
+      "Citation": "170 IAC 4-1-6",
+      "Heading": "Service watthour meters; inspection and repair",
+      "Key Requirements Covered Here": "New meter testing; removed-meter inspection; 60-day installation testing"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:4.1"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T4-5",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 44,
+    "heading_path": [
+      "4. Regulatory Basis and Industry Standards"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "T4-5 | 170 IAC 4-1-7 | Meter testing equipment and facilities | Reference and portable standards; calibration intervals; certification records",
+    "row_cells": {
+      "ID": "T4-5",
+      "Citation": "170 IAC 4-1-7",
+      "Heading": "Meter testing equipment and facilities",
+      "Key Requirements Covered Here": "Reference and portable standards; calibration intervals; certification records"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:4.1"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T4-6",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 45,
+    "heading_path": [
+      "4. Regulatory Basis and Industry Standards"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "T4-6 | 170 IAC 4-1-8 | Average accuracy of watthour meters; tests | FL/LL determination; average accuracy formula; as-found/as-left requirements",
+    "row_cells": {
+      "ID": "T4-6",
+      "Citation": "170 IAC 4-1-8",
+      "Heading": "Average accuracy of watthour meters; tests",
+      "Key Requirements Covered Here": "FL/LL determination; average accuracy formula; as-found/as-left requirements"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:4.1"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T4-7",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 46,
+    "heading_path": [
+      "4. Regulatory Basis and Industry Standards"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "T4-7 | 170 IAC 4-1-9 | Accuracy of meters | Accuracy limits for all meter types; no-load operation prohibition",
+    "row_cells": {
+      "ID": "T4-7",
+      "Citation": "170 IAC 4-1-9",
+      "Heading": "Accuracy of meters",
+      "Key Requirements Covered Here": "Accuracy limits for all meter types; no-load operation prohibition"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:4.1"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T4-8",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 47,
+    "heading_path": [
+      "4. Regulatory Basis and Industry Standards"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "T4-8 | 170 IAC 4-1-10 | In-service tests; watthour meters, self-contained | Method A (16-year periodic); Method B (statistical sampling); lot standards",
+    "row_cells": {
+      "ID": "T4-8",
+      "Citation": "170 IAC 4-1-10",
+      "Heading": "In-service tests; watthour meters, self-contained",
+      "Key Requirements Covered Here": "Method A (16-year periodic); Method B (statistical sampling); lot standards"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:4.1"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T4-9",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 48,
+    "heading_path": [
+      "4. Regulatory Basis and Industry Standards"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "T4-9 | 170 IAC 4-1-11 | Customer requests for tests | Written request; free first/second tests; 10-day report; cost disclosure; appeal",
+    "row_cells": {
+      "ID": "T4-9",
+      "Citation": "170 IAC 4-1-11",
+      "Heading": "Customer requests for tests",
+      "Key Requirements Covered Here": "Written request; free first/second tests; 10-day report; cost disclosure; appeal"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:4.1"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:4.2",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 49,
+    "heading_path": [
+      "4. Regulatory Basis and Industry Standards"
+    ],
+    "unit_kind": "section",
+    "text_raw": "4.2 Industry Standards (referenced for technical practice)\n\n- ANSI C12.1 — American National Standard Code for Electricity Metering: test methods, performance requirements, and service conditions (company practice reference for test procedures).\n- ANSI C12.20 — Electricity Meters — 0.2 and 0.5 Accuracy Classes: applicable to high-accuracy AMI meters (company practice).\n- ANSI/ASQC Z1.9-1993 — Named in 170 IAC 4-1-10(c)(3) for Method B sample size determination. RPL has adopted an internal sampling plan consistent with this standard's Inspection Level II principles; see §9.3.\n\nRPL does not reproduce copyrighted tables from paywalled standards. All sample-size determinations in this plan are company practice as stated in §9.3.",
+    "row_cells": null,
+    "parent_clause_id": "RPL-MTR-PGM-001:4"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:5",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 50,
+    "heading_path": [
+      "5. Organization and Roles"
+    ],
+    "unit_kind": "section",
+    "text_raw": "5. Organization and Roles\n\nRACI Summary:\n- Gregory Walsh (P19) Responsible for test execution, equipment, and records.\n- Angela Ruiz (P20) Accountable for program compliance and IURC reporting.\n- Luis Hernandez (P18) Consulted on field logistics and technician capacity.\n- Michael Brennan (P16) Informed of annual program results and any commission action.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T5.r1",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 51,
+    "heading_path": [
+      "5. Organization and Roles"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "Director, Metering | Angela Ruiz (P20) | Program ownership; IURC interface; Method B commission notification; annual report approval",
+    "row_cells": {
+      "Role": "Director, Metering",
+      "Person / Title": "Angela Ruiz (P20)",
+      "Responsibilities": "Program ownership; IURC interface; Method B commission notification; annual report approval"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:5"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T5.r2",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 52,
+    "heading_path": [
+      "5. Organization and Roles"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "Manager, Meter Shop & Standards Laboratory | Gregory Walsh (P19) | Day-to-day program management; test schedule; equipment calibration; record integrity",
+    "row_cells": {
+      "Role": "Manager, Meter Shop & Standards Laboratory",
+      "Person / Title": "Gregory Walsh (P19)",
+      "Responsibilities": "Day-to-day program management; test schedule; equipment calibration; record integrity"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:5"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T5.r3",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 53,
+    "heading_path": [
+      "5. Organization and Roles"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "Supervisor, Metering Services | Luis Hernandez (P18) | Field testing coordination; technician supervision; WAM work order management",
+    "row_cells": {
+      "Role": "Supervisor, Metering Services",
+      "Person / Title": "Luis Hernandez (P18)",
+      "Responsibilities": "Field testing coordination; technician supervision; WAM work order management"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:5"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T5.r4",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 54,
+    "heading_path": [
+      "5. Organization and Roles"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "Meter Technicians (MT-### series) | 14 certified technicians | In-service testing (shop and field); new-meter acceptance; customer tests",
+    "row_cells": {
+      "Role": "Meter Technicians (MT-### series)",
+      "Person / Title": "14 certified technicians",
+      "Responsibilities": "In-service testing (shop and field); new-meter acceptance; customer tests"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:5"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T5.r5",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 55,
+    "heading_path": [
+      "5. Organization and Roles"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "AMI Operations (role) | Metering department | AMI HES monitoring; zero-consumption analytics; remote disconnect/reconnect",
+    "row_cells": {
+      "Role": "AMI Operations (role)",
+      "Person / Title": "Metering department",
+      "Responsibilities": "AMI HES monitoring; zero-consumption analytics; remote disconnect/reconnect"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:5"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T5.r6",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 56,
+    "heading_path": [
+      "5. Organization and Roles"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "Records Coordinator (role) | Metering department | DCS controlled-document maintenance; RRS-MTR-001 through RRS-MTR-003 records management",
+    "row_cells": {
+      "Role": "Records Coordinator (role)",
+      "Person / Title": "Metering department",
+      "Responsibilities": "DCS controlled-document maintenance; RRS-MTR-001 through RRS-MTR-003 records management"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:5"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:6",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 57,
+    "heading_path": [
+      "6. Meter Records"
+    ],
+    "unit_kind": "section",
+    "text_raw": "6. Meter Records",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:6.1",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 58,
+    "heading_path": [
+      "6. Meter Records"
+    ],
+    "unit_kind": "section",
+    "text_raw": "6.1 Test Record Requirements. Whenever any meter in service is tested, a record shall be preserved containing the information necessary for: (1) identifying the meter; (2) the reason for making the test; (3) the reading of the meter before the test; and (4) the result of the test; together with all data taken at the time of the test in sufficiently complete form to permit the calculation of the average accuracy for billing adjustments if required. (170 IAC 4-1-4(a))\n\nThe Meter Technician records this information on MTR-F-011 (Meter Test Report) at the time of each test. Gregory Walsh (P19) reviews and signs MTR-F-011 within five (5) business days of test completion and files the record in WAM under work order type MTR-TST.",
+    "row_cells": null,
+    "parent_clause_id": "RPL-MTR-PGM-001:6"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:6.2",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 59,
+    "heading_path": [
+      "6. Meter Records"
+    ],
+    "unit_kind": "section",
+    "text_raw": "6.2 Permanent Meter Record Fields. Permanent records shall also be kept, systematically arranged, giving for each meter owned or used by any public utility, the year of purchase, its identification, and the record of the last test to which it has been subjected, with date and general results of the test. These records shall apply to all meters purchased after the effective date of this rule and to all other meters insofar as the information is available. (170 IAC 4-1-4(b))\n\nSystems of record: WAM (primary meter asset record), AMI HES (AMI meter operational data and event log), CIS (account and premise linkage). Records are synchronized nightly between WAM and CIS.",
+    "row_cells": null,
+    "parent_clause_id": "RPL-MTR-PGM-001:6"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T6-1",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 60,
+    "heading_path": [
+      "6. Meter Records"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "T6-1 | Meter serial number (RPL-<vendor>-<7 digits>) | WAM | Text | Primary key",
+    "row_cells": {
+      "ID": "T6-1",
+      "Field": "Meter serial number (RPL-<vendor>-<7 digits>)",
+      "System of Record": "WAM",
+      "Type": "Text",
+      "Notes": "Primary key"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:6.2"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T6-2",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 61,
+    "heading_path": [
+      "6. Meter Records"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "T6-2 | Vendor family | WAM | Enumeration | Vendor A/B/C/legacy-other",
+    "row_cells": {
+      "ID": "T6-2",
+      "Field": "Vendor family",
+      "System of Record": "WAM",
+      "Type": "Enumeration",
+      "Notes": "Vendor A/B/C/legacy-other"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:6.2"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T6-3",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 62,
+    "heading_path": [
+      "6. Meter Records"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "T6-3 | Meter technology | WAM | Enumeration | solid_state_AMI / solid_state_AMR / electromechanical",
+    "row_cells": {
+      "ID": "T6-3",
+      "Field": "Meter technology",
+      "System of Record": "WAM",
+      "Type": "Enumeration",
+      "Notes": "solid_state_AMI / solid_state_AMR / electromechanical"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:6.2"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T6-4",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 63,
+    "heading_path": [
+      "6. Meter Records"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "T6-4 | Form factor | WAM | Enumeration | 1S, 2S, 3S, 4S, 9S, 12S, 16S",
+    "row_cells": {
+      "ID": "T6-4",
+      "Field": "Form factor",
+      "System of Record": "WAM",
+      "Type": "Enumeration",
+      "Notes": "1S, 2S, 3S, 4S, 9S, 12S, 16S"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:6.2"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T6-5",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 64,
+    "heading_path": [
+      "6. Meter Records"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "T6-5 | Meter class (ampere rating) | WAM | Text | CL20, CL200, CL320",
+    "row_cells": {
+      "ID": "T6-5",
+      "Field": "Meter class (ampere rating)",
+      "System of Record": "WAM",
+      "Type": "Text",
+      "Notes": "CL20, CL200, CL320"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:6.2"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T6-6",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 65,
+    "heading_path": [
+      "6. Meter Records"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "T6-6 | Year of purchase / received date | WAM | Date | Required by 170 IAC 4-1-4(b)",
+    "row_cells": {
+      "ID": "T6-6",
+      "Field": "Year of purchase / received date",
+      "System of Record": "WAM",
+      "Type": "Date",
+      "Notes": "Required by 170 IAC 4-1-4(b)"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:6.2"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T6-7",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 66,
+    "heading_path": [
+      "6. Meter Records"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "T6-7 | Install date | WAM | Date",
+    "row_cells": {
+      "ID": "T6-7",
+      "Field": "Install date",
+      "System of Record": "WAM",
+      "Type": "Date",
+      "Notes": ""
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:6.2"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T6-8",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 67,
+    "heading_path": [
+      "6. Meter Records"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "T6-8 | Premise ID | CIS | Text | FK to CIS account",
+    "row_cells": {
+      "ID": "T6-8",
+      "Field": "Premise ID",
+      "System of Record": "CIS",
+      "Type": "Text",
+      "Notes": "FK to CIS account"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:6.2"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T6-9",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 68,
+    "heading_path": [
+      "6. Meter Records"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "T6-9 | Service center | WAM | Enumeration | LAF, CRW, THT, FRK, DAN",
+    "row_cells": {
+      "ID": "T6-9",
+      "Field": "Service center",
+      "System of Record": "WAM",
+      "Type": "Enumeration",
+      "Notes": "LAF, CRW, THT, FRK, DAN"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:6.2"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T6-10",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 69,
+    "heading_path": [
+      "6. Meter Records"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "T6-10 | Circuit ID | GIS / WAM | Text | FK to circuits_master",
+    "row_cells": {
+      "ID": "T6-10",
+      "Field": "Circuit ID",
+      "System of Record": "GIS / WAM",
+      "Type": "Text",
+      "Notes": "FK to circuits_master"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:6.2"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T6-11",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 70,
+    "heading_path": [
+      "6. Meter Records"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "T6-11 | County | GIS | Text",
+    "row_cells": {
+      "ID": "T6-11",
+      "Field": "County",
+      "System of Record": "GIS",
+      "Type": "Text",
+      "Notes": ""
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:6.2"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T6-12",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 71,
+    "heading_path": [
+      "6. Meter Records"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "T6-12 | Meter group ID | WAM | Text | FK to population table",
+    "row_cells": {
+      "ID": "T6-12",
+      "Field": "Meter group ID",
+      "System of Record": "WAM",
+      "Type": "Text",
+      "Notes": "FK to population table"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:6.2"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T6-13",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 72,
+    "heading_path": [
+      "6. Meter Records"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "T6-13 | Status | WAM | Enumeration | in_service / removed / retired",
+    "row_cells": {
+      "ID": "T6-13",
+      "Field": "Status",
+      "System of Record": "WAM",
+      "Type": "Enumeration",
+      "Notes": "in_service / removed / retired"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:6.2"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T6-14",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 73,
+    "heading_path": [
+      "6. Meter Records"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "T6-14 | Last test date | WAM | Date | Required by 170 IAC 4-1-4(b)",
+    "row_cells": {
+      "ID": "T6-14",
+      "Field": "Last test date",
+      "System of Record": "WAM",
+      "Type": "Date",
+      "Notes": "Required by 170 IAC 4-1-4(b)"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:6.2"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T6-15",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 74,
+    "heading_path": [
+      "6. Meter Records"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "T6-15 | Last test reason | WAM | Enumeration | See §9.2 method table",
+    "row_cells": {
+      "ID": "T6-15",
+      "Field": "Last test reason",
+      "System of Record": "WAM",
+      "Type": "Enumeration",
+      "Notes": "See §9.2 method table"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:6.2"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T6-16",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 75,
+    "heading_path": [
+      "6. Meter Records"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "T6-16 | Last test result summary | WAM | Text | within / fast / slow / non_registering / functional_fail",
+    "row_cells": {
+      "ID": "T6-16",
+      "Field": "Last test result summary",
+      "System of Record": "WAM",
+      "Type": "Text",
+      "Notes": "within / fast / slow / non_registering / functional_fail"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:6.2"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T6-17",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 76,
+    "heading_path": [
+      "6. Meter Records"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "T6-17 | Retirement date and reason | WAM | Date / Text | When applicable",
+    "row_cells": {
+      "ID": "T6-17",
+      "Field": "Retirement date and reason",
+      "System of Record": "WAM",
+      "Type": "Date / Text",
+      "Notes": "When applicable"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:6.2"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:6.3",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 77,
+    "heading_path": [
+      "6. Meter Records"
+    ],
+    "unit_kind": "section",
+    "text_raw": "6.3 Annual Tabulations. If required by the commission, annual tabulations of the results of all meter tests shall be made, arranged according to average accuracy, by groups set out in section 10 of this rule or as the commission may request. (170 IAC 4-1-4(c)) Gregory Walsh (P19) prepares draft tabulations each January for the prior year and provides them to Angela Ruiz (P20) within fifteen (15) calendar days of year-end, ready for submission to the IURC upon request.",
+    "row_cells": null,
+    "parent_clause_id": "RPL-MTR-PGM-001:6"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:7",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 78,
+    "heading_path": [
+      "7. Meter Location and Accessibility Standards"
+    ],
+    "unit_kind": "section",
+    "text_raw": "7. Meter Location and Accessibility Standards",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:7.1",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 79,
+    "heading_path": [
+      "7. Meter Location and Accessibility Standards"
+    ],
+    "unit_kind": "section",
+    "text_raw": "7.1 Outdoor Preference. It is recommended that all meters hereafter installed should be located outdoors. Where outdoor installation is impractical, meters may be located indoors, as near as possible to the service entrance, in a clean, dry, safe place. (170 IAC 4-1-5(A)) RPL's AMI rollout placed 98% of meters in outdoor socket positions. Indoor meters require written justification filed in WAM under the premise record before installation.",
+    "row_cells": null,
+    "parent_clause_id": "RPL-MTR-PGM-001:7"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:7.2",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 80,
+    "heading_path": [
+      "7. Meter Location and Accessibility Standards"
+    ],
+    "unit_kind": "section",
+    "text_raw": "7.2 Mounting Requirements. Meters shall not be placed on any unstable partitions or supports. Unless unavoidable, meters should not be installed in any location where the visits of the meter reader or tester will cause unreasonable annoyance to the customer or undue inconvenience to the utility. Meters should not be less than 4 feet nor more than 6 feet above the final standing surface, measured from the center of the meter cover, unless authorized by the public utility company. (170 IAC 4-1-5(B)(C))\n\nWhen a number of meters are placed on the same meter board, the distance between centers may be specified by RPL but in no case shall such distance be less than 7 1/2 inches. (170 IAC 4-1-5(C))",
+    "row_cells": null,
+    "parent_clause_id": "RPL-MTR-PGM-001:7"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:7.3",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 81,
+    "heading_path": [
+      "7. Meter Location and Accessibility Standards"
+    ],
+    "unit_kind": "section",
+    "text_raw": "7.3 Accessibility. Meters shall be easily accessible for reading, testing and making necessary adjustments and repairs. (170 IAC 4-1-5(C)) If access to a meter for a scheduled test is denied twice, Luis Hernandez (P18) initiates a WAM notification to the premise within five (5) business days and escalates to CIS customer service for scheduling coordination via CIS order type MTR-TST.",
+    "row_cells": null,
+    "parent_clause_id": "RPL-MTR-PGM-001:7"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:7.4",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 82,
+    "heading_path": [
+      "7. Meter Location and Accessibility Standards"
+    ],
+    "unit_kind": "section",
+    "text_raw": "7.4 Customer Meter Identification. Upon request by the residential customer, RPL shall provide the customer with the number of the meter which serves the individual customer's premises, to provide the customer with an opportunity to verify the meter readings. (170 IAC 4-1-5(C)) The CIS customer service representative provides the meter number verbally or in writing within two (2) business days of request, and documents the request in the CIS account notes.",
+    "row_cells": null,
+    "parent_clause_id": "RPL-MTR-PGM-001:7"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:7.5",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 83,
+    "heading_path": [
+      "7. Meter Location and Accessibility Standards"
+    ],
+    "unit_kind": "section",
+    "text_raw": "7.5 Multi-Unit Metering. On an installation where similar types of meters record different units (KWH and RKVAH, for example) the meters shall be tagged or marked to indicate the units recorded. (170 IAC 4-1-5(C)) The meter technician applies a WAM-generated laminated label at installation, and Gregory Walsh (P19) verifies labeling at the next test.",
+    "row_cells": null,
+    "parent_clause_id": "RPL-MTR-PGM-001:7"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:8",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 84,
+    "heading_path": [
+      "8. New and Repaired Meter Acceptance"
+    ],
+    "unit_kind": "section",
+    "text_raw": "8. New and Repaired Meter Acceptance",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:8.1",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 85,
+    "heading_path": [
+      "8. New and Repaired Meter Acceptance"
+    ],
+    "unit_kind": "section",
+    "text_raw": "8.1 Regulatory Basis for New Meter Testing. Each new watthour meter, except self-contained single phase and network meters, shall be inspected and tested and adjusted if necessary: (1) to detect any possible causes for faulty operation; (2) to verify that its register constant, test constant, gear, or dial train to be employed is correctly given; (3) to verify that the meter does not register with all load wires disconnected; and (4) to verify the accuracy of the meter. All new meters may be tested by a meter manufacturer if certified tests are supplied. (170 IAC 4-1-6(a))",
+    "row_cells": null,
+    "parent_clause_id": "RPL-MTR-PGM-001:8"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:8.2",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 86,
+    "heading_path": [
+      "8. New and Repaired Meter Acceptance"
+    ],
+    "unit_kind": "section",
+    "text_raw": "8.2 RPL Acceptance Sampling (Company Practice). RPL receives meters in shipment lots directly from vendors. For AMI and AMR solid-state meters, the manufacturer supplies certified factory test data with each lot. Gregory Walsh (P19) reviews the certified test documentation against the accuracy limits in §10 before any lot is accepted. In addition, RPL performs acceptance sampling on each received lot per the sampling plan in §9.3 applied to new-lot sizes. The sample is drawn using the deterministic selection procedure in §9.3.3 with seed derived from lot_id.\n\nTable 8-1: Acceptance Testing by Meter Class",
+    "row_cells": null,
+    "parent_clause_id": "RPL-MTR-PGM-001:8"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T8.r1",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 87,
+    "heading_path": [
+      "8. New and Repaired Meter Acceptance"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "Self-contained (2S CL200/CL320, 1S) | AMI / AMR / EM | Manufacturer certified test + RPL audit sample | RPL sampling plan (§9.3) per lot | FL, LL, no-load, register constant",
+    "row_cells": {
+      "Meter Class": "Self-contained (2S CL200/CL320, 1S)",
+      "Technology": "AMI / AMR / EM",
+      "Acceptance Method": "Manufacturer certified test + RPL audit sample",
+      "Sample Basis": "RPL sampling plan (§9.3) per lot",
+      "Test Checks": "FL, LL, no-load, register constant"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:8.2"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T8.r2",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 88,
+    "heading_path": [
+      "8. New and Repaired Meter Acceptance"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "Non-self-contained (12S, 16S, 9S) | AMI / AMR | RPL full inspection per 170 IAC 4-1-6(a) + certified tests | 100% inspect; sample tested for accuracy | FL, LL, PF, CT ratio confirmation",
+    "row_cells": {
+      "Meter Class": "Non-self-contained (12S, 16S, 9S)",
+      "Technology": "AMI / AMR",
+      "Acceptance Method": "RPL full inspection per 170 IAC 4-1-6(a) + certified tests",
+      "Sample Basis": "100% inspect; sample tested for accuracy",
+      "Test Checks": "FL, LL, PF, CT ratio confirmation"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:8.2"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T8.r3",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 89,
+    "heading_path": [
+      "8. New and Repaired Meter Acceptance"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "Electromechanical (2S CL200) | EM | RPL full inspection | Sample per §9.3 plan | FL, LL, no-load, mechanical condition",
+    "row_cells": {
+      "Meter Class": "Electromechanical (2S CL200)",
+      "Technology": "EM",
+      "Acceptance Method": "RPL full inspection",
+      "Sample Basis": "Sample per §9.3 plan",
+      "Test Checks": "FL, LL, no-load, mechanical condition"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:8.2"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:8.3",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 90,
+    "heading_path": [
+      "8. New and Repaired Meter Acceptance"
+    ],
+    "unit_kind": "section",
+    "text_raw": "8.3 Lot Formation. Each purchase order from a single vendor constitutes one acceptance lot. Lots are not mixed across vendors or form factors. Minimum lot size for sampling is 25 meters; lots below 25 are tested 100%. Each lot is assigned a lot_id in WAM (format: LOT-<YYYY>-<nnnn>).",
+    "row_cells": null,
+    "parent_clause_id": "RPL-MTR-PGM-001:8"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:8.4",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 91,
+    "heading_path": [
+      "8. New and Repaired Meter Acceptance"
+    ],
+    "unit_kind": "section",
+    "text_raw": "8.4 Lot Rejection and Return. If the acceptance sample fails the criteria in §9.4, Gregory Walsh (P19) places the lot on hold in WAM, notifies the vendor in writing within five (5) business days, and initiates a return-to-vendor work order. The lot is not placed in service. A replacement lot is treated as a new lot and resampled. Up to one (1) lot per vendor per year may be rejected before triggering a vendor performance review. Records of rejection are retained in RRS-MTR-001.",
+    "row_cells": null,
+    "parent_clause_id": "RPL-MTR-PGM-001:8"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:8.5",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 92,
+    "heading_path": [
+      "8. New and Repaired Meter Acceptance"
+    ],
+    "unit_kind": "section",
+    "text_raw": "8.5 Repaired Meter Testing. All meters removed from service shall be carefully inspected for any possible causes of faulty operation that may have developed in use, cleaned and repaired, as necessary, before being tested and adjusted to the accuracy conditions prescribed in section 9 of this rule, prior to being again placed in service, except self-contained meters may be removed and reinstalled without testing if they show no damage or evidence of tampering and are not on a recall or obsolete list. (170 IAC 4-1-6(b)) Repaired meters are tested on a shop test board before re-deployment; records are filed as test_reason = \"repaired\" in the test results file.",
+    "row_cells": null,
+    "parent_clause_id": "RPL-MTR-PGM-001:8"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:8.6",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 93,
+    "heading_path": [
+      "8. New and Repaired Meter Acceptance"
+    ],
+    "unit_kind": "section",
+    "text_raw": "8.6 Pre-Installation and Post-Installation Verification. All watthour meters and demand meters, except self-contained meters, shall be tested prior to their installation or within sixty (60) days after installation. (170 IAC 4-1-6(c)) All watthour and demand meters shall be checked for correct connections, proper mechanical conditions, and suitability of location in its permanent position at the time of installation or within sixty (60) days after installation. (170 IAC 4-1-6(d)) Luis Hernandez (P18) generates a WAM work order type MTR-TST for each non-self-contained meter install, with a due date sixty (60) calendar days after installation. Completion is verified by Gregory Walsh (P19) weekly.",
+    "row_cells": null,
+    "parent_clause_id": "RPL-MTR-PGM-001:8"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:9",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 94,
+    "heading_path": [
+      "9. In-Service Testing Program"
+    ],
+    "unit_kind": "section",
+    "text_raw": "9. In-Service Testing Program",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:9.1",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 95,
+    "heading_path": [
+      "9. In-Service Testing Program",
+      "9.1 Group Formation Rules"
+    ],
+    "unit_kind": "section",
+    "text_raw": "9.1 Group Formation Rules\n\nMeter groups (homogeneous groups) are formed by the following attributes, in order of priority:\n\n1. Technology — solid_state_AMI, solid_state_AMR, electromechanical\n2. Vendor family — Vendor A, Vendor B, Vendor C, legacy-other\n3. Form factor — 1S, 2S, 3S, 4S, 9S, 12S, 16S\n4. Meter class — CL20, CL200, CL320\n5. Service type — residential, commercial, industrial\n6. Install-year band — 5-year bands (e.g., 2016–2020, 2021–2024) for AMI; full decade bands for AMR and EM\n\nMinimum group size: 301 meters (no lot below 301 may be used under Method B). (170 IAC 4-1-10(c)(2)) Groups falling below 301 meters are merged with the nearest comparable group at Angela Ruiz's (P20) approval.\nMaximum group size: No regulatory maximum; groups above 100,000 meters are subdivided by install-year band for scheduling efficiency.\n\nRPL's current meter population forms 52 active homogeneous groups as of 2024-12-31 (see `data/meter_population_2024-12-31.csv`).",
+    "row_cells": null,
+    "parent_clause_id": "RPL-MTR-PGM-001:9"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:9.2",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 96,
+    "heading_path": [
+      "9. In-Service Testing Program",
+      "9.2 Test Method by Group"
+    ],
+    "unit_kind": "section",
+    "text_raw": "9.2 Test Method by Group\n\nA utility may adopt either Method A (periodic, subsection (b)) or Method B (quality control sampling, subsection (c)) for maintaining the accuracy of self-contained meters without attachments or with frictionless attachments. (170 IAC 4-1-10(a))\n\nRPL operates under Method B for all solid-state (AMI and AMR) self-contained groups, having provided written notice to the IURC. Electromechanical meters and all demand-register classes use the applicable Method A periodic intervals.\n\nTable 9-2: Test Method Summary\n\n> Note: A public utility operating under Method B may elect to test the meters included in any group or lot on a test schedule of not more than sixteen (16) years subject to section 9 of this rule. (170 IAC 4-1-10(c)(8)) RPL applies this election to AMR groups with older install-year bands currently reaching the 16-year milestone.",
+    "row_cells": null,
+    "parent_clause_id": "RPL-MTR-PGM-001:9"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T9-2.r1",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 97,
+    "heading_path": [
+      "9. In-Service Testing Program",
+      "9.2 Test Method by Group"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "AMI 2S (all classes, all vendors) | Method B — annual statistical sample | Sample per §9.3; annual lot draw | 170 IAC 4-1-10(c)",
+    "row_cells": {
+      "Group Family": "AMI 2S (all classes, all vendors)",
+      "Test Method": "Method B — annual statistical sample",
+      "Interval / Sample Basis": "Sample per §9.3; annual lot draw",
+      "Regulatory Clause": "170 IAC 4-1-10(c)"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:9.2"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T9-2.r2",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 98,
+    "heading_path": [
+      "9. In-Service Testing Program",
+      "9.2 Test Method by Group"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "AMI multi-element (12S, 16S, 9S) | Method B — annual statistical sample | Sample per §9.3 | 170 IAC 4-1-10(c)",
+    "row_cells": {
+      "Group Family": "AMI multi-element (12S, 16S, 9S)",
+      "Test Method": "Method B — annual statistical sample",
+      "Interval / Sample Basis": "Sample per §9.3",
+      "Regulatory Clause": "170 IAC 4-1-10(c)"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:9.2"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T9-2.r3",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 99,
+    "heading_path": [
+      "9. In-Service Testing Program",
+      "9.2 Test Method by Group"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "AMI 3S / 4S / 1S | Method B — annual statistical sample | Sample per §9.3 | 170 IAC 4-1-10(c)",
+    "row_cells": {
+      "Group Family": "AMI 3S / 4S / 1S",
+      "Test Method": "Method B — annual statistical sample",
+      "Interval / Sample Basis": "Sample per §9.3",
+      "Regulatory Clause": "170 IAC 4-1-10(c)"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:9.2"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T9-2.r4",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 100,
+    "heading_path": [
+      "9. In-Service Testing Program",
+      "9.2 Test Method by Group"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "AMR 2S (all classes) | Method B — annual statistical sample | Sample per §9.3; transitioning to 16-year periodic per (c)(8) | 170 IAC 4-1-10(c)",
+    "row_cells": {
+      "Group Family": "AMR 2S (all classes)",
+      "Test Method": "Method B — annual statistical sample",
+      "Interval / Sample Basis": "Sample per §9.3; transitioning to 16-year periodic per (c)(8)",
+      "Regulatory Clause": "170 IAC 4-1-10(c)"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:9.2"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T9-2.r5",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 101,
+    "heading_path": [
+      "9. In-Service Testing Program",
+      "9.2 Test Method by Group"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "AMR 12S / 16S / 9S | Method B — annual statistical sample | Sample per §9.3 | 170 IAC 4-1-10(c)",
+    "row_cells": {
+      "Group Family": "AMR 12S / 16S / 9S",
+      "Test Method": "Method B — annual statistical sample",
+      "Interval / Sample Basis": "Sample per §9.3",
+      "Regulatory Clause": "170 IAC 4-1-10(c)"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:9.2"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T9-2.r6",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 102,
+    "heading_path": [
+      "9. In-Service Testing Program",
+      "9.2 Test Method by Group"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "EM 2S CL200 (KWH register) | Method A — periodic | 16 years | 170 IAC 4-1-10(d)(1)(A)",
+    "row_cells": {
+      "Group Family": "EM 2S CL200 (KWH register)",
+      "Test Method": "Method A — periodic",
+      "Interval / Sample Basis": "16 years",
+      "Regulatory Clause": "170 IAC 4-1-10(d)(1)(A)"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:9.2"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T9-2.r7",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 103,
+    "heading_path": [
+      "9. In-Service Testing Program",
+      "9.2 Test Method by Group"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "EM 2S CL200 (mechanical demand register) | Method A — periodic | 8 years | 170 IAC 4-1-10(d)(1)(B)",
+    "row_cells": {
+      "Group Family": "EM 2S CL200 (mechanical demand register)",
+      "Test Method": "Method A — periodic",
+      "Interval / Sample Basis": "8 years",
+      "Regulatory Clause": "170 IAC 4-1-10(d)(1)(B)"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:9.2"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T9-2.r8",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 104,
+    "heading_path": [
+      "9. In-Service Testing Program",
+      "9.2 Test Method by Group"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "EM mechanical cam pulse initiators | Method A — periodic | 2 years | 170 IAC 4-1-10(d)(1)(D)",
+    "row_cells": {
+      "Group Family": "EM mechanical cam pulse initiators",
+      "Test Method": "Method A — periodic",
+      "Interval / Sample Basis": "2 years",
+      "Regulatory Clause": "170 IAC 4-1-10(d)(1)(D)"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:9.2"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T9-2.r9",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 105,
+    "heading_path": [
+      "9. In-Service Testing Program",
+      "9.2 Test Method by Group"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "EM mechanical gear shutter pulse initiators | Method A — periodic | 8 years | 170 IAC 4-1-10(d)(1)(E)",
+    "row_cells": {
+      "Group Family": "EM mechanical gear shutter pulse initiators",
+      "Test Method": "Method A — periodic",
+      "Interval / Sample Basis": "8 years",
+      "Regulatory Clause": "170 IAC 4-1-10(d)(1)(E)"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:9.2"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T9-2.r10",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 106,
+    "heading_path": [
+      "9. In-Service Testing Program",
+      "9.2 Test Method by Group"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "Electronic meters (solid-state non-AMI) | Method A — periodic | 16 years | 170 IAC 4-1-10(d)(2)",
+    "row_cells": {
+      "Group Family": "Electronic meters (solid-state non-AMI)",
+      "Test Method": "Method A — periodic",
+      "Interval / Sample Basis": "16 years",
+      "Regulatory Clause": "170 IAC 4-1-10(d)(2)"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:9.2"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:9.3",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 107,
+    "heading_path": [
+      "9. In-Service Testing Program",
+      "9.3 Sample Size Determination (Company Practice)"
+    ],
+    "unit_kind": "section",
+    "text_raw": "9.3 Sample Size Determination (Company Practice)\n\nInternal procedure: RPL Meter Sampling Plan (based on variables-sampling principles consistent with ANSI/ASQC Z1.9-1993 Inspection Level II)\n\nRPL has adopted the following internal sampling plan. These values are company practice; 170 IAC 4-1-10(c)(3) cites ANSI/ASQC Z1.9-1993 Table A-2 as the regulatory reference. Because that standard is paywalled, RPL's own engineering team verified the sample sizes below against variables-sampling principles and documented them in the basis file as `internal_procedure`. This plan produces sample fractions consistent with Inspection Level II principles.\n\nTable 9-3: RPL Meter Sampling Plan (Company Practice)\n\nRandom Selection Procedure. Due care shall be exercised that the meters to be tested shall be drawn at random. (170 IAC 4-1-10(c)(3)) RPL selects sample meters using a seeded pseudorandom number generator (Python `random.seed(year)`) applied to the ordered meter_serial list for each lot. The draw is executed annually by January 15 by Gregory Walsh (P19), documented in `data/inservice_sample_selection_<year>.csv`, and subject to audit from WAM records. Each Public utility shall keep all necessary records to enable the commission to check procedures followed, tests made, and calibrations employed in conformance with this optional testing method. (170 IAC 4-1-10(c)(9))\n\nAudit trail: The `inservice_sample_selection_2025.csv` dataset lists every meter drawn for 2025 testing with draw rank, group, lot, and scheduled quarter.",
+    "row_cells": null,
+    "parent_clause_id": "RPL-MTR-PGM-001:9"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T9-3.r1",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 108,
+    "heading_path": [
+      "9. In-Service Testing Program",
+      "9.3 Sample Size Determination (Company Practice)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "B | 2–8 | 3",
+    "row_cells": {
+      "Code Letter": "B",
+      "Lot Size Range (meters)": "2–8",
+      "Annual Sample Size": "3"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:9.3"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T9-3.r2",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 109,
+    "heading_path": [
+      "9. In-Service Testing Program",
+      "9.3 Sample Size Determination (Company Practice)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "C | 9–15 | 4",
+    "row_cells": {
+      "Code Letter": "C",
+      "Lot Size Range (meters)": "9–15",
+      "Annual Sample Size": "4"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:9.3"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T9-3.r3",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 110,
+    "heading_path": [
+      "9. In-Service Testing Program",
+      "9.3 Sample Size Determination (Company Practice)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "D | 16–25 | 5",
+    "row_cells": {
+      "Code Letter": "D",
+      "Lot Size Range (meters)": "16–25",
+      "Annual Sample Size": "5"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:9.3"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T9-3.r4",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 111,
+    "heading_path": [
+      "9. In-Service Testing Program",
+      "9.3 Sample Size Determination (Company Practice)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "E | 26–50 | 7",
+    "row_cells": {
+      "Code Letter": "E",
+      "Lot Size Range (meters)": "26–50",
+      "Annual Sample Size": "7"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:9.3"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T9-3.r5",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 112,
+    "heading_path": [
+      "9. In-Service Testing Program",
+      "9.3 Sample Size Determination (Company Practice)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "F | 51–90 | 10",
+    "row_cells": {
+      "Code Letter": "F",
+      "Lot Size Range (meters)": "51–90",
+      "Annual Sample Size": "10"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:9.3"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T9-3.r6",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 113,
+    "heading_path": [
+      "9. In-Service Testing Program",
+      "9.3 Sample Size Determination (Company Practice)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "G | 91–150 | 15",
+    "row_cells": {
+      "Code Letter": "G",
+      "Lot Size Range (meters)": "91–150",
+      "Annual Sample Size": "15"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:9.3"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T9-3.r7",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 114,
+    "heading_path": [
+      "9. In-Service Testing Program",
+      "9.3 Sample Size Determination (Company Practice)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "H | 151–280 | 25",
+    "row_cells": {
+      "Code Letter": "H",
+      "Lot Size Range (meters)": "151–280",
+      "Annual Sample Size": "25"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:9.3"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T9-3.r8",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 115,
+    "heading_path": [
+      "9. In-Service Testing Program",
+      "9.3 Sample Size Determination (Company Practice)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "I | 281–500 | 35",
+    "row_cells": {
+      "Code Letter": "I",
+      "Lot Size Range (meters)": "281–500",
+      "Annual Sample Size": "35"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:9.3"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T9-3.r9",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 116,
+    "heading_path": [
+      "9. In-Service Testing Program",
+      "9.3 Sample Size Determination (Company Practice)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "J | 501–1,200 | 50",
+    "row_cells": {
+      "Code Letter": "J",
+      "Lot Size Range (meters)": "501–1,200",
+      "Annual Sample Size": "50"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:9.3"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T9-3.r10",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 117,
+    "heading_path": [
+      "9. In-Service Testing Program",
+      "9.3 Sample Size Determination (Company Practice)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "K | 1,201–3,200 | 75",
+    "row_cells": {
+      "Code Letter": "K",
+      "Lot Size Range (meters)": "1,201–3,200",
+      "Annual Sample Size": "75"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:9.3"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T9-3.r11",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 118,
+    "heading_path": [
+      "9. In-Service Testing Program",
+      "9.3 Sample Size Determination (Company Practice)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "L | 3,201–10,000 | 100",
+    "row_cells": {
+      "Code Letter": "L",
+      "Lot Size Range (meters)": "3,201–10,000",
+      "Annual Sample Size": "100"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:9.3"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T9-3.r12",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 119,
+    "heading_path": [
+      "9. In-Service Testing Program",
+      "9.3 Sample Size Determination (Company Practice)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "M | 10,001–35,000 | 150",
+    "row_cells": {
+      "Code Letter": "M",
+      "Lot Size Range (meters)": "10,001–35,000",
+      "Annual Sample Size": "150"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:9.3"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T9-3.r13",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 120,
+    "heading_path": [
+      "9. In-Service Testing Program",
+      "9.3 Sample Size Determination (Company Practice)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "N | 35,001–150,000 | 200",
+    "row_cells": {
+      "Code Letter": "N",
+      "Lot Size Range (meters)": "35,001–150,000",
+      "Annual Sample Size": "200"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:9.3"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T9-3.r14",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 121,
+    "heading_path": [
+      "9. In-Service Testing Program",
+      "9.3 Sample Size Determination (Company Practice)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "P | 150,001–500,000 | 300",
+    "row_cells": {
+      "Code Letter": "P",
+      "Lot Size Range (meters)": "150,001–500,000",
+      "Annual Sample Size": "300"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:9.3"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T9-3.r15",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 122,
+    "heading_path": [
+      "9. In-Service Testing Program",
+      "9.3 Sample Size Determination (Company Practice)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "Q | 500,001 and above | 400",
+    "row_cells": {
+      "Code Letter": "Q",
+      "Lot Size Range (meters)": "500,001 and above",
+      "Annual Sample Size": "400"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:9.3"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:9.4",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 123,
+    "heading_path": [
+      "9. In-Service Testing Program",
+      "9.4 Acceptance Determination and Actions on a Failed Group"
+    ],
+    "unit_kind": "section",
+    "text_raw": "9.4 Acceptance Determination and Actions on a Failed Group\n\nAcceptance criterion: The test criterion for acceptance or rejection of each lot shall be based on the test at full load only and shall be that designated for Double Specification Limit–Variability Unknown–Standard Deviation Method at the 2.50 Acceptable Quality Level (normal inspection) as shown in Table B-3, ANSI/ASQC Standard Z1.9, dated 1993. (170 IAC 4-1-10(c)(4)) A lot shall be rejected if the total estimated percent defective (p) exceeds the appropriate maximum allowable percent defective (m) as determined from Table B-3, ANSI/ASQC Standard Z1.9, dated 1993. (170 IAC 4-1-10(c)(6))\n\nRPL computes the standard deviation of full-load accuracy values in the sample, derives Q-statistics using U = 102.00% and L = 98.00%, and determines p from the normal distribution. If p > m (from the internal worksheet, App-B), the lot is rejected.\n\nTable 9-4: Decision Table — Lot Acceptance Outcome and Actions\n\n> Caution: A rejected lot may not be placed back into active service status in WAM until either (a) accelerated testing demonstrates the lot is within acceptable limits, or (b) affected meters are retired. Gregory Walsh (P19) confirms compliance with Angela Ruiz (P20) before any hold is lifted.",
+    "row_cells": null,
+    "parent_clause_id": "RPL-MTR-PGM-001:9"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T9-4.r1",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 124,
+    "heading_path": [
+      "9. In-Service Testing Program",
+      "9.4 Acceptance Determination and Actions on a Failed Group"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "Lot Accepted | p ≤ m | Gregory Walsh (P19) | Return all sample meters to service; update WAM; advance next annual draw | Within 5 business days of test completion | MTR-F-011; WAM group record",
+    "row_cells": {
+      "Outcome": "Lot Accepted",
+      "Condition": "p ≤ m",
+      "Responsible": "Gregory Walsh (P19)",
+      "Action": "Return all sample meters to service; update WAM; advance next annual draw",
+      "Timeline": "Within 5 business days of test completion",
+      "Record": "MTR-F-011; WAM group record"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:9.4"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T9-4.r2",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 125,
+    "heading_path": [
+      "9. In-Service Testing Program",
+      "9.4 Acceptance Determination and Actions on a Failed Group"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "Lot Accepted — Borderline (p > 0.75m) | p > 0.75m but ≤ m | Gregory Walsh (P19) | Accepted; note borderline in WAM; monitor next year | Within 5 business days | MTR-F-011; group notation in WAM",
+    "row_cells": {
+      "Outcome": "Lot Accepted — Borderline (p > 0.75m)",
+      "Condition": "p > 0.75m but ≤ m",
+      "Responsible": "Gregory Walsh (P19)",
+      "Action": "Accepted; note borderline in WAM; monitor next year",
+      "Timeline": "Within 5 business days",
+      "Record": "MTR-F-011; group notation in WAM"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:9.4"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T9-4.r3",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 126,
+    "heading_path": [
+      "9. In-Service Testing Program",
+      "9.4 Acceptance Determination and Actions on a Failed Group"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "Lot Rejected | p > m | Angela Ruiz (P20) | Initiate accelerated test schedule per (c)(7); notify IURC per Method B notice obligation | Within 10 business days of rejection | MTR-F-011; WAM rejection record; IURC notification letter",
+    "row_cells": {
+      "Outcome": "Lot Rejected",
+      "Condition": "p > m",
+      "Responsible": "Angela Ruiz (P20)",
+      "Action": "Initiate accelerated test schedule per (c)(7); notify IURC per Method B notice obligation",
+      "Timeline": "Within 10 business days of rejection",
+      "Record": "MTR-F-011; WAM rejection record; IURC notification letter"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:9.4"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T9-4.r4",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 127,
+    "heading_path": [
+      "9. In-Service Testing Program",
+      "9.4 Acceptance Determination and Actions on a Failed Group"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "Lot Rejected — accelerated testing | Rejected lot, accelerated period | Luis Hernandez (P18) | Complete accelerated testing within a maximum period of ninety-six (96) months; meters shall comply with section 9 of this rule, or shall be retired from service; accelerated testing may be discontinued when subsequent test results show that the lot is within acceptable limits of accuracy | Within 96 calendar months | Accelerated schedule in WAM; MTR-F-011 per test",
+    "row_cells": {
+      "Outcome": "Lot Rejected — accelerated testing",
+      "Condition": "Rejected lot, accelerated period",
+      "Responsible": "Luis Hernandez (P18)",
+      "Action": "Complete accelerated testing within a maximum period of ninety-six (96) months; meters shall comply with section 9 of this rule, or shall be retired from service; accelerated testing may be discontinued when subsequent test results show that the lot is within acceptable limits of accuracy",
+      "Timeline": "Within 96 calendar months",
+      "Record": "Accelerated schedule in WAM; MTR-F-011 per test"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:9.4"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T9-4.r5",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 128,
+    "heading_path": [
+      "9. In-Service Testing Program",
+      "9.4 Acceptance Determination and Actions on a Failed Group"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "Functional Failure | Non-accuracy defect on removal | Meter Technician | Replace meter; log CIS order MTR-TST; issue billing review if needed | At test | MTR-F-011; CIS billing_review_ref",
+    "row_cells": {
+      "Outcome": "Functional Failure",
+      "Condition": "Non-accuracy defect on removal",
+      "Responsible": "Meter Technician",
+      "Action": "Replace meter; log CIS order MTR-TST; issue billing review if needed",
+      "Timeline": "At test",
+      "Record": "MTR-F-011; CIS billing_review_ref"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:9.4"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:9.5",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 129,
+    "heading_path": [
+      "9. In-Service Testing Program",
+      "9.5 Periodic Schedule Management (Method A and Method B 16-Year Election)"
+    ],
+    "unit_kind": "section",
+    "text_raw": "9.5 Periodic Schedule Management (Method A and Method B 16-Year Election)\n\nFor meters under Method A or the 16-year Method B election, Luis Hernandez (P18) computes next-due dates in WAM by adding the applicable interval to the last_test_date of each meter. WAM auto-generates work order type MTR-TST for meters within sixty (60) calendar days of their due date. Gregory Walsh (P19) reviews the open work-order queue weekly and assigns meter technicians to shop or field tests based on meter type and location.\n\nField vs. Shop Split: AMI and AMR meters are typically removed and tested in the Meter Shop & Standards Laboratory at the Lafayette HQ campus using shop test boards. EM meters in rural service centers (CRW, THT, FRK, DAN) may be tested in the field using portable standards. The shop/field determination is recorded in the test results dataset.\n\nDue-date calendar: `data/inservice_sample_selection_2025.csv` lists the 2025 scheduled sample; the 2025 periodic due-dates by group and quarter are summarized in §15.",
+    "row_cells": null,
+    "parent_clause_id": "RPL-MTR-PGM-001:9"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:10",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 130,
+    "heading_path": [
+      "10. Accuracy Limits and Average-Accuracy Method"
+    ],
+    "unit_kind": "section",
+    "text_raw": "10. Accuracy Limits and Average-Accuracy Method",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:10.1",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 131,
+    "heading_path": [
+      "10. Accuracy Limits and Average-Accuracy Method"
+    ],
+    "unit_kind": "section",
+    "text_raw": "10.1 Average-Accuracy Computation. Average percentage registration is the average of the percentage registration at light load (LL) and at full load (FL). Thus, average percentage accuracy = (FL + LL) ÷ 2. (170 IAC 4-1-8(a))\n\nThe accuracy at light load shall be determined at a load of approximately ten percent (10%) of the rated test amperes of the meter. The accuracy at full load shall be determined at a load of one hundred percent (100%) of the rated test amperes of the meter. (170 IAC 4-1-8(a))\n\nDetermining individual test values: The accuracy at light load shall be determined by taking the average of at least two (2) tests, which tests must agree within one-half of one percent (.5%) unless the meter has been tested by an automated device in which case one (1) test will be sufficient. The accuracy at full load shall be determined in a like manner. (170 IAC 4-1-8(b))\n\nThe average \"as found\" accuracy of a meter may be determined from one (1) light load test and one (1) full load test if: (1) such average accuracy is less than one hundred three percent (103%); and (2) if such meter is to be adjusted. (170 IAC 4-1-8(b))",
+    "row_cells": null,
+    "parent_clause_id": "RPL-MTR-PGM-001:10"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:10.2",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 132,
+    "heading_path": [
+      "10. Accuracy Limits and Average-Accuracy Method"
+    ],
+    "unit_kind": "section",
+    "text_raw": "10.2 Accuracy Limits — Watthour Meters\n\nNo meter shall be placed in service or allowed to remain in service that has not been tested for accuracy of measurements and adjusted, if necessary, to meet the following requirements. (170 IAC 4-1-9(b))\n\nTable 10-2: Accuracy Limits — Watthour Meters (170 IAC 4-1-9(b)(1))",
+    "row_cells": null,
+    "parent_clause_id": "RPL-MTR-PGM-001:10"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T10-2.r1",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 133,
+    "heading_path": [
+      "10. Accuracy Limits and Average-Accuracy Method"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "Average error | Not over two percent (2%), plus or minus | All watthour meters (AMI, AMR, EM)",
+    "row_cells": {
+      "Limit": "Average error",
+      "Requirement": "Not over two percent (2%), plus or minus",
+      "Technology Applies": "All watthour meters (AMI, AMR, EM)"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:10.2"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T10-2.r2",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 134,
+    "heading_path": [
+      "10. Accuracy Limits and Average-Accuracy Method"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "Error at full load | Not over one percent (1%), plus or minus | All watthour meters",
+    "row_cells": {
+      "Limit": "Error at full load",
+      "Requirement": "Not over one percent (1%), plus or minus",
+      "Technology Applies": "All watthour meters"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:10.2"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T10-2.r3",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 135,
+    "heading_path": [
+      "10. Accuracy Limits and Average-Accuracy Method"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "Error at light load | Not over three percent (3%), plus or minus | All watthour meters",
+    "row_cells": {
+      "Limit": "Error at light load",
+      "Requirement": "Not over three percent (3%), plus or minus",
+      "Technology Applies": "All watthour meters"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:10.2"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:10.3",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 136,
+    "heading_path": [
+      "10. Accuracy Limits and Average-Accuracy Method"
+    ],
+    "unit_kind": "section",
+    "text_raw": "10.3 No-Load Prohibition. No watthour meter that registers at no load (the moving element making more than one (1) complete revolution when at \"no load\"), when the applied voltage is less than one hundred ten percent (110%) of standard service voltage, shall be placed in service or allowed to remain in service in such condition. (170 IAC 4-1-9(a)) The meter technician performs a no-load check on each meter tested; any meter that fails is immediately retired or repaired before return to service.",
+    "row_cells": null,
+    "parent_clause_id": "RPL-MTR-PGM-001:10"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:10.4",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 137,
+    "heading_path": [
+      "10. Accuracy Limits and Average-Accuracy Method"
+    ],
+    "unit_kind": "section",
+    "text_raw": "10.4 Accuracy Limits — Demand Meters\n\nTable 10-4: Accuracy Limits — Demand Registers (170 IAC 4-1-9(b)(3)–(4))",
+    "row_cells": null,
+    "parent_clause_id": "RPL-MTR-PGM-001:10"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T10-4.r1",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 138,
+    "heading_path": [
+      "10. Accuracy Limits and Average-Accuracy Method"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "Integrating demand meter — electrical element | Same as watthour meter limits in §10.2",
+    "row_cells": {
+      "Meter Type": "Integrating demand meter — electrical element",
+      "Limit": "Same as watthour meter limits in §10.2"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:10.4"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T10-4.r2",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 139,
+    "heading_path": [
+      "10. Accuracy Limits and Average-Accuracy Method"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "Integrating demand meter — timing element | Cumulative error not in excess of plus or minus two percent (2%) for entire billing period",
+    "row_cells": {
+      "Meter Type": "Integrating demand meter — timing element",
+      "Limit": "Cumulative error not in excess of plus or minus two percent (2%) for entire billing period"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:10.4"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T10-4.r3",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 140,
+    "heading_path": [
+      "10. Accuracy Limits and Average-Accuracy Method"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "Integrating demand meter — TOU (time of day factor) | Must not indicate a difference of more than ten (10) minutes from correct time; incorrect time caused by temporary loss of utility service corrected by end of following work day",
+    "row_cells": {
+      "Meter Type": "Integrating demand meter — TOU (time of day factor)",
+      "Limit": "Must not indicate a difference of more than ten (10) minutes from correct time; incorrect time caused by temporary loss of utility service corrected by end of following work day"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:10.4"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T10-4.r4",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 141,
+    "heading_path": [
+      "10. Accuracy Limits and Average-Accuracy Method"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "Lagged demand meter — electromagnetic type | Error not to exceed two percent (2%), plus or minus, of full scale indication",
+    "row_cells": {
+      "Meter Type": "Lagged demand meter — electromagnetic type",
+      "Limit": "Error not to exceed two percent (2%), plus or minus, of full scale indication"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:10.4"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T10-4.r5",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 142,
+    "heading_path": [
+      "10. Accuracy Limits and Average-Accuracy Method"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "Lagged demand meter — thermal type | Error not to exceed four percent (4%), plus or minus, of full scale indication",
+    "row_cells": {
+      "Meter Type": "Lagged demand meter — thermal type",
+      "Limit": "Error not to exceed four percent (4%), plus or minus, of full scale indication"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:10.4"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T10-4.r6",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 143,
+    "heading_path": [
+      "10. Accuracy Limits and Average-Accuracy Method"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "Curve drawing instruments | Electrical element error not to exceed two percent (2%), plus or minus, of full scale indication",
+    "row_cells": {
+      "Meter Type": "Curve drawing instruments",
+      "Limit": "Electrical element error not to exceed two percent (2%), plus or minus, of full scale indication"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:10.4"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:10.5",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 144,
+    "heading_path": [
+      "10. Accuracy Limits and Average-Accuracy Method"
+    ],
+    "unit_kind": "section",
+    "text_raw": "10.5 Power Factor Test — CT-Metered Installations. Watthour meters, except self-contained meters, which are to be used on circuits supplying inductive load, shall also be tested before installation at one hundred percent (100%) of manufacturer's rated test current at fifty percent (50%) lagging power factor, and, if necessary, adjusted so that the error under such conditions will not be more than two percent (2%), plus or minus. (170 IAC 4-1-9(b)(5)) All 12S, 16S, and 9S meters in RPL's fleet are tested at 50% PF before installation. The PF test result (as_found_pf_pct) is recorded in the test results dataset.",
+    "row_cells": null,
+    "parent_clause_id": "RPL-MTR-PGM-001:10"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:10.6",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 145,
+    "heading_path": [
+      "10. Accuracy Limits and Average-Accuracy Method"
+    ],
+    "unit_kind": "section",
+    "text_raw": "10.6 Worked Calculation Example\n\nA Vendor A AMI 2S CL200 meter is removed from a residential premise in Tippecanoe County for in-service sample testing. Shop test board TB-04 records:\n\n- Full Load test pass 1: 100.18% · pass 2: 100.22% → FL average = 100.20%\n- Light Load test pass 1: 99.85% · pass 2: 99.91% → LL average = 99.88%\n\nAverage accuracy = (100.20 + 99.88) ÷ 2 = 100.04%\n\nLimits check:\n- Average error = |100.04 − 100.00| = 0.04% ≤ 2.00% ✓\n- FL error = |100.20 − 100.00| = 0.20% ≤ 1.00% ✓\n- LL error = |99.88 − 100.00| = 0.12% ≤ 3.00% ✓\n- Result: WITHIN LIMITS — return to service; action_taken = returned_to_service\n\nFor Method B lot acceptance, only the FL value (100.20%) is entered into the Q-statistic calculation. Gregory Walsh (P19) documents this calculation in App-B (Group Acceptance Worksheet).",
+    "row_cells": null,
+    "parent_clause_id": "RPL-MTR-PGM-001:10"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:11",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 146,
+    "heading_path": [
+      "11. Test Equipment and Standards"
+    ],
+    "unit_kind": "section",
+    "text_raw": "11. Test Equipment and Standards",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:11.1",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 147,
+    "heading_path": [
+      "11. Test Equipment and Standards"
+    ],
+    "unit_kind": "section",
+    "text_raw": "11.1 Regulatory Requirements. Each public utility shall provide or have available such standard meters, instruments and other equipment and facilities as may be necessary to make the tests required by these rules. Such equipment and facilities shall be subject to review by the commission, and shall be available at all reasonable times for the inspection by any authorized representative of the commission. (170 IAC 4-1-7(B))",
+    "row_cells": null,
+    "parent_clause_id": "RPL-MTR-PGM-001:11"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:11.2",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 148,
+    "heading_path": [
+      "11. Test Equipment and Standards"
+    ],
+    "unit_kind": "section",
+    "text_raw": "11.2 Reference Standard Calibration Interval. Each public utility shall provide or have available suitable indicating electrical instruments, wattmeters and watthour meters (hereinafter called \"reference standards\") as may be necessary for testing the accuracy of portable watthour standards and other portable instruments used for testing service meters. Reference standards of all kinds shall be tested and adjusted, if necessary, at least once every two years by a recognized standardizing laboratory. (170 IAC 4-1-7(C)) Gregory Walsh (P19) maintains a calibration due-date schedule in WAM (equipment type `STD-REF`). A reference standard not yet recalibrated within two (2) calendar years is immediately taken out of service until recalibrated.",
+    "row_cells": null,
+    "parent_clause_id": "RPL-MTR-PGM-001:11"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:11.3",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 149,
+    "heading_path": [
+      "11. Test Equipment and Standards"
+    ],
+    "unit_kind": "section",
+    "text_raw": "11.3 Portable Standard Tolerances. All portable watthour meter standards shall be checked against the corresponding reference standards as often as may be necessary to give reasonable assurance that the errors will not change enough between successive calibrations to materially affect the results. If such check shows any portable watthour meter standard to be in error more than one per cent (1%) plus or minus, at any load at which the standard will be used, the standard shall be tested, adjusted and certified in the laboratory of the public utility, or in some other approved laboratory, unless calibration correction is used. (170 IAC 4-1-7(D)) Each portable watthour meter standard shall at all times be accompanied by a certificate or calibration card, signed by the proper authority, giving the date when it was last certified. (170 IAC 4-1-7(D))\n\nRPL checks portable standards against reference standards before each field campaign and records the comparison deviation in `data/standards_calibration_2024.csv`.",
+    "row_cells": null,
+    "parent_clause_id": "RPL-MTR-PGM-001:11"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:11.4",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 150,
+    "heading_path": [
+      "11. Test Equipment and Standards"
+    ],
+    "unit_kind": "section",
+    "text_raw": "11.4 Portable Indicating Instruments. All portable indicating electrical testing instruments (voltmeters, ammeters, wattmeters), when in regular use, shall be checked against suitable reference standards as often as may be necessary. If found appreciably in error at zero or more than one per cent (1%) of full scale value at commonly used scale deflection shall, unless calibration correction is used, be adjusted and certified in some approved laboratory. (170 IAC 4-1-7(E))",
+    "row_cells": null,
+    "parent_clause_id": "RPL-MTR-PGM-001:11"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:11.5",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 151,
+    "heading_path": [
+      "11. Test Equipment and Standards"
+    ],
+    "unit_kind": "section",
+    "text_raw": "11.5 Certification Records. Records of certification and calibration shall be kept on file in the office of the public utility. (170 IAC 4-1-7(F)) All calibration certificates are scanned and attached to the standard's asset record in WAM and filed physically at the Meter Shop & Standards Laboratory. Records series: RRS-MTR-003.",
+    "row_cells": null,
+    "parent_clause_id": "RPL-MTR-PGM-001:11"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:11.6",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 152,
+    "heading_path": [
+      "11. Test Equipment and Standards"
+    ],
+    "unit_kind": "section",
+    "text_raw": "11.6 Traceability Chain\n\n```\nNational Institute of Standards and Technology (NIST)\n          ↓ (accredited calibration contract)\nAccredited External Calibration Laboratory (NVLAP/A2LA accredited)\n          ↓ (at least every 2 years per 170 IAC 4-1-7(C))\nRPL Reference Standards (STD-REF-001 through STD-REF-003)\n   [permanently mounted, Meter Shop & Standards Laboratory, Lafayette HQ]\n          ↓ (before each field campaign; ≥monthly in shop)\nRPL Shop Test Boards (TB-01 through TB-08)\n          ↓\nRPL Portable Standards (PRT-001 through PRT-032)\n          ↓\nRevenue Meters Under Test\n```\n\nTable 11-6: Standards Equipment Register Summary (see App-C for full register)",
+    "row_cells": null,
+    "parent_clause_id": "RPL-MTR-PGM-001:11"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T11-6.r1",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 153,
+    "heading_path": [
+      "11. Test Equipment and Standards"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "Reference standards (STD-REF) | 3 | ≤ 2 years (regulatory) | Accredited external lab",
+    "row_cells": {
+      "Level": "Reference standards (STD-REF)",
+      "Count": "3",
+      "Recalibration Interval": "≤ 2 years (regulatory)",
+      "Tolerance Check": "Accredited external lab"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:11.6"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T11-6.r2",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 154,
+    "heading_path": [
+      "11. Test Equipment and Standards"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "Shop test boards (TB) | 8 | Internal: annually against STD-REF | 170 IAC 4-1-7(C) principles",
+    "row_cells": {
+      "Level": "Shop test boards (TB)",
+      "Count": "8",
+      "Recalibration Interval": "Internal: annually against STD-REF",
+      "Tolerance Check": "170 IAC 4-1-7(C) principles"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:11.6"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T11-6.r3",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 155,
+    "heading_path": [
+      "11. Test Equipment and Standards"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "Portable standards (PRT) | 32 | Before each field campaign; if >1% error → out of service (regulatory) | Against STD-REF per 170 IAC 4-1-7(D)",
+    "row_cells": {
+      "Level": "Portable standards (PRT)",
+      "Count": "32",
+      "Recalibration Interval": "Before each field campaign; if >1% error → out of service (regulatory)",
+      "Tolerance Check": "Against STD-REF per 170 IAC 4-1-7(D)"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:11.6"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:11.7",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 156,
+    "heading_path": [
+      "11. Test Equipment and Standards"
+    ],
+    "unit_kind": "section",
+    "text_raw": "11.7 Out-of-Tolerance Impact Review. If any reference standard or test board is found out of calibration, Gregory Walsh (P19) reviews all test results recorded using that equipment since its last certified calibration. If the out-of-tolerance condition could have affected billing accuracy, Angela Ruiz (P20) initiates a billing review for affected accounts via CIS transaction code ADJ-MS or ADJ-MF as appropriate. Results are documented in RRS-MTR-002.",
+    "row_cells": null,
+    "parent_clause_id": "RPL-MTR-PGM-001:11"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:12",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 157,
+    "heading_path": [
+      "12. AMI Meter Health Monitoring"
+    ],
+    "unit_kind": "section",
+    "text_raw": "12. AMI Meter Health Monitoring\n\nCompany practice (not a substitute for any regulatory requirement in §§8–10).",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:12.1",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 158,
+    "heading_path": [
+      "12. AMI Meter Health Monitoring"
+    ],
+    "unit_kind": "section",
+    "text_raw": "12.1 AMI HES Event Monitoring. The AMI Head-End System (AMI HES) continuously collects event data from each AMI meter. The AMI Operations team monitors the following flags daily and initiates removal-for-test via WAM order type MTR-TST when any flag is active for more than fourteen (14) consecutive days:\n\n- Zero-consumption flag (potential non-registering meter)\n- Tamper event flag (potential accuracy distortion)\n- Power quality disturbance event (sustained voltage anomaly)\n- Metrology diagnostic fault (device self-reported accuracy concern)\n- Disconnect switch failure report",
+    "row_cells": null,
+    "parent_clause_id": "RPL-MTR-PGM-001:12"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:12.2",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 159,
+    "heading_path": [
+      "12. AMI Meter Health Monitoring"
+    ],
+    "unit_kind": "section",
+    "text_raw": "12.2 Analytics Thresholds. The AMI HES analytics engine (company practice) flags a meter for investigation if its 30-day rolling consumption deviates by more than ±35% from the prior 12-month baseline adjusted for degree-days. Gregory Walsh (P19) reviews the analytics queue each Monday and assigns investigation orders in WAM by Wednesday of the same week.",
+    "row_cells": null,
+    "parent_clause_id": "RPL-MTR-PGM-001:12"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:12.3",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 160,
+    "heading_path": [
+      "12. AMI Meter Health Monitoring"
+    ],
+    "unit_kind": "section",
+    "text_raw": "12.3 Removal-for-Test. Meters removed under §12.1 or §12.2 are tested at the shop as test_reason = \"removal_as_found\" before the AMI HES flag investigation is closed. Results are stored in RRS-MTR-002. This program supplements but does not replace the Method B annual sample required under 170 IAC 4-1-10(c).\n\n> Note: AMI health monitoring constitutes company practice. It does not reduce the required annual sample size under Method B or alter the acceptance criteria in §9.4.",
+    "row_cells": null,
+    "parent_clause_id": "RPL-MTR-PGM-001:12"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:13",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 161,
+    "heading_path": [
+      "13. Customer-Requested and Commission-Supervised Tests"
+    ],
+    "unit_kind": "section",
+    "text_raw": "13. Customer-Requested and Commission-Supervised Tests",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:13.1",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 162,
+    "heading_path": [
+      "13. Customer-Requested and Commission-Supervised Tests"
+    ],
+    "unit_kind": "section",
+    "text_raw": "13.1 Customer Test Rights. Each public utility supplying electrical energy shall make a test of the accuracy of registration of a meter upon written request by a customer. A second test of this meter may be requested after twelve (12) months. The first and second tests of a customer's meter shall be at no cost to the customer. (170 IAC 4-1-11(a))",
+    "row_cells": null,
+    "parent_clause_id": "RPL-MTR-PGM-001:13"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:13.2",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 163,
+    "heading_path": [
+      "13. Customer-Requested and Commission-Supervised Tests"
+    ],
+    "unit_kind": "section",
+    "text_raw": "13.2 Subsequent Test Fee Conditions. The customer may be required to bear the reasonable cost of any subsequent tests of the customer's meter if the: (1) meter was: (A) tested within the prior thirty-six (36) months at the customer's request; and (B) found to be in compliance with section 10(c)(4) and 10(c)(5) of this rule; (2) test is made: (A) at the customer's request; or (B) due to a billing dispute; and (3) meter is found to be in compliance with section 10(c)(4) and 10(c)(5) of this rule. (170 IAC 4-1-11(b)) If RPL requires payment, RPL shall disclose the cost of the test to the customer prior to the test being performed. (170 IAC 4-1-11(c)) The applicable fee is set by Tariff Rule 16, Sheet 45 (§1.6 Table F-9): $40.00 residential/single-phase; $95.00 polyphase/demand.",
+    "row_cells": null,
+    "parent_clause_id": "RPL-MTR-PGM-001:13"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:13.3",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 164,
+    "heading_path": [
+      "13. Customer-Requested and Commission-Supervised Tests"
+    ],
+    "unit_kind": "section",
+    "text_raw": "13.3 Written Test Report. A written report giving the results of the test shall be made to the customer within ten (10) days after the test is complete, and a complete record of the test shall be kept on file in the office of the public utility. (170 IAC 4-1-11(d)) Gregory Walsh (P19) issues the report using MTR-F-011 within ten (10) calendar days of test completion. The report is mailed and emailed to the customer and filed in RRS-MTR-002.",
+    "row_cells": null,
+    "parent_clause_id": "RPL-MTR-PGM-001:13"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:13.4",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 165,
+    "heading_path": [
+      "13. Customer-Requested and Commission-Supervised Tests"
+    ],
+    "unit_kind": "section",
+    "text_raw": "13.4 Customer Appeal. Any appeal, in regard to the results of the customer's meter test, shall be filed with the commission under section 12 of this rule within five (5) days of the date of the report. (170 IAC 4-1-11(e)) The written report to the customer includes language advising of this right. RPL records appeal notifications in CIS under order type MTR-TST with a note referencing the customer_request_id.",
+    "row_cells": null,
+    "parent_clause_id": "RPL-MTR-PGM-001:13"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:13.5",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 166,
+    "heading_path": [
+      "13. Customer-Requested and Commission-Supervised Tests"
+    ],
+    "unit_kind": "section",
+    "text_raw": "13.5 Commission-Supervised Tests. The IURC may request observation or supervision of any meter test. Angela Ruiz (P20) coordinates access with the IURC Energy Division (317-232-2785) and ensures a copy of MTR-F-011 is provided to the commission representative at the conclusion of the test. Commission-supervised tests are recorded as test_reason = \"commission_supervised\" in the test results dataset.\n\nCross-reference: Full customer request procedures, including intake via MTR-F-010, fee charging workflow, and billing adjustment procedures, are governed by RPL-CS-PRO-007 (Meter Test Request & Billing Adjustment Procedure).",
+    "row_cells": null,
+    "parent_clause_id": "RPL-MTR-PGM-001:13"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:14",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 167,
+    "heading_path": [
+      "14. 2024 Program Results (Preliminary — Data Extracted 2025-01-03)"
+    ],
+    "unit_kind": "section",
+    "text_raw": "14. 2024 Program Results (Preliminary — Data Extracted 2025-01-03)\n\n> *All 2024 results are preliminary pending final data reconciliation. Data extracted 2025-01-03.*",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:14.1",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 168,
+    "heading_path": [
+      "14. 2024 Program Results (Preliminary — Data Extracted 2025-01-03)"
+    ],
+    "unit_kind": "section",
+    "text_raw": "14.1 Tests Performed by Reason and Technology\n\nTable 14-1: 2024 Test Count by Reason and Technology",
+    "row_cells": null,
+    "parent_clause_id": "RPL-MTR-PGM-001:14"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T14-1.r1",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 169,
+    "heading_path": [
+      "14. 2024 Program Results (Preliminary — Data Extracted 2025-01-03)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "in_service_sample | 2,280 | 480 | 62 | 2,822",
+    "row_cells": {
+      "Reason": "in_service_sample",
+      "Solid-State AMI": "2,280",
+      "Solid-State AMR": "480",
+      "Electromechanical": "62",
+      "Total": "2,822"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:14.1"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T14-1.r2",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 170,
+    "heading_path": [
+      "14. 2024 Program Results (Preliminary — Data Extracted 2025-01-03)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "in_service_periodic | 0 | 144 | 412 | 556",
+    "row_cells": {
+      "Reason": "in_service_periodic",
+      "Solid-State AMI": "0",
+      "Solid-State AMR": "144",
+      "Electromechanical": "412",
+      "Total": "556"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:14.1"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T14-1.r3",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 171,
+    "heading_path": [
+      "14. 2024 Program Results (Preliminary — Data Extracted 2025-01-03)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "new_acceptance | 1,020 | 0 | 0 | 1,020",
+    "row_cells": {
+      "Reason": "new_acceptance",
+      "Solid-State AMI": "1,020",
+      "Solid-State AMR": "0",
+      "Electromechanical": "0",
+      "Total": "1,020"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:14.1"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T14-1.r4",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 172,
+    "heading_path": [
+      "14. 2024 Program Results (Preliminary — Data Extracted 2025-01-03)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "repaired | 38 | 12 | 22 | 72",
+    "row_cells": {
+      "Reason": "repaired",
+      "Solid-State AMI": "38",
+      "Solid-State AMR": "12",
+      "Electromechanical": "22",
+      "Total": "72"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:14.1"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T14-1.r5",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 173,
+    "heading_path": [
+      "14. 2024 Program Results (Preliminary — Data Extracted 2025-01-03)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "customer_request | 450 | 88 | 82 | 620",
+    "row_cells": {
+      "Reason": "customer_request",
+      "Solid-State AMI": "450",
+      "Solid-State AMR": "88",
+      "Electromechanical": "82",
+      "Total": "620"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:14.1"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T14-1.r6",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 174,
+    "heading_path": [
+      "14. 2024 Program Results (Preliminary — Data Extracted 2025-01-03)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "removal_as_found | 512 | 118 | 0 | 630",
+    "row_cells": {
+      "Reason": "removal_as_found",
+      "Solid-State AMI": "512",
+      "Solid-State AMR": "118",
+      "Electromechanical": "0",
+      "Total": "630"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:14.1"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T14-1.r7",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 175,
+    "heading_path": [
+      "14. 2024 Program Results (Preliminary — Data Extracted 2025-01-03)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "commission_supervised | 3 | 1 | 0 | 4",
+    "row_cells": {
+      "Reason": "commission_supervised",
+      "Solid-State AMI": "3",
+      "Solid-State AMR": "1",
+      "Electromechanical": "0",
+      "Total": "4"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:14.1"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T14-1.r8",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 176,
+    "heading_path": [
+      "14. 2024 Program Results (Preliminary — Data Extracted 2025-01-03)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "Total | 4,303 | 843 | 578 | 5,724",
+    "row_cells": {
+      "Reason": "Total",
+      "Solid-State AMI": "4,303",
+      "Solid-State AMR": "843",
+      "Electromechanical": "578",
+      "Total": "5,724"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:14.1"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:14.2",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 177,
+    "heading_path": [
+      "14. 2024 Program Results (Preliminary — Data Extracted 2025-01-03)"
+    ],
+    "unit_kind": "section",
+    "text_raw": "14.2 Pass/Fail Summary by Technology\n\nTable 14-2: Accuracy Results Summary by Technology (in-service tests only)\n\nWithin-limits rate: AMI 99.73%; AMR 99.76%; EM 95.33%. EM meters show the highest error rate, consistent with age profile (install years 1972–2004). No group acceptance failure occurred in 2024.",
+    "row_cells": null,
+    "parent_clause_id": "RPL-MTR-PGM-001:14"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T14-2.r1",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 178,
+    "heading_path": [
+      "14. 2024 Program Results (Preliminary — Data Extracted 2025-01-03)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "Solid-state AMI | 3,283 | 3,274 | 5 | 4 | 0 | 48",
+    "row_cells": {
+      "Technology": "Solid-state AMI",
+      "Tests": "3,283",
+      "Within Limits": "3,274",
+      "Fast (>+2%)": "5",
+      "Slow (<−2%)": "4",
+      "Non-Registering": "0",
+      "Functional Fail": "48"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:14.2"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T14-2.r2",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 179,
+    "heading_path": [
+      "14. 2024 Program Results (Preliminary — Data Extracted 2025-01-03)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "Solid-state AMR | 843 | 839 | 2 | 2 | 0 | 8",
+    "row_cells": {
+      "Technology": "Solid-state AMR",
+      "Tests": "843",
+      "Within Limits": "839",
+      "Fast (>+2%)": "2",
+      "Slow (<−2%)": "2",
+      "Non-Registering": "0",
+      "Functional Fail": "8"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:14.2"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T14-2.r3",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 180,
+    "heading_path": [
+      "14. 2024 Program Results (Preliminary — Data Extracted 2025-01-03)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "Electromechanical | 578 | 551 | 4 | 21 | 2 | 0",
+    "row_cells": {
+      "Technology": "Electromechanical",
+      "Tests": "578",
+      "Within Limits": "551",
+      "Fast (>+2%)": "4",
+      "Slow (<−2%)": "21",
+      "Non-Registering": "2",
+      "Functional Fail": "0"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:14.2"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T14-2.r4",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 181,
+    "heading_path": [
+      "14. 2024 Program Results (Preliminary — Data Extracted 2025-01-03)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "Total | 4,704 | 4,664 | 11 | 27 | 2 | 56",
+    "row_cells": {
+      "Technology": "Total",
+      "Tests": "4,704",
+      "Within Limits": "4,664",
+      "Fast (>+2%)": "11",
+      "Slow (<−2%)": "27",
+      "Non-Registering": "2",
+      "Functional Fail": "56"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:14.2"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:14.3",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 182,
+    "heading_path": [
+      "14. 2024 Program Results (Preliminary — Data Extracted 2025-01-03)"
+    ],
+    "unit_kind": "section",
+    "text_raw": "14.3 Average Accuracy Distribution by Technology\n\n*Chart 14-3A: Average Accuracy Histogram by Technology (bins: ±0.1% around 100.00%) — see `render/charts/T14_accuracy_histogram.png`*\n\nTable 14-3: Average Accuracy Distribution (±0.1% bins, in-service tests)",
+    "row_cells": null,
+    "parent_clause_id": "RPL-MTR-PGM-001:14"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T14-3.r1",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 183,
+    "heading_path": [
+      "14. 2024 Program Results (Preliminary — Data Extracted 2025-01-03)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "< 97.0% | 0 | 0 | 1",
+    "row_cells": {
+      "Accuracy Bin": "< 97.0%",
+      "AMI Count": "0",
+      "AMR Count": "0",
+      "EM Count": "1"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:14.3"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T14-3.r2",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 184,
+    "heading_path": [
+      "14. 2024 Program Results (Preliminary — Data Extracted 2025-01-03)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "97.0–97.9% | 0 | 0 | 4",
+    "row_cells": {
+      "Accuracy Bin": "97.0–97.9%",
+      "AMI Count": "0",
+      "AMR Count": "0",
+      "EM Count": "4"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:14.3"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T14-3.r3",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 185,
+    "heading_path": [
+      "14. 2024 Program Results (Preliminary — Data Extracted 2025-01-03)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "98.0–98.9% | 1 | 1 | 12",
+    "row_cells": {
+      "Accuracy Bin": "98.0–98.9%",
+      "AMI Count": "1",
+      "AMR Count": "1",
+      "EM Count": "12"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:14.3"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T14-3.r4",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 186,
+    "heading_path": [
+      "14. 2024 Program Results (Preliminary — Data Extracted 2025-01-03)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "99.0–99.9% | 142 | 38 | 144",
+    "row_cells": {
+      "Accuracy Bin": "99.0–99.9%",
+      "AMI Count": "142",
+      "AMR Count": "38",
+      "EM Count": "144"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:14.3"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T14-3.r5",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 187,
+    "heading_path": [
+      "14. 2024 Program Results (Preliminary — Data Extracted 2025-01-03)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "99.9–100.0% | 1,488 | 312 | 148",
+    "row_cells": {
+      "Accuracy Bin": "99.9–100.0%",
+      "AMI Count": "1,488",
+      "AMR Count": "312",
+      "EM Count": "148"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:14.3"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T14-3.r6",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 188,
+    "heading_path": [
+      "14. 2024 Program Results (Preliminary — Data Extracted 2025-01-03)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "100.0–100.1% | 1,472 | 306 | 122",
+    "row_cells": {
+      "Accuracy Bin": "100.0–100.1%",
+      "AMI Count": "1,472",
+      "AMR Count": "306",
+      "EM Count": "122"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:14.3"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T14-3.r7",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 189,
+    "heading_path": [
+      "14. 2024 Program Results (Preliminary — Data Extracted 2025-01-03)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "100.1–100.9% | 176 | 183 | 98",
+    "row_cells": {
+      "Accuracy Bin": "100.1–100.9%",
+      "AMI Count": "176",
+      "AMR Count": "183",
+      "EM Count": "98"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:14.3"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T14-3.r8",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 190,
+    "heading_path": [
+      "14. 2024 Program Results (Preliminary — Data Extracted 2025-01-03)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "101.0–101.9% | 4 | 3 | 14",
+    "row_cells": {
+      "Accuracy Bin": "101.0–101.9%",
+      "AMI Count": "4",
+      "AMR Count": "3",
+      "EM Count": "14"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:14.3"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T14-3.r9",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 191,
+    "heading_path": [
+      "14. 2024 Program Results (Preliminary — Data Extracted 2025-01-03)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "102.0–102.9% | 0 | 0 | 4",
+    "row_cells": {
+      "Accuracy Bin": "102.0–102.9%",
+      "AMI Count": "0",
+      "AMR Count": "0",
+      "EM Count": "4"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:14.3"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T14-3.r10",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 192,
+    "heading_path": [
+      "14. 2024 Program Results (Preliminary — Data Extracted 2025-01-03)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "≥ 103.0% | 0 | 0 | 1",
+    "row_cells": {
+      "Accuracy Bin": "≥ 103.0%",
+      "AMI Count": "0",
+      "AMR Count": "0",
+      "EM Count": "1"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:14.3"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:14.4",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 193,
+    "heading_path": [
+      "14. 2024 Program Results (Preliminary — Data Extracted 2025-01-03)"
+    ],
+    "unit_kind": "section",
+    "text_raw": "14.4 Group Acceptance Summary (Method B — sampled groups)\n\n*Chart 14-4A: Group X̄ ± σ Dot Plot — see `render/charts/T14_group_accuracy_dotplot.png`*\n\nTable 14-4: Method B Group Acceptance Results (partial — top 15 groups by count; see CSV for full dataset)\n\nAll 52 active groups passed their 2024 acceptance tests. No accelerated testing was required.",
+    "row_cells": null,
+    "parent_clause_id": "RPL-MTR-PGM-001:14"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T14-4.r1",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 194,
+    "heading_path": [
+      "14. 2024 Program Results (Preliminary — Data Extracted 2025-01-03)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "AMI-A-2S-CL200-2017-2021 | Solid-state AMI | 182,400 | 200 | 100.04 | 0.08 | 0.00 | Accepted",
+    "row_cells": {
+      "Group ID": "AMI-A-2S-CL200-2017-2021",
+      "Technology": "Solid-state AMI",
+      "In-Service Count": "182,400",
+      "Sample Size": "200",
+      "X̄ FL (%)": "100.04",
+      "σ FL (%)": "0.08",
+      "Estimated %Defective p": "0.00",
+      "Result": "Accepted"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:14.4"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T14-4.r2",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 195,
+    "heading_path": [
+      "14. 2024 Program Results (Preliminary — Data Extracted 2025-01-03)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "AMI-A-2S-CL200-2016 | Solid-state AMI | 22,800 | 150 | 100.02 | 0.09 | 0.00 | Accepted",
+    "row_cells": {
+      "Group ID": "AMI-A-2S-CL200-2016",
+      "Technology": "Solid-state AMI",
+      "In-Service Count": "22,800",
+      "Sample Size": "150",
+      "X̄ FL (%)": "100.02",
+      "σ FL (%)": "0.09",
+      "Estimated %Defective p": "0.00",
+      "Result": "Accepted"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:14.4"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T14-4.r3",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 196,
+    "heading_path": [
+      "14. 2024 Program Results (Preliminary — Data Extracted 2025-01-03)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "AMI-A-2S-CL200-2022-2024 | Solid-state AMI | 54,432 | 200 | 100.01 | 0.07 | 0.00 | Accepted",
+    "row_cells": {
+      "Group ID": "AMI-A-2S-CL200-2022-2024",
+      "Technology": "Solid-state AMI",
+      "In-Service Count": "54,432",
+      "Sample Size": "200",
+      "X̄ FL (%)": "100.01",
+      "σ FL (%)": "0.07",
+      "Estimated %Defective p": "0.00",
+      "Result": "Accepted"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:14.4"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T14-4.r4",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 197,
+    "heading_path": [
+      "14. 2024 Program Results (Preliminary — Data Extracted 2025-01-03)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "AMI-B-2S-CL200-2017-2021 | Solid-state AMI | 45,600 | 200 | 100.03 | 0.10 | 0.00 | Accepted",
+    "row_cells": {
+      "Group ID": "AMI-B-2S-CL200-2017-2021",
+      "Technology": "Solid-state AMI",
+      "In-Service Count": "45,600",
+      "Sample Size": "200",
+      "X̄ FL (%)": "100.03",
+      "σ FL (%)": "0.10",
+      "Estimated %Defective p": "0.00",
+      "Result": "Accepted"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:14.4"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T14-4.r5",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 198,
+    "heading_path": [
+      "14. 2024 Program Results (Preliminary — Data Extracted 2025-01-03)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "AMI-A-2S-CL320 | Solid-state AMI | 7,424 | 75 | 100.05 | 0.09 | 0.00 | Accepted",
+    "row_cells": {
+      "Group ID": "AMI-A-2S-CL320",
+      "Technology": "Solid-state AMI",
+      "In-Service Count": "7,424",
+      "Sample Size": "75",
+      "X̄ FL (%)": "100.05",
+      "σ FL (%)": "0.09",
+      "Estimated %Defective p": "0.00",
+      "Result": "Accepted"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:14.4"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T14-4.r6",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 199,
+    "heading_path": [
+      "14. 2024 Program Results (Preliminary — Data Extracted 2025-01-03)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "AMI-A-12S-CL200 | Solid-state AMI | 11,136 | 100 | 100.02 | 0.11 | 0.00 | Accepted",
+    "row_cells": {
+      "Group ID": "AMI-A-12S-CL200",
+      "Technology": "Solid-state AMI",
+      "In-Service Count": "11,136",
+      "Sample Size": "100",
+      "X̄ FL (%)": "100.02",
+      "σ FL (%)": "0.11",
+      "Estimated %Defective p": "0.00",
+      "Result": "Accepted"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:14.4"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T14-4.r7",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 200,
+    "heading_path": [
+      "14. 2024 Program Results (Preliminary — Data Extracted 2025-01-03)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "AMI-B-12S-CL200 | Solid-state AMI | 3,712 | 50 | 100.03 | 0.12 | 0.00 | Accepted",
+    "row_cells": {
+      "Group ID": "AMI-B-12S-CL200",
+      "Technology": "Solid-state AMI",
+      "In-Service Count": "3,712",
+      "Sample Size": "50",
+      "X̄ FL (%)": "100.03",
+      "σ FL (%)": "0.12",
+      "Estimated %Defective p": "0.00",
+      "Result": "Accepted"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:14.4"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T14-4.r8",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 201,
+    "heading_path": [
+      "14. 2024 Program Results (Preliminary — Data Extracted 2025-01-03)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "AMI-A-16S-CL200 | Solid-state AMI | 8,192 | 75 | 100.01 | 0.10 | 0.00 | Accepted",
+    "row_cells": {
+      "Group ID": "AMI-A-16S-CL200",
+      "Technology": "Solid-state AMI",
+      "In-Service Count": "8,192",
+      "Sample Size": "75",
+      "X̄ FL (%)": "100.01",
+      "σ FL (%)": "0.10",
+      "Estimated %Defective p": "0.00",
+      "Result": "Accepted"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:14.4"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T14-4.r9",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 202,
+    "heading_path": [
+      "14. 2024 Program Results (Preliminary — Data Extracted 2025-01-03)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "AMI-A-9S-CL20 | Solid-state AMI | 9,280 | 75 | 100.06 | 0.13 | 0.00 | Accepted",
+    "row_cells": {
+      "Group ID": "AMI-A-9S-CL20",
+      "Technology": "Solid-state AMI",
+      "In-Service Count": "9,280",
+      "Sample Size": "75",
+      "X̄ FL (%)": "100.06",
+      "σ FL (%)": "0.13",
+      "Estimated %Defective p": "0.00",
+      "Result": "Accepted"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:14.4"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T14-4.r10",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 203,
+    "heading_path": [
+      "14. 2024 Program Results (Preliminary — Data Extracted 2025-01-03)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "AMR-B-2S-CL200-2005-2009 | Solid-state AMR | 14,130 | 150 | 99.98 | 0.22 | 0.00 | Accepted",
+    "row_cells": {
+      "Group ID": "AMR-B-2S-CL200-2005-2009",
+      "Technology": "Solid-state AMR",
+      "In-Service Count": "14,130",
+      "Sample Size": "150",
+      "X̄ FL (%)": "99.98",
+      "σ FL (%)": "0.22",
+      "Estimated %Defective p": "0.00",
+      "Result": "Accepted"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:14.4"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T14-4.r11",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 204,
+    "heading_path": [
+      "14. 2024 Program Results (Preliminary — Data Extracted 2025-01-03)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "AMR-B-2S-CL200-2010-2015 | Solid-state AMR | 11,424 | 150 | 100.00 | 0.18 | 0.00 | Accepted",
+    "row_cells": {
+      "Group ID": "AMR-B-2S-CL200-2010-2015",
+      "Technology": "Solid-state AMR",
+      "In-Service Count": "11,424",
+      "Sample Size": "150",
+      "X̄ FL (%)": "100.00",
+      "σ FL (%)": "0.18",
+      "Estimated %Defective p": "0.00",
+      "Result": "Accepted"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:14.4"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T14-4.r12",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 205,
+    "heading_path": [
+      "14. 2024 Program Results (Preliminary — Data Extracted 2025-01-03)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "AMR-C-2S-CL200 | Solid-state AMR | 2,706 | 50 | 99.97 | 0.24 | 0.00 | Accepted",
+    "row_cells": {
+      "Group ID": "AMR-C-2S-CL200",
+      "Technology": "Solid-state AMR",
+      "In-Service Count": "2,706",
+      "Sample Size": "50",
+      "X̄ FL (%)": "99.97",
+      "σ FL (%)": "0.24",
+      "Estimated %Defective p": "0.00",
+      "Result": "Accepted"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:14.4"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T14-4.r13",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 206,
+    "heading_path": [
+      "14. 2024 Program Results (Preliminary — Data Extracted 2025-01-03)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "AMR-12S-16S | Solid-state AMR | 2,198 | 35 | 100.01 | 0.21 | 0.00 | Accepted",
+    "row_cells": {
+      "Group ID": "AMR-12S-16S",
+      "Technology": "Solid-state AMR",
+      "In-Service Count": "2,198",
+      "Sample Size": "35",
+      "X̄ FL (%)": "100.01",
+      "σ FL (%)": "0.21",
+      "Estimated %Defective p": "0.00",
+      "Result": "Accepted"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:14.4"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T14-4.r14",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 207,
+    "heading_path": [
+      "14. 2024 Program Results (Preliminary — Data Extracted 2025-01-03)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "EM-C-2S-CL200-1972-1990 | Electromechanical | 3,760 | 50 | 99.64 | 0.52 | 0.01 | Accepted",
+    "row_cells": {
+      "Group ID": "EM-C-2S-CL200-1972-1990",
+      "Technology": "Electromechanical",
+      "In-Service Count": "3,760",
+      "Sample Size": "50",
+      "X̄ FL (%)": "99.64",
+      "σ FL (%)": "0.52",
+      "Estimated %Defective p": "0.01",
+      "Result": "Accepted"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:14.4"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T14-4.r15",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 208,
+    "heading_path": [
+      "14. 2024 Program Results (Preliminary — Data Extracted 2025-01-03)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "EM-C-2S-CL200-1991-2004 | Electromechanical | 3,076 | 35 | 99.82 | 0.41 | 0.00 | Accepted",
+    "row_cells": {
+      "Group ID": "EM-C-2S-CL200-1991-2004",
+      "Technology": "Electromechanical",
+      "In-Service Count": "3,076",
+      "Sample Size": "35",
+      "X̄ FL (%)": "99.82",
+      "σ FL (%)": "0.41",
+      "Estimated %Defective p": "0.00",
+      "Result": "Accepted"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:14.4"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:14.5",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 209,
+    "heading_path": [
+      "14. 2024 Program Results (Preliminary — Data Extracted 2025-01-03)"
+    ],
+    "unit_kind": "section",
+    "text_raw": "14.5 New Meter Acceptance\n\nTable 14-5: 2024 New Meter Lot Acceptance Summary\n\nThe one rejected lot (Vendor A, AMI 2S CL200, received 2024-03-12) had 3 of 75 sample meters with full-load accuracy below 98.00%. The lot was returned to Vendor A; a replacement lot was accepted 2024-05-08.",
+    "row_cells": null,
+    "parent_clause_id": "RPL-MTR-PGM-001:14"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T14-5.r1",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 210,
+    "heading_path": [
+      "14. 2024 Program Results (Preliminary — Data Extracted 2025-01-03)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "Vendor A | AMI 2S CL200 | 3 | 4,800–5,400 | 2 | 1 | 1 lot rejected Mar 2024; 3 sample failures; returned to vendor",
+    "row_cells": {
+      "Vendor": "Vendor A",
+      "Technology": "AMI 2S CL200",
+      "Lots Received": "3",
+      "Lot Sizes (range)": "4,800–5,400",
+      "Lots Accepted": "2",
+      "Lots Rejected": "1",
+      "Notes": "1 lot rejected Mar 2024; 3 sample failures; returned to vendor"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:14.5"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T14-5.r2",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 211,
+    "heading_path": [
+      "14. 2024 Program Results (Preliminary — Data Extracted 2025-01-03)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "Vendor A | AMI 12S CL200 | 1 | 1,200 | 1 | 0",
+    "row_cells": {
+      "Vendor": "Vendor A",
+      "Technology": "AMI 12S CL200",
+      "Lots Received": "1",
+      "Lot Sizes (range)": "1,200",
+      "Lots Accepted": "1",
+      "Lots Rejected": "0",
+      "Notes": ""
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:14.5"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T14-5.r3",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 212,
+    "heading_path": [
+      "14. 2024 Program Results (Preliminary — Data Extracted 2025-01-03)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "Vendor B | AMI 2S CL200 | 2 | 2,400–3,600 | 2 | 0",
+    "row_cells": {
+      "Vendor": "Vendor B",
+      "Technology": "AMI 2S CL200",
+      "Lots Received": "2",
+      "Lot Sizes (range)": "2,400–3,600",
+      "Lots Accepted": "2",
+      "Lots Rejected": "0",
+      "Notes": ""
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:14.5"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T14-5.r4",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 213,
+    "heading_path": [
+      "14. 2024 Program Results (Preliminary — Data Extracted 2025-01-03)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "Total | 6 | 5 | 1",
+    "row_cells": {
+      "Vendor": "Total",
+      "Technology": "",
+      "Lots Received": "6",
+      "Lot Sizes (range)": "",
+      "Lots Accepted": "5",
+      "Lots Rejected": "1",
+      "Notes": ""
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:14.5"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:14.6",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 214,
+    "heading_path": [
+      "14. 2024 Program Results (Preliminary — Data Extracted 2025-01-03)"
+    ],
+    "unit_kind": "section",
+    "text_raw": "14.6 Customer Test Requests — 2024 Outcomes\n\nTable 14-6: Customer Test Requests 2024 (620 total)\n\nAll 620 requests received a written test report (MTR-F-011) within ten (10) calendar days of test completion. Billing adjustment references issued for all out-of-limits tests per CIS codes ADJ-MS or ADJ-MF.",
+    "row_cells": null,
+    "parent_clause_id": "RPL-MTR-PGM-001:14"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T14-6.r1",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 215,
+    "heading_path": [
+      "14. 2024 Program Results (Preliminary — Data Extracted 2025-01-03)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "Within limits | 536 | 86.5% | As applicable per §13.2",
+    "row_cells": {
+      "Result": "Within limits",
+      "Count": "536",
+      "Within %": "86.5%",
+      "Fee Charged": "As applicable per §13.2"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:14.6"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T14-6.r2",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 216,
+    "heading_path": [
+      "14. 2024 Program Results (Preliminary — Data Extracted 2025-01-03)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "Fast | 28 | 4.5% | No charge; billing adjustment issued",
+    "row_cells": {
+      "Result": "Fast",
+      "Count": "28",
+      "Within %": "4.5%",
+      "Fee Charged": "No charge; billing adjustment issued"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:14.6"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T14-6.r3",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 217,
+    "heading_path": [
+      "14. 2024 Program Results (Preliminary — Data Extracted 2025-01-03)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "Slow | 44 | 7.1% | No charge; billing adjustment issued",
+    "row_cells": {
+      "Result": "Slow",
+      "Count": "44",
+      "Within %": "7.1%",
+      "Fee Charged": "No charge; billing adjustment issued"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:14.6"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T14-6.r4",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 218,
+    "heading_path": [
+      "14. 2024 Program Results (Preliminary — Data Extracted 2025-01-03)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "Non-registering | 4 | 0.6% | No charge; billing adjustment issued",
+    "row_cells": {
+      "Result": "Non-registering",
+      "Count": "4",
+      "Within %": "0.6%",
+      "Fee Charged": "No charge; billing adjustment issued"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:14.6"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T14-6.r5",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 219,
+    "heading_path": [
+      "14. 2024 Program Results (Preliminary — Data Extracted 2025-01-03)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "Functional fail | 8 | 1.3% | No charge; meter replaced",
+    "row_cells": {
+      "Result": "Functional fail",
+      "Count": "8",
+      "Within %": "1.3%",
+      "Fee Charged": "No charge; meter replaced"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:14.6"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:15",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 220,
+    "heading_path": [
+      "15. 2025 Test Plan"
+    ],
+    "unit_kind": "section",
+    "text_raw": "15. 2025 Test Plan",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:15.1",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 221,
+    "heading_path": [
+      "15. 2025 Test Plan"
+    ],
+    "unit_kind": "section",
+    "text_raw": "15.1 Annual Sample Draw — Method B Groups\n\nThe 2025 annual sample draw was executed 2025-01-14 using seed 2025 per §9.3.3 and is documented in `data/inservice_sample_selection_2025.csv`.\n\nTable 15-1: 2025 Planned Method B Sample by Technology and Quarter",
+    "row_cells": null,
+    "parent_clause_id": "RPL-MTR-PGM-001:15"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T15-1.r1",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 222,
+    "heading_path": [
+      "15. 2025 Test Plan"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "Solid-state AMI | 650 | 680 | 720 | 670 | 2,720",
+    "row_cells": {
+      "Technology": "Solid-state AMI",
+      "Q1 (Jan–Mar)": "650",
+      "Q2 (Apr–Jun)": "680",
+      "Q3 (Jul–Sep)": "720",
+      "Q4 (Oct–Dec)": "670",
+      "Total Planned": "2,720"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:15.1"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T15-1.r2",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 223,
+    "heading_path": [
+      "15. 2025 Test Plan"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "Solid-state AMR | 110 | 120 | 125 | 115 | 470",
+    "row_cells": {
+      "Technology": "Solid-state AMR",
+      "Q1 (Jan–Mar)": "110",
+      "Q2 (Apr–Jun)": "120",
+      "Q3 (Jul–Sep)": "125",
+      "Q4 (Oct–Dec)": "115",
+      "Total Planned": "470"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:15.1"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T15-1.r3",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 224,
+    "heading_path": [
+      "15. 2025 Test Plan"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "Electromechanical (Method B) | 18 | 18 | 18 | 18 | 72",
+    "row_cells": {
+      "Technology": "Electromechanical (Method B)",
+      "Q1 (Jan–Mar)": "18",
+      "Q2 (Apr–Jun)": "18",
+      "Q3 (Jul–Sep)": "18",
+      "Q4 (Oct–Dec)": "18",
+      "Total Planned": "72"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:15.1"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T15-1.r4",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 225,
+    "heading_path": [
+      "15. 2025 Test Plan"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "Subtotal — sample | 778 | 818 | 863 | 803 | 3,262",
+    "row_cells": {
+      "Technology": "Subtotal — sample",
+      "Q1 (Jan–Mar)": "778",
+      "Q2 (Apr–Jun)": "818",
+      "Q3 (Jul–Sep)": "863",
+      "Q4 (Oct–Dec)": "803",
+      "Total Planned": "3,262"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:15.1"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:15.2",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 226,
+    "heading_path": [
+      "15. 2025 Test Plan"
+    ],
+    "unit_kind": "section",
+    "text_raw": "15.2 Periodic Tests Due 2025 (Method A / 16-Year Election)\n\nTable 15-2: 2025 Periodic Tests by Group and Quarter\n\nTotal 2025 planned in-service tests: 3,698 (excludes new acceptance and customer requests)\n\nWorkload estimate: Each shop test averages 0.35 technician-hours; each field test averages 1.2 technician-hours. Based on the 2025 plan, estimated total: 3,388 shop tests × 0.35 hr = 1,186 hours; 310 field tests × 1.2 hr = 372 hours. Total estimated: 1,558 technician-hours. Available capacity: 14 technicians × 48 working weeks × 2.5 testing hr/week = 1,680 hours. Sufficient capacity.",
+    "row_cells": null,
+    "parent_clause_id": "RPL-MTR-PGM-001:15"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T15-2.r1",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 227,
+    "heading_path": [
+      "15. 2025 Test Plan"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "EM-C-2S-CL200-1972-1990 (mechanical KWH) | Method A | 16 years | 48 | 52 | 56 | 44 | 200",
+    "row_cells": {
+      "Group": "EM-C-2S-CL200-1972-1990 (mechanical KWH)",
+      "Test Method": "Method A",
+      "Interval": "16 years",
+      "Q1": "48",
+      "Q2": "52",
+      "Q3": "56",
+      "Q4": "44",
+      "Total Due": "200"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:15.2"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T15-2.r2",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 228,
+    "heading_path": [
+      "15. 2025 Test Plan"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "EM-2S demand registers (mechanical demand) | Method A | 8 years | 30 | 32 | 30 | 28 | 120",
+    "row_cells": {
+      "Group": "EM-2S demand registers (mechanical demand)",
+      "Test Method": "Method A",
+      "Interval": "8 years",
+      "Q1": "30",
+      "Q2": "32",
+      "Q3": "30",
+      "Q4": "28",
+      "Total Due": "120"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:15.2"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T15-2.r3",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 229,
+    "heading_path": [
+      "15. 2025 Test Plan"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "AMR-16-yr-election groups | Method B (c)(8) | 16 years | 32 | 28 | 30 | 26 | 116",
+    "row_cells": {
+      "Group": "AMR-16-yr-election groups",
+      "Test Method": "Method B (c)(8)",
+      "Interval": "16 years",
+      "Q1": "32",
+      "Q2": "28",
+      "Q3": "30",
+      "Q4": "26",
+      "Total Due": "116"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:15.2"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T15-2.r4",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 230,
+    "heading_path": [
+      "15. 2025 Test Plan"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "Subtotal — periodic | 110 | 112 | 116 | 98 | 436",
+    "row_cells": {
+      "Group": "Subtotal — periodic",
+      "Test Method": "",
+      "Interval": "",
+      "Q1": "110",
+      "Q2": "112",
+      "Q3": "116",
+      "Q4": "98",
+      "Total Due": "436"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:15.2"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:16",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 231,
+    "heading_path": [
+      "16. Program KPIs (Company Practice)"
+    ],
+    "unit_kind": "section",
+    "text_raw": "16. Program KPIs (Company Practice)",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T16-1",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 232,
+    "heading_path": [
+      "16. Program KPIs (Company Practice)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "T16-1 | In-service within-limits rate — AMI | ≥ 99.5% | 99.73% | ✓",
+    "row_cells": {
+      "ID": "T16-1",
+      "KPI": "In-service within-limits rate — AMI",
+      "Target": "≥ 99.5%",
+      "2024 Result": "99.73%",
+      "Trend": "✓"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:16"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T16-2",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 233,
+    "heading_path": [
+      "16. Program KPIs (Company Practice)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "T16-2 | In-service within-limits rate — AMR | ≥ 99.0% | 99.76% | ✓",
+    "row_cells": {
+      "ID": "T16-2",
+      "KPI": "In-service within-limits rate — AMR",
+      "Target": "≥ 99.0%",
+      "2024 Result": "99.76%",
+      "Trend": "✓"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:16"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T16-3",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 234,
+    "heading_path": [
+      "16. Program KPIs (Company Practice)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "T16-3 | In-service within-limits rate — EM | ≥ 93.0% | 95.33% | ✓",
+    "row_cells": {
+      "ID": "T16-3",
+      "KPI": "In-service within-limits rate — EM",
+      "Target": "≥ 93.0%",
+      "2024 Result": "95.33%",
+      "Trend": "✓"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:16"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T16-4",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 235,
+    "heading_path": [
+      "16. Program KPIs (Company Practice)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "T16-4 | Customer test report issued within 10 days | 100% | 100% | ✓",
+    "row_cells": {
+      "ID": "T16-4",
+      "KPI": "Customer test report issued within 10 days",
+      "Target": "100%",
+      "2024 Result": "100%",
+      "Trend": "✓"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:16"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T16-5",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 236,
+    "heading_path": [
+      "16. Program KPIs (Company Practice)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "T16-5 | Reference standard recalibration on time | 100% | 100% | ✓",
+    "row_cells": {
+      "ID": "T16-5",
+      "KPI": "Reference standard recalibration on time",
+      "Target": "100%",
+      "2024 Result": "100%",
+      "Trend": "✓"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:16"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T16-6",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 237,
+    "heading_path": [
+      "16. Program KPIs (Company Practice)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "T16-6 | Annual sample draw completed by Jan 31 | 100% | 100% | ✓",
+    "row_cells": {
+      "ID": "T16-6",
+      "KPI": "Annual sample draw completed by Jan 31",
+      "Target": "100%",
+      "2024 Result": "100%",
+      "Trend": "✓"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:16"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T16-7",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 238,
+    "heading_path": [
+      "16. Program KPIs (Company Practice)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "T16-7 | Rejected new lots per vendor per year | ≤ 1 | 1 (Vendor A) | ✓",
+    "row_cells": {
+      "ID": "T16-7",
+      "KPI": "Rejected new lots per vendor per year",
+      "Target": "≤ 1",
+      "2024 Result": "1 (Vendor A)",
+      "Trend": "✓"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:16"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T16-8",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 239,
+    "heading_path": [
+      "16. Program KPIs (Company Practice)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "T16-8 | Group acceptance failures | 0 | 0 | ✓",
+    "row_cells": {
+      "ID": "T16-8",
+      "KPI": "Group acceptance failures",
+      "Target": "0",
+      "2024 Result": "0",
+      "Trend": "✓"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:16"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:17",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 240,
+    "heading_path": [
+      "17. Records and Retention"
+    ],
+    "unit_kind": "section",
+    "text_raw": "17. Records and Retention\n\nAll records required by these rules shall be preserved for at least three years except as otherwise provided herein or by IC 8-1-2-40. Such records shall be kept within the State at the principal place of business of the public utility, or at such other places as the utility shall designate after notification to the commission, and shall be open for examination by the commission or its representatives. (170 IAC 4-1-3)\n\nRecords are kept at 400 Wabash Commons Drive, Lafayette, IN 47901 (HQ, principal place of business). Angela Ruiz (P20) has notified the IURC of the office at which records are kept per 170 IAC 4-1-3. RPL uses DCS as the controlled document system; WAM as the meter asset and test event system; and CIS for account linkage.\n\nInternal performance target: RPL retains all meter test records for ten (10) years from the test date to support billing adjustment reviews and historical trend analysis (company practice; see RPL-LEG-RRS-001).",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T17.r1",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 241,
+    "heading_path": [
+      "17. Records and Retention"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "RRS-MTR-001 | Meter history records (purchase, install, test, retirement) | WAM | At least 3 years from retirement; permanent meter records as long as meter history available | 170 IAC 4-1-3; 170 IAC 4-1-4(b)",
+    "row_cells": {
+      "Record Series": "RRS-MTR-001",
+      "Description": "Meter history records (purchase, install, test, retirement)",
+      "System": "WAM",
+      "Minimum Retention": "At least 3 years from retirement; permanent meter records as long as meter history available",
+      "Ref": "170 IAC 4-1-3; 170 IAC 4-1-4(b)"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:17"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T17.r2",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 242,
+    "heading_path": [
+      "17. Records and Retention"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "RRS-MTR-002 | Meter test reports (in-service, acceptance, customer-requested, commission-supervised) | WAM + DCS | At least 3 years; customer test reports minimum 36 months (fee condition reference) | 170 IAC 4-1-3; 170 IAC 4-1-11(b)",
+    "row_cells": {
+      "Record Series": "RRS-MTR-002",
+      "Description": "Meter test reports (in-service, acceptance, customer-requested, commission-supervised)",
+      "System": "WAM + DCS",
+      "Minimum Retention": "At least 3 years; customer test reports minimum 36 months (fee condition reference)",
+      "Ref": "170 IAC 4-1-3; 170 IAC 4-1-11(b)"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:17"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T17.r3",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 243,
+    "heading_path": [
+      "17. Records and Retention"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "RRS-MTR-003 | Standards certification and calibration records | WAM + DCS | At least 3 years from supersession | 170 IAC 4-1-3; 170 IAC 4-1-7(F)",
+    "row_cells": {
+      "Record Series": "RRS-MTR-003",
+      "Description": "Standards certification and calibration records",
+      "System": "WAM + DCS",
+      "Minimum Retention": "At least 3 years from supersession",
+      "Ref": "170 IAC 4-1-3; 170 IAC 4-1-7(F)"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:17"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:18",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 244,
+    "heading_path": [
+      "18. Training and Technician Qualification"
+    ],
+    "unit_kind": "section",
+    "text_raw": "18. Training and Technician Qualification\n\nTechnician Qualification: Each meter technician must complete MTR-T-03 before performing unsupervised in-service tests. New technicians are supervised by a qualified technician for their first thirty (30) tests. Qualification records are maintained in the employee training record system and reconciled annually by Luis Hernandez (P18).\n\nRecertification: Any technician absent from meter testing duties for more than twelve (12) consecutive months must complete MTR-T-03 before resuming unsupervised test work.\n\nTraining completion records are retained in RRS-TRN-001.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T18-TRN.r1",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 245,
+    "heading_path": [
+      "18. Training and Technician Qualification"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "MTR-T-03 | Meter Testing Procedures and Accuracy Standards | All Meter Technicians | Annual | Gregory Walsh (P19)",
+    "row_cells": {
+      "Training Code": "MTR-T-03",
+      "Title": "Meter Testing Procedures and Accuracy Standards",
+      "Audience": "All Meter Technicians",
+      "Frequency": "Annual",
+      "Owner": "Gregory Walsh (P19)"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:18"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T18-TRN.r2",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 246,
+    "heading_path": [
+      "18. Training and Technician Qualification"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "FS-T-12 | Field Safety for Meter Testing | All Meter Technicians | Annual | Luis Hernandez (P18)",
+    "row_cells": {
+      "Training Code": "FS-T-12",
+      "Title": "Field Safety for Meter Testing",
+      "Audience": "All Meter Technicians",
+      "Frequency": "Annual",
+      "Owner": "Luis Hernandez (P18)"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:18"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:T18-TRN.r3",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 247,
+    "heading_path": [
+      "18. Training and Technician Qualification"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "MTR-T-03-ADV | Advanced Test Equipment Calibration | Senior Technicians | Biennial | Gregory Walsh (P19)",
+    "row_cells": {
+      "Training Code": "MTR-T-03-ADV",
+      "Title": "Advanced Test Equipment Calibration",
+      "Audience": "Senior Technicians",
+      "Frequency": "Biennial",
+      "Owner": "Gregory Walsh (P19)"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:18"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:19",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 248,
+    "heading_path": [
+      "19. Related Documents"
+    ],
+    "unit_kind": "section",
+    "text_raw": "19. Related Documents",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:19.tbl1.r1",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 249,
+    "heading_path": [
+      "19. Related Documents"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "RPL-CS-PRO-007 | Meter Test Request & Billing Adjustment Procedure",
+    "row_cells": {
+      "Document ID": "RPL-CS-PRO-007",
+      "Title": "Meter Test Request & Billing Adjustment Procedure"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:19"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:19.tbl1.r2",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 250,
+    "heading_path": [
+      "19. Related Documents"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "RPL-LEG-RRS-001 | Records Retention Schedule",
+    "row_cells": {
+      "Document ID": "RPL-LEG-RRS-001",
+      "Title": "Records Retention Schedule"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:19"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:19.tbl1.r3",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 251,
+    "heading_path": [
+      "19. Related Documents"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "RPL-CMP-REG-001 | Regulatory Obligations Register",
+    "row_cells": {
+      "Document ID": "RPL-CMP-REG-001",
+      "Title": "Regulatory Obligations Register"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:19"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:19.tbl1.r4",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 252,
+    "heading_path": [
+      "19. Related Documents"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "RPL-TAR-GRR-012 | Tariff for Electric Service, IURC No. 12 (Rule 9, Sheets 27–29; Rule 16, Sheet 45)",
+    "row_cells": {
+      "Document ID": "RPL-TAR-GRR-012",
+      "Title": "Tariff for Electric Service, IURC No. 12 (Rule 9, Sheets 27–29; Rule 16, Sheet 45)"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:19"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:19.tbl1.r5",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 253,
+    "heading_path": [
+      "19. Related Documents"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "RPL-SAF-PRO-002 | Electrical Safety Rulebook",
+    "row_cells": {
+      "Document ID": "RPL-SAF-PRO-002",
+      "Title": "Electrical Safety Rulebook"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:19"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:20",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 254,
+    "heading_path": [
+      "20. Revision History"
+    ],
+    "unit_kind": "section",
+    "text_raw": "20. Revision History",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:20.tbl1.r1",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 255,
+    "heading_path": [
+      "20. Revision History"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "5.2 | 2024-02-05 | Gregory Walsh (P19) | Added AMI health monitoring §12; updated 2023 results tables; revised KPI targets based on 2022–2023 trend",
+    "row_cells": {
+      "Version": "5.2",
+      "Date": "2024-02-05",
+      "Author": "Gregory Walsh (P19)",
+      "Change Summary": "Added AMI health monitoring §12; updated 2023 results tables; revised KPI targets based on 2022–2023 trend"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:20"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:20.tbl1.r2",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 256,
+    "heading_path": [
+      "20. Revision History"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "5.1 | 2023-01-20 | Gregory Walsh (P19) | Expanded §9.3 sampling plan table to include code letters B–Q; updated test board inventory to reflect TB-08 addition",
+    "row_cells": {
+      "Version": "5.1",
+      "Date": "2023-01-20",
+      "Author": "Gregory Walsh (P19)",
+      "Change Summary": "Expanded §9.3 sampling plan table to include code letters B–Q; updated test board inventory to reflect TB-08 addition"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:20"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:20.tbl1.r3",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 257,
+    "heading_path": [
+      "20. Revision History"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "5.0 | 2022-02-14 | Gregory Walsh (P19) | Incorporated Method B written notice to IURC for AMR groups; restructured §9.2 method table; updated §10.4 demand meter limits",
+    "row_cells": {
+      "Version": "5.0",
+      "Date": "2022-02-14",
+      "Author": "Gregory Walsh (P19)",
+      "Change Summary": "Incorporated Method B written notice to IURC for AMR groups; restructured §9.2 method table; updated §10.4 demand meter limits"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:20"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:20.tbl1.r4",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 258,
+    "heading_path": [
+      "20. Revision History"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "4.2 | 2021-03-10 | Gregory Walsh (P19) | Updated accuracy results through 2020; revised Group IDs after AMI rollout completion; added §12 AMI analytics (first version)",
+    "row_cells": {
+      "Version": "4.2",
+      "Date": "2021-03-10",
+      "Author": "Gregory Walsh (P19)",
+      "Change Summary": "Updated accuracy results through 2020; revised Group IDs after AMI rollout completion; added §12 AMI analytics (first version)"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:20"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:20.tbl1.r5",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 259,
+    "heading_path": [
+      "20. Revision History"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "6.0 | 2025-01-08 | Gregory Walsh (P19) | Updated for 2024 results; expanded §14.4 group acceptance table to 52 groups; revised §15 2025 test plan; updated standards register (App-C) to reflect new PRT-031, PRT-032 purchased Q3 2024",
+    "row_cells": {
+      "Version": "6.0",
+      "Date": "2025-01-08",
+      "Author": "Gregory Walsh (P19)",
+      "Change Summary": "Updated for 2024 results; expanded §14.4 group acceptance table to 52 groups; revised §15 2025 test plan; updated standards register (App-C) to reflect new PRT-031, PRT-032 purchased Q3 2024"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:20"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:21",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 260,
+    "heading_path": [
+      "21. Approval Block"
+    ],
+    "unit_kind": "section",
+    "text_raw": "21. Approval Block\n\n*Effective date: 2025-01-13*",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:21.tbl1.r1",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 261,
+    "heading_path": [
+      "21. Approval Block"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "Prepared by (Owner) | Gregory Walsh | Manager, Meter Shop & Standards Laboratory | ___________________ | 2025-01-08",
+    "row_cells": {
+      "Role": "Prepared by (Owner)",
+      "Name": "Gregory Walsh",
+      "Title": "Manager, Meter Shop & Standards Laboratory",
+      "Signature": "___________________",
+      "Date": "2025-01-08"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:21"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:21.tbl1.r2",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 262,
+    "heading_path": [
+      "21. Approval Block"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "Reviewed by | Angela Ruiz | Director, Metering | ___________________ | 2025-01-08",
+    "row_cells": {
+      "Role": "Reviewed by",
+      "Name": "Angela Ruiz",
+      "Title": "Director, Metering",
+      "Signature": "___________________",
+      "Date": "2025-01-08"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:21"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:21.tbl1.r3",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 263,
+    "heading_path": [
+      "21. Approval Block"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "Approved by | Michael Brennan | Vice President, Operations | ___________________ | 2025-01-08",
+    "row_cells": {
+      "Role": "Approved by",
+      "Name": "Michael Brennan",
+      "Title": "Vice President, Operations",
+      "Signature": "___________________",
+      "Date": "2025-01-08"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:21"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:App-A",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 264,
+    "heading_path": [
+      "Appendix A: Meter Test Report MTR-F-011 (Rev. 01/2025)"
+    ],
+    "unit_kind": "appendix",
+    "text_raw": "Appendix A: Meter Test Report MTR-F-011 (Rev. 01/2025)\n\nForm ID: MTR-F-011 (Rev. 01/2025)\n\nPart A — Meter Identification",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:App-A.F1",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 265,
+    "heading_path": [
+      "Appendix A: Meter Test Report MTR-F-011 (Rev. 01/2025)"
+    ],
+    "unit_kind": "form_field",
+    "text_raw": "Part B — Test Conditions",
+    "row_cells": null,
+    "parent_clause_id": "RPL-MTR-PGM-001:App-A"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:App-A.F1.tbl1.r1",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 266,
+    "heading_path": [
+      "Appendix A: Meter Test Report MTR-F-011 (Rev. 01/2025)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "A.F1 · Test ID (system-generated) | ____________",
+    "row_cells": {
+      "Field": "A.F1 · Test ID (system-generated)",
+      "Value": "____________"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:App-A.F1"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:App-A.F1.tbl1.r2",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 267,
+    "heading_path": [
+      "Appendix A: Meter Test Report MTR-F-011 (Rev. 01/2025)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "A.F2 · Meter serial number | ____________",
+    "row_cells": {
+      "Field": "A.F2 · Meter serial number",
+      "Value": "____________"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:App-A.F1"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:App-A.F1.tbl1.r3",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 268,
+    "heading_path": [
+      "Appendix A: Meter Test Report MTR-F-011 (Rev. 01/2025)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "A.F3 · Meter technology | ☐ AMI  ☐ AMR  ☐ Electromechanical",
+    "row_cells": {
+      "Field": "A.F3 · Meter technology",
+      "Value": "☐ AMI  ☐ AMR  ☐ Electromechanical"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:App-A.F1"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:App-A.F1.tbl1.r4",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 269,
+    "heading_path": [
+      "Appendix A: Meter Test Report MTR-F-011 (Rev. 01/2025)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "A.F4 · Form / Class | ____________",
+    "row_cells": {
+      "Field": "A.F4 · Form / Class",
+      "Value": "____________"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:App-A.F1"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:App-A.F1.tbl1.r5",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 270,
+    "heading_path": [
+      "Appendix A: Meter Test Report MTR-F-011 (Rev. 01/2025)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "A.F5 · Vendor family | ____________",
+    "row_cells": {
+      "Field": "A.F5 · Vendor family",
+      "Value": "____________"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:App-A.F1"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:App-A.F1.tbl1.r6",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 271,
+    "heading_path": [
+      "Appendix A: Meter Test Report MTR-F-011 (Rev. 01/2025)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "A.F6 · Meter group ID | ____________",
+    "row_cells": {
+      "Field": "A.F6 · Meter group ID",
+      "Value": "____________"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:App-A.F1"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:App-A.F1.tbl1.r7",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 272,
+    "heading_path": [
+      "Appendix A: Meter Test Report MTR-F-011 (Rev. 01/2025)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "A.F7 · Premise ID | ____________",
+    "row_cells": {
+      "Field": "A.F7 · Premise ID",
+      "Value": "____________"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:App-A.F1"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:App-A.F1.tbl1.r8",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 273,
+    "heading_path": [
+      "Appendix A: Meter Test Report MTR-F-011 (Rev. 01/2025)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "A.F8 · Account ID | ____________",
+    "row_cells": {
+      "Field": "A.F8 · Account ID",
+      "Value": "____________"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:App-A.F1"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:App-A.F1.tbl1.r9",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 274,
+    "heading_path": [
+      "Appendix A: Meter Test Report MTR-F-011 (Rev. 01/2025)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "A.F9 · Service center | ____________",
+    "row_cells": {
+      "Field": "A.F9 · Service center",
+      "Value": "____________"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:App-A.F1"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:App-A.F1.tbl1.r10",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 275,
+    "heading_path": [
+      "Appendix A: Meter Test Report MTR-F-011 (Rev. 01/2025)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "A.F10 · Circuit ID | ____________",
+    "row_cells": {
+      "Field": "A.F10 · Circuit ID",
+      "Value": "____________"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:App-A.F1"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:App-A.F1.tbl1.r11",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 276,
+    "heading_path": [
+      "Appendix A: Meter Test Report MTR-F-011 (Rev. 01/2025)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "A.F11 · County | ____________",
+    "row_cells": {
+      "Field": "A.F11 · County",
+      "Value": "____________"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:App-A.F1"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:App-A.F2",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 277,
+    "heading_path": [
+      "Appendix A: Meter Test Report MTR-F-011 (Rev. 01/2025)"
+    ],
+    "unit_kind": "form_field",
+    "text_raw": "Part C — As-Found Test Results",
+    "row_cells": null,
+    "parent_clause_id": "RPL-MTR-PGM-001:App-A"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:App-A.F2.tbl1.r1",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 278,
+    "heading_path": [
+      "Appendix A: Meter Test Report MTR-F-011 (Rev. 01/2025)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "B.F1 · Test date (`YYYY-MM-DD`) | ____________",
+    "row_cells": {
+      "Field": "B.F1 · Test date (`YYYY-MM-DD`)",
+      "Value": "____________"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:App-A.F2"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:App-A.F2.tbl1.r2",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 279,
+    "heading_path": [
+      "Appendix A: Meter Test Report MTR-F-011 (Rev. 01/2025)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "B.F2 · Test location | ☐ Shop  ☐ Field",
+    "row_cells": {
+      "Field": "B.F2 · Test location",
+      "Value": "☐ Shop  ☐ Field"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:App-A.F2"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:App-A.F2.tbl1.r3",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 280,
+    "heading_path": [
+      "Appendix A: Meter Test Report MTR-F-011 (Rev. 01/2025)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "B.F3 · Test board / portable standard ID | ____________",
+    "row_cells": {
+      "Field": "B.F3 · Test board / portable standard ID",
+      "Value": "____________"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:App-A.F2"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:App-A.F2.tbl1.r4",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 281,
+    "heading_path": [
+      "Appendix A: Meter Test Report MTR-F-011 (Rev. 01/2025)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "B.F4 · Standard last calibration date | ____________",
+    "row_cells": {
+      "Field": "B.F4 · Standard last calibration date",
+      "Value": "____________"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:App-A.F2"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:App-A.F2.tbl1.r5",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 282,
+    "heading_path": [
+      "Appendix A: Meter Test Report MTR-F-011 (Rev. 01/2025)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "B.F5 · Technician ID (MT-###) | ____________",
+    "row_cells": {
+      "Field": "B.F5 · Technician ID (MT-###)",
+      "Value": "____________"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:App-A.F2"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:App-A.F2.tbl1.r6",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 283,
+    "heading_path": [
+      "Appendix A: Meter Test Report MTR-F-011 (Rev. 01/2025)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "B.F6 · Test reason | ☐ in_service_sample  ☐ in_service_periodic  ☐ new_acceptance  ☐ repaired  ☐ customer_request  ☐ removal_as_found  ☐ commission_supervised",
+    "row_cells": {
+      "Field": "B.F6 · Test reason",
+      "Value": "☐ in_service_sample  ☐ in_service_periodic  ☐ new_acceptance  ☐ repaired  ☐ customer_request  ☐ removal_as_found  ☐ commission_supervised"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:App-A.F2"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:App-A.F2.tbl1.r7",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 284,
+    "heading_path": [
+      "Appendix A: Meter Test Report MTR-F-011 (Rev. 01/2025)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "B.F7 · Sample lot ID (if applicable) | ____________",
+    "row_cells": {
+      "Field": "B.F7 · Sample lot ID (if applicable)",
+      "Value": "____________"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:App-A.F2"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:App-A.F2.tbl1.r8",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 285,
+    "heading_path": [
+      "Appendix A: Meter Test Report MTR-F-011 (Rev. 01/2025)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "B.F8 · Customer request ID (if applicable) | ____________",
+    "row_cells": {
+      "Field": "B.F8 · Customer request ID (if applicable)",
+      "Value": "____________"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:App-A.F2"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:App-A.F2.tbl1.r9",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 286,
+    "heading_path": [
+      "Appendix A: Meter Test Report MTR-F-011 (Rev. 01/2025)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "B.F9 · Meter reading before test | ____________",
+    "row_cells": {
+      "Field": "B.F9 · Meter reading before test",
+      "Value": "____________"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:App-A.F2"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:App-A.F3",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 287,
+    "heading_path": [
+      "Appendix A: Meter Test Report MTR-F-011 (Rev. 01/2025)"
+    ],
+    "unit_kind": "form_field",
+    "text_raw": "Part D — Adjustment and As-Left Results (EM only)",
+    "row_cells": null,
+    "parent_clause_id": "RPL-MTR-PGM-001:App-A"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:App-A.F3.tbl1.r1",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 288,
+    "heading_path": [
+      "Appendix A: Meter Test Report MTR-F-011 (Rev. 01/2025)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "C.F1 · FL test 1 (%) | ____________",
+    "row_cells": {
+      "Field": "C.F1 · FL test 1 (%)",
+      "Value": "____________"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:App-A.F3"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:App-A.F3.tbl1.r2",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 289,
+    "heading_path": [
+      "Appendix A: Meter Test Report MTR-F-011 (Rev. 01/2025)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "C.F2 · FL test 2 (%) | ____________",
+    "row_cells": {
+      "Field": "C.F2 · FL test 2 (%)",
+      "Value": "____________"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:App-A.F3"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:App-A.F3.tbl1.r3",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 290,
+    "heading_path": [
+      "Appendix A: Meter Test Report MTR-F-011 (Rev. 01/2025)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "C.F3 · FL average (%) | ____________",
+    "row_cells": {
+      "Field": "C.F3 · FL average (%)",
+      "Value": "____________"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:App-A.F3"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:App-A.F3.tbl1.r4",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 291,
+    "heading_path": [
+      "Appendix A: Meter Test Report MTR-F-011 (Rev. 01/2025)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "C.F4 · LL test 1 (%) | ____________",
+    "row_cells": {
+      "Field": "C.F4 · LL test 1 (%)",
+      "Value": "____________"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:App-A.F3"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:App-A.F3.tbl1.r5",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 292,
+    "heading_path": [
+      "Appendix A: Meter Test Report MTR-F-011 (Rev. 01/2025)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "C.F5 · LL test 2 (%) | ____________",
+    "row_cells": {
+      "Field": "C.F5 · LL test 2 (%)",
+      "Value": "____________"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:App-A.F3"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:App-A.F3.tbl1.r6",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 293,
+    "heading_path": [
+      "Appendix A: Meter Test Report MTR-F-011 (Rev. 01/2025)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "C.F6 · LL average (%) | ____________",
+    "row_cells": {
+      "Field": "C.F6 · LL average (%)",
+      "Value": "____________"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:App-A.F3"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:App-A.F3.tbl1.r7",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 294,
+    "heading_path": [
+      "Appendix A: Meter Test Report MTR-F-011 (Rev. 01/2025)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "C.F7 · PF test (% — CT meters only) | ____________",
+    "row_cells": {
+      "Field": "C.F7 · PF test (% — CT meters only)",
+      "Value": "____________"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:App-A.F3"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:App-A.F3.tbl1.r8",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 295,
+    "heading_path": [
+      "Appendix A: Meter Test Report MTR-F-011 (Rev. 01/2025)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "C.F8 · Average accuracy = (FL avg + LL avg) ÷ 2 (%) | ____________",
+    "row_cells": {
+      "Field": "C.F8 · Average accuracy = (FL avg + LL avg) ÷ 2 (%)",
+      "Value": "____________"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:App-A.F3"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:App-A.F3.tbl1.r9",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 296,
+    "heading_path": [
+      "Appendix A: Meter Test Report MTR-F-011 (Rev. 01/2025)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "C.F9 · Within limits? | ☐ Y  ☐ N",
+    "row_cells": {
+      "Field": "C.F9 · Within limits?",
+      "Value": "☐ Y  ☐ N"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:App-A.F3"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:App-A.F3.tbl1.r10",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 297,
+    "heading_path": [
+      "Appendix A: Meter Test Report MTR-F-011 (Rev. 01/2025)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "C.F10 · Functional result | ☐ pass  ☐ display_fail  ☐ register_fail  ☐ comm_fail  ☐ disconnect_switch_fail  ☐ physical_damage",
+    "row_cells": {
+      "Field": "C.F10 · Functional result",
+      "Value": "☐ pass  ☐ display_fail  ☐ register_fail  ☐ comm_fail  ☐ disconnect_switch_fail  ☐ physical_damage"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:App-A.F3"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:App-A.F4",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 298,
+    "heading_path": [
+      "Appendix A: Meter Test Report MTR-F-011 (Rev. 01/2025)"
+    ],
+    "unit_kind": "form_field",
+    "text_raw": "Part E — Action and Disposition",
+    "row_cells": null,
+    "parent_clause_id": "RPL-MTR-PGM-001:App-A"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:App-A.F4.tbl1.r1",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 299,
+    "heading_path": [
+      "Appendix A: Meter Test Report MTR-F-011 (Rev. 01/2025)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "D.F1 · Adjusted? | ☐ Y  ☐ N",
+    "row_cells": {
+      "Field": "D.F1 · Adjusted?",
+      "Value": "☐ Y  ☐ N"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:App-A.F4"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:App-A.F4.tbl1.r2",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 300,
+    "heading_path": [
+      "Appendix A: Meter Test Report MTR-F-011 (Rev. 01/2025)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "D.F2 · As-left FL (%) | ____________",
+    "row_cells": {
+      "Field": "D.F2 · As-left FL (%)",
+      "Value": "____________"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:App-A.F4"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:App-A.F4.tbl1.r3",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 301,
+    "heading_path": [
+      "Appendix A: Meter Test Report MTR-F-011 (Rev. 01/2025)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "D.F3 · As-left LL (%) | ____________",
+    "row_cells": {
+      "Field": "D.F3 · As-left LL (%)",
+      "Value": "____________"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:App-A.F4"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:App-A.F4.tbl1.r4",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 302,
+    "heading_path": [
+      "Appendix A: Meter Test Report MTR-F-011 (Rev. 01/2025)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "D.F4 · As-left average accuracy (%) | ____________",
+    "row_cells": {
+      "Field": "D.F4 · As-left average accuracy (%)",
+      "Value": "____________"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:App-A.F4"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:App-A.F5",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 303,
+    "heading_path": [
+      "Appendix A: Meter Test Report MTR-F-011 (Rev. 01/2025)"
+    ],
+    "unit_kind": "form_field",
+    "text_raw": "*Office use only: WAM work order number ________________ · Record filed: ☐ RRS-MTR-002*",
+    "row_cells": null,
+    "parent_clause_id": "RPL-MTR-PGM-001:App-A"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:App-A.F5.tbl1.r1",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 304,
+    "heading_path": [
+      "Appendix A: Meter Test Report MTR-F-011 (Rev. 01/2025)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "E.F1 · Action taken | ☐ returned_to_service  ☐ retired  ☐ adjusted_returned  ☐ replaced_billing_review",
+    "row_cells": {
+      "Field": "E.F1 · Action taken",
+      "Value": "☐ returned_to_service  ☐ retired  ☐ adjusted_returned  ☐ replaced_billing_review"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:App-A.F5"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:App-A.F5.tbl1.r2",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 305,
+    "heading_path": [
+      "Appendix A: Meter Test Report MTR-F-011 (Rev. 01/2025)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "E.F2 · Billing review reference | ____________",
+    "row_cells": {
+      "Field": "E.F2 · Billing review reference",
+      "Value": "____________"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:App-A.F5"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:App-A.F5.tbl1.r3",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 306,
+    "heading_path": [
+      "Appendix A: Meter Test Report MTR-F-011 (Rev. 01/2025)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "E.F3 · Technician signature | ___________________",
+    "row_cells": {
+      "Field": "E.F3 · Technician signature",
+      "Value": "___________________"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:App-A.F5"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:App-A.F5.tbl1.r4",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 307,
+    "heading_path": [
+      "Appendix A: Meter Test Report MTR-F-011 (Rev. 01/2025)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "E.F4 · Supervisor review (Gregory Walsh, P19) | ___________________",
+    "row_cells": {
+      "Field": "E.F4 · Supervisor review (Gregory Walsh, P19)",
+      "Value": "___________________"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:App-A.F5"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:App-A.F5.tbl1.r5",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 308,
+    "heading_path": [
+      "Appendix A: Meter Test Report MTR-F-011 (Rev. 01/2025)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "E.F5 · Review date | ____________",
+    "row_cells": {
+      "Field": "E.F5 · Review date",
+      "Value": "____________"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:App-A.F5"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:App-B",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 309,
+    "heading_path": [
+      "Appendix B: Group Acceptance Worksheet"
+    ],
+    "unit_kind": "appendix",
+    "text_raw": "Appendix B: Group Acceptance Worksheet\n\nPurpose: Guides the meter technician and Gregory Walsh (P19) through the Method B lot acceptance calculation per 170 IAC 4-1-10(c)(4)–(6).\n\nStep 1: Record lot ID, group ID, lot size, and sample size n.\n\nStep 2: List as-found full-load accuracy values x₁, x₂, …, xₙ for the sample.\n\nStep 3: Compute X̄ = (Σxᵢ) / n and s = √[Σ(xᵢ − X̄)² / (n−1)].\n\nStep 4: Compute Q-statistics:\n- Q_U = (U − X̄) / s where U = 102.00%\n- Q_L = (X̄ − L) / s where L = 98.00%\n\nStep 5: From standard normal tables, estimate p_U = P(Z > Q_U) and p_L = P(Z < −Q_L). Total estimated percent defective p = p_U + p_L.\n\nStep 6: Determine maximum allowable percent defective m from the Method B acceptance table (AQL 2.50, Double Spec Limit). Compare p to m:\n- If p ≤ m: LOT ACCEPTED — complete Part E of MTR-F-011.\n- If p > m: LOT REJECTED — initiate accelerated test schedule per §9.4 and notify Angela Ruiz (P20) within one (1) business day.\n\n> Note: All provisions of ANSI/ASQC Standard Z1.9, dated 1993, explanatory of or essential to the application of Table A-2, Table B-3, and Example B-3, as referenced in 170 IAC 4-1-10(c)(3)–(5), are hereby incorporated in that rule by reference. (170 IAC 4-1-10(c)(10)) RPL's implementation in this worksheet is based on those incorporated provisions and RPL's internal sampling plan.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:App-C",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 310,
+    "heading_path": [
+      "Appendix C: Standards Certification Register Summary"
+    ],
+    "unit_kind": "appendix",
+    "text_raw": "Appendix C: Standards Certification Register Summary\n\nSee `data/standards_calibration_2024.csv` for the full register. Summary as of 2024-12-31:\n\nAll 43 standards were in certification on every test date in 2024. No out-of-tolerance findings were reported for reference standards in 2024.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:App-C.tbl1.r1",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 311,
+    "heading_path": [
+      "Appendix C: Standards Certification Register Summary"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "Reference | STD-REF-001 | High-accuracy watthour standard A | Lafayette Meter Shop | 2023-08-15 | Accredited External Lab | 2025-08-15 | Y",
+    "row_cells": {
+      "Level": "Reference",
+      "ID": "STD-REF-001",
+      "Make/Model (generic)": "High-accuracy watthour standard A",
+      "Location": "Lafayette Meter Shop",
+      "Last Certified": "2023-08-15",
+      "By": "Accredited External Lab",
+      "Next Due": "2025-08-15",
+      "In Cert?": "Y"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:App-C"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:App-C.tbl1.r2",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 312,
+    "heading_path": [
+      "Appendix C: Standards Certification Register Summary"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "Reference | STD-REF-002 | High-accuracy watthour standard B | Lafayette Meter Shop | 2024-02-20 | Accredited External Lab | 2026-02-20 | Y",
+    "row_cells": {
+      "Level": "Reference",
+      "ID": "STD-REF-002",
+      "Make/Model (generic)": "High-accuracy watthour standard B",
+      "Location": "Lafayette Meter Shop",
+      "Last Certified": "2024-02-20",
+      "By": "Accredited External Lab",
+      "Next Due": "2026-02-20",
+      "In Cert?": "Y"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:App-C"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:App-C.tbl1.r3",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 313,
+    "heading_path": [
+      "Appendix C: Standards Certification Register Summary"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "Reference | STD-REF-003 | Precision wattmeter | Lafayette Meter Shop | 2024-06-10 | Accredited External Lab | 2026-06-10 | Y",
+    "row_cells": {
+      "Level": "Reference",
+      "ID": "STD-REF-003",
+      "Make/Model (generic)": "Precision wattmeter",
+      "Location": "Lafayette Meter Shop",
+      "Last Certified": "2024-06-10",
+      "By": "Accredited External Lab",
+      "Next Due": "2026-06-10",
+      "In Cert?": "Y"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:App-C"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:App-C.tbl1.r4",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 314,
+    "heading_path": [
+      "Appendix C: Standards Certification Register Summary"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "Test board | TB-01 through TB-08 | Automated meter test boards | Lafayette Meter Shop | 2024 (various) | STD-REF-001/002 | 2025 | Y",
+    "row_cells": {
+      "Level": "Test board",
+      "ID": "TB-01 through TB-08",
+      "Make/Model (generic)": "Automated meter test boards",
+      "Location": "Lafayette Meter Shop",
+      "Last Certified": "2024 (various)",
+      "By": "STD-REF-001/002",
+      "Next Due": "2025",
+      "In Cert?": "Y"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:App-C"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:App-C.tbl1.r5",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 315,
+    "heading_path": [
+      "Appendix C: Standards Certification Register Summary"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "Portable | PRT-001 through PRT-032 | Portable watthour standards | All service centers | 2024 (various) | STD-REF-001/002 | As needed | Y",
+    "row_cells": {
+      "Level": "Portable",
+      "ID": "PRT-001 through PRT-032",
+      "Make/Model (generic)": "Portable watthour standards",
+      "Location": "All service centers",
+      "Last Certified": "2024 (various)",
+      "By": "STD-REF-001/002",
+      "Next Due": "As needed",
+      "In Cert?": "Y"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:App-C"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:App-D",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 316,
+    "heading_path": [
+      "Appendix D: Data Dictionary"
+    ],
+    "unit_kind": "appendix",
+    "text_raw": "Appendix D: Data Dictionary\n\nSee `data/README.md` for the complete data dictionary. The following datasets are associated with this program plan:",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:App-D.tbl1.r1",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 317,
+    "heading_path": [
+      "Appendix D: Data Dictionary"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "`meter_registry_2024-12-31.csv.gz` | Complete meter fleet as of 2024-12-31 | 409,950 | meter_serial",
+    "row_cells": {
+      "File": "`meter_registry_2024-12-31.csv.gz`",
+      "Description": "Complete meter fleet as of 2024-12-31",
+      "Rows": "409,950",
+      "Primary Key": "meter_serial"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:App-D"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:App-D.tbl1.r2",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 318,
+    "heading_path": [
+      "Appendix D: Data Dictionary"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "`meter_population_2024-12-31.csv` | Homogeneous group definitions and counts | 52 groups | meter_group_id",
+    "row_cells": {
+      "File": "`meter_population_2024-12-31.csv`",
+      "Description": "Homogeneous group definitions and counts",
+      "Rows": "52 groups",
+      "Primary Key": "meter_group_id"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:App-D"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:App-D.tbl1.r3",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 319,
+    "heading_path": [
+      "Appendix D: Data Dictionary"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "`meter_test_results_2024.csv` | All meter tests performed in 2024 | ~5,724 | test_id",
+    "row_cells": {
+      "File": "`meter_test_results_2024.csv`",
+      "Description": "All meter tests performed in 2024",
+      "Rows": "~5,724",
+      "Primary Key": "test_id"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:App-D"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:App-D.tbl1.r4",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 320,
+    "heading_path": [
+      "Appendix D: Data Dictionary"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "`new_meter_lots_2024.csv` | New meter acceptance lots received in 2024 | 6 | lot_id",
+    "row_cells": {
+      "File": "`new_meter_lots_2024.csv`",
+      "Description": "New meter acceptance lots received in 2024",
+      "Rows": "6",
+      "Primary Key": "lot_id"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:App-D"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:App-D.tbl1.r5",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 321,
+    "heading_path": [
+      "Appendix D: Data Dictionary"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "`inservice_sample_selection_2025.csv` | 2025 Method B sample draw | ~3,262 | meter_serial + meter_group_id",
+    "row_cells": {
+      "File": "`inservice_sample_selection_2025.csv`",
+      "Description": "2025 Method B sample draw",
+      "Rows": "~3,262",
+      "Primary Key": "meter_serial + meter_group_id"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:App-D"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:App-D.tbl1.r6",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 322,
+    "heading_path": [
+      "Appendix D: Data Dictionary"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "`customer_test_requests_2024.csv` | Customer meter test requests 2024 | 620 | customer_request_id",
+    "row_cells": {
+      "File": "`customer_test_requests_2024.csv`",
+      "Description": "Customer meter test requests 2024",
+      "Rows": "620",
+      "Primary Key": "customer_request_id"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:App-D"
+  },
+  {
+    "clause_id": "RPL-MTR-PGM-001:App-D.tbl1.r7",
+    "doc_id": "RPL-MTR-PGM-001",
+    "ordinal": 323,
+    "heading_path": [
+      "Appendix D: Data Dictionary"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "`standards_calibration_2024.csv` | Test equipment certification register | 43 | standard_id",
+    "row_cells": {
+      "File": "`standards_calibration_2024.csv`",
+      "Description": "Test equipment certification register",
+      "Rows": "43",
+      "Primary Key": "standard_id"
+    },
+    "parent_clause_id": "RPL-MTR-PGM-001:App-D"
+  }
+]

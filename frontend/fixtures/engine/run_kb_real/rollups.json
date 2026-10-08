@@ -1,0 +1,62 @@
+[
+  {
+    "run_id": "run_kb_real",
+    "doc_id": "RPL-REG-CAL-2025",
+    "status": "cleared",
+    "counts_by_verdict": {
+      "action_required": 0,
+      "optional_relaxed": 0,
+      "update_citation": 0,
+      "review": 0,
+      "info": 0
+    },
+    "changes_considered": 5,
+    "considered_by_class": {
+      "cosmetic": 2,
+      "cross_ref_only": 1,
+      "punctuation_only": 1,
+      "substantive": 1
+    },
+    "cleared_reason": "5 changes considered: 2 cosmetic, 1 cross-reference-only, 1 punctuation-only, 1 style-only"
+  },
+  {
+    "run_id": "run_kb_real",
+    "doc_id": "RPL-CS-PRO-011",
+    "status": "cleared",
+    "counts_by_verdict": {
+      "action_required": 0,
+      "optional_relaxed": 0,
+      "update_citation": 0,
+      "review": 0,
+      "info": 0
+    },
+    "changes_considered": 5,
+    "considered_by_class": {
+      "cosmetic": 2,
+      "cross_ref_only": 1,
+      "punctuation_only": 1,
+      "substantive": 1
+    },
+    "cleared_reason": "5 changes considered: 2 cosmetic, 1 cross-reference-only, 1 punctuation-only, 1 style-only"
+  },
+  {
+    "run_id": "run_kb_real",
+    "doc_id": "RPL-CS-PRO-004",
+    "status": "cleared",
+    "counts_by_verdict": {
+      "action_required": 0,
+      "optional_relaxed": 0,
+      "update_citation": 0,
+      "review": 0,
+      "info": 0
+    },
+    "changes_considered": 5,
+    "considered_by_class": {
+      "cosmetic": 2,
+      "cross_ref_only": 1,
+      "punctuation_only": 1,
+      "substantive": 1
+    },
+    "cleared_reason": "5 changes considered: 2 cosmetic, 1 cross-reference-only, 1 punctuation-only, 1 style-only"
+  }
+]

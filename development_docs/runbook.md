@@ -1,5 +1,22 @@
 # Demo runbook
 
+## Local demo start
+```
+cd backend && PYTHONPATH=. .venv/bin/uvicorn app.main:app --port 8000
+cd frontend && pnpm exec next typegen   # first time / clean checkout only
+cd frontend && NEXT_PUBLIC_STRATA_DATA=http pnpm dev      # http://localhost:3000 (set the vars in frontend/.env.local)
+```
+
+## Demo day checklist (one page)
+1. Start the backend (command above); `curl http://localhost:8000/health` returns `{"status":"ok"}`. Hit it again just before going on stage (Neon warm-up).
+2. Start the frontend; confirm `frontend/.env.local` has `NEXT_PUBLIC_STRATA_DATA=http` and `NEXT_PUBLIC_STRATA_API_URL=http://localhost:8000`.
+3. Open `http://localhost:3000/app?run=0dcc125e-6da6-419f-beb1-8c347e4fb2d4` and keep `?run=` in every shared URL (pins the run).
+4. Expected: 4 action required, 0 review, 2 documents flagged / 10 cleared, 721 clauses cleared, 1,114 changes -> 1,015 noise -> 96 in footprint -> 9 real, radar 20/53/17.
+5. Scorecard: say it honestly. Clause-level precision/recall are 0 (4 vs 6 expected, export-format question open); 12/12 documents correctly flagged/cleared; FP-rate, routing, baseline PASS.
+6. What-if: use the 4 presets only (simulated data).
+7. Do NOT click: custom what-if (paused; needs LLM, writes to DB); Accept/Reject review buttons on real findings (reviews write to the shared Neon DB); do not start new kb runs (a newer run replaces the default view).
+8. Fallback: set `NEXT_PUBLIC_STRATA_DATA=mock` and restart `pnpm dev`.
+
 ## Environment variables
 
 Backend (Render, `backend/render.yaml`; secrets are `sync: false` and must be set in the dashboard):
@@ -10,11 +27,14 @@ Backend (Render, `backend/render.yaml`; secrets are `sync: false` and must be se
 - Start command: `alembic upgrade head && uvicorn app.main:app --host 0.0.0.0 --port $PORT` (Procfile identical). The live DB is already at head `e5a1c7d9b304`, so this is a no-op there.
 
 Frontend (Vercel, root directory `frontend`, framework Next.js, no vercel.json needed; `npm run build` verified):
-- `NEXT_PUBLIC_API_BASE` = Render service URL with no trailing slash and no `/engine` suffix (e.g. `https://strata-backend.onrender.com`). Baked in at build time, so redeploy after changing it.
+- `NEXT_PUBLIC_STRATA_DATA=mock|http` (default `mock`; use `http` for live data).
+- `NEXT_PUBLIC_STRATA_API_URL` = backend URL with no trailing slash and no `/engine` suffix (e.g. `https://strata-backend.onrender.com`; local `http://localhost:8000`).
+- `NEXT_PUBLIC_STRATA_ALLOW_CUSTOM_WHATIF=1` enables custom what-if in http mode. Leave unset (paused: needs LLM and writes to the DB).
+- All are baked in at build time, so rebuild/redeploy (or restart `pnpm dev`) after changing them. Deployment is currently deferred; the demo is local.
 
 ## Deploy order
 1. Render: create the service from `backend/render.yaml` (Blueprint), fill in secrets, deploy. Check `<render-url>/health` and `<render-url>/engine/runs`.
-2. Vercel: import the repo, root `frontend`, set `NEXT_PUBLIC_API_BASE`, deploy.
+2. Vercel: import the repo, root `frontend`, set `NEXT_PUBLIC_STRATA_DATA=http` and `NEXT_PUBLIC_STRATA_API_URL`, deploy.
 3. Back in Render set `ENGINE_CORS_ORIGINS` to the Vercel URL and redeploy.
 4. Free Render instances sleep: open `/health` a minute before the demo.
 
@@ -46,10 +66,15 @@ scripts/make_whatif_presets.py --run             # create presets and run each (
 - Pin explicitly by sharing URLs with `?run=<run_id>` (the Header run picker sets it), and avoid starting new kb runs once a good one exists.
 - Judge a run by `/engine/runs/<id>/scorecard` and `score_reports` (recall, precision, FP rate, routing).
 
+## Neon idle connections
+Neon drops idle pooled connections, which used to give a `500: connection is closed` on the first request after idle. Fixed with `pool_pre_ping`/`pool_recycle` in `backend/app/db.py` plus a one-time GET retry in the frontend. Still warm `/health` before the demo.
+
+## Offline-filled judgments and LLM use
+The LLM key works again, but demo runs are cache-only: judgments live in `engine.llm_calls`, many filled offline (see `engine_spec.md`, "Offline-filled judgments"; tools `backend/scripts/offline_judge_export.py` / `offline_judge_import.py`, guide `backend/scripts/offline_judge_GUIDE.md`). If you must start a kb run, set `ENGINE_MAX_LLM_CALLS_KB` low as a fuse.
+
 ## Known gaps
 - The documents list lacks a reviewed count.
 - Ingest `v1` version fallback bug in `app/company_ingest/cli/ingest.py`.
 - 2 pre-existing failing tests in `tests/company_ingest/test_roles.py`.
-- Radar items for 3 changes are still pending (rerun `run_radar.py` once the API limit is lifted).
 - The S2 scoring parser (`scripts/score_run.py`) was verified on synthetic text only; check the stored metrics against the raw scoring output.
-- Current latest kb run (`61237079...`) scores recall 0.0 / precision 0.0 on S2 (3 non-informational findings vs 6 expected); the S1 baseline check passes.
+- Default demo run `0dcc125e-6da6-419f-beb1-8c347e4fb2d4` scores recall 0 / precision 0 / matched 0 (4 non-info findings vs 6 expected); FP-rate PASS, routing PASS, baseline PASS, 12/12 documents correct. Open export-format question: `scoring_diagnosis.md`.

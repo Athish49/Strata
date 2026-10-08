@@ -251,3 +251,46 @@ def test_rule_finding_with_unverified_quotes_is_downgraded(monkeypatch):
     out = J.decide_by_rules(object())
     assert out.finding.finding_type == "informational" and out.needs_review is True
     assert out.finding.verdict == "review"
+
+
+# ---- clause role (T1a) ----
+# sha256(system + user) of make_item() captured from the code BEFORE the role change (HEAD).
+PRE_ROLE_PROMPT_SHA = "83ab8877d27b180c5868498d55bf3d785b3bc8648bea6717dc92e4e941110c75"
+
+
+def _sha(item):
+    import hashlib
+    return hashlib.sha256((J.system_prompt_for(item) + J.build_user_prompt(item)).encode()).hexdigest()
+
+
+@pytest.mark.parametrize("role", [None, "internal_procedure", "template_field"])
+def test_non_restating_roles_prompt_byte_identical_to_before(role):
+    assert _sha(make_item(clause_role=role)) == PRE_ROLE_PROMPT_SHA
+    assert "Clause role" not in J.build_user_prompt(make_item(clause_role=role))
+
+
+@pytest.mark.parametrize("role", ["regulatory_restatement", "definition"])
+def test_restating_roles_get_role_line_and_guidance(role):
+    it = make_item(clause_role=role)
+    assert f"Clause role: {role}" in J.build_user_prompt(it)
+    sp = J.system_prompt_for(it)
+    assert sp.startswith(J.SYSTEM_PROMPT) and "IS affected" in sp
+    assert _sha(it) != PRE_ROLE_PROMPT_SHA
+
+
+async def test_restatement_mismatch_is_affected_and_sends_guidance(monkeypatch):
+    seen = []
+
+    async def call(stage, model, system, user, schema, run_id, **kw):
+        seen.append((system, user))
+        return jr()
+
+    monkeypatch.setattr(L, "call_cached", call)
+    out = await J.judge_item(make_item(clause_role="regulatory_restatement"),
+                             "00000000-0000-0000-0000-000000000001", ctx(), "m")
+    assert out.affected is True and out.finding is not None
+    assert "Clause role" in seen[0][0] and "Clause role: regulatory_restatement" in seen[0][1]
+    seen.clear()
+    await J.judge_item(make_item(clause_role="internal_procedure"),
+                       "00000000-0000-0000-0000-000000000001", ctx(), "m")
+    assert seen[0][0] == J.SYSTEM_PROMPT and "Clause role" not in seen[0][1]

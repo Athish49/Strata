@@ -1,5 +1,17 @@
 # Strata v1 — Implementation Plan
 
+## Status (2026-10-08, truthful)
+| Wave | Status |
+|---|---|
+| W0 data fixes | DONE (merge head, normalizer, `diff_hash` backfill, fragment flag, version-id fix) |
+| W1 foundation, W2 delta, W3 stages 2-3 | DONE |
+| W4 stages 4-5 and scoring | DONE as code; baseline PASS. Real-wave scoring NOT met at clause level: precision 0, recall 0, matched 0 (4 system vs 6 expected); FP-rate PASS; routing PASS (0 matches); 12/12 document statuses correct. Open export-format question in `scoring_diagnosis.md`. Default demo run `0dcc125e-6da6-419f-beb1-8c347e4fb2d4` (4 action_required, 0 review) |
+| W5 API and UI | DONE (live `/engine/ui/*` and `/company/*`, contract in `ui_wiring_contract.md`; mock mode also available) |
+| W6 what-if | DONE for 4 presets; custom what-if PAUSED (needs LLM, writes to DB) |
+| W7 radar | DONE (20 yes / 53 no / 17 unclear on the default run) |
+| W8 review actions | Code done; write path not yet exercised against the shared DB beyond tests |
+| W9 deploy and demo prep | NOT DONE. Demo is local (frontend `:3000`, backend `:8000`); Render/Vercel deploy deferred |
+
 ## Rules for every task
 - Specs: `prd.md`, `architecture.md`, `data_model.md`, `engine_spec.md`, `api_ui.md`. Build exactly what they say. No extra features, tables or routes.
 - Guardrails in `architecture.md` §5 always apply (information barrier, no hardcoded doc/citation literals in `app/engine/`, read-only company data, cost caps).
@@ -135,7 +147,7 @@
 
 ## W9 — Deploy & demo prep (→W6; include W7/W8 if done)
 **9.1.1** Deploy backend to Render (add `LLM_API_KEY` and `ENGINE_*` to `render.yaml`; run `alembic upgrade head` before uvicorn in the start command).
-**9.1.2** Deploy frontend to Vercel (`NEXT_PUBLIC_API_BASE`). **9.1.1 ∥ 9.1.2**.
+**9.1.2** Deploy frontend to Vercel (`NEXT_PUBLIC_STRATA_DATA=http`, `NEXT_PUBLIC_STRATA_API_URL`). **9.1.1 ∥ 9.1.2**.
 **9.1.3** Demo prep script: run baseline, kb (+radar), all presets, score. Warm caches. Verify every page in production.
 **9.1.4** Final report (≤20 lines): URLs, metrics, funnel numbers, preset results, known gaps.
 

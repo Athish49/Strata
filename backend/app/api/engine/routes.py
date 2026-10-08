@@ -344,7 +344,7 @@ async def get_scorecard(run_id: str, db: AsyncSession = Depends(get_db)):
 
 
 # ---- later waves: whatif / radar / reviews+people (separate router files) ----
-for _name in ("routes_whatif", "routes_radar", "routes_reviews"):
+for _name in ("routes_whatif", "routes_radar", "routes_reviews", "routes_ui_runs", "routes_ui_results", "routes_ui_kb"):
     try:
         router.include_router(importlib.import_module(f"app.api.engine.{_name}").router)
     except ModuleNotFoundError as _e:

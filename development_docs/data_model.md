@@ -26,12 +26,12 @@ Facts the engine relies on:
 ## 2. W0 additive changes to existing tables
 | Change | Purpose |
 |---|---|
-| `company.clause_parameters.is_citation_fragment` recomputed (column exists via migration `d1e2f3a4b5c6`; currently FALSE on all 2,948 rows) | TRUE when `kind='number'` AND `unit IS NULL` AND `value_text` is a whole token inside any `citation_raw` of the same clause (~278 rows) |
+| `company.clause_parameters.is_citation_fragment` recomputed (column exists via migration `d1e2f3a4b5c6`; as of the original W0 measurement FALSE on all 2,948 rows; recomputed since, count not re-verified in the 2026-10-08 pass) | TRUE when `kind='number'` AND `unit IS NULL` AND `value_text` is a whole token inside any `citation_raw` of the same clause (~278 rows) |
 | `public.code_sections.diff_hash` re-backfilled | After the normalizer fix |
 No other changes to `public.*` or `company.*`.
 
 ## 3. New schema `engine` (one Alembic migration in `backend/migrations/versions/`)
-The DB has two Alembic heads (`77a04f843fe2`, `d1e2f3a4b5c6`); task 0.6.1 merges them first. The engine migration revises that merge.
+History: the DB had two Alembic heads (`77a04f843fe2`, `d1e2f3a4b5c6`), merged by task 0.6.1; the live DB is at head `e5a1c7d9b304`.
 ```sql
 CREATE SCHEMA IF NOT EXISTS engine;
 
@@ -214,3 +214,8 @@ CREATE INDEX ON engine.llm_calls (stage, model, prompt_sha256) WHERE valid;
 }
 ```
 Include informational findings (scoring counts only non-informational toward precision). `kind='whatif'` runs are never exported.
+
+
+## Live-data note (2026-10-08)
+- Latest real-wave run `0dcc125e-6da6-419f-beb1-8c347e4fb2d4`: 1,114 raw changes, 1,015 noise, 96 in footprint (9 real), 1,234 candidates, 4 action_required findings, 721 clauses cleared, 2 docs flagged / 10 cleared, `llm_calls` stat 0. Runs table holds ~25 runs (kb, baseline, and many whatif); the UI collapses them.
+- `engine.llm_calls` contains rows with `error = 'produced in-session by the assistant (offline stand-in for the API; Anthropic spend limit)'`. These are valid offline-filled judgments (see engine_spec.md "Offline-filled judgments"), not API errors. Do not purge them.
