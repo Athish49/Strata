@@ -94,7 +94,7 @@ async def list_actions(
 
     # Fetch page
     offset = (page - 1) * limit
-    items_q = base_q.order_by(RegulatoryAction.date_published.desc()).offset(offset).limit(limit)
+    items_q = base_q.order_by(RegulatoryAction.date_published.desc().nulls_last(), RegulatoryAction.id.desc()).offset(offset).limit(limit)
     items_result = await db.execute(items_q)
     actions = items_result.scalars().all()
 

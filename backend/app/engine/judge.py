@@ -38,6 +38,13 @@ logger = logging.getLogger(__name__)
 
 STAGE = "judge"
 SYSTEM_PROMPT = (Path(__file__).parent / "prompts" / "judge.md").read_text(encoding="utf-8")
+# Role guidance is appended to the system prompt ONLY for these clause roles, so the text sent for every
+# other role stays byte-identical to the base prompt (LLM cache keys hash system+user text).
+RESTATING_ROLES = frozenset({"regulatory_restatement", "definition"})
+ROLE_GUIDANCE = """
+
+## Clause role
+When the user message gives a "Clause role" of `regulatory_restatement` or `definition`, the clause is meant to reproduce, summarize or define the cited rule. Compare its wording and values to the S2 text: a restatement or definition that no longer matches S2 IS affected (use the finding_type definitions above), even though it only restates the rule. If it still matches S2, set `affected=false`. All other rules, including verbatim quotes and never speculating, are unchanged."""
 UNAVAILABLE = "LLM judgement unavailable"
 STALE_ELIGIBLE = {"parameter_change", "required_content_change", "conflict", "new_requirement_gap"}
 HUNK_SEP = "\n[...]\n"
@@ -78,6 +85,7 @@ class JudgeItem:
     text_raw: str
     parameters: list[dict] = field(default_factory=list)
     approved_date: date | None = None
+    clause_role: str | None = None
 
 
 @dataclass
@@ -180,6 +188,11 @@ def _fmt_param(p: dict) -> str:
     return f"- '{p.get('value_text')}' ({', '.join(b for b in bits if b)})"
 
 
+def system_prompt_for(item: JudgeItem) -> str:
+    """Base system prompt, plus the role guidance only for restating/definition clauses."""
+    return SYSTEM_PROMPT + ROLE_GUIDANCE if item.clause_role in RESTATING_ROLES else SYSTEM_PROMPT
+
+
 def build_user_prompt(item: JudgeItem, max_chars: int | None = None, window: int | None = None) -> str:
     max_chars = engine_settings.ENGINE_JUDGE_MAX_SECTION_CHARS if max_chars is None else max_chars
     window = engine_settings.ENGINE_JUDGE_WINDOW_CHARS if window is None else window
@@ -193,6 +206,7 @@ def build_user_prompt(item: JudgeItem, max_chars: int | None = None, window: int
     params = "\n".join(_fmt_param(p) for p in item.parameters) or "(none)"
     heading_path = " > ".join(item.heading_path or []) or "(none)"
     renum = f"\nRenumbered from: {item.renumbered_from}" if item.renumbered_from else ""
+    role_line = f"\nClause role: {item.clause_role}" if item.clause_role in RESTATING_ROLES else ""
     return f"""## The regulatory change
 Citation: {item.citation}{renum}
 Heading: {item.heading or '(none)'}
@@ -219,7 +233,7 @@ Word diff (S1 -> S2; [-deleted-], {{+inserted+}}):
 Clause id: {item.clause_id}
 Document: {item.doc_title or item.doc_id}
 Heading path: {heading_path}
-Unit kind: {item.unit_kind or '(unknown)'}
+Unit kind: {item.unit_kind or '(unknown)'}{role_line}
 Parameters in the clause:
 {params}
 
@@ -296,7 +310,7 @@ async def judge_item(item: JudgeItem, run_id: str, llm_ctx: L.LLMContext, model:
     res: JudgeResult | None = None
     for attempt in (1, 2):
         try:
-            res = await L.call_cached(STAGE, model, SYSTEM_PROMPT, prompt, JudgeResult,
+            res = await L.call_cached(STAGE, model, system_prompt_for(item), prompt, JudgeResult,
                                       uuid.UUID(run_id) if run_id else None,
                                       llm=llm_ctx, unit_id=item.candidate_id)
         except L.LLMBudgetExceeded:
@@ -354,7 +368,7 @@ _OPEN_SQL = text("""
            r.citation, r.change_class, r.origin, r.source_system, r.heading, r.direction,
            r.summary, r.value_changes, r.char_quotes, r.s1_text_norm, r.s2_text_norm,
            r.diff_segments, r.renumbered_from, r.published_date,
-           d.title AS doc_title, c.heading_path, c.unit_kind, c.text_raw, v.approved_date
+           d.title AS doc_title, c.heading_path, c.unit_kind, c.clause_role, c.text_raw, v.approved_date
     FROM engine.candidates k
     JOIN engine.change_records r ON r.change_id = k.change_id
     JOIN company.clauses c ON c.clause_pk = k.clause_pk
@@ -424,7 +438,7 @@ async def load_open_items(session, run_id: str) -> list[JudgeItem]:
             published_date=r["published_date"], doc_title=r["doc_title"],
             heading_path=list(r["heading_path"] or []), unit_kind=r["unit_kind"],
             text_raw=r["text_raw"] or "", parameters=params.get(r["clause_pk"], []),
-            approved_date=r["approved_date"],
+            approved_date=r["approved_date"], clause_role=r["clause_role"],
         ))
     return items
 

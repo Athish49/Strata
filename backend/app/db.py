@@ -13,6 +13,8 @@ engine = create_async_engine(
     _clean_url,
     echo=False,
     connect_args={"ssl": "require"},
+    pool_pre_ping=True,  # Neon drops idle pooled connections; validate before use
+    pool_recycle=300,
 )
 AsyncSessionLocal = async_sessionmaker(engine, class_=AsyncSession, expire_on_commit=False)
 
