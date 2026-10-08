@@ -36,6 +36,9 @@ class CodeSection(Base):
     repealed_date: Mapped[Optional[date]] = mapped_column(Date, nullable=True)
     ingested_at: Mapped[datetime] = mapped_column(DateTime, nullable=False, default=datetime.utcnow)
 
+    diff_hash: Mapped[Optional[str]] = mapped_column(String(64), nullable=True)
+    agency_id: Mapped[Optional[str]] = mapped_column(String, ForeignKey("agencies.agency_id"), nullable=True)
+
     # Cross-citations extracted from IAC section body text
     federal_refs: Mapped[Optional[list[str]]] = mapped_column(ARRAY(String), nullable=True)
     iac_cross_refs: Mapped[Optional[list[str]]] = mapped_column(ARRAY(String), nullable=True)

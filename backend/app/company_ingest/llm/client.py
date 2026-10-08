@@ -14,7 +14,7 @@ if TYPE_CHECKING:
 
 logger = logging.getLogger(__name__)
 
-# Module-level semaphore — allows up to 8 concurrent LLM calls.
+# Module-level semaphore — allows up to 16 concurrent LLM calls.
 _semaphore: asyncio.Semaphore | None = None
 
 # Module-level Anthropic async client (created lazily).
@@ -24,7 +24,7 @@ _anthropic_client: Any = None
 def _get_semaphore() -> asyncio.Semaphore:
     global _semaphore
     if _semaphore is None:
-        _semaphore = asyncio.Semaphore(8)
+        _semaphore = asyncio.Semaphore(16)
     return _semaphore
 
 
@@ -151,6 +151,7 @@ async def call_structured(
     user: str,
     schema: type[BaseModel],
     ctx: "RunContext",
+    model: str | None = None,
 ) -> BaseModel | None:
     """Call the LLM and return a validated *schema* instance, or None on failure.
 
@@ -166,7 +167,7 @@ async def call_structured(
     """
     from app.config import settings
 
-    model = settings.LLM_MODEL
+    model = model or settings.LLM_MODEL
 
     # Compute the prompt hash from the raw (non-augmented) system+user strings.
     prompt_sha256 = hashlib.sha256((system + user).encode()).hexdigest()
