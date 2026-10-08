@@ -1,106 +1,90 @@
-# Strata v1 — Impact Engine PRD
+# Strata: Product Requirements
 
-Read order for Claude Code: `prd.md` → `architecture.md` → `data_model.md` → `engine_spec.md` → `api_ui.md` → `implementation_plan.md`.
-If anything is ambiguous, follow these docs literally; do not invent features, tables, or routes. If blocked, stop and report.
-The earlier company-ingestion spec, gap report and plan were retired (see git history, commit `12e6e7c` and earlier). Comments in `backend/app/company_ingest` and its tests that cite "SPEC §n" or "task 1.x.y" refer to those retired docs; they are not part of this plan, and the task numbers in `implementation_plan.md` are unrelated to them. Reference material for the data layers is in `supplement_docs/`.
+**Purpose:** define the problem Strata addresses, who it serves, what it must do, and how success is judged.
 
-## 1. Goal
-When government rules change between snapshot S1 and S2, show the company **which clauses in which documents** are affected, **why** (verified quotes from both rule versions and the clause), **what must change**, and **who must act**. Flag only — never edit company documents.
+## TL;DR
+- **Problem:** when a regulation changes, a company must find which of its own policy clauses now say the wrong thing. Today this is manual reading.
+- **Approach:** compare two law snapshots (S1 to S2), keep substantive changes, and link each to the exact clauses affected, with verified quotes, the required change and an owner.
+- **Principle:** flag, never edit. Humans decide; Strata shows evidence and explains what it ignored.
+- **Demo:** synthetic Indiana utility (RPL), 12 documents, 2,334 clauses, real state and federal regulations.
 
-## 2. Demo scenario (fixed assumptions)
-- Company: Rockridge Power & Light (RPL, `company_id='rpl'`), synthetic Indiana electric distribution utility. 12 ingested documents across 5 verticals.
-- All RPL documents are compliant with S1 (`law_as_of = 2024-12-31`). A run with S1 as current law must produce **0 non-informational findings**.
-- Only the S1→S2 changes are evaluated. Never re-scan all of S2 against company data.
-- Snapshots: IAC 2024-12-31 → 2025-12-31; CFR 2025-01-02 → 2026-10-02.
-- S2 is **write-on-change**: S2 holds only changed or new rows. **A section absent from S2 is unchanged, never repealed.**
-- The engine is generic. No logic keyed to specific doc IDs, citations, titles, or to RPL.
-
-## 3. Data reality (re-measured 2026-10-08 on real-wave run `0dcc125e-6da6-419f-beb1-8c347e4fb2d4`, via `/engine/runs/{id}`) — the design is built around this
-| Fact | Value |
+## 1. Problem and the constraints that shaped the design
+| Difficulty | Design response |
 |---|---|
-| S2 rows evaluated (IAC 1,068 + CFR 46) | 1,114 raw changes |
-| By class | cosmetic 1,004; punctuation_only 1; cross_ref_only 10; substantive 63; new_section 33; repealed 3 |
-| Noise (cosmetic + punctuation + cross-ref) | 1,015 (filtered by `diff_hash`/normalizer, W0 fix) |
-| Changes in RPL footprint | 96 (87 cosmetic noise, **9 real**; all 9 characterized as obligation-changed) |
-| Candidates | 1,234 (direct_section 865, register_hop 292, direct_rule 77, value_echo 0); 411 LLM-judged, 0 rule-judged |
-| Findings | **4 action_required**, 0 review, 0 info: RPL-CMP-REG-001 (OBL-2024-0018, 170 IAC 1-6-3) and RPL-REG-CAL-2025 (3.7 / 1-6-2, EVT-2025-0044 / 1-6, EVT-2025-0045 / 1-6-5). The earlier run `05b50712-79df-4c4e-bdb3-c84f31e189ec` had the same 4 plus 3 review items |
-| Documents | 2 flagged / 10 cleared; 721 clauses cleared with reasons; 12 of 12 document statuses match the expected status |
-| Radar | 20 yes / 53 no / 17 unclear |
-| `170 IAC 4-1-16` | cited by many clauses; its change is cosmetic, so it is cleared (0 findings) |
-| New S2 sections in cited rules / repeal flips RPL cites | not re-measured here; the 3 repealed and 33 new sections produced no finding |
-| CFR citations resolved at section level | historically 0, so CFR changes go to radar. Not re-verified in this pass |
-| `defined_terms` linked to code sections | 0, so no definition-ripple path |
-| `company.datasets` | 0 rows, so no quantified impact |
-| `restates` links | 3,048, driven by citation-number noise, not used |
-| Effective dates for IAC changes | none in `regulatory_actions`; only DIN publication dates in S2 text |
-| LLM calls in the latest run | 0 live (all judgments served from `engine.llm_calls`, see engine_spec.md "Offline-filled judgments") |
+| About 91% of 1,114 raw changes are noise (1,004 purely cosmetic); a model silently skipping them is unsafe | Deterministic filtering before any model call, with a reason recorded |
+| Documents cite law loosely; most substantive changes touch no cited section; federal citations do not resolve to section level | A radar screens uncited changes by company attributes instead of guessing |
+| A missed obligation is a failure; a false alarm erodes trust | Every skip and clear is explained in a ledger |
+| A fluent but wrong explanation is worse than none | Every claim must tie to quoted source text |
+| Model API spend limit was hit during the build | Judgments are cached; demo runs are reproducible |
+| The answer key is hidden | Engine reads only aggregate scores; never tuned to it |
 
-**Implications**
-1. The real wave is a **precision test**: the engine must clear every clause that cites a changed-but-cosmetic section (87 of 96 in-footprint changes are cosmetic) and flag only true impacts.
-2. The real wave alone yields few clause findings (4). **What-if mode** lets the expert apply a change live and see clause-level conflicts propagate through the same engine (presets only for the demo; custom what-if is paused).
-3. Most substantive changes touch no RPL citation. The **radar** screens them against the company profile; it stays Should-have.
+## 2. Approach
 
-**Scoring status (honest).** Clause-level scorecard: precision 0, recall 0, matched 0 (4 system non-info findings vs 6 expected); FP rate on negatives PASS; routing PASS (0 matches); S1 baseline PASS; and 12/12 documents' flagged/cleared status correct. The success targets in section 7 are therefore NOT met at clause level. See `scoring_diagnosis.md` for the open export-format question.
+```mermaid
+flowchart LR
+    L1["Law at S1<br/>2024-12-31"] --> D["Impact engine"]
+    L2["Law at S2<br/>2025-12-31"] --> D
+    C["Company documents<br/>2,334 clauses"] --> D
+    D --> N["Noise cleared<br/>with a reason"]
+    D --> F["Findings: clause, quotes,<br/>required change, owner"]
+    D --> R["Radar: changes outside<br/>company citations"]
+```
 
-## 4. Users
-- Compliance analyst: triages the wave.
-- Document owner, reviewer, approver: act on findings. Routing comes from `company.company_documents`.
-- Demo audience: an energy-regulation domain expert.
+Deterministic steps remove noise and pick candidates; a bounded model judgment runs only on survivors. Rationale: [TDD](TDD.md).
+
+## 3. Target users
+- **Compliance analyst:** triages a regulatory wave via a funnel from 1,114 changes to a short findings list.
+- **Document owner, reviewer, approver:** learns what to fix and who signs; findings are routed via the document register.
+- **Evaluator or domain expert:** needs to trust the result: verified quotes, cleared-with-reason ledger, scorecard, what-if.
+
+## 4. Demo scenario assumptions
+- All 12 documents comply with S1, so S1 vs S1 must give zero actionable findings (a control).
+- State code 2024-12-31 to 2025-12-31; federal 2025-01-02 to 2026-10-02.
+- S2 holds only changed or new sections; absence means unchanged, never repealed (prevents false repeal findings).
+- Only S1-to-S2 changes are evaluated, and matching is generic: nothing is tied to RPL, a document or a citation (guards against overfitting).
 
 ## 5. Features
-### Must (v1)
-| ID | Feature | One-line definition |
+| ID | Feature | Priority |
 |---|---|---|
-| M1 | Impact engine | 5-stage pipeline: delta → characterize → candidates → judge → ledger (`engine_spec.md`) |
-| M2 | Signal funnel | Raw changes → after normalization → in RPL footprint → obligation changed → findings; also clauses cleared |
-| M3 | Document board | One card per document: flagged/cleared, verdict counts, owner, reason when cleared |
-| M4 | Clause evidence card | S1 vs S2 word diff, clause text with quote highlighted, verdict, required change, match path, rationale, also-affected, route |
-| M5 | Ledger | Every change has a disposition. Every cleared clause has a reason (e.g. "cosmetic readoption stamp") |
-| M6 | Scorecard | `backend/app/company/corpus/eval/scoring.py` metrics for the real wave plus the S1 baseline result |
-| M7 | What-if mode | The user edits or repeals a cited S1 section (or picks a preset); the same engine runs; results are labeled SIMULATED |
+| M1 | Impact engine and signal funnel: delta, characterize, candidates, judge, ledger ([Engine](supporting/ENGINE_SPEC.md)) | Must |
+| M3 | Document board: flagged or cleared, verdict counts, owner, reason if cleared | Must |
+| M4 | Evidence card: word-level diff, highlighted quote, verdict, required change, rationale, route | Must |
+| M5 | Ledger: every change has a disposition; every cleared clause a reason | Must |
+| M6 | Scorecard: precision, recall, routing vs a held-out answer key | Must |
+| M7 | What-if: edit or repeal a cited section; output labelled simulated | Must |
+| S1 | Radar: substantive changes with no company citation, screened by company attributes | Should |
+| S2 | Review actions: accept or reject a finding with a note | Should |
 
-### Should (build after Must; cuttable)
-| ID | Feature | One-line definition |
-|---|---|---|
-| S1 | Regulatory radar | Substantive changes with no RPL citation, screened against `company_attributes`: possibly applicable / screened out (reason) / unclear |
-| S2 | Review actions | Accept or reject a finding with a note; document shows reviewed count |
-
-## 6. Verdict vocabulary (UI label ← `finding_type`)
-| UI verdict | finding_type(s) | Meaning |
-|---|---|---|
-| Action required | `parameter_change`, `required_content_change`, `conflict`, `new_requirement_gap`, `stale_at_approval` | The clause now conflicts with the rule |
-| Optional — rule relaxed | any of the above with `direction='relaxed'` | The clause is stricter than the law now requires |
-| Update citation | `stale_citation` | The text is fine; the reference is stale (renumbered or repealed) |
-| Review | `informational` with `needs_review=true` | Low confidence or unverified evidence |
-| Info | `informational` | No action |
-| Cleared (not a finding) | — | Candidate checked: no impact, with reason |
-
-Severity: high = customer- or regulator-facing obligation; medium = internal process; low = informational.
-
-## 7. Success criteria
-- S1 baseline run: 0 non-informational findings.
-- Real wave (`scoring.py`): false-positive rate on `must_not_flag` = 0; precision ≥ 0.80; recall ≥ 0.83; routing ≥ 0.80.
-- 100% of non-informational findings have verified quotes.
-- Every change record has a disposition. Every candidate is judged or has a skip reason (enforced by a ledger check).
-- What-if preset results load instantly (pre-run). A custom what-if run finishes in < 120 s.
-- Reruns are reproducible via the LLM cache.
-
-## 8. Out of scope — do not build
-| Item | Why |
+## 6. Verdict vocabulary
+| Verdict | Meaning |
 |---|---|
-| Definition-ripple matching | No `defined_terms` link to code sections; no definitions changed |
-| Semantic or hybrid search candidate path | Not needed at this scale; no hybrid search exists |
-| Subsection parser | Few changes; the judge sees the word diff and the clause's subsection |
-| Quantified dataset impact | `datasets` is empty; no real change hits a dataset parameter |
-| Compliance countdown | No effective dates; show the DIN publication date only |
-| Auto-editing documents or creating new document versions | Flag-only product decision |
-| Auth, multi-company, notifications | Not needed for the demo |
-| Changes to existing `/regulations`, `/diff`, `/impact`, `/timeline` routes | Leave them untouched |
-| Agents with tools | All work fits bounded calls with guaranteed completeness |
+| Action required | Clause conflicts with the rule or lacks a new requirement |
+| Optional (rule relaxed) | Clause is stricter than the law now requires |
+| Update citation | Text fine; reference renumbered or repealed |
+| Review | Low confidence or unverified evidence; a human must look |
+| Info / Cleared | Relevant with no action / checked with no impact, reason recorded |
+Severity: high for customer- or regulator-facing obligations, medium for internal process, low for informational.
 
-## 9. Glossary
-- **Change record**: one S1→S2 change to one code section (or one what-if edit).
-- **Footprint**: code sections or rules that RPL clauses cite (resolved citations).
-- **Candidate**: a (change, clause) pair to evaluate. It carries a `match_path`.
-- **Finding**: a candidate judged affected. Cleared candidates are recorded but are not findings.
-- **Run**: one engine execution. `kind` ∈ `kb` (real wave), `baseline` (S1 vs S1), `whatif`.
+## 7. Success criteria and honest status
+Method and numbers: [Evaluation and results](supporting/EVALUATION_AND_RESULTS.md).
+
+| Criterion | Target | Status |
+|---|---|---|
+| Actionable findings on S1-vs-S1 control | 0 | Met, but a weak check (that run builds no inputs) |
+| False positives on the do-not-flag set | 0 | Met |
+| Document status correct | 12 of 12 | Met |
+| Verified quotes on actionable findings; every change has a disposition | 100% | Enforced by an automatic ledger check |
+| Reproducible reruns | Identical | Met: latest run needed no fresh model calls |
+| Clause-level precision, recall, routing | 0.80, 0.83, 0.80 | **Not met.** 0 matches, suspected format mismatch with the answer key; unresolved, so no score is claimed |
+| What-if presets | Load instantly | Met (pre-run); free-form what-if is gated |
+
+## 8. Out of scope
+| Not built | Rationale |
+|---|---|
+| Auto-editing documents | Product decision: humans own the text |
+| Definition ripple | Defined terms are not linked to code sections in the data |
+| Semantic or hybrid search | Citation and structure matching suffice at this scale |
+| Dataset impact, compliance countdown | Dataset registry empty; state changes lack effective dates |
+| Autonomous tool-using agents | Bounded, cached calls give guaranteed coverage and auditability |
+Roadmap: [Limitations and roadmap](supporting/LIMITATIONS_AND_ROADMAP.md).
+Terms: S1/S2 are old/new law snapshots; a candidate is a (change, clause) pair; a finding is a candidate judged affected. Next: [TDD](TDD.md)
