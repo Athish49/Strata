@@ -10,8 +10,8 @@ import type {
   SectionS1Text,
   Stage,
   Verdict,
-} from "../schemas";
-import type { EngineApi, Matrix, Reader } from "../client";
+} from "@/lib/api/schemas";
+import type { EngineApi, Matrix, Reader } from "@/lib/api/client";
 import { fixtures, loadClauses, PRESET_A_RUN_ID, type RunData } from "./fixtures";
 import { getState, persist, type CustomRun } from "./state";
 import { withLatency } from "./config";

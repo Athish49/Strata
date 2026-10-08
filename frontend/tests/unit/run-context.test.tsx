@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { withRunParam } from "@/lib/app-link";
 import { DEFAULT_RUN_ID, latestKbRunId, useRunContext } from "@/lib/run-context";
-import { mockApi, setMockLatency } from "@/lib/api/mock";
+import { mockApi, setMockLatency } from "@/tests/support/mock-api";
 import { renderHook } from "@testing-library/react";
 
 describe("withRunParam", () => {

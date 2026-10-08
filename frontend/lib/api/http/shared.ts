@@ -1,7 +1,8 @@
 // Shared helpers for the HTTP adapters. No domain logic, no fixtures.
 import type { ZodType } from "zod";
 
-export const API_BASE = (process.env.NEXT_PUBLIC_STRATA_API_URL || "http://localhost:8000").replace(/\/+$/, "");
+// BACKEND_URL is inlined at build time by next.config.ts. Trailing slashes are ignored.
+export const API_BASE = (process.env.BACKEND_URL ?? "").replace(/\/+$/, "");
 
 export class ApiError extends Error {
   readonly status: number;

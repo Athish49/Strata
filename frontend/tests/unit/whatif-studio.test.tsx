@@ -4,7 +4,7 @@ import { cleanup, fireEvent, render, screen, waitFor } from "@testing-library/re
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { api } from "@/lib/api/client";
-import { resetMockState, setMockLatency } from "@/lib/api/mock";
+import { resetMockState, setMockLatency } from "@/tests/support/mock-api";
 
 const push = vi.fn();
 vi.mock("next/navigation", () => ({
@@ -74,7 +74,8 @@ describe("What-if studio", () => {
     expect(ta).toBeDisabled();
   });
 
-  it("custom run (mock mode) shows the stage stepper", async () => {
+  it("custom run (when enabled) shows the stage stepper", async () => {
+    vi.stubEnv("NEXT_PUBLIC_STRATA_ALLOW_CUSTOM_WHATIF", "1");
     renderStudio();
     const ta = (await pickFirstSection()) as HTMLTextAreaElement;
     fireEvent.change(ta, { target: { value: `${ta.value} Added sentence.` } });

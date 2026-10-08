@@ -1,4 +1,4 @@
-import type { CompanyApi } from "../client";
+import type { CompanyApi } from "@/lib/api/client";
 import { fixtures, loadClauses } from "./fixtures";
 import { withLatency } from "./config";
 

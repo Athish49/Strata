@@ -53,7 +53,6 @@ Global search finds a document, change, clause or section from any screen.
 - **Long runs are asynchronous.** Starting a what-if returns immediately. The interface polls the run's progress and refreshes the result views when it finishes.
 - **Results appear only when a run is complete.** A run in progress reports progress, not partial results. The interface treats this as "nothing yet", not as an error.
 - **Contracts are checked.** Each response is validated against a schema on arrival, so drift between engine and interface fails visibly rather than showing wrong numbers.
-- **Mock-data mode.** A switch makes the whole interface use frozen snapshots of a real run, so demos work offline and never mix mock and live data. Snapshots can differ from the live store.
 - **Cost guard.** Custom what-if runs spend model budget, so they are off by default in live mode. Pre-computed presets remain available.
 
 ## 5. Tech note

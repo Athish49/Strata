@@ -1,6 +1,6 @@
 /**
  * Live-mode demo walk (spec §12). READ-ONLY: no clicks on Accept/Reject, no POST, no LLM.
- * Runs against the already-running servers (frontend :3000 with NEXT_PUBLIC_STRATA_DATA=http, backend :8000).
+ * Runs against the already-running servers (frontend :3000, backend :8000).
  * Every expected number is read from the API at test time (never hardcoded).
  */
 import { expect, test, type Page, type ConsoleMessage } from "@playwright/test";

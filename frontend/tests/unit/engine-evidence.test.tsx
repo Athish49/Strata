@@ -5,7 +5,7 @@ import { NuqsTestingAdapter } from "nuqs/adapters/testing";
 import type { ReactNode } from "react";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { EvidenceCardBody, EvidenceDrawer, EvidenceDrawerView } from "@/components/engine";
-import { mockApi, resetMockState, setMockLatency } from "@/lib/api/mock";
+import { mockApi, resetMockState, setMockLatency } from "@/tests/support/mock-api";
 import { qk } from "@/lib/api/queries";
 
 afterEach(cleanup);

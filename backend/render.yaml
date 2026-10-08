@@ -54,8 +54,8 @@ services:
         value: "8"
       - key: ENGINE_RADAR_CONCURRENCY
         value: "16"
-      - key: ENGINE_CORS_ORIGINS
-        sync: false   # comma-separated, e.g. https://strata.vercel.app (unset or * allows all)
+      - key: FRONTEND_URL
+        value: https://strata-ten-nu.vercel.app
     healthCheckPath: /health
 
   - type: cron

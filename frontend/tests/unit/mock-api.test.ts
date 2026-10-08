@@ -1,6 +1,6 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import { z } from "zod";
-import { mockApi, resetMockState, setMockLatency, CUSTOM_RUN_MS } from "@/lib/api/mock";
+import { mockApi, resetMockState, setMockLatency, CUSTOM_RUN_MS } from "@/tests/support/mock-api";
 import {
   candidateSchema,
   changeRecordSchema,

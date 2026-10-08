@@ -11,7 +11,7 @@ import { FindingsRail } from "@/components/documents/reader/FindingsRail";
 import { ReaderHeader, rollupSentence } from "@/components/documents/reader/ReaderHeader";
 import { buildReaderModel, notesByClause, notesFor, railFindings, clearedClauses } from "@/components/documents/reader/model";
 import { documentStatus } from "@/lib/status";
-import { setMockLatency } from "@/lib/api/mock";
+import { setMockLatency } from "@/tests/support/mock-api";
 
 afterEach(cleanup);
 beforeAll(() => setMockLatency(false));
@@ -291,7 +291,7 @@ describe("ReaderHeader", () => {
 
 describe("DocumentReader with mock fixtures (what-if preset A on RPL-CS-PRO-004)", () => {
   it("shows findings in the rail and one finding on a form field rendered as a letter", async () => {
-    const { mockApi } = await import("@/lib/api/mock");
+    const { mockApi } = await import("@/tests/support/mock-api");
     const reader = await mockApi.engine.getReader("RPL-CS-PRO-004", "run_whatif_preset_a");
     expect(reader).not.toBeNull();
     const findings = railFindings(reader!.clauses, reader!.annotations);

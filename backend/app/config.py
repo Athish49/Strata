@@ -13,6 +13,9 @@ class Settings(BaseSettings):
     R2_SECRET_ACCESS_KEY: str
     R2_BUCKET_NAME: str
 
+    # Origin(s) of the web app allowed to call this API (CORS). Comma-separated; no wildcard.
+    FRONTEND_URL: str = "http://localhost:3000"
+
     # Company ingest settings
     CORPUS_ROOT: str = str(Path(__file__).parent.parent / "app" / "company" / "corpus")
     COMPANY_ID: str = "rpl"

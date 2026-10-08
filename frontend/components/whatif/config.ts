@@ -1,21 +1,17 @@
 /**
  * The ONE place that decides whether custom (non-preset) what-if runs may be started.
- * Custom runs POST to the shared backend and spend model budget, so they are off in live mode.
+ * Custom runs POST to the shared backend and spend model budget, so they are off unless enabled.
  *
- *   NEXT_PUBLIC_STRATA_ALLOW_CUSTOM_WHATIF=1  -> allowed
- *   NEXT_PUBLIC_STRATA_ALLOW_CUSTOM_WHATIF=0  -> not allowed
- *   unset                                     -> allowed in mock mode, NOT allowed when NEXT_PUBLIC_STRATA_DATA=http
+ *   NEXT_PUBLIC_STRATA_ALLOW_CUSTOM_WHATIF=1 (or "true") -> allowed; anything else -> not allowed
  */
-export function resolveCustomWhatIf(flag: string | undefined, dataMode: string | undefined): boolean {
+export function resolveCustomWhatIf(flag: string | undefined): boolean {
   const f = (flag ?? "").trim().toLowerCase();
-  if (f === "1" || f === "true") return true;
-  if (f === "0" || f === "false") return false;
-  return dataMode !== "http";
+  return f === "1" || f === "true";
 }
 
-/** Literal `process.env.NEXT_PUBLIC_*` reads so Next inlines them into the client bundle. */
+/** Literal `process.env.NEXT_PUBLIC_*` read so Next inlines it into the client bundle. */
 export function customWhatIfAllowed(): boolean {
-  return resolveCustomWhatIf(process.env.NEXT_PUBLIC_STRATA_ALLOW_CUSTOM_WHATIF, process.env.NEXT_PUBLIC_STRATA_DATA);
+  return resolveCustomWhatIf(process.env.NEXT_PUBLIC_STRATA_ALLOW_CUSTOM_WHATIF);
 }
 
 /** Local registry entry for the paused-run cue (the shared registry in lib/future-features.ts is not edited). */

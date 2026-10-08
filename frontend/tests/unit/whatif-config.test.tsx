@@ -6,15 +6,14 @@ import { stageCountsFor, runSummary } from "@/components/whatif/RunPanel";
 import type { Run } from "@/lib/api/schemas";
 
 describe("custom what-if flag", () => {
-  it("defaults to allowed in mock mode and blocked in live (http) mode", () => {
-    expect(resolveCustomWhatIf(undefined, undefined)).toBe(true);
-    expect(resolveCustomWhatIf(undefined, "mock")).toBe(true);
-    expect(resolveCustomWhatIf(undefined, "http")).toBe(false);
+  it("is blocked unless explicitly enabled", () => {
+    expect(resolveCustomWhatIf(undefined)).toBe(false);
+    expect(resolveCustomWhatIf("")).toBe(false);
+    expect(resolveCustomWhatIf("0")).toBe(false);
   });
-  it("=1 enables and =0 disables regardless of mode", () => {
-    expect(resolveCustomWhatIf("1", "http")).toBe(true);
-    expect(resolveCustomWhatIf("0", "mock")).toBe(false);
-    expect(resolveCustomWhatIf("", "http")).toBe(false);
+  it("=1 or true enables", () => {
+    expect(resolveCustomWhatIf("1")).toBe(true);
+    expect(resolveCustomWhatIf("true")).toBe(true);
   });
 });
 

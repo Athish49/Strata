@@ -16,7 +16,7 @@ export interface RunContextValue {
   setRunId: (id: string | null) => void;
 }
 
-/** Mock-mode id of the real wave run. Live mode resolves the default from the runs list instead. */
+/** Id of the real wave run in the test fixtures. The app resolves the default from the live runs list instead. */
 export const DEFAULT_RUN_ID = "run_kb_real";
 
 /** Newest succeeded kb run (the default when ?run= is absent), or null. */

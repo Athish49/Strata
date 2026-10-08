@@ -1,5 +1,5 @@
 // In-memory mutable mock state, mirrored to sessionStorage (all access guarded).
-import type { Finding, Scenario } from "../schemas";
+import type { Finding, Scenario } from "@/lib/api/schemas";
 
 type Review = Finding["reviews"][number];
 

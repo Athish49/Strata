@@ -1,5 +1,4 @@
 import { httpApi } from "./http";
-import { mockApi } from "./mock";
 import type {
   Agency,
   Candidate,
@@ -115,5 +114,5 @@ export interface StrataApi {
   company: CompanyApi;
 }
 
-/** The single place that picks the StrataApi implementation. */
-export const api: StrataApi = process.env.NEXT_PUBLIC_STRATA_DATA === "http" ? httpApi : mockApi;
+/** The app always talks to the live backend. */
+export const api: StrataApi = httpApi;

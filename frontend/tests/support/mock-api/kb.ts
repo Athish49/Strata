@@ -1,6 +1,6 @@
 import { diffLines } from "diff";
-import type { Agency, LineDiff } from "../schemas";
-import type { KbApi, Page } from "../client";
+import type { Agency, LineDiff } from "@/lib/api/schemas";
+import type { KbApi, Page } from "@/lib/api/client";
 import { fixtures } from "./fixtures";
 import { withLatency } from "./config";
 

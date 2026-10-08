@@ -4,7 +4,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { NuqsTestingAdapter } from "nuqs/adapters/testing";
 import type { ReactNode } from "react";
 import { TooltipProvider } from "@/components/ui/tooltip";
-import { resetMockState, setMockLatency } from "@/lib/api/mock";
+import { resetMockState, setMockLatency } from "@/tests/support/mock-api";
 import { ChangeDetail } from "@/components/changes/ChangeDetail";
 
 vi.mock("next/navigation", () => ({

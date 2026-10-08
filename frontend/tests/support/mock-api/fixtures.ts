@@ -24,7 +24,7 @@ import {
   type Finding,
   type RadarItem,
   type VersionEntry,
-} from "../schemas";
+} from "@/lib/api/schemas";
 
 import documentsJson from "../../../fixtures/company/documents.json";
 import peopleJson from "../../../fixtures/company/people.json";
