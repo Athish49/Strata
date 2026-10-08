@@ -24,6 +24,7 @@ class Settings(BaseSettings):
 
     class Config:
         env_file = ".env"
+        extra = "ignore"  # tolerate ENGINE_* keys (read by app.engine.config)
 
 
 settings = Settings()

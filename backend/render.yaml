@@ -4,7 +4,7 @@ services:
     env: python
     plan: free
     buildCommand: pip install -r requirements.txt
-    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    startCommand: alembic upgrade head && uvicorn app.main:app --host 0.0.0.0 --port $PORT
     envVars:
       - key: DATABASE_URL
         sync: false
@@ -22,6 +22,38 @@ services:
         sync: false
       - key: R2_BUCKET_NAME
         value: strata
+      - key: LLM_API_KEY
+        sync: false
+      - key: LLM_PROVIDER
+        value: anthropic
+      - key: LLM_MODEL
+        value: claude-sonnet-5-5
+      - key: ENGINE_COMPANY_ID
+        value: rpl
+      - key: ENGINE_CHARACTERIZE_MODEL
+        value: claude-sonnet-5-5
+      - key: ENGINE_JUDGE_MODEL
+        value: claude-sonnet-5-5
+      - key: ENGINE_RADAR_MODEL
+        value: claude-haiku-4-5-20251001
+      - key: ENGINE_MIN_CONFIDENCE
+        value: "0.6"
+      - key: ENGINE_RENUMBER_JACCARD
+        value: "0.80"
+      - key: ENGINE_JUDGE_MAX_SECTION_CHARS
+        value: "8000"
+      - key: ENGINE_JUDGE_WINDOW_CHARS
+        value: "1500"
+      - key: ENGINE_MAX_LLM_CALLS_KB
+        value: "900"
+      - key: ENGINE_MAX_LLM_CALLS_WHATIF
+        value: "300"
+      - key: ENGINE_LLM_CONCURRENCY
+        value: "8"
+      - key: ENGINE_RADAR_CONCURRENCY
+        value: "16"
+      - key: ENGINE_CORS_ORIGINS
+        sync: false   # comma-separated, e.g. https://strata.vercel.app (unset or * allows all)
     healthCheckPath: /health
 
   - type: cron

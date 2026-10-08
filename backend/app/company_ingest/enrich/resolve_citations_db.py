@@ -8,7 +8,7 @@ Resolution logic:
 - CFR  → parse citation_raw; match by title/part/section_number
 - IC   → not_monitored (not in scope)
 - USC  → not_monitored (not in scope)
-- external_standard → external (leave as-is)
+- external_standard → external (no KB lookup; set so no row is left NULL)
 - unknown → unparsed
 
 Idempotent: re-running skips rows already resolved to anything other than
@@ -108,13 +108,14 @@ def _iac_normalized_key(title: int, article: str, section) -> Optional[str]:
 # Main resolver
 # --------------------------------------------------------------------------- #
 
-def resolve_all_citations(conn) -> dict:
+def resolve_all_citations(conn, dry_run: bool = False) -> dict:
     """
     Resolve all unresolved rows in company.clause_citations.
 
     Parameters
     ----------
     conn : psycopg2 connection (autocommit=False is recommended for callers)
+    dry_run : compute and return the counts but write nothing
 
     Returns
     -------
@@ -165,11 +166,12 @@ def resolve_all_citations(conn) -> dict:
         FROM company.clause_citations cc
         LEFT JOIN company.clauses cl ON cl.clause_pk = cc.clause_pk
         LEFT JOIN company.document_versions dv ON dv.version_id = cl.version_id
-        WHERE cc.source_system != 'external_standard'
-          AND (
+        WHERE (
             cc.resolution_status IS NULL
             OR cc.resolution_status NOT IN %s
           )
+          AND NOT (cc.source_system = 'external_standard'
+                   AND cc.resolution_status IS NOT DISTINCT FROM 'external')
         """,
         (fallback_law_as_of, tuple(_TERMINAL - frozenset({"external"})))
     )
@@ -200,6 +202,12 @@ def resolve_all_citations(conn) -> dict:
         # ------------------------------------------------------------------ #
         if source_system in ("ic", "usc"):
             status = "not_monitored"
+
+        # ------------------------------------------------------------------ #
+        # external_standard → external (no KB lookup)                         #
+        # ------------------------------------------------------------------ #
+        elif source_system == "external_standard":
+            status = "external"
 
         # ------------------------------------------------------------------ #
         # unknown → unparsed                                                  #
@@ -326,7 +334,7 @@ def resolve_all_citations(conn) -> dict:
     # ------------------------------------------------------------------ #
     # 3. Batch-update                                                      #
     # ------------------------------------------------------------------ #
-    if updates:
+    if updates and not dry_run:
         cur.executemany(
             """
             UPDATE company.clause_citations
