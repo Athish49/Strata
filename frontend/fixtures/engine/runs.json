@@ -108,7 +108,7 @@
   {
     "run_id": "run_whatif_preset_a",
     "kind": "whatif",
-    "title": "What-if: 170 IAC 4-1-16: notice period 14 → 20 days",
+    "title": "170 IAC 4-1-16: notice period 14 → 20 days",
     "status": "succeeded",
     "started_at": "2026-10-07T14:02:11Z",
     "finished_at": "2026-10-07T14:02:12Z",
@@ -153,7 +153,7 @@
   {
     "run_id": "run_whatif_preset_b",
     "kind": "whatif",
-    "title": "What-if: Repeal 170 IAC 4-1-16.6 (winter protection)",
+    "title": "Repeal 170 IAC 4-1-16.6 (winter protection)",
     "status": "succeeded",
     "started_at": "2026-10-07T14:05:40Z",
     "finished_at": "2026-10-07T14:05:41Z",

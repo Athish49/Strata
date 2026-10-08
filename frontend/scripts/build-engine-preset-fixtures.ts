@@ -308,7 +308,7 @@ function build(def: PresetDef) {
   const run: Run = runSchema.parse({
     run_id: def.runId,
     kind: "whatif",
-    title: `What-if: ${def.title}`,
+    title: def.title,
     status: "succeeded",
     started_at: def.startedAt,
     finished_at: def.finishedAt,

@@ -70,7 +70,7 @@ for (const letter of ["a", "b"] as const) {
       expect(run.kind).toBe("whatif");
       expect(run.status).toBe("succeeded");
       expect(run.scenario_id).toBe(scenario.scenario_id);
-      expect(run.title).toBe(`What-if: ${scenario.title}`);
+      expect(run.title).toBe(scenario.title);
       const s = run.stats;
       expect(s.changes_raw).toBe(1);
       expect(s.in_footprint).toBe(1);

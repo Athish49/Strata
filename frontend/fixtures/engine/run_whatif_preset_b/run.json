@@ -1,7 +1,7 @@
 {
   "run_id": "run_whatif_preset_b",
   "kind": "whatif",
-  "title": "What-if: Repeal 170 IAC 4-1-16.6 (winter protection)",
+  "title": "Repeal 170 IAC 4-1-16.6 (winter protection)",
   "status": "succeeded",
   "started_at": "2026-10-07T14:05:40Z",
   "finished_at": "2026-10-07T14:05:41Z",
