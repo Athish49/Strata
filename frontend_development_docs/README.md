@@ -29,3 +29,5 @@ Everything the agent building the Strata frontend needs to read. Nothing in this
 ## Kickoff prompt for the build agent
 
 > You are building the Strata frontend. Read `frontend_development_docs/README.md`, then `frontend_spec.md` and `frontend_brief.md` in full before writing any code. Follow the spec's §0.1 boundaries strictly: all work goes inside `frontend/`, nothing outside it changes, and there is no backend integration (everything is mocked from committed fixtures). Before any UI work, open every screenshot in `frontend_development_docs/reference/design/` and match their look and feel. Build milestone by milestone in the order of spec §13. At the end of each milestone, run lint, typecheck and tests, check that `git status` shows changes only under `frontend/`, commit, and report what was done against that milestone's acceptance criteria. Start with M0.
+
+> **Note:** the `reference/` folder (two audit HTML dumps and four Harvey design screenshots) was removed from the repo to keep it lean. It is still in git history (e.g. commit `a564b99` and earlier). The visual rules it illustrated are written out in `frontend_spec.md` §17.
