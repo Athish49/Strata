@@ -105,5 +105,5 @@ The Next.js app (App Router, TypeScript, Tailwind) lives in the repo-root `front
 
 ## 7. Deployment
 - Backend: FastAPI on Render (`backend/render.yaml`; add `LLM_API_KEY`, `ENGINE_*` env vars and a migration step to the start command). Runs execute as background tasks; CLI scripts are available too.
-- Frontend: Next.js on Vercel, configured with `NEXT_PUBLIC_API_BASE`. Configure CORS in FastAPI.
+- Frontend: Next.js on Vercel, configured with `NEXT_PUBLIC_STRATA_DATA=http` and `NEXT_PUBLIC_STRATA_API_URL` (see `runbook.md`). Configure CORS in FastAPI.
 - No auth. A single company comes from config.

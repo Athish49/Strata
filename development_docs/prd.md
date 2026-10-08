@@ -15,27 +15,32 @@ When government rules change between snapshot S1 and S2, show the company **whic
 - S2 is **write-on-change**: S2 holds only changed or new rows. **A section absent from S2 is unchanged, never repealed.**
 - The engine is generic. No logic keyed to specific doc IDs, citations, titles, or to RPL.
 
-## 3. Data reality (measured 2026-10-07) — the design is built around this
+## 3. Data reality (re-measured 2026-10-08 on real-wave run `0dcc125e-6da6-419f-beb1-8c347e4fb2d4`, via `/engine/runs/{id}`) — the design is built around this
 | Fact | Value |
 |---|---|
-| IAC S2 rows with changed content_hash / new sections | 1,036 / 32 |
-| CFR S2 changed / new | 45 / 1 |
-| IAC changes that are cosmetic (readoption stamps, DIN lines, spacing artifacts) | 996 of 1,036 after the W0 normalizer fix (was 590) — `diff_hash` filters them |
-| Substantive changes (diff_hash), after W0 fix | IAC 40, CFR 37 (total 77; before the fix: IAC 446, CFR 45). Re-verify on the first kb run |
-| Substantive changes in sections RPL cites (after W0 fix) | **4 sections (170 IAC 1-6-2..1-6-5), 45 clauses, 4 documents** (was 8 sections / 3 docs). Re-verify on the first kb run |
-| Of the top 5: real meaning change | ≤1 (others: cosmetic footer, comma, statute-ref metadata, "shall not"→"may not") |
-| `170 IAC 4-1-16` | cited by 94 clauses; its change is cosmetic → must flag 0 |
-| New S2 sections in rules RPL cites / repeal flips RPL cites | 0 / 0 |
-| CFR citations resolved at section level | 0 → all CFR changes go to radar |
-| `defined_terms` linked to code sections | 0 → no definition-ripple path |
-| `company.datasets` | 0 rows → no quantified impact |
-| `restates` links | 3,048, driven by citation-number noise ("170") → not used |
+| S2 rows evaluated (IAC 1,068 + CFR 46) | 1,114 raw changes |
+| By class | cosmetic 1,004; punctuation_only 1; cross_ref_only 10; substantive 63; new_section 33; repealed 3 |
+| Noise (cosmetic + punctuation + cross-ref) | 1,015 (filtered by `diff_hash`/normalizer, W0 fix) |
+| Changes in RPL footprint | 96 (87 cosmetic noise, **9 real**; all 9 characterized as obligation-changed) |
+| Candidates | 1,234 (direct_section 865, register_hop 292, direct_rule 77, value_echo 0); 411 LLM-judged, 0 rule-judged |
+| Findings | **4 action_required**, 0 review, 0 info: RPL-CMP-REG-001 (OBL-2024-0018, 170 IAC 1-6-3) and RPL-REG-CAL-2025 (3.7 / 1-6-2, EVT-2025-0044 / 1-6, EVT-2025-0045 / 1-6-5). The earlier run `05b50712-79df-4c4e-bdb3-c84f31e189ec` had the same 4 plus 3 review items |
+| Documents | 2 flagged / 10 cleared; 721 clauses cleared with reasons; 12 of 12 document statuses match the expected status |
+| Radar | 20 yes / 53 no / 17 unclear |
+| `170 IAC 4-1-16` | cited by many clauses; its change is cosmetic, so it is cleared (0 findings) |
+| New S2 sections in cited rules / repeal flips RPL cites | not re-measured here; the 3 repealed and 33 new sections produced no finding |
+| CFR citations resolved at section level | historically 0, so CFR changes go to radar. Not re-verified in this pass |
+| `defined_terms` linked to code sections | 0, so no definition-ripple path |
+| `company.datasets` | 0 rows, so no quantified impact |
+| `restates` links | 3,048, driven by citation-number noise, not used |
 | Effective dates for IAC changes | none in `regulatory_actions`; only DIN publication dates in S2 text |
+| LLM calls in the latest run | 0 live (all judgments served from `engine.llm_calls`, see engine_spec.md "Offline-filled judgments") |
 
 **Implications**
-1. The real wave is a **precision test**: the engine must clear every clause that cites a changed-but-cosmetic section (63 of 67 cited sections that have an S2 row are cosmetic) and flag only true impacts.
-2. The real wave alone may yield few clause findings. **What-if mode** lets the expert apply a change live and see clause-level conflicts propagate through the same engine.
-3. ~70 substantive changes touch no RPL citation (77 total minus the 4 cited). The **radar** screens them against the company profile; it is small, so it stays Should-have.
+1. The real wave is a **precision test**: the engine must clear every clause that cites a changed-but-cosmetic section (87 of 96 in-footprint changes are cosmetic) and flag only true impacts.
+2. The real wave alone yields few clause findings (4). **What-if mode** lets the expert apply a change live and see clause-level conflicts propagate through the same engine (presets only for the demo; custom what-if is paused).
+3. Most substantive changes touch no RPL citation. The **radar** screens them against the company profile; it stays Should-have.
+
+**Scoring status (honest).** Clause-level scorecard: precision 0, recall 0, matched 0 (4 system non-info findings vs 6 expected); FP rate on negatives PASS; routing PASS (0 matches); S1 baseline PASS; and 12/12 documents' flagged/cleared status correct. The success targets in section 7 are therefore NOT met at clause level. See `scoring_diagnosis.md` for the open export-format question.
 
 ## 4. Users
 - Compliance analyst: triages the wave.

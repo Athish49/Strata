@@ -198,7 +198,7 @@ class JudgeResult(BaseModel):
 6. **Stats.** Write `runs.stats` (see `data_model.md` §4).
 
 ## 6. Export and scoring (`export.py`, `scripts/score_run.py`)
-- Export JSON per `data_model.md` §6. Citation = the section-level form of the clause's cited citation.
+- Export JSON per `data_model.md` §6. Citation = the section-level form of the clause's cited citation. Clause ids are doc-prefixed (`RPL-REG-CAL-2025:3.7`). For `direct_rule` findings the citation is the changed section's citation (e.g. 1-6, 1-6-5 for the calendar events). Whether the answer key expects this exact form is an OPEN question; see `scoring_diagnosis.md`.
 - `score_run.py --run <id>`:
   1. write the export;
   2. run `python app/company/corpus/eval/scoring.py <export> --snapshot S2` (S1 for baseline runs), **never `--verbose`**;
@@ -233,3 +233,9 @@ class RadarResult(BaseModel):
   - **3 value presets.** Pick the top S1 sections (distinct rules) by count of eligible clauses citing them that also carry a non-fragment parameter whose value and unit appear in the section's S1 text. In the S1 text, replace that value token with a changed value: integer N → round(N × 1.5), at least N + 1, keeping the original surface form ("ten (10)" → update both). Title: `"{citation}: {subject} {old}→{new}"`.
   - **1 repeal preset** on the most-cited section.
   - Upsert with `is_preset=true`, run all of them, and store `last_run_id`.
+
+
+## Offline-filled judgments (cache provenance)
+- The Anthropic API hit its spend limit (the key works again as of 2026-10-08, but demo runs are cache-only). Judgments were therefore answered offline by Claude Code agents and inserted into `engine.llm_calls` with `error = 'produced in-session by the assistant (offline stand-in for the API; Anthropic spend limit)'`, so a normal run hits the cache (stage, model, prompt_sha256) with 0 live calls. Set `ENGINE_MAX_LLM_CALLS_KB` low as a fuse for demo runs.
+- Judge input (T1a): `judge.py` passes `clause_role`. Role guidance and a `Clause role:` line are added ONLY for `regulatory_restatement` and `definition` clauses; other roles' prompts are byte-identical, so their cached judgments stay valid. 304 of 411 LLM-judged candidates got new prompts, were answered offline, and imported with `backend/scripts/offline_judge_export.py` / `offline_judge_import.py` (guide: `backend/scripts/offline_judge_GUIDE.md`). They reproduced the same 4 affected clauses.
+- Real wave `0dcc125e-...`: 411 LLM-judged candidates, 0 live LLM calls, 4 action_required, 0 review.
