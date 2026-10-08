@@ -1,0 +1,3687 @@
+[
+  {
+    "clause_id": "RPL-TAR-GRR-012:S01.1",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 1,
+    "heading_path": [
+      "Sheet 1 — Title Sheet"
+    ],
+    "unit_kind": "section",
+    "text_raw": "This tariff constitutes the General Rules and Regulations governing the supply of electric service by Rockridge Power & Light Company (hereinafter \"Company\" or \"RPL\"), an investor-owned public utility organized and existing under the laws of the State of Indiana and subject to the jurisdiction of the Indiana Utility Regulatory Commission (IURC). This tariff is filed pursuant to IC 8-1-2-38 and 170 IAC 1-2-1 through 170 IAC 1-2-12 and constitutes, together with all Rate Schedules incorporated herein by reference, the complete schedule of rates, tolls, charges, rules, regulations, and conditions governing RPL's provision of electric distribution service.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:S01.2",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 2,
+    "heading_path": [
+      "Sheet 1 — Title Sheet"
+    ],
+    "unit_kind": "section",
+    "text_raw": "Previous Causes: This tariff supersedes versions approved in Cause Nos. 98876 (eff. 2019-07-01) and 98951 (eff. 2021-10-01). The current revision was approved in Cause No. 99012 with an effective date of 2024-06-01.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:S01.3",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 3,
+    "heading_path": [
+      "Sheet 1 — Title Sheet"
+    ],
+    "unit_kind": "section",
+    "text_raw": "Document Approval:\n- Prepared by: Aisha Thompson, Senior Rates & Tariffs Analyst (P11)\n- Reviewed by: Robert Haskins, Manager Rates & Tariffs (P10)\n- Approved by: Jonathan Pierce, Senior Counsel Regulatory (P03)\n- Approved date: 2024-05-15\n- Issued by: Thomas Whitfield, Vice President, Regulatory & Government Affairs (P07)",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:S01.3~c1",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 4,
+    "heading_path": [
+      "Sheets 2–3 — Table of Contents / Index"
+    ],
+    "unit_kind": "section",
+    "text_raw": "2nd Revised Sheets 2–3 | Cause No. 99012 | Effective: 2024-06-01",
+    "row_cells": null,
+    "parent_clause_id": "RPL-TAR-GRR-012:S01.3"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:S02.1",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 5,
+    "heading_path": [
+      "Sheet 4 — Service Area"
+    ],
+    "unit_kind": "section",
+    "text_raw": "Sheet 4 — Service Area\nOriginal Sheet 4 | Cause No. 98876 | Effective: 2019-07-01",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:S02.1.tbl1.r1",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 6,
+    "heading_path": [
+      "Sheets 2–3 — Table of Contents / Index"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "1 | — | Title Sheet | 2nd Rev | 2024-06-01",
+    "row_cells": {
+      "Sheet(s)": "1",
+      "Rule / Item": "—",
+      "Description": "Title Sheet",
+      "Revision": "2nd Rev",
+      "Effective": "2024-06-01"
+    },
+    "parent_clause_id": "RPL-TAR-GRR-012:S02.1"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:S02.1.tbl1.r2",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 7,
+    "heading_path": [
+      "Sheets 2–3 — Table of Contents / Index"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "2–3 | — | Table of Contents / Index | 2nd Rev | 2024-06-01",
+    "row_cells": {
+      "Sheet(s)": "2–3",
+      "Rule / Item": "—",
+      "Description": "Table of Contents / Index",
+      "Revision": "2nd Rev",
+      "Effective": "2024-06-01"
+    },
+    "parent_clause_id": "RPL-TAR-GRR-012:S02.1"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:S02.1.tbl1.r3",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 8,
+    "heading_path": [
+      "Sheets 2–3 — Table of Contents / Index"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "4 | — | Service Area | Original | 2019-07-01",
+    "row_cells": {
+      "Sheet(s)": "4",
+      "Rule / Item": "—",
+      "Description": "Service Area",
+      "Revision": "Original",
+      "Effective": "2019-07-01"
+    },
+    "parent_clause_id": "RPL-TAR-GRR-012:S02.1"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:S02.1.tbl1.r4",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 9,
+    "heading_path": [
+      "Sheets 2–3 — Table of Contents / Index"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "5–11 | Rule 1 | Definitions | 1st Rev (Sh 10–11) | 2021-10-01",
+    "row_cells": {
+      "Sheet(s)": "5–11",
+      "Rule / Item": "Rule 1",
+      "Description": "Definitions",
+      "Revision": "1st Rev (Sh 10–11)",
+      "Effective": "2021-10-01"
+    },
+    "parent_clause_id": "RPL-TAR-GRR-012:S02.1"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:S02.1.tbl1.r5",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 10,
+    "heading_path": [
+      "Sheets 2–3 — Table of Contents / Index"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "12 | Rule 2 | Application of Rules | Original | 2019-07-01",
+    "row_cells": {
+      "Sheet(s)": "12",
+      "Rule / Item": "Rule 2",
+      "Description": "Application of Rules",
+      "Revision": "Original",
+      "Effective": "2019-07-01"
+    },
+    "parent_clause_id": "RPL-TAR-GRR-012:S02.1"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:S02.1.tbl1.r6",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 11,
+    "heading_path": [
+      "Sheets 2–3 — Table of Contents / Index"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "13–14 | Rule 3 | Records | Original | 2019-07-01",
+    "row_cells": {
+      "Sheet(s)": "13–14",
+      "Rule / Item": "Rule 3",
+      "Description": "Records",
+      "Revision": "Original",
+      "Effective": "2019-07-01"
+    },
+    "parent_clause_id": "RPL-TAR-GRR-012:S02.1"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:S02.1.tbl1.r7",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 12,
+    "heading_path": [
+      "Sheets 2–3 — Table of Contents / Index"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "15–16 | Rule 4 | Service Requirements | 1st Rev | 2021-10-01",
+    "row_cells": {
+      "Sheet(s)": "15–16",
+      "Rule / Item": "Rule 4",
+      "Description": "Service Requirements",
+      "Revision": "1st Rev",
+      "Effective": "2021-10-01"
+    },
+    "parent_clause_id": "RPL-TAR-GRR-012:S02.1"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:S02.1.tbl1.r8",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 13,
+    "heading_path": [
+      "Sheets 2–3 — Table of Contents / Index"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "17–18 | Rule 5 | Temporary Service | Original | 2019-07-01",
+    "row_cells": {
+      "Sheet(s)": "17–18",
+      "Rule / Item": "Rule 5",
+      "Description": "Temporary Service",
+      "Revision": "Original",
+      "Effective": "2019-07-01"
+    },
+    "parent_clause_id": "RPL-TAR-GRR-012:S02.1"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:S02.1.tbl1.r9",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 14,
+    "heading_path": [
+      "Sheets 2–3 — Table of Contents / Index"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "19–23 | Rule 6 | Character of Service | 1st Rev | 2021-10-01",
+    "row_cells": {
+      "Sheet(s)": "19–23",
+      "Rule / Item": "Rule 6",
+      "Description": "Character of Service",
+      "Revision": "1st Rev",
+      "Effective": "2021-10-01"
+    },
+    "parent_clause_id": "RPL-TAR-GRR-012:S02.1"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:S02.1.tbl1.r10",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 15,
+    "heading_path": [
+      "Sheets 2–3 — Table of Contents / Index"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "24 | Rule 7 | Customer Equipment | Original | 2019-07-01",
+    "row_cells": {
+      "Sheet(s)": "24",
+      "Rule / Item": "Rule 7",
+      "Description": "Customer Equipment",
+      "Revision": "Original",
+      "Effective": "2019-07-01"
+    },
+    "parent_clause_id": "RPL-TAR-GRR-012:S02.1"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:S02.1.tbl1.r11",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 16,
+    "heading_path": [
+      "Sheets 2–3 — Table of Contents / Index"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "25–26 | Rule 8 | Point of Delivery | Original | 2019-07-01",
+    "row_cells": {
+      "Sheet(s)": "25–26",
+      "Rule / Item": "Rule 8",
+      "Description": "Point of Delivery",
+      "Revision": "Original",
+      "Effective": "2019-07-01"
+    },
+    "parent_clause_id": "RPL-TAR-GRR-012:S02.1"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:S02.1.tbl1.r12",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 17,
+    "heading_path": [
+      "Sheets 2–3 — Table of Contents / Index"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "27–29 | Rule 9 | Metering | 2nd Rev | 2024-06-01",
+    "row_cells": {
+      "Sheet(s)": "27–29",
+      "Rule / Item": "Rule 9",
+      "Description": "Metering",
+      "Revision": "2nd Rev",
+      "Effective": "2024-06-01"
+    },
+    "parent_clause_id": "RPL-TAR-GRR-012:S02.1"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:S02.1.tbl1.r13",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 18,
+    "heading_path": [
+      "Sheets 2–3 — Table of Contents / Index"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "30–31 | Rule 10 | Deposits | 1st Rev | 2021-10-01",
+    "row_cells": {
+      "Sheet(s)": "30–31",
+      "Rule / Item": "Rule 10",
+      "Description": "Deposits",
+      "Revision": "1st Rev",
+      "Effective": "2021-10-01"
+    },
+    "parent_clause_id": "RPL-TAR-GRR-012:S02.1"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:S02.1.tbl1.r14",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 19,
+    "heading_path": [
+      "Sheets 2–3 — Table of Contents / Index"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "32–34 | Rule 11 | Billing | 2nd Rev | 2024-06-01",
+    "row_cells": {
+      "Sheet(s)": "32–34",
+      "Rule / Item": "Rule 11",
+      "Description": "Billing",
+      "Revision": "2nd Rev",
+      "Effective": "2024-06-01"
+    },
+    "parent_clause_id": "RPL-TAR-GRR-012:S02.1"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:S02.1.tbl1.r15",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 20,
+    "heading_path": [
+      "Sheets 2–3 — Table of Contents / Index"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "35–36 | Rule 12 | Billing Adjustments | 1st Rev | 2024-06-01",
+    "row_cells": {
+      "Sheet(s)": "35–36",
+      "Rule / Item": "Rule 12",
+      "Description": "Billing Adjustments",
+      "Revision": "1st Rev",
+      "Effective": "2024-06-01"
+    },
+    "parent_clause_id": "RPL-TAR-GRR-012:S02.1"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:S02.1.tbl1.r16",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 21,
+    "heading_path": [
+      "Sheets 2–3 — Table of Contents / Index"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "37–41 | Rule 13 | Disconnection | 2nd Rev | 2024-06-01",
+    "row_cells": {
+      "Sheet(s)": "37–41",
+      "Rule / Item": "Rule 13",
+      "Description": "Disconnection",
+      "Revision": "2nd Rev",
+      "Effective": "2024-06-01"
+    },
+    "parent_clause_id": "RPL-TAR-GRR-012:S02.1"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:S02.1.tbl1.r17",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 22,
+    "heading_path": [
+      "Sheets 2–3 — Table of Contents / Index"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "42–43 | Rule 14 | Service Interruptions | Original | 2019-07-01",
+    "row_cells": {
+      "Sheet(s)": "42–43",
+      "Rule / Item": "Rule 14",
+      "Description": "Service Interruptions",
+      "Revision": "Original",
+      "Effective": "2019-07-01"
+    },
+    "parent_clause_id": "RPL-TAR-GRR-012:S02.1"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:S02.1.tbl1.r18",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 23,
+    "heading_path": [
+      "Sheets 2–3 — Table of Contents / Index"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "44 | Rule 15 | Liability | Original | 2019-07-01",
+    "row_cells": {
+      "Sheet(s)": "44",
+      "Rule / Item": "Rule 15",
+      "Description": "Liability",
+      "Revision": "Original",
+      "Effective": "2019-07-01"
+    },
+    "parent_clause_id": "RPL-TAR-GRR-012:S02.1"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:S02.1.tbl1.r19",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 24,
+    "heading_path": [
+      "Sheets 2–3 — Table of Contents / Index"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "45–46 | Rule 16 | Non-Recurring Charges (Table F) | 2nd Rev | 2024-06-01",
+    "row_cells": {
+      "Sheet(s)": "45–46",
+      "Rule / Item": "Rule 16",
+      "Description": "Non-Recurring Charges (Table F)",
+      "Revision": "2nd Rev",
+      "Effective": "2024-06-01"
+    },
+    "parent_clause_id": "RPL-TAR-GRR-012:S02.1"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:S02.1.tbl1.r20",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 25,
+    "heading_path": [
+      "Sheets 2–3 — Table of Contents / Index"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "47–49 | — | Reserved | Original | 2019-07-01",
+    "row_cells": {
+      "Sheet(s)": "47–49",
+      "Rule / Item": "—",
+      "Description": "Reserved",
+      "Revision": "Original",
+      "Effective": "2019-07-01"
+    },
+    "parent_clause_id": "RPL-TAR-GRR-012:S02.1"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:S02.1.tbl1.r21",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 26,
+    "heading_path": [
+      "Sheets 2–3 — Table of Contents / Index"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "50–118 | RS Index | Rate Schedule Index Entries | Various | Various",
+    "row_cells": {
+      "Sheet(s)": "50–118",
+      "Rule / Item": "RS Index",
+      "Description": "Rate Schedule Index Entries",
+      "Revision": "Various",
+      "Effective": "Various"
+    },
+    "parent_clause_id": "RPL-TAR-GRR-012:S02.1"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:S04.1",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 27,
+    "heading_path": [
+      "Sheet 4 — Service Area"
+    ],
+    "unit_kind": "section",
+    "text_raw": "Rockridge Power & Light Company is authorized by the Indiana Utility Regulatory Commission to provide electric distribution service within its certificated service territory in the State of Indiana. The Company's service territory encompasses portions of the following fourteen (14) counties in west-central Indiana: Tippecanoe, Clinton, Carroll, White, Benton, Warren, Fountain, Montgomery, Boone, Hendricks, Putnam, Parke, Vermillion, and Vigo.",
+    "row_cells": null,
+    "parent_clause_id": "RPL-TAR-GRR-012:S02.1"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:S04.2",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 28,
+    "heading_path": [
+      "Sheet 4 — Service Area"
+    ],
+    "unit_kind": "section",
+    "text_raw": "Service is provided from five (5) service centers: Lafayette (LAF), Crawfordsville (CRW), Terre Haute (THT), Frankfort (FRK), and Danville (DAN). The exact boundaries of the certificated service territory are on file with the IURC and available for inspection at the Company's principal office at 400 Wabash Commons Drive, Lafayette, IN 47901.",
+    "row_cells": null,
+    "parent_clause_id": "RPL-TAR-GRR-012:S02.1"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:S04.3",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 29,
+    "heading_path": [
+      "Sheet 4 — Service Area"
+    ],
+    "unit_kind": "section",
+    "text_raw": "This tariff and all Rate Schedules herein apply only to service rendered within the certificated service territory of RPL pursuant to IC 8-1-2 and the applicable certificate of territorial authority on file with the Commission. Pursuant to 170 IAC 1-2-1, separate schedules are filed for each class of service.",
+    "row_cells": null,
+    "parent_clause_id": "RPL-TAR-GRR-012:S02.1"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:S04.3~c1",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 30,
+    "heading_path": [
+      "Sheets 5–11 — Rule 1: Definitions"
+    ],
+    "unit_kind": "section",
+    "text_raw": "Original Sheets 5–9 | Cause No. 98876 | Effective: 2019-07-01\n1st Revised Sheets 10–11 | Cause No. 98951 | Effective: 2021-10-01",
+    "row_cells": null,
+    "parent_clause_id": "RPL-TAR-GRR-012:S04.3"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R01.D01",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 31,
+    "heading_path": [
+      "Sheets 5–11 — Rule 1: Definitions"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "Section 1.1 — General. The following definitions apply throughout this tariff. Where a term is defined in IC 8-1-2-1 or the NARUC Uniform System of Accounts (incorporated by reference at 170 IAC 4-2-2), that definition governs except as modified herein. Pursuant to 170 IAC 4-1-1, the Commission's definitions for \"customer,\" \"disconnection,\" and \"late payment charge\" apply throughout this tariff.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R01.D02",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 32,
+    "heading_path": [
+      "Sheets 5–11 — Rule 1: Definitions"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "1.2 — Applicant. Any person, firm, corporation, municipality, or other government agency that requests electric service from the Company at a new service location or at a location not previously served.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R01.D03",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 33,
+    "heading_path": [
+      "Sheets 5–11 — Rule 1: Definitions"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "1.3 — Customer. Any person, firm, corporation, municipality, or other government agency that has agreed, orally or otherwise, to pay for electric service received from RPL. For purposes of Rules 10, 13.1(d), 13.2, and 13.3, the term shall be limited to persons who have agreed to pay for service exclusively for residential purposes, as defined in 170 IAC 4-1-1(c).",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R01.D04",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 34,
+    "heading_path": [
+      "Sheets 5–11 — Rule 1: Definitions"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "1.4 — Commission. The Indiana Utility Regulatory Commission (IURC), PNC Center, 101 W. Washington Street, Suite 1500E, Indianapolis, IN 46204. Consumer Affairs Division: toll-free 1-800-851-4268; direct 317-232-2712; fax 317-233-2410; hours: 8:15 a.m.–4:45 p.m. ET, Monday–Friday; online: iurc.portal.in.gov; State Form 50488.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R01.D05",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 35,
+    "heading_path": [
+      "Sheets 5–11 — Rule 1: Definitions"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "1.5 — OUCC. The Indiana Office of Utility Consumer Counselor, toll-free 1-888-441-2494.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R01.D06",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 36,
+    "heading_path": [
+      "Sheets 5–11 — Rule 1: Definitions"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "1.6 — Company / RPL. Rockridge Power & Light Company, an Indiana investor-owned electric distribution utility subject to Commission jurisdiction under IC 8-1-2, IURC Utility ID 99012.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R01.D07",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 37,
+    "heading_path": [
+      "Sheets 5–11 — Rule 1: Definitions"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "1.7 — Disconnection. The termination or discontinuance of electric service, as defined in 170 IAC 4-1-1(d).",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R01.D08",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 38,
+    "heading_path": [
+      "Sheets 5–11 — Rule 1: Definitions"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "1.8 — Delinquent Bill. A bill for which payment has not been received within seventeen (17) days after the initial bill is postmarked, pursuant to 170 IAC 4-1-13(c).",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R01.D09",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 39,
+    "heading_path": [
+      "Sheets 5–11 — Rule 1: Definitions"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "1.9 — Late Payment Charge. A one-time penalty assessed upon all current bills when they become delinquent, as defined in 170 IAC 4-1-1(e). The charge shall not exceed ten percent (10%) of the first three dollars ($3) and three percent (3%) of the excess of three dollars ($3), pursuant to 170 IAC 4-1-13(c).",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R01.D10",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 40,
+    "heading_path": [
+      "Sheets 5–11 — Rule 1: Definitions"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "1.10 — Service Entrance. The point where the Company's distribution facilities connect to the customer's premises wiring, as determined by the Company in accordance with applicable construction standards and the National Electrical Safety Code (NESC).",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R01.D11",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 41,
+    "heading_path": [
+      "Sheets 5–11 — Rule 1: Definitions"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "1.11 — Point of Delivery. The specific location designated by the Company for the metering and delivery of electric energy to the customer, which is the boundary of Company and customer ownership and maintenance responsibility.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R01.D12",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 42,
+    "heading_path": [
+      "Sheets 5–11 — Rule 1: Definitions"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "1.12 — Meter. Any instrument or device owned and installed by the Company to measure the quantity of electric energy or demand consumed by a customer. This includes solid-state AMI (Advanced Metering Infrastructure) meters, solid-state AMR meters, and electromechanical meters.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R01.D13",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 43,
+    "heading_path": [
+      "Sheets 5–11 — Rule 1: Definitions"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "1.13 — AMI. Advanced Metering Infrastructure; a system enabling two-way communication between the Company and customer meters, providing remote meter reading, remote connect/disconnect capability, and enhanced usage data. Company's AMI system operates under the CIS/AMI Head-End System (AMI_HES).",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R01.D14",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 44,
+    "heading_path": [
+      "Sheets 5–11 — Rule 1: Definitions"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "1.14 — Sustained Service Interruption. A service interruption that is greater than or equal to five (5) minutes, as defined in 170 IAC 4-1-23(a)(10).",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R01.D15",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 45,
+    "heading_path": [
+      "Sheets 5–11 — Rule 1: Definitions"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "1.15 — Investor-Owned Utility (IOU). A utility financed by the sale of securities and whose business operations are overseen by a board representing shareholders, as defined in 170 IAC 4-1-23(a)(6). RPL is an investor-owned utility.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R01.D16",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 46,
+    "heading_path": [
+      "Sheets 5–11 — Rule 1: Definitions"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "1.16 — Deposit. A cash security payment required by the Company as a condition of providing or continuing service, pursuant to 170 IAC 4-1-15.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R01.D17",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 47,
+    "heading_path": [
+      "Sheets 5–11 — Rule 1: Definitions"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "1.17 — Tariff. This document, IURC Tariff No. 12, comprising the General Rules and Regulations and all Rate Schedules filed pursuant to 170 IAC 1-2-2, which is not complete unless it includes all rules, regulations, and formulas that in any wise affect the rates, tolls, or charges.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R01.D18",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 48,
+    "heading_path": [
+      "Sheets 5–11 — Rule 1: Definitions"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "1.18 — Standard Service Voltages. The standard voltages at which RPL provides distribution service, as set forth in Rule 6 (Table V) of this tariff, filed with the Commission pursuant to 170 IAC 4-1-20(A).",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R01.D19",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 49,
+    "heading_path": [
+      "Sheets 5–11 — Rule 1: Definitions"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "1.19 — Working Day. Any day that is not a Saturday, Sunday, or a Company-observed holiday. Company holidays are listed in Section 1.21 herein.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R01.D20",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 50,
+    "heading_path": [
+      "Sheets 5–11 — Rule 1: Definitions"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "1.20 — Nonrecurring Charge. A charge to a customer for costs incurred by the Company outside the context of month-to-month service, including but not limited to connection fees, reconnection fees, returned payment fees, and deposit-related fees, as defined in 170 IAC 1-6-2(11). All nonrecurring charges are set forth in Table F on Sheets 45–46.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R01.D21",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 51,
+    "heading_path": [
+      "Sheets 5–11 — Rule 1: Definitions"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "1.21 — Company Holidays 2025. January 1, January 20, May 26, July 4, September 1, November 27, November 28, December 24, December 25. Holidays for subsequent years are posted at www.rockridge-pl.example and available upon request.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R01.D22",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 52,
+    "heading_path": [
+      "Sheets 5–11 — Rule 1: Definitions"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "1.22 — Financial Hardship. A condition recognized as \"cause\" for inability to pay the full amount due, as provided in 170 IAC 4-1-16(c)(2). Financial hardship constitutes cause for a deferred payment arrangement.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R01.D23",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 53,
+    "heading_path": [
+      "Sheets 5–11 — Rule 1: Definitions"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "1.23 — Consumer Affairs. The Consumer Affairs Division of the Indiana Utility Regulatory Commission, which handles customer complaints pursuant to 170 IAC 16-1-1 through 170 IAC 16-1-7.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R01.D24",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 54,
+    "heading_path": [
+      "Sheets 5–11 — Rule 1: Definitions"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "1.24 — Dispute. Any disagreement between a customer and the Company regarding the amount of a utility bill, the applicability of a rate, the quality of service, or any other matter related to the provision of electric service, subject to resolution under 170 IAC 16-1-3 through 170 IAC 16-1-7.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R01.D25",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 55,
+    "heading_path": [
+      "Sheets 5–11 — Rule 1: Definitions"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "1.25 — LIHEAP. The Low Income Home Energy Assistance Program administered under IC 4-4-33. Customers who receive or have applied for LIHEAP benefits are entitled to the winter disconnection protections set forth in Rule 13.6 and 170 IAC 4-1-16.6.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R01.D26",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 56,
+    "heading_path": [
+      "Sheets 5–11 — Rule 1: Definitions"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "1.26 — Budget Billing / Alternative Billing Method. A billing arrangement under which the Company estimates the customer's annual electric service cost and bills the customer in equal monthly installments over a contract period, with a reconciliation at the end of the period. This method is offered pursuant to 170 IAC 4-1-13(f) and the applicable Rate Schedule approved by the Commission.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R01.D27",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 57,
+    "heading_path": [
+      "Sheets 5–11 — Rule 1: Definitions"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "1.27 — Interconnection / Distributed Generation. The physical and electrical connection of a customer-owned generating facility to RPL's distribution system. All distributed generation and net metering arrangements are governed by the applicable Rate Schedule (RS-30 through RS-32) and the interconnection agreement required under applicable Commission rules, IC 8-1-40, and FERC Order No. 2222.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R01.D28",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 58,
+    "heading_path": [
+      "Sheets 5–11 — Rule 1: Definitions"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "1.28 — Critical Facilities. Premises that provide essential public health and safety services, including hospitals, fire stations, police stations, emergency communications centers, water and wastewater treatment facilities, and similar facilities identified by the customer. The Company maintains procedures for prioritizing restoration of critical facilities during sustained service interruptions pursuant to 170 IAC 4-1-23(d).",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R01.D29",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 59,
+    "heading_path": [
+      "Sheets 5–11 — Rule 1: Definitions"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "1.29 — MISO. The Midcontinent Independent System Operator, the regional transmission organization within whose footprint RPL purchases wholesale electric power pursuant to a FERC-jurisdictional full-requirements supply agreement. RPL's retail distribution rates are subject to IURC jurisdiction under IC 8-1-2, while MISO's transmission rates are subject to FERC jurisdiction.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R01.D30",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 60,
+    "heading_path": [
+      "Sheets 5–11 — Rule 1: Definitions"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "1.30 — Field Collection Visit. A visit by a Company representative to a customer's premises for the purpose of collecting payment on an overdue account, subject to the charge set forth in Table F (F-6: $20.00). The Company shall notify customers in the customer pamphlet of the conditions under which a field collection visit may be initiated, pursuant to 170 IAC 4-1-18(A).",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R01.D30~c1",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 61,
+    "heading_path": [
+      "Sheet 12 — Rule 2: Application of Rules"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "Original Sheet 12 | Cause No. 98876 | Effective: 2019-07-01",
+    "row_cells": null,
+    "parent_clause_id": "RPL-TAR-GRR-012:R01.D30"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R02.1",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 62,
+    "heading_path": [
+      "Sheet 12 — Rule 2: Application of Rules"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "Section 2.1 — Scope. These Rules and Regulations apply to RPL as an electrical public utility subject to the jurisdiction of the Commission pursuant to the provisions of the Public Service Commission Act (IC 8-1-2) and shall apply in the manner set forth in 170 IAC 4-1-2. These rules govern all service provided by RPL in its certificated service territory in the State of Indiana.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R02.2",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 63,
+    "heading_path": [
+      "Sheet 12 — Rule 2: Application of Rules"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "Section 2.2 — Compliance with Commission Rules. RPL shall at all times comply with the Standards of Service for Electrical Utilities set forth in 170 IAC 4-1-1 through 170 IAC 4-1-30, the Customer Complaint Resolution procedures set forth in 170 IAC 16-1-1 through 170 IAC 16-1-7, and all other applicable Commission rules in Title 170 of the Indiana Administrative Code. Nothing in this tariff shall be construed to limit the Commission's authority under IC 8-1-2 or to supersede Commission rules.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R02.3",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 64,
+    "heading_path": [
+      "Sheet 12 — Rule 2: Application of Rules"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "Section 2.3 — Tariff Filing Requirements. This tariff is filed and maintained pursuant to 170 IAC 1-2-1 (separate schedules for each service) and 170 IAC 1-2-2 (tariffs must include all rules, regulations and formulas affecting rates, tolls, and charges). All schedules are in the format required by 170 IAC 1-2-3. All correspondence relating to this tariff shall be addressed to the IURC Secretary of the Commission, 101 West Washington Street, Suite 1500E, Indianapolis, Indiana 46204, per 170 IAC 1-2-12.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R02.4",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 65,
+    "heading_path": [
+      "Sheet 12 — Rule 2: Application of Rules"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "Section 2.4 — Service Agreement. Before electric service is established, each applicant shall execute the Company's standard service agreement or otherwise agree to service terms. By accepting service, the customer agrees to be bound by the terms of this tariff as filed and approved by the Commission.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R02.5",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 66,
+    "heading_path": [
+      "Sheet 12 — Rule 2: Application of Rules"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "Section 2.5 — Tariff Availability. Copies of this tariff and all applicable Rate Schedules shall be available for public inspection at the Company's principal office in Lafayette, Indiana and at each service center. Rate schedules applicable to residential service shall be supplied free of charge upon request, pursuant to 170 IAC 4-1-18(B).",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R02.5~c1",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 67,
+    "heading_path": [
+      "Sheets 13–14 — Rule 3: Records"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "Original Sheets 13–14 | Cause No. 98876 | Effective: 2019-07-01",
+    "row_cells": null,
+    "parent_clause_id": "RPL-TAR-GRR-012:R02.5"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R03.1",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 68,
+    "heading_path": [
+      "Sheets 13–14 — Rule 3: Records"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "Section 3.1 — Records Retention. All records required by Commission rules shall be preserved for at least three (3) years, except as otherwise provided by IC 8-1-2-40 or other applicable statutes, pursuant to 170 IAC 4-1-3. Such records shall be kept within the State of Indiana at the Company's principal place of business at 400 Wabash Commons Drive, Lafayette, IN 47901, or at such other locations as the Company shall designate after notifying the Commission. All records shall be open for examination by the Commission or its authorized representatives.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R03.2",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 69,
+    "heading_path": [
+      "Sheets 13–14 — Rule 3: Records"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "Section 3.2 — Meter Purchase and Test Records. The Company shall maintain records of all meter tests as required by 170 IAC 4-1-4. For each meter test performed, a record shall be preserved identifying: (a) the meter; (b) the reason for the test; (c) the meter reading before the test; and (d) the results of the test, with all data necessary to permit calculation of average accuracy for billing adjustments. Permanent records shall be systematically maintained for each meter owned or used by the Company, showing the year of purchase, identification, and record of the last test.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R03.3",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 70,
+    "heading_path": [
+      "Sheets 13–14 — Rule 3: Records"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "Section 3.3 — Meter Testing Equipment Records. Records of certification and calibration of reference standards and portable testing equipment shall be kept on file at the Company's Meter Shop and Standards Laboratory, Lafayette HQ campus, pursuant to 170 IAC 4-1-7(F). Reference standards shall be tested at least once every two (2) years by a recognized standardizing laboratory.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R03.4",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 71,
+    "heading_path": [
+      "Sheets 13–14 — Rule 3: Records"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "Section 3.4 — Reliability Records. The Company shall maintain historical CAIDI, SAIDI, SAIFI, and supporting data for a minimum of seven (7) years, pursuant to 170 IAC 4-1-23(f). Annual reliability indices reports shall be filed with the Commission's electricity division on or before March 1 of each year, as required by 170 IAC 4-1-23(e).",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R03.5",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 72,
+    "heading_path": [
+      "Sheets 13–14 — Rule 3: Records"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "Section 3.5 — Dispute Records. The Company shall retain records of customer disputes and resolutions for a period of six (6) months from the date of final resolution, as required by 170 IAC 16-1-4(b). Such records shall include at minimum: the customer's name, service address, contact telephone number, account number, and the general nature of the dispute.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R03.5~c1",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 73,
+    "heading_path": [
+      "Sheets 15–16 — Rule 4: Service Requirements"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "1st Revised Sheets 15–16 | Cause No. 98951 | Effective: 2021-10-01",
+    "row_cells": null,
+    "parent_clause_id": "RPL-TAR-GRR-012:R03.5"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R04.1",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 74,
+    "heading_path": [
+      "Sheets 15–16 — Rule 4: Service Requirements"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "Section 4.1 — Application for Service. Any person desiring electric service from RPL shall submit an application at any Company service center, by telephone at 1-800-555-0142, or online at www.rockridge-pl.example. An account establishment charge (F-12: $15.00) may be required per Table F on Sheets 45–46. The Company shall evaluate each applicant's creditworthiness pursuant to Rule 10 and 170 IAC 4-1-15.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R04.2",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 75,
+    "heading_path": [
+      "Sheets 15–16 — Rule 4: Service Requirements"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "Section 4.2 — Customer Identification. Applicants may be required to provide satisfactory identification and proof of legal occupancy of the premises to be served.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R04.3",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 76,
+    "heading_path": [
+      "Sheets 15–16 — Rule 4: Service Requirements"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "Section 4.3 — Customer Pamphlet. The Company shall publish and distribute, without request, a comprehensive pamphlet to all applicants for service and to all current customers, fully describing in clear language the rights and responsibilities of customers, pursuant to 170 IAC 4-1-18(A). The pamphlet shall be available at all service centers, on the Company's website, and mailed upon request.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R04.4",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 77,
+    "heading_path": [
+      "Sheets 15–16 — Rule 4: Service Requirements"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "Section 4.4 — Notice of Proposed Rate Changes. Whenever RPL petitions the Commission for a change in its residential base rate schedules, it shall furnish to each residential customer within forty-five (45) days of such filing a notice that fairly summarizes the nature and extent of the proposed changes, pursuant to 170 IAC 4-1-18(C).",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R04.5",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 78,
+    "heading_path": [
+      "Sheets 15–16 — Rule 4: Service Requirements"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "Section 4.5 — Service Terms. Service under this tariff is subject to all rules, regulations, and conditions stated herein and in the applicable Rate Schedule. The Company reserves the right to establish, modify, or waive conditions of service to the extent permitted by applicable Commission rules and orders.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R04.6",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 79,
+    "heading_path": [
+      "Sheets 15–16 — Rule 4: Service Requirements"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "Section 4.6 — Non-Discrimination. The Company shall render service to all customers in a non-discriminatory manner, as required by IC 8-1-2 and applicable Commission orders. No customer shall be denied service, subjected to different conditions, or assessed different charges on the basis of race, color, religion, sex, national origin, age, disability, or any other characteristic protected by applicable law. Creditworthiness assessments shall be conducted pursuant to Rule 10 without regard to the economic character of the neighborhood, consistent with 170 IAC 4-1-15(a).",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R04.7",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 80,
+    "heading_path": [
+      "Sheets 15–16 — Rule 4: Service Requirements"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "Section 4.7 — Extensions of Service. The Company shall extend its distribution facilities to serve new customers in its certificated service territory in accordance with its Line Extension Policy as approved by the Commission. The terms and cost allocations for line extensions are set forth in the applicable Rate Schedule or special contract. The Company shall file changes to its line extension policy as required by 170 IAC 1-6-3(2).",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R04.8",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 81,
+    "heading_path": [
+      "Sheets 15–16 — Rule 4: Service Requirements"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "Section 4.8 — Multilingual Assistance. Customers requiring service in Spanish may contact the Company at 1-800-555-0143. The customer pamphlet required by 170 IAC 4-1-18(A) is available in Spanish and English. The Company shall maintain staff or interpreter resources sufficient to assist non-English-speaking customers with billing inquiries, dispute resolution, and emergency service requests.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R04.8~c1",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 82,
+    "heading_path": [
+      "Sheets 17–18 — Rule 5: Temporary Service"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "Original Sheets 17–18 | Cause No. 98876 | Effective: 2019-07-01",
+    "row_cells": null,
+    "parent_clause_id": "RPL-TAR-GRR-012:R04.8"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R05.1",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 83,
+    "heading_path": [
+      "Sheets 17–18 — Rule 5: Temporary Service"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "Section 5.1 — Definition. Temporary service is electric service furnished to a customer for a definite, limited period, not to exceed twelve (12) months, for construction, seasonal, or other short-term needs.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R05.2",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 84,
+    "heading_path": [
+      "Sheets 17–18 — Rule 5: Temporary Service"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "Section 5.2 — Charges for Temporary Service. Temporary service is furnished only where facilities are available and at the Company's discretion. The customer shall bear the cost of temporary service installations and removals, including all material and labor costs for facilities that will not remain permanently useful to the Company's system.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R05.3",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 85,
+    "heading_path": [
+      "Sheets 17–18 — Rule 5: Temporary Service"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "Section 5.3 — Advance Payment. For temporary service, the Company may require advance payment of the estimated cost of service and installation before construction commences. Such advance payment is not a deposit subject to the interest provisions of Rule 10 but represents a contribution in aid of construction.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R05.4",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 86,
+    "heading_path": [
+      "Sheets 17–18 — Rule 5: Temporary Service"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "Section 5.4 — Applicable Rate Schedule. Temporary service shall be billed at the applicable Rate Schedule for the character of load served, plus any applicable nonrecurring charges set forth in Table F.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R05.5",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 87,
+    "heading_path": [
+      "Sheets 17–18 — Rule 5: Temporary Service"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "Section 5.5 — Construction Service. Temporary construction service is governed by Rate Schedule RS-47 (Construction Service) and RS-48 (Temporary Construction — Special). The Company shall provide safe and adequate temporary facilities to the extent permitted by available system capacity. When permanent service is established for the same premises, any temporary service contributions in aid of construction shall be credited against permanent service installation costs to the extent specified in the applicable Rate Schedule or line extension agreement.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R05.6",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 88,
+    "heading_path": [
+      "Sheets 17–18 — Rule 5: Temporary Service"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "Section 5.6 — Removal of Temporary Facilities. Upon expiration or termination of temporary service, the customer shall cooperate with the Company in removing temporary facilities. If the customer fails to coordinate removal, the Company may remove such facilities at the customer's expense after reasonable notice. Meters and other Company-owned equipment removed from temporary service locations are the property of the Company at all times.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R05.6~c1",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 89,
+    "heading_path": [
+      "Sheets 19–23 — Rule 6: Character of Service"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "1st Revised Sheets 19–23 | Cause No. 98951 | Effective: 2021-10-01",
+    "row_cells": null,
+    "parent_clause_id": "RPL-TAR-GRR-012:R05.6"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R06.1",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 90,
+    "heading_path": [
+      "Sheets 19–23 — Rule 6: Character of Service"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "Section 6.1 — Standard Frequency. RPL provides alternating current (AC) service at a standard nominal frequency of sixty hertz (60 Hz), pursuant to 170 IAC 4-1-19 and IC 8-1-2-33. Momentary variations of frequency of more than five percent (5%), which are clearly due to no lack of proper equipment or reasonable care on the part of RPL, shall not be considered a violation of Commission Rule 170 IAC 4-1-19.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R06.2",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 91,
+    "heading_path": [
+      "Sheets 19–23 — Rule 6: Character of Service"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "Section 6.2 — Standard Service Voltages (Table V). The Company provides electric service at the following standard nominal service voltages, filed with the Commission pursuant to 170 IAC 4-1-20(A):\n\nTABLE V — Standard Nominal Service Voltages",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R06.2.tbl1.r1",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 92,
+    "heading_path": [
+      "Sheets 19–23 — Rule 6: Character of Service"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "Secondary | 120/240V | 1-phase, 3-wire | Standard residential",
+    "row_cells": {
+      "Class": "Secondary",
+      "Voltage": "120/240V",
+      "Configuration": "1-phase, 3-wire",
+      "Notes": "Standard residential"
+    },
+    "parent_clause_id": "RPL-TAR-GRR-012:R06.2"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R06.2.tbl1.r2",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 93,
+    "heading_path": [
+      "Sheets 19–23 — Rule 6: Character of Service"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "Secondary | 120/208V | 3-phase, 4-wire wye | Commercial/industrial",
+    "row_cells": {
+      "Class": "Secondary",
+      "Voltage": "120/208V",
+      "Configuration": "3-phase, 4-wire wye",
+      "Notes": "Commercial/industrial"
+    },
+    "parent_clause_id": "RPL-TAR-GRR-012:R06.2"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R06.2.tbl1.r3",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 94,
+    "heading_path": [
+      "Sheets 19–23 — Rule 6: Character of Service"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "Secondary | 277/480V | 3-phase, 4-wire wye | Commercial/industrial",
+    "row_cells": {
+      "Class": "Secondary",
+      "Voltage": "277/480V",
+      "Configuration": "3-phase, 4-wire wye",
+      "Notes": "Commercial/industrial"
+    },
+    "parent_clause_id": "RPL-TAR-GRR-012:R06.2"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R06.2.tbl1.r4",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 95,
+    "heading_path": [
+      "Sheets 19–23 — Rule 6: Character of Service"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "Secondary | 240/480V | 3-phase delta | Existing installations only",
+    "row_cells": {
+      "Class": "Secondary",
+      "Voltage": "240/480V",
+      "Configuration": "3-phase delta",
+      "Notes": "Existing installations only"
+    },
+    "parent_clause_id": "RPL-TAR-GRR-012:R06.2"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R06.2.tbl1.r5",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 96,
+    "heading_path": [
+      "Sheets 19–23 — Rule 6: Character of Service"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "Primary | 7,200/12,470V | — | Distribution primary",
+    "row_cells": {
+      "Class": "Primary",
+      "Voltage": "7,200/12,470V",
+      "Configuration": "—",
+      "Notes": "Distribution primary"
+    },
+    "parent_clause_id": "RPL-TAR-GRR-012:R06.2"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R06.2.tbl1.r6",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 97,
+    "heading_path": [
+      "Sheets 19–23 — Rule 6: Character of Service"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "Primary | 19,920/34,500V | — | Distribution primary",
+    "row_cells": {
+      "Class": "Primary",
+      "Voltage": "19,920/34,500V",
+      "Configuration": "—",
+      "Notes": "Distribution primary"
+    },
+    "parent_clause_id": "RPL-TAR-GRR-012:R06.2"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R06.2.tbl1.r7",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 98,
+    "heading_path": [
+      "Sheets 19–23 — Rule 6: Character of Service"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "Subtransmission | 69,000V | — | Subtransmission",
+    "row_cells": {
+      "Class": "Subtransmission",
+      "Voltage": "69,000V",
+      "Configuration": "—",
+      "Notes": "Subtransmission"
+    },
+    "parent_clause_id": "RPL-TAR-GRR-012:R06.2"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R06.3",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 99,
+    "heading_path": [
+      "Sheets 19–23 — Rule 6: Character of Service"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "Section 6.3 — Voltage Tolerance. Pursuant to 170 IAC 4-1-20(A)(1), the voltage maintained at the customer's main service terminals shall be within five percent (5%) plus or minus of the standard nominal service voltage adopted, and the total variation of voltage from minimum to maximum shall not exceed six percent (6%) of the average voltage in cities and other incorporated places having a population in excess of 2,500, nor eight percent (8%) of the average voltage in all other places.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R06.4",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 100,
+    "heading_path": [
+      "Sheets 19–23 — Rule 6: Character of Service"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "Section 6.4 — Voltage Survey Equipment. The Company shall have available suitable voltage measuring equipment to conduct voltage surveys in sufficient number and diversity to satisfy the Commission of RPL's compliance with Section 6.3, pursuant to 170 IAC 4-1-21.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R06.5",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 101,
+    "heading_path": [
+      "Sheets 19–23 — Rule 6: Character of Service"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "Section 6.5 — Customer Voltage Selection. The voltage at which service will be provided shall be determined by the Company based on load characteristics, line capacity, and system engineering considerations. Customers desiring primary voltage service (7,200/12,470V or 19,920/34,500V) shall provide and maintain suitable transformation equipment.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R06.6",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 102,
+    "heading_path": [
+      "Sheets 19–23 — Rule 6: Character of Service"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "Section 6.6 — System Monitoring Instruments. The Company shall install and maintain in accurate working order such instruments as may be necessary to obtain daily records of frequency, voltage, kilowatt load, and kilowatt hours output of its purchasing points and to obtain complete information regarding monthly wholesale power purchases, pursuant to 170 IAC 4-1-22 and IC 8-1-2-34.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R06.7",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 103,
+    "heading_path": [
+      "Sheets 19–23 — Rule 6: Character of Service"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "Section 6.7 — Pole Identification. Each pole, post, or structure used for supporting electrical conductors shall be marked with the Company's abbreviation or corporate symbol and a numerical identifier per 170 IAC 4-1-25(A). Markings shall be of sufficient size to be easily read from the ground, as required by 170 IAC 4-1-25(B). In cases of jointly owned structures, the distinguishing mark of each owner shall appear, pursuant to 170 IAC 4-1-25(C).",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R06.8",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 104,
+    "heading_path": [
+      "Sheets 19–23 — Rule 6: Character of Service"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "Section 6.8 — Line Construction. The Company's distribution facilities shall be designed, constructed, and maintained in accordance with applicable state and national standards including the National Electrical Safety Code (NESC), applicable Commission rules including 170 IAC 4-1-26 and 170 IAC 4-1-27 through 170 IAC 4-1-30, and the orders and directives of the Commission. The Commission may grant variances from construction standards upon application by the utility.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R06.8~c1",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 105,
+    "heading_path": [
+      "Sheet 24 — Rule 7: Customer Equipment"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "Original Sheet 24 | Cause No. 98876 | Effective: 2019-07-01",
+    "row_cells": null,
+    "parent_clause_id": "RPL-TAR-GRR-012:R06.8"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R07.1",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 106,
+    "heading_path": [
+      "Sheet 24 — Rule 7: Customer Equipment"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "Section 7.1 — Customer Wiring. All wiring and electrical equipment on the customer's side of the point of delivery shall be the responsibility of the customer and shall be installed and maintained in accordance with the National Electrical Code (NEC), applicable local ordinances, and all safety requirements of the Company.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R07.2",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 107,
+    "heading_path": [
+      "Sheet 24 — Rule 7: Customer Equipment"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "Section 7.2 — Equipment Interference. The customer shall not operate equipment that causes interference with, or damage to, the Company's distribution system, other customers' service, or the integrity of metering. The Company may require the customer to correct power quality problems caused by the customer's equipment.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R07.3",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 108,
+    "heading_path": [
+      "Sheet 24 — Rule 7: Customer Equipment"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "Section 7.3 — Starting Current. Variations in voltage caused by the operation of power apparatus on the customer's premises that necessarily requires large starting current shall not be considered a violation of the Company's voltage standards under Rule 6.3, pursuant to 170 IAC 4-1-20(B)(1).",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R07.4",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 109,
+    "heading_path": [
+      "Sheet 24 — Rule 7: Customer Equipment"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "Section 7.4 — Protective Relaying and Safety Devices. Customers operating distributed generation, motors, or other equipment that may inject fault current into the Company's distribution system shall install and maintain protective relaying, disconnect switches, and safety devices as required by the Company's interconnection standards, applicable NESC provisions, and Commission rules. The Company may require engineering studies at the customer's expense prior to approving large motor starting or generation interconnection.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R07.5",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 110,
+    "heading_path": [
+      "Sheet 24 — Rule 7: Customer Equipment"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "Section 7.5 — Underground Service Entrances. Where service is supplied underground, the customer shall provide and maintain a suitable conduit or duct from the point of delivery to the service entrance panel location. All underground service entrance conductors on the customer's side of the meter shall be installed in accordance with the NEC and local ordinances. The Company shall specify the size and rating of the service entrance conduit. The Company's underground installation standards are available upon request at any service center.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R07.5~c1",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 111,
+    "heading_path": [
+      "Sheets 25–26 — Rule 8: Point of Delivery"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "Original Sheets 25–26 | Cause No. 98876 | Effective: 2019-07-01",
+    "row_cells": null,
+    "parent_clause_id": "RPL-TAR-GRR-012:R07.5"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R08.1",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 112,
+    "heading_path": [
+      "Sheets 25–26 — Rule 8: Point of Delivery"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "Section 8.1 — Designation. The Company shall designate the point of delivery for each service location. The point of delivery is the physical boundary between Company-owned facilities and customer-owned premises wiring and is the location at which the Company's meter is installed.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R08.2",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 113,
+    "heading_path": [
+      "Sheets 25–26 — Rule 8: Point of Delivery"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "Section 8.2 — Company Ownership. All facilities from the Company's distribution system up to and including the meter are owned, installed, and maintained by the Company. The customer shall not tamper with, alter, or otherwise interfere with Company-owned equipment. Tampering with metering equipment may result in immediate disconnection without notice and a meter tampering investigation charge (F-8: $100.00 minimum per Table F), pursuant to 170 IAC 4-1-16(b)(4).",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R08.3",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 114,
+    "heading_path": [
+      "Sheets 25–26 — Rule 8: Point of Delivery"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "Section 8.3 — Single Point of Delivery. Each separate service location served by its own meter shall constitute a separate point of delivery. Multi-unit buildings may, at the Company's discretion, be served through individual meters for each occupant unit or through a single master meter.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R08.4",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 115,
+    "heading_path": [
+      "Sheets 25–26 — Rule 8: Point of Delivery"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "Section 8.4 — Access. The customer shall ensure that the Company has reasonable access to the point of delivery and to Company-owned meters, facilities, and equipment on the customer's premises at all reasonable times for reading, testing, inspecting, repairing, and replacing such equipment, pursuant to 170 IAC 4-1-5(C).",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R08.4~c1",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 116,
+    "heading_path": [
+      "Sheets 27–29 — Rule 9: Metering"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "2nd Revised Sheets 27–29 | Cause No. 99012 | Effective: 2024-06-01",
+    "row_cells": null,
+    "parent_clause_id": "RPL-TAR-GRR-012:R08.4"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R09.1",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 117,
+    "heading_path": [
+      "Sheets 27–29 — Rule 9: Metering"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "Section 9.1 — Company-Owned Meters. All meters used to measure and record electric service for billing purposes are owned by the Company. The Company shall install and maintain meters in accordance with the requirements of 170 IAC 4-1-4 through 170 IAC 4-1-12 and IC 8-1-2-34 and IC 8-1-2-35. Pursuant to 170 IAC 4-1-5(A), all meters shall be located outdoors where practicable; where outdoor installation is impractical, meters shall be located indoors as near as possible to the service entrance in a clean, dry, safe place.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R09.2",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 118,
+    "heading_path": [
+      "Sheets 27–29 — Rule 9: Metering"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "Section 9.2 — Meter Installation Standards. Pursuant to 170 IAC 4-1-5(C), meters shall be easily accessible for reading, testing, and making necessary adjustments and repairs. When multiple meters are placed on the same meter board, the distance between centers shall be not less than 7-1/2 inches. Meters shall not be less than four (4) feet nor more than six (6) feet above the final standing surface, measured from the center of the meter cover, unless otherwise authorized by the Company.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R09.3",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 119,
+    "heading_path": [
+      "Sheets 27–29 — Rule 9: Metering"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "Section 9.3 — New Meter Inspection and Testing. Pursuant to 170 IAC 4-1-6(a), each new watthour meter, except self-contained single-phase and network meters, shall be inspected and tested prior to installation to verify accuracy, correct constants, and that the meter does not register with all load wires disconnected. All new meters may be tested by a meter manufacturer if certified tests are supplied. Pursuant to 170 IAC 4-1-6(c), all watthour and demand meters, except self-contained meters, shall be tested prior to or within sixty (60) days of installation and adjusted to the condition of zero error within the tolerance limits specified in Section 9.4.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R09.4",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 120,
+    "heading_path": [
+      "Sheets 27–29 — Rule 9: Metering"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "Section 9.4 — Meter Accuracy Standards. Pursuant to 170 IAC 4-1-9(b), no meter shall be placed in service or allowed to remain in service unless it meets the following accuracy requirements:\n\n(a) Watthour meters: Average error not over two percent (2%), plus or minus; error at full load not over one percent (1%), plus or minus; error at light load not over three percent (3%), plus or minus. [170 IAC 4-1-9(b)(1)]\n\n(b) Integrating demand meters: Electric element errors shall not exceed the limits specified for watthour meters; timing element cumulative error shall not exceed two percent (2%) for the entire billing period; if time of day is a rate factor, the timing element shall not indicate a difference of more than ten (10) minutes from correct time. [170 IAC 4-1-9(b)(3)]\n\n(c) No-load test: No watthour meter that registers at no load when the applied voltage is less than 110% of standard service voltage shall be placed in or allowed to remain in service. [170 IAC 4-1-9(a)]",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R09.5",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 121,
+    "heading_path": [
+      "Sheets 27–29 — Rule 9: Metering"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "Section 9.5 — Average Accuracy Determination. Pursuant to 170 IAC 4-1-8, the average accuracy of a meter shall be the average of the percentage registration at light load (approximately 10% of rated test amperes) and at full load (approximately 100% of rated test amperes). Average accuracy = (FL + LL) ÷ 2. Light load accuracy shall be determined by taking the average of at least two (2) tests that agree within one-half of one percent (0.5%), unless tested by an automated device, in which case one (1) test will suffice.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R09.6",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 122,
+    "heading_path": [
+      "Sheets 27–29 — Rule 9: Metering"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "Section 9.6 — Periodic In-Service Testing. The Company shall test meters in service pursuant to the schedules required by 170 IAC 4-1-10:\n\n(a) Method A (Periodic Testing): Self-contained meters shall be tested on a schedule of not more than sixteen (16) years. [170 IAC 4-1-10(b)]\n\n(b) Method B (Quality Control): As an alternative, the Company may adopt the quality control testing method described in 170 IAC 4-1-10(c), with upper and lower accuracy specification limits of 102% and 98% respectively. [170 IAC 4-1-10(c)(5)]\n\n(c) Electronic meters: Shall be tested at least every sixteen (16) years. [170 IAC 4-1-10(d)(2)]",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R09.7",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 123,
+    "heading_path": [
+      "Sheets 27–29 — Rule 9: Metering"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "Section 9.7 — Customer-Requested Meter Tests. Pursuant to 170 IAC 4-1-11:\n\n(a) The Company shall test the accuracy of any meter upon written request by the customer. A second test may be requested after twelve (12) months. The first and second customer-requested tests shall be at no charge to the customer. [170 IAC 4-1-11(a)]\n\n(b) The customer may be required to bear the reasonable cost of subsequent tests if the meter was tested within the prior thirty-six (36) months at the customer's request, found to be in compliance, and is again found in compliance. The Company shall disclose the test cost to the customer prior to testing. The applicable charge is set forth in Table F (F-9: $40.00 residential / $95.00 polyphase). [170 IAC 4-1-11(b)-(c)]\n\n(c) A written report of the test results shall be provided to the customer within ten (10) days after the test is complete, and a complete record shall be maintained in the Company's files. [170 IAC 4-1-11(d)]\n\n(d) Any appeal regarding the results of the customer's meter test shall be filed with the Commission within five (5) days of the date of the written report. [170 IAC 4-1-11(e)]",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R09.8",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 124,
+    "heading_path": [
+      "Sheets 27–29 — Rule 9: Metering"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "Section 9.8 — Commission-Supervised Tests. Upon application of any customer to the Commission, a test of the customer's watthour meter shall be made by RPL or its contractor under the supervision of a Commission employee, pursuant to 170 IAC 4-1-12(a). No fee shall be payable by the customer for such a test, except as may be charged under Section 9.7(b). Upon receiving notice of such application, the Company shall not remove, interfere with, or discard the customer's meter until completion of the test without the customer's prior written consent, unless removal is necessary to perform the test, pursuant to 170 IAC 4-1-12(c).",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R09.9",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 125,
+    "heading_path": [
+      "Sheets 27–29 — Rule 9: Metering"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "Section 9.9 — AMI Program; Opt-Out. The Company's standard meter is an AMI solid-state meter. A residential customer who does not wish to have an AMI meter installed may opt out by requesting a standard (non-AMI) meter by contacting the Company at 1-800-555-0142. The applicable opt-out charges are set forth in Table F (F-11: one-time $50.00 and monthly $18.00). Upon customer request, the Company shall provide the customer with the number of the meter serving the individual customer's premises, pursuant to 170 IAC 4-1-5(C).",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R09.10",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 126,
+    "heading_path": [
+      "Sheets 27–29 — Rule 9: Metering"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "Section 9.10 — Meter Testing Equipment. The Company shall provide or have available standard meters, instruments, and other equipment as may be necessary to make tests required by Commission rules, pursuant to 170 IAC 4-1-7(B). The Company's Meter Shop and Standards Laboratory is located at the Lafayette HQ campus. Reference standards shall be tested and adjusted, if necessary, at least once every two (2) years by a recognized standardizing laboratory, pursuant to 170 IAC 4-1-7(C).",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R09.10~c1",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 127,
+    "heading_path": [
+      "Sheets 30–31 — Rule 10: Deposits"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "1st Revised Sheets 30–31 | Cause No. 98951 | Effective: 2021-10-01",
+    "row_cells": null,
+    "parent_clause_id": "RPL-TAR-GRR-012:R09.10"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R10.1",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 128,
+    "heading_path": [
+      "Sheets 30–31 — Rule 10: Deposits"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "Section 10.1 — Creditworthiness Determination. The Company shall determine the creditworthiness of each applicant or customer in an equitable and nondiscriminatory manner pursuant to 170 IAC 4-1-15(a): (1) without regard to the economic character of the area wherein the applicant or customer resides; and (2) solely upon the credit risk of the individual, without regard to the collective credit reputation of the area in which the person lives.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R10.2",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 129,
+    "heading_path": [
+      "Sheets 30–31 — Rule 10: Deposits"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "Section 10.2 — New Applicant Creditworthiness Standards. Pursuant to 170 IAC 4-1-15(b), each new applicant for residential service shall be deemed creditworthy and shall not be required to pay a deposit if the applicant satisfies the following criteria:\n\n(a) Prior utility customer (within last 2 years): The applicant (i) owes no outstanding bills for service rendered within the past four (4) years by any utility; (ii) during the last twelve (12) consecutive months of service did not have more than two (2) delinquent bills; and (iii) within the last two (2) years did not have service disconnected for nonpayment.\n\n(b) Not a prior utility customer (past 2 years): Any two (2) of the following criteria are met: (i) employment stability criteria; (ii) homeownership/tenancy criteria; or (iii) credit history criteria, as set forth in 170 IAC 4-1-15(b)(2).",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R10.3",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 130,
+    "heading_path": [
+      "Sheets 30–31 — Rule 10: Deposits"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "Section 10.3 — Deposit Amount — New Applicants. If an applicant does not establish creditworthiness under Section 10.2, the Company may require a cash deposit not to exceed one-sixth (1/6) of the estimated annual cost of service, pursuant to 170 IAC 4-1-15(c). If a deposit is greater than seventy dollars ($70), the Company shall advise the applicant simultaneously with the deposit demand that the applicant may pay in equal installment payments over a period of no less than eight (8) weeks; service shall be connected upon receipt of the first such installment payment.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R10.4",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 131,
+    "heading_path": [
+      "Sheets 30–31 — Rule 10: Deposits"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "Section 10.4 — Written Notice. If the Company requires a cash deposit, it shall immediately send written notice to the applicant stating the precise facts upon which it bases its decision and providing the applicant with an opportunity to rebut such facts, pursuant to 170 IAC 4-1-15(d).",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R10.5",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 132,
+    "heading_path": [
+      "Sheets 30–31 — Rule 10: Deposits"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "Section 10.5 — Deposit for Present Customers. Pursuant to 170 IAC 4-1-15(e), the Company may require a present customer to make a cash deposit when: (1) the customer has been mailed disconnect notices for two (2) consecutive months; (2) the customer has been mailed disconnect notices for any three (3) months within the preceding twelve (12) months; or (3) service to the customer has been disconnected within the past four (4) years pursuant to Rule 13. The deposit for existing customers shall not exceed one-sixth (1/6) of expected annual billings. The Company shall provide the customer with two (2) monthly billing cycles (approximately sixty (60) days) to pay any deposit exceeding seventy dollars ($70).",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R10.6",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 133,
+    "heading_path": [
+      "Sheets 30–31 — Rule 10: Deposits"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "Section 10.6 — Interest on Deposits. Pursuant to 170 IAC 4-1-15(f): (1) Deposits held more than twelve (12) months shall earn interest from the date of deposit at a rate of six percent (6%) per annum or at such rate as the Commission may prescribe following a public hearing. (2) The deposit shall not earn interest after the date it is mailed or personally delivered to the customer, or otherwise lawfully disposed.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R10.7",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 134,
+    "heading_path": [
+      "Sheets 30–31 — Rule 10: Deposits"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "Section 10.7 — Deposit Refund. Pursuant to 170 IAC 4-1-15(g): (1) Any deposit and accrued interest shall be promptly refunded without the customer's request when the customer: (a) submits satisfactory payment for either nine (9) successive months, or ten (10) out of any twelve (12) consecutive months without late payment in two (2) consecutive months; or (b) demonstrates creditworthiness by any other means. (2) Refunds shall be accompanied by a statement of accounting for each transaction affecting the deposit and interest. (3) Upon customer-requested termination, the Company shall apply the deposit plus accrued interest to the final bill or, upon specific customer request, refund the deposit and interest within fifteen (15) days after payment of the final bill.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R10.8",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 135,
+    "heading_path": [
+      "Sheets 30–31 — Rule 10: Deposits"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "Section 10.8 — Deposit Records. The Company shall maintain a record for each customer making a deposit showing: (a) the customer's name; (b) current address; (c) amount of deposit; (d) date the deposit was made; and (e) a record of each transaction affecting the deposit, pursuant to 170 IAC 4-1-15(g)(4). A written receipt shall be provided at the time the deposit is paid in full or a cash partial payment is made.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R10.8~c1",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 136,
+    "heading_path": [
+      "Sheets 32–34 — Rule 11: Billing"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "2nd Revised Sheets 32–34 | Cause No. 99012 | Effective: 2024-06-01",
+    "row_cells": null,
+    "parent_clause_id": "RPL-TAR-GRR-012:R10.8"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R11.1",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 137,
+    "heading_path": [
+      "Sheets 32–34 — Rule 11: Billing"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "Section 11.1 — Bill Content. Pursuant to 170 IAC 4-1-13(a), each periodic bill rendered to a customer for electric service must show at minimum:\n\n(a) The dates and meter readings at the beginning and end of the billing period, and the billing date; [170 IAC 4-1-13(a)(1)]\n\n(b) The number and kind of units of service supplied; [170 IAC 4-1-13(a)(2)]\n\n(c) The billing rate code; [170 IAC 4-1-13(a)(3)]\n\n(d) The service or minimum charge, if applicable; [170 IAC 4-1-13(a)(4)]\n\n(e) The previous balance, if any; [170 IAC 4-1-13(a)(5)]\n\n(f) The amount of the bill; [170 IAC 4-1-13(a)(6)]\n\n(g) The sum of the amount of the bill and the late payment charge; [170 IAC 4-1-13(a)(7)]\n\n(h) The date when the bill becomes delinquent and the date the late payment charge will be added; [170 IAC 4-1-13(a)(8)]\n\n(i) If an estimated bill, clear and conspicuous coding or other indication identifying it as estimated; [170 IAC 4-1-13(a)(9)]\n\n(j) Printed statements or actual figures informing the customer of the seventeen (17) day nonpenalty period; [170 IAC 4-1-13(a)(10)]\n\n(k) An easily understood explanation of all codes or symbols used. [170 IAC 4-1-13(a)(11)]",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R11.2",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 138,
+    "heading_path": [
+      "Sheets 32–34 — Rule 11: Billing"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "Section 11.2 — Net Bill; Delinquency. A bill shall be issued as a net bill. A bill is considered delinquent unless payment is received within seventeen (17) days after the initial bill is postmarked, pursuant to 170 IAC 4-1-13(c).",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R11.3",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 139,
+    "heading_path": [
+      "Sheets 32–34 — Rule 11: Billing"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "Section 11.3 — Late Payment Charge. A delinquent bill may be assessed a late payment charge. The late payment charge shall not exceed ten percent (10%) of the first three dollars ($3) and three percent (3%) of the excess of three dollars ($3), pursuant to 170 IAC 4-1-13(c). The late payment charge is stated in the applicable Rate Schedule.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R11.4",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 140,
+    "heading_path": [
+      "Sheets 32–34 — Rule 11: Billing"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "Section 11.4 — Billing Transfers Prohibited. The Company shall not transfer a bill for nonresidential service to a bill for residential service, nor shall it transfer a bill for residential service to a bill for nonresidential service. An unpaid bill for merchandise or nonutility service shall not be transferred to a utility bill, pursuant to 170 IAC 4-1-13(b).",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R11.5",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 141,
+    "heading_path": [
+      "Sheets 32–34 — Rule 11: Billing"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "Section 11.5 — Estimated Bills. The Company may estimate a customer bill only for good cause, pursuant to 170 IAC 4-1-13(d). Good cause includes: (1) a customer request to estimate; (2) inclement weather; (3) labor or union disputes; (4) inaccessibility of the customer's meter if a reasonable attempt to read it was made; and (5) other circumstances beyond the control of the Company, its agents, and employees.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R11.6",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 142,
+    "heading_path": [
+      "Sheets 32–34 — Rule 11: Billing"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "Section 11.6 — Alternative Billing Method (Budget Billing). The Company offers a budget billing program, providing an alternative billing method pursuant to 170 IAC 4-1-13(f)(1) that allows a customer to pay an average monthly amount based on estimated annual usage, with an annual reconciliation. This method is subject to the Commission's approval of the applicable Rate Schedule, and notice of its availability is provided in the Company's customer pamphlet per 170 IAC 4-1-18(A).",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R11.7",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 143,
+    "heading_path": [
+      "Sheets 32–34 — Rule 11: Billing"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "Section 11.7 — Payment Methods. Bills may be paid at any Company service center, by mail to Rockridge Power, P.O. Box 6600, Lafayette, IN 47903, online at www.rockridge-pl.example, or by other methods offered by the Company. A returned payment fee (F-7: $20.00 per Table F) applies to any payment returned for insufficient funds.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R11.8",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 144,
+    "heading_path": [
+      "Sheets 32–34 — Rule 11: Billing"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "Section 11.8 — Disputed Charges — Undisputed Portion. A customer disputing any portion of a bill shall pay all undisputed charges by the date due to avoid disconnection, pursuant to 170 IAC 16-1-4(c)(1) and 170 IAC 16-1-7(a).",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R11.8~c1",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 145,
+    "heading_path": [
+      "Sheets 35–36 — Rule 12: Billing Adjustments"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "1st Revised Sheets 35–36 | Cause No. 99012 | Effective: 2024-06-01",
+    "row_cells": null,
+    "parent_clause_id": "RPL-TAR-GRR-012:R11.8"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R12.1",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 146,
+    "heading_path": [
+      "Sheets 35–36 — Rule 12: Billing Adjustments"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "Section 12.1 — Adjustment Threshold. Billing adjustments due to meter error shall be made whenever the meter is found, after testing pursuant to Rule 9, to have a percentage of error greater than three percent (3%) for watthour meters, and four percent (4%) for demand meters, pursuant to 170 IAC 4-1-14(A).",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R12.2",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 147,
+    "heading_path": [
+      "Sheets 35–36 — Rule 12: Billing Adjustments"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "Section 12.2 — Fast Meter Adjustment. When a meter is found to have a positive average error exceeding the threshold in Section 12.1, the Company shall refund or credit the customer's account with the amount of any charges in excess of either: (a) an average bill for the kilowatthours and/or demand units incorrectly metered; or (b) separate bills individually adjusted for the percent of error; for the period the meter was fast if such period can be determined, or one (1) year, whichever period is shorter, pursuant to 170 IAC 4-1-14(A)(1). An average bill shall be calculated on the basis of kilowatthours registered on the meter over corresponding prior or subsequent periods. No part of a minimum service charge shall be refunded.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R12.3",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 148,
+    "heading_path": [
+      "Sheets 35–36 — Rule 12: Billing Adjustments"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "Section 12.3 — Stopped or Slow Meter Adjustment. When a meter is stopped or has a negative average error exceeding the threshold in Section 12.1, the Company may charge the customer for kilowatthours and/or demand units incorrectly registered for one-half (1/2) of the period since the last previous test or one (1) year, whichever is shorter, pursuant to 170 IAC 4-1-14(A)(2). The amount charged shall be estimated on the basis of an average bill or separately adjusted bills. The Company may not charge the customer if the Company negligently allowed the stopped or slow meter to remain in service.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R12.4",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 149,
+    "heading_path": [
+      "Sheets 35–36 — Rule 12: Billing Adjustments"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "Section 12.4 — Other Billing Errors. All other billing errors, including incorrect tariff application, shall be adjusted to the known date of error or for a period of one (1) year, whichever is shorter, pursuant to 170 IAC 4-1-14(B).",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R12.5",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 150,
+    "heading_path": [
+      "Sheets 35–36 — Rule 12: Billing Adjustments"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "Section 12.5 — Adjustment for Unusually Large Bills. Where a customer is unable to pay a bill that is unusually large due to a prior incorrect meter reading, incorrect application of a rate schedule, incorrect meter connection or functioning, prior estimates where no actual reading was taken for over two (2) months, stopped or slow meters, or any human or mechanical error of the Company, the Company shall not disconnect service if the customer: (a) pays a reasonable portion of the bill not to exceed an amount equal to the customer's average bill for the six (6) bills immediately preceding the disputed bill; (b) agrees to pay the remainder at a reasonable rate; and (c) agrees to pay all undisputed future bills as they become due, pursuant to 170 IAC 4-1-16(c)(3). In such cases, the Company shall not add any late fee to the outstanding bill, and the terms shall be put in writing and signed by both parties.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R12.6",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 151,
+    "heading_path": [
+      "Sheets 35–36 — Rule 12: Billing Adjustments"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "Section 12.6 — Dispute During Review. When a customer has filed a complaint with the Company or IURC Consumer Affairs, billing adjustments and dispute resolution shall proceed pursuant to 170 IAC 16-1-3 through 170 IAC 16-1-7. The Company shall not disconnect service for disputed charges while the dispute is under review by Consumer Affairs or the Commission, or sooner than ten (10) days after a decision by Consumer Affairs or the Commission, pursuant to 170 IAC 16-1-7(a).",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R12.6~c1",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 152,
+    "heading_path": [
+      "Sheets 37–41 — Rule 13: Disconnection"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "2nd Revised Sheets 37–41 | Cause No. 99012 | Effective: 2024-06-01",
+    "row_cells": null,
+    "parent_clause_id": "RPL-TAR-GRR-012:R12.6"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R13.1",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 153,
+    "heading_path": [
+      "Sheets 37–41 — Rule 13: Disconnection"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "Section 13.1 — Customer-Requested Disconnection. Pursuant to 170 IAC 4-1-16(a), the customer shall: (1) notify the Company at least three (3) days in advance of the desired disconnection date; and (2) remain responsible for all service used until disconnection is completed. The Company shall disconnect service within three (3) working days of the requested disconnection date. The customer shall not be liable for service rendered to that address after the expiration of three (3) working days from the requested date.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R13.2",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 154,
+    "heading_path": [
+      "Sheets 37–41 — Rule 13: Disconnection"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "Section 13.2 — Immediate Disconnection Without Notice. The Company may disconnect service without customer request and without prior notice only under the following circumstances, pursuant to 170 IAC 4-1-16(b):\n\n(a) If a condition dangerous or hazardous to life, physical safety, or property exists; [170 IAC 4-1-16(b)(1)]\n\n(b) Upon order by any court, the Commission, or other duly authorized public authority; [170 IAC 4-1-16(b)(2)]\n\n(c) If fraudulent or unauthorized use of electricity is detected and the Company has reasonable grounds to believe the affected customer is responsible; [170 IAC 4-1-16(b)(3)]\n\n(d) If the Company's metering or regulating equipment has been tampered with and the Company has reasonable grounds to believe the affected customer is responsible. [170 IAC 4-1-16(b)(4)]",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R13.3",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 155,
+    "heading_path": [
+      "Sheets 37–41 — Rule 13: Disconnection"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "Section 13.3 — Disconnection Notice — Residential. Pursuant to 170 IAC 4-1-16(e), except as provided in Sections 13.1 and 13.2, electric service to any residential customer shall not be disconnected for a violation of any rule or regulation or for nonpayment of a bill without fourteen (14) days prior written notice delivered either by: mailing the notice to the customer at the address of record; or personal delivery to the customer or a responsible household member. No disconnect notice for nonpayment may be rendered prior to the date the account becomes delinquent. The notice must be in clear, concise language easily understandable to a layperson and shall state in separately numbered paragraphs:\n\n(a) The date of the proposed disconnection; [170 IAC 4-1-16(e)(1)]\n\n(b) The specific factual basis and reason for the proposed disconnection; [170 IAC 4-1-16(e)(2)]\n\n(c) The telephone number of the Company office (1-800-555-0142) that the customer may call during regular business hours to question the disconnection or seek information about customer rights; [170 IAC 4-1-16(e)(3)]\n\n(d) A reference to the customer pamphlet furnished under Rule 4.3, informing the customer of available rights. [170 IAC 4-1-16(e)(4)]",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R13.4",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 156,
+    "heading_path": [
+      "Sheets 37–41 — Rule 13: Disconnection"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "Section 13.4 — Disconnection Hours and Day Restrictions. Pursuant to 170 IAC 4-1-16(d), involuntary disconnections for nonpayment shall be performed only between the hours of 8:00 a.m. and 3:00 p.m., prevailing local time. The Company shall not disconnect service for nonpayment on any day, or beyond noon of the day immediately preceding any day, on which the Company's business office is not open to the public. Disconnections under Sections 13.1 and 13.2 are not subject to this time limitation.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R13.5",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 157,
+    "heading_path": [
+      "Sheets 37–41 — Rule 13: Disconnection"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "Section 13.5 — Prohibited Disconnections. Pursuant to 170 IAC 4-1-16(c), the Company shall not disconnect service to a customer in the following circumstances:\n\n(a) Failure to pay for excluded items: The Company shall not disconnect for failure to pay for: (i) merchandise or appliances; (ii) service rendered at a different metering point, residence, or location if such bill has remained unpaid for less than forty-five (45) days; (iii) services to a previous occupant of the premises; or (iv) a different form or class of utility service. [170 IAC 4-1-16(c)(1)]\n\n(b) Financial hardship arrangement: The Company shall not disconnect if the customer shows cause for inability to pay the full amount due (financial hardship constitutes cause) and the customer: (i) pays a reasonable portion of the bill, not to exceed ten dollars ($10) or one-tenth (1/10) of the bill, whichever is less, unless the customer agrees to a greater portion; (ii) agrees to pay the remainder within three (3) months; (iii) agrees to pay all undisputed future bills as they become due; and (iv) has not breached a similar agreement with the Company within the past twelve (12) months. The Company may add a late payment charge not to exceed the amount allowed under Rule 11.3. The agreement shall be in writing and signed by the customer and a Company representative. [170 IAC 4-1-16(c)(2)]\n\n(c) Large bill due to utility error: The Company shall not disconnect if a customer is unable to pay a bill that is unusually large due to utility error as described in Rule 12.5, provided the customer makes the required arrangements. [170 IAC 4-1-16(c)(3)]",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R13.6",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 158,
+    "heading_path": [
+      "Sheets 37–41 — Rule 13: Disconnection"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "Section 13.6 — LIHEAP Winter Moratorium. Pursuant to 170 IAC 4-1-16.6(a), without customer request, the Company shall not disconnect residential electric service during the period from December 1 through March 15 to any customer who is either receiving or who is eligible for and has applied for assistance under IC 4-4-33 (LIHEAP). The Company shall not disconnect such service if: (1) the customer's eligibility is being determined by the Indiana Housing and Community Development Authority after submission of a complete application; or (2) the customer has furnished the Company proof of application, or the Company has been so notified by the Indiana Housing and Community Development Authority. [170 IAC 4-1-16.6(b)] This moratorium does not prohibit disconnection on customer request or under the emergency, fraud, or tampering circumstances of Section 13.2. [170 IAC 4-1-16.6(c)]",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R13.7",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 159,
+    "heading_path": [
+      "Sheets 37–41 — Rule 13: Disconnection"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "Section 13.7 — Medical Postponement. Pursuant to 170 IAC 4-1-16(c), the Company shall postpone disconnection for ten (10) days if, prior to the disconnect date specified in the notice, the customer provides a medical statement from a licensed physician or public health official stating that disconnection would be a serious and immediate threat to the health or safety of a designated person in the household. One additional ten (10) day postponement is available upon provision of an additional medical statement.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R13.8",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 160,
+    "heading_path": [
+      "Sheets 37–41 — Rule 13: Disconnection"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "Section 13.8 — Pre-Disconnection Procedures. Pursuant to 170 IAC 4-1-16(f), immediately preceding the actual disconnection, the Company's designated employee shall: (1) make a reasonable attempt to identify themselves to any customer or responsible person on the premises; (2) announce the purpose of their presence; (3) make a record to be maintained for at least thirty (30) days; (4) have information sufficient to inform the customer of the reason for disconnection, including the amount of any delinquent bill; and (5) request any available verification that the outstanding bill has been satisfied or is currently in dispute. Service shall not be disconnected upon presentation of credible evidence that the bill has been paid or is in dispute. The Company employee is not required to accept payment at the premises. Following disconnection, the employee shall leave notice of the disconnection and the address and telephone number where the customer may arrange for reconnection.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R13.9",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 161,
+    "heading_path": [
+      "Sheets 37–41 — Rule 13: Disconnection"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "Section 13.9 — Reconnection Requirements. Pursuant to 170 IAC 4-1-16(g), the Company may charge a reconnection fee as set forth in Table F. The Company shall reconnect service as soon as reasonably possible but at least within one (1) working day after the customer has satisfied all conditions for reconnection. If the Company disconnects service in violation of Commission Rule 170 IAC 4-1-16, service shall be immediately restored at no charge to the customer. Reconnection charges are set forth in Table F: F-1 (Remote reconnect: $10.00), F-2 (Field reconnect regular hours: $45.00), F-3 (Field reconnect after-hours weekday: $70.00), F-4 (Field reconnect Sat/Sun/holiday: $120.00), F-5 (Reconnect at pole/transformer/vault: $165.00).",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R13.10",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 162,
+    "heading_path": [
+      "Sheets 37–41 — Rule 13: Disconnection"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "Section 13.10 — Customer Complaint Process. Any customer who disagrees with the Company's proposed resolution of a billing or service dispute may appeal to the IURC Consumer Affairs Division, pursuant to 170 IAC 16-1-4(c)(5), within seven (7) days of receiving the Company's proposed resolution. The Company shall inform customers of their right to appeal and shall provide Consumer Affairs contact information. Complaints to Consumer Affairs may be filed by telephone (1-800-851-4268), in writing, or by completing State Form 50488 available at iurc.portal.in.gov. Consumer Affairs shall provide a decision within thirty (30) days of the complaint submission date, pursuant to 170 IAC 16-1-5(c)(5). Either party may request Commission review of the Consumer Affairs decision within twenty (20) days, pursuant to 170 IAC 16-1-6(a).",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R13.11",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 163,
+    "heading_path": [
+      "Sheets 37–41 — Rule 13: Disconnection"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "Section 13.11 — Service Protection During Dispute. If a customer has paid and continues to pay all undisputed charges, the Company shall not disconnect service related to disputed charges while the dispute is under review by Consumer Affairs or the Commission, or sooner than ten (10) days after a decision by Consumer Affairs or the Commission, pursuant to 170 IAC 16-1-7(a). If the parties cannot agree on the undisputed amount, to avoid disconnection the customer should pay an amount equal to one-twelfth (1/12) of the estimated annual billing, pursuant to 170 IAC 16-1-7(b).",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R13.11~c1",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 164,
+    "heading_path": [
+      "Sheets 42–43 — Rule 14: Service Interruptions"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "Original Sheets 42–43 | Cause No. 98876 | Effective: 2019-07-01",
+    "row_cells": null,
+    "parent_clause_id": "RPL-TAR-GRR-012:R13.11"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R14.1",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 165,
+    "heading_path": [
+      "Sheets 42–43 — Rule 14: Service Interruptions"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "Section 14.1 — Reporting of Major Interruptions. Pursuant to 170 IAC 4-1-23(b)(1)(A), RPL shall report any unplanned interruption in service lasting two (2) hours or more and affecting two percent (2%) or five thousand (5,000) customers, whichever is fewer. An initial report shall be made to the Commission by the next regularly scheduled reporting interval; updates shall be made at each subsequent interval until service is restored below the threshold.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R14.2",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 166,
+    "heading_path": [
+      "Sheets 42–43 — Rule 14: Service Interruptions"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "Section 14.2 — Reporting Schedule. Pursuant to 170 IAC 4-1-23(b)(2), reporting intervals are as follows: (a) Business days: 6:00 a.m., 9:00 a.m., 11:00 a.m., 2:00 p.m., 4:00 p.m., and 9:00 p.m. EST (Indianapolis time); (b) Nonbusiness days: 6:00 a.m., 2:00 p.m., and 9:00 p.m. EST. Reports shall be submitted to the Commission and OUCC via Commission-prescribed format, preferably by electronic mail, pursuant to 170 IAC 4-1-23(b)(3).",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R14.3",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 167,
+    "heading_path": [
+      "Sheets 42–43 — Rule 14: Service Interruptions"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "Section 14.3 — Emergency Procedures. The Company shall maintain written procedures for designated employees to follow in emergencies, containing at minimum: (1) notification procedures for emergency response personnel; (2) general location of equipment, tools, and materials; and (3) procedures for notifying fire, police, medical, and other public officials, pursuant to 170 IAC 4-1-23(d).",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R14.4",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 168,
+    "heading_path": [
+      "Sheets 42–43 — Rule 14: Service Interruptions"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "Section 14.4 — Advance Notice of Planned Interruptions. For scheduled maintenance or facilities upgrades, the Company shall make reasonable attempts to notify customers whose service is expected to be interrupted for more than one (1) hour, consistent with safety and security considerations, pursuant to 170 IAC 4-1-23(c).",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R14.5",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 169,
+    "heading_path": [
+      "Sheets 42–43 — Rule 14: Service Interruptions"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "Section 14.5 — Reliability Indices Annual Report. Pursuant to 170 IAC 4-1-23(e), RPL shall file a reliability indices report with the Commission's electricity division on or before March 1 of each year, including SAIDI, CAIDI, and SAIFI indices with and without major events, for the system and for each district. The Company shall maintain historical data for at least seven (7) years pursuant to 170 IAC 4-1-23(f).",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R14.7",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 170,
+    "heading_path": [
+      "Sheets 42–43 — Rule 14: Service Interruptions"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "Section 14.7 — Public Health and Safety Priority. During service restoration activities following any sustained service interruption, the Company shall first attempt to restore service to facilities that affect public health and safety, pursuant to 170 IAC 4-1-23(d). Public health and safety facilities include, without limitation, hospitals, emergency communications centers, water treatment plants, and critical government facilities. The Company's Distribution Control Center (located in Lafayette, staffed 24/7) coordinates all restoration activities and maintains escalation procedures including DCC-ESCALATION on-call protocols.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R14.6",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 171,
+    "heading_path": [
+      "Sheets 42–43 — Rule 14: Service Interruptions"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "Section 14.6 — Accident Reports. Pursuant to 170 IAC 4-1-24 and IC 8-1-2-114, whenever an accident attended with loss of human life occurs on or in connection with Company premises or operations, the Company shall give immediate notice to the Commission. If the accident occurs during regular business hours, the Commission shall be notified by telephone with pertinent details including the name of the deceased. If the accident occurs outside regular business hours, the Commission shall be notified as early as practicable on the first business day following the accident. Written reports shall follow as soon as all pertinent information is accumulated.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R14.6~c1",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 172,
+    "heading_path": [
+      "Sheet 44 — Rule 15: Liability"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "Original Sheet 44 | Cause No. 98876 | Effective: 2019-07-01",
+    "row_cells": null,
+    "parent_clause_id": "RPL-TAR-GRR-012:R14.6"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R15.1",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 173,
+    "heading_path": [
+      "Sheet 44 — Rule 15: Liability"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "Section 15.1 — Company Liability. The Company shall exercise reasonable diligence and care to provide electric service as described in this tariff and to supply service in a safe and reliable manner. The Company's liability for damages arising from interruption or impairment of service shall be limited to such damages as may be required by applicable Indiana statutes and Commission orders, including IC 8-1-2.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R15.2",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 174,
+    "heading_path": [
+      "Sheet 44 — Rule 15: Liability"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "Section 15.2 — Limitation. The Company shall not be liable for loss, damage, or injury attributable to: (a) the customer's equipment or wiring; (b) occurrences on the customer's side of the point of delivery; (c) acts of God, public enemies, accidents, labor disputes, acts of government, or other events beyond the Company's reasonable control; (d) voltage variations permitted under Rule 6.3 and 170 IAC 4-1-20; or (e) frequency variations permitted under Rule 6.1 and 170 IAC 4-1-19.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R15.3",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 175,
+    "heading_path": [
+      "Sheet 44 — Rule 15: Liability"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "Section 15.3 — Indemnification. The customer shall indemnify and hold the Company harmless from all claims, damages, or expenses arising from: (a) the customer's use of electric service in violation of this tariff; (b) injury or damage caused by the customer's equipment; or (c) unauthorized use or tampering with Company equipment.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R15.3~c1",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 176,
+    "heading_path": [
+      "Sheets 45–46 — Rule 16: Non-Recurring Charges (Table F)"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "2nd Revised Sheets 45–46 | Cause No. 99012 | Effective: 2024-06-01",
+    "row_cells": null,
+    "parent_clause_id": "RPL-TAR-GRR-012:R15.3"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R16.1",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 177,
+    "heading_path": [
+      "Sheets 45–46 — Rule 16: Non-Recurring Charges (Table F)"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "Section 16.1 — Non-Recurring Charges (Table F). The following non-recurring charges apply to all customers in the Company's service territory. These charges are approved pursuant to 170 IAC 1-6-3(4) and are consistent with 170 IAC 4-1-16(g) (reconnect charges) and 170 IAC 4-1-11(b)-(c) (meter test charges). A reconnection charge may not exceed the charge approved by the Commission in the Company's filed tariffs, per 170 IAC 4-1-16(g). All charges are set forth in Cause No. 99012.\n\nTABLE F — Non-Recurring Charges",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R16.1.tbl1.r1",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 178,
+    "heading_path": [
+      "Sheets 45–46 — Rule 16: Non-Recurring Charges (Table F)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "F-1 | Remote reconnect (via AMI) | $10.00",
+    "row_cells": {
+      "Code": "F-1",
+      "Description": "Remote reconnect (via AMI)",
+      "Charge": "$10.00"
+    },
+    "parent_clause_id": "RPL-TAR-GRR-012:R16.1"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R16.1.tbl1.r2",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 179,
+    "heading_path": [
+      "Sheets 45–46 — Rule 16: Non-Recurring Charges (Table F)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "F-2 | Field reconnect — regular business hours | $45.00",
+    "row_cells": {
+      "Code": "F-2",
+      "Description": "Field reconnect — regular business hours",
+      "Charge": "$45.00"
+    },
+    "parent_clause_id": "RPL-TAR-GRR-012:R16.1"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R16.1.tbl1.r3",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 180,
+    "heading_path": [
+      "Sheets 45–46 — Rule 16: Non-Recurring Charges (Table F)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "F-3 | Field reconnect — after-hours weekday | $70.00",
+    "row_cells": {
+      "Code": "F-3",
+      "Description": "Field reconnect — after-hours weekday",
+      "Charge": "$70.00"
+    },
+    "parent_clause_id": "RPL-TAR-GRR-012:R16.1"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R16.1.tbl1.r4",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 181,
+    "heading_path": [
+      "Sheets 45–46 — Rule 16: Non-Recurring Charges (Table F)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "F-4 | Field reconnect — Saturday, Sunday, or Company holiday | $120.00",
+    "row_cells": {
+      "Code": "F-4",
+      "Description": "Field reconnect — Saturday, Sunday, or Company holiday",
+      "Charge": "$120.00"
+    },
+    "parent_clause_id": "RPL-TAR-GRR-012:R16.1"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R16.1.tbl1.r5",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 182,
+    "heading_path": [
+      "Sheets 45–46 — Rule 16: Non-Recurring Charges (Table F)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "F-5 | Reconnect at pole, transformer, or vault | $165.00",
+    "row_cells": {
+      "Code": "F-5",
+      "Description": "Reconnect at pole, transformer, or vault",
+      "Charge": "$165.00"
+    },
+    "parent_clause_id": "RPL-TAR-GRR-012:R16.1"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R16.1.tbl1.r6",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 183,
+    "heading_path": [
+      "Sheets 45–46 — Rule 16: Non-Recurring Charges (Table F)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "F-6 | Field collection visit | $20.00",
+    "row_cells": {
+      "Code": "F-6",
+      "Description": "Field collection visit",
+      "Charge": "$20.00"
+    },
+    "parent_clause_id": "RPL-TAR-GRR-012:R16.1"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R16.1.tbl1.r7",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 184,
+    "heading_path": [
+      "Sheets 45–46 — Rule 16: Non-Recurring Charges (Table F)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "F-7 | Returned payment (NSF or stop payment) | $20.00",
+    "row_cells": {
+      "Code": "F-7",
+      "Description": "Returned payment (NSF or stop payment)",
+      "Charge": "$20.00"
+    },
+    "parent_clause_id": "RPL-TAR-GRR-012:R16.1"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R16.1.tbl1.r8",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 185,
+    "heading_path": [
+      "Sheets 45–46 — Rule 16: Non-Recurring Charges (Table F)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "F-8 | Meter tampering investigation (minimum) | $100.00",
+    "row_cells": {
+      "Code": "F-8",
+      "Description": "Meter tampering investigation (minimum)",
+      "Charge": "$100.00"
+    },
+    "parent_clause_id": "RPL-TAR-GRR-012:R16.1"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R16.1.tbl1.r9",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 186,
+    "heading_path": [
+      "Sheets 45–46 — Rule 16: Non-Recurring Charges (Table F)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "F-9 | Customer-requested meter test — residential | $40.00",
+    "row_cells": {
+      "Code": "F-9",
+      "Description": "Customer-requested meter test — residential",
+      "Charge": "$40.00"
+    },
+    "parent_clause_id": "RPL-TAR-GRR-012:R16.1"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R16.1.tbl1.r10",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 187,
+    "heading_path": [
+      "Sheets 45–46 — Rule 16: Non-Recurring Charges (Table F)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "F-9 | Customer-requested meter test — polyphase | $95.00",
+    "row_cells": {
+      "Code": "F-9",
+      "Description": "Customer-requested meter test — polyphase",
+      "Charge": "$95.00"
+    },
+    "parent_clause_id": "RPL-TAR-GRR-012:R16.1"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R16.1.tbl1.r11",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 188,
+    "heading_path": [
+      "Sheets 45–46 — Rule 16: Non-Recurring Charges (Table F)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "F-10 | Missed appointment charge | $25.00",
+    "row_cells": {
+      "Code": "F-10",
+      "Description": "Missed appointment charge",
+      "Charge": "$25.00"
+    },
+    "parent_clause_id": "RPL-TAR-GRR-012:R16.1"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R16.1.tbl1.r12",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 189,
+    "heading_path": [
+      "Sheets 45–46 — Rule 16: Non-Recurring Charges (Table F)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "F-11 | AMI opt-out — one-time enrollment | $50.00",
+    "row_cells": {
+      "Code": "F-11",
+      "Description": "AMI opt-out — one-time enrollment",
+      "Charge": "$50.00"
+    },
+    "parent_clause_id": "RPL-TAR-GRR-012:R16.1"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R16.1.tbl1.r13",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 190,
+    "heading_path": [
+      "Sheets 45–46 — Rule 16: Non-Recurring Charges (Table F)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "F-11 | AMI opt-out — monthly ongoing | $18.00",
+    "row_cells": {
+      "Code": "F-11",
+      "Description": "AMI opt-out — monthly ongoing",
+      "Charge": "$18.00"
+    },
+    "parent_clause_id": "RPL-TAR-GRR-012:R16.1"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R16.1.tbl1.r14",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 191,
+    "heading_path": [
+      "Sheets 45–46 — Rule 16: Non-Recurring Charges (Table F)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "F-12 | Account establishment | $15.00",
+    "row_cells": {
+      "Code": "F-12",
+      "Description": "Account establishment",
+      "Charge": "$15.00"
+    },
+    "parent_clause_id": "RPL-TAR-GRR-012:R16.1"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R16.2",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 192,
+    "heading_path": [
+      "Sheets 45–46 — Rule 16: Non-Recurring Charges (Table F)"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "Section 16.2 — Applicability. The charges set forth in Table F apply when the Company performs a service that requires labor, materials, or resources beyond normal monthly service. The Company shall inform customers of applicable nonrecurring charges as part of the customer pamphlet required by 170 IAC 4-1-18(A). Meter test charges (F-9) apply only when the conditions of 170 IAC 4-1-11(b) are met, with disclosure of cost prior to testing per 170 IAC 4-1-11(c). Reconnection charges (F-1 through F-5) are assessed pursuant to 170 IAC 4-1-16(g).",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R16.3",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 193,
+    "heading_path": [
+      "Sheets 45–46 — Rule 16: Non-Recurring Charges (Table F)"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "Section 16.3 — Waiver of Reconnect Charge. If the Company disconnects service in violation of Commission Rule 170 IAC 4-1-16, service shall be restored immediately at no charge, and no reconnect fee shall be assessed, pursuant to 170 IAC 4-1-16(g).",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:R16.3~c1",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 194,
+    "heading_path": [
+      "Sheets 47–49 — Reserved"
+    ],
+    "unit_kind": "tariff_subrule",
+    "text_raw": "Original Sheets 47–49 | Cause No. 98876 | Effective: 2019-07-01",
+    "row_cells": null,
+    "parent_clause_id": "RPL-TAR-GRR-012:R16.3"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:S47.1",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 195,
+    "heading_path": [
+      "Sheets 47–49 — Reserved"
+    ],
+    "unit_kind": "section",
+    "text_raw": "Reserved for future use. Sheets 47, 48, and 49 are intentionally left blank and reserved for future rule additions or supplements as may be approved by the Commission.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:S47.1~c1",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 196,
+    "heading_path": [
+      "Sheets 50–118 — Rate Schedule Index"
+    ],
+    "unit_kind": "section",
+    "text_raw": "Original / Various Revisions | See individual Rate Schedules for effective dates",
+    "row_cells": null,
+    "parent_clause_id": "RPL-TAR-GRR-012:S47.1"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:S50.IDX",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 197,
+    "heading_path": [
+      "Sheets 50–118 — Rate Schedule Index"
+    ],
+    "unit_kind": "section",
+    "text_raw": "The following rate schedules are contained in separate filings with the IURC and are incorporated by reference herein. Rates stated in this index are for reference only; the applicable Rate Schedule on file with the Commission governs. Separate schedules are filed per 170 IAC 1-2-1.\n\n*End of IURC Tariff No. 12 — Rockridge Power & Light Company*\n\n*Issued by: Thomas Whitfield, Vice President, Regulatory & Government Affairs*\n*400 Wabash Commons Drive, Lafayette, IN 47901*\n*Filed: 2024-04-30 | Effective: 2024-06-01 | Approved: 2024-05-15*\n*Cause No. 99012 | IURC Utility ID 99012*",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:S50.IDX.tbl1.r1",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 198,
+    "heading_path": [
+      "Sheets 50–118 — Rate Schedule Index"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "RS-1 | Residential Service | Sheet 50",
+    "row_cells": {
+      "Schedule": "RS-1",
+      "Description": "Residential Service",
+      "Sheet": "Sheet 50"
+    },
+    "parent_clause_id": "RPL-TAR-GRR-012:S50.IDX"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:S50.IDX.tbl1.r2",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 199,
+    "heading_path": [
+      "Sheets 50–118 — Rate Schedule Index"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "RS-2 | Residential Time-of-Use Service | Sheet 51",
+    "row_cells": {
+      "Schedule": "RS-2",
+      "Description": "Residential Time-of-Use Service",
+      "Sheet": "Sheet 51"
+    },
+    "parent_clause_id": "RPL-TAR-GRR-012:S50.IDX"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:S50.IDX.tbl1.r3",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 200,
+    "heading_path": [
+      "Sheets 50–118 — Rate Schedule Index"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "RS-3 | Residential Budget Billing Option | Sheet 52",
+    "row_cells": {
+      "Schedule": "RS-3",
+      "Description": "Residential Budget Billing Option",
+      "Sheet": "Sheet 52"
+    },
+    "parent_clause_id": "RPL-TAR-GRR-012:S50.IDX"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:S50.IDX.tbl1.r4",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 201,
+    "heading_path": [
+      "Sheets 50–118 — Rate Schedule Index"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "RS-4 | Residential Low-Income Rate | Sheet 53",
+    "row_cells": {
+      "Schedule": "RS-4",
+      "Description": "Residential Low-Income Rate",
+      "Sheet": "Sheet 53"
+    },
+    "parent_clause_id": "RPL-TAR-GRR-012:S50.IDX"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:S50.IDX.tbl1.r5",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 202,
+    "heading_path": [
+      "Sheets 50–118 — Rate Schedule Index"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "RS-5 | Small General Service | Sheet 54",
+    "row_cells": {
+      "Schedule": "RS-5",
+      "Description": "Small General Service",
+      "Sheet": "Sheet 54"
+    },
+    "parent_clause_id": "RPL-TAR-GRR-012:S50.IDX"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:S50.IDX.tbl1.r6",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 203,
+    "heading_path": [
+      "Sheets 50–118 — Rate Schedule Index"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "RS-6 | Small General Service — Demand | Sheet 55",
+    "row_cells": {
+      "Schedule": "RS-6",
+      "Description": "Small General Service — Demand",
+      "Sheet": "Sheet 55"
+    },
+    "parent_clause_id": "RPL-TAR-GRR-012:S50.IDX"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:S50.IDX.tbl1.r7",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 204,
+    "heading_path": [
+      "Sheets 50–118 — Rate Schedule Index"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "RS-7 | Medium General Service | Sheet 56",
+    "row_cells": {
+      "Schedule": "RS-7",
+      "Description": "Medium General Service",
+      "Sheet": "Sheet 56"
+    },
+    "parent_clause_id": "RPL-TAR-GRR-012:S50.IDX"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:S50.IDX.tbl1.r8",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 205,
+    "heading_path": [
+      "Sheets 50–118 — Rate Schedule Index"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "RS-8 | Medium General Service — Demand | Sheet 57",
+    "row_cells": {
+      "Schedule": "RS-8",
+      "Description": "Medium General Service — Demand",
+      "Sheet": "Sheet 57"
+    },
+    "parent_clause_id": "RPL-TAR-GRR-012:S50.IDX"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:S50.IDX.tbl1.r9",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 206,
+    "heading_path": [
+      "Sheets 50–118 — Rate Schedule Index"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "RS-9 | Large General Service | Sheet 58",
+    "row_cells": {
+      "Schedule": "RS-9",
+      "Description": "Large General Service",
+      "Sheet": "Sheet 58"
+    },
+    "parent_clause_id": "RPL-TAR-GRR-012:S50.IDX"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:S50.IDX.tbl1.r10",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 207,
+    "heading_path": [
+      "Sheets 50–118 — Rate Schedule Index"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "RS-10 | Large General Service — Time-of-Use | Sheet 59",
+    "row_cells": {
+      "Schedule": "RS-10",
+      "Description": "Large General Service — Time-of-Use",
+      "Sheet": "Sheet 59"
+    },
+    "parent_clause_id": "RPL-TAR-GRR-012:S50.IDX"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:S50.IDX.tbl1.r11",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 208,
+    "heading_path": [
+      "Sheets 50–118 — Rate Schedule Index"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "RS-11 | Extra Large Industrial Service | Sheet 60",
+    "row_cells": {
+      "Schedule": "RS-11",
+      "Description": "Extra Large Industrial Service",
+      "Sheet": "Sheet 60"
+    },
+    "parent_clause_id": "RPL-TAR-GRR-012:S50.IDX"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:S50.IDX.tbl1.r12",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 209,
+    "heading_path": [
+      "Sheets 50–118 — Rate Schedule Index"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "RS-12 | Extra Large Industrial — Interruptible | Sheet 61",
+    "row_cells": {
+      "Schedule": "RS-12",
+      "Description": "Extra Large Industrial — Interruptible",
+      "Sheet": "Sheet 61"
+    },
+    "parent_clause_id": "RPL-TAR-GRR-012:S50.IDX"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:S50.IDX.tbl1.r13",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 210,
+    "heading_path": [
+      "Sheets 50–118 — Rate Schedule Index"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "RS-13 | Agricultural Service | Sheet 62",
+    "row_cells": {
+      "Schedule": "RS-13",
+      "Description": "Agricultural Service",
+      "Sheet": "Sheet 62"
+    },
+    "parent_clause_id": "RPL-TAR-GRR-012:S50.IDX"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:S50.IDX.tbl1.r14",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 211,
+    "heading_path": [
+      "Sheets 50–118 — Rate Schedule Index"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "RS-14 | Irrigation Service | Sheet 63",
+    "row_cells": {
+      "Schedule": "RS-14",
+      "Description": "Irrigation Service",
+      "Sheet": "Sheet 63"
+    },
+    "parent_clause_id": "RPL-TAR-GRR-012:S50.IDX"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:S50.IDX.tbl1.r15",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 212,
+    "heading_path": [
+      "Sheets 50–118 — Rate Schedule Index"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "RS-15 | Street and Highway Lighting — HPS | Sheet 64",
+    "row_cells": {
+      "Schedule": "RS-15",
+      "Description": "Street and Highway Lighting — HPS",
+      "Sheet": "Sheet 64"
+    },
+    "parent_clause_id": "RPL-TAR-GRR-012:S50.IDX"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:S50.IDX.tbl1.r16",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 213,
+    "heading_path": [
+      "Sheets 50–118 — Rate Schedule Index"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "RS-16 | Street and Highway Lighting — LED | Sheet 65",
+    "row_cells": {
+      "Schedule": "RS-16",
+      "Description": "Street and Highway Lighting — LED",
+      "Sheet": "Sheet 65"
+    },
+    "parent_clause_id": "RPL-TAR-GRR-012:S50.IDX"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:S50.IDX.tbl1.r17",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 214,
+    "heading_path": [
+      "Sheets 50–118 — Rate Schedule Index"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "RS-17 | Traffic Signal Service | Sheet 66",
+    "row_cells": {
+      "Schedule": "RS-17",
+      "Description": "Traffic Signal Service",
+      "Sheet": "Sheet 66"
+    },
+    "parent_clause_id": "RPL-TAR-GRR-012:S50.IDX"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:S50.IDX.tbl1.r18",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 215,
+    "heading_path": [
+      "Sheets 50–118 — Rate Schedule Index"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "RS-18 | Outdoor Area Lighting | Sheet 67",
+    "row_cells": {
+      "Schedule": "RS-18",
+      "Description": "Outdoor Area Lighting",
+      "Sheet": "Sheet 67"
+    },
+    "parent_clause_id": "RPL-TAR-GRR-012:S50.IDX"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:S50.IDX.tbl1.r19",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 216,
+    "heading_path": [
+      "Sheets 50–118 — Rate Schedule Index"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "RS-19 | Municipal Pumping Service | Sheet 68",
+    "row_cells": {
+      "Schedule": "RS-19",
+      "Description": "Municipal Pumping Service",
+      "Sheet": "Sheet 68"
+    },
+    "parent_clause_id": "RPL-TAR-GRR-012:S50.IDX"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:S50.IDX.tbl1.r20",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 217,
+    "heading_path": [
+      "Sheets 50–118 — Rate Schedule Index"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "RS-20 | Public Authority Service | Sheet 69",
+    "row_cells": {
+      "Schedule": "RS-20",
+      "Description": "Public Authority Service",
+      "Sheet": "Sheet 69"
+    },
+    "parent_clause_id": "RPL-TAR-GRR-012:S50.IDX"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:S50.IDX.tbl1.r21",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 218,
+    "heading_path": [
+      "Sheets 50–118 — Rate Schedule Index"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "RS-21 | Schools and Universities Service | Sheet 70",
+    "row_cells": {
+      "Schedule": "RS-21",
+      "Description": "Schools and Universities Service",
+      "Sheet": "Sheet 70"
+    },
+    "parent_clause_id": "RPL-TAR-GRR-012:S50.IDX"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:S50.IDX.tbl1.r22",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 219,
+    "heading_path": [
+      "Sheets 50–118 — Rate Schedule Index"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "RS-22 | Hospitals and Health Care Facilities | Sheet 71",
+    "row_cells": {
+      "Schedule": "RS-22",
+      "Description": "Hospitals and Health Care Facilities",
+      "Sheet": "Sheet 71"
+    },
+    "parent_clause_id": "RPL-TAR-GRR-012:S50.IDX"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:S50.IDX.tbl1.r23",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 220,
+    "heading_path": [
+      "Sheets 50–118 — Rate Schedule Index"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "RS-23 | Commercial HVAC Service | Sheet 72",
+    "row_cells": {
+      "Schedule": "RS-23",
+      "Description": "Commercial HVAC Service",
+      "Sheet": "Sheet 72"
+    },
+    "parent_clause_id": "RPL-TAR-GRR-012:S50.IDX"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:S50.IDX.tbl1.r24",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 221,
+    "heading_path": [
+      "Sheets 50–118 — Rate Schedule Index"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "RS-24 | General Service — Primary Delivery | Sheet 73",
+    "row_cells": {
+      "Schedule": "RS-24",
+      "Description": "General Service — Primary Delivery",
+      "Sheet": "Sheet 73"
+    },
+    "parent_clause_id": "RPL-TAR-GRR-012:S50.IDX"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:S50.IDX.tbl1.r25",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 222,
+    "heading_path": [
+      "Sheets 50–118 — Rate Schedule Index"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "RS-25 | Industrial Primary Service — Subtransmission | Sheet 74",
+    "row_cells": {
+      "Schedule": "RS-25",
+      "Description": "Industrial Primary Service — Subtransmission",
+      "Sheet": "Sheet 74"
+    },
+    "parent_clause_id": "RPL-TAR-GRR-012:S50.IDX"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:S50.IDX.tbl1.r26",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 223,
+    "heading_path": [
+      "Sheets 50–118 — Rate Schedule Index"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "RS-26 | Interruptible Service | Sheet 75",
+    "row_cells": {
+      "Schedule": "RS-26",
+      "Description": "Interruptible Service",
+      "Sheet": "Sheet 75"
+    },
+    "parent_clause_id": "RPL-TAR-GRR-012:S50.IDX"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:S50.IDX.tbl1.r27",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 224,
+    "heading_path": [
+      "Sheets 50–118 — Rate Schedule Index"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "RS-27 | Standby Service | Sheet 76",
+    "row_cells": {
+      "Schedule": "RS-27",
+      "Description": "Standby Service",
+      "Sheet": "Sheet 76"
+    },
+    "parent_clause_id": "RPL-TAR-GRR-012:S50.IDX"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:S50.IDX.tbl1.r28",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 225,
+    "heading_path": [
+      "Sheets 50–118 — Rate Schedule Index"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "RS-28 | Backup Power Service | Sheet 77",
+    "row_cells": {
+      "Schedule": "RS-28",
+      "Description": "Backup Power Service",
+      "Sheet": "Sheet 77"
+    },
+    "parent_clause_id": "RPL-TAR-GRR-012:S50.IDX"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:S50.IDX.tbl1.r29",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 226,
+    "heading_path": [
+      "Sheets 50–118 — Rate Schedule Index"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "RS-29 | Supplemental Service | Sheet 78",
+    "row_cells": {
+      "Schedule": "RS-29",
+      "Description": "Supplemental Service",
+      "Sheet": "Sheet 78"
+    },
+    "parent_clause_id": "RPL-TAR-GRR-012:S50.IDX"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:S50.IDX.tbl1.r30",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 227,
+    "heading_path": [
+      "Sheets 50–118 — Rate Schedule Index"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "RS-30 | Net Metering — Residential | Sheet 79",
+    "row_cells": {
+      "Schedule": "RS-30",
+      "Description": "Net Metering — Residential",
+      "Sheet": "Sheet 79"
+    },
+    "parent_clause_id": "RPL-TAR-GRR-012:S50.IDX"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:S50.IDX.tbl1.r31",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 228,
+    "heading_path": [
+      "Sheets 50–118 — Rate Schedule Index"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "RS-31 | Net Metering — Non-Residential | Sheet 80",
+    "row_cells": {
+      "Schedule": "RS-31",
+      "Description": "Net Metering — Non-Residential",
+      "Sheet": "Sheet 80"
+    },
+    "parent_clause_id": "RPL-TAR-GRR-012:S50.IDX"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:S50.IDX.tbl1.r32",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 229,
+    "heading_path": [
+      "Sheets 50–118 — Rate Schedule Index"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "RS-32 | Distributed Generation Interconnection | Sheet 81",
+    "row_cells": {
+      "Schedule": "RS-32",
+      "Description": "Distributed Generation Interconnection",
+      "Sheet": "Sheet 81"
+    },
+    "parent_clause_id": "RPL-TAR-GRR-012:S50.IDX"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:S50.IDX.tbl1.r33",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 230,
+    "heading_path": [
+      "Sheets 50–118 — Rate Schedule Index"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "RS-33 | Community Solar Service | Sheet 82",
+    "row_cells": {
+      "Schedule": "RS-33",
+      "Description": "Community Solar Service",
+      "Sheet": "Sheet 82"
+    },
+    "parent_clause_id": "RPL-TAR-GRR-012:S50.IDX"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:S50.IDX.tbl1.r34",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 231,
+    "heading_path": [
+      "Sheets 50–118 — Rate Schedule Index"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "RS-34 | Electric Vehicle Charging — Residential | Sheet 83",
+    "row_cells": {
+      "Schedule": "RS-34",
+      "Description": "Electric Vehicle Charging — Residential",
+      "Sheet": "Sheet 83"
+    },
+    "parent_clause_id": "RPL-TAR-GRR-012:S50.IDX"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:S50.IDX.tbl1.r35",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 232,
+    "heading_path": [
+      "Sheets 50–118 — Rate Schedule Index"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "RS-35 | Electric Vehicle Charging — Commercial | Sheet 84",
+    "row_cells": {
+      "Schedule": "RS-35",
+      "Description": "Electric Vehicle Charging — Commercial",
+      "Sheet": "Sheet 84"
+    },
+    "parent_clause_id": "RPL-TAR-GRR-012:S50.IDX"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:S50.IDX.tbl1.r36",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 233,
+    "heading_path": [
+      "Sheets 50–118 — Rate Schedule Index"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "RS-36 | Demand Response — Residential | Sheet 85",
+    "row_cells": {
+      "Schedule": "RS-36",
+      "Description": "Demand Response — Residential",
+      "Sheet": "Sheet 85"
+    },
+    "parent_clause_id": "RPL-TAR-GRR-012:S50.IDX"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:S50.IDX.tbl1.r37",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 234,
+    "heading_path": [
+      "Sheets 50–118 — Rate Schedule Index"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "RS-37 | Demand Response — Commercial/Industrial | Sheet 86",
+    "row_cells": {
+      "Schedule": "RS-37",
+      "Description": "Demand Response — Commercial/Industrial",
+      "Sheet": "Sheet 86"
+    },
+    "parent_clause_id": "RPL-TAR-GRR-012:S50.IDX"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:S50.IDX.tbl1.r38",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 235,
+    "heading_path": [
+      "Sheets 50–118 — Rate Schedule Index"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "RS-38 | Real-Time Pricing Service | Sheet 87",
+    "row_cells": {
+      "Schedule": "RS-38",
+      "Description": "Real-Time Pricing Service",
+      "Sheet": "Sheet 87"
+    },
+    "parent_clause_id": "RPL-TAR-GRR-012:S50.IDX"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:S50.IDX.tbl1.r39",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 236,
+    "heading_path": [
+      "Sheets 50–118 — Rate Schedule Index"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "RS-39 | Critical Peak Pricing | Sheet 88",
+    "row_cells": {
+      "Schedule": "RS-39",
+      "Description": "Critical Peak Pricing",
+      "Sheet": "Sheet 88"
+    },
+    "parent_clause_id": "RPL-TAR-GRR-012:S50.IDX"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:S50.IDX.tbl1.r40",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 237,
+    "heading_path": [
+      "Sheets 50–118 — Rate Schedule Index"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "RS-40 | Green Power Option | Sheet 89",
+    "row_cells": {
+      "Schedule": "RS-40",
+      "Description": "Green Power Option",
+      "Sheet": "Sheet 89"
+    },
+    "parent_clause_id": "RPL-TAR-GRR-012:S50.IDX"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:S50.IDX.tbl1.r41",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 238,
+    "heading_path": [
+      "Sheets 50–118 — Rate Schedule Index"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "RS-41 | Renewable Energy Certificate Program | Sheet 90",
+    "row_cells": {
+      "Schedule": "RS-41",
+      "Description": "Renewable Energy Certificate Program",
+      "Sheet": "Sheet 90"
+    },
+    "parent_clause_id": "RPL-TAR-GRR-012:S50.IDX"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:S50.IDX.tbl1.r42",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 239,
+    "heading_path": [
+      "Sheets 50–118 — Rate Schedule Index"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "RS-42 | Economic Development Service | Sheet 91",
+    "row_cells": {
+      "Schedule": "RS-42",
+      "Description": "Economic Development Service",
+      "Sheet": "Sheet 91"
+    },
+    "parent_clause_id": "RPL-TAR-GRR-012:S50.IDX"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:S50.IDX.tbl1.r43",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 240,
+    "heading_path": [
+      "Sheets 50–118 — Rate Schedule Index"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "RS-43 | Large New Load Service | Sheet 92",
+    "row_cells": {
+      "Schedule": "RS-43",
+      "Description": "Large New Load Service",
+      "Sheet": "Sheet 92"
+    },
+    "parent_clause_id": "RPL-TAR-GRR-012:S50.IDX"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:S50.IDX.tbl1.r44",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 241,
+    "heading_path": [
+      "Sheets 50–118 — Rate Schedule Index"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "RS-44 | Data Center Service | Sheet 93",
+    "row_cells": {
+      "Schedule": "RS-44",
+      "Description": "Data Center Service",
+      "Sheet": "Sheet 93"
+    },
+    "parent_clause_id": "RPL-TAR-GRR-012:S50.IDX"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:S50.IDX.tbl1.r45",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 242,
+    "heading_path": [
+      "Sheets 50–118 — Rate Schedule Index"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "RS-45 | Cold Storage and Refrigeration Service | Sheet 94",
+    "row_cells": {
+      "Schedule": "RS-45",
+      "Description": "Cold Storage and Refrigeration Service",
+      "Sheet": "Sheet 94"
+    },
+    "parent_clause_id": "RPL-TAR-GRR-012:S50.IDX"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:S50.IDX.tbl1.r46",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 243,
+    "heading_path": [
+      "Sheets 50–118 — Rate Schedule Index"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "RS-46 | Special Contract Service | Sheet 95",
+    "row_cells": {
+      "Schedule": "RS-46",
+      "Description": "Special Contract Service",
+      "Sheet": "Sheet 95"
+    },
+    "parent_clause_id": "RPL-TAR-GRR-012:S50.IDX"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:S50.IDX.tbl1.r47",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 244,
+    "heading_path": [
+      "Sheets 50–118 — Rate Schedule Index"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "RS-47 | Construction Service | Sheet 96",
+    "row_cells": {
+      "Schedule": "RS-47",
+      "Description": "Construction Service",
+      "Sheet": "Sheet 96"
+    },
+    "parent_clause_id": "RPL-TAR-GRR-012:S50.IDX"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:S50.IDX.tbl1.r48",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 245,
+    "heading_path": [
+      "Sheets 50–118 — Rate Schedule Index"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "RS-48 | Temporary Construction — Special | Sheet 97",
+    "row_cells": {
+      "Schedule": "RS-48",
+      "Description": "Temporary Construction — Special",
+      "Sheet": "Sheet 97"
+    },
+    "parent_clause_id": "RPL-TAR-GRR-012:S50.IDX"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:S50.IDX.tbl1.r49",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 246,
+    "heading_path": [
+      "Sheets 50–118 — Rate Schedule Index"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "RS-49 | Resale Service | Sheet 98",
+    "row_cells": {
+      "Schedule": "RS-49",
+      "Description": "Resale Service",
+      "Sheet": "Sheet 98"
+    },
+    "parent_clause_id": "RPL-TAR-GRR-012:S50.IDX"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:S50.IDX.tbl1.r50",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 247,
+    "heading_path": [
+      "Sheets 50–118 — Rate Schedule Index"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "RS-50 | Wholesale Distribution Service | Sheet 99",
+    "row_cells": {
+      "Schedule": "RS-50",
+      "Description": "Wholesale Distribution Service",
+      "Sheet": "Sheet 99"
+    },
+    "parent_clause_id": "RPL-TAR-GRR-012:S50.IDX"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:S50.IDX.tbl1.r51",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 248,
+    "heading_path": [
+      "Sheets 50–118 — Rate Schedule Index"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "RS-51 | Unmetered Service — Small | Sheet 100",
+    "row_cells": {
+      "Schedule": "RS-51",
+      "Description": "Unmetered Service — Small",
+      "Sheet": "Sheet 100"
+    },
+    "parent_clause_id": "RPL-TAR-GRR-012:S50.IDX"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:S50.IDX.tbl1.r52",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 249,
+    "heading_path": [
+      "Sheets 50–118 — Rate Schedule Index"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "RS-52 | Unmetered Service — Large | Sheet 101",
+    "row_cells": {
+      "Schedule": "RS-52",
+      "Description": "Unmetered Service — Large",
+      "Sheet": "Sheet 101"
+    },
+    "parent_clause_id": "RPL-TAR-GRR-012:S50.IDX"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:S50.IDX.tbl1.r53",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 250,
+    "heading_path": [
+      "Sheets 50–118 — Rate Schedule Index"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "RS-53 | Transmission Level Delivery | Sheet 102",
+    "row_cells": {
+      "Schedule": "RS-53",
+      "Description": "Transmission Level Delivery",
+      "Sheet": "Sheet 102"
+    },
+    "parent_clause_id": "RPL-TAR-GRR-012:S50.IDX"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:S50.IDX.tbl1.r54",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 251,
+    "heading_path": [
+      "Sheets 50–118 — Rate Schedule Index"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "RS-54 | Exempt Wholesale Generator Interconnection | Sheet 103",
+    "row_cells": {
+      "Schedule": "RS-54",
+      "Description": "Exempt Wholesale Generator Interconnection",
+      "Sheet": "Sheet 103"
+    },
+    "parent_clause_id": "RPL-TAR-GRR-012:S50.IDX"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:S50.IDX.tbl1.r55",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 252,
+    "heading_path": [
+      "Sheets 50–118 — Rate Schedule Index"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "RS-55 | Rider A — Fuel and Purchased Power Adjustment | Sheet 104",
+    "row_cells": {
+      "Schedule": "RS-55",
+      "Description": "Rider A — Fuel and Purchased Power Adjustment",
+      "Sheet": "Sheet 104"
+    },
+    "parent_clause_id": "RPL-TAR-GRR-012:S50.IDX"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:S50.IDX.tbl1.r56",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 253,
+    "heading_path": [
+      "Sheets 50–118 — Rate Schedule Index"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "RS-56 | Rider B — Environmental Compliance | Sheet 105",
+    "row_cells": {
+      "Schedule": "RS-56",
+      "Description": "Rider B — Environmental Compliance",
+      "Sheet": "Sheet 105"
+    },
+    "parent_clause_id": "RPL-TAR-GRR-012:S50.IDX"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:S50.IDX.tbl1.r57",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 254,
+    "heading_path": [
+      "Sheets 50–118 — Rate Schedule Index"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "RS-57 | Rider C — Transmission Cost Adjustment | Sheet 106",
+    "row_cells": {
+      "Schedule": "RS-57",
+      "Description": "Rider C — Transmission Cost Adjustment",
+      "Sheet": "Sheet 106"
+    },
+    "parent_clause_id": "RPL-TAR-GRR-012:S50.IDX"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:S50.IDX.tbl1.r58",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 255,
+    "heading_path": [
+      "Sheets 50–118 — Rate Schedule Index"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "RS-58 | Rider D — Distribution Infrastructure Rider | Sheet 107",
+    "row_cells": {
+      "Schedule": "RS-58",
+      "Description": "Rider D — Distribution Infrastructure Rider",
+      "Sheet": "Sheet 107"
+    },
+    "parent_clause_id": "RPL-TAR-GRR-012:S50.IDX"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:S50.IDX.tbl1.r59",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 256,
+    "heading_path": [
+      "Sheets 50–118 — Rate Schedule Index"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "RS-59 | Rider E — Demand Side Management Rider | Sheet 108",
+    "row_cells": {
+      "Schedule": "RS-59",
+      "Description": "Rider E — Demand Side Management Rider",
+      "Sheet": "Sheet 108"
+    },
+    "parent_clause_id": "RPL-TAR-GRR-012:S50.IDX"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:S50.IDX.tbl1.r60",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 257,
+    "heading_path": [
+      "Sheets 50–118 — Rate Schedule Index"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "RS-60 | Rider F — Renewable Portfolio Standard Rider | Sheet 109",
+    "row_cells": {
+      "Schedule": "RS-60",
+      "Description": "Rider F — Renewable Portfolio Standard Rider",
+      "Sheet": "Sheet 109"
+    },
+    "parent_clause_id": "RPL-TAR-GRR-012:S50.IDX"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:S50.IDX.tbl1.r61",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 258,
+    "heading_path": [
+      "Sheets 50–118 — Rate Schedule Index"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "RS-61 | Rider G — Storm Recovery Rider | Sheet 110",
+    "row_cells": {
+      "Schedule": "RS-61",
+      "Description": "Rider G — Storm Recovery Rider",
+      "Sheet": "Sheet 110"
+    },
+    "parent_clause_id": "RPL-TAR-GRR-012:S50.IDX"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:S50.IDX.tbl1.r62",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 259,
+    "heading_path": [
+      "Sheets 50–118 — Rate Schedule Index"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "RS-62 | Rider H — Economic Development Rider | Sheet 111",
+    "row_cells": {
+      "Schedule": "RS-62",
+      "Description": "Rider H — Economic Development Rider",
+      "Sheet": "Sheet 111"
+    },
+    "parent_clause_id": "RPL-TAR-GRR-012:S50.IDX"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:S50.IDX.tbl1.r63",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 260,
+    "heading_path": [
+      "Sheets 50–118 — Rate Schedule Index"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "RS-63 | Rider I — Low-Income Bill Assistance | Sheet 112",
+    "row_cells": {
+      "Schedule": "RS-63",
+      "Description": "Rider I — Low-Income Bill Assistance",
+      "Sheet": "Sheet 112"
+    },
+    "parent_clause_id": "RPL-TAR-GRR-012:S50.IDX"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:S50.IDX.tbl1.r64",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 261,
+    "heading_path": [
+      "Sheets 50–118 — Rate Schedule Index"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "RS-64 | Rider J — Smart Grid Investment Rider | Sheet 113",
+    "row_cells": {
+      "Schedule": "RS-64",
+      "Description": "Rider J — Smart Grid Investment Rider",
+      "Sheet": "Sheet 113"
+    },
+    "parent_clause_id": "RPL-TAR-GRR-012:S50.IDX"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:S50.IDX.tbl1.r65",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 262,
+    "heading_path": [
+      "Sheets 50–118 — Rate Schedule Index"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "RS-65 | Rider K — Vegetation Management Rider | Sheet 114",
+    "row_cells": {
+      "Schedule": "RS-65",
+      "Description": "Rider K — Vegetation Management Rider",
+      "Sheet": "Sheet 114"
+    },
+    "parent_clause_id": "RPL-TAR-GRR-012:S50.IDX"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:S50.IDX.tbl1.r66",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 263,
+    "heading_path": [
+      "Sheets 50–118 — Rate Schedule Index"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "RS-66 | Rider L — Electric Vehicles Infrastructure Rider | Sheet 115",
+    "row_cells": {
+      "Schedule": "RS-66",
+      "Description": "Rider L — Electric Vehicles Infrastructure Rider",
+      "Sheet": "Sheet 115"
+    },
+    "parent_clause_id": "RPL-TAR-GRR-012:S50.IDX"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:S50.IDX.tbl1.r67",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 264,
+    "heading_path": [
+      "Sheets 50–118 — Rate Schedule Index"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "RS-67 | Late Payment Charge (Residential) | Sheet 116",
+    "row_cells": {
+      "Schedule": "RS-67",
+      "Description": "Late Payment Charge (Residential)",
+      "Sheet": "Sheet 116"
+    },
+    "parent_clause_id": "RPL-TAR-GRR-012:S50.IDX"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:S50.IDX.tbl1.r68",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 265,
+    "heading_path": [
+      "Sheets 50–118 — Rate Schedule Index"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "RS-68 | Late Payment Charge (Non-Residential) | Sheet 117",
+    "row_cells": {
+      "Schedule": "RS-68",
+      "Description": "Late Payment Charge (Non-Residential)",
+      "Sheet": "Sheet 117"
+    },
+    "parent_clause_id": "RPL-TAR-GRR-012:S50.IDX"
+  },
+  {
+    "clause_id": "RPL-TAR-GRR-012:S50.IDX.tbl1.r69",
+    "doc_id": "RPL-TAR-GRR-012",
+    "ordinal": 266,
+    "heading_path": [
+      "Sheets 50–118 — Rate Schedule Index"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "RS-69 | Miscellaneous Service Charges | Sheet 118",
+    "row_cells": {
+      "Schedule": "RS-69",
+      "Description": "Miscellaneous Service Charges",
+      "Sheet": "Sheet 118"
+    },
+    "parent_clause_id": "RPL-TAR-GRR-012:S50.IDX"
+  }
+]

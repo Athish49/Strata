@@ -1,0 +1,4105 @@
+[
+  {
+    "clause_id": "RPL-CS-PRO-007:1.1",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 1,
+    "heading_path": [
+      "1. Purpose"
+    ],
+    "unit_kind": "section",
+    "text_raw": "1.1 This procedure establishes the steps that Contact Center agents, Billing Adjustment Analysts, and Meter Technicians at Rockridge Power & Light Company (\"RPL\" or \"Company\") follow when a customer questions the accuracy of a meter or disputes a bill, from initial high-bill triage through meter testing, results reporting, and any required billing adjustment. It operationalizes the Company's obligations under 170 IAC 4-1-4 through 4-1-14 and the corresponding provisions of Tariff Rule 9 (Sheets 27–29) and Rule 12 (Sheets 35–36) of RPL-TAR-GRR-012.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:1.2",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 2,
+    "heading_path": [
+      "1. Purpose"
+    ],
+    "unit_kind": "section",
+    "text_raw": "1.2 This procedure does not govern periodic in-service testing or quality-control sampling under RPL's Meter Testing Program Plan (RPL-MTR-PGM-001), which is a separate controlled document. Standards laboratory calibration and equipment certification requirements are addressed in both RPL-MTR-PGM-001 and cross-referenced in §10 of this procedure.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:2.1",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 3,
+    "heading_path": [
+      "2. Scope"
+    ],
+    "unit_kind": "section",
+    "text_raw": "2.1 Residential customers. This procedure applies to all residential customers of RPL who request a meter accuracy test or dispute a bill, regardless of meter technology (AMI solid-state, AMR solid-state, or electromechanical).",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:2.2",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 4,
+    "heading_path": [
+      "2. Scope"
+    ],
+    "unit_kind": "section",
+    "text_raw": "2.2 Non-residential customers. This procedure applies to commercial, industrial, and public-authority customers who request a meter test or dispute a bill. Where a provision of 170 IAC 4-1 limits a right or obligation to residential customers (see §3, definition of \"Customer\" and the applicability note at 170 IAC 4-1-1(c)), this procedure identifies that limitation explicitly.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:2.3",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 5,
+    "heading_path": [
+      "2. Scope"
+    ],
+    "unit_kind": "section",
+    "text_raw": "2.3 Meter technology classes. This procedure covers RPL's three metered-fleet technologies as of 2024-12-31: 371,200 solid-state AMI meters, 31,400 solid-state AMR meters, and 7,350 electromechanical (legacy) meters. AMI communications and firmware checks specific to solid-state meters are addressed as company practice in §10.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:2.4",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 6,
+    "heading_path": [
+      "2. Scope"
+    ],
+    "unit_kind": "section",
+    "text_raw": "2.4 Demand meters. This procedure covers demand register accuracy, multiplier verification, and demand billing adjustments for all customers billed on demand-rate schedules.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:2.5",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 7,
+    "heading_path": [
+      "2. Scope"
+    ],
+    "unit_kind": "section",
+    "text_raw": "2.5 Exclusions. This procedure does not cover: (a) periodic or sample testing under RPL-MTR-PGM-001; (b) initial installation testing for new meters; or (c) meter tampering and unauthorized use investigations, which are handled under the revenue-protection process described at §13.6 and in accordance with Tariff Rule 16, Sheet 45 (F-8).",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:3.1",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 8,
+    "heading_path": [
+      "3. Definitions"
+    ],
+    "unit_kind": "section",
+    "text_raw": "3.1 As-found accuracy. The measured average percentage registration of a meter at the time of test, before any adjustment is made. Calculated per 170 IAC 4-1-8: average accuracy = (full load accuracy + light load accuracy) ÷ 2.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:3.2",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 9,
+    "heading_path": [
+      "3. Definitions"
+    ],
+    "unit_kind": "section",
+    "text_raw": "3.2 As-left accuracy. The average percentage registration of a meter after any calibration adjustment has been made and before the meter is returned to service. The as-left must be determined by tests at each load as required by 170 IAC 4-1-8(c).",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:3.3",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 10,
+    "heading_path": [
+      "3. Definitions"
+    ],
+    "unit_kind": "section",
+    "text_raw": "3.3 Average accuracy. The arithmetic mean of the percentage registration at full load (FL) and at light load (LL): average accuracy = (FL + LL) ÷ 2. (170 IAC 4-1-8(a))",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:3.4",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 11,
+    "heading_path": [
+      "3. Definitions"
+    ],
+    "unit_kind": "section",
+    "text_raw": "3.4 Back-bill. An invoice to the customer for electric service that was consumed but not billed, or underbilled, due to a meter error or billing error.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:3.5",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 12,
+    "heading_path": [
+      "3. Definitions"
+    ],
+    "unit_kind": "section",
+    "text_raw": "3.5 Billing error. Any error in a customer bill other than a meter registration error, including but not limited to: application of an incorrect tariff rate, an incorrect multiplier, crossed meters, or errors resulting from estimated reads.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:3.6",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 13,
+    "heading_path": [
+      "3. Definitions"
+    ],
+    "unit_kind": "section",
+    "text_raw": "3.6 Commission-supervised test. A meter accuracy or demand test performed by RPL or its contractor under the supervision of an Indiana Utility Regulatory Commission (IURC) employee, pursuant to a customer's application to the IURC under 170 IAC 4-1-12.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:3.7",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 14,
+    "heading_path": [
+      "3. Definitions"
+    ],
+    "unit_kind": "section",
+    "text_raw": "3.7 Creep (no-load registration). Registration by a watthour meter when all load wires are disconnected, evidenced by the moving element making more than one (1) complete revolution. A meter exhibiting creep when the applied voltage is less than 110% of standard service voltage shall not be placed in service or allowed to remain in service. (170 IAC 4-1-9(a))",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:3.8",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 15,
+    "heading_path": [
+      "3. Definitions"
+    ],
+    "unit_kind": "section",
+    "text_raw": "3.8 Customer. For purposes of §§8, 11, and 12 of this procedure (fee rules, report timing, and appeals), \"customer\" means any person, firm, corporation, municipality, or other government agency that has agreed, orally or otherwise, to pay for electric service received from RPL; provided that for purposes of the test request rights in §7, §8, and §11, the term is limited to persons who have agreed to pay for service exclusively for residential purposes where that limitation is stated in 170 IAC 4-1-1(c). (170 IAC 4-1-1(c))",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:3.9",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 16,
+    "heading_path": [
+      "3. Definitions"
+    ],
+    "unit_kind": "section",
+    "text_raw": "3.9 Fast meter. A watthour meter whose as-found average accuracy exceeds 100%, meaning it registers more energy than was actually consumed, resulting in overcharges to the customer. A billing adjustment is required when the positive average error is greater than 3%. (170 IAC 4-1-14(A)(1))",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:3.10",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 17,
+    "heading_path": [
+      "3. Definitions"
+    ],
+    "unit_kind": "section",
+    "text_raw": "3.10 Full load (FL). The test point at approximately 100% of the rated test amperes of the meter, or, for current-transformer (CT) metered installations, approximately 100% of either the meter test amperes or the secondary current rating of the current transformers. (170 IAC 4-1-8(a))",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:3.11",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 18,
+    "heading_path": [
+      "3. Definitions"
+    ],
+    "unit_kind": "section",
+    "text_raw": "3.11 Light load (LL). The test point at approximately 10% of the rated test amperes of the meter, or, for CT-metered installations, approximately 10% of the selected full load current. (170 IAC 4-1-8(a))",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:3.12",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 19,
+    "heading_path": [
+      "3. Definitions"
+    ],
+    "unit_kind": "section",
+    "text_raw": "3.12 Meter seal. A one-time-use tamper-evident seal, identified by a unique seal number, applied to the meter at installation or after shop service. The seal number is recorded in WAM.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:3.13",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 20,
+    "heading_path": [
+      "3. Definitions"
+    ],
+    "unit_kind": "section",
+    "text_raw": "3.13 Multiplier. The factor applied to the meter register reading to convert it to billed units (kWh or kW). For meters that do not read directly in kWh or demand units, the multiplier shall be checked and plainly marked on the meter or on a tag attached to the meter. (170 IAC 4-1-6(d))",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:3.14",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 21,
+    "heading_path": [
+      "3. Definitions"
+    ],
+    "unit_kind": "section",
+    "text_raw": "3.14 Non-registering meter. A meter that has stopped registering entirely, or registers only partially (e.g., a stuck disk on an electromechanical meter or a failed register on a solid-state meter). Treated as a stopped meter for adjustment purposes under 170 IAC 4-1-14(A)(2).",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:3.15",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 22,
+    "heading_path": [
+      "3. Definitions"
+    ],
+    "unit_kind": "section",
+    "text_raw": "3.15 Power factor test point. For watthour meters to be installed on circuits supplying inductive load (except self-contained meters), an additional test at 100% of manufacturer's rated test current at 50% lagging power factor, performed before installation. (170 IAC 4-1-9(b)(5))",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:3.16",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 23,
+    "heading_path": [
+      "3. Definitions"
+    ],
+    "unit_kind": "section",
+    "text_raw": "3.16 Refund. A credit issued to the customer's account, or a check payment, for electric service billed but not consumed due to a fast or incorrectly programmed meter.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:3.17",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 24,
+    "heading_path": [
+      "3. Definitions"
+    ],
+    "unit_kind": "section",
+    "text_raw": "3.17 Slow meter. A watthour meter whose as-found average accuracy is below 100%, meaning it registers less energy than was actually consumed, resulting in undercharges to the customer. A billing adjustment is required when the negative average error exceeds 3% (i.e., accuracy below 97%). A stopped meter is treated as a special case of a slow meter. (170 IAC 4-1-14(A)(2))",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:3.18",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 25,
+    "heading_path": [
+      "3. Definitions"
+    ],
+    "unit_kind": "section",
+    "text_raw": "3.18 Written request. A request submitted in writing by the customer via U.S. mail to Rockridge Power, 400 Wabash Commons Drive, Lafayette, IN 47901; by email to customercare@rockridge-pl.example; through the customer web portal at www.rockridge-pl.example; or by completing MTR-F-010. A verbal request recorded by a Contact Center agent into CIS form MTR-F-010 and read back to the customer for confirmation constitutes a written request under this procedure. (170 IAC 4-1-11(a))",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:4.1",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 26,
+    "heading_path": [
+      "4. Regulatory Basis"
+    ],
+    "unit_kind": "section",
+    "text_raw": "4.1 The following table lists the Indiana Administrative Code sections and RPL tariff rules that govern the processes in this procedure. All citations reflect the law as of 2024-12-31.\n\n> Out-of-scope references (§2.7): IC 8-1-2-34 and IC 8-1-2-35 establish the customer's statutory rights regarding meter accessibility and testing standards. RPL complies with both statutes. No values from these statutes are restated in this procedure; operational obligations under them are carried by this procedure through the 170 IAC 4-1 implementing rules listed above.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:T4-1",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 27,
+    "heading_path": [
+      "4. Regulatory Basis"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "T4-1 | 170 IAC 4-1-2 | Applicability of rules | §2",
+    "row_cells": {
+      "ID": "T4-1",
+      "Citation": "170 IAC 4-1-2",
+      "Heading": "Applicability of rules",
+      "Governs Section(s)": "§2"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:4.1"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:T4-2",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 28,
+    "heading_path": [
+      "4. Regulatory Basis"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "T4-2 | 170 IAC 4-1-4 | Records and reports of meter purchases and tests | §10, §16",
+    "row_cells": {
+      "ID": "T4-2",
+      "Citation": "170 IAC 4-1-4",
+      "Heading": "Records and reports of meter purchases and tests",
+      "Governs Section(s)": "§10, §16"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:4.1"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:T4-3",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 29,
+    "heading_path": [
+      "4. Regulatory Basis"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "T4-3 | 170 IAC 4-1-5 | Location of meters; accessibility | §6",
+    "row_cells": {
+      "ID": "T4-3",
+      "Citation": "170 IAC 4-1-5",
+      "Heading": "Location of meters; accessibility",
+      "Governs Section(s)": "§6"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:4.1"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:T4-4",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 30,
+    "heading_path": [
+      "4. Regulatory Basis"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "T4-4 | 170 IAC 4-1-6 | Service watthour meters; inspection and repair; installation tests | §10, §13.5",
+    "row_cells": {
+      "ID": "T4-4",
+      "Citation": "170 IAC 4-1-6",
+      "Heading": "Service watthour meters; inspection and repair; installation tests",
+      "Governs Section(s)": "§10, §13.5"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:4.1"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:T4-5",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 31,
+    "heading_path": [
+      "4. Regulatory Basis"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "T4-5 | 170 IAC 4-1-7 | Meter testing equipment and facilities; reference and portable standards | §10",
+    "row_cells": {
+      "ID": "T4-5",
+      "Citation": "170 IAC 4-1-7",
+      "Heading": "Meter testing equipment and facilities; reference and portable standards",
+      "Governs Section(s)": "§10"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:4.1"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:T4-6",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 32,
+    "heading_path": [
+      "4. Regulatory Basis"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "T4-6 | 170 IAC 4-1-8 | Average accuracy of watthour meters; tests | §10, §3",
+    "row_cells": {
+      "ID": "T4-6",
+      "Citation": "170 IAC 4-1-8",
+      "Heading": "Average accuracy of watthour meters; tests",
+      "Governs Section(s)": "§10, §3"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:4.1"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:T4-7",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 33,
+    "heading_path": [
+      "4. Regulatory Basis"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "T4-7 | 170 IAC 4-1-9 | Accuracy of meters | §10, §13",
+    "row_cells": {
+      "ID": "T4-7",
+      "Citation": "170 IAC 4-1-9",
+      "Heading": "Accuracy of meters",
+      "Governs Section(s)": "§10, §13"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:4.1"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:T4-8",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 34,
+    "heading_path": [
+      "4. Regulatory Basis"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "T4-8 | 170 IAC 4-1-10 | In-service tests; watthour meters, self-contained | §8",
+    "row_cells": {
+      "ID": "T4-8",
+      "Citation": "170 IAC 4-1-10",
+      "Heading": "In-service tests; watthour meters, self-contained",
+      "Governs Section(s)": "§8"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:4.1"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:T4-9",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 35,
+    "heading_path": [
+      "4. Regulatory Basis"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "T4-9 | 170 IAC 4-1-11 | Customer requests for tests; application to utility | §7, §8, §11",
+    "row_cells": {
+      "ID": "T4-9",
+      "Citation": "170 IAC 4-1-11",
+      "Heading": "Customer requests for tests; application to utility",
+      "Governs Section(s)": "§7, §8, §11"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:4.1"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:T4-10",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 36,
+    "heading_path": [
+      "4. Regulatory Basis"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "T4-10 | 170 IAC 4-1-12 | Customer requests for tests; application to commission | §12",
+    "row_cells": {
+      "ID": "T4-10",
+      "Citation": "170 IAC 4-1-12",
+      "Heading": "Customer requests for tests; application to commission",
+      "Governs Section(s)": "§12"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:4.1"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:T4-11",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 37,
+    "heading_path": [
+      "4. Regulatory Basis"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "T4-11 | 170 IAC 4-1-13 | Bills | §6, §13.5",
+    "row_cells": {
+      "ID": "T4-11",
+      "Citation": "170 IAC 4-1-13",
+      "Heading": "Bills",
+      "Governs Section(s)": "§6, §13.5"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:4.1"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:T4-12",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 38,
+    "heading_path": [
+      "4. Regulatory Basis"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "T4-12 | 170 IAC 4-1-14 | Billing adjustments | §13",
+    "row_cells": {
+      "ID": "T4-12",
+      "Citation": "170 IAC 4-1-14",
+      "Heading": "Billing adjustments",
+      "Governs Section(s)": "§13"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:4.1"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:T4-13",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 39,
+    "heading_path": [
+      "4. Regulatory Basis"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "T4-13 | RPL-TAR-GRR-012 Rule 9 Sheets 27–29 | Metering | §9, §10",
+    "row_cells": {
+      "ID": "T4-13",
+      "Citation": "RPL-TAR-GRR-012 Rule 9 Sheets 27–29",
+      "Heading": "Metering",
+      "Governs Section(s)": "§9, §10"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:4.1"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:T4-14",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 40,
+    "heading_path": [
+      "4. Regulatory Basis"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "T4-14 | RPL-TAR-GRR-012 Rule 12 Sheets 35–36 | Billing Adjustments | §13",
+    "row_cells": {
+      "ID": "T4-14",
+      "Citation": "RPL-TAR-GRR-012 Rule 12 Sheets 35–36",
+      "Heading": "Billing Adjustments",
+      "Governs Section(s)": "§13"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:4.1"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:5.1",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 41,
+    "heading_path": [
+      "5. Roles and Responsibilities"
+    ],
+    "unit_kind": "section",
+    "text_raw": "5.1 The following table assigns responsibilities for the processes in this procedure.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:T5-1",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 42,
+    "heading_path": [
+      "5. Roles and Responsibilities"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "T5-1 | Supervisor, Metering Services | Luis Hernandez (P18) | Procedure owner; billing adjustment approvals $500.01–$5,000; escalation point for complex test requests",
+    "row_cells": {
+      "ID": "T5-1",
+      "Role": "Supervisor, Metering Services",
+      "Person (if named)": "Luis Hernandez (P18)",
+      "Responsibilities": "Procedure owner; billing adjustment approvals $500.01–$5,000; escalation point for complex test requests"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:5.1"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:T5-2",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 43,
+    "heading_path": [
+      "5. Roles and Responsibilities"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "T5-2 | Director, Customer Operations | Steven Park (P14) | Procedure reviewer; billing adjustment approvals above $5,000",
+    "row_cells": {
+      "ID": "T5-2",
+      "Role": "Director, Customer Operations",
+      "Person (if named)": "Steven Park (P14)",
+      "Responsibilities": "Procedure reviewer; billing adjustment approvals above $5,000"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:5.1"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:T5-3",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 44,
+    "heading_path": [
+      "5. Roles and Responsibilities"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "T5-3 | Manager, Meter Shop & Standards Laboratory | Gregory Walsh (P19) | Commission-supervised test coordination; meter shop operations; test equipment certification",
+    "row_cells": {
+      "ID": "T5-3",
+      "Role": "Manager, Meter Shop & Standards Laboratory",
+      "Person (if named)": "Gregory Walsh (P19)",
+      "Responsibilities": "Commission-supervised test coordination; meter shop operations; test equipment certification"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:5.1"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:T5-4",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 45,
+    "heading_path": [
+      "5. Roles and Responsibilities"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "T5-4 | Director, Metering | Angela Ruiz (P20) | Departmental oversight of metering operations; standards laboratory accountability",
+    "row_cells": {
+      "ID": "T5-4",
+      "Role": "Director, Metering",
+      "Person (if named)": "Angela Ruiz (P20)",
+      "Responsibilities": "Departmental oversight of metering operations; standards laboratory accountability"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:5.1"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:T5-5",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 46,
+    "heading_path": [
+      "5. Roles and Responsibilities"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "T5-5 | Manager, Customer Advocacy & Complaint Resolution | Brian Kowalski (P17) | Receives copy of all adjustment notices on accounts with an open IURC complaint; liaison with IURC Consumer Affairs Division",
+    "row_cells": {
+      "ID": "T5-5",
+      "Role": "Manager, Customer Advocacy & Complaint Resolution",
+      "Person (if named)": "Brian Kowalski (P17)",
+      "Responsibilities": "Receives copy of all adjustment notices on accounts with an open IURC complaint; liaison with IURC Consumer Affairs Division"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:5.1"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:T5-6",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 47,
+    "heading_path": [
+      "5. Roles and Responsibilities"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "T5-6 | Contact Center Agent | (staffed position) | High-bill triage (§6); intake of test requests (§7); CIS entry of MTR-TST service orders",
+    "row_cells": {
+      "ID": "T5-6",
+      "Role": "Contact Center Agent",
+      "Person (if named)": "(staffed position)",
+      "Responsibilities": "High-bill triage (§6); intake of test requests (§7); CIS entry of MTR-TST service orders"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:5.1"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:T5-7",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 48,
+    "heading_path": [
+      "5. Roles and Responsibilities"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "T5-7 | Billing Adjustment Analyst | (staffed position) | Billing adjustment calculation and processing for amounts up to $500; issues MTR-F-012 letters; enters CIS adjustment codes",
+    "row_cells": {
+      "ID": "T5-7",
+      "Role": "Billing Adjustment Analyst",
+      "Person (if named)": "(staffed position)",
+      "Responsibilities": "Billing adjustment calculation and processing for amounts up to $500; issues MTR-F-012 letters; enters CIS adjustment codes"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:5.1"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:T5-8",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 49,
+    "heading_path": [
+      "5. Roles and Responsibilities"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "T5-8 | Meter Technician | (staffed position) | Physical meter removal, replacement, transport, test execution, and MTR-F-011 preparation",
+    "row_cells": {
+      "ID": "T5-8",
+      "Role": "Meter Technician",
+      "Person (if named)": "(staffed position)",
+      "Responsibilities": "Physical meter removal, replacement, transport, test execution, and MTR-F-011 preparation"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:5.1"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:T5-9",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 50,
+    "heading_path": [
+      "5. Roles and Responsibilities"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "T5-9 | Customer (residential) | N/A | Initiates written test request; entitled to witness test (see §9); receives results per §11",
+    "row_cells": {
+      "ID": "T5-9",
+      "Role": "Customer (residential)",
+      "Person (if named)": "N/A",
+      "Responsibilities": "Initiates written test request; entitled to witness test (see §9); receives results per §11"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:5.1"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:5.1~c1",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 51,
+    "heading_path": [
+      "6. High-Bill Triage Before a Test"
+    ],
+    "unit_kind": "section",
+    "text_raw": "> Note: High-bill triage is a company-practice diagnostic step, not a regulatory prerequisite. Triage must not delay or replace a meter test the customer is entitled to under 170 IAC 4-1-11. If the customer requests a test at any point during triage, the Contact Center agent proceeds immediately to §7.",
+    "row_cells": null,
+    "parent_clause_id": "RPL-CS-PRO-007:5.1"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:6.1",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 52,
+    "heading_path": [
+      "6. High-Bill Triage Before a Test"
+    ],
+    "unit_kind": "section",
+    "text_raw": "6.1 Register read verification. The Contact Center agent confirms the current and prior meter reads in CIS against the customer's stated reading. If the customer disputes the read, the agent verifies it against the most recent field read or AMI/AMR transmission. If the read appears incorrect (transposed digits, missed read), the agent initiates a reread work order (WAM work type `MTR-RRD`) before scheduling a full test. On AMI meters, the agent pulls the latest hourly register from the AMI HES portal and reviews it with the customer. Upon request by a residential customer, the agent provides the meter number from CIS so the customer may verify reads at the meter. (170 IAC 4-1-5(C))",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:6.2",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 53,
+    "heading_path": [
+      "6. High-Bill Triage Before a Test"
+    ],
+    "unit_kind": "section",
+    "text_raw": "6.2 AMI interval data review. For AMI-metered accounts, the Contact Center agent accesses the AMI HES usage dashboard and reviews daily and hourly kWh data for the disputed period. The agent identifies: (a) any single-day usage spike exceeding 200% of the account's 30-day average; (b) nighttime base load inconsistent with the account type; and (c) gaps in hourly data that may indicate a communications or firmware issue. The agent explains the usage pattern to the customer in plain language and documents findings in the CIS case.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:6.3",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 54,
+    "heading_path": [
+      "6. High-Bill Triage Before a Test"
+    ],
+    "unit_kind": "section",
+    "text_raw": "6.3 Weather normalization. For residential accounts, the agent compares the disputed billing period degree-day count (available in CIS) against the same period in the prior year and the same customer's historical usage. A 15% or greater year-over-year increase in heating or cooling degree-days explains a proportional increase in energy consumption and the agent conveys this to the customer.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:6.4",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 55,
+    "heading_path": [
+      "6. High-Bill Triage Before a Test"
+    ],
+    "unit_kind": "section",
+    "text_raw": "6.4 Crossed meters and multiplier check. The agent confirms in WAM that the meter serial number on the bill matches the meter installed at the service address. The agent also confirms the billing multiplier in CIS against the multiplier in WAM. Any discrepancy between the CIS multiplier and WAM multiplier is treated as a billing error and escalated immediately to a Billing Adjustment Analyst.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:6.5",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 56,
+    "heading_path": [
+      "6. High-Bill Triage Before a Test"
+    ],
+    "unit_kind": "section",
+    "text_raw": "6.5 Estimated bills. The agent confirms whether any bill in the disputed period was estimated (CIS bill type \"E\"). An estimated bill issued by RPL is permissible only for good cause (customer request, inclement weather, labor or union disputes, inaccessibility after a reasonable read attempt, or other circumstances beyond the control of the utility). (170 IAC 4-1-13(d)) If estimated reads appear excessive or unjustified, the agent initiates a billing review and may propose a corrected actual-read bill without requiring a meter test.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:6.6",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 57,
+    "heading_path": [
+      "6. High-Bill Triage Before a Test"
+    ],
+    "unit_kind": "section",
+    "text_raw": "6.6 Customer usage education and test offer. After completing triage steps 6.1–6.5, the Contact Center agent summarizes findings for the customer and, in all cases where a triage step has not conclusively explained the high bill, offers the customer a formal meter test under §7. The agent reads CS-S-07 (App-E) for guidance on presenting the test option. Triage findings are documented in the CIS case (type MTR) as supporting detail for the test request or case closure.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:6.6~c1",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 58,
+    "heading_path": [
+      "7. Customer Request Intake"
+    ],
+    "unit_kind": "section",
+    "text_raw": "```mermaid\nflowchart TD\n    A[Customer contacts RPL\\nre: high bill or meter concern] --> B[Contact Center opens\\nCIS case — type MTR]\n    B --> C{Triage steps\\n§6 completed?}\n    C -->|Issue resolved| D[Document resolution\\nin CIS; close case]\n    C -->|Customer requests\\nmeter test| E{Is request in writing\\nor will be reduced\\nto writing?}\n    E -->|Verbal — agent\\ncompletes MTR-F-010| F[Agent reads back\\nrequest; documents\\nin CIS]\n    E -->|Written request\\nor web/email| G[Attach to CIS case]\n    F --> H[Open MTR-TST\\nservice order in CIS]\n    G --> H\n    H --> I{Fee eligibility\\n§8 decision table}\n    I -->|Fee may apply| J[Disclose fee amount\\nbefore scheduling;\\nobtain acknowledgment]\n    I -->|No fee| K[Schedule test\\nwith customer — §9]\n    J --> K\n    K --> L[Meter Shop performs\\ntest — §10]\n    L --> M[Issue MTR-F-011\\nwithin 10 days — §11]\n    M --> N{Adjustment\\nrequired?}\n    N -->|Yes| O[Process adjustment\\n§13; issue MTR-F-012]\n    N -->|No| P[Notify customer;\\nclose CIS case]\n    O --> P\n```",
+    "row_cells": null,
+    "parent_clause_id": "RPL-CS-PRO-007:6.6"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:7.1",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 59,
+    "heading_path": [
+      "7. Customer Request Intake"
+    ],
+    "unit_kind": "section",
+    "text_raw": "7.1 Written request requirement. A customer request for a meter accuracy test must be in writing. (170 IAC 4-1-11(a)) The Contact Center agent records a verbal request on form MTR-F-010 (App-A), reads the recorded information back to the customer, and documents the call date, time, and agent ID in the CIS case. The completed MTR-F-010 constitutes the written request. The agent attaches the completed form to the CIS case before opening a service order.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:7.2",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 60,
+    "heading_path": [
+      "7. Customer Request Intake"
+    ],
+    "unit_kind": "section",
+    "text_raw": "7.2 Intake channels. A customer may submit a test request by: (a) telephone to 1-800-555-0142 (24/7); (b) web portal at www.rockridge-pl.example (generates a secure message and MTR-F-010 pre-fill); (c) email to customercare@rockridge-pl.example; or (d) written letter mailed to Rockridge Power, Customer Advocacy, 400 Wabash Commons Drive, Lafayette IN 47901. The Contact Center agent confirms receipt of written submissions within one business day and opens the CIS case at that time.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:7.3",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 61,
+    "heading_path": [
+      "7. Customer Request Intake"
+    ],
+    "unit_kind": "section",
+    "text_raw": "7.3 CIS service order. The Contact Center agent opens a CIS service order with type code `MTR-TST` and attaches the account number, service address, meter number (from CIS), customer-stated reason for the request, preferred contact method, and a flag for whether the customer wishes to witness the test (see §9.4). The agent documents all triage steps taken in the case notes before saving.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:7.4",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 62,
+    "heading_path": [
+      "7. Customer Request Intake"
+    ],
+    "unit_kind": "section",
+    "text_raw": "7.4 Acknowledgment. The Contact Center agent confirms to the customer (verbally, or in the web portal confirmation) that a test will be scheduled and that the customer will receive a written test report (MTR-F-011) within ten (10) days after the test is completed. (170 IAC 4-1-11(d))",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:7.5",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 63,
+    "heading_path": [
+      "7. Customer Request Intake"
+    ],
+    "unit_kind": "section",
+    "text_raw": "7.5 IURC complaint hold. Before creating the service order, the agent checks CIS for an active hold code `HIURC`. If present, the agent applies a `HDSP` hold and copies Brian Kowalski (P17) on the case. All subsequent communications on the account are routed per RPL-CS-PRO-011.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:7.6",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 64,
+    "heading_path": [
+      "7. Customer Request Intake"
+    ],
+    "unit_kind": "section",
+    "text_raw": "7.6 Training reference. Contact Center agents handling high-bill calls and meter test intake use script CS-S-07 (App-E) and are trained under CS-T-07. (See §17.)",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:8.1",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 65,
+    "heading_path": [
+      "8. Eligibility and Fees"
+    ],
+    "unit_kind": "section",
+    "text_raw": "8.1 The following decision table determines whether a fee is charged for a customer-requested meter test. Fee amounts are set by Tariff Rule 16, Sheet 45 (§1.6 Table F, F-9): $40.00 for residential/single-phase meters; $95.00 for polyphase/demand meters. A fee may not be charged until RPL discloses the fee amount to the customer prior to the test being performed. (170 IAC 4-1-11(c)) If the customer declines to pay, the Contact Center agent documents the declination in CIS and the test is not scheduled unless the customer subsequently agrees.\n\n> Caution: A meter that fails the in-service accuracy standard of 170 IAC 4-1-9(b) (average error >2%, full load error >1%, or light load error >3%) but has average error ≤3% does not trigger a billing adjustment under 170 IAC 4-1-14(A). Such a meter must be adjusted or replaced, but no billing change is required. The Billing Adjustment Analyst documents this outcome in CIS with code `ADJ-BE` (no net adjustment, reason noted).",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:T8-1",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 66,
+    "heading_path": [
+      "8. Eligibility and Fees"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "T8-1 | First test at customer's request, any reason | No | The first test of a customer's meter is at no cost. | N/A — no fee charged | 170 IAC 4-1-11(a) | MTR-TST",
+    "row_cells": {
+      "ID": "T8-1",
+      "Request Situation": "First test at customer's request, any reason",
+      "Fee Charged?": "No",
+      "Condition / Basis": "The first test of a customer's meter is at no cost.",
+      "Fee Refunded If Test Finds Meter Non-Compliant?": "N/A — no fee charged",
+      "Citation": "170 IAC 4-1-11(a)",
+      "CIS Code": "MTR-TST"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:8.1"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:T8-2",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 67,
+    "heading_path": [
+      "8. Eligibility and Fees"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "T8-2 | Second test at customer's request, ≥12 months after the first customer-requested test | No | The second test is at no cost; may be requested after 12 months. | N/A — no fee charged | 170 IAC 4-1-11(a) | MTR-TST",
+    "row_cells": {
+      "ID": "T8-2",
+      "Request Situation": "Second test at customer's request, ≥12 months after the first customer-requested test",
+      "Fee Charged?": "No",
+      "Condition / Basis": "The second test is at no cost; may be requested after 12 months.",
+      "Fee Refunded If Test Finds Meter Non-Compliant?": "N/A — no fee charged",
+      "Citation": "170 IAC 4-1-11(a)",
+      "CIS Code": "MTR-TST"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:8.1"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:T8-3",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 68,
+    "heading_path": [
+      "8. Eligibility and Fees"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "T8-3 | Second test at customer's request, <12 months after the first customer-requested test | No | Company position: RPL performs the second test at no charge regardless of the interval since the first request; the 12-month language in 170 IAC 4-1-11(a) sets the customer's right, not a prohibition on earlier tests. | N/A — no fee charged | Company practice | MTR-TST",
+    "row_cells": {
+      "ID": "T8-3",
+      "Request Situation": "Second test at customer's request, <12 months after the first customer-requested test",
+      "Fee Charged?": "No",
+      "Condition / Basis": "Company position: RPL performs the second test at no charge regardless of the interval since the first request; the 12-month language in 170 IAC 4-1-11(a) sets the customer's right, not a prohibition on earlier tests.",
+      "Fee Refunded If Test Finds Meter Non-Compliant?": "N/A — no fee charged",
+      "Citation": "Company practice",
+      "CIS Code": "MTR-TST"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:8.1"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:T8-4",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 69,
+    "heading_path": [
+      "8. Eligibility and Fees"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "T8-4 | Third or subsequent test at customer's request or for a billing dispute, where all three fee conditions are met: (1) meter was tested within the prior 36 months at the customer's request AND found to comply with 170 IAC 4-1-10(c)(4)–(c)(5); (2) this test is at the customer's request or due to a billing dispute; and (3) this test finds the meter compliant with 170 IAC 4-1-10(c)(4)–(c)(5) | Yes — $40.00 residential / $95.00 polyphase | All three conditions under 170 IAC 4-1-11(b) must be met. Company position: RPL applies the 10(c)(4)–(c)(5) accuracy limits (98%–102% at full load) on a single-meter basis as the individual accuracy standard when assessing compliance for fee purposes, since those lot-level limits represent the standard accuracy specification. | Not applicable — fee confirmed by test outcome | 170 IAC 4-1-11(b); Company practice (single-meter application) | MTR-TST",
+    "row_cells": {
+      "ID": "T8-4",
+      "Request Situation": "Third or subsequent test at customer's request or for a billing dispute, where all three fee conditions are met: (1) meter was tested within the prior 36 months at the customer's request AND found to comply with 170 IAC 4-1-10(c)(4)–(c)(5); (2) this test is at the customer's request or due to a billing dispute; and (3) this test finds the meter compliant with 170 IAC 4-1-10(c)(4)–(c)(5)",
+      "Fee Charged?": "Yes — $40.00 residential / $95.00 polyphase",
+      "Condition / Basis": "All three conditions under 170 IAC 4-1-11(b) must be met. Company position: RPL applies the 10(c)(4)–(c)(5) accuracy limits (98%–102% at full load) on a single-meter basis as the individual accuracy standard when assessing compliance for fee purposes, since those lot-level limits represent the standard accuracy specification.",
+      "Fee Refunded If Test Finds Meter Non-Compliant?": "Not applicable — fee confirmed by test outcome",
+      "Citation": "170 IAC 4-1-11(b); Company practice (single-meter application)",
+      "CIS Code": "MTR-TST"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:8.1"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:T8-5",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 70,
+    "heading_path": [
+      "8. Eligibility and Fees"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "T8-5 | Third or subsequent test meeting conditions (1) and (2) in T8-4, but the meter is found non-compliant (fails accuracy limits) | No — or fee refunded if already collected | Condition (3) is not met; the customer bears no cost. If a fee was collected before the outcome was known, it is refunded or credited. | Yes — refunded | 170 IAC 4-1-11(b) | MTR-TST; ADJ-BE",
+    "row_cells": {
+      "ID": "T8-5",
+      "Request Situation": "Third or subsequent test meeting conditions (1) and (2) in T8-4, but the meter is found non-compliant (fails accuracy limits)",
+      "Fee Charged?": "No — or fee refunded if already collected",
+      "Condition / Basis": "Condition (3) is not met; the customer bears no cost. If a fee was collected before the outcome was known, it is refunded or credited.",
+      "Fee Refunded If Test Finds Meter Non-Compliant?": "Yes — refunded",
+      "Citation": "170 IAC 4-1-11(b)",
+      "CIS Code": "MTR-TST; ADJ-BE"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:8.1"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:T8-6",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 71,
+    "heading_path": [
+      "8. Eligibility and Fees"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "T8-6 | Test initiated by RPL as part of normal operations (not at customer request) | No | Customer bears no cost for utility-initiated tests. | N/A | Company practice | MTR-TST",
+    "row_cells": {
+      "ID": "T8-6",
+      "Request Situation": "Test initiated by RPL as part of normal operations (not at customer request)",
+      "Fee Charged?": "No",
+      "Condition / Basis": "Customer bears no cost for utility-initiated tests.",
+      "Fee Refunded If Test Finds Meter Non-Compliant?": "N/A",
+      "Citation": "Company practice",
+      "CIS Code": "MTR-TST"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:8.1"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:T8-7",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 72,
+    "heading_path": [
+      "8. Eligibility and Fees"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "T8-7 | Commission-supervised test (§12) under 170 IAC 4-1-12 | No, except as under T8-4 conditions | No fee is payable by the customer for a commission-supervised test, except as charged under 170 IAC 4-1-11(b) (T8-4 conditions). | Yes, if T8-4 conditions applied but meter found non-compliant | 170 IAC 4-1-12(a) | MTR-TST",
+    "row_cells": {
+      "ID": "T8-7",
+      "Request Situation": "Commission-supervised test (§12) under 170 IAC 4-1-12",
+      "Fee Charged?": "No, except as under T8-4 conditions",
+      "Condition / Basis": "No fee is payable by the customer for a commission-supervised test, except as charged under 170 IAC 4-1-11(b) (T8-4 conditions).",
+      "Fee Refunded If Test Finds Meter Non-Compliant?": "Yes, if T8-4 conditions applied but meter found non-compliant",
+      "Citation": "170 IAC 4-1-12(a)",
+      "CIS Code": "MTR-TST"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:8.1"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:9.1",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 73,
+    "heading_path": [
+      "9. Scheduling, Removal, and Chain of Custody"
+    ],
+    "unit_kind": "section",
+    "text_raw": "9.1 In-place versus shop test. The Supervisor, Metering Services (P18) determines whether the test will be performed in place (for AMI meters where the head-end can command a self-test) or in the Meter Shop & Standards Laboratory at Lafayette HQ (for all electromechanical meters and solid-state meters when an in-place test is not technically feasible). Shop testing requires physical removal of the meter from the service entrance.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:9.2",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 74,
+    "heading_path": [
+      "9. Scheduling, Removal, and Chain of Custody"
+    ],
+    "unit_kind": "section",
+    "text_raw": "9.2 Scheduling. The Contact Center agent or Meter Technician contacts the customer within three (3) business days of opening the MTR-TST service order to schedule the test. Internal performance target: test appointment offered within five (5) calendar days of receipt of written request. At least two available appointment windows must be offered. The appointment date, time window, and technician name are recorded in WAM.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:9.3",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 75,
+    "heading_path": [
+      "9. Scheduling, Removal, and Chain of Custody"
+    ],
+    "unit_kind": "section",
+    "text_raw": "9.3 Customer right to witness. The customer is entitled to be present during the test, both for the meter removal and for the shop test. (Company practice in alignment with customer-service standards; the IURC has observed utility practice on this point.) The Contact Center agent records the customer's witness election on MTR-F-010, field F010.F7.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:9.4",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 76,
+    "heading_path": [
+      "9. Scheduling, Removal, and Chain of Custody"
+    ],
+    "unit_kind": "section",
+    "text_raw": "9.4 IURC complaint hold — meter preservation. Upon receiving notice from the IURC of a customer's written application to the IURC for a supervised test under 170 IAC 4-1-12, RPL shall not remove, interfere with, or discard the customer's meter until the test is completed without the prior written consent of the customer, unless the removal of the meter is required in order to perform the requested test. (170 IAC 4-1-12(c)) Gregory Walsh (P19) places a WAM hold on the meter record immediately upon receiving IURC notification.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:9.5",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 77,
+    "heading_path": [
+      "9. Scheduling, Removal, and Chain of Custody"
+    ],
+    "unit_kind": "section",
+    "text_raw": "9.5 Meter removal. The Meter Technician disconnects and removes the customer meter using standard tools and EHS procedures. The technician photographs the meter in place before removal (WAM work order photo attachment, type MTR-PRE-REMOVAL) and records the meter serial number, seal numbers (both original and replacement), and the as-installed multiplier from the nameplate.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:9.6",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 78,
+    "heading_path": [
+      "9. Scheduling, Removal, and Chain of Custody"
+    ],
+    "unit_kind": "section",
+    "text_raw": "9.6 Replacement meter installation. The Meter Technician installs a temporary replacement meter at the time of removal to restore service. The replacement meter is drawn from the tested-meter pool in WAM (only meters with a current in-service accuracy certification may be used). The replacement meter serial number and seal number are recorded in WAM and entered into CIS by the end of the same business day.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:9.7",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 79,
+    "heading_path": [
+      "9. Scheduling, Removal, and Chain of Custody"
+    ],
+    "unit_kind": "section",
+    "text_raw": "9.7 Chain-of-custody tag. The Meter Technician affixes form MTR-F-013 (App-D) to the removed meter immediately after removal. The tag records the account number, service address, meter serial number, removal date and time, technician name and ID, seal numbers, and a unique custody tag number generated by WAM. No further handling of the meter is permitted without the tag attached.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:9.8",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 80,
+    "heading_path": [
+      "9. Scheduling, Removal, and Chain of Custody"
+    ],
+    "unit_kind": "section",
+    "text_raw": "9.8 Sealed container. The removed meter is placed in a sealed transit container (RPL-approved plastic storage container with a numbered security seal) for transport to Lafayette HQ. The container seal number is recorded on MTR-F-013 and in WAM. The container is sealed in the presence of the customer if the customer is present and has elected to witness the test.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:9.9",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 81,
+    "heading_path": [
+      "9. Scheduling, Removal, and Chain of Custody"
+    ],
+    "unit_kind": "section",
+    "text_raw": "9.9 Transport. The container is transported in the Meter Technician's RPL service vehicle directly to the Meter Shop & Standards Laboratory at Lafayette HQ. The meter shall not be stored in the vehicle overnight. On the same business day as removal, the Meter Technician delivers the sealed container to the Meter Shop cage and records the delivery in the WAM custody log (work type MTR-DELIVERY).",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:9.10",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 82,
+    "heading_path": [
+      "9. Scheduling, Removal, and Chain of Custody"
+    ],
+    "unit_kind": "section",
+    "text_raw": "9.10 Secure storage. The Meter Shop cage at Lafayette HQ is the designated secure storage location for all customer-requested test meters pending test. Access is limited to Meter Technicians and the Manager, Meter Shop & Standards Laboratory (P19). The cage is locked when unattended. The WAM custody log records every access (in/out, date, time, employee ID).",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:9.11",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 83,
+    "heading_path": [
+      "9. Scheduling, Removal, and Chain of Custody"
+    ],
+    "unit_kind": "section",
+    "text_raw": "9.11 Meter retention. The removed meter is retained in the Meter Shop until: (a) the test is complete and the five (5)-day IURC appeal window under 170 IAC 4-1-11(e) has expired without appeal; or (b) in the case of a commission-supervised test, until the IURC notifies RPL that the test is complete. The meter shall not be disposed of, retired, or returned to inventory during this retention period without written authorization from P19.\n\n> Caution: Premature disposal of a test meter may violate 170 IAC 4-1-12(c) and compromise an IURC proceeding. When in doubt, retain. P19 is the final authority on disposal timing.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:10.1",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 84,
+    "heading_path": [
+      "10. Test Execution and Accuracy Determination"
+    ],
+    "unit_kind": "section",
+    "text_raw": "10.1 Standards traceability. All test equipment used for customer-requested meter tests is maintained and certified under RPL-MTR-PGM-001. Reference standards shall be tested and adjusted, if needed, at least once every two (2) years by a recognized standardizing laboratory. (170 IAC 4-1-7(C)) Portable watthour meter standards are checked against the corresponding reference standards; if any portable standard shows error greater than one percent (1%) plus or minus at any load at which the standard will be used, the portable standard shall be tested, adjusted, and certified before being used. (170 IAC 4-1-7(D)) Portable indicating electrical instruments are checked against reference standards; if found to be in error at zero of more than one percent (1%) of full scale value at commonly used scale deflection, they shall be adjusted and certified. (170 IAC 4-1-7(E)) Records of all certification and calibration are kept on file at the Meter Shop. (170 IAC 4-1-7(F))",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:10.2",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 85,
+    "heading_path": [
+      "10. Test Execution and Accuracy Determination"
+    ],
+    "unit_kind": "section",
+    "text_raw": "10.2 As-found test — no adjustment before testing. The Meter Technician performs the as-found accuracy test before making any adjustment to the meter. The as-found condition is the legally operative accuracy for billing adjustment calculations. Any adjustment made before the as-found test invalidates the test result for adjustment purposes.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:10.3",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 86,
+    "heading_path": [
+      "10. Test Execution and Accuracy Determination"
+    ],
+    "unit_kind": "section",
+    "text_raw": "10.3 Test points — watthour meters. The Meter Technician tests at: (a) full load (FL): approximately 100% of rated test amperes; and (b) light load (LL): approximately 10% of rated test amperes. For CT-metered installations, full load is approximately 100% of meter test amperes or the secondary current rating of the current transformers, and light load is approximately 10% of the selected full load current. (170 IAC 4-1-8(a))",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:10.4",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 87,
+    "heading_path": [
+      "10. Test Execution and Accuracy Determination"
+    ],
+    "unit_kind": "section",
+    "text_raw": "10.4 Number of test runs. The accuracy at light load is determined by taking the average of at least two (2) tests, which must agree within one-half of one percent (0.5%), unless the meter is tested by an automated device, in which case one (1) test is sufficient. The accuracy at full load is determined in the same manner. (170 IAC 4-1-8(b)) Exception: the average as-found accuracy may be determined from one (1) light load test and one (1) full load test if (1) the average accuracy is less than 103% and (2) the meter is to be adjusted. (170 IAC 4-1-8(b))",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:10.5",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 88,
+    "heading_path": [
+      "10. Test Execution and Accuracy Determination"
+    ],
+    "unit_kind": "section",
+    "text_raw": "10.5 Average accuracy calculation. Average accuracy = (FL + LL) ÷ 2. The Meter Technician records FL accuracy, LL accuracy, and average accuracy in MTR-F-011. (170 IAC 4-1-8(a))",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:10.6",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 89,
+    "heading_path": [
+      "10. Test Execution and Accuracy Determination"
+    ],
+    "unit_kind": "section",
+    "text_raw": "10.6 Accuracy limits and pass/fail determination. A watthour meter passes if all of the following limits are met: (1) average error not over two percent (2%), plus or minus; (2) full load error not over one percent (1%), plus or minus; (3) light load error not over three percent (3%), plus or minus. (170 IAC 4-1-9(b)(1)) A meter exceeding any of these limits has failed the in-service accuracy standard and must be adjusted or replaced. A meter's billing adjustment eligibility under §13.1 or §13.2 is determined separately, using the 3% average error threshold under 170 IAC 4-1-14(A).\n\n> Note: A meter may fail the 170 IAC 4-1-9(b) in-service accuracy standard (average error >2%) but not meet the billing adjustment threshold (average error ≤3%). In that case, the meter must be adjusted or replaced, but no billing adjustment is made. The Meter Technician documents this outcome on MTR-F-011 and notifies the Billing Adjustment Analyst.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:10.7",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 90,
+    "heading_path": [
+      "10. Test Execution and Accuracy Determination"
+    ],
+    "unit_kind": "section",
+    "text_raw": "10.7 No-load creep test. The Meter Technician verifies that the meter does not register with all load wires disconnected (i.e., the moving element does not make more than one complete revolution when at no load), with applied voltage less than 110% of standard service voltage. A meter exhibiting creep in this condition shall not be returned to service. (170 IAC 4-1-9(a))",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:10.8",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 91,
+    "heading_path": [
+      "10. Test Execution and Accuracy Determination"
+    ],
+    "unit_kind": "section",
+    "text_raw": "10.8 Demand register and integrating demand meter tests. For meters with integrating demand registers, the Meter Technician verifies: (a) the electrical element meets the watthour meter limits in §10.6; (b) timing element cumulative error does not exceed 2% for the billing period; and (c) for time-of-use (TOU) demand registers, the register indicates correct time within ten (10) minutes under normal service conditions; any TOU error caused by temporary loss of utility service is corrected by the end of the following work day. (170 IAC 4-1-9(b)(3)) For lagged demand meters, electromagnetic type error shall not exceed 2%, and thermal type error shall not exceed 4%, of full scale indication. (170 IAC 4-1-9(b)(4))",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:10.9",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 92,
+    "heading_path": [
+      "10. Test Execution and Accuracy Determination"
+    ],
+    "unit_kind": "section",
+    "text_raw": "10.9 Power factor test for inductive load circuits. For watthour meters, except self-contained meters, to be used on circuits supplying inductive load, the Meter Technician tests the meter before installation at 100% of manufacturer's rated test current at 50% lagging power factor. The error under these conditions shall not exceed 2%, plus or minus. (170 IAC 4-1-9(b)(5)) This test is performed at the time of replacement meter installation, not during the test of the removed meter.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:10.10",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 93,
+    "heading_path": [
+      "10. Test Execution and Accuracy Determination"
+    ],
+    "unit_kind": "section",
+    "text_raw": "10.10 CT instrument transformer verification. For CT-metered installations, the Meter Technician confirms that the ratio of transformation and phase angle error of the instrument transformers are on file in WAM before any test result is accepted as final. (170 IAC 4-1-9(c)) If transformer data is missing from WAM, P19 obtains it before the test report is issued.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:10.11",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 94,
+    "heading_path": [
+      "10. Test Execution and Accuracy Determination"
+    ],
+    "unit_kind": "section",
+    "text_raw": "10.11 AMI solid-state meter — communications and firmware check. For AMI meters (company practice): the Meter Technician confirms that the head-end in the AMI HES shows a successful two-way communication session within the last 24 hours for the account, and that the firmware version matches the approved firmware table in WAM. Any firmware anomaly is escalated to the AMI Systems team before the test report is finalized.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:10.12",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 95,
+    "heading_path": [
+      "10. Test Execution and Accuracy Determination"
+    ],
+    "unit_kind": "section",
+    "text_raw": "10.12 As-left accuracy. After any adjustment is made, the Meter Technician determines the as-left accuracy at each load as outlined in §10.4. (170 IAC 4-1-8(c)) The as-left accuracy is recorded on MTR-F-011 alongside the as-found results.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:10.13",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 96,
+    "heading_path": [
+      "10. Test Execution and Accuracy Determination"
+    ],
+    "unit_kind": "section",
+    "text_raw": "10.13 Test record (MTR-F-011). The Meter Technician prepares form MTR-F-011 (App-B) at the time of test. The record must contain, at minimum: the meter identifier; the reason for the test; the meter reading before the test; the as-found FL and LL results and average accuracy; the pass/fail determination; the adjustment action taken (if any); and the as-left results. (170 IAC 4-1-4(a)) The completed MTR-F-011 is filed in WAM under the meter record and attached to the CIS case.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:11.1",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 97,
+    "heading_path": [
+      "11. Reporting Results to the Customer"
+    ],
+    "unit_kind": "section",
+    "text_raw": "11.1 Written report timing. The Meter Technician or Billing Adjustment Analyst issues a written test report to the customer, using form MTR-F-011 formatted as a letter (App-B), within ten (10) days after the test is complete. (170 IAC 4-1-11(d)) Internal performance target: issue within five (5) calendar days of the test completion date. The report date and method of delivery (mail, email, portal) are recorded in CIS.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:11.2",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 98,
+    "heading_path": [
+      "11. Reporting Results to the Customer"
+    ],
+    "unit_kind": "section",
+    "text_raw": "11.2 Required content of the report. The written report must include: (a) the account number and service address; (b) the meter serial number and type; (c) the test date and location; (d) the as-found FL and LL results and average accuracy; (e) the pass/fail determination under §10.6; (f) whether a billing adjustment was made and the amount; (g) the customer's appeal rights and the appeal deadline under §11.3; and (h) RPL contact information and the IURC contact block. (170 IAC 4-1-11(d); 170 IAC 4-1-4(a))",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:11.3",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 99,
+    "heading_path": [
+      "11. Reporting Results to the Customer"
+    ],
+    "unit_kind": "section",
+    "text_raw": "11.3 Appeal rights. The customer may appeal the results of the meter test to the IURC by filing an appeal with the Commission under 170 IAC 4-1-12 within five (5) days of the date of the report. (170 IAC 4-1-11(e)) The written report includes the following IURC contact block verbatim:\n\n> Indiana Utility Regulatory Commission (IURC) — Consumer Affairs Division\n> 1-800-851-4268 (toll-free) · 317-232-2712\n> PNC Center, 101 W. Washington Street, Suite 1500E, Indianapolis, IN 46204\n> Hours: 8:15 a.m.–4:45 p.m. ET, Monday–Friday\n> Online complaints: iurc.portal.in.gov",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:11.4",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 100,
+    "heading_path": [
+      "11. Reporting Results to the Customer"
+    ],
+    "unit_kind": "section",
+    "text_raw": "11.4 No adjustment required — closure. If the test determines that no billing adjustment is required (meter passed accuracy limits and no billing error found), the Billing Adjustment Analyst updates CIS with the test outcome, closes the MTR-TST service order, and mails or emails the MTR-F-011 report letter to the customer.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:11.5",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 101,
+    "heading_path": [
+      "11. Reporting Results to the Customer"
+    ],
+    "unit_kind": "section",
+    "text_raw": "11.5 Adjustment required. If a billing adjustment is required under §13, the Billing Adjustment Analyst processes the adjustment in CIS before issuing the MTR-F-011 report. The MTR-F-011 and MTR-F-012 (Billing Adjustment Letter) are issued to the customer together. See §13 for adjustment procedures.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:11.6",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 102,
+    "heading_path": [
+      "11. Reporting Results to the Customer"
+    ],
+    "unit_kind": "section",
+    "text_raw": "11.6 Record retention. The complete test record, including the MTR-F-011, is kept on file in WAM under the meter record and in CIS under the customer account, in record series RRS-MTR-002. (170 IAC 4-1-11(d)) See §16 for retention periods.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:12.1",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 103,
+    "heading_path": [
+      "12. Commission-Supervised Tests"
+    ],
+    "unit_kind": "section",
+    "text_raw": "12.1 IURC notification to RPL. Upon application of any customer to the IURC, and at the IURC's discretion, a test of the customer's watthour meter or an electric demand test may be ordered to be made by RPL or its contractor under the supervision of an IURC employee. The IURC shall promptly notify RPL of any such application. (170 IAC 4-1-12(a), (b)) The Contact Center agent forwards IURC notification to Gregory Walsh (P19) on the same business day received.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:12.2",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 104,
+    "heading_path": [
+      "12. Commission-Supervised Tests"
+    ],
+    "unit_kind": "section",
+    "text_raw": "12.2 Meter hold. Upon receiving IURC notification, P19 immediately places a WAM preservation hold on the customer's meter (hold type MTR-HOLD-IURC). RPL shall not remove, interfere with, or discard the customer's meter until the test is completed, without the prior written consent of the customer, unless removal is required in order to perform the requested test. (170 IAC 4-1-12(c)) Brian Kowalski (P17) is notified and a `HIURC` hold is confirmed in CIS.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:12.3",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 105,
+    "heading_path": [
+      "12. Commission-Supervised Tests"
+    ],
+    "unit_kind": "section",
+    "text_raw": "12.3 Test conditions for demand tests. When an IURC-supervised demand test is ordered, the test is made as soon as practicable after receipt of the application and under exactly similar conditions of installation and operation as may be mutually agreed upon in writing by the customer and RPL. (170 IAC 4-1-12(b)) P19 coordinates the written agreement with the customer and the IURC before scheduling.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:12.4",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 106,
+    "heading_path": [
+      "12. Commission-Supervised Tests"
+    ],
+    "unit_kind": "section",
+    "text_raw": "12.4 Fee for commission-supervised tests. No fee is payable by the customer for a commission-supervised test, except as may be charged under 170 IAC 4-1-11(b) (the three-condition fee rule in §8, T8-4). (170 IAC 4-1-12(a)) If a fee may apply, P18 reviews the eligibility conditions before the test and communicates the determination to the customer in writing, prior to the test.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:12.5",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 107,
+    "heading_path": [
+      "12. Commission-Supervised Tests"
+    ],
+    "unit_kind": "section",
+    "text_raw": "12.5 Records. The Meter Technician prepares MTR-F-011 as required by §10.13. P19 prepares a memo for the CIS case documenting the IURC coordination, the IURC representative's name and badge number, and the test completion date. The memo is attached to the case record in RRS-MTR-002.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:12.5~c1",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 108,
+    "heading_path": [
+      "13. Billing Adjustments"
+    ],
+    "unit_kind": "section",
+    "text_raw": "> Note: Adjustments are calculated on the basis of metered quantities (kWh and/or demand units) or billed charges, as specified in each subsection. Interest is not included in RPL's standard adjustment calculation; this is company practice. Payment arrangements for back-bills are available under RPL's standard installment plan policy (company practice); contact the Billing Adjustment Analyst.",
+    "row_cells": null,
+    "parent_clause_id": "RPL-CS-PRO-007:12.5"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:13.1.1",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 109,
+    "heading_path": [
+      "13. Billing Adjustments",
+      "13.1 Fast Meter"
+    ],
+    "unit_kind": "section",
+    "text_raw": "13.1.1 Trigger. When a watthour meter is found to have a positive average error greater than three percent (3%), the meter is \"fast\" and a refund or account credit is required. (170 IAC 4-1-14(A)(1)) CIS code: `ADJ-MF`.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:13.1.2",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 110,
+    "heading_path": [
+      "13. Billing Adjustments",
+      "13.1 Fast Meter"
+    ],
+    "unit_kind": "section",
+    "text_raw": "13.1.2 Adjustment period. The Billing Adjustment Analyst determines the period for which the meter was fast. If the start date of the fast condition can be determined from AMI interval data, WAM fault records, or other evidence, the period is the determinable fast period or one (1) year, whichever is shorter. If the start date cannot be determined, the adjustment covers one (1) year preceding the test date. (170 IAC 4-1-14(A)(1))",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:13.1.3",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 111,
+    "heading_path": [
+      "13. Billing Adjustments",
+      "13.1 Fast Meter"
+    ],
+    "unit_kind": "section",
+    "text_raw": "13.1.3 Refund calculation. RPL refunds the customer the excess charges for the adjustment period. The excess for each billing period is calculated as: excess = billed_amount × (accuracy − 100) ÷ accuracy. An average bill basis may be used if individual period adjustment is not feasible. The average bill is calculated from kilowatthours and/or demand units registered over corresponding periods either prior or subsequent to the fast period. (170 IAC 4-1-14(A)(1)) No part of a minimum service charge is refunded. (170 IAC 4-1-14(A)(1))",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:13.1.4",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 112,
+    "heading_path": [
+      "13. Billing Adjustments",
+      "13.1 Fast Meter"
+    ],
+    "unit_kind": "section",
+    "text_raw": "13.1.4 Refund method. The Billing Adjustment Analyst issues a credit to the customer's account, reflected on the next bill, or, if the customer has closed the account or requests a check, issues a refund check within thirty (30) calendar days of the adjustment calculation. MTR-F-012 (App-C) is mailed or emailed to the customer with the MTR-F-011 report.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:13.1.5",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 113,
+    "heading_path": [
+      "13. Billing Adjustments",
+      "13.1 Fast Meter"
+    ],
+    "unit_kind": "section",
+    "text_raw": "13.1.5 Approval. Adjustments up to $500 are approved by a Billing Adjustment Analyst. Adjustments from $500.01 to $5,000 require approval by Luis Hernandez (P18), Supervisor, Metering Services. Adjustments above $5,000 require approval by Steven Park (P14), Director, Customer Operations. See §14 for the full authority table.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:13.2.1",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 114,
+    "heading_path": [
+      "13. Billing Adjustments",
+      "13.2 Slow Meter"
+    ],
+    "unit_kind": "section",
+    "text_raw": "13.2.1 Trigger. When a watthour meter is found to have a negative average error greater than three percent (3%) (i.e., as-found accuracy below 97%), the meter is \"slow\" and RPL may charge the customer for the underregistered energy. (170 IAC 4-1-14(A)(2)) CIS code: `ADJ-MS`.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:13.2.2",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 115,
+    "heading_path": [
+      "13. Billing Adjustments",
+      "13.2 Slow Meter"
+    ],
+    "unit_kind": "section",
+    "text_raw": "13.2.2 Adjustment period. The back-bill period is the shorter of: (a) one-half of the period since the last previous test; or (b) one (1) year. (170 IAC 4-1-14(A)(2)) The Billing Adjustment Analyst obtains the date of the last previous test from WAM before calculating.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:13.2.3",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 116,
+    "heading_path": [
+      "13. Billing Adjustments",
+      "13.2 Slow Meter"
+    ],
+    "unit_kind": "section",
+    "text_raw": "13.2.3 Back-bill calculation. The back-bill is estimated on the basis of kilowatthours and/or demand units registered over corresponding periods either prior or subsequent to the slow period (average bill method), or by individual period adjustment for the percent of error. (170 IAC 4-1-14(A)(2))",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:13.2.4",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 117,
+    "heading_path": [
+      "13. Billing Adjustments",
+      "13.2 Slow Meter"
+    ],
+    "unit_kind": "section",
+    "text_raw": "13.2.4 Negligence exception. RPL shall not charge the customer for a slow meter adjustment if RPL negligently allowed the slow meter to remain in service. (170 IAC 4-1-14(A)(2)) The Billing Adjustment Analyst documents in the CIS case whether any utility-initiated inspection or in-service test should have detected the slow condition earlier. If evidence of negligence exists, P18 reviews before any back-bill is issued.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:13.2.5",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 118,
+    "heading_path": [
+      "13. Billing Adjustments",
+      "13.2 Slow Meter"
+    ],
+    "unit_kind": "section",
+    "text_raw": "13.2.5 Payment arrangements. If the back-bill exceeds the customer's average monthly bill, the Billing Adjustment Analyst offers a payment arrangement. The arrangement is documented in CIS under code `HPAY` (company practice).",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:13.3.1",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 119,
+    "heading_path": [
+      "13. Billing Adjustments",
+      "13.3 Non-Registering or Partially Registering Meter"
+    ],
+    "unit_kind": "section",
+    "text_raw": "13.3.1 Trigger. A meter that has fully stopped registering (zero reads on AMR/CIS, or confirmed stopped disk on electromechanical) or is partially registering (consistent undercount) is treated as a stopped or slow meter under 170 IAC 4-1-14(A)(2). CIS code: `ADJ-NR`.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:13.3.2",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 120,
+    "heading_path": [
+      "13. Billing Adjustments",
+      "13.3 Non-Registering or Partially Registering Meter"
+    ],
+    "unit_kind": "section",
+    "text_raw": "13.3.2 Adjustment period and estimation basis. The adjustment period and estimation method follow §13.2.2 and §13.2.3. For a fully stopped meter, the estimate of unbilled consumption is based on corresponding prior-period usage or subsequent-period usage after the replacement meter is installed. Minimum service charges already billed and paid are credited against the estimated charges, not double-collected.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:13.3.3",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 121,
+    "heading_path": [
+      "13. Billing Adjustments",
+      "13.3 Non-Registering or Partially Registering Meter"
+    ],
+    "unit_kind": "section",
+    "text_raw": "13.3.3 AMR zero-read alert. Meter Shop personnel review the AMR/AMI head-end weekly for accounts showing zero reads or anomalous downward trends. Discovery via zero-read alert is documented in WAM as the trigger for a field order (WAM work type `MTR-ZRO`). The Meter Technician investigates on the same business day for residential accounts and within two (2) business days for non-residential accounts (Internal performance target).",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:13.4.1",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 122,
+    "heading_path": [
+      "13. Billing Adjustments",
+      "13.4 Demand Register Error"
+    ],
+    "unit_kind": "section",
+    "text_raw": "13.4.1 Trigger. A demand meter that, after testing, is found to have an error greater than four percent (4%) for integrating demand, or the applicable limit for lagged demand types (see §10.8), requires a billing adjustment. (170 IAC 4-1-14(A), applying the 4% threshold for demand meters) CIS code: `ADJ-MF` (fast) or `ADJ-MS` (slow) as applicable.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:13.4.2",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 123,
+    "heading_path": [
+      "13. Billing Adjustments",
+      "13.4 Demand Register Error"
+    ],
+    "unit_kind": "section",
+    "text_raw": "13.4.2 Calculation. Adjustment is made to both the energy (kWh) component and the demand (kW) component for the adjustment period, using the error percentage as found. The Billing Adjustment Analyst recalculates affected bills individually for each billing period in the adjustment window.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:13.5.1",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 124,
+    "heading_path": [
+      "13. Billing Adjustments",
+      "13.5 Other Billing Errors"
+    ],
+    "unit_kind": "section",
+    "text_raw": "13.5.1 Scope. All billing errors other than meter registration errors — including incorrect tariff rate application, incorrect multiplier, crossed meters, and estimated-read errors — are adjusted under 170 IAC 4-1-14(B). CIS codes: `ADJ-RT` (wrong rate), `ADJ-MX` (multiplier error), `ADJ-BE` (other billing error).",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:13.5.2",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 125,
+    "heading_path": [
+      "13. Billing Adjustments",
+      "13.5 Other Billing Errors"
+    ],
+    "unit_kind": "section",
+    "text_raw": "13.5.2 Adjustment period. The adjustment covers the period from the known date of error to the date the error was corrected, or one (1) year, whichever period is shorter. (170 IAC 4-1-14(B)) The Billing Adjustment Analyst documents the known date of error in the CIS case with supporting evidence (installation records, WAM work order, CIS rate-change history).",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:13.5.3",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 126,
+    "heading_path": [
+      "13. Billing Adjustments",
+      "13.5 Other Billing Errors"
+    ],
+    "unit_kind": "section",
+    "text_raw": "13.5.3 Wrong multiplier. If the multiplier applied in CIS does not match the multiplier marked on the meter or the multiplier confirmed by WAM instrument-transformer records (170 IAC 4-1-6(d)), the Billing Adjustment Analyst calculates the corrected charges by applying the correct multiplier to each billing period in the adjustment window. The adjustment may be a refund (multiplier too high) or a back-bill (multiplier too low).",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:13.5.4",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 127,
+    "heading_path": [
+      "13. Billing Adjustments",
+      "13.5 Other Billing Errors"
+    ],
+    "unit_kind": "section",
+    "text_raw": "13.5.4 Estimated-read corrections. If an estimated bill was issued for a period when RPL did not have good cause under 170 IAC 4-1-13(d), and the estimate overstated consumption, the customer is refunded the overcharge upon correction. If the estimate understated consumption and the account accumulates a balance, RPL issues a corrected bill but does not treat the balance as a penalty or back-bill beyond the actual consumption adjustment.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:13.6.1",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 128,
+    "heading_path": [
+      "13. Billing Adjustments",
+      "13.6 Tampering-Related Registration"
+    ],
+    "unit_kind": "section",
+    "text_raw": "13.6.1 Exclusion from standard adjustment. Meter registration discrepancies that result from tampering or unauthorized use are excluded from the standard billing adjustment process in this procedure. Such cases are routed to the revenue-protection process via WAM work order type `MTR-INV`. The customer is subject to the minimum investigation charge under Tariff Rule 16, Sheet 45, F-8 ($100.00 minimum, plus actual costs and unbilled energy). Contact P18 for escalation.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:13.6.2",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 129,
+    "heading_path": [
+      "13. Billing Adjustments",
+      "13.6 Tampering-Related Registration"
+    ],
+    "unit_kind": "section",
+    "text_raw": "13.6.2 Indicator flags. The Meter Technician documents on MTR-F-013 any visible evidence of tampering (broken seals, meter bypass, unauthorized conductors). The Contact Center agent applies hold code `HIURC` if the account is subject to an active IURC complaint, and documents the tampering evidence in CIS. Brian Kowalski (P17) is notified of all accounts where a tampering investigation is open and an IURC complaint also exists.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:14.1",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 130,
+    "heading_path": [
+      "14. Adjustment Approval Authority"
+    ],
+    "unit_kind": "section",
+    "text_raw": "14.1 The following table sets adjustment approval authority. These are company practice thresholds and do not reflect a separate regulatory requirement.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:T14-1",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 131,
+    "heading_path": [
+      "14. Adjustment Approval Authority"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "T14-1 | Up to $500.00 | Billing Adjustment Analyst | Staffed position, Customer Operations",
+    "row_cells": {
+      "ID": "T14-1",
+      "Adjustment Amount": "Up to $500.00",
+      "Approving Authority": "Billing Adjustment Analyst",
+      "Title": "Staffed position, Customer Operations"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:14.1"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:T14-2",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 132,
+    "heading_path": [
+      "14. Adjustment Approval Authority"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "T14-2 | $500.01 – $5,000.00 | Luis Hernandez (P18) | Supervisor, Metering Services",
+    "row_cells": {
+      "ID": "T14-2",
+      "Adjustment Amount": "$500.01 – $5,000.00",
+      "Approving Authority": "Luis Hernandez (P18)",
+      "Title": "Supervisor, Metering Services"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:14.1"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:T14-3",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 133,
+    "heading_path": [
+      "14. Adjustment Approval Authority"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "T14-3 | Above $5,000.00 | Steven Park (P14) | Director, Customer Operations",
+    "row_cells": {
+      "ID": "T14-3",
+      "Adjustment Amount": "Above $5,000.00",
+      "Approving Authority": "Steven Park (P14)",
+      "Title": "Director, Customer Operations"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:14.1"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:T14-4",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 134,
+    "heading_path": [
+      "14. Adjustment Approval Authority"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "T14-4 | Any amount — account with open IURC complaint (`HIURC` hold in CIS) | Primary approver per T14-1 through T14-3, plus copy to Brian Kowalski (P17) | Manager, Customer Advocacy & Complaint Resolution",
+    "row_cells": {
+      "ID": "T14-4",
+      "Adjustment Amount": "Any amount — account with open IURC complaint (`HIURC` hold in CIS)",
+      "Approving Authority": "Primary approver per T14-1 through T14-3, plus copy to Brian Kowalski (P17)",
+      "Title": "Manager, Customer Advocacy & Complaint Resolution"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:14.1"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:14.1~c1",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 135,
+    "heading_path": [
+      "15. Worked Examples"
+    ],
+    "unit_kind": "section",
+    "text_raw": "> These examples are computed by `scripts/worked_examples.py`. Account numbers are fictional. All dates are on or before 2025-02-12.",
+    "row_cells": null,
+    "parent_clause_id": "RPL-CS-PRO-007:14.1"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:15.1",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 136,
+    "heading_path": [
+      "15. Worked Examples",
+      "Example 1 — Fast Residential AMI Meter (Account 4156789012-3)"
+    ],
+    "unit_kind": "section",
+    "text_raw": "Scenario: Account 4156789012-3, service address 142 Fieldstone Court, Frankfort, IN 46041. Customer reported unusually high bills for 2024. Test date: 2025-01-15. Meter type: AMI solid-state.\n\nAs-found test results:\n- Full load (FL): 104.8%\n- Light load (LL): 103.6%\n- Average accuracy: (104.8 + 103.6) ÷ 2 = 104.2%\n- Average error: +4.2% (fast) — exceeds 3% threshold → billing adjustment required under 170 IAC 4-1-14(A)(1)\n- CIS code: `ADJ-MF`\n\nAdjustment period: Fast period cannot be determined from AMI interval data. Adjustment covers one (1) year: 2024-01-15 through 2025-01-14 (12 billing months).\n\nRefund calculation: Excess per period = billed_amount × (104.2 − 100) ÷ 104.2 = billed_amount × 0.040307\n\nApproval: $60.98 ≤ $500 → Billing Adjustment Analyst (T14-1). CIS credit applied 2025-01-17. No minimum service charge included in refund. No IURC complaint hold on account.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:15.1.tbl1.r1",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 137,
+    "heading_path": [
+      "15. Worked Examples",
+      "Example 1 — Fast Residential AMI Meter (Account 4156789012-3)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "2024-01 | $72.40 | $2.92",
+    "row_cells": {
+      "Billing Month": "2024-01",
+      "Billed Amount": "$72.40",
+      "Refund (= Bill × 4.2/104.2)": "$2.92"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:15.1"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:15.1.tbl1.r2",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 138,
+    "heading_path": [
+      "15. Worked Examples",
+      "Example 1 — Fast Residential AMI Meter (Account 4156789012-3)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "2024-02 | $68.20 | $2.75",
+    "row_cells": {
+      "Billing Month": "2024-02",
+      "Billed Amount": "$68.20",
+      "Refund (= Bill × 4.2/104.2)": "$2.75"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:15.1"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:15.1.tbl1.r3",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 139,
+    "heading_path": [
+      "15. Worked Examples",
+      "Example 1 — Fast Residential AMI Meter (Account 4156789012-3)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "2024-03 | $95.30 | $3.84",
+    "row_cells": {
+      "Billing Month": "2024-03",
+      "Billed Amount": "$95.30",
+      "Refund (= Bill × 4.2/104.2)": "$3.84"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:15.1"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:15.1.tbl1.r4",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 140,
+    "heading_path": [
+      "15. Worked Examples",
+      "Example 1 — Fast Residential AMI Meter (Account 4156789012-3)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "2024-04 | $112.80 | $4.55",
+    "row_cells": {
+      "Billing Month": "2024-04",
+      "Billed Amount": "$112.80",
+      "Refund (= Bill × 4.2/104.2)": "$4.55"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:15.1"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:15.1.tbl1.r5",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 141,
+    "heading_path": [
+      "15. Worked Examples",
+      "Example 1 — Fast Residential AMI Meter (Account 4156789012-3)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "2024-05 | $143.50 | $5.78",
+    "row_cells": {
+      "Billing Month": "2024-05",
+      "Billed Amount": "$143.50",
+      "Refund (= Bill × 4.2/104.2)": "$5.78"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:15.1"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:15.1.tbl1.r6",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 142,
+    "heading_path": [
+      "15. Worked Examples",
+      "Example 1 — Fast Residential AMI Meter (Account 4156789012-3)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "2024-06 | $187.30 | $7.55",
+    "row_cells": {
+      "Billing Month": "2024-06",
+      "Billed Amount": "$187.30",
+      "Refund (= Bill × 4.2/104.2)": "$7.55"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:15.1"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:15.1.tbl1.r7",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 143,
+    "heading_path": [
+      "15. Worked Examples",
+      "Example 1 — Fast Residential AMI Meter (Account 4156789012-3)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "2024-07 | $204.60 | $8.25",
+    "row_cells": {
+      "Billing Month": "2024-07",
+      "Billed Amount": "$204.60",
+      "Refund (= Bill × 4.2/104.2)": "$8.25"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:15.1"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:15.1.tbl1.r8",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 144,
+    "heading_path": [
+      "15. Worked Examples",
+      "Example 1 — Fast Residential AMI Meter (Account 4156789012-3)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "2024-08 | $196.40 | $7.92",
+    "row_cells": {
+      "Billing Month": "2024-08",
+      "Billed Amount": "$196.40",
+      "Refund (= Bill × 4.2/104.2)": "$7.92"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:15.1"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:15.1.tbl1.r9",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 145,
+    "heading_path": [
+      "15. Worked Examples",
+      "Example 1 — Fast Residential AMI Meter (Account 4156789012-3)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "2024-09 | $158.20 | $6.38",
+    "row_cells": {
+      "Billing Month": "2024-09",
+      "Billed Amount": "$158.20",
+      "Refund (= Bill × 4.2/104.2)": "$6.38"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:15.1"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:15.1.tbl1.r10",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 146,
+    "heading_path": [
+      "15. Worked Examples",
+      "Example 1 — Fast Residential AMI Meter (Account 4156789012-3)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "2024-10 | $108.30 | $4.37",
+    "row_cells": {
+      "Billing Month": "2024-10",
+      "Billed Amount": "$108.30",
+      "Refund (= Bill × 4.2/104.2)": "$4.37"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:15.1"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:15.1.tbl1.r11",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 147,
+    "heading_path": [
+      "15. Worked Examples",
+      "Example 1 — Fast Residential AMI Meter (Account 4156789012-3)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "2024-11 | $89.40 | $3.60",
+    "row_cells": {
+      "Billing Month": "2024-11",
+      "Billed Amount": "$89.40",
+      "Refund (= Bill × 4.2/104.2)": "$3.60"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:15.1"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:15.1.tbl1.r12",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 148,
+    "heading_path": [
+      "15. Worked Examples",
+      "Example 1 — Fast Residential AMI Meter (Account 4156789012-3)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "2024-12 | $76.10 | $3.07",
+    "row_cells": {
+      "Billing Month": "2024-12",
+      "Billed Amount": "$76.10",
+      "Refund (= Bill × 4.2/104.2)": "$3.07"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:15.1"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:15.1.tbl1.r13",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 149,
+    "heading_path": [
+      "15. Worked Examples",
+      "Example 1 — Fast Residential AMI Meter (Account 4156789012-3)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "Total | $1,512.50 | $60.98",
+    "row_cells": {
+      "Billing Month": "Total",
+      "Billed Amount": "$1,512.50",
+      "Refund (= Bill × 4.2/104.2)": "$60.98"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:15.1"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:15.2",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 150,
+    "heading_path": [
+      "15. Worked Examples",
+      "Example 2 — Non-Registering Electromechanical Meter (Account 4287634501-7)"
+    ],
+    "unit_kind": "section",
+    "text_raw": "Scenario: Account 4287634501-7, service address 8821 County Road 200 N, Fountain County. AMR zero-read alert detected 2025-01-20 by Meter Shop. Field inspection same day confirmed stopped disk. Meter type: electromechanical (legacy). Last previous test: 2020-09-22 (WAM record).\n\nAs-found test results: Average accuracy = 0.0% (non-registering — stopped). Error: −100%. CIS code: `ADJ-NR`.\n\nAdjustment period: Time since last previous test = 2020-09-22 to 2025-01-20 = 4 years, 3 months, 29 days ≈ 51.9 months. One-half = approximately 25.95 months. This exceeds one (1) year, so the adjustment period is capped at one (1) year: 2024-01-20 through 2025-01-19. (170 IAC 4-1-14(A)(2))\n\nNegligence review: Meter Shop confirms the prior AMR schedule for this rural account called for a read every 90 days; no zero-read condition was flagged in prior reads. Discovery timeline does not indicate negligence. P18 reviewed and approved back-bill.\n\nEstimation basis: Average bill calculated from corresponding months in the prior year (Jan 2023 – Dec 2023), per 170 IAC 4-1-14(A)(2). Minimum service charge ($8.50/month) already collected during the non-registration period is credited.\n\nApproval: $1,296.30 is between $500.01 and $5,000 → Luis Hernandez (P18), Supervisor, Metering Services (T14-2). Payment arrangement offered. No IURC complaint hold on account.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:15.2.tbl1.r1",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 151,
+    "heading_path": [
+      "15. Worked Examples",
+      "Example 2 — Non-Registering Electromechanical Meter (Account 4287634501-7)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "2024-01 | $68.20 | $8.50 | $59.70",
+    "row_cells": {
+      "Billing Month": "2024-01",
+      "Prior-Year Bill": "$68.20",
+      "Min. Charge Already Collected": "$8.50",
+      "Back-Bill": "$59.70"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:15.2"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:15.2.tbl1.r2",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 152,
+    "heading_path": [
+      "15. Worked Examples",
+      "Example 2 — Non-Registering Electromechanical Meter (Account 4287634501-7)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "2024-02 | $64.10 | $8.50 | $55.60",
+    "row_cells": {
+      "Billing Month": "2024-02",
+      "Prior-Year Bill": "$64.10",
+      "Min. Charge Already Collected": "$8.50",
+      "Back-Bill": "$55.60"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:15.2"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:15.2.tbl1.r3",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 153,
+    "heading_path": [
+      "15. Worked Examples",
+      "Example 2 — Non-Registering Electromechanical Meter (Account 4287634501-7)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "2024-03 | $88.40 | $8.50 | $79.90",
+    "row_cells": {
+      "Billing Month": "2024-03",
+      "Prior-Year Bill": "$88.40",
+      "Min. Charge Already Collected": "$8.50",
+      "Back-Bill": "$79.90"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:15.2"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:15.2.tbl1.r4",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 154,
+    "heading_path": [
+      "15. Worked Examples",
+      "Example 2 — Non-Registering Electromechanical Meter (Account 4287634501-7)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "2024-04 | $104.50 | $8.50 | $96.00",
+    "row_cells": {
+      "Billing Month": "2024-04",
+      "Prior-Year Bill": "$104.50",
+      "Min. Charge Already Collected": "$8.50",
+      "Back-Bill": "$96.00"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:15.2"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:15.2.tbl1.r5",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 155,
+    "heading_path": [
+      "15. Worked Examples",
+      "Example 2 — Non-Registering Electromechanical Meter (Account 4287634501-7)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "2024-05 | $131.20 | $8.50 | $122.70",
+    "row_cells": {
+      "Billing Month": "2024-05",
+      "Prior-Year Bill": "$131.20",
+      "Min. Charge Already Collected": "$8.50",
+      "Back-Bill": "$122.70"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:15.2"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:15.2.tbl1.r6",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 156,
+    "heading_path": [
+      "15. Worked Examples",
+      "Example 2 — Non-Registering Electromechanical Meter (Account 4287634501-7)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "2024-06 | $172.40 | $8.50 | $163.90",
+    "row_cells": {
+      "Billing Month": "2024-06",
+      "Prior-Year Bill": "$172.40",
+      "Min. Charge Already Collected": "$8.50",
+      "Back-Bill": "$163.90"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:15.2"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:15.2.tbl1.r7",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 157,
+    "heading_path": [
+      "15. Worked Examples",
+      "Example 2 — Non-Registering Electromechanical Meter (Account 4287634501-7)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "2024-07 | $188.60 | $8.50 | $180.10",
+    "row_cells": {
+      "Billing Month": "2024-07",
+      "Prior-Year Bill": "$188.60",
+      "Min. Charge Already Collected": "$8.50",
+      "Back-Bill": "$180.10"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:15.2"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:15.2.tbl1.r8",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 158,
+    "heading_path": [
+      "15. Worked Examples",
+      "Example 2 — Non-Registering Electromechanical Meter (Account 4287634501-7)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "2024-08 | $181.30 | $8.50 | $172.80",
+    "row_cells": {
+      "Billing Month": "2024-08",
+      "Prior-Year Bill": "$181.30",
+      "Min. Charge Already Collected": "$8.50",
+      "Back-Bill": "$172.80"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:15.2"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:15.2.tbl1.r9",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 159,
+    "heading_path": [
+      "15. Worked Examples",
+      "Example 2 — Non-Registering Electromechanical Meter (Account 4287634501-7)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "2024-09 | $146.80 | $8.50 | $138.30",
+    "row_cells": {
+      "Billing Month": "2024-09",
+      "Prior-Year Bill": "$146.80",
+      "Min. Charge Already Collected": "$8.50",
+      "Back-Bill": "$138.30"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:15.2"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:15.2.tbl1.r10",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 160,
+    "heading_path": [
+      "15. Worked Examples",
+      "Example 2 — Non-Registering Electromechanical Meter (Account 4287634501-7)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "2024-10 | $98.50 | $8.50 | $90.00",
+    "row_cells": {
+      "Billing Month": "2024-10",
+      "Prior-Year Bill": "$98.50",
+      "Min. Charge Already Collected": "$8.50",
+      "Back-Bill": "$90.00"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:15.2"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:15.2.tbl1.r11",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 161,
+    "heading_path": [
+      "15. Worked Examples",
+      "Example 2 — Non-Registering Electromechanical Meter (Account 4287634501-7)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "2024-11 | $83.20 | $8.50 | $74.70",
+    "row_cells": {
+      "Billing Month": "2024-11",
+      "Prior-Year Bill": "$83.20",
+      "Min. Charge Already Collected": "$8.50",
+      "Back-Bill": "$74.70"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:15.2"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:15.2.tbl1.r12",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 162,
+    "heading_path": [
+      "15. Worked Examples",
+      "Example 2 — Non-Registering Electromechanical Meter (Account 4287634501-7)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "2024-12 | $71.10 | $8.50 | $62.60",
+    "row_cells": {
+      "Billing Month": "2024-12",
+      "Prior-Year Bill": "$71.10",
+      "Min. Charge Already Collected": "$8.50",
+      "Back-Bill": "$62.60"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:15.2"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:15.2.tbl1.r13",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 163,
+    "heading_path": [
+      "15. Worked Examples",
+      "Example 2 — Non-Registering Electromechanical Meter (Account 4287634501-7)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "Total | $1,398.30 | $102.00 | $1,296.30",
+    "row_cells": {
+      "Billing Month": "Total",
+      "Prior-Year Bill": "$1,398.30",
+      "Min. Charge Already Collected": "$102.00",
+      "Back-Bill": "$1,296.30"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:15.2"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:15.3",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 164,
+    "heading_path": [
+      "15. Worked Examples",
+      "Example 3 — Wrong Multiplier, Commercial Demand Account (Account 4398201467-2)"
+    ],
+    "unit_kind": "section",
+    "text_raw": "Scenario: Account 4398201467-2, commercial demand customer. During a WAM CT record audit in November 2024, Billing Adjustment Analyst found that the CT ratio applied in CIS was 10, but the instrument-transformer records in WAM show the correct ratio is 20. Meter multiplier tag on meter: \"CTR = 20\". CIS billing multiplier: 10. Error start: installation records confirm multiplier 10 was entered into CIS when the meter was set 2024-02-01. Discovery date: 2024-11-01. CIS code: `ADJ-MX`.\n\nAdjustment period under 170 IAC 4-1-14(B): Known date of error = 2024-02-01. Known date of correction = 2024-11-01. Period = 9 months (< 1 year) → adjust full period 2024-02-01 through 2024-10-31. (170 IAC 4-1-14(B))\n\nCalculation: Correct multiplier (20) ÷ applied multiplier (10) = 2.0. Actual charges should have been 2.0× what was billed. Under-billed additional charges per month = billed_amount × (20 − 10) ÷ 10 = billed_amount × 1.0.\n\nApproval: $5,005.90 > $5,000 → Steven Park (P14), Director, Customer Operations (T14-3). Payment arrangement offered. MTR-F-012 back-bill version issued.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:15.3.tbl1.r1",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 165,
+    "heading_path": [
+      "15. Worked Examples",
+      "Example 3 — Wrong Multiplier, Commercial Demand Account (Account 4398201467-2)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "2024-02 | $412.50 | $412.50",
+    "row_cells": {
+      "Billing Month": "2024-02",
+      "Billed (Multiplier=10)": "$412.50",
+      "Additional Back-Bill (×1.0)": "$412.50"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:15.3"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:15.3.tbl1.r2",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 166,
+    "heading_path": [
+      "15. Worked Examples",
+      "Example 3 — Wrong Multiplier, Commercial Demand Account (Account 4398201467-2)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "2024-03 | $387.60 | $387.60",
+    "row_cells": {
+      "Billing Month": "2024-03",
+      "Billed (Multiplier=10)": "$387.60",
+      "Additional Back-Bill (×1.0)": "$387.60"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:15.3"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:15.3.tbl1.r3",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 167,
+    "heading_path": [
+      "15. Worked Examples",
+      "Example 3 — Wrong Multiplier, Commercial Demand Account (Account 4398201467-2)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "2024-04 | $458.30 | $458.30",
+    "row_cells": {
+      "Billing Month": "2024-04",
+      "Billed (Multiplier=10)": "$458.30",
+      "Additional Back-Bill (×1.0)": "$458.30"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:15.3"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:15.3.tbl1.r4",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 168,
+    "heading_path": [
+      "15. Worked Examples",
+      "Example 3 — Wrong Multiplier, Commercial Demand Account (Account 4398201467-2)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "2024-05 | $521.40 | $521.40",
+    "row_cells": {
+      "Billing Month": "2024-05",
+      "Billed (Multiplier=10)": "$521.40",
+      "Additional Back-Bill (×1.0)": "$521.40"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:15.3"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:15.3.tbl1.r5",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 169,
+    "heading_path": [
+      "15. Worked Examples",
+      "Example 3 — Wrong Multiplier, Commercial Demand Account (Account 4398201467-2)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "2024-06 | $623.80 | $623.80",
+    "row_cells": {
+      "Billing Month": "2024-06",
+      "Billed (Multiplier=10)": "$623.80",
+      "Additional Back-Bill (×1.0)": "$623.80"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:15.3"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:15.3.tbl1.r6",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 170,
+    "heading_path": [
+      "15. Worked Examples",
+      "Example 3 — Wrong Multiplier, Commercial Demand Account (Account 4398201467-2)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "2024-07 | $698.20 | $698.20",
+    "row_cells": {
+      "Billing Month": "2024-07",
+      "Billed (Multiplier=10)": "$698.20",
+      "Additional Back-Bill (×1.0)": "$698.20"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:15.3"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:15.3.tbl1.r7",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 171,
+    "heading_path": [
+      "15. Worked Examples",
+      "Example 3 — Wrong Multiplier, Commercial Demand Account (Account 4398201467-2)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "2024-08 | $734.10 | $734.10",
+    "row_cells": {
+      "Billing Month": "2024-08",
+      "Billed (Multiplier=10)": "$734.10",
+      "Additional Back-Bill (×1.0)": "$734.10"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:15.3"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:15.3.tbl1.r8",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 172,
+    "heading_path": [
+      "15. Worked Examples",
+      "Example 3 — Wrong Multiplier, Commercial Demand Account (Account 4398201467-2)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "2024-09 | $641.30 | $641.30",
+    "row_cells": {
+      "Billing Month": "2024-09",
+      "Billed (Multiplier=10)": "$641.30",
+      "Additional Back-Bill (×1.0)": "$641.30"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:15.3"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:15.3.tbl1.r9",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 173,
+    "heading_path": [
+      "15. Worked Examples",
+      "Example 3 — Wrong Multiplier, Commercial Demand Account (Account 4398201467-2)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "2024-10 | $528.70 | $528.70",
+    "row_cells": {
+      "Billing Month": "2024-10",
+      "Billed (Multiplier=10)": "$528.70",
+      "Additional Back-Bill (×1.0)": "$528.70"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:15.3"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:15.3.tbl1.r10",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 174,
+    "heading_path": [
+      "15. Worked Examples",
+      "Example 3 — Wrong Multiplier, Commercial Demand Account (Account 4398201467-2)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "Total | $5,005.90 | $5,005.90",
+    "row_cells": {
+      "Billing Month": "Total",
+      "Billed (Multiplier=10)": "$5,005.90",
+      "Additional Back-Bill (×1.0)": "$5,005.90"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:15.3"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:16.1",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 175,
+    "heading_path": [
+      "16. Records and Retention"
+    ],
+    "unit_kind": "section",
+    "text_raw": "16.1 The following records are created by this procedure and retained in the systems and series indicated. Retention periods are established by RPL-LEG-RRS-001 (Records Retention Schedule).",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:16.1.tbl1.r1",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 176,
+    "heading_path": [
+      "16. Records and Retention"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "MTR-F-010 Meter Test Request | CIS (attached to case) | RRS-CS-001 | Per RPL-LEG-RRS-001",
+    "row_cells": {
+      "Record": "MTR-F-010 Meter Test Request",
+      "System": "CIS (attached to case)",
+      "Record Series": "RRS-CS-001",
+      "Minimum Retention": "Per RPL-LEG-RRS-001"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:16.1"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:16.1.tbl1.r2",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 177,
+    "heading_path": [
+      "16. Records and Retention"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "MTR-F-011 Meter Test Report | WAM (meter record); CIS (case) | RRS-MTR-002 | Per RPL-LEG-RRS-001",
+    "row_cells": {
+      "Record": "MTR-F-011 Meter Test Report",
+      "System": "WAM (meter record); CIS (case)",
+      "Record Series": "RRS-MTR-002",
+      "Minimum Retention": "Per RPL-LEG-RRS-001"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:16.1"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:16.1.tbl1.r3",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 178,
+    "heading_path": [
+      "16. Records and Retention"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "MTR-F-012 Billing Adjustment Letter | CIS (case) | RRS-CS-007 | Per RPL-LEG-RRS-001",
+    "row_cells": {
+      "Record": "MTR-F-012 Billing Adjustment Letter",
+      "System": "CIS (case)",
+      "Record Series": "RRS-CS-007",
+      "Minimum Retention": "Per RPL-LEG-RRS-001"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:16.1"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:16.1.tbl1.r4",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 179,
+    "heading_path": [
+      "16. Records and Retention"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "MTR-F-013 Chain-of-Custody Tag | WAM (work order) | RRS-MTR-001 | Per RPL-LEG-RRS-001",
+    "row_cells": {
+      "Record": "MTR-F-013 Chain-of-Custody Tag",
+      "System": "WAM (work order)",
+      "Record Series": "RRS-MTR-001",
+      "Minimum Retention": "Per RPL-LEG-RRS-001"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:16.1"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:16.1.tbl1.r5",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 180,
+    "heading_path": [
+      "16. Records and Retention"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "Meter test data (raw FL/LL readings) | WAM (meter record) | RRS-MTR-002 | Per RPL-LEG-RRS-001",
+    "row_cells": {
+      "Record": "Meter test data (raw FL/LL readings)",
+      "System": "WAM (meter record)",
+      "Record Series": "RRS-MTR-002",
+      "Minimum Retention": "Per RPL-LEG-RRS-001"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:16.1"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:16.1.tbl1.r6",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 181,
+    "heading_path": [
+      "16. Records and Retention"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "Billing adjustment records | CIS | RRS-CS-007 | Per RPL-LEG-RRS-001",
+    "row_cells": {
+      "Record": "Billing adjustment records",
+      "System": "CIS",
+      "Record Series": "RRS-CS-007",
+      "Minimum Retention": "Per RPL-LEG-RRS-001"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:16.1"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:16.1.tbl1.r7",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 182,
+    "heading_path": [
+      "16. Records and Retention"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "Standards calibration records | WAM (lab records) | RRS-MTR-003 | Per RPL-LEG-RRS-001",
+    "row_cells": {
+      "Record": "Standards calibration records",
+      "System": "WAM (lab records)",
+      "Record Series": "RRS-MTR-003",
+      "Minimum Retention": "Per RPL-LEG-RRS-001"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:16.1"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:16.2",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 183,
+    "heading_path": [
+      "16. Records and Retention"
+    ],
+    "unit_kind": "section",
+    "text_raw": "16.2 Permanent records shall be kept in WAM, systematically arranged, for each meter owned or used by RPL, giving the year of purchase, meter identification, and the record of the last test with date and general results. These records apply to all meters purchased after the effective date of 170 IAC 4-1-4 and to all other meters insofar as the information is available. (170 IAC 4-1-4(b)) If required by the IURC, annual tabulations of test results arranged according to average accuracy shall be produced. (170 IAC 4-1-4(c))",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:17.1",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 184,
+    "heading_path": [
+      "17. Training"
+    ],
+    "unit_kind": "section",
+    "text_raw": "17.1 Contact Center training. All Contact Center agents handling high-bill calls and meter test intake are required to complete training module CS-T-07, which covers the CS-S-07 script (App-E), triage steps (§6), intake procedures (§7), and fee eligibility (§8). CS-T-07 is completed upon hire and reviewed annually when this procedure is updated. Completion is recorded in the Training Management module of the CIS platform under record series RRS-TRN-001.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:17.2",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 185,
+    "heading_path": [
+      "17. Training"
+    ],
+    "unit_kind": "section",
+    "text_raw": "17.2 Meter Technician training. All Meter Technicians performing customer-requested meter tests are required to complete training module MTR-T-03, which covers test execution (§10), chain-of-custody procedures (§9), and form completion (MTR-F-011, MTR-F-013). MTR-T-03 is completed upon assignment to customer-requested test duties and reviewed when a major revision to this procedure is issued. Completion is recorded in RRS-TRN-001.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:18.1",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 186,
+    "heading_path": [
+      "18. Related Documents"
+    ],
+    "unit_kind": "section",
+    "text_raw": "18.1 The following documents are referenced by or operate in conjunction with this procedure.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:18.1.tbl1.r1",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 187,
+    "heading_path": [
+      "18. Related Documents"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "RPL-TAR-GRR-012 | Tariff for Electric Service, IURC No. 12 — General Rules and Regulations | Rule 9 (Sheets 27–29): Metering; Rule 12 (Sheets 35–36): Billing Adjustments; Rule 16 (Sheets 45–46): Test fee F-9, tampering fee F-8",
+    "row_cells": {
+      "Document ID": "RPL-TAR-GRR-012",
+      "Title": "Tariff for Electric Service, IURC No. 12 — General Rules and Regulations",
+      "Relationship": "Rule 9 (Sheets 27–29): Metering; Rule 12 (Sheets 35–36): Billing Adjustments; Rule 16 (Sheets 45–46): Test fee F-9, tampering fee F-8"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:18.1"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:18.1.tbl1.r2",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 188,
+    "heading_path": [
+      "18. Related Documents"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "RPL-MTR-PGM-001 | Meter Testing Program Plan | Test equipment standards, in-service and quality-control sampling programs (cross-referenced in §10)",
+    "row_cells": {
+      "Document ID": "RPL-MTR-PGM-001",
+      "Title": "Meter Testing Program Plan",
+      "Relationship": "Test equipment standards, in-service and quality-control sampling programs (cross-referenced in §10)"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:18.1"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:18.1.tbl1.r3",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 189,
+    "heading_path": [
+      "18. Related Documents"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "RPL-CS-PRO-011 | Customer Complaint & Dispute Resolution Procedure | Governs handling of accounts with an active IURC complaint (`HIURC` hold)",
+    "row_cells": {
+      "Document ID": "RPL-CS-PRO-011",
+      "Title": "Customer Complaint & Dispute Resolution Procedure",
+      "Relationship": "Governs handling of accounts with an active IURC complaint (`HIURC` hold)"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:18.1"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:18.1.tbl1.r4",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 190,
+    "heading_path": [
+      "18. Related Documents"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "RPL-LEG-RRS-001 | Records Retention Schedule | Sets retention periods for all record series in §16",
+    "row_cells": {
+      "Document ID": "RPL-LEG-RRS-001",
+      "Title": "Records Retention Schedule",
+      "Relationship": "Sets retention periods for all record series in §16"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:18.1"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:18.1.tbl2.r1",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 191,
+    "heading_path": [
+      "19. Revision History"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "1.0 | 2019-03-15 | Supervisor, Metering Services | Initial release; replaced informal billing adjustment guidelines",
+    "row_cells": {
+      "Version": "1.0",
+      "Effective Date": "2019-03-15",
+      "Author": "Supervisor, Metering Services",
+      "Change Summary": "Initial release; replaced informal billing adjustment guidelines"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:18.1"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:18.1.tbl2.r2",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 192,
+    "heading_path": [
+      "19. Revision History"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "2.0 | 2022-06-01 | Supervisor, Metering Services | Added AMI-specific triage steps (§6.2); updated form numbers to MTR-F-010/011/012/013; added §13 subsections for demand and multiplier errors",
+    "row_cells": {
+      "Version": "2.0",
+      "Effective Date": "2022-06-01",
+      "Author": "Supervisor, Metering Services",
+      "Change Summary": "Added AMI-specific triage steps (§6.2); updated form numbers to MTR-F-010/011/012/013; added §13 subsections for demand and multiplier errors"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:18.1"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:18.1.tbl2.r3",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 193,
+    "heading_path": [
+      "19. Revision History"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "2.1 | 2023-11-06 | Supervisor, Metering Services | Revised §8 fee-eligibility decision table to incorporate 170 IAC 4-1-11(b) three-condition rule; added CS-S-07 script (App-E); minor corrections to §9.9 chain-of-custody language following internal audit finding (Audit Finding AF-2023-44)",
+    "row_cells": {
+      "Version": "2.1",
+      "Effective Date": "2023-11-06",
+      "Author": "Supervisor, Metering Services",
+      "Change Summary": "Revised §8 fee-eligibility decision table to incorporate 170 IAC 4-1-11(b) three-condition rule; added CS-S-07 script (App-E); minor corrections to §9.9 chain-of-custody language following internal audit finding (Audit Finding AF-2023-44)"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:18.1"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:18.1.tbl2.r4",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 194,
+    "heading_path": [
+      "19. Revision History"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "3.0 | 2025-02-17 | Supervisor, Metering Services | Updated accuracy limits in §10.6 and §10.8 to reflect 170 IAC 4-1-9 as amended effective 2019-04-11; added no-load creep clause (§10.7); expanded §13.3 for AMR zero-read alert workflow; updated adjustment approval authority table (§14) to reflect current organizational structure",
+    "row_cells": {
+      "Version": "3.0",
+      "Effective Date": "2025-02-17",
+      "Author": "Supervisor, Metering Services",
+      "Change Summary": "Updated accuracy limits in §10.6 and §10.8 to reflect 170 IAC 4-1-9 as amended effective 2019-04-11; added no-load creep clause (§10.7); expanded §13.3 for AMR zero-read alert workflow; updated adjustment approval authority table (§14) to reflect current organizational structure"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:18.1"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:18.1~c1",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 195,
+    "heading_path": [
+      "Appendix A — MTR-F-010 Meter Test Request (Rev. 02/2025)",
+      "ROCKRIDGE POWER & LIGHT COMPANY"
+    ],
+    "unit_kind": "section",
+    "text_raw": "400 Wabash Commons Drive, Lafayette, IN 47901 · 1-800-555-0142 · www.rockridge-pl.example",
+    "row_cells": null,
+    "parent_clause_id": "RPL-CS-PRO-007:18.1"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:App-A",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 196,
+    "heading_path": [
+      "Appendix A — MTR-F-010 Meter Test Request (Rev. 02/2025)",
+      "PART B — REQUEST DETAILS"
+    ],
+    "unit_kind": "appendix",
+    "text_raw": "PART C — FEE ACKNOWLEDGMENT *(Complete only if a fee may apply per §8)*",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:App-A.tbl1.r1",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 197,
+    "heading_path": [
+      "Appendix A — MTR-F-010 Meter Test Request (Rev. 02/2025)",
+      "PART A — CUSTOMER INFORMATION"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "App-A.F1 | Account Number | Text (12 characters, format 4XXXXXXXXX-X)",
+    "row_cells": {
+      "Field ID": "App-A.F1",
+      "Field Label": "Account Number",
+      "Type": "Text (12 characters, format 4XXXXXXXXX-X)"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:App-A"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:App-A.tbl1.r2",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 198,
+    "heading_path": [
+      "Appendix A — MTR-F-010 Meter Test Request (Rev. 02/2025)",
+      "PART A — CUSTOMER INFORMATION"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "App-A.F2 | Customer Name (as on account) | Text",
+    "row_cells": {
+      "Field ID": "App-A.F2",
+      "Field Label": "Customer Name (as on account)",
+      "Type": "Text"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:App-A"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:App-A.tbl1.r3",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 199,
+    "heading_path": [
+      "Appendix A — MTR-F-010 Meter Test Request (Rev. 02/2025)",
+      "PART A — CUSTOMER INFORMATION"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "App-A.F3 | Service Address | Text",
+    "row_cells": {
+      "Field ID": "App-A.F3",
+      "Field Label": "Service Address",
+      "Type": "Text"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:App-A"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:App-A.tbl1.r4",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 200,
+    "heading_path": [
+      "Appendix A — MTR-F-010 Meter Test Request (Rev. 02/2025)",
+      "PART A — CUSTOMER INFORMATION"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "App-A.F4 | City, State, ZIP | Text",
+    "row_cells": {
+      "Field ID": "App-A.F4",
+      "Field Label": "City, State, ZIP",
+      "Type": "Text"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:App-A"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:App-A.tbl1.r5",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 201,
+    "heading_path": [
+      "Appendix A — MTR-F-010 Meter Test Request (Rev. 02/2025)",
+      "PART A — CUSTOMER INFORMATION"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "App-A.F5 | Mailing Address (if different from service address) | Text",
+    "row_cells": {
+      "Field ID": "App-A.F5",
+      "Field Label": "Mailing Address (if different from service address)",
+      "Type": "Text"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:App-A"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:App-A.tbl1.r6",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 202,
+    "heading_path": [
+      "Appendix A — MTR-F-010 Meter Test Request (Rev. 02/2025)",
+      "PART A — CUSTOMER INFORMATION"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "App-A.F6 | Preferred Contact: ☐ Phone ☐ Email ☐ Mail | Checkbox",
+    "row_cells": {
+      "Field ID": "App-A.F6",
+      "Field Label": "Preferred Contact: ☐ Phone ☐ Email ☐ Mail",
+      "Type": "Checkbox"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:App-A"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:App-A.tbl1.r7",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 203,
+    "heading_path": [
+      "Appendix A — MTR-F-010 Meter Test Request (Rev. 02/2025)",
+      "PART A — CUSTOMER INFORMATION"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "App-A.F7 | Contact Phone Number | Text",
+    "row_cells": {
+      "Field ID": "App-A.F7",
+      "Field Label": "Contact Phone Number",
+      "Type": "Text"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:App-A"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:App-A.tbl1.r8",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 204,
+    "heading_path": [
+      "Appendix A — MTR-F-010 Meter Test Request (Rev. 02/2025)",
+      "PART A — CUSTOMER INFORMATION"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "App-A.F8 | Contact Email Address | Text",
+    "row_cells": {
+      "Field ID": "App-A.F8",
+      "Field Label": "Contact Email Address",
+      "Type": "Text"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:App-A"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:App-A.tbl2.r1",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 205,
+    "heading_path": [
+      "Appendix A — MTR-F-010 Meter Test Request (Rev. 02/2025)",
+      "PART B — REQUEST DETAILS"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "App-A.F9 | Meter Number (from bill or meter nameplate, if known) | Text",
+    "row_cells": {
+      "Field ID": "App-A.F9",
+      "Field Label": "Meter Number (from bill or meter nameplate, if known)",
+      "Type": "Text"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:App-A"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:App-A.tbl2.r2",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 206,
+    "heading_path": [
+      "Appendix A — MTR-F-010 Meter Test Request (Rev. 02/2025)",
+      "PART B — REQUEST DETAILS"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "App-A.F10 | Billing Period(s) in Dispute | Date range (YYYY-MM-DD to YYYY-MM-DD)",
+    "row_cells": {
+      "Field ID": "App-A.F10",
+      "Field Label": "Billing Period(s) in Dispute",
+      "Type": "Date range (YYYY-MM-DD to YYYY-MM-DD)"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:App-A"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:App-A.tbl2.r3",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 207,
+    "heading_path": [
+      "Appendix A — MTR-F-010 Meter Test Request (Rev. 02/2025)",
+      "PART B — REQUEST DETAILS"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "App-A.F11 | Reason for Request: ☐ High bill ☐ Meter accuracy concern ☐ Billing error ☐ Other | Checkbox",
+    "row_cells": {
+      "Field ID": "App-A.F11",
+      "Field Label": "Reason for Request: ☐ High bill ☐ Meter accuracy concern ☐ Billing error ☐ Other",
+      "Type": "Checkbox"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:App-A"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:App-A.tbl2.r4",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 208,
+    "heading_path": [
+      "Appendix A — MTR-F-010 Meter Test Request (Rev. 02/2025)",
+      "PART B — REQUEST DETAILS"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "App-A.F12 | Description of Concern | Text (free field)",
+    "row_cells": {
+      "Field ID": "App-A.F12",
+      "Field Label": "Description of Concern",
+      "Type": "Text (free field)"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:App-A"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:App-A.tbl2.r5",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 209,
+    "heading_path": [
+      "Appendix A — MTR-F-010 Meter Test Request (Rev. 02/2025)",
+      "PART B — REQUEST DETAILS"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "App-A.F13 | I wish to be present during the test: ☐ Yes ☐ No | Checkbox",
+    "row_cells": {
+      "Field ID": "App-A.F13",
+      "Field Label": "I wish to be present during the test: ☐ Yes ☐ No",
+      "Type": "Checkbox"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:App-A"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:App-A.tbl2.r6",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 210,
+    "heading_path": [
+      "Appendix A — MTR-F-010 Meter Test Request (Rev. 02/2025)",
+      "PART B — REQUEST DETAILS"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "App-A.F14 | Preferred Test Appointment Window (optional) | Text",
+    "row_cells": {
+      "Field ID": "App-A.F14",
+      "Field Label": "Preferred Test Appointment Window (optional)",
+      "Type": "Text"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:App-A"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:App-A.tbl3.r1",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 211,
+    "heading_path": [
+      "Appendix A — MTR-F-010 Meter Test Request (Rev. 02/2025)",
+      "PART B — REQUEST DETAILS"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "App-A.F15 | RPL has disclosed that a test fee of $ ______ may apply if conditions in 170 IAC 4-1-11(b) are met and the meter is found accurate. ☐ I acknowledge and agree to pay if the fee is assessed. | Checkbox + dollar amount",
+    "row_cells": {
+      "Field ID": "App-A.F15",
+      "Field Label": "RPL has disclosed that a test fee of $ ______ may apply if conditions in 170 IAC 4-1-11(b) are met and the meter is found accurate. ☐ I acknowledge and agree to pay if the fee is assessed.",
+      "Type": "Checkbox + dollar amount"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:App-A"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:App-A.tbl3.r2",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 212,
+    "heading_path": [
+      "Appendix A — MTR-F-010 Meter Test Request (Rev. 02/2025)",
+      "PART B — REQUEST DETAILS"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "App-A.F16 | Customer Signature | Signature",
+    "row_cells": {
+      "Field ID": "App-A.F16",
+      "Field Label": "Customer Signature",
+      "Type": "Signature"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:App-A"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:App-A.tbl3.r3",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 213,
+    "heading_path": [
+      "Appendix A — MTR-F-010 Meter Test Request (Rev. 02/2025)",
+      "PART B — REQUEST DETAILS"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "App-A.F17 | Date | Date (YYYY-MM-DD)",
+    "row_cells": {
+      "Field ID": "App-A.F17",
+      "Field Label": "Date",
+      "Type": "Date (YYYY-MM-DD)"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:App-A"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:App-A.tbl4.r1",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 214,
+    "heading_path": [
+      "Appendix A — MTR-F-010 Meter Test Request (Rev. 02/2025)",
+      "PART D — OFFICE USE ONLY"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "App-A.F18 | CIS Case Number | Text",
+    "row_cells": {
+      "Field ID": "App-A.F18",
+      "Field Label": "CIS Case Number",
+      "Type": "Text"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:App-A"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:App-A.tbl4.r2",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 215,
+    "heading_path": [
+      "Appendix A — MTR-F-010 Meter Test Request (Rev. 02/2025)",
+      "PART D — OFFICE USE ONLY"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "App-A.F19 | MTR-TST Service Order Number | Text",
+    "row_cells": {
+      "Field ID": "App-A.F19",
+      "Field Label": "MTR-TST Service Order Number",
+      "Type": "Text"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:App-A"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:App-A.tbl4.r3",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 216,
+    "heading_path": [
+      "Appendix A — MTR-F-010 Meter Test Request (Rev. 02/2025)",
+      "PART D — OFFICE USE ONLY"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "App-A.F20 | Agent ID / Date Entered | Text / Date",
+    "row_cells": {
+      "Field ID": "App-A.F20",
+      "Field Label": "Agent ID / Date Entered",
+      "Type": "Text / Date"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:App-A"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:App-A.tbl4.r4",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 217,
+    "heading_path": [
+      "Appendix A — MTR-F-010 Meter Test Request (Rev. 02/2025)",
+      "PART D — OFFICE USE ONLY"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "App-A.F21 | Fee Eligibility Determination (T8-1 through T8-7) | Text",
+    "row_cells": {
+      "Field ID": "App-A.F21",
+      "Field Label": "Fee Eligibility Determination (T8-1 through T8-7)",
+      "Type": "Text"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:App-A"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:App-A.tbl4.r5",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 218,
+    "heading_path": [
+      "Appendix A — MTR-F-010 Meter Test Request (Rev. 02/2025)",
+      "PART D — OFFICE USE ONLY"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "App-A.F22 | Fee Disclosed: ☐ Yes ☐ No ☐ N/A | Checkbox",
+    "row_cells": {
+      "Field ID": "App-A.F22",
+      "Field Label": "Fee Disclosed: ☐ Yes ☐ No ☐ N/A",
+      "Type": "Checkbox"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:App-A"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:App-A~c1",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 219,
+    "heading_path": [
+      "Appendix B — MTR-F-011 Meter Test Report Letter (Rev. 02/2025)",
+      "ROCKRIDGE POWER & LIGHT COMPANY"
+    ],
+    "unit_kind": "appendix",
+    "text_raw": "400 Wabash Commons Drive, Lafayette, IN 47901 · 1-800-555-0142\n\n*[RPL Letterhead]*\n\nDate: ________________\n\nRe: Meter Test Report — Account [App-B.F1]",
+    "row_cells": null,
+    "parent_clause_id": "RPL-CS-PRO-007:App-A"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:App-B",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 220,
+    "heading_path": [
+      "Appendix C — MTR-F-012 Billing Adjustment Letter (Rev. 02/2025)"
+    ],
+    "unit_kind": "appendix",
+    "text_raw": "Appendix C — MTR-F-012 Billing Adjustment Letter (Rev. 02/2025)",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:App-B.tbl1.r1",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 221,
+    "heading_path": [
+      "Appendix B — MTR-F-011 Meter Test Report Letter (Rev. 02/2025)",
+      "PART A — ACCOUNT AND METER IDENTIFICATION"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "App-B.F1 | Account Number | Text",
+    "row_cells": {
+      "Field ID": "App-B.F1",
+      "Field Label": "Account Number",
+      "Type": "Text"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:App-B"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:App-B.tbl1.r2",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 222,
+    "heading_path": [
+      "Appendix B — MTR-F-011 Meter Test Report Letter (Rev. 02/2025)",
+      "PART A — ACCOUNT AND METER IDENTIFICATION"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "App-B.F2 | Customer Name | Text",
+    "row_cells": {
+      "Field ID": "App-B.F2",
+      "Field Label": "Customer Name",
+      "Type": "Text"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:App-B"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:App-B.tbl1.r3",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 223,
+    "heading_path": [
+      "Appendix B — MTR-F-011 Meter Test Report Letter (Rev. 02/2025)",
+      "PART A — ACCOUNT AND METER IDENTIFICATION"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "App-B.F3 | Service Address | Text",
+    "row_cells": {
+      "Field ID": "App-B.F3",
+      "Field Label": "Service Address",
+      "Type": "Text"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:App-B"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:App-B.tbl1.r4",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 224,
+    "heading_path": [
+      "Appendix B — MTR-F-011 Meter Test Report Letter (Rev. 02/2025)",
+      "PART A — ACCOUNT AND METER IDENTIFICATION"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "App-B.F4 | Meter Serial Number | Text",
+    "row_cells": {
+      "Field ID": "App-B.F4",
+      "Field Label": "Meter Serial Number",
+      "Type": "Text"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:App-B"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:App-B.tbl1.r5",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 225,
+    "heading_path": [
+      "Appendix B — MTR-F-011 Meter Test Report Letter (Rev. 02/2025)",
+      "PART A — ACCOUNT AND METER IDENTIFICATION"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "App-B.F5 | Meter Type (AMI / AMR / Electromechanical) | Text",
+    "row_cells": {
+      "Field ID": "App-B.F5",
+      "Field Label": "Meter Type (AMI / AMR / Electromechanical)",
+      "Type": "Text"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:App-B"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:App-B.tbl1.r6",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 226,
+    "heading_path": [
+      "Appendix B — MTR-F-011 Meter Test Report Letter (Rev. 02/2025)",
+      "PART A — ACCOUNT AND METER IDENTIFICATION"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "App-B.F6 | Test Date | Date (YYYY-MM-DD)",
+    "row_cells": {
+      "Field ID": "App-B.F6",
+      "Field Label": "Test Date",
+      "Type": "Date (YYYY-MM-DD)"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:App-B"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:App-B.tbl1.r7",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 227,
+    "heading_path": [
+      "Appendix B — MTR-F-011 Meter Test Report Letter (Rev. 02/2025)",
+      "PART A — ACCOUNT AND METER IDENTIFICATION"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "App-B.F7 | Test Location (In-place / Meter Shop, Lafayette HQ) | Text",
+    "row_cells": {
+      "Field ID": "App-B.F7",
+      "Field Label": "Test Location (In-place / Meter Shop, Lafayette HQ)",
+      "Type": "Text"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:App-B"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:App-B.tbl1.r8",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 228,
+    "heading_path": [
+      "Appendix B — MTR-F-011 Meter Test Report Letter (Rev. 02/2025)",
+      "PART A — ACCOUNT AND METER IDENTIFICATION"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "App-B.F8 | Technician Name and ID | Text",
+    "row_cells": {
+      "Field ID": "App-B.F8",
+      "Field Label": "Technician Name and ID",
+      "Type": "Text"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:App-B"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:App-B.tbl2.r1",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 229,
+    "heading_path": [
+      "Appendix B — MTR-F-011 Meter Test Report Letter (Rev. 02/2025)",
+      "PART B — AS-FOUND TEST RESULTS"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "App-B.F9 | Full Load (FL) — approximately 100% rated test amperes | ______%",
+    "row_cells": {
+      "Field ID": "App-B.F9",
+      "Test Point": "Full Load (FL) — approximately 100% rated test amperes",
+      "% Registration": "______%"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:App-B"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:App-B.tbl2.r2",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 230,
+    "heading_path": [
+      "Appendix B — MTR-F-011 Meter Test Report Letter (Rev. 02/2025)",
+      "PART B — AS-FOUND TEST RESULTS"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "App-B.F10 | Light Load (LL) — approximately 10% rated test amperes | ______%",
+    "row_cells": {
+      "Field ID": "App-B.F10",
+      "Test Point": "Light Load (LL) — approximately 10% rated test amperes",
+      "% Registration": "______%"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:App-B"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:App-B.tbl2.r3",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 231,
+    "heading_path": [
+      "Appendix B — MTR-F-011 Meter Test Report Letter (Rev. 02/2025)",
+      "PART B — AS-FOUND TEST RESULTS"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "App-B.F11 | Average Accuracy [(FL + LL) ÷ 2] | ______%",
+    "row_cells": {
+      "Field ID": "App-B.F11",
+      "Test Point": "Average Accuracy [(FL + LL) ÷ 2]",
+      "% Registration": "______%"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:App-B"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:App-B.tbl2.r4",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 232,
+    "heading_path": [
+      "Appendix B — MTR-F-011 Meter Test Report Letter (Rev. 02/2025)",
+      "PART B — AS-FOUND TEST RESULTS"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "App-B.F12 | Average Error (Average Accuracy − 100%) | ______%",
+    "row_cells": {
+      "Field ID": "App-B.F12",
+      "Test Point": "Average Error (Average Accuracy − 100%)",
+      "% Registration": "______%"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:App-B"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:App-B.tbl2.r5",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 233,
+    "heading_path": [
+      "Appendix B — MTR-F-011 Meter Test Report Letter (Rev. 02/2025)",
+      "PART B — AS-FOUND TEST RESULTS"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "App-B.F13 | No-Load Creep Test: ☐ Pass ☐ Fail | Checkbox",
+    "row_cells": {
+      "Field ID": "App-B.F13",
+      "Test Point": "No-Load Creep Test: ☐ Pass ☐ Fail",
+      "% Registration": "Checkbox"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:App-B"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:App-B.tbl2.r6",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 234,
+    "heading_path": [
+      "Appendix B — MTR-F-011 Meter Test Report Letter (Rev. 02/2025)",
+      "PART B — AS-FOUND TEST RESULTS"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "App-B.F14 | Power Factor Test (if applicable): ☐ Pass ☐ Fail ☐ N/A | Checkbox",
+    "row_cells": {
+      "Field ID": "App-B.F14",
+      "Test Point": "Power Factor Test (if applicable): ☐ Pass ☐ Fail ☐ N/A",
+      "% Registration": "Checkbox"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:App-B"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:App-B.tbl3.r1",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 235,
+    "heading_path": [
+      "Appendix B — MTR-F-011 Meter Test Report Letter (Rev. 02/2025)",
+      "PART C — DETERMINATION"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "App-B.F15 | In-Service Accuracy Standard (170 IAC 4-1-9): ☐ Pass ☐ Fail | Checkbox",
+    "row_cells": {
+      "Field ID": "App-B.F15",
+      "Field Label": "In-Service Accuracy Standard (170 IAC 4-1-9): ☐ Pass ☐ Fail",
+      "Type": "Checkbox"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:App-B"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:App-B.tbl3.r2",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 236,
+    "heading_path": [
+      "Appendix B — MTR-F-011 Meter Test Report Letter (Rev. 02/2025)",
+      "PART C — DETERMINATION"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "App-B.F16 | Billing Adjustment Threshold (170 IAC 4-1-14): ☐ Exceeded — adjustment made ☐ Not exceeded — no billing adjustment | Checkbox",
+    "row_cells": {
+      "Field ID": "App-B.F16",
+      "Field Label": "Billing Adjustment Threshold (170 IAC 4-1-14): ☐ Exceeded — adjustment made ☐ Not exceeded — no billing adjustment",
+      "Type": "Checkbox"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:App-B"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:App-B.tbl3.r3",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 237,
+    "heading_path": [
+      "Appendix B — MTR-F-011 Meter Test Report Letter (Rev. 02/2025)",
+      "PART C — DETERMINATION"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "App-B.F17 | Adjustment Type and Amount (if applicable) | Text / Dollar",
+    "row_cells": {
+      "Field ID": "App-B.F17",
+      "Field Label": "Adjustment Type and Amount (if applicable)",
+      "Type": "Text / Dollar"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:App-B"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:App-B.tbl3.r4",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 238,
+    "heading_path": [
+      "Appendix B — MTR-F-011 Meter Test Report Letter (Rev. 02/2025)",
+      "PART C — DETERMINATION"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "App-B.F18 | As-Left Accuracy (if adjusted): FL ______% LL ______% Average ______% | Text",
+    "row_cells": {
+      "Field ID": "App-B.F18",
+      "Field Label": "As-Left Accuracy (if adjusted): FL ______% LL ______% Average ______%",
+      "Type": "Text"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:App-B"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:App-B.tbl4.r1",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 239,
+    "heading_path": [
+      "Appendix B — MTR-F-011 Meter Test Report Letter (Rev. 02/2025)",
+      "PART D — APPEAL RIGHTS"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "App-B.F19 | Appeal Deadline: 5 days from the date of this report (date: ________________) | Date",
+    "row_cells": {
+      "Field ID": "App-B.F19",
+      "Field Label": "Appeal Deadline: 5 days from the date of this report (date: ________________)",
+      "Type": "Date"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:App-B"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:App-B.tbl4.r2",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 240,
+    "heading_path": [
+      "Appendix B — MTR-F-011 Meter Test Report Letter (Rev. 02/2025)",
+      "PART D — APPEAL RIGHTS"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "App-B.F20 | IURC Contact Block (verbatim — see §11.3) | Pre-printed text",
+    "row_cells": {
+      "Field ID": "App-B.F20",
+      "Field Label": "IURC Contact Block (verbatim — see §11.3)",
+      "Type": "Pre-printed text"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:App-B"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:App-B.tbl5.r1",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 241,
+    "heading_path": [
+      "Appendix B — MTR-F-011 Meter Test Report Letter (Rev. 02/2025)",
+      "PART E — OFFICE USE ONLY"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "App-B.F21 | CIS Case Number | Text",
+    "row_cells": {
+      "Field ID": "App-B.F21",
+      "Field Label": "CIS Case Number",
+      "Type": "Text"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:App-B"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:App-B.tbl5.r2",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 242,
+    "heading_path": [
+      "Appendix B — MTR-F-011 Meter Test Report Letter (Rev. 02/2025)",
+      "PART E — OFFICE USE ONLY"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "App-B.F22 | WAM Work Order Number | Text",
+    "row_cells": {
+      "Field ID": "App-B.F22",
+      "Field Label": "WAM Work Order Number",
+      "Type": "Text"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:App-B"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:App-B.tbl5.r3",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 243,
+    "heading_path": [
+      "Appendix B — MTR-F-011 Meter Test Report Letter (Rev. 02/2025)",
+      "PART E — OFFICE USE ONLY"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "App-B.F23 | Report Issued By | Text",
+    "row_cells": {
+      "Field ID": "App-B.F23",
+      "Field Label": "Report Issued By",
+      "Type": "Text"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:App-B"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:App-B.tbl5.r4",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 244,
+    "heading_path": [
+      "Appendix B — MTR-F-011 Meter Test Report Letter (Rev. 02/2025)",
+      "PART E — OFFICE USE ONLY"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "App-B.F24 | Report Issue Date | Date",
+    "row_cells": {
+      "Field ID": "App-B.F24",
+      "Field Label": "Report Issue Date",
+      "Type": "Date"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:App-B"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:App-B~c1",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 245,
+    "heading_path": [
+      "Appendix C — MTR-F-012 Billing Adjustment Letter (Rev. 02/2025)",
+      "ROCKRIDGE POWER & LIGHT COMPANY"
+    ],
+    "unit_kind": "appendix",
+    "text_raw": "400 Wabash Commons Drive, Lafayette, IN 47901 · 1-800-555-0142\n\n*[RPL Letterhead — two versions: REFUND and BACK-BILL]*",
+    "row_cells": null,
+    "parent_clause_id": "RPL-CS-PRO-007:App-B"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:App-C",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 246,
+    "heading_path": [
+      "Appendix D — MTR-F-013 Meter Chain-of-Custody Tag (Rev. 02/2025)"
+    ],
+    "unit_kind": "appendix",
+    "text_raw": "Appendix D — MTR-F-013 Meter Chain-of-Custody Tag (Rev. 02/2025)\n\n*[Durable tag — affixed to removed meter at time of removal; detaches only at Meter Shop]*",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:App-C.tbl1.r1",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 247,
+    "heading_path": [
+      "Appendix C — MTR-F-012 Billing Adjustment Letter (Rev. 02/2025)",
+      "PART A — ACCOUNT IDENTIFICATION"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "App-C.F1 | Account Number | Text",
+    "row_cells": {
+      "Field ID": "App-C.F1",
+      "Field Label": "Account Number",
+      "Type": "Text"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:App-C"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:App-C.tbl1.r2",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 248,
+    "heading_path": [
+      "Appendix C — MTR-F-012 Billing Adjustment Letter (Rev. 02/2025)",
+      "PART A — ACCOUNT IDENTIFICATION"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "App-C.F2 | Customer Name | Text",
+    "row_cells": {
+      "Field ID": "App-C.F2",
+      "Field Label": "Customer Name",
+      "Type": "Text"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:App-C"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:App-C.tbl1.r3",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 249,
+    "heading_path": [
+      "Appendix C — MTR-F-012 Billing Adjustment Letter (Rev. 02/2025)",
+      "PART A — ACCOUNT IDENTIFICATION"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "App-C.F3 | Service Address | Text",
+    "row_cells": {
+      "Field ID": "App-C.F3",
+      "Field Label": "Service Address",
+      "Type": "Text"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:App-C"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:App-C.tbl2.r1",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 250,
+    "heading_path": [
+      "Appendix C — MTR-F-012 Billing Adjustment Letter (Rev. 02/2025)",
+      "PART B — ADJUSTMENT SUMMARY"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "App-C.F4 | Adjustment Type: ☐ Refund/Credit ☐ Back-Bill | Checkbox",
+    "row_cells": {
+      "Field ID": "App-C.F4",
+      "Field Label": "Adjustment Type: ☐ Refund/Credit ☐ Back-Bill",
+      "Type": "Checkbox"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:App-C"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:App-C.tbl2.r2",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 251,
+    "heading_path": [
+      "Appendix C — MTR-F-012 Billing Adjustment Letter (Rev. 02/2025)",
+      "PART B — ADJUSTMENT SUMMARY"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "App-C.F5 | CIS Adjustment Code (ADJ-MF / ADJ-MS / ADJ-NR / ADJ-RT / ADJ-MX / ADJ-BE) | Text",
+    "row_cells": {
+      "Field ID": "App-C.F5",
+      "Field Label": "CIS Adjustment Code (ADJ-MF / ADJ-MS / ADJ-NR / ADJ-RT / ADJ-MX / ADJ-BE)",
+      "Type": "Text"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:App-C"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:App-C.tbl2.r3",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 252,
+    "heading_path": [
+      "Appendix C — MTR-F-012 Billing Adjustment Letter (Rev. 02/2025)",
+      "PART B — ADJUSTMENT SUMMARY"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "App-C.F6 | Adjustment Period: From ________________ To ________________ | Date",
+    "row_cells": {
+      "Field ID": "App-C.F6",
+      "Field Label": "Adjustment Period: From ________________ To ________________",
+      "Type": "Date"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:App-C"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:App-C.tbl2.r4",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 253,
+    "heading_path": [
+      "Appendix C — MTR-F-012 Billing Adjustment Letter (Rev. 02/2025)",
+      "PART B — ADJUSTMENT SUMMARY"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "App-C.F7 | Basis of Calculation (error %, average bill, multiplier ratio) | Text",
+    "row_cells": {
+      "Field ID": "App-C.F7",
+      "Field Label": "Basis of Calculation (error %, average bill, multiplier ratio)",
+      "Type": "Text"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:App-C"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:App-C.tbl2.r5",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 254,
+    "heading_path": [
+      "Appendix C — MTR-F-012 Billing Adjustment Letter (Rev. 02/2025)",
+      "PART B — ADJUSTMENT SUMMARY"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "App-C.F8 | Total Adjustment Amount: $ ______________ | Dollar",
+    "row_cells": {
+      "Field ID": "App-C.F8",
+      "Field Label": "Total Adjustment Amount: $ ______________",
+      "Type": "Dollar"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:App-C"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:App-C.tbl2.r6",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 255,
+    "heading_path": [
+      "Appendix C — MTR-F-012 Billing Adjustment Letter (Rev. 02/2025)",
+      "PART B — ADJUSTMENT SUMMARY"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "App-C.F9 | Refund Method: ☐ Account credit (next bill) ☐ Refund check mailed within 30 days | Checkbox",
+    "row_cells": {
+      "Field ID": "App-C.F9",
+      "Field Label": "Refund Method: ☐ Account credit (next bill) ☐ Refund check mailed within 30 days",
+      "Type": "Checkbox"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:App-C"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:App-C.tbl2.r7",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 256,
+    "heading_path": [
+      "Appendix C — MTR-F-012 Billing Adjustment Letter (Rev. 02/2025)",
+      "PART B — ADJUSTMENT SUMMARY"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "App-C.F10 | Back-Bill Payment Due Date (if back-bill): ________________ | Date",
+    "row_cells": {
+      "Field ID": "App-C.F10",
+      "Field Label": "Back-Bill Payment Due Date (if back-bill): ________________",
+      "Type": "Date"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:App-C"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:App-C.tbl2.r8",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 257,
+    "heading_path": [
+      "Appendix C — MTR-F-012 Billing Adjustment Letter (Rev. 02/2025)",
+      "PART B — ADJUSTMENT SUMMARY"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "App-C.F11 | Payment Arrangement Offered: ☐ Yes — see enclosed agreement ☐ No | Checkbox",
+    "row_cells": {
+      "Field ID": "App-C.F11",
+      "Field Label": "Payment Arrangement Offered: ☐ Yes — see enclosed agreement ☐ No",
+      "Type": "Checkbox"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:App-C"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:App-C.tbl3.r1",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 258,
+    "heading_path": [
+      "Appendix C — MTR-F-012 Billing Adjustment Letter (Rev. 02/2025)",
+      "PART C — OFFICE USE ONLY"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "App-C.F12 | Approving Authority (per §14) | Text",
+    "row_cells": {
+      "Field ID": "App-C.F12",
+      "Field Label": "Approving Authority (per §14)",
+      "Type": "Text"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:App-C"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:App-C.tbl3.r2",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 259,
+    "heading_path": [
+      "Appendix C — MTR-F-012 Billing Adjustment Letter (Rev. 02/2025)",
+      "PART C — OFFICE USE ONLY"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "App-C.F13 | Approval Date | Date",
+    "row_cells": {
+      "Field ID": "App-C.F13",
+      "Field Label": "Approval Date",
+      "Type": "Date"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:App-C"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:App-C.tbl3.r3",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 260,
+    "heading_path": [
+      "Appendix C — MTR-F-012 Billing Adjustment Letter (Rev. 02/2025)",
+      "PART C — OFFICE USE ONLY"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "App-C.F14 | Issued By | Text",
+    "row_cells": {
+      "Field ID": "App-C.F14",
+      "Field Label": "Issued By",
+      "Type": "Text"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:App-C"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:App-D",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 261,
+    "heading_path": [
+      "Appendix E — CS-S-07 Contact Center Script: High Bill to Meter Test Request (Rev. 02/2025)"
+    ],
+    "unit_kind": "appendix",
+    "text_raw": "Appendix E — CS-S-07 Contact Center Script: High Bill to Meter Test Request (Rev. 02/2025)\n\nTraining reference: CS-T-07 · CIS case type: MTR",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:App-D.tbl1.r1",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 262,
+    "heading_path": [
+      "Appendix D — MTR-F-013 Meter Chain-of-Custody Tag (Rev. 02/2025)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "App-D.F1 | Custody Tag Number (WAM-generated) | Text (printed barcode)",
+    "row_cells": {
+      "Field ID": "App-D.F1",
+      "Field Label": "Custody Tag Number (WAM-generated)",
+      "Type": "Text (printed barcode)"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:App-D"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:App-D.tbl1.r2",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 263,
+    "heading_path": [
+      "Appendix D — MTR-F-013 Meter Chain-of-Custody Tag (Rev. 02/2025)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "App-D.F2 | Account Number | Text",
+    "row_cells": {
+      "Field ID": "App-D.F2",
+      "Field Label": "Account Number",
+      "Type": "Text"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:App-D"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:App-D.tbl1.r3",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 264,
+    "heading_path": [
+      "Appendix D — MTR-F-013 Meter Chain-of-Custody Tag (Rev. 02/2025)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "App-D.F3 | Service Address | Text",
+    "row_cells": {
+      "Field ID": "App-D.F3",
+      "Field Label": "Service Address",
+      "Type": "Text"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:App-D"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:App-D.tbl1.r4",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 265,
+    "heading_path": [
+      "Appendix D — MTR-F-013 Meter Chain-of-Custody Tag (Rev. 02/2025)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "App-D.F4 | Meter Serial Number | Text",
+    "row_cells": {
+      "Field ID": "App-D.F4",
+      "Field Label": "Meter Serial Number",
+      "Type": "Text"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:App-D"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:App-D.tbl1.r5",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 266,
+    "heading_path": [
+      "Appendix D — MTR-F-013 Meter Chain-of-Custody Tag (Rev. 02/2025)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "App-D.F5 | Original Seal Number(s) (removed at time of pull) | Text",
+    "row_cells": {
+      "Field ID": "App-D.F5",
+      "Field Label": "Original Seal Number(s) (removed at time of pull)",
+      "Type": "Text"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:App-D"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:App-D.tbl1.r6",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 267,
+    "heading_path": [
+      "Appendix D — MTR-F-013 Meter Chain-of-Custody Tag (Rev. 02/2025)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "App-D.F6 | Replacement Meter Serial Number | Text",
+    "row_cells": {
+      "Field ID": "App-D.F6",
+      "Field Label": "Replacement Meter Serial Number",
+      "Type": "Text"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:App-D"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:App-D.tbl1.r7",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 268,
+    "heading_path": [
+      "Appendix D — MTR-F-013 Meter Chain-of-Custody Tag (Rev. 02/2025)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "App-D.F7 | Removal Date and Time | Date + Time (YYYY-MM-DD hh:mm)",
+    "row_cells": {
+      "Field ID": "App-D.F7",
+      "Field Label": "Removal Date and Time",
+      "Type": "Date + Time (YYYY-MM-DD hh:mm)"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:App-D"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:App-D.tbl1.r8",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 269,
+    "heading_path": [
+      "Appendix D — MTR-F-013 Meter Chain-of-Custody Tag (Rev. 02/2025)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "App-D.F8 | Removing Technician Name and ID | Text",
+    "row_cells": {
+      "Field ID": "App-D.F8",
+      "Field Label": "Removing Technician Name and ID",
+      "Type": "Text"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:App-D"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:App-D.tbl1.r9",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 270,
+    "heading_path": [
+      "Appendix D — MTR-F-013 Meter Chain-of-Custody Tag (Rev. 02/2025)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "App-D.F9 | Transit Container Seal Number | Text",
+    "row_cells": {
+      "Field ID": "App-D.F9",
+      "Field Label": "Transit Container Seal Number",
+      "Type": "Text"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:App-D"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:App-D.tbl1.r10",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 271,
+    "heading_path": [
+      "Appendix D — MTR-F-013 Meter Chain-of-Custody Tag (Rev. 02/2025)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "App-D.F10 | Customer Witness Present: ☐ Yes ☐ No | Checkbox",
+    "row_cells": {
+      "Field ID": "App-D.F10",
+      "Field Label": "Customer Witness Present: ☐ Yes ☐ No",
+      "Type": "Checkbox"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:App-D"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:App-D.tbl1.r11",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 272,
+    "heading_path": [
+      "Appendix D — MTR-F-013 Meter Chain-of-Custody Tag (Rev. 02/2025)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "App-D.F11 | Meter Shop Receipt — Received By / Date | Text / Date",
+    "row_cells": {
+      "Field ID": "App-D.F11",
+      "Field Label": "Meter Shop Receipt — Received By / Date",
+      "Type": "Text / Date"
+    },
+    "parent_clause_id": "RPL-CS-PRO-007:App-D"
+  },
+  {
+    "clause_id": "RPL-CS-PRO-007:App-E",
+    "doc_id": "RPL-CS-PRO-007",
+    "ordinal": 273,
+    "heading_path": [
+      "Appendix E — CS-S-07 Contact Center Script: High Bill to Meter Test Request (Rev. 02/2025)"
+    ],
+    "unit_kind": "appendix",
+    "text_raw": "Opening:\n\"Thank you for calling Rockridge Power. My name is [Agent Name]. I see your account at [Service Address]. You mentioned a concern about your bill — may I take a few minutes to review your account with you?\"\n\nStep E.1 — Review recent usage in CIS.\nPull AMI/AMR interval data (if AMI: last 30 days hourly; if AMR: last 3 months monthly). Compare to same period prior year. If gap >15% not explained by degree-days: \"Our records show your usage in [month] was higher than the same period last year. Let me check whether any billing parameters changed.\"\n\nStep E.2 — Check for estimated bills.\n\"I see [X] of your recent bills were estimated. Let me confirm the reads were corrected on the next actual read.\" If estimated reads appear unjustified, initiate review per §6.5 before offering a test.\n\nStep E.3 — Explain findings.\nSummarize triage findings in plain language. \"Based on what I can see in your account, [explanation].\" If the issue is explained: \"This appears to explain the higher bill. Is there anything else you would like me to check?\"\n\nStep E.4 — Offer a meter test.\n\"If you would still like a formal test of your meter, you have the right to request one in writing. Your first test is at no charge. Shall I process that request for you now?\"\n\nStep E.5 — Intake test request.\nIf yes: \"I'll complete the Meter Test Request form with you now [complete MTR-F-010 App-A]. Let me read back what I've recorded to confirm it's correct.\" Proceed to §7 of the procedure.\n\nStep E.6 — Fee disclosure (if applicable).\nIf fee may apply per T8-4: \"Before I schedule the test, I need to let you know that a test fee of $[amount] may apply if this is your third or later request within the past 36 months and the meter is found to be accurate. Would you like to proceed?\" Document acknowledgment in CIS per App-A.F15.\n\nStep E.7 — Closing.\n\"You will receive a written test report within ten days after the test is completed, showing the results and your rights if you wish to appeal. Is there anything else I can help you with today?\"\n\n> Note: If the customer mentions they have already filed a complaint with the IURC, apply CIS hold code `HIURC` immediately and notify Brian Kowalski (P17) before continuing.\n\n*End of RPL-CS-PRO-007 v3.0*",
+    "row_cells": null,
+    "parent_clause_id": "RPL-CS-PRO-007:App-D"
+  }
+]

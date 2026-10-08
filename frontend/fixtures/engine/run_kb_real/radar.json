@@ -1,0 +1,339 @@
+[
+  {
+    "radar_id": "rad-001",
+    "run_id": "run_kb_real",
+    "change_id": "chg-326-iac-2-8-4",
+    "citation": "326 IAC 2-8-4",
+    "heading": "FESOP; limitations on operation of engines",
+    "agency_id": "idem",
+    "applicable": "yes",
+    "attribute_basis": [
+      {
+        "key": "standby_generator_count",
+        "value": 3
+      },
+      {
+        "key": "has_emergency_standby_generators",
+        "value": true
+      }
+    ],
+    "affected_activity": "Running RPL's three emergency standby generators for maintenance checks and readiness testing.",
+    "reason": "RPL operates 3 emergency standby generators, so the annual testing-hours cap in this FESOP section can affect its operating practice and permits.",
+    "quote": "(b) The owner or operator shall limit operation for maintenance checks and readiness testing to one hundred (100) hours per calendar year.",
+    "docs_covering_same_rule": [
+      "RPL-ENV-PRO-005",
+      "RPL-CMP-REG-001"
+    ]
+  },
+  {
+    "radar_id": "rad-002",
+    "run_id": "run_kb_real",
+    "change_id": "chg-40-cfr-63-6603",
+    "citation": "40 CFR 63.6603",
+    "heading": "Stationary engines; emission limits",
+    "agency_id": "epa",
+    "applicable": "yes",
+    "attribute_basis": [
+      {
+        "key": "has_emergency_standby_generators",
+        "value": true
+      },
+      {
+        "key": "standby_generator_count",
+        "value": 3
+      }
+    ],
+    "affected_activity": "Emission limits for stationary reciprocating engines used as emergency generators.",
+    "reason": "RPL has emergency standby generators, which are stationary reciprocating engines covered by this subpart.",
+    "quote": "(b) An owner or operator of an emergency engine shall limit carbon monoxide to 20 ppmvd at 15 percent oxygen.",
+    "docs_covering_same_rule": []
+  },
+  {
+    "radar_id": "rad-003",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-2-1-2",
+    "citation": "170 IAC 2-1-2",
+    "heading": "Utility fees; calculation",
+    "agency_id": "iurc",
+    "applicable": "yes",
+    "attribute_basis": [
+      {
+        "key": "iurc_jurisdictional",
+        "value": true
+      },
+      {
+        "key": "jurisdiction",
+        "value": "IN"
+      }
+    ],
+    "affected_activity": "Paying the annual IURC utility fee on gross intrastate operating revenues.",
+    "reason": "RPL is an IURC-jurisdictional Indiana utility, so the higher fee rate applies to its annual fee.",
+    "quote": "(b) The fee rate is twelve-hundredths of one percent (0.12%) of gross intrastate operating revenues.",
+    "docs_covering_same_rule": [
+      "RPL-REG-CAL-2025"
+    ]
+  },
+  {
+    "radar_id": "rad-004",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-6-1-1",
+    "citation": "170 IAC 6-1-1",
+    "heading": "Energy efficiency programs; applicability",
+    "agency_id": "iurc",
+    "applicable": "yes",
+    "attribute_basis": [
+      {
+        "key": "iurc_jurisdictional",
+        "value": true
+      },
+      {
+        "key": "utility_type",
+        "value": "electric"
+      }
+    ],
+    "affected_activity": "Annual energy efficiency program reporting to the IURC.",
+    "reason": "RPL is an electric utility under IURC jurisdiction; if it files program reports, the new breakout applies.",
+    "quote": "(b) A utility shall file an annual program report with the commission and shall include verified savings by customer class.",
+    "docs_covering_same_rule": [
+      "RPL-CMP-REG-001"
+    ]
+  },
+  {
+    "radar_id": "rad-005",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-7-1-1",
+    "citation": "170 IAC 7-1-1",
+    "heading": "Large load interconnection; definitions",
+    "agency_id": "iurc",
+    "applicable": "yes",
+    "attribute_basis": [
+      {
+        "key": "iurc_jurisdictional",
+        "value": true
+      },
+      {
+        "key": "utility_type",
+        "value": "electric"
+      }
+    ],
+    "affected_activity": "Handling requests from customer loads of 100 MW or more to interconnect.",
+    "reason": "A new large load interconnection process applies to IURC-jurisdictional electric utilities such as RPL.",
+    "quote": "(b) A utility shall provide a written interconnection study estimate within sixty (60) days of a complete application.",
+    "docs_covering_same_rule": []
+  },
+  {
+    "radar_id": "rad-006",
+    "run_id": "run_kb_real",
+    "change_id": "chg-40-cfr-60-4320",
+    "citation": "40 CFR 60.4320",
+    "heading": "Emission limits for nitrogen oxides; turbines",
+    "agency_id": "epa",
+    "applicable": "no",
+    "attribute_basis": [
+      {
+        "key": "owns_generating_units",
+        "value": false
+      }
+    ],
+    "affected_activity": "Limiting NOx from new natural gas turbines.",
+    "reason": "RPL owns no generating units, so a turbine NOx standard does not apply.",
+    "quote": "(b) The owner or operator of a turbine firing natural gas shall not discharge into the atmosphere any gases that contain nitrogen oxides in excess of 15 ppm at 15 percent oxygen.",
+    "docs_covering_same_rule": []
+  },
+  {
+    "radar_id": "rad-007",
+    "run_id": "run_kb_real",
+    "change_id": "chg-40-cfr-60-5520",
+    "citation": "40 CFR 60.5520",
+    "heading": "Carbon dioxide emission standards",
+    "agency_id": "epa",
+    "applicable": "no",
+    "attribute_basis": [
+      {
+        "key": "owns_generating_units",
+        "value": false
+      }
+    ],
+    "affected_activity": "CO2 output standards for fossil fuel-fired generating units.",
+    "reason": "RPL owns no generating units.",
+    "quote": "(b) An affected unit shall not discharge more than 1,200 lb CO2 per MWh gross output.",
+    "docs_covering_same_rule": []
+  },
+  {
+    "radar_id": "rad-008",
+    "run_id": "run_kb_real",
+    "change_id": "chg-40-cfr-63-10005",
+    "citation": "40 CFR 63.10005",
+    "heading": "Electric utility steam generating units; compliance",
+    "agency_id": "epa",
+    "applicable": "no",
+    "attribute_basis": [
+      {
+        "key": "owns_generating_units",
+        "value": false
+      }
+    ],
+    "affected_activity": "Compliance averaging for electric utility steam generating units.",
+    "reason": "RPL owns no steam generating units.",
+    "quote": "(b) An owner or operator shall demonstrate compliance on a 30-day rolling average basis.",
+    "docs_covering_same_rule": []
+  },
+  {
+    "radar_id": "rad-009",
+    "run_id": "run_kb_real",
+    "change_id": "chg-326-iac-6-3-2",
+    "citation": "326 IAC 6-3-2",
+    "heading": "Particulate emission limitations",
+    "agency_id": "idem",
+    "applicable": "no",
+    "attribute_basis": [
+      {
+        "key": "owns_generating_units",
+        "value": false
+      }
+    ],
+    "affected_activity": "Particulate limits for manufacturing processes.",
+    "reason": "RPL operates no manufacturing process or generating unit that emits particulate.",
+    "quote": "(b) Particulate emissions shall not exceed 0.02 grain per dry standard cubic foot of exhaust.",
+    "docs_covering_same_rule": []
+  },
+  {
+    "radar_id": "rad-010",
+    "run_id": "run_kb_real",
+    "change_id": "chg-18-cfr-35-28",
+    "citation": "18 CFR 35.28",
+    "heading": "Non-discriminatory open access transmission tariff",
+    "agency_id": "ferc",
+    "applicable": "no",
+    "attribute_basis": [
+      {
+        "key": "operates_transmission_above_100kv",
+        "value": false
+      }
+    ],
+    "affected_activity": "Open access transmission tariff and market monitor reporting.",
+    "reason": "RPL operates no transmission above 100 kV and is not a transmission provider under the tariff.",
+    "quote": "(b) A market monitoring unit shall report to the Commission any identified market design flaw within twenty (20) days.",
+    "docs_covering_same_rule": []
+  },
+  {
+    "radar_id": "rad-011",
+    "run_id": "run_kb_real",
+    "change_id": "chg-18-cfr-35-36",
+    "citation": "18 CFR 35.36",
+    "heading": "Generator interconnection",
+    "agency_id": "ferc",
+    "applicable": "no",
+    "attribute_basis": [
+      {
+        "key": "owns_generating_units",
+        "value": false
+      },
+      {
+        "key": "operates_transmission_above_100kv",
+        "value": false
+      }
+    ],
+    "affected_activity": "Generator interconnection study deadlines.",
+    "reason": "RPL owns no generation and runs no transmission, so it processes no generator interconnection studies under this section.",
+    "quote": "(b) The provider shall complete each system impact study within sixty (60) days of a complete request.",
+    "docs_covering_same_rule": []
+  },
+  {
+    "radar_id": "rad-012",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-3-1-1",
+    "citation": "170 IAC 3-1-1",
+    "heading": "Gas pipeline safety; applicability",
+    "agency_id": "iurc",
+    "applicable": "no",
+    "attribute_basis": [
+      {
+        "key": "has_gas_operations",
+        "value": false
+      }
+    ],
+    "affected_activity": "Gas pipeline leak surveys.",
+    "reason": "RPL has no gas operations.",
+    "quote": "(b) A leak survey of each distribution main shall be completed every two (2) years.",
+    "docs_covering_same_rule": []
+  },
+  {
+    "radar_id": "rad-013",
+    "run_id": "run_kb_real",
+    "change_id": "chg-170-iac-5-1-1",
+    "citation": "170 IAC 5-1-1",
+    "heading": "Water and sewage utilities; applicability",
+    "agency_id": "iurc",
+    "applicable": "no",
+    "attribute_basis": [
+      {
+        "key": "has_water_operations",
+        "value": false
+      }
+    ],
+    "affected_activity": "Rate case notices for water and sewage utilities.",
+    "reason": "RPL has no water or sewage operations.",
+    "quote": "(b) A utility shall file a rate case notice thirty (30) days before filing.",
+    "docs_covering_same_rule": []
+  },
+  {
+    "radar_id": "rad-014",
+    "run_id": "run_kb_real",
+    "change_id": "chg-327-iac-5-4-6",
+    "citation": "327 IAC 5-4-6",
+    "heading": "Stormwater; construction",
+    "agency_id": "idem",
+    "applicable": "unclear",
+    "attribute_basis": [
+      {
+        "key": "has_underground_facilities",
+        "value": true
+      }
+    ],
+    "affected_activity": "Notices of intent for construction sites that disturb land.",
+    "reason": "RPL has underground facilities and does construction work, but whether any site reaches the new half-acre threshold depends on project size.",
+    "quote": "(b) A site disturbing one-half (0.5) acre or more shall submit a notice of intent before land disturbance begins.",
+    "docs_covering_same_rule": [
+      "RPL-DO-PLN-002"
+    ]
+  },
+  {
+    "radar_id": "rad-015",
+    "run_id": "run_kb_real",
+    "change_id": "chg-326-iac-10-1-1",
+    "citation": "326 IAC 10-1-1",
+    "heading": "NOx rules; applicability",
+    "agency_id": "idem",
+    "applicable": "unclear",
+    "attribute_basis": [
+      {
+        "key": "has_emergency_standby_generators",
+        "value": true
+      }
+    ],
+    "affected_activity": "NOx rule applicability by annual tons emitted.",
+    "reason": "RPL's standby generators emit NOx, but their annual tons relative to the new 15-ton threshold are not in the profile.",
+    "quote": "(b) A source that emits fifteen (15) tons or more of NOx per year is subject to this rule.",
+    "docs_covering_same_rule": []
+  },
+  {
+    "radar_id": "rad-016",
+    "run_id": "run_kb_real",
+    "change_id": "chg-18-cfr-37-6",
+    "citation": "18 CFR 37.6",
+    "heading": "Information to be posted on an OASIS",
+    "agency_id": "ferc",
+    "applicable": "unclear",
+    "attribute_basis": [
+      {
+        "key": "operates_transmission_above_100kv",
+        "value": false
+      }
+    ],
+    "affected_activity": "OASIS outage posting updates.",
+    "reason": "RPL has no transmission above 100 kV, but may post outages through its MISO transmission owner.",
+    "quote": "(b) The provider shall post planned outages when they are scheduled and shall update the posting within one (1) business day of any change.",
+    "docs_covering_same_rule": []
+  }
+]

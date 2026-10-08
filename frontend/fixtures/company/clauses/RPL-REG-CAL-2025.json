@@ -1,0 +1,3330 @@
+[
+  {
+    "clause_id": "RPL-REG-CAL-2025:1.1",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 1,
+    "heading_path": [
+      "Section 1 — Purpose"
+    ],
+    "unit_kind": "section",
+    "text_raw": "1.1 This document establishes Rockridge Power & Light Company's (RPL) 2025 Regulatory Compliance Calendar, providing a structured schedule of all regulatory filing deadlines, reporting milestones, compliance review cycles, internal audit checkpoints, and notice obligations arising from RPL's status as an Indiana investor-owned electric distribution utility subject to jurisdiction of the Indiana Utility Regulatory Commission (IURC) under IC 8-1-2, and subject to the rules promulgated thereunder in Title 170 of the Indiana Administrative Code (170 IAC).",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:1.2",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 2,
+    "heading_path": [
+      "Section 1 — Purpose"
+    ],
+    "unit_kind": "section",
+    "text_raw": "1.2 The calendar serves as the primary annual operating reference for RPL's Regulatory Affairs department and coordinates with the Compliance, Legal, Customer Operations, Metering, Distribution Operations, and Environmental Health & Safety departments to ensure that no regulatory obligation is missed. Each event in the calendar is assigned an owner who is accountable for timely completion and documentation.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:1.3",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 3,
+    "heading_path": [
+      "Section 1 — Purpose"
+    ],
+    "unit_kind": "section",
+    "text_raw": "1.3 This version (v1.2) covers calendar year 2025 (January 1 through December 31, 2025) and was prepared using law as-of date 2024-12-31 (Snapshot S1). As noted in the front-matter lagging notice, sections 170 IAC 1-6-3, 1-6-4, and 1-6-5 were amended effective 2025-01-24 and are not reflected in this version. The calendar owner (P09) shall prepare a v1.3 update in Q2 2025 to incorporate those changes.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:2.1",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 4,
+    "heading_path": [
+      "Section 2 — Scope"
+    ],
+    "unit_kind": "section",
+    "text_raw": "2.1 Jurisdictional Scope. This calendar covers all compliance obligations applicable to RPL as an Indiana investor-owned electric distribution utility under IC 8-1-2, IC 8-1-1, and the rules codified in 170 IAC Articles 1 and 4. RPL holds IURC Utility ID 99012 and serves approximately 407,491 customers across 14 west-central Indiana counties. RPL is classified as an electric distribution–only utility; it does not own generating units and operates within the MISO footprint under a FERC-jurisdictional full-requirements wholesale power agreement.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:2.2",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 5,
+    "heading_path": [
+      "Section 2 — Scope"
+    ],
+    "unit_kind": "section",
+    "text_raw": "2.2 Regulatory Instruments Covered. The calendar tracks obligations arising from the following regulatory authorities as of law-as-of date 2024-12-31: (a) 170 IAC 1-2 (Tariff Schedule Filing Requirements); (b) 170 IAC 1-5 (Expedited Rate Case Procedures); (c) 170 IAC 1-6 (30-Day Administrative Filing Procedures); (d) 170 IAC 4-1 (Standards of Service for Electrical Utilities); and (e) applicable requirements of IC 8-1-2 and IC 8-1-37.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:2.3",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 6,
+    "heading_path": [
+      "Section 2 — Scope"
+    ],
+    "unit_kind": "section",
+    "text_raw": "2.3 Exclusions. This calendar does not cover: (a) FERC-jurisdictional obligations under RPL's wholesale power agreement; (b) MISO membership and settlement reporting, which are tracked separately by RPL's Power Supply function; (c) SEC or federal securities reporting requirements, which are the responsibility of RPL's parent entity Rockridge Energy Group, Inc.; (d) IDEM environmental permit reporting, which is tracked in RPL's environmental management program; and (e) IOSHA safety reporting, tracked in RPL's EHS Incident Management System.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:2.4",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 7,
+    "heading_path": [
+      "Section 2 — Scope"
+    ],
+    "unit_kind": "section",
+    "text_raw": "2.4 Relationship to Other Documents. This calendar supplements and cross-references RPL's Wave 2 implementation procedures including RPL-TAR-GRR-012 (General Rate Rules Tariff), RPL-CS-PRO-004 (Customer Service Disconnection and Deposits), RPL-CS-PRO-007 (Metering Procedures), RPL-CS-PRO-011 (Complaint Handling), RPL-MTR-PGM-001 (Meter Testing Program), RPL-CMP-REG-001 (Regulatory Compliance Program), RPL-LEG-RRS-001 (Records Retention Schedule), RPL-DO-PLN-002 (Distribution Operations Plan), and RPL-DCC-PRO-003 (Distribution Control Center Procedures).",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:3.1",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 8,
+    "heading_path": [
+      "Section 3 — Definitions"
+    ],
+    "unit_kind": "section",
+    "text_raw": "3.1 \"Filing deadline\" means the date by which RPL must transmit a document, tariff sheet, petition, or report to the IURC such that it is received and file-stamped by the Secretary of the Commission on or before that date, consistent with 170 IAC 1-6-2(8) and IURC electronic portal requirements.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:3.2",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 9,
+    "heading_path": [
+      "Section 3 — Definitions"
+    ],
+    "unit_kind": "section",
+    "text_raw": "3.2 \"Reporting cycle\" means a recurring schedule (monthly, quarterly, semi-annual, or annual) pursuant to which RPL must generate and submit or retain a compliance report, data summary, or self-assessment, as prescribed by applicable 170 IAC rules or RPL internal policy.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:3.3",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 10,
+    "heading_path": [
+      "Section 3 — Definitions"
+    ],
+    "unit_kind": "section",
+    "text_raw": "3.3 \"Compliance window\" means the period within which RPL must take a required action, measured from a triggering event. For example, under 170 IAC 4-1-11(d), RPL must deliver a written meter test report to a requesting customer within ten (10) days after test completion.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:3.4",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 11,
+    "heading_path": [
+      "Section 3 — Definitions"
+    ],
+    "unit_kind": "section",
+    "text_raw": "3.4 \"Notice period\" means the advance time required before an action takes effect or before a filing is considered approved. Under 170 IAC 1-6-1(d), the minimum notice period for approval of administrative rate changes is thirty (30) calendar days from the date the filing is received by the Commission.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:3.5",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 12,
+    "heading_path": [
+      "Section 3 — Definitions"
+    ],
+    "unit_kind": "section",
+    "text_raw": "3.5 \"IURC business day\" means any weekday (Monday through Friday) that is not a State of Indiana holiday, as observed by IURC operations at the PNC Center, 101 W. Washington Street, Suite 1500E, Indianapolis, IN 46204. IURC business hours are 8:15 a.m. to 4:45 p.m. ET.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:3.6",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 13,
+    "heading_path": [
+      "Section 3 — Definitions"
+    ],
+    "unit_kind": "section",
+    "text_raw": "3.6 \"RPL company holiday\" means a day on which RPL Lafayette HQ and field operations are not open for normal business. 2025 RPL company holidays are: January 1, January 20, May 26, July 4, September 1, November 27, November 28, December 24, and December 25.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:3.7",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 14,
+    "heading_path": [
+      "Section 3 — Definitions"
+    ],
+    "unit_kind": "section",
+    "text_raw": "3.7 \"Administrative filing\" means a filing made under 170 IAC 1-6 for noncontroversial changes to rates, charges, rules, or regulations that do not require a full evidentiary hearing. Per 170 IAC 1-6-2(10), a noncontroversial filing is any filing regarding which no person or entity has filed an objection under section 7 of that rule.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:3.8",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 15,
+    "heading_path": [
+      "Section 3 — Definitions"
+    ],
+    "unit_kind": "section",
+    "text_raw": "3.8 \"General rate case\" means a proceeding under 170 IAC 1-5 initiated by RPL's election to file a petition for a general rate change, supported by a case-in-chief and working papers. The expected time frame for completion is ten (10) months per 170 IAC 1-5-2.1(a).",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:3.9",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 16,
+    "heading_path": [
+      "Section 3 — Definitions"
+    ],
+    "unit_kind": "section",
+    "text_raw": "3.9 \"Tariff schedule\" means a schedule of rates, tolls, charges, rules, and regulations on file with the IURC, filed under RPL's IURC series designation for electric service (IURC No. E). Each schedule must be in 8.5 x 11 inch format per 170 IAC 1-2-3. Separate schedules must be filed for each service and location per 170 IAC 1-2-1.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:3.10",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 17,
+    "heading_path": [
+      "Section 3 — Definitions"
+    ],
+    "unit_kind": "section",
+    "text_raw": "3.10 \"Internal compliance review\" means an RPL-initiated assessment of compliance status against applicable regulatory requirements, conducted by the Regulatory Affairs or Compliance department, resulting in a documented finding. Internal reviews are RPL practice unless otherwise specified by an IURC order or IAC rule.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:3.11",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 18,
+    "heading_path": [
+      "Section 3 — Definitions"
+    ],
+    "unit_kind": "section",
+    "text_raw": "3.11 \"Meter testing cycle\" means the periodic schedule under which RPL tests in-service watthour meters, per the election made under 170 IAC 4-1-10. RPL has adopted Method B (quality control testing), and annually draws a sample from each lot per ANSI/ASQC Standard Z1.9.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:3.12",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 19,
+    "heading_path": [
+      "Section 3 — Definitions"
+    ],
+    "unit_kind": "section",
+    "text_raw": "3.12 \"Lagging_at_approval\" means a document-level flag indicating that one or more regulatory provisions cited in the document were amended after the law-as-of date used for drafting but before the document's approval date, such that the document does not reflect the most current law as of its approval date. This flag is set in the document's basis.json and front matter.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:4.1",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 20,
+    "heading_path": [
+      "Section 4 — Using This Calendar"
+    ],
+    "unit_kind": "section",
+    "text_raw": "4.1 Column Structure. Each calendar event in Sections 5–9 is presented in a table with the following columns: (a) Event ID — unique identifier in format EVT-2025-nnnn; (b) Event Title — short descriptive name; (c) Citation — applicable 170 IAC or IC citation from the T11 grounding pack; (d) Type — one of: filing, reporting, internal_review, notice, or inspection; (e) Due Date — specific 2025 date or \"ongoing\" for continuous obligations; (f) Owner — person ID and name from the RPL people directory; and (g) Notes — date-calculation basis, business-day adjustments, or lagging flags.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:4.2",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 21,
+    "heading_path": [
+      "Section 4 — Using This Calendar"
+    ],
+    "unit_kind": "section",
+    "text_raw": "4.2 Owner Responsibilities. The event owner listed for each calendar event is responsible for: (a) initiating the preparation process at least 30 days before the due date; (b) coordinating with subject-matter experts to compile required data; (c) obtaining required internal approvals before external filing; (d) submitting the filing or report to the IURC or other regulatory body; (e) retaining a copy of all filings and confirmations per RPL-LEG-RRS-001; and (f) updating this calendar's event status in the tracking system within 2 business days of completion.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:4.3",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 22,
+    "heading_path": [
+      "Section 4 — Using This Calendar"
+    ],
+    "unit_kind": "section",
+    "text_raw": "4.3 Business Day Adjustment. When a due date falls on an Indiana state holiday, an IURC non-business day, or an RPL company holiday, the due date is advanced to the next IURC business day. This rule applies to all external filings. For internal review milestones, the due date is advanced to the next RPL business day.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:4.4",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 23,
+    "heading_path": [
+      "Section 4 — Using This Calendar"
+    ],
+    "unit_kind": "section",
+    "text_raw": "4.4 Update Process. This calendar shall be reviewed and updated at the beginning of each calendar quarter (target dates: January 15, April 15, July 15, October 15). The calendar owner (P09) shall: (a) verify that all Q-year events remain current; (b) add newly identified obligations; (c) update status of completed events; (d) route material revisions (new compliance obligations or changes to due dates) through the standard document review cycle per RPL-DCC-PRO-003 Section 2; and (e) obtain re-approval from P03 for any version increment. An expedited update shall be triggered upon receipt of a new IURC order, rule amendment, or Notice of Proposed Rulemaking affecting RPL.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:4.5",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 24,
+    "heading_path": [
+      "Section 4 — Using This Calendar"
+    ],
+    "unit_kind": "section",
+    "text_raw": "4.5 Status Codes. Calendar events carry one of three status codes: scheduled (event has not yet occurred and is on track); completed (event action has been taken and documented); n_a (event has been determined to be not applicable in 2025, with written justification retained by owner). At document approval date (2025-03-14), Q1 events completed before that date are marked completed; all others are scheduled.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:4.6",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 25,
+    "heading_path": [
+      "Section 4 — Using This Calendar"
+    ],
+    "unit_kind": "section",
+    "text_raw": "4.6 Escalation. If an owner anticipates that a deadline will be missed, they must notify P08 (Manager Regulatory Affairs) at least 10 RPL business days before the due date. P08 will determine whether to escalate to P07 (VP Regulatory & Government Affairs), seek an extension from the IURC, or invoke RPL's REG-ONCALL paging group for after-hours coordination.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:5.1",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 26,
+    "heading_path": [
+      "Section 6 — Q2 Events (April–June 2025)"
+    ],
+    "unit_kind": "section",
+    "text_raw": "Section 6 — Q2 Events (April–June 2025)",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:5.1.tbl1.r1",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 27,
+    "heading_path": [
+      "Section 5 — Q1 Events (January–March 2025)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "EVT-2025-0001 | Annual tariff schedule comprehensive review | 170 IAC 1-2-1; 170 IAC 1-2-2 | internal_review | 2025-01-31 | P09 Marcus Lee | RPL practice; precedes any needed administrative filings in Q1",
+    "row_cells": {
+      "Event ID": "EVT-2025-0001",
+      "Event Title": "Annual tariff schedule comprehensive review",
+      "Citation": "170 IAC 1-2-1; 170 IAC 1-2-2",
+      "Type": "internal_review",
+      "Due Date": "2025-01-31",
+      "Owner": "P09 Marcus Lee",
+      "Notes": "RPL practice; precedes any needed administrative filings in Q1"
+    },
+    "parent_clause_id": "RPL-REG-CAL-2025:5.1"
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:5.1.tbl1.r2",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 28,
+    "heading_path": [
+      "Section 5 — Q1 Events (January–March 2025)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "EVT-2025-0002 | Q1 customer service billing compliance audit | 170 IAC 4-1-13 | internal_review | 2025-01-31 | P06 Priya Raman | Verify 17-day nonpenalty period disclosures on bills",
+    "row_cells": {
+      "Event ID": "EVT-2025-0002",
+      "Event Title": "Q1 customer service billing compliance audit",
+      "Citation": "170 IAC 4-1-13",
+      "Type": "internal_review",
+      "Due Date": "2025-01-31",
+      "Owner": "P06 Priya Raman",
+      "Notes": "Verify 17-day nonpenalty period disclosures on bills"
+    },
+    "parent_clause_id": "RPL-REG-CAL-2025:5.1"
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:5.1.tbl1.r3",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 29,
+    "heading_path": [
+      "Section 5 — Q1 Events (January–March 2025)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "EVT-2025-0003 | Meter testing program — annual lot draw (Method B, Phase 1) | 170 IAC 4-1-10(c)(3) | inspection | 2025-01-31 | P19 Gregory Walsh | Annual sample draw from each homogenous lot; ANSI/ASQC Z1.9",
+    "row_cells": {
+      "Event ID": "EVT-2025-0003",
+      "Event Title": "Meter testing program — annual lot draw (Method B, Phase 1)",
+      "Citation": "170 IAC 4-1-10(c)(3)",
+      "Type": "inspection",
+      "Due Date": "2025-01-31",
+      "Owner": "P19 Gregory Walsh",
+      "Notes": "Annual sample draw from each homogenous lot; ANSI/ASQC Z1.9"
+    },
+    "parent_clause_id": "RPL-REG-CAL-2025:5.1"
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:5.1.tbl1.r4",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 30,
+    "heading_path": [
+      "Section 5 — Q1 Events (January–March 2025)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "EVT-2025-0004 | Customer deposit interest rate review | 170 IAC 4-1-15(f)(1) | internal_review | 2025-01-31 | P09 Marcus Lee | Confirm 6% per annum deposit interest rate in force; escalate if IURC revises rate",
+    "row_cells": {
+      "Event ID": "EVT-2025-0004",
+      "Event Title": "Customer deposit interest rate review",
+      "Citation": "170 IAC 4-1-15(f)(1)",
+      "Type": "internal_review",
+      "Due Date": "2025-01-31",
+      "Owner": "P09 Marcus Lee",
+      "Notes": "Confirm 6% per annum deposit interest rate in force; escalate if IURC revises rate"
+    },
+    "parent_clause_id": "RPL-REG-CAL-2025:5.1"
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:5.1.tbl1.r5",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 31,
+    "heading_path": [
+      "Section 5 — Q1 Events (January–March 2025)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "EVT-2025-0005 | Administrative filing procedures training | 170 IAC 1-6-5 | internal_review | 2025-02-14 | P09 Marcus Lee | Annual refresher for Regulatory Affairs staff on 30-day filing requirements",
+    "row_cells": {
+      "Event ID": "EVT-2025-0005",
+      "Event Title": "Administrative filing procedures training",
+      "Citation": "170 IAC 1-6-5",
+      "Type": "internal_review",
+      "Due Date": "2025-02-14",
+      "Owner": "P09 Marcus Lee",
+      "Notes": "Annual refresher for Regulatory Affairs staff on 30-day filing requirements"
+    },
+    "parent_clause_id": "RPL-REG-CAL-2025:5.1"
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:5.1.tbl1.r6",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 32,
+    "heading_path": [
+      "Section 5 — Q1 Events (January–March 2025)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "EVT-2025-0006 | Q1 compliance review — disconnection and reconnection procedures | 170 IAC 4-1-16; 170 IAC 4-1-17 | internal_review | 2025-02-28 | P06 Priya Raman | Coordinate with P15 (Jasmine Carter) on credit/collections compliance; see RPL-CS-PRO-004",
+    "row_cells": {
+      "Event ID": "EVT-2025-0006",
+      "Event Title": "Q1 compliance review — disconnection and reconnection procedures",
+      "Citation": "170 IAC 4-1-16; 170 IAC 4-1-17",
+      "Type": "internal_review",
+      "Due Date": "2025-02-28",
+      "Owner": "P06 Priya Raman",
+      "Notes": "Coordinate with P15 (Jasmine Carter) on credit/collections compliance; see RPL-CS-PRO-004"
+    },
+    "parent_clause_id": "RPL-REG-CAL-2025:5.1"
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:5.1.tbl1.r7",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 33,
+    "heading_path": [
+      "Section 5 — Q1 Events (January–March 2025)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "EVT-2025-0007 | Annual regulatory compliance program self-assessment — scope setting | 170 IAC 1-6-1; IC 8-1-2 | internal_review | 2025-02-28 | P05 David Okafor | Establish scope and methodology for full-year compliance program review; see RPL-CMP-REG-001",
+    "row_cells": {
+      "Event ID": "EVT-2025-0007",
+      "Event Title": "Annual regulatory compliance program self-assessment — scope setting",
+      "Citation": "170 IAC 1-6-1; IC 8-1-2",
+      "Type": "internal_review",
+      "Due Date": "2025-02-28",
+      "Owner": "P05 David Okafor",
+      "Notes": "Establish scope and methodology for full-year compliance program review; see RPL-CMP-REG-001"
+    },
+    "parent_clause_id": "RPL-REG-CAL-2025:5.1"
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:5.1.tbl1.r8",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 34,
+    "heading_path": [
+      "Section 5 — Q1 Events (January–March 2025)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "EVT-2025-0008 | Tariff schedule accuracy verification — IURC No. E schedules | 170 IAC 1-2-2; 170 IAC 1-5-16 | internal_review | 2025-03-14 | P11 Aisha Thompson | Confirm all rate schedules on file with IURC are current and internally consistent",
+    "row_cells": {
+      "Event ID": "EVT-2025-0008",
+      "Event Title": "Tariff schedule accuracy verification — IURC No. E schedules",
+      "Citation": "170 IAC 1-2-2; 170 IAC 1-5-16",
+      "Type": "internal_review",
+      "Due Date": "2025-03-14",
+      "Owner": "P11 Aisha Thompson",
+      "Notes": "Confirm all rate schedules on file with IURC are current and internally consistent"
+    },
+    "parent_clause_id": "RPL-REG-CAL-2025:5.1"
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:5.1.tbl1.r9",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 35,
+    "heading_path": [
+      "Section 5 — Q1 Events (January–March 2025)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "EVT-2025-0009 | Q1 complaint resolution rate reporting | 170 IAC 4-1-13; IC 8-1-2 | reporting | 2025-03-31 | P17 Brian Kowalski | Internal metric report; complaint response rate; see RPL-CS-PRO-011",
+    "row_cells": {
+      "Event ID": "EVT-2025-0009",
+      "Event Title": "Q1 complaint resolution rate reporting",
+      "Citation": "170 IAC 4-1-13; IC 8-1-2",
+      "Type": "reporting",
+      "Due Date": "2025-03-31",
+      "Owner": "P17 Brian Kowalski",
+      "Notes": "Internal metric report; complaint response rate; see RPL-CS-PRO-011"
+    },
+    "parent_clause_id": "RPL-REG-CAL-2025:5.1"
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:5.1.tbl1.r10",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 36,
+    "heading_path": [
+      "Section 5 — Q1 Events (January–March 2025)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "EVT-2025-0010 | Reference standards biennial certification check — due diligence | 170 IAC 4-1-7(C) | inspection | 2025-03-31 | P19 Gregory Walsh | Verify certification currency for reference standards; biennial requirement from IAC; schedule lab if due in 2025",
+    "row_cells": {
+      "Event ID": "EVT-2025-0010",
+      "Event Title": "Reference standards biennial certification check — due diligence",
+      "Citation": "170 IAC 4-1-7(C)",
+      "Type": "inspection",
+      "Due Date": "2025-03-31",
+      "Owner": "P19 Gregory Walsh",
+      "Notes": "Verify certification currency for reference standards; biennial requirement from IAC; schedule lab if due in 2025"
+    },
+    "parent_clause_id": "RPL-REG-CAL-2025:5.1"
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:6.1",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 37,
+    "heading_path": [
+      "Section 7 — Q3 Events (July–September 2025)"
+    ],
+    "unit_kind": "section",
+    "text_raw": "Section 7 — Q3 Events (July–September 2025)",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:6.1.tbl1.r1",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 38,
+    "heading_path": [
+      "Section 6 — Q2 Events (April–June 2025)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "EVT-2025-0011 | v1.3 calendar update — incorporate 170 IAC 1-6-3/4/5 amendments | 170 IAC 1-6-3; 170 IAC 1-6-4; 170 IAC 1-6-5 | internal_review | 2025-04-30 | P09 Marcus Lee | Lagging-at-approval remediation; S2 effective 2025-01-24",
+    "row_cells": {
+      "Event ID": "EVT-2025-0011",
+      "Event Title": "v1.3 calendar update — incorporate 170 IAC 1-6-3/4/5 amendments",
+      "Citation": "170 IAC 1-6-3; 170 IAC 1-6-4; 170 IAC 1-6-5",
+      "Type": "internal_review",
+      "Due Date": "2025-04-30",
+      "Owner": "P09 Marcus Lee",
+      "Notes": "Lagging-at-approval remediation; S2 effective 2025-01-24"
+    },
+    "parent_clause_id": "RPL-REG-CAL-2025:6.1"
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:6.1.tbl1.r2",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 39,
+    "heading_path": [
+      "Section 6 — Q2 Events (April–June 2025)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "EVT-2025-0012 | Q2 customer service billing compliance audit | 170 IAC 4-1-13 | internal_review | 2025-04-30 | P06 Priya Raman | Quarterly billing audit; verify estimated-bill coding requirements",
+    "row_cells": {
+      "Event ID": "EVT-2025-0012",
+      "Event Title": "Q2 customer service billing compliance audit",
+      "Citation": "170 IAC 4-1-13",
+      "Type": "internal_review",
+      "Due Date": "2025-04-30",
+      "Owner": "P06 Priya Raman",
+      "Notes": "Quarterly billing audit; verify estimated-bill coding requirements"
+    },
+    "parent_clause_id": "RPL-REG-CAL-2025:6.1"
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:6.1.tbl1.r3",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 40,
+    "heading_path": [
+      "Section 6 — Q2 Events (April–June 2025)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "EVT-2025-0013 | Administrative filing window review — Q2 | 170 IAC 1-6-1; 170 IAC 1-6-3 | internal_review | 2025-04-30 | P09 Marcus Lee | Identify any pending administrative filings; confirm 30-day timeline",
+    "row_cells": {
+      "Event ID": "EVT-2025-0013",
+      "Event Title": "Administrative filing window review — Q2",
+      "Citation": "170 IAC 1-6-1; 170 IAC 1-6-3",
+      "Type": "internal_review",
+      "Due Date": "2025-04-30",
+      "Owner": "P09 Marcus Lee",
+      "Notes": "Identify any pending administrative filings; confirm 30-day timeline"
+    },
+    "parent_clause_id": "RPL-REG-CAL-2025:6.1"
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:6.1.tbl1.r4",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 41,
+    "heading_path": [
+      "Section 6 — Q2 Events (April–June 2025)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "EVT-2025-0014 | Meter testing program — Method B lot results review | 170 IAC 4-1-10(c)(6) | inspection | 2025-05-31 | P19 Gregory Walsh | Evaluate lot acceptance/rejection against Table B-3 ANSI/ASQC Z1.9",
+    "row_cells": {
+      "Event ID": "EVT-2025-0014",
+      "Event Title": "Meter testing program — Method B lot results review",
+      "Citation": "170 IAC 4-1-10(c)(6)",
+      "Type": "inspection",
+      "Due Date": "2025-05-31",
+      "Owner": "P19 Gregory Walsh",
+      "Notes": "Evaluate lot acceptance/rejection against Table B-3 ANSI/ASQC Z1.9"
+    },
+    "parent_clause_id": "RPL-REG-CAL-2025:6.1"
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:6.1.tbl1.r5",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 42,
+    "heading_path": [
+      "Section 6 — Q2 Events (April–June 2025)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "EVT-2025-0015 | Mid-year tariff schedule review | 170 IAC 1-2-1; 170 IAC 1-2-2 | internal_review | 2025-05-31 | P11 Aisha Thompson | Semi-annual review of IURC No. E tariff schedules; document findings",
+    "row_cells": {
+      "Event ID": "EVT-2025-0015",
+      "Event Title": "Mid-year tariff schedule review",
+      "Citation": "170 IAC 1-2-1; 170 IAC 1-2-2",
+      "Type": "internal_review",
+      "Due Date": "2025-05-31",
+      "Owner": "P11 Aisha Thompson",
+      "Notes": "Semi-annual review of IURC No. E tariff schedules; document findings"
+    },
+    "parent_clause_id": "RPL-REG-CAL-2025:6.1"
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:6.1.tbl1.r6",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 43,
+    "heading_path": [
+      "Section 6 — Q2 Events (April–June 2025)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "EVT-2025-0016 | Rate case readiness review | 170 IAC 1-5-2; 170 IAC 1-5-2.1 | internal_review | 2025-05-31 | P10 Robert Haskins | Assess whether general rate case filing is warranted; review financial metrics",
+    "row_cells": {
+      "Event ID": "EVT-2025-0016",
+      "Event Title": "Rate case readiness review",
+      "Citation": "170 IAC 1-5-2; 170 IAC 1-5-2.1",
+      "Type": "internal_review",
+      "Due Date": "2025-05-31",
+      "Owner": "P10 Robert Haskins",
+      "Notes": "Assess whether general rate case filing is warranted; review financial metrics"
+    },
+    "parent_clause_id": "RPL-REG-CAL-2025:6.1"
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:6.1.tbl1.r7",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 44,
+    "heading_path": [
+      "Section 6 — Q2 Events (April–June 2025)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "EVT-2025-0017 | IURC electronic portal access verification | 170 IAC 1-6-5(c)(1) | internal_review | 2025-05-31 | P09 Marcus Lee | Confirm all regulatory staff have current IURC portal credentials; iurc.portal.in.gov",
+    "row_cells": {
+      "Event ID": "EVT-2025-0017",
+      "Event Title": "IURC electronic portal access verification",
+      "Citation": "170 IAC 1-6-5(c)(1)",
+      "Type": "internal_review",
+      "Due Date": "2025-05-31",
+      "Owner": "P09 Marcus Lee",
+      "Notes": "Confirm all regulatory staff have current IURC portal credentials; iurc.portal.in.gov"
+    },
+    "parent_clause_id": "RPL-REG-CAL-2025:6.1"
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:6.1.tbl1.r8",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 45,
+    "heading_path": [
+      "Section 6 — Q2 Events (April–June 2025)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "EVT-2025-0018 | Customer deposit records annual audit | 170 IAC 4-1-15(g)(4) | internal_review | 2025-06-30 | P15 Jasmine Carter | Verify deposit records include all required fields; review unclaimed deposits per 170 IAC 4-1-15(g)(6)",
+    "row_cells": {
+      "Event ID": "EVT-2025-0018",
+      "Event Title": "Customer deposit records annual audit",
+      "Citation": "170 IAC 4-1-15(g)(4)",
+      "Type": "internal_review",
+      "Due Date": "2025-06-30",
+      "Owner": "P15 Jasmine Carter",
+      "Notes": "Verify deposit records include all required fields; review unclaimed deposits per 170 IAC 4-1-15(g)(6)"
+    },
+    "parent_clause_id": "RPL-REG-CAL-2025:6.1"
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:6.1.tbl1.r9",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 46,
+    "heading_path": [
+      "Section 6 — Q2 Events (April–June 2025)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "EVT-2025-0019 | Q2 complaint resolution rate reporting | 170 IAC 4-1-13; IC 8-1-2 | reporting | 2025-06-30 | P17 Brian Kowalski | Internal metric report; see RPL-CS-PRO-011",
+    "row_cells": {
+      "Event ID": "EVT-2025-0019",
+      "Event Title": "Q2 complaint resolution rate reporting",
+      "Citation": "170 IAC 4-1-13; IC 8-1-2",
+      "Type": "reporting",
+      "Due Date": "2025-06-30",
+      "Owner": "P17 Brian Kowalski",
+      "Notes": "Internal metric report; see RPL-CS-PRO-011"
+    },
+    "parent_clause_id": "RPL-REG-CAL-2025:6.1"
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:6.1.tbl1.r10",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 47,
+    "heading_path": [
+      "Section 6 — Q2 Events (April–June 2025)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "EVT-2025-0020 | Alternative billing method review | 170 IAC 4-1-13(f) | internal_review | 2025-06-30 | P09 Marcus Lee | Confirm alternative billing method in IURC-approved tariff; verify customer pamphlet notice",
+    "row_cells": {
+      "Event ID": "EVT-2025-0020",
+      "Event Title": "Alternative billing method review",
+      "Citation": "170 IAC 4-1-13(f)",
+      "Type": "internal_review",
+      "Due Date": "2025-06-30",
+      "Owner": "P09 Marcus Lee",
+      "Notes": "Confirm alternative billing method in IURC-approved tariff; verify customer pamphlet notice"
+    },
+    "parent_clause_id": "RPL-REG-CAL-2025:6.1"
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:7.1",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 48,
+    "heading_path": [
+      "Section 8 — Q4 Events (October–December 2025)"
+    ],
+    "unit_kind": "section",
+    "text_raw": "Section 8 — Q4 Events (October–December 2025)",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:7.1.tbl1.r1",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 49,
+    "heading_path": [
+      "Section 7 — Q3 Events (July–September 2025)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "EVT-2025-0021 | Q3 customer service billing compliance audit | 170 IAC 4-1-13 | internal_review | 2025-07-31 | P06 Priya Raman | Quarterly billing audit; spot-check delinquency notification",
+    "row_cells": {
+      "Event ID": "EVT-2025-0021",
+      "Event Title": "Q3 customer service billing compliance audit",
+      "Citation": "170 IAC 4-1-13",
+      "Type": "internal_review",
+      "Due Date": "2025-07-31",
+      "Owner": "P06 Priya Raman",
+      "Notes": "Quarterly billing audit; spot-check delinquency notification"
+    },
+    "parent_clause_id": "RPL-REG-CAL-2025:7.1"
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:7.1.tbl1.r2",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 50,
+    "heading_path": [
+      "Section 7 — Q3 Events (July–September 2025)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "EVT-2025-0022 | Administrative filing window review — Q3 | 170 IAC 1-6-1; 170 IAC 1-6-3 | internal_review | 2025-07-31 | P09 Marcus Lee | Identify administrative filings needed for Q4",
+    "row_cells": {
+      "Event ID": "EVT-2025-0022",
+      "Event Title": "Administrative filing window review — Q3",
+      "Citation": "170 IAC 1-6-1; 170 IAC 1-6-3",
+      "Type": "internal_review",
+      "Due Date": "2025-07-31",
+      "Owner": "P09 Marcus Lee",
+      "Notes": "Identify administrative filings needed for Q4"
+    },
+    "parent_clause_id": "RPL-REG-CAL-2025:7.1"
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:7.1.tbl1.r3",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 51,
+    "heading_path": [
+      "Section 7 — Q3 Events (July–September 2025)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "EVT-2025-0023 | Meter testing program — Phase 2 lot draw | 170 IAC 4-1-10(c)(3) | inspection | 2025-07-31 | P19 Gregory Walsh | Second annual lot draw (if required by lot schedule); confirm ANSI criteria",
+    "row_cells": {
+      "Event ID": "EVT-2025-0023",
+      "Event Title": "Meter testing program — Phase 2 lot draw",
+      "Citation": "170 IAC 4-1-10(c)(3)",
+      "Type": "inspection",
+      "Due Date": "2025-07-31",
+      "Owner": "P19 Gregory Walsh",
+      "Notes": "Second annual lot draw (if required by lot schedule); confirm ANSI criteria"
+    },
+    "parent_clause_id": "RPL-REG-CAL-2025:7.1"
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:7.1.tbl1.r4",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 52,
+    "heading_path": [
+      "Section 7 — Q3 Events (July–September 2025)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "EVT-2025-0024 | Rate case data review — rate base cutoff preparation | 170 IAC 1-5-9; 170 IAC 1-5-10 | internal_review | 2025-08-29 | P10 Robert Haskins | Fri Aug 29 is next business day after Aug 28; prepare test year rate base data for potential filing",
+    "row_cells": {
+      "Event ID": "EVT-2025-0024",
+      "Event Title": "Rate case data review — rate base cutoff preparation",
+      "Citation": "170 IAC 1-5-9; 170 IAC 1-5-10",
+      "Type": "internal_review",
+      "Due Date": "2025-08-29",
+      "Owner": "P10 Robert Haskins",
+      "Notes": "Fri Aug 29 is next business day after Aug 28; prepare test year rate base data for potential filing"
+    },
+    "parent_clause_id": "RPL-REG-CAL-2025:7.1"
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:7.1.tbl1.r5",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 53,
+    "heading_path": [
+      "Section 7 — Q3 Events (July–September 2025)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "EVT-2025-0025 | Tariff schedule — new service rates review | 170 IAC 1-6-3(1) | internal_review | 2025-08-29 | P11 Aisha Thompson | Review whether any new service rates require administrative filing; confirm permissible under 170 IAC 1-6-3",
+    "row_cells": {
+      "Event ID": "EVT-2025-0025",
+      "Event Title": "Tariff schedule — new service rates review",
+      "Citation": "170 IAC 1-6-3(1)",
+      "Type": "internal_review",
+      "Due Date": "2025-08-29",
+      "Owner": "P11 Aisha Thompson",
+      "Notes": "Review whether any new service rates require administrative filing; confirm permissible under 170 IAC 1-6-3"
+    },
+    "parent_clause_id": "RPL-REG-CAL-2025:7.1"
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:7.1.tbl1.r6",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 54,
+    "heading_path": [
+      "Section 7 — Q3 Events (July–September 2025)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "EVT-2025-0026 | Customer creditworthiness standards review | 170 IAC 4-1-15(a); 170 IAC 4-1-15(b) | internal_review | 2025-08-29 | P06 Priya Raman | Annual review of RPL's creditworthiness determination procedures for equity and nondiscrimination",
+    "row_cells": {
+      "Event ID": "EVT-2025-0026",
+      "Event Title": "Customer creditworthiness standards review",
+      "Citation": "170 IAC 4-1-15(a); 170 IAC 4-1-15(b)",
+      "Type": "internal_review",
+      "Due Date": "2025-08-29",
+      "Owner": "P06 Priya Raman",
+      "Notes": "Annual review of RPL's creditworthiness determination procedures for equity and nondiscrimination"
+    },
+    "parent_clause_id": "RPL-REG-CAL-2025:7.1"
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:7.1.tbl1.r7",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 55,
+    "heading_path": [
+      "Section 7 — Q3 Events (July–September 2025)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "EVT-2025-0027 | Records retention compliance check | 170 IAC 4-1-3 | internal_review | 2025-09-30 | P12 Linda Nguyen | Verify all records required under 170 IAC 4-1 are retained for minimum 3 years and are accessible; see RPL-LEG-RRS-001",
+    "row_cells": {
+      "Event ID": "EVT-2025-0027",
+      "Event Title": "Records retention compliance check",
+      "Citation": "170 IAC 4-1-3",
+      "Type": "internal_review",
+      "Due Date": "2025-09-30",
+      "Owner": "P12 Linda Nguyen",
+      "Notes": "Verify all records required under 170 IAC 4-1 are retained for minimum 3 years and are accessible; see RPL-LEG-RRS-001"
+    },
+    "parent_clause_id": "RPL-REG-CAL-2025:7.1"
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:7.1.tbl1.r8",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 56,
+    "heading_path": [
+      "Section 7 — Q3 Events (July–September 2025)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "EVT-2025-0028 | Q3 complaint resolution rate reporting | 170 IAC 4-1-13; IC 8-1-2 | reporting | 2025-09-30 | P17 Brian Kowalski | Internal metric report; see RPL-CS-PRO-011",
+    "row_cells": {
+      "Event ID": "EVT-2025-0028",
+      "Event Title": "Q3 complaint resolution rate reporting",
+      "Citation": "170 IAC 4-1-13; IC 8-1-2",
+      "Type": "reporting",
+      "Due Date": "2025-09-30",
+      "Owner": "P17 Brian Kowalski",
+      "Notes": "Internal metric report; see RPL-CS-PRO-011"
+    },
+    "parent_clause_id": "RPL-REG-CAL-2025:7.1"
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:7.1.tbl1.r9",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 57,
+    "heading_path": [
+      "Section 7 — Q3 Events (July–September 2025)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "EVT-2025-0029 | OUCC communication log review | 170 IAC 1-5-4(e)(1); 170 IAC 1-6-5(b) | internal_review | 2025-09-30 | P09 Marcus Lee | Review and document all OUCC correspondence; confirm same-day service was provided for all applicable filings",
+    "row_cells": {
+      "Event ID": "EVT-2025-0029",
+      "Event Title": "OUCC communication log review",
+      "Citation": "170 IAC 1-5-4(e)(1); 170 IAC 1-6-5(b)",
+      "Type": "internal_review",
+      "Due Date": "2025-09-30",
+      "Owner": "P09 Marcus Lee",
+      "Notes": "Review and document all OUCC correspondence; confirm same-day service was provided for all applicable filings"
+    },
+    "parent_clause_id": "RPL-REG-CAL-2025:7.1"
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:7.1.tbl1.r10",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 58,
+    "heading_path": [
+      "Section 7 — Q3 Events (July–September 2025)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "EVT-2025-0030 | Vegetation management program compliance review | 170 IAC 4-1-2; IC 8-1-2 | internal_review | 2025-09-30 | P22 Rachel Stein | Annual review of vegetation management compliance status; see RPL-DO-PLN-002",
+    "row_cells": {
+      "Event ID": "EVT-2025-0030",
+      "Event Title": "Vegetation management program compliance review",
+      "Citation": "170 IAC 4-1-2; IC 8-1-2",
+      "Type": "internal_review",
+      "Due Date": "2025-09-30",
+      "Owner": "P22 Rachel Stein",
+      "Notes": "Annual review of vegetation management compliance status; see RPL-DO-PLN-002"
+    },
+    "parent_clause_id": "RPL-REG-CAL-2025:7.1"
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:8.1",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 59,
+    "heading_path": [
+      "Section 9 — Annual/Rolling Events (Throughout 2025)"
+    ],
+    "unit_kind": "section",
+    "text_raw": "Section 9 — Annual/Rolling Events (Throughout 2025)",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:8.1.tbl1.r1",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 60,
+    "heading_path": [
+      "Section 8 — Q4 Events (October–December 2025)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "EVT-2025-0031 | Annual regulatory compliance self-assessment | IC 8-1-2; 170 IAC 1-6; 170 IAC 4-1 | internal_review | 2025-10-31 | P05 David Okafor | Full-year compliance review per RPL-CMP-REG-001; document findings for P04 (Margaret Ellison)",
+    "row_cells": {
+      "Event ID": "EVT-2025-0031",
+      "Event Title": "Annual regulatory compliance self-assessment",
+      "Citation": "IC 8-1-2; 170 IAC 1-6; 170 IAC 4-1",
+      "Type": "internal_review",
+      "Due Date": "2025-10-31",
+      "Owner": "P05 David Okafor",
+      "Notes": "Full-year compliance review per RPL-CMP-REG-001; document findings for P04 (Margaret Ellison)"
+    },
+    "parent_clause_id": "RPL-REG-CAL-2025:8.1"
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:8.1.tbl1.r2",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 61,
+    "heading_path": [
+      "Section 8 — Q4 Events (October–December 2025)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "EVT-2025-0032 | Q4 customer service billing compliance audit | 170 IAC 4-1-13 | internal_review | 2025-10-31 | P06 Priya Raman | Quarterly billing audit",
+    "row_cells": {
+      "Event ID": "EVT-2025-0032",
+      "Event Title": "Q4 customer service billing compliance audit",
+      "Citation": "170 IAC 4-1-13",
+      "Type": "internal_review",
+      "Due Date": "2025-10-31",
+      "Owner": "P06 Priya Raman",
+      "Notes": "Quarterly billing audit"
+    },
+    "parent_clause_id": "RPL-REG-CAL-2025:8.1"
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:8.1.tbl1.r3",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 62,
+    "heading_path": [
+      "Section 8 — Q4 Events (October–December 2025)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "EVT-2025-0033 | Annual meter testing program summary report | 170 IAC 4-1-10(c)(9); 170 IAC 4-1-4(c) | reporting | 2025-10-31 | P19 Gregory Walsh | Compile full-year meter test results; prepare tabulation by accuracy groups per 170 IAC 4-1-4(c); retain for IURC examination",
+    "row_cells": {
+      "Event ID": "EVT-2025-0033",
+      "Event Title": "Annual meter testing program summary report",
+      "Citation": "170 IAC 4-1-10(c)(9); 170 IAC 4-1-4(c)",
+      "Type": "reporting",
+      "Due Date": "2025-10-31",
+      "Owner": "P19 Gregory Walsh",
+      "Notes": "Compile full-year meter test results; prepare tabulation by accuracy groups per 170 IAC 4-1-4(c); retain for IURC examination"
+    },
+    "parent_clause_id": "RPL-REG-CAL-2025:8.1"
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:8.1.tbl1.r4",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 63,
+    "heading_path": [
+      "Section 8 — Q4 Events (October–December 2025)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "EVT-2025-0034 | Rate case — annual feasibility review and board briefing | 170 IAC 1-5-2; 170 IAC 1-5-6 | internal_review | 2025-10-31 | P10 Robert Haskins | Evaluate whether to initiate general rate case in 2026; prepare financial exhibits",
+    "row_cells": {
+      "Event ID": "EVT-2025-0034",
+      "Event Title": "Rate case — annual feasibility review and board briefing",
+      "Citation": "170 IAC 1-5-2; 170 IAC 1-5-6",
+      "Type": "internal_review",
+      "Due Date": "2025-10-31",
+      "Owner": "P10 Robert Haskins",
+      "Notes": "Evaluate whether to initiate general rate case in 2026; prepare financial exhibits"
+    },
+    "parent_clause_id": "RPL-REG-CAL-2025:8.1"
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:8.1.tbl1.r5",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 64,
+    "heading_path": [
+      "Section 8 — Q4 Events (October–December 2025)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "EVT-2025-0035 | Year-end tariff schedule comprehensive review | 170 IAC 1-2-1; 170 IAC 1-2-2 | internal_review | 2025-11-28 | P11 Aisha Thompson | Nov 28 is last business day before Thanksgiving break; complete tariff review for 2025 year-end",
+    "row_cells": {
+      "Event ID": "EVT-2025-0035",
+      "Event Title": "Year-end tariff schedule comprehensive review",
+      "Citation": "170 IAC 1-2-1; 170 IAC 1-2-2",
+      "Type": "internal_review",
+      "Due Date": "2025-11-28",
+      "Owner": "P11 Aisha Thompson",
+      "Notes": "Nov 28 is last business day before Thanksgiving break; complete tariff review for 2025 year-end"
+    },
+    "parent_clause_id": "RPL-REG-CAL-2025:8.1"
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:8.1.tbl1.r6",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 65,
+    "heading_path": [
+      "Section 8 — Q4 Events (October–December 2025)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "EVT-2025-0036 | Administrative filing — pre-2026 nonrecurring charge review | 170 IAC 1-6-3(4); 170 IAC 1-6-2(11) | internal_review | 2025-11-28 | P09 Marcus Lee | Review all nonrecurring charges; determine whether administrative update filing needed before year-end",
+    "row_cells": {
+      "Event ID": "EVT-2025-0036",
+      "Event Title": "Administrative filing — pre-2026 nonrecurring charge review",
+      "Citation": "170 IAC 1-6-3(4); 170 IAC 1-6-2(11)",
+      "Type": "internal_review",
+      "Due Date": "2025-11-28",
+      "Owner": "P09 Marcus Lee",
+      "Notes": "Review all nonrecurring charges; determine whether administrative update filing needed before year-end"
+    },
+    "parent_clause_id": "RPL-REG-CAL-2025:8.1"
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:8.1.tbl1.r7",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 66,
+    "heading_path": [
+      "Section 8 — Q4 Events (October–December 2025)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "EVT-2025-0037 | Customer complaint annual summary — regulatory affairs copy | 170 IAC 4-1-13; IC 8-1-2 | reporting | 2025-12-31 | P17 Brian Kowalski | Annual summary report; document for regulatory file; see RPL-CS-PRO-011",
+    "row_cells": {
+      "Event ID": "EVT-2025-0037",
+      "Event Title": "Customer complaint annual summary — regulatory affairs copy",
+      "Citation": "170 IAC 4-1-13; IC 8-1-2",
+      "Type": "reporting",
+      "Due Date": "2025-12-31",
+      "Owner": "P17 Brian Kowalski",
+      "Notes": "Annual summary report; document for regulatory file; see RPL-CS-PRO-011"
+    },
+    "parent_clause_id": "RPL-REG-CAL-2025:8.1"
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:8.1.tbl1.r8",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 67,
+    "heading_path": [
+      "Section 8 — Q4 Events (October–December 2025)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "EVT-2025-0038 | Annual compliance summary — transmit to CCO | IC 8-1-2; 170 IAC 1-6; 170 IAC 4-1 | reporting | 2025-12-31 | P05 David Okafor | Transmit annual compliance summary to P04 (Chief Compliance Officer) and P03 (Senior Counsel Regulatory)",
+    "row_cells": {
+      "Event ID": "EVT-2025-0038",
+      "Event Title": "Annual compliance summary — transmit to CCO",
+      "Citation": "IC 8-1-2; 170 IAC 1-6; 170 IAC 4-1",
+      "Type": "reporting",
+      "Due Date": "2025-12-31",
+      "Owner": "P05 David Okafor",
+      "Notes": "Transmit annual compliance summary to P04 (Chief Compliance Officer) and P03 (Senior Counsel Regulatory)"
+    },
+    "parent_clause_id": "RPL-REG-CAL-2025:8.1"
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:8.1.tbl1.r9",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 68,
+    "heading_path": [
+      "Section 8 — Q4 Events (October–December 2025)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "EVT-2025-0039 | 2026 regulatory compliance calendar — draft preparation | 170 IAC 1-2; 170 IAC 1-5; 170 IAC 1-6; 170 IAC 4-1 | internal_review | 2025-12-31 | P09 Marcus Lee | Begin draft of RPL-REG-CAL-2026 v1.0 for Q1 2026 approval; RPL practice",
+    "row_cells": {
+      "Event ID": "EVT-2025-0039",
+      "Event Title": "2026 regulatory compliance calendar — draft preparation",
+      "Citation": "170 IAC 1-2; 170 IAC 1-5; 170 IAC 1-6; 170 IAC 4-1",
+      "Type": "internal_review",
+      "Due Date": "2025-12-31",
+      "Owner": "P09 Marcus Lee",
+      "Notes": "Begin draft of RPL-REG-CAL-2026 v1.0 for Q1 2026 approval; RPL practice"
+    },
+    "parent_clause_id": "RPL-REG-CAL-2025:8.1"
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:8.1.tbl1.r10",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 69,
+    "heading_path": [
+      "Section 8 — Q4 Events (October–December 2025)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "EVT-2025-0040 | Year-end records location notification to IURC | 170 IAC 4-1-3 | notice | 2025-12-31 | P09 Marcus Lee | Notify IURC of office at which required records are kept, if location has changed during year",
+    "row_cells": {
+      "Event ID": "EVT-2025-0040",
+      "Event Title": "Year-end records location notification to IURC",
+      "Citation": "170 IAC 4-1-3",
+      "Type": "notice",
+      "Due Date": "2025-12-31",
+      "Owner": "P09 Marcus Lee",
+      "Notes": "Notify IURC of office at which required records are kept, if location has changed during year"
+    },
+    "parent_clause_id": "RPL-REG-CAL-2025:8.1"
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:9.1",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 70,
+    "heading_path": [
+      "Section 9 — Annual/Rolling Events (Throughout 2025)"
+    ],
+    "unit_kind": "section",
+    "text_raw": "The following events are continuous or recurring throughout the calendar year without a single annual deadline. Each has a designated owner who monitors compliance on an ongoing basis.",
+    "row_cells": null,
+    "parent_clause_id": "RPL-REG-CAL-2025:8.1"
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:9.1.tbl1.r1",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 71,
+    "heading_path": [
+      "Section 9 — Annual/Rolling Events (Throughout 2025)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "EVT-2025-0041 | Disconnection and reconnection compliance monitoring | 170 IAC 4-1-16; 170 IAC 4-1-17 | inspection | Monthly | P15 Jasmine Carter | Monitor compliance with required disconnect/reconnect procedures; see RPL-CS-PRO-004; escalate anomalies to P09",
+    "row_cells": {
+      "Event ID": "EVT-2025-0041",
+      "Event Title": "Disconnection and reconnection compliance monitoring",
+      "Citation": "170 IAC 4-1-16; 170 IAC 4-1-17",
+      "Type": "inspection",
+      "Frequency": "Monthly",
+      "Owner": "P15 Jasmine Carter",
+      "Notes": "Monitor compliance with required disconnect/reconnect procedures; see RPL-CS-PRO-004; escalate anomalies to P09"
+    },
+    "parent_clause_id": "RPL-REG-CAL-2025:9.1"
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:9.1.tbl1.r2",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 72,
+    "heading_path": [
+      "Section 9 — Annual/Rolling Events (Throughout 2025)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "EVT-2025-0042 | Meter test report delivery — customer requests | 170 IAC 4-1-11(d) | reporting | Per request | P19 Gregory Walsh | Written report within 10 days of test completion; customer appeal window 5 days from report date per 170 IAC 4-1-11(e)",
+    "row_cells": {
+      "Event ID": "EVT-2025-0042",
+      "Event Title": "Meter test report delivery — customer requests",
+      "Citation": "170 IAC 4-1-11(d)",
+      "Type": "reporting",
+      "Frequency": "Per request",
+      "Owner": "P19 Gregory Walsh",
+      "Notes": "Written report within 10 days of test completion; customer appeal window 5 days from report date per 170 IAC 4-1-11(e)"
+    },
+    "parent_clause_id": "RPL-REG-CAL-2025:9.1"
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:9.1.tbl1.r3",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 73,
+    "heading_path": [
+      "Section 9 — Annual/Rolling Events (Throughout 2025)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "EVT-2025-0043 | Customer meter test — IURC-supervised testing coordination | 170 IAC 4-1-12 | inspection | Per request | P19 Gregory Walsh | On IURC notification, do not remove or alter meter until test complete; coordinate with commission staff",
+    "row_cells": {
+      "Event ID": "EVT-2025-0043",
+      "Event Title": "Customer meter test — IURC-supervised testing coordination",
+      "Citation": "170 IAC 4-1-12",
+      "Type": "inspection",
+      "Frequency": "Per request",
+      "Owner": "P19 Gregory Walsh",
+      "Notes": "On IURC notification, do not remove or alter meter until test complete; coordinate with commission staff"
+    },
+    "parent_clause_id": "RPL-REG-CAL-2025:9.1"
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:9.1.tbl1.r4",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 74,
+    "heading_path": [
+      "Section 9 — Annual/Rolling Events (Throughout 2025)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "EVT-2025-0044 | 30-day administrative filing monitoring | 170 IAC 1-6-1(d) | filing | Per filing | P09 Marcus Lee | Monitor IURC objection period for each administrative filing; 30-day minimum from filing date",
+    "row_cells": {
+      "Event ID": "EVT-2025-0044",
+      "Event Title": "30-day administrative filing monitoring",
+      "Citation": "170 IAC 1-6-1(d)",
+      "Type": "filing",
+      "Frequency": "Per filing",
+      "Owner": "P09 Marcus Lee",
+      "Notes": "Monitor IURC objection period for each administrative filing; 30-day minimum from filing date"
+    },
+    "parent_clause_id": "RPL-REG-CAL-2025:9.1"
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:9.1.tbl1.r5",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 75,
+    "heading_path": [
+      "Section 9 — Annual/Rolling Events (Throughout 2025)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "EVT-2025-0045 | OUCC same-day service — administrative filings | 170 IAC 1-6-5(b) | filing | Per filing | P09 Marcus Lee | Copy of all administrative filings served on OUCC same day as filed with IURC",
+    "row_cells": {
+      "Event ID": "EVT-2025-0045",
+      "Event Title": "OUCC same-day service — administrative filings",
+      "Citation": "170 IAC 1-6-5(b)",
+      "Type": "filing",
+      "Frequency": "Per filing",
+      "Owner": "P09 Marcus Lee",
+      "Notes": "Copy of all administrative filings served on OUCC same day as filed with IURC"
+    },
+    "parent_clause_id": "RPL-REG-CAL-2025:9.1"
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:9.1.tbl1.r6",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 76,
+    "heading_path": [
+      "Section 9 — Annual/Rolling Events (Throughout 2025)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "EVT-2025-0046 | Billing adjustment processing — meter errors | 170 IAC 4-1-14(A) | reporting | Per occurrence | P18 Luis Hernandez | Fast/slow meter: refund or charge per billing adjustment rules; document per 170 IAC 4-1-14",
+    "row_cells": {
+      "Event ID": "EVT-2025-0046",
+      "Event Title": "Billing adjustment processing — meter errors",
+      "Citation": "170 IAC 4-1-14(A)",
+      "Type": "reporting",
+      "Frequency": "Per occurrence",
+      "Owner": "P18 Luis Hernandez",
+      "Notes": "Fast/slow meter: refund or charge per billing adjustment rules; document per 170 IAC 4-1-14"
+    },
+    "parent_clause_id": "RPL-REG-CAL-2025:9.1"
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:9.1.tbl1.r7",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 77,
+    "heading_path": [
+      "Section 9 — Annual/Rolling Events (Throughout 2025)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "EVT-2025-0047 | Deposit interest accrual monitoring | 170 IAC 4-1-15(f)(1) | reporting | Monthly | P15 Jasmine Carter | Deposits held over 12 months accrue interest at 6% per annum; verify correct accrual in CIS",
+    "row_cells": {
+      "Event ID": "EVT-2025-0047",
+      "Event Title": "Deposit interest accrual monitoring",
+      "Citation": "170 IAC 4-1-15(f)(1)",
+      "Type": "reporting",
+      "Frequency": "Monthly",
+      "Owner": "P15 Jasmine Carter",
+      "Notes": "Deposits held over 12 months accrue interest at 6% per annum; verify correct accrual in CIS"
+    },
+    "parent_clause_id": "RPL-REG-CAL-2025:9.1"
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:9.1.tbl1.r8",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 78,
+    "heading_path": [
+      "Section 9 — Annual/Rolling Events (Throughout 2025)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "EVT-2025-0048 | Schedule filing receipt acknowledgment tracking | 170 IAC 1-2-9 | filing | Per filing | P09 Marcus Lee | When acknowledgment requested, letter of transmittal sent in duplicate; track receipt of stamped copy",
+    "row_cells": {
+      "Event ID": "EVT-2025-0048",
+      "Event Title": "Schedule filing receipt acknowledgment tracking",
+      "Citation": "170 IAC 1-2-9",
+      "Type": "filing",
+      "Frequency": "Per filing",
+      "Owner": "P09 Marcus Lee",
+      "Notes": "When acknowledgment requested, letter of transmittal sent in duplicate; track receipt of stamped copy"
+    },
+    "parent_clause_id": "RPL-REG-CAL-2025:9.1"
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:10.1",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 79,
+    "heading_path": [
+      "Section 10 — Cross-References to Implementation Procedures"
+    ],
+    "unit_kind": "section",
+    "text_raw": "The following table maps key calendar events to Wave 2 implementation procedures and their frozen clause IDs. Clause IDs are taken from the clause_id_freeze.json as of 2026-10-07.\n\n> Note: Clause IDs marked \"(pending Wave 2 freeze)\" are from documents produced in Wave 2 but not yet formally frozen at the time of this calendar's approval. These will be updated in v1.3.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:10.1.tbl1.r1",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 80,
+    "heading_path": [
+      "Section 10 — Cross-References to Implementation Procedures"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "EVT-2025-0001, EVT-2025-0008, EVT-2025-0015, EVT-2025-0035 | Tariff schedule accuracy; separate schedules per location/service (170 IAC 1-2-1, 1-2-2) | RPL-TAR-GRR-012 | RPL-TAR-GRR-012:R01.D01",
+    "row_cells": {
+      "Event ID(s)": "EVT-2025-0001, EVT-2025-0008, EVT-2025-0015, EVT-2025-0035",
+      "Regulatory Obligation": "Tariff schedule accuracy; separate schedules per location/service (170 IAC 1-2-1, 1-2-2)",
+      "Implementation Document": "RPL-TAR-GRR-012",
+      "Clause ID": "RPL-TAR-GRR-012:R01.D01"
+    },
+    "parent_clause_id": "RPL-REG-CAL-2025:10.1"
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:10.1.tbl1.r2",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 81,
+    "heading_path": [
+      "Section 10 — Cross-References to Implementation Procedures"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "EVT-2025-0008, EVT-2025-0016 | Rate schedule filing requirements; tariff content completeness | RPL-TAR-GRR-012 | RPL-TAR-GRR-012:R02.1",
+    "row_cells": {
+      "Event ID(s)": "EVT-2025-0008, EVT-2025-0016",
+      "Regulatory Obligation": "Rate schedule filing requirements; tariff content completeness",
+      "Implementation Document": "RPL-TAR-GRR-012",
+      "Clause ID": "RPL-TAR-GRR-012:R02.1"
+    },
+    "parent_clause_id": "RPL-REG-CAL-2025:10.1"
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:10.1.tbl1.r3",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 82,
+    "heading_path": [
+      "Section 10 — Cross-References to Implementation Procedures"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "EVT-2025-0016, EVT-2025-0034 | General rate case procedures; test year and case-in-chief | RPL-TAR-GRR-012 | RPL-TAR-GRR-012:R03.1",
+    "row_cells": {
+      "Event ID(s)": "EVT-2025-0016, EVT-2025-0034",
+      "Regulatory Obligation": "General rate case procedures; test year and case-in-chief",
+      "Implementation Document": "RPL-TAR-GRR-012",
+      "Clause ID": "RPL-TAR-GRR-012:R03.1"
+    },
+    "parent_clause_id": "RPL-REG-CAL-2025:10.1"
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:10.1.tbl1.r4",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 83,
+    "heading_path": [
+      "Section 10 — Cross-References to Implementation Procedures"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "EVT-2025-0006, EVT-2025-0018, EVT-2025-0041 | Disconnection procedures; deposit requirements | RPL-CS-PRO-004 | RPL-CS-PRO-004:8.1",
+    "row_cells": {
+      "Event ID(s)": "EVT-2025-0006, EVT-2025-0018, EVT-2025-0041",
+      "Regulatory Obligation": "Disconnection procedures; deposit requirements",
+      "Implementation Document": "RPL-CS-PRO-004",
+      "Clause ID": "RPL-CS-PRO-004:8.1"
+    },
+    "parent_clause_id": "RPL-REG-CAL-2025:10.1"
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:10.1.tbl1.r5",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 84,
+    "heading_path": [
+      "Section 10 — Cross-References to Implementation Procedures"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "EVT-2025-0018, EVT-2025-0047 | Customer deposit records; creditworthiness | RPL-CS-PRO-004 | RPL-CS-PRO-004:9.1",
+    "row_cells": {
+      "Event ID(s)": "EVT-2025-0018, EVT-2025-0047",
+      "Regulatory Obligation": "Customer deposit records; creditworthiness",
+      "Implementation Document": "RPL-CS-PRO-004",
+      "Clause ID": "RPL-CS-PRO-004:9.1"
+    },
+    "parent_clause_id": "RPL-REG-CAL-2025:10.1"
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:10.1.tbl1.r6",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 85,
+    "heading_path": [
+      "Section 10 — Cross-References to Implementation Procedures"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "EVT-2025-0026 | Customer creditworthiness determination | RPL-CS-PRO-004 | RPL-CS-PRO-004:3.1",
+    "row_cells": {
+      "Event ID(s)": "EVT-2025-0026",
+      "Regulatory Obligation": "Customer creditworthiness determination",
+      "Implementation Document": "RPL-CS-PRO-004",
+      "Clause ID": "RPL-CS-PRO-004:3.1"
+    },
+    "parent_clause_id": "RPL-REG-CAL-2025:10.1"
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:10.1.tbl1.r7",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 86,
+    "heading_path": [
+      "Section 10 — Cross-References to Implementation Procedures"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "EVT-2025-0020 | Alternative billing method; customer pamphlet | RPL-CS-PRO-004 | RPL-CS-PRO-004:12.1",
+    "row_cells": {
+      "Event ID(s)": "EVT-2025-0020",
+      "Regulatory Obligation": "Alternative billing method; customer pamphlet",
+      "Implementation Document": "RPL-CS-PRO-004",
+      "Clause ID": "RPL-CS-PRO-004:12.1"
+    },
+    "parent_clause_id": "RPL-REG-CAL-2025:10.1"
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:10.1.tbl1.r8",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 87,
+    "heading_path": [
+      "Section 10 — Cross-References to Implementation Procedures"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "EVT-2025-0042, EVT-2025-0043 | Meter test reporting to customer; IURC-supervised tests | RPL-CS-PRO-007 | RPL-CS-PRO-007:13.1.1",
+    "row_cells": {
+      "Event ID(s)": "EVT-2025-0042, EVT-2025-0043",
+      "Regulatory Obligation": "Meter test reporting to customer; IURC-supervised tests",
+      "Implementation Document": "RPL-CS-PRO-007",
+      "Clause ID": "RPL-CS-PRO-007:13.1.1"
+    },
+    "parent_clause_id": "RPL-REG-CAL-2025:10.1"
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:10.1.tbl1.r9",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 88,
+    "heading_path": [
+      "Section 10 — Cross-References to Implementation Procedures"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "EVT-2025-0046 | Billing adjustment for meter error | RPL-CS-PRO-007 | RPL-CS-PRO-007:10.1",
+    "row_cells": {
+      "Event ID(s)": "EVT-2025-0046",
+      "Regulatory Obligation": "Billing adjustment for meter error",
+      "Implementation Document": "RPL-CS-PRO-007",
+      "Clause ID": "RPL-CS-PRO-007:10.1"
+    },
+    "parent_clause_id": "RPL-REG-CAL-2025:10.1"
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:10.1.tbl1.r10",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 89,
+    "heading_path": [
+      "Section 10 — Cross-References to Implementation Procedures"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "EVT-2025-0003, EVT-2025-0014, EVT-2025-0023, EVT-2025-0033 | Meter testing program — Method B; periodic testing | RPL-MTR-PGM-001 | RPL-MTR-PGM-001:1.1 (pending Wave 2 freeze)",
+    "row_cells": {
+      "Event ID(s)": "EVT-2025-0003, EVT-2025-0014, EVT-2025-0023, EVT-2025-0033",
+      "Regulatory Obligation": "Meter testing program — Method B; periodic testing",
+      "Implementation Document": "RPL-MTR-PGM-001",
+      "Clause ID": "RPL-MTR-PGM-001:1.1 (pending Wave 2 freeze)"
+    },
+    "parent_clause_id": "RPL-REG-CAL-2025:10.1"
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:10.1.tbl1.r11",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 90,
+    "heading_path": [
+      "Section 10 — Cross-References to Implementation Procedures"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "EVT-2025-0009, EVT-2025-0019, EVT-2025-0028, EVT-2025-0037 | Customer complaint handling and reporting | RPL-CS-PRO-011 | RPL-CS-PRO-011:1.1 (pending Wave 2 freeze)",
+    "row_cells": {
+      "Event ID(s)": "EVT-2025-0009, EVT-2025-0019, EVT-2025-0028, EVT-2025-0037",
+      "Regulatory Obligation": "Customer complaint handling and reporting",
+      "Implementation Document": "RPL-CS-PRO-011",
+      "Clause ID": "RPL-CS-PRO-011:1.1 (pending Wave 2 freeze)"
+    },
+    "parent_clause_id": "RPL-REG-CAL-2025:10.1"
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:10.1.tbl1.r12",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 91,
+    "heading_path": [
+      "Section 10 — Cross-References to Implementation Procedures"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "EVT-2025-0007, EVT-2025-0031, EVT-2025-0038 | Annual compliance program review | RPL-CMP-REG-001 | RPL-CMP-REG-001:1.1",
+    "row_cells": {
+      "Event ID(s)": "EVT-2025-0007, EVT-2025-0031, EVT-2025-0038",
+      "Regulatory Obligation": "Annual compliance program review",
+      "Implementation Document": "RPL-CMP-REG-001",
+      "Clause ID": "RPL-CMP-REG-001:1.1"
+    },
+    "parent_clause_id": "RPL-REG-CAL-2025:10.1"
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:10.1.tbl1.r13",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 92,
+    "heading_path": [
+      "Section 10 — Cross-References to Implementation Procedures"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "EVT-2025-0027, EVT-2025-0040 | Records retention; 3-year minimum; location notification | RPL-LEG-RRS-001 | RPL-LEG-RRS-001:1.1 (pending Wave 2 freeze)",
+    "row_cells": {
+      "Event ID(s)": "EVT-2025-0027, EVT-2025-0040",
+      "Regulatory Obligation": "Records retention; 3-year minimum; location notification",
+      "Implementation Document": "RPL-LEG-RRS-001",
+      "Clause ID": "RPL-LEG-RRS-001:1.1 (pending Wave 2 freeze)"
+    },
+    "parent_clause_id": "RPL-REG-CAL-2025:10.1"
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:10.1.tbl1.r14",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 93,
+    "heading_path": [
+      "Section 10 — Cross-References to Implementation Procedures"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "EVT-2025-0030 | Vegetation management program compliance | RPL-DO-PLN-002 | RPL-DO-PLN-002:2.1",
+    "row_cells": {
+      "Event ID(s)": "EVT-2025-0030",
+      "Regulatory Obligation": "Vegetation management program compliance",
+      "Implementation Document": "RPL-DO-PLN-002",
+      "Clause ID": "RPL-DO-PLN-002:2.1"
+    },
+    "parent_clause_id": "RPL-REG-CAL-2025:10.1"
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:11.1",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 94,
+    "heading_path": [
+      "Section 11 — Revision History"
+    ],
+    "unit_kind": "section",
+    "text_raw": "Section 11 — Revision History",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:11.1.tbl1.r1",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 95,
+    "heading_path": [
+      "Section 11 — Revision History"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "1.0 | 2023-03-01 | Regulatory Affairs | Initial issuance of 2023 regulatory compliance calendar for Rockridge Power & Light Company. Established baseline event structure for IURC 170 IAC Articles 1 and 4 obligations.",
+    "row_cells": {
+      "Version": "1.0",
+      "Date": "2023-03-01",
+      "Author": "Regulatory Affairs",
+      "Summary of Changes": "Initial issuance of 2023 regulatory compliance calendar for Rockridge Power & Light Company. Established baseline event structure for IURC 170 IAC Articles 1 and 4 obligations."
+    },
+    "parent_clause_id": "RPL-REG-CAL-2025:11.1"
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:11.1.tbl1.r2",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 96,
+    "heading_path": [
+      "Section 11 — Revision History"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "1.1 | 2024-02-28 | Marcus Lee (P09) | Updated to 2025 calendar year; added EVT entries for 170 IAC 4-1-10 Method B meter testing program; expanded cross-reference table; updated owner assignments per 2024 organizational chart.",
+    "row_cells": {
+      "Version": "1.1",
+      "Date": "2024-02-28",
+      "Author": "Marcus Lee (P09)",
+      "Summary of Changes": "Updated to 2025 calendar year; added EVT entries for 170 IAC 4-1-10 Method B meter testing program; expanded cross-reference table; updated owner assignments per 2024 organizational chart."
+    },
+    "parent_clause_id": "RPL-REG-CAL-2025:11.1"
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:11.1.tbl1.r3",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 97,
+    "heading_path": [
+      "Section 11 — Revision History"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "1.2 | 2025-03-14 | Marcus Lee (P09) | Added EVT-2025-0011 for lagging-at-approval remediation; expanded Q2–Q4 event coverage; added Section 10 implementation clause cross-reference table; added Appendix B owner summary. Revised by Elena Vasquez (P08); approved by Jonathan Pierce (P03).",
+    "row_cells": {
+      "Version": "1.2",
+      "Date": "2025-03-14",
+      "Author": "Marcus Lee (P09)",
+      "Summary of Changes": "Added EVT-2025-0011 for lagging-at-approval remediation; expanded Q2–Q4 event coverage; added Section 10 implementation clause cross-reference table; added Appendix B owner summary. Revised by Elena Vasquez (P08); approved by Jonathan Pierce (P03)."
+    },
+    "parent_clause_id": "RPL-REG-CAL-2025:11.1"
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:11.2",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 98,
+    "heading_path": [
+      "Section 11 — Revision History"
+    ],
+    "unit_kind": "section",
+    "text_raw": "Lagging-at-Approval Note (v1.2): Note: 170 IAC 1-6-3, 1-6-4, and 1-6-5 were amended effective 2025-01-24, prior to this document's approval date of 2025-03-14. This calendar was prepared using law as-of 2024-12-31 (Snapshot 1) and does not reflect those amendments. A v1.3 update is scheduled for Q2 2025 to incorporate the revised sections. The lagging_at_approval flag is set to true in the accompanying basis.json. Events EVT-2025-0011, EVT-2025-0013, EVT-2025-0036, EVT-2025-0044, and EVT-2025-0045 reference 170 IAC 1-6 and should be reviewed against the S2 amendments when v1.3 is prepared.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:12.1",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 99,
+    "heading_path": [
+      "Section 12 — Approval Block"
+    ],
+    "unit_kind": "section",
+    "text_raw": "Document Status: APPROVED\nEffective Date: 2025-03-17\nNext Scheduled Review: 2026-Q1 (for RPL-REG-CAL-2026 v1.0)",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:12.1.tbl1.r1",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 100,
+    "heading_path": [
+      "Section 12 — Approval Block"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "Owner | Marcus Lee, Regulatory Affairs Analyst | P09 | *[Signed]* | 2025-03-10",
+    "row_cells": {
+      "Role": "Owner",
+      "Name": "Marcus Lee, Regulatory Affairs Analyst",
+      "Person ID": "P09",
+      "Signature": "*[Signed]*",
+      "Date": "2025-03-10"
+    },
+    "parent_clause_id": "RPL-REG-CAL-2025:12.1"
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:12.1.tbl1.r2",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 101,
+    "heading_path": [
+      "Section 12 — Approval Block"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "Reviewer | Elena Vasquez, Manager Regulatory Affairs | P08 | *[Signed]* | 2025-03-12",
+    "row_cells": {
+      "Role": "Reviewer",
+      "Name": "Elena Vasquez, Manager Regulatory Affairs",
+      "Person ID": "P08",
+      "Signature": "*[Signed]*",
+      "Date": "2025-03-12"
+    },
+    "parent_clause_id": "RPL-REG-CAL-2025:12.1"
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:12.1.tbl1.r3",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 102,
+    "heading_path": [
+      "Section 12 — Approval Block"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "Approver | Jonathan Pierce, Senior Counsel Regulatory | P03 | *[Signed]* | 2025-03-14",
+    "row_cells": {
+      "Role": "Approver",
+      "Name": "Jonathan Pierce, Senior Counsel Regulatory",
+      "Person ID": "P03",
+      "Signature": "*[Signed]*",
+      "Date": "2025-03-14"
+    },
+    "parent_clause_id": "RPL-REG-CAL-2025:12.1"
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:AppA.1",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 103,
+    "heading_path": [
+      "Appendix A — Full Calendar Grid (Monthly View)"
+    ],
+    "unit_kind": "appendix",
+    "text_raw": "The following monthly grid summarizes all calendar events by month. Events marked (rolling) occur on an ongoing basis throughout the month.",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:AppA.1.tbl1.r1",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 104,
+    "heading_path": [
+      "Appendix A — Full Calendar Grid (Monthly View)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "January 2025 | EVT-2025-0001 (Jan 31), EVT-2025-0002 (Jan 31), EVT-2025-0003 (Jan 31), EVT-2025-0004 (Jan 31)",
+    "row_cells": {
+      "Month": "January 2025",
+      "Events Due": "EVT-2025-0001 (Jan 31), EVT-2025-0002 (Jan 31), EVT-2025-0003 (Jan 31), EVT-2025-0004 (Jan 31)"
+    },
+    "parent_clause_id": "RPL-REG-CAL-2025:AppA.1"
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:AppA.1.tbl1.r2",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 105,
+    "heading_path": [
+      "Appendix A — Full Calendar Grid (Monthly View)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "February 2025 | EVT-2025-0005 (Feb 14), EVT-2025-0006 (Feb 28), EVT-2025-0007 (Feb 28)",
+    "row_cells": {
+      "Month": "February 2025",
+      "Events Due": "EVT-2025-0005 (Feb 14), EVT-2025-0006 (Feb 28), EVT-2025-0007 (Feb 28)"
+    },
+    "parent_clause_id": "RPL-REG-CAL-2025:AppA.1"
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:AppA.1.tbl1.r3",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 106,
+    "heading_path": [
+      "Appendix A — Full Calendar Grid (Monthly View)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "March 2025 | EVT-2025-0008 (Mar 14), EVT-2025-0009 (Mar 31), EVT-2025-0010 (Mar 31)",
+    "row_cells": {
+      "Month": "March 2025",
+      "Events Due": "EVT-2025-0008 (Mar 14), EVT-2025-0009 (Mar 31), EVT-2025-0010 (Mar 31)"
+    },
+    "parent_clause_id": "RPL-REG-CAL-2025:AppA.1"
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:AppA.1.tbl1.r4",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 107,
+    "heading_path": [
+      "Appendix A — Full Calendar Grid (Monthly View)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "April 2025 | EVT-2025-0011 (Apr 30), EVT-2025-0012 (Apr 30), EVT-2025-0013 (Apr 30)",
+    "row_cells": {
+      "Month": "April 2025",
+      "Events Due": "EVT-2025-0011 (Apr 30), EVT-2025-0012 (Apr 30), EVT-2025-0013 (Apr 30)"
+    },
+    "parent_clause_id": "RPL-REG-CAL-2025:AppA.1"
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:AppA.1.tbl1.r5",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 108,
+    "heading_path": [
+      "Appendix A — Full Calendar Grid (Monthly View)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "May 2025 | EVT-2025-0014 (May 31), EVT-2025-0015 (May 31), EVT-2025-0016 (May 31), EVT-2025-0017 (May 31)",
+    "row_cells": {
+      "Month": "May 2025",
+      "Events Due": "EVT-2025-0014 (May 31), EVT-2025-0015 (May 31), EVT-2025-0016 (May 31), EVT-2025-0017 (May 31)"
+    },
+    "parent_clause_id": "RPL-REG-CAL-2025:AppA.1"
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:AppA.1.tbl1.r6",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 109,
+    "heading_path": [
+      "Appendix A — Full Calendar Grid (Monthly View)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "June 2025 | EVT-2025-0018 (Jun 30), EVT-2025-0019 (Jun 30), EVT-2025-0020 (Jun 30)",
+    "row_cells": {
+      "Month": "June 2025",
+      "Events Due": "EVT-2025-0018 (Jun 30), EVT-2025-0019 (Jun 30), EVT-2025-0020 (Jun 30)"
+    },
+    "parent_clause_id": "RPL-REG-CAL-2025:AppA.1"
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:AppA.1.tbl1.r7",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 110,
+    "heading_path": [
+      "Appendix A — Full Calendar Grid (Monthly View)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "July 2025 | EVT-2025-0021 (Jul 31), EVT-2025-0022 (Jul 31), EVT-2025-0023 (Jul 31)",
+    "row_cells": {
+      "Month": "July 2025",
+      "Events Due": "EVT-2025-0021 (Jul 31), EVT-2025-0022 (Jul 31), EVT-2025-0023 (Jul 31)"
+    },
+    "parent_clause_id": "RPL-REG-CAL-2025:AppA.1"
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:AppA.1.tbl1.r8",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 111,
+    "heading_path": [
+      "Appendix A — Full Calendar Grid (Monthly View)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "August 2025 | EVT-2025-0024 (Aug 29), EVT-2025-0025 (Aug 29), EVT-2025-0026 (Aug 29)",
+    "row_cells": {
+      "Month": "August 2025",
+      "Events Due": "EVT-2025-0024 (Aug 29), EVT-2025-0025 (Aug 29), EVT-2025-0026 (Aug 29)"
+    },
+    "parent_clause_id": "RPL-REG-CAL-2025:AppA.1"
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:AppA.1.tbl1.r9",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 112,
+    "heading_path": [
+      "Appendix A — Full Calendar Grid (Monthly View)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "September 2025 | EVT-2025-0027 (Sep 30), EVT-2025-0028 (Sep 30), EVT-2025-0029 (Sep 30), EVT-2025-0030 (Sep 30)",
+    "row_cells": {
+      "Month": "September 2025",
+      "Events Due": "EVT-2025-0027 (Sep 30), EVT-2025-0028 (Sep 30), EVT-2025-0029 (Sep 30), EVT-2025-0030 (Sep 30)"
+    },
+    "parent_clause_id": "RPL-REG-CAL-2025:AppA.1"
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:AppA.1.tbl1.r10",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 113,
+    "heading_path": [
+      "Appendix A — Full Calendar Grid (Monthly View)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "October 2025 | EVT-2025-0031 (Oct 31), EVT-2025-0032 (Oct 31), EVT-2025-0033 (Oct 31), EVT-2025-0034 (Oct 31)",
+    "row_cells": {
+      "Month": "October 2025",
+      "Events Due": "EVT-2025-0031 (Oct 31), EVT-2025-0032 (Oct 31), EVT-2025-0033 (Oct 31), EVT-2025-0034 (Oct 31)"
+    },
+    "parent_clause_id": "RPL-REG-CAL-2025:AppA.1"
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:AppA.1.tbl1.r11",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 114,
+    "heading_path": [
+      "Appendix A — Full Calendar Grid (Monthly View)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "November 2025 | EVT-2025-0035 (Nov 28), EVT-2025-0036 (Nov 28)",
+    "row_cells": {
+      "Month": "November 2025",
+      "Events Due": "EVT-2025-0035 (Nov 28), EVT-2025-0036 (Nov 28)"
+    },
+    "parent_clause_id": "RPL-REG-CAL-2025:AppA.1"
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:AppA.1.tbl1.r12",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 115,
+    "heading_path": [
+      "Appendix A — Full Calendar Grid (Monthly View)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "December 2025 | EVT-2025-0037 (Dec 31), EVT-2025-0038 (Dec 31), EVT-2025-0039 (Dec 31), EVT-2025-0040 (Dec 31)",
+    "row_cells": {
+      "Month": "December 2025",
+      "Events Due": "EVT-2025-0037 (Dec 31), EVT-2025-0038 (Dec 31), EVT-2025-0039 (Dec 31), EVT-2025-0040 (Dec 31)"
+    },
+    "parent_clause_id": "RPL-REG-CAL-2025:AppA.1"
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:AppA.1.tbl1.r13",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 116,
+    "heading_path": [
+      "Appendix A — Full Calendar Grid (Monthly View)"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "Rolling (all year) | EVT-2025-0041 through EVT-2025-0048",
+    "row_cells": {
+      "Month": "Rolling (all year)",
+      "Events Due": "EVT-2025-0041 through EVT-2025-0048"
+    },
+    "parent_clause_id": "RPL-REG-CAL-2025:AppA.1"
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:AppB.1",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 117,
+    "heading_path": [
+      "Appendix B — Owner Assignment Summary"
+    ],
+    "unit_kind": "appendix",
+    "text_raw": "Total discrete events: 48\nQ1 events: 10 | Q2 events: 10 | Q3 events: 10 | Q4 events: 10 | Rolling: 8\n\n*Document ID: RPL-REG-CAL-2025 | Version: 1.2 | Rockridge Power & Light Company | IURC Utility ID 99012*\n*400 Wabash Commons Drive, Lafayette, IN 47901 | www.rockridge-pl.example | 1-800-555-0142*",
+    "row_cells": null,
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:AppB.1.tbl1.r1",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 118,
+    "heading_path": [
+      "Appendix B — Owner Assignment Summary"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "P05 | David Okafor | Manager Regulatory Compliance | 3 | EVT-2025-0007, EVT-2025-0031, EVT-2025-0038",
+    "row_cells": {
+      "Owner ID": "P05",
+      "Name": "David Okafor",
+      "Title": "Manager Regulatory Compliance",
+      "Events Owned": "3",
+      "Event IDs": "EVT-2025-0007, EVT-2025-0031, EVT-2025-0038"
+    },
+    "parent_clause_id": "RPL-REG-CAL-2025:AppB.1"
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:AppB.1.tbl1.r2",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 119,
+    "heading_path": [
+      "Appendix B — Owner Assignment Summary"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "P06 | Priya Raman | Senior Compliance Analyst | 7 | EVT-2025-0002, EVT-2025-0006, EVT-2025-0012, EVT-2025-0021, EVT-2025-0026, EVT-2025-0032, EVT-2025-0041",
+    "row_cells": {
+      "Owner ID": "P06",
+      "Name": "Priya Raman",
+      "Title": "Senior Compliance Analyst",
+      "Events Owned": "7",
+      "Event IDs": "EVT-2025-0002, EVT-2025-0006, EVT-2025-0012, EVT-2025-0021, EVT-2025-0026, EVT-2025-0032, EVT-2025-0041"
+    },
+    "parent_clause_id": "RPL-REG-CAL-2025:AppB.1"
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:AppB.1.tbl1.r3",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 120,
+    "heading_path": [
+      "Appendix B — Owner Assignment Summary"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "P09 | Marcus Lee | Regulatory Affairs Analyst | 14 | EVT-2025-0001, EVT-2025-0004, EVT-2025-0005, EVT-2025-0008 (shared), EVT-2025-0011, EVT-2025-0013, EVT-2025-0017, EVT-2025-0020, EVT-2025-0022, EVT-2025-0029, EVT-2025-0036, EVT-2025-0039, EVT-2025-0040, EVT-2025-0044, EVT-2025-0045, EVT-2025-0048",
+    "row_cells": {
+      "Owner ID": "P09",
+      "Name": "Marcus Lee",
+      "Title": "Regulatory Affairs Analyst",
+      "Events Owned": "14",
+      "Event IDs": "EVT-2025-0001, EVT-2025-0004, EVT-2025-0005, EVT-2025-0008 (shared), EVT-2025-0011, EVT-2025-0013, EVT-2025-0017, EVT-2025-0020, EVT-2025-0022, EVT-2025-0029, EVT-2025-0036, EVT-2025-0039, EVT-2025-0040, EVT-2025-0044, EVT-2025-0045, EVT-2025-0048"
+    },
+    "parent_clause_id": "RPL-REG-CAL-2025:AppB.1"
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:AppB.1.tbl1.r4",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 121,
+    "heading_path": [
+      "Appendix B — Owner Assignment Summary"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "P10 | Robert Haskins | Manager Rates & Tariffs | 3 | EVT-2025-0016, EVT-2025-0024, EVT-2025-0034",
+    "row_cells": {
+      "Owner ID": "P10",
+      "Name": "Robert Haskins",
+      "Title": "Manager Rates & Tariffs",
+      "Events Owned": "3",
+      "Event IDs": "EVT-2025-0016, EVT-2025-0024, EVT-2025-0034"
+    },
+    "parent_clause_id": "RPL-REG-CAL-2025:AppB.1"
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:AppB.1.tbl1.r5",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 122,
+    "heading_path": [
+      "Appendix B — Owner Assignment Summary"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "P11 | Aisha Thompson | Senior Rates & Tariffs Analyst | 4 | EVT-2025-0008, EVT-2025-0015, EVT-2025-0025, EVT-2025-0035",
+    "row_cells": {
+      "Owner ID": "P11",
+      "Name": "Aisha Thompson",
+      "Title": "Senior Rates & Tariffs Analyst",
+      "Events Owned": "4",
+      "Event IDs": "EVT-2025-0008, EVT-2025-0015, EVT-2025-0025, EVT-2025-0035"
+    },
+    "parent_clause_id": "RPL-REG-CAL-2025:AppB.1"
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:AppB.1.tbl1.r6",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 123,
+    "heading_path": [
+      "Appendix B — Owner Assignment Summary"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "P12 | Linda Nguyen | Records & Information Manager | 1 | EVT-2025-0027",
+    "row_cells": {
+      "Owner ID": "P12",
+      "Name": "Linda Nguyen",
+      "Title": "Records & Information Manager",
+      "Events Owned": "1",
+      "Event IDs": "EVT-2025-0027"
+    },
+    "parent_clause_id": "RPL-REG-CAL-2025:AppB.1"
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:AppB.1.tbl1.r7",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 124,
+    "heading_path": [
+      "Appendix B — Owner Assignment Summary"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "P15 | Jasmine Carter | Supervisor Credit & Collections | 3 | EVT-2025-0018, EVT-2025-0041 (shared), EVT-2025-0047",
+    "row_cells": {
+      "Owner ID": "P15",
+      "Name": "Jasmine Carter",
+      "Title": "Supervisor Credit & Collections",
+      "Events Owned": "3",
+      "Event IDs": "EVT-2025-0018, EVT-2025-0041 (shared), EVT-2025-0047"
+    },
+    "parent_clause_id": "RPL-REG-CAL-2025:AppB.1"
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:AppB.1.tbl1.r8",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 125,
+    "heading_path": [
+      "Appendix B — Owner Assignment Summary"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "P17 | Brian Kowalski | Manager Customer Advocacy | 4 | EVT-2025-0009, EVT-2025-0019, EVT-2025-0028, EVT-2025-0037",
+    "row_cells": {
+      "Owner ID": "P17",
+      "Name": "Brian Kowalski",
+      "Title": "Manager Customer Advocacy",
+      "Events Owned": "4",
+      "Event IDs": "EVT-2025-0009, EVT-2025-0019, EVT-2025-0028, EVT-2025-0037"
+    },
+    "parent_clause_id": "RPL-REG-CAL-2025:AppB.1"
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:AppB.1.tbl1.r9",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 126,
+    "heading_path": [
+      "Appendix B — Owner Assignment Summary"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "P18 | Luis Hernandez | Supervisor Metering Services | 1 | EVT-2025-0046",
+    "row_cells": {
+      "Owner ID": "P18",
+      "Name": "Luis Hernandez",
+      "Title": "Supervisor Metering Services",
+      "Events Owned": "1",
+      "Event IDs": "EVT-2025-0046"
+    },
+    "parent_clause_id": "RPL-REG-CAL-2025:AppB.1"
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:AppB.1.tbl1.r10",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 127,
+    "heading_path": [
+      "Appendix B — Owner Assignment Summary"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "P19 | Gregory Walsh | Manager Meter Shop & Standards Lab | 6 | EVT-2025-0003, EVT-2025-0010, EVT-2025-0014, EVT-2025-0023, EVT-2025-0033, EVT-2025-0042, EVT-2025-0043",
+    "row_cells": {
+      "Owner ID": "P19",
+      "Name": "Gregory Walsh",
+      "Title": "Manager Meter Shop & Standards Lab",
+      "Events Owned": "6",
+      "Event IDs": "EVT-2025-0003, EVT-2025-0010, EVT-2025-0014, EVT-2025-0023, EVT-2025-0033, EVT-2025-0042, EVT-2025-0043"
+    },
+    "parent_clause_id": "RPL-REG-CAL-2025:AppB.1"
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:AppB.1.tbl1.r11",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 128,
+    "heading_path": [
+      "Appendix B — Owner Assignment Summary"
+    ],
+    "unit_kind": "table_row",
+    "text_raw": "P22 | Rachel Stein | Manager Vegetation Management | 1 | EVT-2025-0030",
+    "row_cells": {
+      "Owner ID": "P22",
+      "Name": "Rachel Stein",
+      "Title": "Manager Vegetation Management",
+      "Events Owned": "1",
+      "Event IDs": "EVT-2025-0030"
+    },
+    "parent_clause_id": "RPL-REG-CAL-2025:AppB.1"
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:EVT-2025-0001",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 129,
+    "heading_path": [
+      "Regulatory calendar events"
+    ],
+    "unit_kind": "register_row",
+    "text_raw": "Annual tariff schedule comprehensive review (due 2025-01-31). Review all IURC No. E tariff schedules on file to confirm accuracy completeness and conformance with 170 IAC 1-2 requirements. Identify any needed revisions for administrative filing.",
+    "row_cells": {
+      "event_id": "EVT-2025-0001",
+      "citation": "170 IAC 1-2-1; 170 IAC 1-2-2",
+      "event_type": "internal_review",
+      "title": "Annual tariff schedule comprehensive review",
+      "description": "Review all IURC No. E tariff schedules on file to confirm accuracy completeness and conformance with 170 IAC 1-2 requirements. Identify any needed revisions for administrative filing.",
+      "due_date": "2025-01-31",
+      "due_date_notes": "End of January; next business day if weekend/holiday",
+      "owner_id": "P09",
+      "implementation_doc": "RPL-TAR-GRR-012",
+      "implementation_clause": "RPL-TAR-GRR-012:R01.D01",
+      "status": "completed",
+      "notes": "RPL practice; precedes any Q1 administrative filing"
+    },
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:EVT-2025-0002",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 130,
+    "heading_path": [
+      "Regulatory calendar events"
+    ],
+    "unit_kind": "register_row",
+    "text_raw": "Q1 customer service billing compliance audit (due 2025-01-31). Verify that all customer bills include required elements per 170 IAC 4-1-13(a): dates/meter readings; units; rate code; minimum charge; previous balance; amount; delinquency date; estimated bill indicator; 17-day nonpenalty period statement.",
+    "row_cells": {
+      "event_id": "EVT-2025-0002",
+      "citation": "170 IAC 4-1-13",
+      "event_type": "internal_review",
+      "title": "Q1 customer service billing compliance audit",
+      "description": "Verify that all customer bills include required elements per 170 IAC 4-1-13(a): dates/meter readings; units; rate code; minimum charge; previous balance; amount; delinquency date; estimated bill indicator; 17-day nonpenalty period statement.",
+      "due_date": "2025-01-31",
+      "due_date_notes": "End of January",
+      "owner_id": "P06",
+      "implementation_doc": "RPL-CS-PRO-004",
+      "implementation_clause": "RPL-CS-PRO-004:12.1",
+      "status": "completed",
+      "notes": "Quarterly audit; Q1 focus on 17-day nonpenalty disclosure"
+    },
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:EVT-2025-0003",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 131,
+    "heading_path": [
+      "Regulatory calendar events"
+    ],
+    "unit_kind": "register_row",
+    "text_raw": "Meter testing program — annual lot draw Phase 1 (Method B) (due 2025-01-31). Draw annual sample from each homogenous lot per ANSI/ASQC Standard Z1.9 Table A-2 using Inspection Level II. Test drawn meters for accuracy.",
+    "row_cells": {
+      "event_id": "EVT-2025-0003",
+      "citation": "170 IAC 4-1-10(c)(3)",
+      "event_type": "inspection",
+      "title": "Meter testing program — annual lot draw Phase 1 (Method B)",
+      "description": "Draw annual sample from each homogenous lot per ANSI/ASQC Standard Z1.9 Table A-2 using Inspection Level II. Test drawn meters for accuracy.",
+      "due_date": "2025-01-31",
+      "due_date_notes": "End of January",
+      "owner_id": "P19",
+      "implementation_doc": "RPL-MTR-PGM-001",
+      "implementation_clause": "RPL-MTR-PGM-001:1",
+      "status": "completed",
+      "notes": "Method B adopted by RPL; sample drawn at random from each lot"
+    },
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:EVT-2025-0004",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 132,
+    "heading_path": [
+      "Regulatory calendar events"
+    ],
+    "unit_kind": "register_row",
+    "text_raw": "Customer deposit interest rate review (due 2025-01-31). Verify deposit interest rate in force is 6% per annum or IURC-prescribed rate. Update CIS configuration if IURC modifies rate. Document review.",
+    "row_cells": {
+      "event_id": "EVT-2025-0004",
+      "citation": "170 IAC 4-1-15(f)(1)",
+      "event_type": "internal_review",
+      "title": "Customer deposit interest rate review",
+      "description": "Verify deposit interest rate in force is 6% per annum or IURC-prescribed rate. Update CIS configuration if IURC modifies rate. Document review.",
+      "due_date": "2025-01-31",
+      "due_date_notes": "End of January",
+      "owner_id": "P09",
+      "implementation_doc": "RPL-CS-PRO-004",
+      "implementation_clause": "RPL-CS-PRO-004:9.1",
+      "status": "completed",
+      "notes": "Deposits held more than 12 months must accrue interest from deposit date"
+    },
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:EVT-2025-0005",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 133,
+    "heading_path": [
+      "Regulatory calendar events"
+    ],
+    "unit_kind": "register_row",
+    "text_raw": "Administrative filing procedures annual training (due 2025-02-14). Annual refresher training for Regulatory Affairs staff on 30-day administrative filing requirements including cover letter requirements contact information tariff sheets and work papers per 170 IAC 1-6-5(a).",
+    "row_cells": {
+      "event_id": "EVT-2025-0005",
+      "citation": "170 IAC 1-6-5",
+      "event_type": "internal_review",
+      "title": "Administrative filing procedures annual training",
+      "description": "Annual refresher training for Regulatory Affairs staff on 30-day administrative filing requirements including cover letter requirements contact information tariff sheets and work papers per 170 IAC 1-6-5(a).",
+      "due_date": "2025-02-14",
+      "due_date_notes": "Mid-February; next business day if holiday",
+      "owner_id": "P09",
+      "implementation_doc": "",
+      "implementation_clause": "",
+      "status": "scheduled",
+      "notes": "Includes review of prohibited filings per 170 IAC 1-6-4 and allowable filings per 170 IAC 1-6-3"
+    },
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:EVT-2025-0006",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 134,
+    "heading_path": [
+      "Regulatory calendar events"
+    ],
+    "unit_kind": "register_row",
+    "text_raw": "Q1 compliance review — disconnection and reconnection procedures (due 2025-02-28). Review disconnection and reconnection compliance statistics. Coordinate with Credit & Collections (P15) to verify proper notice procedures and timelines. Document findings.",
+    "row_cells": {
+      "event_id": "EVT-2025-0006",
+      "citation": "170 IAC 4-1-16; 170 IAC 4-1-17",
+      "event_type": "internal_review",
+      "title": "Q1 compliance review — disconnection and reconnection procedures",
+      "description": "Review disconnection and reconnection compliance statistics. Coordinate with Credit & Collections (P15) to verify proper notice procedures and timelines. Document findings.",
+      "due_date": "2025-02-28",
+      "due_date_notes": "End of February",
+      "owner_id": "P06",
+      "implementation_doc": "RPL-CS-PRO-004",
+      "implementation_clause": "RPL-CS-PRO-004:8.1",
+      "status": "completed",
+      "notes": "Coordinate with P15 Jasmine Carter; see RPL-CS-PRO-004 Section 8"
+    },
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:EVT-2025-0007",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 135,
+    "heading_path": [
+      "Regulatory calendar events"
+    ],
+    "unit_kind": "register_row",
+    "text_raw": "Annual compliance program self-assessment — scope setting (due 2025-02-28). Establish scope methodology and responsible parties for full-year compliance program review. Define assessment criteria against 170 IAC requirements. See RPL-CMP-REG-001.",
+    "row_cells": {
+      "event_id": "EVT-2025-0007",
+      "citation": "170 IAC 1-6-1; IC 8-1-2",
+      "event_type": "internal_review",
+      "title": "Annual compliance program self-assessment — scope setting",
+      "description": "Establish scope methodology and responsible parties for full-year compliance program review. Define assessment criteria against 170 IAC requirements. See RPL-CMP-REG-001.",
+      "due_date": "2025-02-28",
+      "due_date_notes": "End of February",
+      "owner_id": "P05",
+      "implementation_doc": "RPL-CMP-REG-001",
+      "implementation_clause": "",
+      "status": "completed",
+      "notes": "Scope document routed to P04 (CCO) for concurrence"
+    },
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:EVT-2025-0008",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 136,
+    "heading_path": [
+      "Regulatory calendar events"
+    ],
+    "unit_kind": "register_row",
+    "text_raw": "Tariff schedule accuracy verification — IURC No. E schedules (due 2025-03-14). Verify all tariff schedules filed with IURC are internally consistent include all rules regulations and formulas that affect rates and conform to 170 IAC 1-2-2 and 170 IAC 1-5-16 formatting requirements.",
+    "row_cells": {
+      "event_id": "EVT-2025-0008",
+      "citation": "170 IAC 1-2-2; 170 IAC 1-5-16",
+      "event_type": "internal_review",
+      "title": "Tariff schedule accuracy verification — IURC No. E schedules",
+      "description": "Verify all tariff schedules filed with IURC are internally consistent include all rules regulations and formulas that affect rates and conform to 170 IAC 1-2-2 and 170 IAC 1-5-16 formatting requirements.",
+      "due_date": "2025-03-14",
+      "due_date_notes": "Calendar approval date",
+      "owner_id": "P11",
+      "implementation_doc": "RPL-TAR-GRR-012",
+      "implementation_clause": "RPL-TAR-GRR-012:R02.1",
+      "status": "completed",
+      "notes": "Shared with P09; findings reported to P10 (Manager Rates & Tariffs)"
+    },
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:EVT-2025-0009",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 137,
+    "heading_path": [
+      "Regulatory calendar events"
+    ],
+    "unit_kind": "register_row",
+    "text_raw": "Q1 complaint resolution rate reporting (due 2025-03-31). Compile Q1 customer complaint statistics including total complaints received time-to-resolution rates escalations to IURC and outcomes. See RPL-CS-PRO-011.",
+    "row_cells": {
+      "event_id": "EVT-2025-0009",
+      "citation": "170 IAC 4-1-13; IC 8-1-2",
+      "event_type": "reporting",
+      "title": "Q1 complaint resolution rate reporting",
+      "description": "Compile Q1 customer complaint statistics including total complaints received time-to-resolution rates escalations to IURC and outcomes. See RPL-CS-PRO-011.",
+      "due_date": "2025-03-31",
+      "due_date_notes": "End of March",
+      "owner_id": "P17",
+      "implementation_doc": "RPL-CS-PRO-011",
+      "implementation_clause": "RPL-CS-PRO-011:1.1",
+      "status": "completed",
+      "notes": "Internal report; copy to P09 and P08"
+    },
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:EVT-2025-0010",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 138,
+    "heading_path": [
+      "Regulatory calendar events"
+    ],
+    "unit_kind": "register_row",
+    "text_raw": "Reference standards certification check — biennial due diligence (due 2025-03-31). Verify that all reference standards (indicating instruments wattmeters watthour meters) have been tested and adjusted within the prior two years by a recognized standardizing laboratory. Schedule recertification if overdue.",
+    "row_cells": {
+      "event_id": "EVT-2025-0010",
+      "citation": "170 IAC 4-1-7(C)",
+      "event_type": "inspection",
+      "title": "Reference standards certification check — biennial due diligence",
+      "description": "Verify that all reference standards (indicating instruments wattmeters watthour meters) have been tested and adjusted within the prior two years by a recognized standardizing laboratory. Schedule recertification if overdue.",
+      "due_date": "2025-03-31",
+      "due_date_notes": "End of March",
+      "owner_id": "P19",
+      "implementation_doc": "RPL-MTR-PGM-001",
+      "implementation_clause": "",
+      "status": "completed",
+      "notes": "Biennial requirement; records of certification kept per 170 IAC 4-1-7(F)"
+    },
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:EVT-2025-0011",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 139,
+    "heading_path": [
+      "Regulatory calendar events"
+    ],
+    "unit_kind": "register_row",
+    "text_raw": "v1.3 calendar update — incorporate S2 amendments to 170 IAC 1-6-3/4/5 (due 2025-04-30). Prepare v1.3 update to this calendar incorporating amendments to 170 IAC 1-6-3 (allowable filings) 1-6-4 (prohibited filings) and 1-6-5 (filing requirements) that became effective 2025-01-24. Route through standard review/approval cycle.",
+    "row_cells": {
+      "event_id": "EVT-2025-0011",
+      "citation": "170 IAC 1-6-3; 170 IAC 1-6-4; 170 IAC 1-6-5",
+      "event_type": "internal_review",
+      "title": "v1.3 calendar update — incorporate S2 amendments to 170 IAC 1-6-3/4/5",
+      "description": "Prepare v1.3 update to this calendar incorporating amendments to 170 IAC 1-6-3 (allowable filings) 1-6-4 (prohibited filings) and 1-6-5 (filing requirements) that became effective 2025-01-24. Route through standard review/approval cycle.",
+      "due_date": "2025-04-30",
+      "due_date_notes": "End of April",
+      "owner_id": "P09",
+      "implementation_doc": "",
+      "implementation_clause": "",
+      "status": "scheduled",
+      "notes": "Lagging-at-approval remediation event; S2 effective 2025-01-24; O-3 not applied to v1.2"
+    },
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:EVT-2025-0012",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 140,
+    "heading_path": [
+      "Regulatory calendar events"
+    ],
+    "unit_kind": "register_row",
+    "text_raw": "Q2 customer service billing compliance audit (due 2025-04-30). Quarterly billing audit. Q2 focus: verify estimated bill identification coding on bills per 170 IAC 4-1-13(a)(9) and alternative billing method availability notice per 170 IAC 4-1-13(f)(2).",
+    "row_cells": {
+      "event_id": "EVT-2025-0012",
+      "citation": "170 IAC 4-1-13",
+      "event_type": "internal_review",
+      "title": "Q2 customer service billing compliance audit",
+      "description": "Quarterly billing audit. Q2 focus: verify estimated bill identification coding on bills per 170 IAC 4-1-13(a)(9) and alternative billing method availability notice per 170 IAC 4-1-13(f)(2).",
+      "due_date": "2025-04-30",
+      "due_date_notes": "End of April",
+      "owner_id": "P06",
+      "implementation_doc": "RPL-CS-PRO-004",
+      "implementation_clause": "RPL-CS-PRO-004:12.1",
+      "status": "scheduled",
+      "notes": "Quarterly cadence; results to P09 and P08"
+    },
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:EVT-2025-0013",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 141,
+    "heading_path": [
+      "Regulatory calendar events"
+    ],
+    "unit_kind": "register_row",
+    "text_raw": "Administrative filing window review — Q2 (due 2025-04-30). Review pipeline of potential administrative filings for Q2-Q3. Confirm each is an allowable filing under 170 IAC 1-6-3. Prepare timeline for any needed filings including 30-day notice window.",
+    "row_cells": {
+      "event_id": "EVT-2025-0013",
+      "citation": "170 IAC 1-6-1; 170 IAC 1-6-3",
+      "event_type": "internal_review",
+      "title": "Administrative filing window review — Q2",
+      "description": "Review pipeline of potential administrative filings for Q2-Q3. Confirm each is an allowable filing under 170 IAC 1-6-3. Prepare timeline for any needed filings including 30-day notice window.",
+      "due_date": "2025-04-30",
+      "due_date_notes": "End of April",
+      "owner_id": "P09",
+      "implementation_doc": "",
+      "implementation_clause": "",
+      "status": "scheduled",
+      "notes": "Check that no prohibited filing per 170 IAC 1-6-4 is misclassified as administrative"
+    },
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:EVT-2025-0014",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 142,
+    "heading_path": [
+      "Regulatory calendar events"
+    ],
+    "unit_kind": "register_row",
+    "text_raw": "Meter testing program — Method B lot results review (due 2025-05-31). Evaluate lot acceptance/rejection using Double Specification Limit Standard Deviation Method per ANSI/ASQC Z1.9 Table B-3 at 2.50 AQL. Document lot disposition. Initiate accelerated testing for rejected lots per 170 IAC 4-1-10(c)(7).",
+    "row_cells": {
+      "event_id": "EVT-2025-0014",
+      "citation": "170 IAC 4-1-10(c)(6)",
+      "event_type": "inspection",
+      "title": "Meter testing program — Method B lot results review",
+      "description": "Evaluate lot acceptance/rejection using Double Specification Limit Standard Deviation Method per ANSI/ASQC Z1.9 Table B-3 at 2.50 AQL. Document lot disposition. Initiate accelerated testing for rejected lots per 170 IAC 4-1-10(c)(7).",
+      "due_date": "2025-05-31",
+      "due_date_notes": "End of May",
+      "owner_id": "P19",
+      "implementation_doc": "RPL-MTR-PGM-001",
+      "implementation_clause": "RPL-MTR-PGM-001:1",
+      "status": "scheduled",
+      "notes": "Accelerated testing for rejected lots must complete within 96 months"
+    },
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:EVT-2025-0015",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 143,
+    "heading_path": [
+      "Regulatory calendar events"
+    ],
+    "unit_kind": "register_row",
+    "text_raw": "Mid-year tariff schedule review (due 2025-05-31). Semi-annual review of all IURC No. E tariff schedules. Confirm schedules are complete include all formulas and are consistent with rates in effect. Document findings for annual tariff file.",
+    "row_cells": {
+      "event_id": "EVT-2025-0015",
+      "citation": "170 IAC 1-2-1; 170 IAC 1-2-2",
+      "event_type": "internal_review",
+      "title": "Mid-year tariff schedule review",
+      "description": "Semi-annual review of all IURC No. E tariff schedules. Confirm schedules are complete include all formulas and are consistent with rates in effect. Document findings for annual tariff file.",
+      "due_date": "2025-05-31",
+      "due_date_notes": "End of May",
+      "owner_id": "P11",
+      "implementation_doc": "RPL-TAR-GRR-012",
+      "implementation_clause": "RPL-TAR-GRR-012:R01.D01",
+      "status": "scheduled",
+      "notes": "Second of two annual tariff reviews"
+    },
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:EVT-2025-0016",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 144,
+    "heading_path": [
+      "Regulatory calendar events"
+    ],
+    "unit_kind": "register_row",
+    "text_raw": "Rate case readiness review (due 2025-05-31). Assess financial metrics and regulatory status to determine whether a general rate case filing is warranted in 2025 or 2026. Review 10-month expedited timeline requirements. See RPL-TAR-GRR-012.",
+    "row_cells": {
+      "event_id": "EVT-2025-0016",
+      "citation": "170 IAC 1-5-2; 170 IAC 1-5-2.1",
+      "event_type": "internal_review",
+      "title": "Rate case readiness review",
+      "description": "Assess financial metrics and regulatory status to determine whether a general rate case filing is warranted in 2025 or 2026. Review 10-month expedited timeline requirements. See RPL-TAR-GRR-012.",
+      "due_date": "2025-05-31",
+      "due_date_notes": "End of May",
+      "owner_id": "P10",
+      "implementation_doc": "RPL-TAR-GRR-012",
+      "implementation_clause": "RPL-TAR-GRR-012:R03.1",
+      "status": "scheduled",
+      "notes": "Report findings to P07 (VP Regulatory & Government Affairs) and P03"
+    },
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:EVT-2025-0017",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 145,
+    "heading_path": [
+      "Regulatory calendar events"
+    ],
+    "unit_kind": "register_row",
+    "text_raw": "IURC electronic portal access verification (due 2025-05-31). Confirm all Regulatory Affairs staff have current credentials for IURC electronic filing portal at iurc.portal.in.gov. Update access list. Coordinate with IT for any credential resets.",
+    "row_cells": {
+      "event_id": "EVT-2025-0017",
+      "citation": "170 IAC 1-6-5(c)(1)",
+      "event_type": "internal_review",
+      "title": "IURC electronic portal access verification",
+      "description": "Confirm all Regulatory Affairs staff have current credentials for IURC electronic filing portal at iurc.portal.in.gov. Update access list. Coordinate with IT for any credential resets.",
+      "due_date": "2025-05-31",
+      "due_date_notes": "End of May",
+      "owner_id": "P09",
+      "implementation_doc": "",
+      "implementation_clause": "",
+      "status": "scheduled",
+      "notes": "Filing portal used per 170 IAC 1-7-3(b) for electronic submissions"
+    },
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:EVT-2025-0018",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 146,
+    "heading_path": [
+      "Regulatory calendar events"
+    ],
+    "unit_kind": "register_row",
+    "text_raw": "Customer deposit records annual audit (due 2025-06-30). Verify deposit records include: customer name; current address; deposit amount; date; and all transaction records. Review unclaimed deposits held over 1 year for abandonment processing per 170 IAC 4-1-15(g)(6).",
+    "row_cells": {
+      "event_id": "EVT-2025-0018",
+      "citation": "170 IAC 4-1-15(g)(4)",
+      "event_type": "internal_review",
+      "title": "Customer deposit records annual audit",
+      "description": "Verify deposit records include: customer name; current address; deposit amount; date; and all transaction records. Review unclaimed deposits held over 1 year for abandonment processing per 170 IAC 4-1-15(g)(6).",
+      "due_date": "2025-06-30",
+      "due_date_notes": "End of June",
+      "owner_id": "P15",
+      "implementation_doc": "RPL-CS-PRO-004",
+      "implementation_clause": "RPL-CS-PRO-004:9.1",
+      "status": "scheduled",
+      "notes": "Annual audit; results to P14 (Director Customer Operations)"
+    },
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:EVT-2025-0019",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 147,
+    "heading_path": [
+      "Regulatory calendar events"
+    ],
+    "unit_kind": "register_row",
+    "text_raw": "Q2 complaint resolution rate reporting (due 2025-06-30). Compile Q2 customer complaint statistics. Internal metric report. See RPL-CS-PRO-011.",
+    "row_cells": {
+      "event_id": "EVT-2025-0019",
+      "citation": "170 IAC 4-1-13; IC 8-1-2",
+      "event_type": "reporting",
+      "title": "Q2 complaint resolution rate reporting",
+      "description": "Compile Q2 customer complaint statistics. Internal metric report. See RPL-CS-PRO-011.",
+      "due_date": "2025-06-30",
+      "due_date_notes": "End of June",
+      "owner_id": "P17",
+      "implementation_doc": "RPL-CS-PRO-011",
+      "implementation_clause": "RPL-CS-PRO-011:1.1",
+      "status": "scheduled",
+      "notes": "Internal report; copy to P09 and P08"
+    },
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:EVT-2025-0020",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 148,
+    "heading_path": [
+      "Regulatory calendar events"
+    ],
+    "unit_kind": "register_row",
+    "text_raw": "Alternative billing method review (due 2025-06-30). Confirm alternative billing method (budget billing) is included in IURC-approved tariff per 170 IAC 4-1-13(f)(1). Verify notice of availability is included in customer pamphlet per 170 IAC 4-1-13(f)(2).",
+    "row_cells": {
+      "event_id": "EVT-2025-0020",
+      "citation": "170 IAC 4-1-13(f)",
+      "event_type": "internal_review",
+      "title": "Alternative billing method review",
+      "description": "Confirm alternative billing method (budget billing) is included in IURC-approved tariff per 170 IAC 4-1-13(f)(1). Verify notice of availability is included in customer pamphlet per 170 IAC 4-1-13(f)(2).",
+      "due_date": "2025-06-30",
+      "due_date_notes": "End of June",
+      "owner_id": "P09",
+      "implementation_doc": "RPL-CS-PRO-004",
+      "implementation_clause": "RPL-CS-PRO-004:12.1",
+      "status": "scheduled",
+      "notes": "RPL practice; annual review cycle"
+    },
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:EVT-2025-0021",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 149,
+    "heading_path": [
+      "Regulatory calendar events"
+    ],
+    "unit_kind": "register_row",
+    "text_raw": "Q3 customer service billing compliance audit (due 2025-07-31). Quarterly billing audit. Q3 focus: spot-check delinquency notification timing (17 days after postmark per 170 IAC 4-1-13(c)) and late payment charge calculation (not to exceed 10% of first $3 and 3% of excess).",
+    "row_cells": {
+      "event_id": "EVT-2025-0021",
+      "citation": "170 IAC 4-1-13",
+      "event_type": "internal_review",
+      "title": "Q3 customer service billing compliance audit",
+      "description": "Quarterly billing audit. Q3 focus: spot-check delinquency notification timing (17 days after postmark per 170 IAC 4-1-13(c)) and late payment charge calculation (not to exceed 10% of first $3 and 3% of excess).",
+      "due_date": "2025-07-31",
+      "due_date_notes": "End of July",
+      "owner_id": "P06",
+      "implementation_doc": "RPL-CS-PRO-004",
+      "implementation_clause": "RPL-CS-PRO-004:12.1",
+      "status": "scheduled",
+      "notes": "Quarterly cadence"
+    },
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:EVT-2025-0022",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 150,
+    "heading_path": [
+      "Regulatory calendar events"
+    ],
+    "unit_kind": "register_row",
+    "text_raw": "Administrative filing window review — Q3 (due 2025-07-31). Review pipeline of potential administrative filings for Q4 2025 and Q1 2026. Confirm allowable filing classification. Prepare filing timeline including OUCC service requirements.",
+    "row_cells": {
+      "event_id": "EVT-2025-0022",
+      "citation": "170 IAC 1-6-1; 170 IAC 1-6-3",
+      "event_type": "internal_review",
+      "title": "Administrative filing window review — Q3",
+      "description": "Review pipeline of potential administrative filings for Q4 2025 and Q1 2026. Confirm allowable filing classification. Prepare filing timeline including OUCC service requirements.",
+      "due_date": "2025-07-31",
+      "due_date_notes": "End of July",
+      "owner_id": "P09",
+      "implementation_doc": "",
+      "implementation_clause": "",
+      "status": "scheduled",
+      "notes": "Flag any potential prohibited filings under 170 IAC 1-6-4 for routing to general rate case instead"
+    },
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:EVT-2025-0023",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 151,
+    "heading_path": [
+      "Regulatory calendar events"
+    ],
+    "unit_kind": "register_row",
+    "text_raw": "Meter testing program — Phase 2 lot draw (if required) (due 2025-07-31). If lot schedule requires second annual draw: draw sample from designated lots. Test for accuracy against ANSI/ASQC Z1.9 criteria.",
+    "row_cells": {
+      "event_id": "EVT-2025-0023",
+      "citation": "170 IAC 4-1-10(c)(3)",
+      "event_type": "inspection",
+      "title": "Meter testing program — Phase 2 lot draw (if required)",
+      "description": "If lot schedule requires second annual draw: draw sample from designated lots. Test for accuracy against ANSI/ASQC Z1.9 criteria.",
+      "due_date": "2025-07-31",
+      "due_date_notes": "End of July",
+      "owner_id": "P19",
+      "implementation_doc": "RPL-MTR-PGM-001",
+      "implementation_clause": "RPL-MTR-PGM-001:1",
+      "status": "scheduled",
+      "notes": "Second draw applicable only if lot schedule calls for mid-year sampling"
+    },
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:EVT-2025-0024",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 152,
+    "heading_path": [
+      "Regulatory calendar events"
+    ],
+    "unit_kind": "register_row",
+    "text_raw": "Rate case data review — rate base cutoff preparation (due 2025-08-29). Prepare test year and plant cutoff date analysis for potential rate case filing. Compile rate base data including plant in service accumulated depreciation and working capital per 170 IAC 1-5-9 and 1-5-10.",
+    "row_cells": {
+      "event_id": "EVT-2025-0024",
+      "citation": "170 IAC 1-5-9; 170 IAC 1-5-10",
+      "event_type": "internal_review",
+      "title": "Rate case data review — rate base cutoff preparation",
+      "description": "Prepare test year and plant cutoff date analysis for potential rate case filing. Compile rate base data including plant in service accumulated depreciation and working capital per 170 IAC 1-5-9 and 1-5-10.",
+      "due_date": "2025-08-29",
+      "due_date_notes": "Aug 29 (next business day following Aug 28 cutoff)",
+      "owner_id": "P10",
+      "implementation_doc": "RPL-TAR-GRR-012",
+      "implementation_clause": "RPL-TAR-GRR-012:R04.1",
+      "status": "scheduled",
+      "notes": "Rate base cutoff data supports readiness review from EVT-2025-0016"
+    },
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:EVT-2025-0025",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 153,
+    "heading_path": [
+      "Regulatory calendar events"
+    ],
+    "unit_kind": "register_row",
+    "text_raw": "Tariff schedule — new service rates review (due 2025-08-29). Review whether any new service types introduced in 2025 require new rate filings under 170 IAC 1-6-3(1). Confirm administrative filing process is appropriate for each new rate.",
+    "row_cells": {
+      "event_id": "EVT-2025-0025",
+      "citation": "170 IAC 1-6-3(1)",
+      "event_type": "internal_review",
+      "title": "Tariff schedule — new service rates review",
+      "description": "Review whether any new service types introduced in 2025 require new rate filings under 170 IAC 1-6-3(1). Confirm administrative filing process is appropriate for each new rate.",
+      "due_date": "2025-08-29",
+      "due_date_notes": "Aug 29 (Friday; next business day after Aug 28)",
+      "owner_id": "P11",
+      "implementation_doc": "RPL-TAR-GRR-012",
+      "implementation_clause": "RPL-TAR-GRR-012:R05.1",
+      "status": "scheduled",
+      "notes": "New rate must not be an increase to existing rate (prohibited per 170 IAC 1-6-4(1))"
+    },
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:EVT-2025-0026",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 154,
+    "heading_path": [
+      "Regulatory calendar events"
+    ],
+    "unit_kind": "register_row",
+    "text_raw": "Customer creditworthiness standards annual review (due 2025-08-29). Review RPL's creditworthiness determination procedures for equity and nondiscrimination compliance. Confirm determination criteria do not consider area economic character. Verify two-year customer history and employment criteria are applied consistently.",
+    "row_cells": {
+      "event_id": "EVT-2025-0026",
+      "citation": "170 IAC 4-1-15(a); 170 IAC 4-1-15(b)",
+      "event_type": "internal_review",
+      "title": "Customer creditworthiness standards annual review",
+      "description": "Review RPL's creditworthiness determination procedures for equity and nondiscrimination compliance. Confirm determination criteria do not consider area economic character. Verify two-year customer history and employment criteria are applied consistently.",
+      "due_date": "2025-08-29",
+      "due_date_notes": "Aug 29 (Friday)",
+      "owner_id": "P06",
+      "implementation_doc": "RPL-CS-PRO-004",
+      "implementation_clause": "RPL-CS-PRO-004:3.1",
+      "status": "scheduled",
+      "notes": "Annual review; findings to P14 and P04"
+    },
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:EVT-2025-0027",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 155,
+    "heading_path": [
+      "Regulatory calendar events"
+    ],
+    "unit_kind": "register_row",
+    "text_raw": "Records retention compliance check (due 2025-09-30). Verify all records required under 170 IAC 4-1 (meter test records billing records deposit records) are retained for minimum 3 years and stored at RPL's principal place of business or IURC-notified location. See RPL-LEG-RRS-001.",
+    "row_cells": {
+      "event_id": "EVT-2025-0027",
+      "citation": "170 IAC 4-1-3",
+      "event_type": "internal_review",
+      "title": "Records retention compliance check",
+      "description": "Verify all records required under 170 IAC 4-1 (meter test records billing records deposit records) are retained for minimum 3 years and stored at RPL's principal place of business or IURC-notified location. See RPL-LEG-RRS-001.",
+      "due_date": "2025-09-30",
+      "due_date_notes": "End of September",
+      "owner_id": "P12",
+      "implementation_doc": "RPL-LEG-RRS-001",
+      "implementation_clause": "",
+      "status": "scheduled",
+      "notes": "Annual records audit; coordinate with P19 (meter records) and P15 (deposit records)"
+    },
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:EVT-2025-0028",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 156,
+    "heading_path": [
+      "Regulatory calendar events"
+    ],
+    "unit_kind": "register_row",
+    "text_raw": "Q3 complaint resolution rate reporting (due 2025-09-30). Compile Q3 customer complaint statistics. Internal metric report. See RPL-CS-PRO-011.",
+    "row_cells": {
+      "event_id": "EVT-2025-0028",
+      "citation": "170 IAC 4-1-13; IC 8-1-2",
+      "event_type": "reporting",
+      "title": "Q3 complaint resolution rate reporting",
+      "description": "Compile Q3 customer complaint statistics. Internal metric report. See RPL-CS-PRO-011.",
+      "due_date": "2025-09-30",
+      "due_date_notes": "End of September",
+      "owner_id": "P17",
+      "implementation_doc": "RPL-CS-PRO-011",
+      "implementation_clause": "RPL-CS-PRO-011:1.1",
+      "status": "scheduled",
+      "notes": "Internal report; copy to P09 and P08"
+    },
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:EVT-2025-0029",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 157,
+    "heading_path": [
+      "Regulatory calendar events"
+    ],
+    "unit_kind": "register_row",
+    "text_raw": "OUCC communication log review (due 2025-09-30). Review and document all OUCC correspondence for 2025 year to date. Confirm same-day service was provided for all applicable rate case and administrative filings. Retain file per RPL-LEG-RRS-001.",
+    "row_cells": {
+      "event_id": "EVT-2025-0029",
+      "citation": "170 IAC 1-5-4(e)(1); 170 IAC 1-6-5(b)",
+      "event_type": "internal_review",
+      "title": "OUCC communication log review",
+      "description": "Review and document all OUCC correspondence for 2025 year to date. Confirm same-day service was provided for all applicable rate case and administrative filings. Retain file per RPL-LEG-RRS-001.",
+      "due_date": "2025-09-30",
+      "due_date_notes": "End of September",
+      "owner_id": "P09",
+      "implementation_doc": "",
+      "implementation_clause": "",
+      "status": "scheduled",
+      "notes": "OUCC served same day as IURC per 170 IAC 1-5-4(e)(1) and 170 IAC 1-6-5(b)"
+    },
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:EVT-2025-0030",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 158,
+    "heading_path": [
+      "Regulatory calendar events"
+    ],
+    "unit_kind": "register_row",
+    "text_raw": "Vegetation management program compliance review (due 2025-09-30). Annual review of RPL's vegetation management program compliance with IURC service standards and applicable requirements. Coordinate with contractor performance data. See RPL-DO-PLN-002.",
+    "row_cells": {
+      "event_id": "EVT-2025-0030",
+      "citation": "170 IAC 4-1-2; IC 8-1-2",
+      "event_type": "internal_review",
+      "title": "Vegetation management program compliance review",
+      "description": "Annual review of RPL's vegetation management program compliance with IURC service standards and applicable requirements. Coordinate with contractor performance data. See RPL-DO-PLN-002.",
+      "due_date": "2025-09-30",
+      "due_date_notes": "End of September",
+      "owner_id": "P22",
+      "implementation_doc": "RPL-DO-PLN-002",
+      "implementation_clause": "RPL-DO-PLN-002:2.1",
+      "status": "scheduled",
+      "notes": "RPL practice; coordinate with P21 (Director Distribution Operations)"
+    },
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:EVT-2025-0031",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 159,
+    "heading_path": [
+      "Regulatory calendar events"
+    ],
+    "unit_kind": "register_row",
+    "text_raw": "Annual regulatory compliance self-assessment (due 2025-10-31). Full-year compliance review per RPL-CMP-REG-001 covering all 170 IAC Articles 1 and 4 obligations. Document findings risks and remediation items. Transmit to P04 (Chief Compliance Officer).",
+    "row_cells": {
+      "event_id": "EVT-2025-0031",
+      "citation": "IC 8-1-2; 170 IAC 1-6; 170 IAC 4-1",
+      "event_type": "internal_review",
+      "title": "Annual regulatory compliance self-assessment",
+      "description": "Full-year compliance review per RPL-CMP-REG-001 covering all 170 IAC Articles 1 and 4 obligations. Document findings risks and remediation items. Transmit to P04 (Chief Compliance Officer).",
+      "due_date": "2025-10-31",
+      "due_date_notes": "End of October",
+      "owner_id": "P05",
+      "implementation_doc": "RPL-CMP-REG-001",
+      "implementation_clause": "",
+      "status": "scheduled",
+      "notes": "Major annual milestone; results inform 2026 compliance calendar"
+    },
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:EVT-2025-0032",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 160,
+    "heading_path": [
+      "Regulatory calendar events"
+    ],
+    "unit_kind": "register_row",
+    "text_raw": "Q4 customer service billing compliance audit (due 2025-10-31). Quarterly billing audit. Q4 focus: year-end review of all bill content requirements and verification that no prohibited bill transfers occurred per 170 IAC 4-1-13(b).",
+    "row_cells": {
+      "event_id": "EVT-2025-0032",
+      "citation": "170 IAC 4-1-13",
+      "event_type": "internal_review",
+      "title": "Q4 customer service billing compliance audit",
+      "description": "Quarterly billing audit. Q4 focus: year-end review of all bill content requirements and verification that no prohibited bill transfers occurred per 170 IAC 4-1-13(b).",
+      "due_date": "2025-10-31",
+      "due_date_notes": "End of October",
+      "owner_id": "P06",
+      "implementation_doc": "RPL-CS-PRO-004",
+      "implementation_clause": "RPL-CS-PRO-004:12.1",
+      "status": "scheduled",
+      "notes": "Fourth and final quarterly audit"
+    },
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:EVT-2025-0033",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 161,
+    "heading_path": [
+      "Regulatory calendar events"
+    ],
+    "unit_kind": "register_row",
+    "text_raw": "Annual meter testing program summary report (due 2025-10-31). Compile full-year meter test results for all lots. Prepare tabulation by accuracy groups per 170 IAC 4-1-4(c) if required by commission. Retain records for IURC examination per 170 IAC 4-1-10(c)(9).",
+    "row_cells": {
+      "event_id": "EVT-2025-0033",
+      "citation": "170 IAC 4-1-10(c)(9); 170 IAC 4-1-4(c)",
+      "event_type": "reporting",
+      "title": "Annual meter testing program summary report",
+      "description": "Compile full-year meter test results for all lots. Prepare tabulation by accuracy groups per 170 IAC 4-1-4(c) if required by commission. Retain records for IURC examination per 170 IAC 4-1-10(c)(9).",
+      "due_date": "2025-10-31",
+      "due_date_notes": "End of October",
+      "owner_id": "P19",
+      "implementation_doc": "RPL-MTR-PGM-001",
+      "implementation_clause": "RPL-MTR-PGM-001:1",
+      "status": "scheduled",
+      "notes": "Annual summary; retain in meter shop records; available for IURC inspection"
+    },
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:EVT-2025-0034",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 162,
+    "heading_path": [
+      "Regulatory calendar events"
+    ],
+    "unit_kind": "register_row",
+    "text_raw": "Rate case — annual feasibility review and board briefing (due 2025-10-31). Evaluate whether to initiate general rate case in 2026 based on financial metrics and regulatory landscape. Prepare case-in-chief data exhibits per 170 IAC 1-5-6 as scenario analysis. Brief P07 and P01.",
+    "row_cells": {
+      "event_id": "EVT-2025-0034",
+      "citation": "170 IAC 1-5-2; 170 IAC 1-5-6",
+      "event_type": "internal_review",
+      "title": "Rate case — annual feasibility review and board briefing",
+      "description": "Evaluate whether to initiate general rate case in 2026 based on financial metrics and regulatory landscape. Prepare case-in-chief data exhibits per 170 IAC 1-5-6 as scenario analysis. Brief P07 and P01.",
+      "due_date": "2025-10-31",
+      "due_date_notes": "End of October",
+      "owner_id": "P10",
+      "implementation_doc": "RPL-TAR-GRR-012",
+      "implementation_clause": "RPL-TAR-GRR-012:R03.1",
+      "status": "scheduled",
+      "notes": "Decision point for 2026 planning; 10-month expected timeline per 170 IAC 1-5-2.1(a)"
+    },
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:EVT-2025-0035",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 163,
+    "heading_path": [
+      "Regulatory calendar events"
+    ],
+    "unit_kind": "register_row",
+    "text_raw": "Year-end tariff schedule comprehensive review (due 2025-11-28). Year-end review of all IURC No. E tariff schedules. Confirm all schedules remain accurate complete and consistent. Identify any needed updates for Q1 2026 administrative filings.",
+    "row_cells": {
+      "event_id": "EVT-2025-0035",
+      "citation": "170 IAC 1-2-1; 170 IAC 1-2-2",
+      "event_type": "internal_review",
+      "title": "Year-end tariff schedule comprehensive review",
+      "description": "Year-end review of all IURC No. E tariff schedules. Confirm all schedules remain accurate complete and consistent. Identify any needed updates for Q1 2026 administrative filings.",
+      "due_date": "2025-11-28",
+      "due_date_notes": "Nov 28 — last business day before Thanksgiving holiday break (Nov 27-28 are RPL holidays)",
+      "owner_id": "P11",
+      "implementation_doc": "RPL-TAR-GRR-012",
+      "implementation_clause": "RPL-TAR-GRR-012:R01.D01",
+      "status": "scheduled",
+      "notes": "Advanced to Nov 28 to avoid Thanksgiving closure"
+    },
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:EVT-2025-0036",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 164,
+    "heading_path": [
+      "Regulatory calendar events"
+    ],
+    "unit_kind": "register_row",
+    "text_raw": "Administrative filing — pre-2026 nonrecurring charge review (due 2025-11-28). Review all nonrecurring charges (deposits returned-check fees reconnect fees tap fees) against IURC-approved tariff. Determine whether any administrative update filing needed before year-end.",
+    "row_cells": {
+      "event_id": "EVT-2025-0036",
+      "citation": "170 IAC 1-6-3(4); 170 IAC 1-6-2(11)",
+      "event_type": "internal_review",
+      "title": "Administrative filing — pre-2026 nonrecurring charge review",
+      "description": "Review all nonrecurring charges (deposits returned-check fees reconnect fees tap fees) against IURC-approved tariff. Determine whether any administrative update filing needed before year-end.",
+      "due_date": "2025-11-28",
+      "due_date_notes": "Nov 28 (last business day before holiday break)",
+      "owner_id": "P09",
+      "implementation_doc": "RPL-CS-PRO-004",
+      "implementation_clause": "RPL-CS-PRO-004:9.1",
+      "status": "scheduled",
+      "notes": "Nonrecurring charges defined in 170 IAC 1-6-2(11)"
+    },
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:EVT-2025-0037",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 165,
+    "heading_path": [
+      "Regulatory calendar events"
+    ],
+    "unit_kind": "register_row",
+    "text_raw": "Customer complaint annual summary — regulatory affairs copy (due 2025-12-31). Compile annual customer complaint summary for regulatory file. Include total complaints IURC referrals resolutions and trends. See RPL-CS-PRO-011.",
+    "row_cells": {
+      "event_id": "EVT-2025-0037",
+      "citation": "170 IAC 4-1-13; IC 8-1-2",
+      "event_type": "reporting",
+      "title": "Customer complaint annual summary — regulatory affairs copy",
+      "description": "Compile annual customer complaint summary for regulatory file. Include total complaints IURC referrals resolutions and trends. See RPL-CS-PRO-011.",
+      "due_date": "2025-12-31",
+      "due_date_notes": "End of year",
+      "owner_id": "P17",
+      "implementation_doc": "RPL-CS-PRO-011",
+      "implementation_clause": "RPL-CS-PRO-011:1.1",
+      "status": "scheduled",
+      "notes": "Annual regulatory file copy; original complaint records per RPL-CS-PRO-011"
+    },
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:EVT-2025-0038",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 166,
+    "heading_path": [
+      "Regulatory calendar events"
+    ],
+    "unit_kind": "register_row",
+    "text_raw": "Annual compliance summary — transmit to CCO and Senior Counsel (due 2025-12-31). Transmit final annual compliance summary to P04 (Chief Compliance Officer) and P03 (Senior Counsel Regulatory). Include all material compliance findings for 2025.",
+    "row_cells": {
+      "event_id": "EVT-2025-0038",
+      "citation": "IC 8-1-2; 170 IAC 1-6; 170 IAC 4-1",
+      "event_type": "reporting",
+      "title": "Annual compliance summary — transmit to CCO and Senior Counsel",
+      "description": "Transmit final annual compliance summary to P04 (Chief Compliance Officer) and P03 (Senior Counsel Regulatory). Include all material compliance findings for 2025.",
+      "due_date": "2025-12-31",
+      "due_date_notes": "End of year",
+      "owner_id": "P05",
+      "implementation_doc": "RPL-CMP-REG-001",
+      "implementation_clause": "",
+      "status": "scheduled",
+      "notes": "Companion to EVT-2025-0031; formal transmittal document"
+    },
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:EVT-2025-0039",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 167,
+    "heading_path": [
+      "Regulatory calendar events"
+    ],
+    "unit_kind": "register_row",
+    "text_raw": "2026 regulatory compliance calendar — draft preparation (due 2025-12-31). Begin draft of RPL-REG-CAL-2026 v1.0 incorporating any regulatory changes from 2025 including S2 amendments. Target Q1 2026 approval.",
+    "row_cells": {
+      "event_id": "EVT-2025-0039",
+      "citation": "170 IAC 1-2; 170 IAC 1-5; 170 IAC 1-6; 170 IAC 4-1",
+      "event_type": "internal_review",
+      "title": "2026 regulatory compliance calendar — draft preparation",
+      "description": "Begin draft of RPL-REG-CAL-2026 v1.0 incorporating any regulatory changes from 2025 including S2 amendments. Target Q1 2026 approval.",
+      "due_date": "2025-12-31",
+      "due_date_notes": "End of year",
+      "owner_id": "P09",
+      "implementation_doc": "",
+      "implementation_clause": "",
+      "status": "scheduled",
+      "notes": "RPL practice; draft for review by P08 in January 2026"
+    },
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:EVT-2025-0040",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 168,
+    "heading_path": [
+      "Regulatory calendar events"
+    ],
+    "unit_kind": "register_row",
+    "text_raw": "Year-end records location notification to IURC (due 2025-12-31). If RPL's records location has changed during 2025 notify IURC of new office location at which required records are kept per 170 IAC 4-1-3.",
+    "row_cells": {
+      "event_id": "EVT-2025-0040",
+      "citation": "170 IAC 4-1-3",
+      "event_type": "notice",
+      "title": "Year-end records location notification to IURC",
+      "description": "If RPL's records location has changed during 2025 notify IURC of new office location at which required records are kept per 170 IAC 4-1-3.",
+      "due_date": "2025-12-31",
+      "due_date_notes": "End of year",
+      "owner_id": "P09",
+      "implementation_doc": "RPL-LEG-RRS-001",
+      "implementation_clause": "",
+      "status": "scheduled",
+      "notes": "Required only if location changed; document either way for compliance file"
+    },
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:EVT-2025-0041",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 169,
+    "heading_path": [
+      "Regulatory calendar events"
+    ],
+    "unit_kind": "register_row",
+    "text_raw": "Disconnection and reconnection compliance monitoring (due ongoing). Monthly monitoring of disconnection and reconnection procedures for compliance with required notice timelines and procedures. Report anomalies to P09.",
+    "row_cells": {
+      "event_id": "EVT-2025-0041",
+      "citation": "170 IAC 4-1-16; 170 IAC 4-1-17",
+      "event_type": "inspection",
+      "title": "Disconnection and reconnection compliance monitoring",
+      "description": "Monthly monitoring of disconnection and reconnection procedures for compliance with required notice timelines and procedures. Report anomalies to P09.",
+      "due_date": "ongoing",
+      "due_date_notes": "Monthly; rolling throughout 2025",
+      "owner_id": "P15",
+      "implementation_doc": "RPL-CS-PRO-004",
+      "implementation_clause": "RPL-CS-PRO-004:8.1",
+      "status": "scheduled",
+      "notes": "Coordinate with metering services (P18) for field-side compliance"
+    },
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:EVT-2025-0042",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 170,
+    "heading_path": [
+      "Regulatory calendar events"
+    ],
+    "unit_kind": "register_row",
+    "text_raw": "Meter test report delivery — customer requests (due ongoing). Deliver written report of meter test results to requesting customer within 10 days of test completion. Retain complete record on file per 170 IAC 4-1-11(d).",
+    "row_cells": {
+      "event_id": "EVT-2025-0042",
+      "citation": "170 IAC 4-1-11(d)",
+      "event_type": "reporting",
+      "title": "Meter test report delivery — customer requests",
+      "description": "Deliver written report of meter test results to requesting customer within 10 days of test completion. Retain complete record on file per 170 IAC 4-1-11(d).",
+      "due_date": "ongoing",
+      "due_date_notes": "Within 10 days of each test completion",
+      "owner_id": "P19",
+      "implementation_doc": "RPL-CS-PRO-007",
+      "implementation_clause": "RPL-CS-PRO-007:13.1.1",
+      "status": "scheduled",
+      "notes": "Customer appeal window is 5 days from report date per 170 IAC 4-1-11(e)"
+    },
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:EVT-2025-0043",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 171,
+    "heading_path": [
+      "Regulatory calendar events"
+    ],
+    "unit_kind": "register_row",
+    "text_raw": "Customer meter test — IURC-supervised testing coordination (due ongoing). Upon IURC notification of customer application for commission-supervised meter test: do not remove or alter meter until test complete. Coordinate with IURC staff on mutually agreed conditions per 170 IAC 4-1-12(b).",
+    "row_cells": {
+      "event_id": "EVT-2025-0043",
+      "citation": "170 IAC 4-1-12",
+      "event_type": "inspection",
+      "title": "Customer meter test — IURC-supervised testing coordination",
+      "description": "Upon IURC notification of customer application for commission-supervised meter test: do not remove or alter meter until test complete. Coordinate with IURC staff on mutually agreed conditions per 170 IAC 4-1-12(b).",
+      "due_date": "ongoing",
+      "due_date_notes": "Per IURC notification; rolling",
+      "owner_id": "P19",
+      "implementation_doc": "RPL-CS-PRO-007",
+      "implementation_clause": "RPL-CS-PRO-007:13.1.1",
+      "status": "scheduled",
+      "notes": "No fee chargeable to customer except as permitted under 170 IAC 4-1-11(b)"
+    },
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:EVT-2025-0044",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 172,
+    "heading_path": [
+      "Regulatory calendar events"
+    ],
+    "unit_kind": "register_row",
+    "text_raw": "30-day administrative filing monitoring (due ongoing). For each administrative filing submitted under 170 IAC 1-6: monitor 30-day IURC objection period from file-stamp date. Flag any objections received under section 7 of 170 IAC 1-6. Track approval or denial.",
+    "row_cells": {
+      "event_id": "EVT-2025-0044",
+      "citation": "170 IAC 1-6-1(d)",
+      "event_type": "filing",
+      "title": "30-day administrative filing monitoring",
+      "description": "For each administrative filing submitted under 170 IAC 1-6: monitor 30-day IURC objection period from file-stamp date. Flag any objections received under section 7 of 170 IAC 1-6. Track approval or denial.",
+      "due_date": "ongoing",
+      "due_date_notes": "Per filing; 30-day window from each IURC file-stamp date",
+      "owner_id": "P09",
+      "implementation_doc": "",
+      "implementation_clause": "",
+      "status": "scheduled",
+      "notes": "30 days is minimum approval period; additional time may be required per 170 IAC 1-6-1(d)"
+    },
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:EVT-2025-0045",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 173,
+    "heading_path": [
+      "Regulatory calendar events"
+    ],
+    "unit_kind": "register_row",
+    "text_raw": "OUCC same-day service — administrative filings (due ongoing). For each administrative filing submitted to IURC under 170 IAC 1-6: provide copy to OUCC on same day as IURC filing per 170 IAC 1-6-5(b). Document service confirmation.",
+    "row_cells": {
+      "event_id": "EVT-2025-0045",
+      "citation": "170 IAC 1-6-5(b)",
+      "event_type": "filing",
+      "title": "OUCC same-day service — administrative filings",
+      "description": "For each administrative filing submitted to IURC under 170 IAC 1-6: provide copy to OUCC on same day as IURC filing per 170 IAC 1-6-5(b). Document service confirmation.",
+      "due_date": "ongoing",
+      "due_date_notes": "Same day as each IURC administrative filing",
+      "owner_id": "P09",
+      "implementation_doc": "",
+      "implementation_clause": "",
+      "status": "scheduled",
+      "notes": "Electronic or paper service acceptable per 170 IAC 1-6-5(c)"
+    },
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:EVT-2025-0046",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 174,
+    "heading_path": [
+      "Regulatory calendar events"
+    ],
+    "unit_kind": "register_row",
+    "text_raw": "Billing adjustment processing — meter errors (due ongoing). When a meter is found to have error exceeding 3% (watthour) or 4% (demand): process billing adjustment per 170 IAC 4-1-14(A). Fast meter: refund or credit. Slow/stopped meter: may charge customer for up to 1 year or half the period since last test.",
+    "row_cells": {
+      "event_id": "EVT-2025-0046",
+      "citation": "170 IAC 4-1-14(A)",
+      "event_type": "reporting",
+      "title": "Billing adjustment processing — meter errors",
+      "description": "When a meter is found to have error exceeding 3% (watthour) or 4% (demand): process billing adjustment per 170 IAC 4-1-14(A). Fast meter: refund or credit. Slow/stopped meter: may charge customer for up to 1 year or half the period since last test.",
+      "due_date": "ongoing",
+      "due_date_notes": "Per occurrence; rolling",
+      "owner_id": "P18",
+      "implementation_doc": "RPL-CS-PRO-007",
+      "implementation_clause": "RPL-CS-PRO-007:10.1",
+      "status": "scheduled",
+      "notes": "Retroactive adjustment period: shorter of actual known period or 1 year"
+    },
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:EVT-2025-0047",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 175,
+    "heading_path": [
+      "Regulatory calendar events"
+    ],
+    "unit_kind": "register_row",
+    "text_raw": "Deposit interest accrual monitoring (due ongoing). Monthly verification that customer deposits held more than 12 months are accruing interest at 6% per annum from deposit date in CIS. Correct any accrual errors.",
+    "row_cells": {
+      "event_id": "EVT-2025-0047",
+      "citation": "170 IAC 4-1-15(f)(1)",
+      "event_type": "reporting",
+      "title": "Deposit interest accrual monitoring",
+      "description": "Monthly verification that customer deposits held more than 12 months are accruing interest at 6% per annum from deposit date in CIS. Correct any accrual errors.",
+      "due_date": "ongoing",
+      "due_date_notes": "Monthly verification; rolling",
+      "owner_id": "P15",
+      "implementation_doc": "RPL-CS-PRO-004",
+      "implementation_clause": "RPL-CS-PRO-004:9.1",
+      "status": "scheduled",
+      "notes": "Interest accrual stops when deposit is mailed or delivered to customer per 170 IAC 4-1-15(f)(2)"
+    },
+    "parent_clause_id": null
+  },
+  {
+    "clause_id": "RPL-REG-CAL-2025:EVT-2025-0048",
+    "doc_id": "RPL-REG-CAL-2025",
+    "ordinal": 176,
+    "heading_path": [
+      "Regulatory calendar events"
+    ],
+    "unit_kind": "register_row",
+    "text_raw": "Schedule filing receipt acknowledgment tracking (due ongoing). For any tariff schedule filing where acknowledgment is requested: transmit letter of transmittal in duplicate. Track receipt of stamped copy from IURC Secretary per 170 IAC 1-2-9.",
+    "row_cells": {
+      "event_id": "EVT-2025-0048",
+      "citation": "170 IAC 1-2-9",
+      "event_type": "filing",
+      "title": "Schedule filing receipt acknowledgment tracking",
+      "description": "For any tariff schedule filing where acknowledgment is requested: transmit letter of transmittal in duplicate. Track receipt of stamped copy from IURC Secretary per 170 IAC 1-2-9.",
+      "due_date": "ongoing",
+      "due_date_notes": "Per filing where acknowledgment requested",
+      "owner_id": "P09",
+      "implementation_doc": "",
+      "implementation_clause": "",
+      "status": "scheduled",
+      "notes": "Track in document control system; retain stamped copy per RPL-LEG-RRS-001"
+    },
+    "parent_clause_id": null
+  }
+]

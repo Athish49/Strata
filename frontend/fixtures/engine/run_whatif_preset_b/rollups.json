@@ -1,0 +1,64 @@
+[
+  {
+    "run_id": "run_whatif_preset_b",
+    "doc_id": "RPL-CS-PRO-004",
+    "status": "flagged",
+    "counts_by_verdict": {
+      "action_required": 1,
+      "update_citation": 4,
+      "review": 2
+    },
+    "changes_considered": 1,
+    "considered_by_class": {
+      "repealed": 1
+    },
+    "cleared_reason": null
+  },
+  {
+    "run_id": "run_whatif_preset_b",
+    "doc_id": "RPL-TAR-GRR-012",
+    "status": "flagged",
+    "counts_by_verdict": {
+      "review": 1,
+      "update_citation": 1
+    },
+    "changes_considered": 1,
+    "considered_by_class": {
+      "repealed": 1
+    },
+    "cleared_reason": null
+  },
+  {
+    "run_id": "run_whatif_preset_b",
+    "doc_id": "RPL-CMP-REG-001",
+    "status": "cleared",
+    "counts_by_verdict": {},
+    "changes_considered": 1,
+    "considered_by_class": {
+      "repealed": 1
+    },
+    "cleared_reason": "The register row cites the parent rule 170 IAC 4-1-16 and does not mention the repealed section."
+  },
+  {
+    "run_id": "run_whatif_preset_b",
+    "doc_id": "RPL-REG-CAL-2025",
+    "status": "cleared",
+    "counts_by_verdict": {},
+    "changes_considered": 1,
+    "considered_by_class": {
+      "repealed": 1
+    },
+    "cleared_reason": "The monitoring event cites 170 IAC 4-1-16 and 4-1-17, not the repealed section."
+  },
+  {
+    "run_id": "run_whatif_preset_b",
+    "doc_id": "RPL-CS-PRO-011",
+    "status": "cleared",
+    "counts_by_verdict": {},
+    "changes_considered": 1,
+    "considered_by_class": {
+      "repealed": 1
+    },
+    "cleared_reason": "No clause conflicts with the change"
+  }
+]

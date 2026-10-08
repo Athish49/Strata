@@ -1,0 +1,45 @@
+{
+  "run_id": "run_whatif_preset_a",
+  "kind": "whatif",
+  "title": "170 IAC 4-1-16: notice period 14 → 20 days",
+  "status": "succeeded",
+  "started_at": "2026-10-07T14:02:11Z",
+  "finished_at": "2026-10-07T14:02:12Z",
+  "scenario_id": "scn_preset_a",
+  "progress": null,
+  "stats": {
+    "changes_raw": 1,
+    "by_class": {
+      "substantive": 1
+    },
+    "substantive": 1,
+    "noise": 0,
+    "in_footprint": 1,
+    "obligation_changed": 1,
+    "candidates_by_path": {
+      "direct_section": 25,
+      "register_hop": 3,
+      "value_echo": 6,
+      "direct_rule": 2
+    },
+    "findings_by_verdict": {
+      "review": 5,
+      "action_required": 6,
+      "update_citation": 1,
+      "info": 3
+    },
+    "clauses_cleared": 21,
+    "docs_flagged": 5,
+    "docs_cleared": 1,
+    "radar": {
+      "applicable": 0,
+      "screened_out": 0,
+      "unclear": 0
+    },
+    "decided_by": {
+      "rule": 12,
+      "ai": 3
+    },
+    "llm_calls": 10
+  }
+}

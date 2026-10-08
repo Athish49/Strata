@@ -1,0 +1,463 @@
+[
+  {
+    "candidate_id": "cand_b_001",
+    "run_id": "run_whatif_preset_b",
+    "change_id": "chg_whatif_b_001",
+    "clause_id": "RPL-CS-PRO-004:10.2",
+    "doc_id": "RPL-CS-PRO-004",
+    "match_path": "direct_section",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-16.6",
+        "label": "170 IAC 4-1-16.6"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-004:10.2",
+        "label": "RPL-CS-PRO-004 §10.2"
+      }
+    ],
+    "outcome": "affected",
+    "skip_reason": null,
+    "rationale": "Section 10.2 presents the winter protection as a legal requirement and cites the repealed subsection as its basis. RPL must decide whether to keep the protection as company policy and, if so, restate its authority.",
+    "finding_id": "f_b_001"
+  },
+  {
+    "candidate_id": "cand_b_002",
+    "run_id": "run_whatif_preset_b",
+    "change_id": "chg_whatif_b_001",
+    "clause_id": "RPL-CS-PRO-004:10.3",
+    "doc_id": "RPL-CS-PRO-004",
+    "match_path": "direct_section",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-16.6",
+        "label": "170 IAC 4-1-16.6"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-004:10.3",
+        "label": "RPL-CS-PRO-004 §10.3"
+      }
+    ],
+    "outcome": "affected",
+    "skip_reason": null,
+    "rationale": "Application-pending protection cites subsection (b) of the repealed section. Remove or replace the citation once the policy decision for 10.2 is made.",
+    "finding_id": "f_b_002"
+  },
+  {
+    "candidate_id": "cand_b_003",
+    "run_id": "run_whatif_preset_b",
+    "change_id": "chg_whatif_b_001",
+    "clause_id": "RPL-CS-PRO-004:10.8",
+    "doc_id": "RPL-CS-PRO-004",
+    "match_path": "direct_section",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-16.6",
+        "label": "170 IAC 4-1-16.6"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-004:10.8",
+        "label": "RPL-CS-PRO-004 §10.8"
+      }
+    ],
+    "outcome": "affected",
+    "skip_reason": null,
+    "rationale": "The exceptions to winter protection cite subsection (c) of the repealed section.",
+    "finding_id": "f_b_003"
+  },
+  {
+    "candidate_id": "cand_b_004",
+    "run_id": "run_whatif_preset_b",
+    "change_id": "chg_whatif_b_001",
+    "clause_id": "RPL-CS-PRO-004:T7-6",
+    "doc_id": "RPL-CS-PRO-004",
+    "match_path": "direct_section",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-16.6",
+        "label": "170 IAC 4-1-16.6"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-004:T7-6",
+        "label": "RPL-CS-PRO-004 table T7-6"
+      }
+    ],
+    "outcome": "affected",
+    "skip_reason": null,
+    "rationale": "The eligibility decision-table row blocks disconnection of energy-assistance recipients and cites the repealed subsection.",
+    "finding_id": "f_b_004"
+  },
+  {
+    "candidate_id": "cand_b_005",
+    "run_id": "run_whatif_preset_b",
+    "change_id": "chg_whatif_b_001",
+    "clause_id": "RPL-CS-PRO-004:T7-7",
+    "doc_id": "RPL-CS-PRO-004",
+    "match_path": "direct_section",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-16.6",
+        "label": "170 IAC 4-1-16.6"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-004:T7-7",
+        "label": "RPL-CS-PRO-004 table T7-7"
+      }
+    ],
+    "outcome": "affected",
+    "skip_reason": null,
+    "rationale": "The decision-table row for pending applications cites the repealed subsection (b).",
+    "finding_id": "f_b_005"
+  },
+  {
+    "candidate_id": "cand_b_006",
+    "run_id": "run_whatif_preset_b",
+    "change_id": "chg_whatif_b_001",
+    "clause_id": "RPL-CS-PRO-004:T4-5",
+    "doc_id": "RPL-CS-PRO-004",
+    "match_path": "direct_section",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-16.6",
+        "label": "170 IAC 4-1-16.6"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-004:T4-5",
+        "label": "RPL-CS-PRO-004 table T4-5"
+      }
+    ],
+    "outcome": "affected",
+    "skip_reason": null,
+    "rationale": "The Regulatory Basis table lists the repealed section as authority for clauses 10.1 through 10.8. Review the table after those clauses are resolved.",
+    "finding_id": "f_b_006"
+  },
+  {
+    "candidate_id": "cand_b_007",
+    "run_id": "run_whatif_preset_b",
+    "change_id": "chg_whatif_b_001",
+    "clause_id": "RPL-CS-PRO-004:App-D.F5",
+    "doc_id": "RPL-CS-PRO-004",
+    "match_path": "register_hop",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-16.6",
+        "label": "170 IAC 4-1-16.6"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-004:10.2",
+        "label": "RPL-CS-PRO-004 §10.2"
+      },
+      {
+        "kind": "form_field",
+        "ref": "RPL-CS-PRO-004:App-D.F5",
+        "label": "Protection confirmation letter App-D.F5"
+      }
+    ],
+    "outcome": "affected",
+    "skip_reason": null,
+    "rationale": "The customer-facing protection confirmation letter tells the customer that RPL may not disconnect them, citing the repealed section. Wording depends on the decision for clause 10.2.",
+    "finding_id": "f_b_007"
+  },
+  {
+    "candidate_id": "cand_b_008",
+    "run_id": "run_whatif_preset_b",
+    "change_id": "chg_whatif_b_001",
+    "clause_id": "RPL-TAR-GRR-012:R13.6",
+    "doc_id": "RPL-TAR-GRR-012",
+    "match_path": "direct_section",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-16.6",
+        "label": "170 IAC 4-1-16.6"
+      },
+      {
+        "kind": "tariff_rule",
+        "ref": "RPL-TAR-GRR-012:R13.6",
+        "label": "RPL-TAR-GRR-012 rule R13.6"
+      }
+    ],
+    "outcome": "affected",
+    "skip_reason": null,
+    "rationale": "The LIHEAP Winter Moratorium tariff rule is authorised by the repealed section. The tariff is on file with the commission, so any change needs a filing and cannot be made by editing the procedure alone.",
+    "finding_id": "f_b_008"
+  },
+  {
+    "candidate_id": "cand_b_009",
+    "run_id": "run_whatif_preset_b",
+    "change_id": "chg_whatif_b_001",
+    "clause_id": "RPL-TAR-GRR-012:R01.D25",
+    "doc_id": "RPL-TAR-GRR-012",
+    "match_path": "direct_section",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-16.6",
+        "label": "170 IAC 4-1-16.6"
+      },
+      {
+        "kind": "tariff_rule",
+        "ref": "RPL-TAR-GRR-012:R01.D25",
+        "label": "RPL-TAR-GRR-012 rule R01.D25"
+      }
+    ],
+    "outcome": "affected",
+    "skip_reason": null,
+    "rationale": "The LIHEAP definition points customers to the repealed section as a source of winter protections.",
+    "finding_id": "f_b_009"
+  },
+  {
+    "candidate_id": "cand_b_010",
+    "run_id": "run_whatif_preset_b",
+    "change_id": "chg_whatif_b_001",
+    "clause_id": "RPL-CS-PRO-004:1.2",
+    "doc_id": "RPL-CS-PRO-004",
+    "match_path": "direct_section",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-16.6",
+        "label": "170 IAC 4-1-16.6"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-004:1.2",
+        "label": "RPL-CS-PRO-004 §1.2"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "scope_statement",
+    "rationale": "Scope sentence lists the rules the procedure supports. No requirement depends on it; the citation is covered by the fixes to 10.2 through 10.8.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand_b_011",
+    "run_id": "run_whatif_preset_b",
+    "change_id": "chg_whatif_b_001",
+    "clause_id": "RPL-CS-PRO-004:T4-4",
+    "doc_id": "RPL-CS-PRO-004",
+    "match_path": "direct_rule",
+    "path_detail": [
+      {
+        "kind": "rule",
+        "ref": "170 IAC 4-1",
+        "label": "170 IAC 4-1"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-004:T4-4",
+        "label": "RPL-CS-PRO-004 table T4-4"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "different_section",
+    "rationale": "Regulatory-basis row for the parent rule 170 IAC 4-1-16, which is not repealed.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand_b_012",
+    "run_id": "run_whatif_preset_b",
+    "change_id": "chg_whatif_b_001",
+    "clause_id": "RPL-CS-PRO-004:3.11",
+    "doc_id": "RPL-CS-PRO-004",
+    "match_path": "value_echo",
+    "path_detail": [
+      {
+        "kind": "section",
+        "ref": "170 IAC 4-1-16.6",
+        "label": "170 IAC 4-1-16.6"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-004:3.11",
+        "label": "RPL-CS-PRO-004 §3.11"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "independent_authority",
+    "rationale": "Defines an energy assistance recipient by status under IC 4-4-33, which remains in force.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand_b_013",
+    "run_id": "run_whatif_preset_b",
+    "change_id": "chg_whatif_b_001",
+    "clause_id": "RPL-CS-PRO-004:T7-5",
+    "doc_id": "RPL-CS-PRO-004",
+    "match_path": "direct_rule",
+    "path_detail": [
+      {
+        "kind": "rule",
+        "ref": "170 IAC 4-1",
+        "label": "170 IAC 4-1"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-004:T7-5",
+        "label": "RPL-CS-PRO-004 table T7-5"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "different_section",
+    "rationale": "Decision-table row for second medical certificate under 170 IAC 4-1-16(c).",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand_b_014",
+    "run_id": "run_whatif_preset_b",
+    "change_id": "chg_whatif_b_001",
+    "clause_id": "RPL-CMP-REG-001:OBL-2024-0036",
+    "doc_id": "RPL-CMP-REG-001",
+    "match_path": "direct_rule",
+    "path_detail": [
+      {
+        "kind": "rule",
+        "ref": "170 IAC 4-1",
+        "label": "170 IAC 4-1"
+      },
+      {
+        "kind": "register_row",
+        "ref": "RPL-CMP-REG-001:OBL-2024-0036",
+        "label": "RPL-CMP-REG-001 row OBL-2024-0036"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "different_section",
+    "rationale": "Register row cites 170 IAC 4-1-16 (disconnection rules), not the repealed section. The notes column mentions the winter moratorium but the obligation itself is not affected.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand_b_015",
+    "run_id": "run_whatif_preset_b",
+    "change_id": "chg_whatif_b_001",
+    "clause_id": "RPL-CMP-REG-001:A.1.tbl1.r4",
+    "doc_id": "RPL-CMP-REG-001",
+    "match_path": "direct_rule",
+    "path_detail": [
+      {
+        "kind": "rule",
+        "ref": "170 IAC 4-1",
+        "label": "170 IAC 4-1"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CMP-REG-001:A.1.tbl1.r4",
+        "label": "RPL-CMP-REG-001 table A.1.tbl1.r4"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "different_section",
+    "rationale": "Excerpt row cites 170 IAC 4-1-16 only.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand_b_016",
+    "run_id": "run_whatif_preset_b",
+    "change_id": "chg_whatif_b_001",
+    "clause_id": "RPL-REG-CAL-2025:EVT-2025-0041",
+    "doc_id": "RPL-REG-CAL-2025",
+    "match_path": "direct_rule",
+    "path_detail": [
+      {
+        "kind": "rule",
+        "ref": "170 IAC 4-1",
+        "label": "170 IAC 4-1"
+      },
+      {
+        "kind": "register_row",
+        "ref": "RPL-REG-CAL-2025:EVT-2025-0041",
+        "label": "RPL-REG-CAL-2025 row EVT-2025-0041"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "different_section",
+    "rationale": "Monitoring event cites 170 IAC 4-1-16 and 4-1-17; winter protection is not mentioned.",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand_b_017",
+    "run_id": "run_whatif_preset_b",
+    "change_id": "chg_whatif_b_001",
+    "clause_id": "RPL-TAR-GRR-012:R13.2",
+    "doc_id": "RPL-TAR-GRR-012",
+    "match_path": "direct_rule",
+    "path_detail": [
+      {
+        "kind": "rule",
+        "ref": "170 IAC 4-1",
+        "label": "170 IAC 4-1"
+      },
+      {
+        "kind": "tariff_rule",
+        "ref": "RPL-TAR-GRR-012:R13.2",
+        "label": "RPL-TAR-GRR-012 rule R13.2"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "different_section",
+    "rationale": "Cites 170 IAC 4-1-16(b) (hazard or fraud disconnection).",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand_b_018",
+    "run_id": "run_whatif_preset_b",
+    "change_id": "chg_whatif_b_001",
+    "clause_id": "RPL-TAR-GRR-012:R13.7",
+    "doc_id": "RPL-TAR-GRR-012",
+    "match_path": "direct_rule",
+    "path_detail": [
+      {
+        "kind": "rule",
+        "ref": "170 IAC 4-1",
+        "label": "170 IAC 4-1"
+      },
+      {
+        "kind": "tariff_rule",
+        "ref": "RPL-TAR-GRR-012:R13.7",
+        "label": "RPL-TAR-GRR-012 rule R13.7"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "different_section",
+    "rationale": "Cites 170 IAC 4-1-16(c) (medical postponement).",
+    "finding_id": null
+  },
+  {
+    "candidate_id": "cand_b_019",
+    "run_id": "run_whatif_preset_b",
+    "change_id": "chg_whatif_b_001",
+    "clause_id": "RPL-CS-PRO-011:T4-4",
+    "doc_id": "RPL-CS-PRO-011",
+    "match_path": "direct_rule",
+    "path_detail": [
+      {
+        "kind": "rule",
+        "ref": "170 IAC 4-1",
+        "label": "170 IAC 4-1"
+      },
+      {
+        "kind": "clause",
+        "ref": "RPL-CS-PRO-011:T4-4",
+        "label": "RPL-CS-PRO-011 table T4-4"
+      }
+    ],
+    "outcome": "cleared",
+    "skip_reason": "different_section",
+    "rationale": "Regulatory-basis row for complaint handling under 170 IAC 4-1-16; the repealed section is not referenced.",
+    "finding_id": null
+  }
+]
