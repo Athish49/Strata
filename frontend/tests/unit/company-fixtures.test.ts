@@ -8,31 +8,30 @@ const DIR = path.resolve(__dirname, "../../fixtures/company");
 const load = (f: string) => JSON.parse(readFileSync(path.join(DIR, f), "utf8"));
 
 const VERTICALS = [
-  "compliance-legal",
-  "policy-governance",
-  "financial-reporting",
-  "revenue-pricing",
-  "operations-processes",
-  "technology-systems",
-  "workforce-hr",
-  "environmental-esg",
-  "supply-chain-procurement",
-  "risk-insurance",
-  "strategic-competitive",
-  "reputational-stakeholder",
-  "contractual-third-party",
-  "capital-infrastructure",
+  "corporate-governance-board",
+  "compliance-ethics",
+  "legal-contractual",
+  "financial-compliance-reporting",
+  "tax-trade-compliance",
+  "workforce-employment",
+  "health-safety",
+  "data-privacy-cybersecurity",
+  "environmental-sustainability",
+  "operations-quality",
+  "information-technology-records",
+  "supply-chain-third-party-risk",
+  "policy-training-management",
+  "risk-resilience",
 ];
 const EMPTY_VERTICALS = [
-  "financial-reporting",
-  "revenue-pricing",
-  "technology-systems",
-  "supply-chain-procurement",
-  "risk-insurance",
-  "strategic-competitive",
-  "reputational-stakeholder",
-  "contractual-third-party",
-  "capital-infrastructure",
+  "corporate-governance-board",
+  "legal-contractual",
+  "tax-trade-compliance",
+  "workforce-employment",
+  "data-privacy-cybersecurity",
+  "supply-chain-third-party-risk",
+  "policy-training-management",
+  "risk-resilience",
 ];
 
 const people = (load("people.json") as unknown[]).map((p) => personSchema.parse(p));
@@ -74,20 +73,36 @@ describe("company fixtures", () => {
     }
   });
 
-  it("uses only the 14 vertical slugs; the 9 empty verticals hold 2-3 unmonitored samples", () => {
+  it("uses only the 14 vertical slugs; the 8 empty verticals hold only unmonitored samples", () => {
     for (const d of docs) expect(VERTICALS).toContain(d.vertical);
+    // Sample rows were rebalanced so every one of the 14 verticals (including the 8 that have no
+    // backend mapping and so can never hold a real/monitored document) has at least 2 sample docs.
+    // These are the exact per-vertical sample counts after that rebalance; update them deliberately
+    // if SAMPLES in build-fixtures.ts changes again.
+    const EXPECTED_EMPTY_VERTICAL_COUNTS: Record<string, number> = {
+      "corporate-governance-board": 3,
+      "legal-contractual": 3,
+      "tax-trade-compliance": 2,
+      "workforce-employment": 2,
+      "data-privacy-cybersecurity": 2,
+      "supply-chain-third-party-risk": 2,
+      "policy-training-management": 2,
+      "risk-resilience": 3,
+    };
     for (const v of EMPTY_VERTICALS) {
       const inV = docs.filter((d) => d.vertical === v);
+      expect(inV.length).toBe(EXPECTED_EMPTY_VERTICAL_COUNTS[v]);
       expect(inV.length).toBeGreaterThanOrEqual(2);
-      expect(inV.length).toBeLessThanOrEqual(3);
       for (const d of inV) {
         expect(d.monitored).toBe(false);
         expect(d.cited_citations).toEqual([]);
         expect(d.two_signature).toBe(false);
       }
     }
-    for (const v of ["compliance-legal", "policy-governance", "operations-processes", "workforce-hr", "environmental-esg"]) {
+    for (const v of ["compliance-ethics", "financial-compliance-reporting", "health-safety", "environmental-sustainability", "operations-quality", "information-technology-records"]) {
       expect(docs.some((d) => d.vertical === v && d.monitored)).toBe(true);
+      // every vertical, real or sample-only, now has at least 2 documents total
+      expect(docs.filter((d) => d.vertical === v).length).toBeGreaterThanOrEqual(2);
     }
   });
 

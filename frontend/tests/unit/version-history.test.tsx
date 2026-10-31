@@ -169,7 +169,7 @@ describe("VersionHistoryPanel", () => {
   });
 
   it("explains a 403 on a brand-new document with no roles, with an actionable message", async () => {
-    const up = await mockApi.company.uploadDocument("operations-processes", file("Outage.docx"));
+    const up = await mockApi.company.uploadDocument("operations-quality", file("Outage.docx"));
     if (up.kind !== "created") throw new Error("expected created");
     const { qc } = renderPanel(up.doc_id);
     await waitFor(() => expect(document.querySelector("[data-no-roles]")).not.toBeNull());
@@ -187,7 +187,7 @@ describe("VersionHistoryPanel", () => {
   });
 
   it("assigns a role (inactive people hidden) and then lets the holder sign", async () => {
-    const up = await mockApi.company.uploadDocument("operations-processes", file("Outage.docx"));
+    const up = await mockApi.company.uploadDocument("operations-quality", file("Outage.docx"));
     if (up.kind !== "created") throw new Error("expected created");
     const real = mockApi.company.listOrgPeople;
     vi.spyOn(mockApi.company, "listOrgPeople").mockImplementation(async (q) => {
@@ -217,7 +217,7 @@ describe("VersionHistoryPanel", () => {
 
   it("retries a failed ingest job, and the retried attempt refreshes the document when it finishes", async () => {
     vi.useFakeTimers({ shouldAdvanceTime: true });
-    const up = await mockApi.company.uploadDocument("operations-processes", file("fail-report.docx"));
+    const up = await mockApi.company.uploadDocument("operations-quality", file("fail-report.docx"));
     if (up.kind !== "created") throw new Error("expected created");
     const spy = vi.spyOn(mockApi.company, "retryIngestJob");
     const { qc } = renderPanel(up.doc_id);

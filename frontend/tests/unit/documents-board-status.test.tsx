@@ -44,7 +44,7 @@ const doc = (over: Partial<DocumentMeta>): DocumentMeta => ({
   law_as_of: null,
   next_review: null,
   review_cycle: null,
-  vertical: "compliance-legal",
+  vertical: "compliance-ethics",
   owner: person,
   reviewer: person,
   approver: null,
@@ -209,7 +209,7 @@ describe("ordering, grouping and filtering", () => {
   );
 
   it("sorts needs-action first, then failed, in review, processing, cleared, not monitored, retired", () => {
-    const sorted = [...rows].filter((r) => r.meta.vertical === "compliance-legal").sort(compareRows);
+    const sorted = [...rows].filter((r) => r.meta.vertical === "compliance-ethics").sort(compareRows);
     expect(sorted.map((r) => r.meta.doc_id)).toEqual(["A", "F", "I", "P", "C", "S", "R"]);
   });
 
@@ -218,7 +218,7 @@ describe("ordering, grouping and filtering", () => {
     expect(pendingRows.find((r) => r.meta.doc_id === "P")?.pending).toBe(false);
     expect(pendingRows.find((r) => r.meta.doc_id === "M")?.pending).toBe(true);
 
-    const g = groupByVertical(filterRows(rows, {}))[0];
+    const g = groupByVertical(filterRows(rows, {})).find((group) => group.vertical.slug === "compliance-ethics")!;
     expect(g.cards.map((r) => r.meta.doc_id)).toEqual(["A", "F", "I", "P", "C"]);
     expect(g.samples.map((r) => r.meta.doc_id)).toEqual(["S"]);
   });
@@ -350,7 +350,7 @@ describe("board status follows a mock upload through its lifecycle", () => {
   it("Processing -> In review once ingested (not Cleared / Not monitored)", async () => {
     resetCompanyMock();
     setActingPersonId("P01");
-    const up = await mockApi.company.uploadDocument("operations-processes", new File(["x"], "Outage.docx"));
+    const up = await mockApi.company.uploadDocument("operations-quality", new File(["x"], "Outage.docx"));
     if (up.kind !== "created") throw new Error("expected created");
 
     expect(boardStatus((await mockApi.company.getDocument(up.doc_id))!).key).toBe("processing");
@@ -365,7 +365,7 @@ describe("board status follows a mock upload through its lifecycle", () => {
   it("a failed first ingest shows Ingest failed", async () => {
     resetCompanyMock();
     setActingPersonId("P01");
-    const up = await mockApi.company.uploadDocument("operations-processes", new File(["x"], "will-fail.docx"));
+    const up = await mockApi.company.uploadDocument("operations-quality", new File(["x"], "will-fail.docx"));
     if (up.kind !== "created") throw new Error("expected created");
     await advanceJob(up.job_id, "failed");
     expect(boardStatus((await mockApi.company.getDocument(up.doc_id))!).key).toBe("ingest_failed");

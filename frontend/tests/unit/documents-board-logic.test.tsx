@@ -25,7 +25,7 @@ const doc = (over: Partial<DocumentMeta>): DocumentMeta => ({
   law_as_of: null,
   next_review: null,
   review_cycle: null,
-  vertical: "compliance-legal",
+  vertical: "compliance-ethics",
   owner: person,
   reviewer: person,
   approver: null,
@@ -50,7 +50,7 @@ describe("board logic", () => {
   const docs = [
     doc({ doc_id: "B", title: "Cleared doc" }),
     doc({ doc_id: "A", title: "Flagged doc" }),
-    doc({ doc_id: "S", title: "Sample", vertical: "financial-reporting", monitored: false }),
+    doc({ doc_id: "S", title: "Sample", vertical: "financial-compliance-reporting", monitored: false }),
   ];
   const rows = buildRows(docs, [rollup({ doc_id: "A" }), rollup({ doc_id: "B", status: "cleared", counts_by_verdict: {}, changes_considered: 0 })]);
 
@@ -58,14 +58,14 @@ describe("board logic", () => {
     const g = groupByVertical(rows);
     expect(g).toHaveLength(14);
     expect(g.map((x) => x.vertical.slug)).toEqual(VERTICALS.map((v) => v.slug));
-    const cl = g[0];
+    const cl = g[1]; // compliance-ethics
     expect(cl.rows.map((r) => r.meta.doc_id)).toEqual(["A", "B"]);
     expect(cl.rows[0].status.key).toBe("action_needed");
     expect(cl.rows[1].status.reason).toBe("No cited section changed");
     expect(cl.needsAction).toBe(1);
-    expect(g[2].samples).toHaveLength(1);
-    expect(g[2].rows[0].status.key).toBe("not_monitored");
-    expect(g[3].rows).toHaveLength(0);
+    expect(g[3].samples).toHaveLength(1); // financial-compliance-reporting
+    expect(g[3].rows[0].status.key).toBe("not_monitored");
+    expect(g[2].rows).toHaveLength(0); // legal-contractual, untouched
   });
 
   it("treats a run without rollups as cleared with the no-candidates reason", () => {
@@ -76,7 +76,7 @@ describe("board logic", () => {
 
   it("filters by status, vertical and owner", () => {
     expect(filterRows(rows, { status: "action_needed" })).toHaveLength(1);
-    expect(filterRows(rows, { vertical: "financial-reporting" })).toHaveLength(1);
+    expect(filterRows(rows, { vertical: "financial-compliance-reporting" })).toHaveLength(1);
     expect(filterRows(rows, { owner: "P99" })).toHaveLength(0);
   });
 
@@ -91,7 +91,7 @@ describe("board components", () => {
       [doc({ doc_id: "RPL-CS-PRO-004" }), doc({ doc_id: "S-1", title: "Sample SOP", monitored: false })],
       [rollup({})],
     );
-    const group = groupByVertical(rows)[0];
+    const group = groupByVertical(rows)[1];
     render(
       <TooltipProvider>
         <VerticalSection group={group} />
@@ -110,9 +110,9 @@ describe("board components", () => {
         <VerticalSection group={groupByVertical([])[3]} />
       </TooltipProvider>,
     );
-    expect(screen.getByText(/No documents are filed under Revenue & Pricing yet/)).toBeTruthy();
+    expect(screen.getByText(/No documents are filed under Financial Compliance & Reporting yet/)).toBeTruthy();
     // Every one of the 14 verticals accepts uploads (the backend maps them all), including
-    // Revenue & Pricing, which has no synthetic documents.
+    // Financial Compliance & Reporting, which has no synthetic documents in this fixture.
     expect(screen.getByRole("button", { name: "Add a document" })).toBeTruthy();
     cleanup();
     render(
@@ -120,7 +120,7 @@ describe("board components", () => {
         <VerticalSection group={groupByVertical([])[4]} />
       </TooltipProvider>,
     );
-    expect(screen.getByText(/No documents are filed under Operations & Processes yet/)).toBeTruthy();
+    expect(screen.getByText(/No documents are filed under Tax & Trade Compliance yet/)).toBeTruthy();
     const add = screen.getByRole("button", { name: "Add a document" });
     expect(add.getAttribute("aria-disabled")).toBeNull();
     expect(add.getAttribute("aria-haspopup")).toBe("dialog");

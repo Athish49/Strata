@@ -43,10 +43,10 @@ afterEach(() => {
 describe("companyHttp", () => {
   it("keeps unclassified documents and maps unknown verticals to unclassified (warns only for unknown)", async () => {
     const warn = vi.spyOn(console, "warn").mockImplementation(() => {});
-    const calls = stub(() => ({ body: [doc("A", "compliance-legal"), doc("B", "unclassified"), doc("C", "nope")] }));
+    const calls = stub(() => ({ body: [doc("A", "compliance-ethics"), doc("B", "unclassified"), doc("C", "nope")] }));
     const docs = await companyHttp.listDocuments();
     expect(docs.map((d) => [d.doc_id, d.vertical])).toEqual([
-      ["A", "compliance-legal"],
+      ["A", "compliance-ethics"],
       ["B", "unclassified"],
       ["C", "unclassified"],
     ]);
@@ -65,10 +65,10 @@ describe("companyHttp", () => {
 
   it("documentMetaSchema accepts the new optional fields and extra keys", async () => {
     stub(() => ({
-      body: [{ ...doc("D", "workforce-hr"), doc_number: "HR-1", vertical_name: "Workforce & Safety", ingest_status: "pending", lifecycle_state: "pending", brand_new_key: 1 }],
+      body: [{ ...doc("D", "workforce-employment"), doc_number: "HR-1", vertical_name: "Workforce & Employment", ingest_status: "pending", lifecycle_state: "pending", brand_new_key: 1 }],
     }));
     const [d] = await companyHttp.listDocuments();
-    expect(d).toMatchObject({ doc_number: "HR-1", ingest_status: "pending", lifecycle_state: "pending", vertical_name: "Workforce & Safety" });
+    expect(d).toMatchObject({ doc_number: "HR-1", ingest_status: "pending", lifecycle_state: "pending", vertical_name: "Workforce & Employment" });
   });
 
   it("listClauses returns [] on 404 and parses rows", async () => {

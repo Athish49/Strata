@@ -365,3 +365,42 @@ ALTER TABLE company.document_versions
 
 ALTER TABLE company.ingest_jobs
   ADD COLUMN IF NOT EXISTS register_spec jsonb;
+
+-- ---------------------------------------------------------------------------
+-- Migration 9c1e4b7a2f05 (verticals re-taxonomy). Same definitions as
+-- production: company.verticals lookup table, seeded with the 14 new
+-- verticals (name, slug, description verbatim from NEW_VERTICALS in the
+-- migration), plus nullable FKs from company_documents.vertical and
+-- approval_policies.applies_to_vertical, ON UPDATE CASCADE.
+-- ---------------------------------------------------------------------------
+CREATE TABLE company.verticals (
+    name        text PRIMARY KEY,
+    slug        text UNIQUE NOT NULL,
+    description text
+);
+
+INSERT INTO company.verticals (name, slug, description) VALUES
+    ('Corporate Governance & Board', 'corporate-governance-board', 'Board structure, bylaws, charters, fiduciary duties, shareholder rights, entity management, annual filings, regulatory disclosure obligations'),
+    ('Compliance & Ethics', 'compliance-ethics', 'Code of conduct, anti-corruption (FCPA), anti-bribery, whistleblower protections, compliance training, conflicts of interest, FTC consumer/advertising compliance'),
+    ('Legal & Contractual', 'legal-contractual', 'Contract governance, litigation holds, IP protection, licensing, entity structure, NDAs, antitrust compliance'),
+    ('Financial Compliance & Reporting', 'financial-compliance-reporting', 'SOX/ICFR, GAAP/IFRS, financial disclosures, audit requirements, internal controls, revenue recognition, pricing regulations, fee disclosures'),
+    ('Tax & Trade Compliance', 'tax-trade-compliance', 'Corporate tax, payroll tax, sales tax, international tax (FATCA), transfer pricing, export controls, customs, OFAC sanctions, tariffs'),
+    ('Workforce & Employment', 'workforce-employment', 'Labor laws, wage & hour, FMLA, ADA, anti-discrimination, benefits (ERISA), immigration/work authorization, DEI policies'),
+    ('Health & Safety', 'health-safety', 'Workplace safety, emergency preparedness, hazard communication, PPE, incident reporting, product/consumer safety'),
+    ('Data Privacy & Cybersecurity', 'data-privacy-cybersecurity', 'GDPR, CCPA/CPRA, state privacy laws, data breach notification, cybersecurity frameworks, data retention, information security'),
+    ('Environmental & Sustainability', 'environmental-sustainability', 'EPA regulations, emissions, waste management, environmental permits, GHG reporting, ESG disclosures, climate risk, energy management'),
+    ('Operations & Quality', 'operations-quality', 'Quality management, process compliance, GMP, FDA product regulations, CAPA, operational standards, business process documentation'),
+    ('Information Technology & Records', 'information-technology-records', 'IT policies, system access controls, change management, records retention, digital accessibility (ADA/WCAG), AI governance and responsible use'),
+    ('Supply Chain & Third-Party Risk', 'supply-chain-third-party-risk', 'Vendor compliance, third-party risk, supplier due diligence, modern slavery/forced labor, supply chain transparency, conflict minerals'),
+    ('Policy & Training Management', 'policy-training-management', 'Policy lifecycle, document control, version management, compliance training programs, employee acknowledgments'),
+    ('Risk & Resilience', 'risk-resilience', 'Enterprise risk management, insurance requirements, business continuity, disaster recovery, operational resilience');
+
+ALTER TABLE company.company_documents
+  ADD CONSTRAINT company_documents_vertical_fk
+  FOREIGN KEY (vertical) REFERENCES company.verticals(name)
+  ON UPDATE CASCADE;
+
+ALTER TABLE company.approval_policies
+  ADD CONSTRAINT approval_policies_vertical_fk
+  FOREIGN KEY (applies_to_vertical) REFERENCES company.verticals(name)
+  ON UPDATE CASCADE;

@@ -6,11 +6,14 @@ from __future__ import annotations
 
 import ast
 import csv
+import re
 from pathlib import Path
 
 import pytest
 
 BACKEND = Path(__file__).resolve().parents[2]
+REPO_ROOT = BACKEND.parent
+FRONTEND = REPO_ROOT / "frontend"
 SYNTHETIC = BACKEND / "synthetic"
 if not (SYNTHETIC / "corpus_meta.py").is_file():
     pytest.skip("backend/synthetic/ is absent", allow_module_level=True)
@@ -20,19 +23,94 @@ from synthetic import corpus_meta as cm  # noqa: E402
 pytestmark = pytest.mark.corpus
 
 
-def _vertical_slug_keys() -> set[str]:
-    """``VERTICAL_SLUGS`` keys read with ``ast`` (importing routes.py would pull in app.db)."""
+def _vertical_slug_dict() -> dict[str, str]:
+    """``VERTICAL_SLUGS`` read with ``ast`` (importing routes.py would pull in app.db)."""
     tree = ast.parse((BACKEND / "app" / "api" / "company" / "routes.py").read_text(encoding="utf-8"))
     for node in tree.body:
         targets = node.targets if isinstance(node, ast.Assign) else [getattr(node, "target", None)]
         if any(isinstance(t, ast.Name) and t.id == "VERTICAL_SLUGS" for t in targets):
-            return set(ast.literal_eval(node.value).keys())
+            return ast.literal_eval(node.value)
     raise AssertionError("VERTICAL_SLUGS not found")
+
+
+def _vertical_slug_keys() -> set[str]:
+    return set(_vertical_slug_dict().keys())
+
+
+def _migration_seed_verticals() -> dict[str, str]:
+    """``NEW_VERTICALS`` (name, slug, description) from the verticals-retaxonomy migration,
+    read with ``ast`` so importing it doesn't require a live DB/alembic context."""
+    migrations_dir = BACKEND / "migrations" / "versions"
+    candidates = [
+        p for p in migrations_dir.glob("*.py")
+        if "verticals_retaxonomy" in p.name or "retaxonomy" in p.name
+    ]
+    assert candidates, "verticals-retaxonomy migration file not found under backend/migrations/versions/"
+    tree = ast.parse(candidates[0].read_text(encoding="utf-8"))
+    for node in tree.body:
+        targets = node.targets if isinstance(node, ast.Assign) else [getattr(node, "target", None)]
+        if any(isinstance(t, ast.Name) and t.id == "NEW_VERTICALS" for t in targets):
+            rows = ast.literal_eval(node.value)
+            return {name: slug for name, slug, _description in rows}
+    raise AssertionError("NEW_VERTICALS not found in verticals-retaxonomy migration")
+
+
+def _frontend_verticals_ts() -> dict[str, str]:
+    """``name`` -> ``slug`` parsed out of ``frontend/lib/verticals.ts``'s ``VERTICALS`` array."""
+    text = (FRONTEND / "lib" / "verticals.ts").read_text(encoding="utf-8")
+    entries = re.findall(
+        r'slug:\s*"([^"]+)"\s*,\s*name:\s*"([^"]+)"',
+        text,
+    )
+    assert entries, "could not parse any {slug, name} entries out of frontend/lib/verticals.ts"
+    return {name: slug for slug, name in entries}
+
+
+def _build_fixtures_slugs() -> set[str]:
+    """Slug values parsed out of ``frontend/scripts/build-fixtures.ts``'s
+    ``VERTICAL_SLUG`` map and ``VERTICAL_ORDER`` list."""
+    text = (FRONTEND / "scripts" / "build-fixtures.ts").read_text(encoding="utf-8")
+    order_match = re.search(r"VERTICAL_ORDER\s*=\s*\[(.*?)\]", text, re.DOTALL)
+    assert order_match, "could not find VERTICAL_ORDER in frontend/scripts/build-fixtures.ts"
+    slugs = set(re.findall(r'"([^"]+)"', order_match.group(1)))
+    slug_map_match = re.search(r"VERTICAL_SLUG\s*:\s*Record<string,\s*string>\s*=\s*\{(.*?)\}", text, re.DOTALL)
+    assert slug_map_match, "could not find VERTICAL_SLUG in frontend/scripts/build-fixtures.ts"
+    slugs |= set(re.findall(r':\s*"([^"]+)"', slug_map_match.group(1)))
+    return slugs
 
 
 def test_canonical_verticals_match_product():
     assert len(cm.CANONICAL_VERTICALS) == 14
     assert {v.lower() for v in cm.CANONICAL_VERTICALS} == _vertical_slug_keys()
+
+
+def test_canonical_verticals_match_migration_and_frontend():
+    """Ties together all 4+1 locations that must agree on the same 14 (name, slug) pairs:
+    backend VERTICAL_SLUGS, backend CANONICAL_VERTICALS, the verticals-retaxonomy migration's
+    seed list, frontend/lib/verticals.ts, and frontend/scripts/build-fixtures.ts's slugs.
+    Closes the "4 hand-synced copies" fragility plan.md identifies as this migration's core risk.
+    """
+    backend_name_to_slug = {name.title(): slug for name, slug in _vertical_slug_dict().items()}
+    assert set(backend_name_to_slug) == set(cm.CANONICAL_VERTICALS), (
+        "VERTICAL_SLUGS and CANONICAL_VERTICALS disagree on vertical names"
+    )
+
+    migration = _migration_seed_verticals()
+    assert len(migration) == 14
+    assert migration == backend_name_to_slug, (
+        "migration's NEW_VERTICALS (name -> slug) does not match backend VERTICAL_SLUGS"
+    )
+
+    frontend = _frontend_verticals_ts()
+    assert len(frontend) == 14
+    assert frontend == backend_name_to_slug, (
+        "frontend/lib/verticals.ts (name -> slug) does not match backend VERTICAL_SLUGS"
+    )
+
+    fixtures_slugs = _build_fixtures_slugs()
+    assert fixtures_slugs == set(backend_name_to_slug.values()), (
+        "frontend/scripts/build-fixtures.ts slugs do not match backend VERTICAL_SLUGS values"
+    )
 
 
 def test_document_register():
@@ -48,7 +126,7 @@ def test_document_register():
         assert e.next_review_date and e.owner_id and e.reviewer_id and e.file_path
     assert by_id["RPL-LEG-RRS-001"].review_cycle == "Biennial"
     assert by_id["RPL-CS-PRO-007"].approver_id is None  # two-signature document
-    assert by_id["RPL-SAF-PRO-009"].canonical_vertical == "Workforce & Safety"
+    assert by_id["RPL-SAF-PRO-009"].canonical_vertical == "Health & Safety"
 
 
 def test_people_and_document_roles():

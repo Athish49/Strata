@@ -28,7 +28,7 @@ vi.mock("next/navigation", () => ({
   usePathname: () => "/app/documents",
 }));
 
-const VERTICAL = "operations-processes";
+const VERTICAL = "operations-quality";
 const DOC = "RPL-CMP-REG-001";
 const docx = (name: string) => new File(["x"], name, { type: "application/vnd.openxmlformats-officedocument.wordprocessingml.document" });
 
@@ -89,7 +89,7 @@ describe("upload logic", () => {
 
   it("never targets unclassified, but every one of the 14 verticals is a target", () => {
     expect(isUploadTarget(UNCLASSIFIED_SLUG)).toBe(false);
-    expect(isUploadTarget("financial-reporting")).toBe(true);
+    expect(isUploadTarget("financial-compliance-reporting")).toBe(true);
     expect(isUploadTarget("not-a-vertical")).toBe(false);
     expect(isUploadTarget(VERTICAL)).toBe(true);
     expect(uploadableVerticals().map((v) => v.slug)).not.toContain(UNCLASSIFIED_SLUG);
@@ -114,7 +114,7 @@ describe("UploadDocumentDialog", () => {
     const select = within(dialog).getByLabelText("Vertical") as HTMLSelectElement;
     const values = [...select.options].map((o) => o.value);
     expect(values).not.toContain(UNCLASSIFIED_SLUG);
-    expect(values).toContain("financial-reporting");
+    expect(values).toContain("financial-compliance-reporting");
     // the empty "Choose a vertical" placeholder plus exactly the 14 real verticals
     expect(values.filter((v) => v !== "")).toHaveLength(14);
     expect(values).toContain(VERTICAL);
@@ -131,7 +131,7 @@ describe("UploadDocumentDialog", () => {
     const spy = vi.spyOn(mockApi.company, "uploadDocument");
     wrap(<UploadDocumentDialog vertical={VERTICAL} />);
     const dialog = await openDialog(u, /^upload$/i);
-    expect(within(dialog).getByText(/Filed under/)).toHaveTextContent("Operations & Processes");
+    expect(within(dialog).getByText(/Filed under/)).toHaveTextContent("Operations & Quality");
     await u.upload(within(dialog).getByLabelText("File"), docx("Outage Response.docx"));
     expect(within(dialog).getByLabelText("Title")).toHaveValue("Outage Response"); // defaults to the filename
     await u.type(within(dialog).getByLabelText(/Document number/), "OPS-099");

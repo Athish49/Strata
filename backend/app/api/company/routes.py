@@ -18,22 +18,22 @@ router = APIRouter(prefix="/company", tags=["company"])
 
 # backend vertical name -> frontend slug (keep in sync with frontend/lib/verticals.ts)
 VERTICAL_SLUGS = {
-    "compliance & legal": "compliance-legal",
-    "policy & governance": "policy-governance",
-    "operations & processes": "operations-processes",
-    "environmental": "environmental-esg",
-    "workforce & safety": "workforce-hr",
-    # The other nine verticals the product offers. No synthetic document used them, but
+    "compliance & ethics": "compliance-ethics",
+    "operations & quality": "operations-quality",
+    "financial compliance & reporting": "financial-compliance-reporting",
+    "information technology & records": "information-technology-records",
+    "environmental & sustainability": "environmental-sustainability",
+    "health & safety": "health-safety",
+    # The other eight verticals the product offers. No synthetic document used them, but
     # a customer can upload into any of the 14, and an unmapped name was rejected with 422.
-    "financial & reporting": "financial-reporting",
-    "revenue & pricing": "revenue-pricing",
-    "technology & systems": "technology-systems",
-    "supply chain & procurement": "supply-chain-procurement",
-    "risk & insurance": "risk-insurance",
-    "strategic & competitive": "strategic-competitive",
-    "reputational & stakeholder": "reputational-stakeholder",
-    "contractual & third-party obligations": "contractual-third-party",
-    "capital & infrastructure": "capital-infrastructure",
+    "corporate governance & board": "corporate-governance-board",
+    "legal & contractual": "legal-contractual",
+    "tax & trade compliance": "tax-trade-compliance",
+    "workforce & employment": "workforce-employment",
+    "data privacy & cybersecurity": "data-privacy-cybersecurity",
+    "supply chain & third-party risk": "supply-chain-third-party-risk",
+    "policy & training management": "policy-training-management",
+    "risk & resilience": "risk-resilience",
 }
 _UNIT_KINDS = {"section", "table_row", "register_row", "form_field", "tariff_subrule", "appendix"}
 _STATES = {

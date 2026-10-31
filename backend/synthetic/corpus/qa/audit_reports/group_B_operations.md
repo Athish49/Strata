@@ -78,7 +78,7 @@
 ```markdown
 ## T16 — Vegetation Management Plan 2025
 
-**Doc ID:** RPL-DO-PLN-002 · **Vertical:** Policy & Governance · **Wave:** 2 · **Grounding:** `corpus/grounding/T16.json`
+**Doc ID:** RPL-DO-PLN-002 · **Vertical:** Operations & Quality · **Wave:** 2 · **Grounding:** `corpus/grounding/T16.json`
 **Owner/Reviewer/Approver:** Rachel Stein (P22) / Patrick O'Neill (P21) / Jonathan Pierce (P03)
 **Inputs (read-only, from T04):** `corpus/_global/ops/circuits_master.csv`, `corpus/_global/ops/outage_events_base.csv`, `corpus/_global/ops/med_days.csv`, `corpus/_global/ops/reliability_facts.yaml`
 **Outputs:**

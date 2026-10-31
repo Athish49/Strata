@@ -182,7 +182,7 @@ describe("MatrixGrid", () => {
     ({ doc_id: id, title: `Title ${id}`, vertical, owner: person, reviewer: person, approver: null, two_signature: false, monitored: true }) as unknown as DocumentMeta;
   const change = (id: string, citation: string): ChangeRecord =>
     ({ change_id: id, citation, heading: `Heading ${id}`, change_class: "cosmetic", cited_clause_count: 3 }) as unknown as ChangeRecord;
-  const docs = [doc("D1", "compliance-legal"), doc("D2", "policy-governance")];
+  const docs = [doc("D1", "compliance-ethics"), doc("D2", "corporate-governance-board")];
   const changes = [change("c1", "170 IAC 4-1-16"), change("c2", "170 IAC 4-1-17")];
   const cells: MatrixCell[] = [
     { doc_id: "D1", change_id: "c1", worst_verdict: "action_required", n_findings: 2, n_cleared: 1 },
@@ -190,7 +190,7 @@ describe("MatrixGrid", () => {
   ];
   it("renders groups, dots, checks and empty cells with headers and labels", () => {
     const { container } = wrap(<MatrixGrid docs={docs} changes={changes} cells={cells} />);
-    expect(screen.getByText("Compliance & Legal")).toBeInTheDocument();
+    expect(screen.getByText("Compliance & Ethics")).toBeInTheDocument();
     expect(screen.getByRole("columnheader", { name: "170 IAC 4-1-16, Heading c1" })).toBeInTheDocument();
     expect(container.querySelectorAll("[data-cell]")).toHaveLength(2);
     expect(container.querySelectorAll('td[data-empty="true"]')).toHaveLength(2);

@@ -24,7 +24,7 @@ POL = uuid.uuid4()
 REQ = uuid.uuid4()
 
 PERSON_ROW = [{"person_id": PID}]
-DOC_ROW = [{"doc_id": DOC, "doc_class": "procedure", "vertical": "Compliance & Legal",
+DOC_ROW = [{"doc_id": DOC, "doc_class": "procedure", "vertical": "Financial Compliance & Reporting",
             "owner_id": PID, "reviewer_id": "P14", "approver_id": None,
             "current_version_id": uuid.UUID(VER)}]
 VERSION_ROW = [{"version_id": uuid.UUID(VER), "doc_id": DOC, "version_no": 3, "status": "draft"}]
@@ -598,6 +598,68 @@ async def test_bad_policy_uuid_is_404():
         assert (await c.get("/company/approval-policies/not-a-uuid")).status_code == 404
 
 
+# --------------------------------------- applies_to_vertical validation (422 gap)
+async def test_create_policy_rejects_invalid_vertical():
+    """_canonical_vertical runs before the INSERT, so a bogus vertical is a clean 422
+    and never reaches company.approval_policies."""
+    c, sess = client_for([person_rule()])
+    async with c:
+        res = await c.post("/company/approval-policies", json={
+            "name": "P", "applies_to_vertical": "Not A Real Vertical",
+            "acting_person_id": PID})
+    assert res.status_code == 422
+    assert not sess.find("INSERT INTO company.approval_policies")
+    assert sess.committed == 0
+
+
+async def test_create_policy_accepts_valid_new_taxonomy_vertical():
+    c, sess = client_for([person_rule()])
+    async with c:
+        res = await c.post("/company/approval-policies", json={
+            "name": "P", "applies_to_vertical": "Compliance & Ethics",
+            "acting_person_id": PID})
+    assert res.status_code == 201
+    assert res.json()["applies_to_vertical"] == "Compliance & Ethics"
+    _, params = sess.find("INSERT INTO company.approval_policies")[0]
+    assert params["v"] == "Compliance & Ethics"
+
+
+async def test_update_policy_rejects_invalid_vertical():
+    """Same guard on the PATCH path: the bad value is rejected before the UPDATE is
+    even built, so the existing policy row is never touched."""
+    c, sess = client_for([
+        person_rule(),
+        ("FROM company.approval_policies WHERE company_id = :c AND policy_id", POLICY_ROW),
+    ])
+    async with c:
+        res = await c.patch(f"/company/approval-policies/{POL}",
+                            json={"applies_to_vertical": "Not A Real Vertical",
+                                  "acting_person_id": PID})
+    assert res.status_code == 422
+    assert not sess.find("UPDATE company.approval_policies")
+    assert sess.committed == 0
+
+
+async def test_update_policy_accepts_valid_new_taxonomy_vertical():
+    c, sess = client_for([
+        person_rule(),
+        ("FROM company.approval_policies WHERE company_id = :c AND policy_id", POLICY_ROW),
+        ("FROM company.approval_policy_steps", STEP_ROWS),
+        ("UPDATE company.approval_policies SET", [{"policy_id": POL, "name": "P",
+                                                   "applies_to_vertical": "Compliance & Ethics",
+                                                   "applies_to_doc_class": "procedure"}]),
+    ])
+    async with c:
+        res = await c.patch(f"/company/approval-policies/{POL}",
+                            json={"applies_to_vertical": "Compliance & Ethics",
+                                  "acting_person_id": PID})
+    assert res.status_code == 200
+    assert res.json()["applies_to_vertical"] == "Compliance & Ethics"
+    _, params = sess.find("UPDATE company.approval_policies SET")[0]
+    assert params["v"] == "Compliance & Ethics"
+    assert sess.committed == 1
+
+
 # -------------------------------------------------------- policy selection
 async def test_policy_selection_scores_doc_class_above_vertical():
     """(vertical, doc_class)=3 > (doc_class)=2 > (vertical)=1 > default=0, decided by
@@ -608,11 +670,11 @@ async def test_policy_selection_scores_doc_class_above_vertical():
         pass
 
     sess = S([("FROM company.approval_policies", POLICY_ROW)])
-    picked = await org.select_policy(sess, "Compliance & Legal", "procedure")
+    picked = await org.select_policy(sess, "Financial Compliance & Reporting", "procedure")
     sql, params = sess.find("FROM company.approval_policies")[0]
     captured["sql"] = re.sub(r"\s+", " ", sql)
     assert picked["policy_id"] == POL
-    assert params == {"c": org._cid(), "v": "Compliance & Legal", "k": "procedure"}
+    assert params == {"c": org._cid(), "v": "Financial Compliance & Reporting", "k": "procedure"}
     assert "applies_to_doc_class IS NULL THEN 0 ELSE 2" in captured["sql"]
     assert "applies_to_vertical IS NULL THEN 0 ELSE 1" in captured["sql"]
     assert "DESC" in captured["sql"] and "LIMIT 1" in captured["sql"]

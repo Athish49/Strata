@@ -630,17 +630,19 @@ async def get_policy(policy_id: str, db: AsyncSession = Depends(get_db)):
 
 @router.post("/approval-policies", status_code=201)
 async def create_policy(body: PolicyIn, db: AsyncSession = Depends(get_db)):
+    from app.api.company.upload import _canonical_vertical  # deferred: upload.py imports this module
     await _require_person(db, body.acting_person_id)
     pid = str(uuid.uuid4())
+    vertical = _canonical_vertical(body.applies_to_vertical) if body.applies_to_vertical is not None else None
     await db.execute(text(
         "INSERT INTO company.approval_policies (company_id, policy_id, name, "
         "applies_to_vertical, applies_to_doc_class) VALUES (:c, CAST(:p AS uuid), :n, :v, :k)"),
-        {"c": _cid(), "p": pid, "n": body.name, "v": body.applies_to_vertical,
+        {"c": _cid(), "p": pid, "n": body.name, "v": vertical,
          "k": body.applies_to_doc_class})
     await _write_steps(db, pid, body.steps)
     await db.commit()
     return _policy_out({"policy_id": pid, "name": body.name,
-                        "applies_to_vertical": body.applies_to_vertical,
+                        "applies_to_vertical": vertical,
                         "applies_to_doc_class": body.applies_to_doc_class},
                        [s.model_dump() for s in sorted(body.steps, key=lambda s: s.step_no)])
 
@@ -658,6 +660,7 @@ async def _write_steps(db: AsyncSession, policy_id: str, steps: list[PolicyStepI
 
 @router.patch("/approval-policies/{policy_id}")
 async def update_policy(policy_id: str, body: PolicyPatch, db: AsyncSession = Depends(get_db)):
+    from app.api.company.upload import _canonical_vertical  # deferred: upload.py imports this module
     await _require_person(db, body.acting_person_id)
     row = await _policy_or_404(db, policy_id)
     pid = str(row["policy_id"])
@@ -669,7 +672,7 @@ async def update_policy(policy_id: str, body: PolicyPatch, db: AsyncSession = De
         sets.append("applies_to_vertical = NULL")
     elif body.applies_to_vertical is not None:
         sets.append("applies_to_vertical = :v")
-        params["v"] = body.applies_to_vertical
+        params["v"] = _canonical_vertical(body.applies_to_vertical)
     if body.clear_doc_class:
         sets.append("applies_to_doc_class = NULL")
     elif body.applies_to_doc_class is not None:

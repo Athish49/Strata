@@ -43,20 +43,20 @@ PROFILE_YAML = GLOBAL_DIR / "company_profile.yaml"
 #: ``app/api/company/routes.py`` ``VERTICAL_SLUGS`` (keys are these, lower-cased);
 #: ``tests/synthetic/test_corpus_meta.py`` checks it.
 CANONICAL_VERTICALS: tuple[str, ...] = (
-    "Compliance & Legal",
-    "Policy & Governance",
-    "Operations & Processes",
-    "Environmental",
-    "Workforce & Safety",
-    "Financial & Reporting",
-    "Revenue & Pricing",
-    "Technology & Systems",
-    "Supply Chain & Procurement",
-    "Risk & Insurance",
-    "Strategic & Competitive",
-    "Reputational & Stakeholder",
-    "Contractual & Third-Party Obligations",
-    "Capital & Infrastructure",
+    "Corporate Governance & Board",
+    "Compliance & Ethics",
+    "Legal & Contractual",
+    "Financial Compliance & Reporting",
+    "Tax & Trade Compliance",
+    "Workforce & Employment",
+    "Health & Safety",
+    "Data Privacy & Cybersecurity",
+    "Environmental & Sustainability",
+    "Operations & Quality",
+    "Information Technology & Records",
+    "Supply Chain & Third-Party Risk",
+    "Policy & Training Management",
+    "Risk & Resilience",
 )
 _VERTICAL_BY_KEY = {v.lower(): v for v in CANONICAL_VERTICALS}
 

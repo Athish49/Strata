@@ -59,7 +59,7 @@ describe("ingest job poller", () => {
 
   it("polls until succeeded, then stops and invalidates documents + versions + clauses", async () => {
     vi.useFakeTimers({ shouldAdvanceTime: true });
-    const up = await mockApi.company.uploadDocument("operations-processes", file("Outage.docx"));
+    const up = await mockApi.company.uploadDocument("operations-quality", file("Outage.docx"));
     if (up.kind !== "created") throw new Error("expected created");
     const spy = vi.spyOn(mockApi.company, "getIngestJob");
     const { qc, wrapper } = setup();
@@ -82,7 +82,7 @@ describe("ingest job poller", () => {
 
   it("stops on failed and still invalidates documents + versions (lifecycle flips)", async () => {
     vi.useFakeTimers({ shouldAdvanceTime: true });
-    const up = await mockApi.company.uploadDocument("compliance-legal", file("will-fail.docx"));
+    const up = await mockApi.company.uploadDocument("compliance-ethics", file("will-fail.docx"));
     if (up.kind !== "created") throw new Error("expected created");
     const { qc, wrapper } = setup();
     const inval = vi.spyOn(qc, "invalidateQueries");
@@ -102,7 +102,7 @@ describe("ingest job poller", () => {
     // Regression: the hook used to mark a job id as handled forever, so after failed -> retry ->
     // succeeded the documents and versions stayed stale (still "Ingest failed" in the UI).
     vi.useFakeTimers({ shouldAdvanceTime: true });
-    const up = await mockApi.company.uploadDocument("compliance-legal", file("will-fail.docx"));
+    const up = await mockApi.company.uploadDocument("compliance-ethics", file("will-fail.docx"));
     if (up.kind !== "created") throw new Error("expected created");
     const { qc, wrapper } = setup();
     const inval = vi.spyOn(qc, "invalidateQueries");
@@ -152,30 +152,30 @@ describe("upload mutation + mock states", () => {
     const { result } = renderHook(() => useUploadDocument(), { wrapper });
     let r: Awaited<ReturnType<typeof result.current.mutateAsync>> | undefined;
     await act(async () => {
-      r = await result.current.mutateAsync({ vertical: "workforce-hr", file: file("Safety Manual.docx"), meta: { doc_number: "HR-7" } });
+      r = await result.current.mutateAsync({ vertical: "workforce-employment", file: file("Safety Manual.docx"), meta: { doc_number: "HR-7" } });
     });
     if (r?.kind !== "created") throw new Error("expected created");
     expect(qc.getQueryData<IngestJob>(qk.ingestJob(r.job_id))?.job.state).toBe("queued");
     const doc = await mockApi.company.getDocument(r.doc_id);
-    expect(doc).toMatchObject({ title: "Safety Manual", vertical: "workforce-hr", doc_number: "HR-7", lifecycle_state: "pending" });
+    expect(doc).toMatchObject({ title: "Safety Manual", vertical: "workforce-employment", doc_number: "HR-7", lifecycle_state: "pending" });
   });
 
   it("duplicate / unchanged / retry_available / errors are deterministic", async () => {
-    expect(await mockApi.company.uploadDocument("compliance-legal", file("duplicate.docx"))).toMatchObject({ kind: "duplicate", doc_id: MOCK_DUPLICATE_DOC_ID });
+    expect(await mockApi.company.uploadDocument("compliance-ethics", file("duplicate.docx"))).toMatchObject({ kind: "duplicate", doc_id: MOCK_DUPLICATE_DOC_ID });
     expect(await mockApi.company.uploadVersion(MOCK_DUPLICATE_DOC_ID, file("unchanged.docx"))).toMatchObject({ kind: "unchanged" });
     const retry = await mockApi.company.uploadVersion(MOCK_DUPLICATE_DOC_ID, file("retry.docx"));
     if (retry.kind !== "retry_available") throw new Error("expected retry_available");
     expect((await mockApi.company.retryIngestJob(retry.job_id)).state).toBe("queued");
-    await expect(mockApi.company.uploadDocument("compliance-legal", file("scan.pdf"))).rejects.toMatchObject({ status: 415 });
-    await expect(mockApi.company.uploadDocument("compliance-legal", file("empty.docx"))).rejects.toMatchObject({ status: 422 });
+    await expect(mockApi.company.uploadDocument("compliance-ethics", file("scan.pdf"))).rejects.toMatchObject({ status: 415 });
+    await expect(mockApi.company.uploadDocument("compliance-ethics", file("empty.docx"))).rejects.toMatchObject({ status: 422 });
     // `unclassified` is a fallback group, never an upload target (the backend 422s it).
     await expect(mockApi.company.uploadDocument("unclassified", file("ok.docx"))).rejects.toBeInstanceOf(ApiError);
     setActingPersonId(null);
-    await expect(mockApi.company.uploadDocument("compliance-legal", file("ok.docx"))).rejects.toBeInstanceOf(MissingActorError);
+    await expect(mockApi.company.uploadDocument("compliance-ethics", file("ok.docx"))).rejects.toBeInstanceOf(MissingActorError);
   });
 
   it("approval on a new document: 403 until roles are assigned", async () => {
-    const up = await mockApi.company.uploadDocument("compliance-legal", file("New Policy.docx"));
+    const up = await mockApi.company.uploadDocument("compliance-ethics", file("New Policy.docx"));
     if (up.kind !== "created" || !up.approval_request_id) throw new Error("expected created with a request");
     await mockApi.company.getIngestJob(up.job_id);
     await mockApi.company.getIngestJob(up.job_id); // succeeded

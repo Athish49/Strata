@@ -106,7 +106,7 @@ I tried a Maine PUC sample disconnection notice (`DisconnectionNotice_example.do
 ```markdown
 ## T13 — Tariff for Electric Service, IURC No. 12: General Rules and Regulations
 
-**Doc ID:** RPL-TAR-GRR-012 · **Vertical:** Policy & Governance · **Wave:** 2 · **Grounding:** `corpus/grounding/T13.json`
+**Doc ID:** RPL-TAR-GRR-012 · **Vertical:** Financial Compliance & Reporting · **Wave:** 2 · **Grounding:** `corpus/grounding/T13.json`
 **Owner/Reviewer/Approver:** Aisha Thompson (P11) / Robert Haskins (P10) / Jonathan Pierce (P03)
 **Issuing officer printed on every sheet:** Thomas Whitfield, Vice President, Regulatory & Government Affairs (P07). Owner, reviewer and approver appear only in front matter and the basis file, never on the sheets.
 **Outputs:**
@@ -304,7 +304,7 @@ The Markdown file remains canonical. The PDF is derived and must contain the sam
 ```markdown
 ## T14 — Disconnection, Reconnection & Winter Protection Procedure
 
-**Doc ID:** RPL-CS-PRO-004 · **Vertical:** Policy & Governance · **Wave:** 2 · **Grounding:** `corpus/grounding/T14.json`
+**Doc ID:** RPL-CS-PRO-004 · **Vertical:** Compliance & Ethics · **Wave:** 2 · **Grounding:** `corpus/grounding/T14.json`
 **Owner/Reviewer/Approver:** Jasmine Carter (P15) / Karen Mitchell (P13) / Jonathan Pierce (P03)
 **Supersedes:** 5.0 (2024-01-15)
 **Outputs:**
@@ -463,7 +463,7 @@ Use the **`docx` skill** to produce `render/RPL-CS-PRO-004_v5.1.docx` from the c
 ```markdown
 ## T15 — Meter Test Request & Billing Adjustment Procedure
 
-**Doc ID:** RPL-CS-PRO-007 · **Vertical:** Policy & Governance · **Wave:** 2 · **Grounding:** `corpus/grounding/T15.json`
+**Doc ID:** RPL-CS-PRO-007 · **Vertical:** Financial Compliance & Reporting · **Wave:** 2 · **Grounding:** `corpus/grounding/T15.json`
 **Owner/Reviewer:** Luis Hernandez (P18) / Steven Park (P14) — two-signature document (front matter `approver: null`; approval block shows "Prepared and approved by" P18 and "Reviewed and approved by" P14, each with a date ≤ 2025-02-12)
 **Supersedes:** 2.1 (2023-11-06)
 **Outputs:**
@@ -603,7 +603,7 @@ As T14, with the `docx` skill (header text "RPL-CS-PRO-007 | Meter Test Request 
 ```markdown
 ## T17 — Customer Complaint & Dispute Resolution Procedure
 
-**Doc ID:** RPL-CS-PRO-011 · **Vertical:** Policy & Governance · **Wave:** 2 · **Grounding:** `corpus/grounding/T17.json`
+**Doc ID:** RPL-CS-PRO-011 · **Vertical:** Compliance & Ethics · **Wave:** 2 · **Grounding:** `corpus/grounding/T17.json`
 **Owner/Reviewer:** Brian Kowalski (P17) / Karen Mitchell (P13) — two-signature document (front matter `approver: null`; approval block "Prepared and approved by" P17, "Reviewed and approved by" P13)
 **Supersedes:** 2.2 (2024-03-18)
 **Outputs:**

@@ -68,28 +68,29 @@ function writeJson(file: string, data: unknown) {
 
 /** Backend vertical → frontend slug (spec §5.3). */
 const VERTICAL_SLUG: Record<string, string> = {
-  "Compliance & Legal": "compliance-legal",
-  "Policy & Governance": "policy-governance",
-  "Operations & Processes": "operations-processes",
-  "Workforce & Safety": "workforce-hr",
-  Environmental: "environmental-esg",
+  "Compliance & Ethics": "compliance-ethics",
+  "Financial Compliance & Reporting": "financial-compliance-reporting",
+  "Operations & Quality": "operations-quality",
+  "Information Technology & Records": "information-technology-records",
+  "Environmental & Sustainability": "environmental-sustainability",
+  "Health & Safety": "health-safety",
 };
 
 const VERTICAL_ORDER = [
-  "compliance-legal",
-  "policy-governance",
-  "financial-reporting",
-  "revenue-pricing",
-  "operations-processes",
-  "technology-systems",
-  "workforce-hr",
-  "environmental-esg",
-  "supply-chain-procurement",
-  "risk-insurance",
-  "strategic-competitive",
-  "reputational-stakeholder",
-  "contractual-third-party",
-  "capital-infrastructure",
+  "corporate-governance-board",
+  "compliance-ethics",
+  "legal-contractual",
+  "financial-compliance-reporting",
+  "tax-trade-compliance",
+  "workforce-employment",
+  "health-safety",
+  "data-privacy-cybersecurity",
+  "environmental-sustainability",
+  "operations-quality",
+  "information-technology-records",
+  "supply-chain-third-party-risk",
+  "policy-training-management",
+  "risk-resilience",
 ];
 
 function docTypeOf(docId: string): string {
@@ -532,42 +533,68 @@ interface Sample {
 }
 
 const SAMPLES: Sample[] = [
-  // Financial & Reporting
-  { id: "RPL-FIN-PRO-101", title: "FERC Form 1 Preparation Procedure", vertical: "financial-reporting", type: "Procedure", owner: "P06", reviewer: "P05", approver: "P04", version: "3.1", effective: "2024-03-01", cycle: "Annual" },
-  { id: "RPL-FIN-PRO-102", title: "IURC Annual Financial Report Filing Procedure", vertical: "financial-reporting", type: "Procedure", owner: "P09", reviewer: "P08", approver: "P07", version: "2.4", effective: "2024-04-15", cycle: "Annual" },
-  { id: "RPL-FIN-POL-103", title: "Regulatory Asset & Deferral Accounting Policy", vertical: "financial-reporting", type: "Policy", owner: "P05", reviewer: "P04", approver: "P01", version: "1.6", effective: "2023-09-01", cycle: "Biennial" },
-  // Revenue & Pricing
-  { id: "RPL-REV-PRO-101", title: "Rate Case Preparation Procedure", vertical: "revenue-pricing", type: "Procedure", owner: "P11", reviewer: "P10", approver: "P07", version: "2.0", effective: "2024-01-22", cycle: "Annual" },
-  { id: "RPL-REV-PRO-102", title: "Rider & Tracker Adjustment Filing Procedure", vertical: "revenue-pricing", type: "Procedure", owner: "P10", reviewer: "P08", approver: "P07", version: "4.2", effective: "2024-06-10", cycle: "Annual" },
-  { id: "RPL-REV-POL-103", title: "Customer Billing Adjustment & Refund Policy", vertical: "revenue-pricing", type: "Policy", owner: "P14", reviewer: "P13", approver: "P03", version: "1.3", effective: "2023-11-20", cycle: "Biennial" },
-  // Technology & Systems
-  { id: "RPL-TEC-POL-101", title: "Customer Data Privacy & Security Policy", vertical: "technology-systems", type: "Policy", owner: "P03", reviewer: "P02", approver: "P01", version: "3.0", effective: "2024-02-05", cycle: "Annual" },
-  { id: "RPL-TEC-PRO-102", title: "AMI Head-End System Change Management Procedure", vertical: "technology-systems", type: "Procedure", owner: "P20", reviewer: "P19", approver: "P16", version: "2.2", effective: "2024-05-13", cycle: "Annual" },
-  { id: "RPL-TEC-PLN-103", title: "Operational Technology Cybersecurity Incident Response Plan", vertical: "technology-systems", type: "Plan", owner: "P23", reviewer: "P21", approver: "P16", version: "1.8", effective: "2024-08-01", cycle: "Annual" },
-  // Supply Chain & Procurement
-  { id: "RPL-SCM-PRO-101", title: "Supplier Qualification Procedure", vertical: "supply-chain-procurement", type: "Procedure", owner: "P19", reviewer: "P20", approver: "P16", version: "2.5", effective: "2024-03-18", cycle: "Annual" },
-  { id: "RPL-SCM-PRO-102", title: "Contractor Safety Prequalification Procedure", vertical: "supply-chain-procurement", type: "Procedure", owner: "P27", reviewer: "P24", approver: "P16", version: "3.3", effective: "2024-07-08", cycle: "Annual" },
-  { id: "RPL-SCM-STD-103", title: "Transformer & Meter Inventory Management Standard", vertical: "supply-chain-procurement", type: "Standard", owner: "P22", reviewer: "P21", approver: null, version: "1.4", effective: "2023-12-04", cycle: "Biennial" },
-  // Risk & Insurance
-  { id: "RPL-RSK-PLN-101", title: "Enterprise Risk Management Framework", vertical: "risk-insurance", type: "Plan", owner: "P04", reviewer: "P02", approver: "P01", version: "2.1", effective: "2024-01-08", cycle: "Annual" },
-  { id: "RPL-RSK-PRO-102", title: "Insurance Claims Management Procedure", vertical: "risk-insurance", type: "Procedure", owner: "P12", reviewer: "P03", approver: "P02", version: "1.9", effective: "2024-04-29", cycle: "Biennial" },
-  { id: "RPL-RSK-PLN-103", title: "Business Continuity & Storm Restoration Plan", vertical: "risk-insurance", type: "Plan", owner: "P23", reviewer: "P21", approver: "P16", version: "5.0", effective: "2024-09-16", cycle: "Annual" },
-  // Strategic & Competitive
-  { id: "RPL-STR-PLN-101", title: "Integrated Distribution System Planning Process", vertical: "strategic-competitive", type: "Plan", owner: "P21", reviewer: "P20", approver: "P16", version: "1.2", effective: "2024-02-26", cycle: "Annual" },
-  { id: "RPL-STR-PRO-102", title: "Regulatory Intervention & Docket Monitoring Procedure", vertical: "strategic-competitive", type: "Procedure", owner: "P08", reviewer: "P07", approver: "P02", version: "2.0", effective: "2024-06-24", cycle: "Annual" },
-  { id: "RPL-STR-POL-103", title: "Distributed Energy Resource Interconnection Strategy", vertical: "strategic-competitive", type: "Policy", owner: "P20", reviewer: "P21", approver: "P16", version: "1.1", effective: "2024-10-07", cycle: "Biennial" },
-  // Reputational & Stakeholder
-  { id: "RPL-COM-PRO-101", title: "Crisis Communications Procedure", vertical: "reputational-stakeholder", type: "Procedure", owner: "P17", reviewer: "P13", approver: "P01", version: "3.2", effective: "2024-03-11", cycle: "Annual" },
-  { id: "RPL-COM-PRO-102", title: "Public Meeting & Community Notification Procedure", vertical: "reputational-stakeholder", type: "Procedure", owner: "P22", reviewer: "P21", approver: "P07", version: "1.5", effective: "2023-10-23", cycle: "Biennial" },
-  { id: "RPL-COM-POL-103", title: "Media & Social Media Policy", vertical: "reputational-stakeholder", type: "Policy", owner: "P13", reviewer: "P03", approver: "P01", version: "2.3", effective: "2024-05-20", cycle: "Annual" },
-  // Contractual & Third-Party Obligations
-  { id: "RPL-CON-PRO-101", title: "Pole Attachment Agreement Administration Procedure", vertical: "contractual-third-party", type: "Procedure", owner: "P12", reviewer: "P10", approver: "P03", version: "2.7", effective: "2024-02-12", cycle: "Annual" },
-  { id: "RPL-CON-PRO-102", title: "Wholesale Power Agreement Compliance Procedure", vertical: "contractual-third-party", type: "Procedure", owner: "P09", reviewer: "P08", approver: "P07", version: "1.6", effective: "2024-07-29", cycle: "Annual" },
-  { id: "RPL-CON-STD-103", title: "Vegetation Contractor Agreement Management Standard", vertical: "contractual-third-party", type: "Standard", owner: "P22", reviewer: "P21", approver: null, version: "1.2", effective: "2024-01-15", cycle: "Biennial" },
-  // Capital & Infrastructure
-  { id: "RPL-CAP-STD-101", title: "Substation Capital Project Approval Standard", vertical: "capital-infrastructure", type: "Standard", owner: "P21", reviewer: "P20", approver: "P16", version: "3.4", effective: "2024-04-08", cycle: "Annual" },
-  { id: "RPL-CAP-PRO-102", title: "Capital Budget Planning Procedure", vertical: "capital-infrastructure", type: "Procedure", owner: "P16", reviewer: "P05", approver: "P01", version: "2.8", effective: "2024-08-19", cycle: "Annual" },
-  { id: "RPL-CAP-PLN-103", title: "Distribution Asset Replacement Plan", vertical: "capital-infrastructure", type: "Plan", owner: "P22", reviewer: "P21", approver: "P16", version: "2025.1", effective: "2025-01-13", cycle: "Annual" },
+  // Financial & Reporting -> Financial Compliance & Reporting (table_schemas.md §6)
+  { id: "RPL-FIN-PRO-101", title: "FERC Form 1 Preparation Procedure", vertical: "financial-compliance-reporting", type: "Procedure", owner: "P06", reviewer: "P05", approver: "P04", version: "3.1", effective: "2024-03-01", cycle: "Annual" },
+  // Rebalanced to Tax & Trade Compliance: utility financial-report filings to state regulators
+  // routinely bundle property-tax and franchise-fee schedules, so this is retitled to the tax
+  // reporting obligation rather than the general financial filing.
+  { id: "RPL-FIN-PRO-102", title: "Property Tax & Public Utility Franchise Fee Filing Procedure", vertical: "tax-trade-compliance", type: "Procedure", owner: "P09", reviewer: "P08", approver: "P07", version: "2.4", effective: "2024-04-15", cycle: "Annual" },
+  { id: "RPL-FIN-POL-103", title: "Regulatory Asset & Deferral Accounting Policy", vertical: "financial-compliance-reporting", type: "Policy", owner: "P05", reviewer: "P04", approver: "P01", version: "1.6", effective: "2023-09-01", cycle: "Biennial" },
+  // Revenue & Pricing -> Financial Compliance & Reporting (table_schemas.md §6)
+  { id: "RPL-REV-PRO-101", title: "Rate Case Preparation Procedure", vertical: "financial-compliance-reporting", type: "Procedure", owner: "P11", reviewer: "P10", approver: "P07", version: "2.0", effective: "2024-01-22", cycle: "Annual" },
+  // Rebalanced to Tax & Trade Compliance: rate riders/trackers are the mechanism utilities use to
+  // pass through and remit state sales/use tax and gross-receipts tax on customer bills, so this is
+  // retitled to the tax-remittance angle of that filing.
+  { id: "RPL-REV-PRO-102", title: "Utility Sales & Use Tax Remittance Procedure", vertical: "tax-trade-compliance", type: "Procedure", owner: "P10", reviewer: "P08", approver: "P07", version: "4.2", effective: "2024-06-10", cycle: "Annual" },
+  { id: "RPL-REV-POL-103", title: "Customer Billing Adjustment & Refund Policy", vertical: "financial-compliance-reporting", type: "Policy", owner: "P14", reviewer: "P13", approver: "P03", version: "1.3", effective: "2023-11-20", cycle: "Biennial" },
+  // Technology & Systems -> Information Technology & Records (table_schemas.md §6)
+  // Rebalanced to Data Privacy & Cybersecurity: this is a direct, un-retitled fit — the vertical's
+  // own description names customer data protection and breach notification.
+  { id: "RPL-TEC-POL-101", title: "Customer Data Privacy & Security Policy", vertical: "data-privacy-cybersecurity", type: "Policy", owner: "P03", reviewer: "P02", approver: "P01", version: "3.0", effective: "2024-02-05", cycle: "Annual" },
+  { id: "RPL-TEC-PRO-102", title: "AMI Head-End System Change Management Procedure", vertical: "information-technology-records", type: "Procedure", owner: "P20", reviewer: "P19", approver: "P16", version: "2.2", effective: "2024-05-13", cycle: "Annual" },
+  { id: "RPL-TEC-PLN-103", title: "Operational Technology Cybersecurity Incident Response Plan", vertical: "information-technology-records", type: "Plan", owner: "P23", reviewer: "P21", approver: "P16", version: "1.8", effective: "2024-08-01", cycle: "Annual" },
+  // Supply Chain & Procurement -> Supply Chain & Third-Party Risk (table_schemas.md §6)
+  { id: "RPL-SCM-PRO-101", title: "Supplier Qualification Procedure", vertical: "supply-chain-third-party-risk", type: "Procedure", owner: "P19", reviewer: "P20", approver: "P16", version: "2.5", effective: "2024-03-18", cycle: "Annual" },
+  // Rebalanced to Health & Safety: a direct, un-retitled fit — contractor safety prequalification
+  // is workplace/product safety vetting, squarely in that vertical's own description.
+  { id: "RPL-SCM-PRO-102", title: "Contractor Safety Prequalification Procedure", vertical: "health-safety", type: "Procedure", owner: "P27", reviewer: "P24", approver: "P16", version: "3.3", effective: "2024-07-08", cycle: "Annual" },
+  { id: "RPL-SCM-STD-103", title: "Transformer & Meter Inventory Management Standard", vertical: "supply-chain-third-party-risk", type: "Standard", owner: "P22", reviewer: "P21", approver: null, version: "1.4", effective: "2023-12-04", cycle: "Biennial" },
+  // Risk & Insurance -> Risk & Resilience (table_schemas.md §6)
+  { id: "RPL-RSK-PLN-101", title: "Enterprise Risk Management Framework", vertical: "risk-resilience", type: "Plan", owner: "P04", reviewer: "P02", approver: "P01", version: "2.1", effective: "2024-01-08", cycle: "Annual" },
+  // Rebalanced to Workforce & Employment: insurance-claims handling for a utility is dominated by
+  // workers' compensation/employee injury claims (ERISA-adjacent benefits administration), so this
+  // is retitled to that employment-benefits angle.
+  { id: "RPL-RSK-PRO-102", title: "Workers' Compensation Claims & Employee Benefits Procedure", vertical: "workforce-employment", type: "Procedure", owner: "P12", reviewer: "P03", approver: "P02", version: "1.9", effective: "2024-04-29", cycle: "Biennial" },
+  { id: "RPL-RSK-PLN-103", title: "Business Continuity & Storm Restoration Plan", vertical: "risk-resilience", type: "Plan", owner: "P23", reviewer: "P21", approver: "P16", version: "5.0", effective: "2024-09-16", cycle: "Annual" },
+  // Strategic & Competitive -> Corporate Governance & Board (table_schemas.md §6 default)
+  { id: "RPL-STR-PLN-101", title: "Integrated Distribution System Planning Process", vertical: "corporate-governance-board", type: "Plan", owner: "P21", reviewer: "P20", approver: "P16", version: "1.2", effective: "2024-02-26", cycle: "Annual" },
+  // Rebalanced to Policy & Training Management: tracking regulatory dockets only works if staff are
+  // trained on how and when to flag them, so this is retitled to the training/acknowledgment side
+  // of that monitoring duty.
+  { id: "RPL-STR-PRO-102", title: "Regulatory Compliance Training & Docket Monitoring Procedure", vertical: "policy-training-management", type: "Procedure", owner: "P08", reviewer: "P07", approver: "P02", version: "2.0", effective: "2024-06-24", cycle: "Annual" },
+  { id: "RPL-STR-POL-103", title: "Distributed Energy Resource Interconnection Strategy", vertical: "corporate-governance-board", type: "Policy", owner: "P20", reviewer: "P21", approver: "P16", version: "1.1", effective: "2024-10-07", cycle: "Biennial" },
+  // Reputational & Stakeholder -> Corporate Governance & Board (table_schemas.md §6, folds in)
+  // Rebalanced to Data Privacy & Cybersecurity: retitled from general crisis communications to the
+  // specific breach-notification communications a privacy incident requires.
+  { id: "RPL-COM-PRO-101", title: "Data Breach Incident Communications Procedure", vertical: "data-privacy-cybersecurity", type: "Procedure", owner: "P17", reviewer: "P13", approver: "P01", version: "3.2", effective: "2024-03-11", cycle: "Annual" },
+  { id: "RPL-COM-PRO-102", title: "Public Meeting & Community Notification Procedure", vertical: "corporate-governance-board", type: "Procedure", owner: "P22", reviewer: "P21", approver: "P07", version: "1.5", effective: "2023-10-23", cycle: "Biennial" },
+  // Rebalanced to Policy & Training Management: retitled from a general media policy to the
+  // employee-facing policy-acknowledgment/training obligation that goes with it.
+  { id: "RPL-COM-POL-103", title: "Employee Social Media Policy & Training Acknowledgment Standard", vertical: "policy-training-management", type: "Policy", owner: "P13", reviewer: "P03", approver: "P01", version: "2.3", effective: "2024-05-20", cycle: "Annual" },
+  // Contractual & Third-Party Obligations -> Legal & Contractual (table_schemas.md §6 default)
+  { id: "RPL-CON-PRO-101", title: "Pole Attachment Agreement Administration Procedure", vertical: "legal-contractual", type: "Procedure", owner: "P12", reviewer: "P10", approver: "P03", version: "2.7", effective: "2024-02-12", cycle: "Annual" },
+  { id: "RPL-CON-PRO-102", title: "Wholesale Power Agreement Compliance Procedure", vertical: "legal-contractual", type: "Procedure", owner: "P09", reviewer: "P08", approver: "P07", version: "1.6", effective: "2024-07-29", cycle: "Annual" },
+  { id: "RPL-CON-STD-103", title: "Vegetation Contractor Agreement Management Standard", vertical: "legal-contractual", type: "Standard", owner: "P22", reviewer: "P21", approver: null, version: "1.2", effective: "2024-01-15", cycle: "Biennial" },
+  // Capital & Infrastructure -> Risk & Resilience (table_schemas.md §6)
+  { id: "RPL-CAP-STD-101", title: "Substation Capital Project Approval Standard", vertical: "risk-resilience", type: "Standard", owner: "P21", reviewer: "P20", approver: "P16", version: "3.4", effective: "2024-04-08", cycle: "Annual" },
+  // Rebalanced to Workforce & Employment: this is the weakest reframe in the set — capital budget
+  // planning is retitled to the labor-cost/compensation-budget side of workforce planning, which is
+  // a real but less direct fit than the other moves.
+  { id: "RPL-CAP-PRO-102", title: "Workforce Compensation & Benefits Budget Planning Procedure", vertical: "workforce-employment", type: "Procedure", owner: "P16", reviewer: "P05", approver: "P01", version: "2.8", effective: "2024-08-19", cycle: "Annual" },
+  // Rebalanced to Environmental & Sustainability: utility asset-replacement programs are commonly
+  // driven by environmental remediation (e.g. retiring PCB-containing or leaking equipment), so this
+  // is retitled to that environmental-impact angle.
+  { id: "RPL-CAP-PLN-103", title: "Distribution Asset Replacement & Environmental Impact Plan", vertical: "environmental-sustainability", type: "Plan", owner: "P22", reviewer: "P21", approver: "P16", version: "2025.1", effective: "2025-01-13", cycle: "Annual" },
 ];
 
 function addYears(iso: string, years: number): string {

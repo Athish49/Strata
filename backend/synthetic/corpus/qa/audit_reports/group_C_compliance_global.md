@@ -125,7 +125,7 @@ Implications for the spec:
 ```markdown
 ## T20 — Spill Response & Reporting Procedure
 
-**Doc ID:** RPL-ENV-PRO-005 · **Vertical:** Environmental · **Wave:** 2 · **Grounding:** `corpus/grounding/T20.json`
+**Doc ID:** RPL-ENV-PRO-005 · **Vertical:** Environmental & Sustainability · **Wave:** 2 · **Grounding:** `corpus/grounding/T20.json`
 **Owner/Reviewer/Approver:** Hannah Brooks (P26) / Daniel Foster (P25) / Sandra Kim (P24)
 **Outputs:** `corpus/docs/RPL-ENV-PRO-005/RPL-ENV-PRO-005_v3.1.md`, `RPL-ENV-PRO-005.basis.json`, `data/spill_events_2024.csv`, `data/README.md`, `scripts/generate_spill_data.py`, `render/RPL-ENV-PRO-005_v3.1.docx`, `render/RPL-ENV-PRO-005_v3.1.pdf`, `render/EHS-F-201_Spill_Report.pdf` (fillable), `render/RPL-ENV-PRO-005_App-B_Crew_Card.pdf`
 
@@ -296,7 +296,7 @@ Indiana is an **IOSHA state-plan state**, so a real Indiana document refers to I
 ```markdown
 ## T21 — Electrical Accident & Incident Reporting Procedure
 
-**Doc ID:** RPL-SAF-PRO-009 · **Vertical:** Workforce & Safety · **Wave:** 2 · **Grounding:** `corpus/grounding/T21.json`
+**Doc ID:** RPL-SAF-PRO-009 · **Vertical:** Health & Safety · **Wave:** 2 · **Grounding:** `corpus/grounding/T21.json`
 **Owner/Reviewer/Approver:** Tyrone Jackson (P27) / Sandra Kim (P24) / Elena Vasquez (P08), with concurrence by Michael Brennan (P16) shown in the approval block (not in front matter)
 **Outputs:** `corpus/docs/RPL-SAF-PRO-009/RPL-SAF-PRO-009_v2.0.md`, `RPL-SAF-PRO-009.basis.json`, `data/incident_log_2024.csv`, `data/README.md`, `scripts/generate_incident_data.py`, `render/RPL-SAF-PRO-009_v2.0.docx`, `render/RPL-SAF-PRO-009_v2.0.pdf`, `render/EHS-F-101_Incident_Report.pdf` (fillable), `render/EHS-F-102_IURC_Notification_Log.pdf` (fillable)
 
@@ -431,7 +431,7 @@ Rules:
 ```markdown
 ## T10 — Regulatory Obligations Register
 
-**Doc ID:** RPL-CMP-REG-001 · **Vertical:** Compliance & Legal · **Wave:** 3a (after Wave 2 clause-ID freeze) · **Grounding:** `corpus/grounding/T10.json`
+**Doc ID:** RPL-CMP-REG-001 · **Vertical:** Compliance & Ethics · **Wave:** 3a (after Wave 2 clause-ID freeze) · **Grounding:** `corpus/grounding/T10.json`
 **Owner/Reviewer/Approver:** Priya Raman (P06) / David Okafor (P05) / Margaret Ellison (P04)
 **Inputs (read-only):** `corpus/_global/*`; every Wave 2 document and basis file (`corpus/docs/*/*.md`, `corpus/docs/*/*.basis.json`); `corpus/qa/clause_id_freeze.json`
 **Outputs:** `corpus/docs/RPL-CMP-REG-001/RPL-CMP-REG-001_v4.0.md` (cover memo + methodology), `data/obligations_register.csv`, `data/controls.csv`, `data/README.md`, `RPL-CMP-REG-001.basis.json`, `render/RPL-CMP-REG-001_v4.0.xlsx`, `render/RPL-CMP-REG-001_v4.0_Memo.pdf`
@@ -517,7 +517,7 @@ The memo goes to PDF via the `docx` skill. CSV stays canonical.
 ```markdown
 ## T11 — Regulatory Reporting Calendar 2025
 
-**Doc ID:** RPL-REG-CAL-2025 · **Vertical:** Compliance & Legal · **Wave:** 3b (after T10) · **Grounding:** `corpus/grounding/T11.json` (same scope as T10)
+**Doc ID:** RPL-REG-CAL-2025 · **Vertical:** Compliance & Ethics · **Wave:** 3b (after T10) · **Grounding:** `corpus/grounding/T11.json` (same scope as T10)
 **Owner/Reviewer/Approver:** Marcus Lee (P09) / Elena Vasquez (P08) / Thomas Whitfield (P07)
 **Version / dates (per §1.4 as amended):** v1.2 · effective 2025-03-17 · approved 2025-03-14 · revision history: v1.0 2025-01-03 (annual roll from RPL-REG-CAL-2024), v1.1 2025-02-24 (aligned to RPL-DCC-PRO-003 v4.2), v1.2 2025-03-14 (aligned to RPL-ENV-PRO-005 v3.1 and RPL-SAF-PRO-009 v2.0)
 **Inputs (read-only):** `corpus/_global/*`; T10 outputs; Wave 2 documents and basis files; `corpus/qa/clause_id_freeze.json`
@@ -592,7 +592,7 @@ Regulatory Affairs' master calendar of every recurring and event-driven report o
 ```markdown
 ## T12 — Records Retention Schedule
 
-**Doc ID:** RPL-LEG-RRS-001 · **Vertical:** Compliance & Legal · **Wave:** 3b (after T10) · **Grounding:** `corpus/grounding/T12.json` (union of T13–T21 scopes)
+**Doc ID:** RPL-LEG-RRS-001 · **Vertical:** Information Technology & Records · **Wave:** 3b (after T10) · **Grounding:** `corpus/grounding/T12.json` (union of T13–T21 scopes)
 **Owner/Reviewer/Approver:** Linda Nguyen (P12) / Jonathan Pierce (P03) / Catherine Brandt (P02)
 **Inputs (read-only):** `corpus/_global/*` (including §1.6 Table R); T10 register (`obligation_type = record` rows); every Wave 2 document and basis file; `corpus/qa/clause_id_freeze.json`
 **Outputs:** `corpus/docs/RPL-LEG-RRS-001/RPL-LEG-RRS-001_v7.2.md`, `data/retention_schedule.csv`, `data/README.md`, `RPL-LEG-RRS-001.basis.json`, `render/RPL-LEG-RRS-001_v7.2.xlsx`, `render/RPL-LEG-RRS-001_v7.2.pdf`

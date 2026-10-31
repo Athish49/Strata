@@ -43,7 +43,7 @@ describe("FormData transport", () => {
       status: 202,
       body: { doc_id: "DOC-000041", version_id: "v1", job_id: "j1", status: "processing", approval_request_id: "r1", approval_state: "open" },
     }));
-    const r = await companyHttp.uploadDocument("operations-processes", docx(), { title: "Outage", doc_number: "OPS-9", register_spec: { a: 1 } });
+    const r = await companyHttp.uploadDocument("operations-quality", docx(), { title: "Outage", doc_number: "OPS-9", register_spec: { a: 1 } });
     expect(r).toEqual({
       kind: "created",
       doc_id: "DOC-000041",
@@ -60,7 +60,7 @@ describe("FormData transport", () => {
     expect(c.init.body).toBeInstanceOf(FormData);
     expect(headerNames(c.init)).not.toContain("content-type");
     const f = form(c);
-    expect(f.get("vertical")).toBe("operations-processes");
+    expect(f.get("vertical")).toBe("operations-quality");
     expect(f.get("acting_person_id")).toBe("P05");
     expect(f.get("title")).toBe("Outage");
     expect(f.get("doc_number")).toBe("OPS-9");
@@ -87,7 +87,7 @@ describe("FormData transport", () => {
     expect(form(calls[0]).get("acting_person_id")).toBe("P09");
     expect(form(calls[0]).get("change_reason")).toBe("typo");
     setActingPersonId(null);
-    await expect(companyHttp.uploadDocument("compliance-legal", docx())).rejects.toBeInstanceOf(MissingActorError);
+    await expect(companyHttp.uploadDocument("compliance-ethics", docx())).rejects.toBeInstanceOf(MissingActorError);
     await expect(companyHttp.decideApprovalStep("r", 1, "approved")).rejects.toBeInstanceOf(MissingActorError);
     expect(calls).toHaveLength(1);
   });
@@ -96,7 +96,7 @@ describe("FormData transport", () => {
 describe("upload results (bodies of 200/409 are surfaced, not thrown)", () => {
   it("409 duplicate -> kind duplicate with message and doc_id", async () => {
     stub(() => ({ status: 409, body: { status: "duplicate", message: "This document is already in the system as 'Outage Plan'.", doc_id: "DOC-000003" } }));
-    expect(await companyHttp.uploadDocument("compliance-legal", docx())).toEqual({
+    expect(await companyHttp.uploadDocument("compliance-ethics", docx())).toEqual({
       kind: "duplicate",
       message: "This document is already in the system as 'Outage Plan'.",
       doc_id: "DOC-000003",
@@ -105,7 +105,7 @@ describe("upload results (bodies of 200/409 are surfaced, not thrown)", () => {
 
   it("409 duplicate on the race path carries doc_id null", async () => {
     stub(() => ({ status: 409, body: { status: "duplicate", message: "This document is already in the system as 'another document'.", doc_id: null } }));
-    expect(await companyHttp.uploadDocument("compliance-legal", docx())).toMatchObject({ kind: "duplicate", doc_id: null });
+    expect(await companyHttp.uploadDocument("compliance-ethics", docx())).toMatchObject({ kind: "duplicate", doc_id: null });
   });
 
   it("200 unchanged -> kind unchanged", async () => {
@@ -144,7 +144,7 @@ describe("upload results (bodies of 200/409 are surfaced, not thrown)", () => {
     [422, { detail: [{ loc: ["body", "vertical"], msg: "Field required" }] }, "Field required"],
   ])("HTTP %i without a mapped body throws ApiError with the server message", async (status, body, msg) => {
     stub(() => ({ status, body }));
-    const err = await companyHttp.uploadDocument("compliance-legal", docx()).catch((e: unknown) => e);
+    const err = await companyHttp.uploadDocument("compliance-ethics", docx()).catch((e: unknown) => e);
     expect(err).toBeInstanceOf(ApiError);
     expect(err).toMatchObject({ status, detail: msg });
   });

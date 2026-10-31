@@ -12,9 +12,9 @@ from app.api.company import routes as r
 
 
 def test_vertical_slug():
-    assert r.vertical_slug("Compliance & Legal") == "compliance-legal"
-    assert r.vertical_slug("Workforce & Safety") == "workforce-hr"
-    assert r.vertical_slug("Environmental") == "environmental-esg"
+    assert r.vertical_slug("Compliance & Ethics") == "compliance-ethics"
+    assert r.vertical_slug("Health & Safety") == "health-safety"
+    assert r.vertical_slug("Environmental & Sustainability") == "environmental-sustainability"
     assert r.vertical_slug("Nope") == "unclassified"
     assert r.vertical_slug(None) == "unclassified"
 
@@ -47,7 +47,7 @@ def test_attribute_value():
 # ------------------------------------------------- DB-only payloads (no corpus)
 DOC_ROW = {
     "doc_id": "DOC-000123", "title": "Customer Notice Procedure", "doc_class": "procedure",
-    "doc_number": "RPL-CS-PRO-007", "vertical": "Policy & Governance", "review_cycle": "Annual",
+    "doc_number": "RPL-CS-PRO-007", "vertical": "Financial Compliance & Reporting", "review_cycle": "Annual",
     "owner_id": "P18", "reviewer_id": "P14", "approver_id": None,
     "version": "v5.1", "status": "approved", "effective_date": date(2025, 1, 2),
     "approved_date": date(2024, 12, 20), "law_as_of": date(2024, 12, 1),
@@ -138,7 +138,7 @@ def test_module_has_no_file_io():
 def test_build_document_db_only():
     d = r.build_document(dict(DOC_ROW), ["170 IAC 4-1-16"])
     assert set(d) == DOC_KEYS
-    assert d["vertical"] == "policy-governance" and d["vertical_name"] == "Policy & Governance"
+    assert d["vertical"] == "financial-compliance-reporting" and d["vertical_name"] == "Financial Compliance & Reporting"
     assert d["doc_type"] == "Procedure" and d["doc_number"] == "RPL-CS-PRO-007"
     assert d["next_review"] == "2026-02-17" and d["review_cycle"] == "Annual"
     assert d["two_signature"] and d["monitored"] and d["approver"] is None
@@ -161,7 +161,7 @@ async def test_documents_endpoints_fully_populated_from_db(no_files, _clear_over
     assert lst == [one]
     assert set(one) == DOC_KEYS
     assert one["doc_number"] == "RPL-CS-PRO-007" and one["doc_type"] == "Procedure"
-    assert one["vertical"] == "policy-governance" and one["review_cycle"] == "Annual"
+    assert one["vertical"] == "financial-compliance-reporting" and one["review_cycle"] == "Annual"
     assert one["next_review"] == "2026-02-17" and one["effective_date"] == "2025-01-02"
     assert one["owner"]["name"] == "Ann Owner" and one["reviewer"]["name"] == "Rex Reviewer"
     assert one["cited_citations"] == ["170 IAC 4-1-16"]
@@ -227,7 +227,7 @@ def test_live_endpoints():
         assert sum(1 for n in by_num if n.endswith("#register")) == 3
         assert all(d["status"] == "effective" and d["has_current_version"] for d in docs)
         assert "unclassified" not in {d["vertical"] for d in docs}
-        assert len({d["vertical"] for d in docs}) == 5
+        assert len({d["vertical"] for d in docs}) == 6
         assert sorted(n for n, d in by_num.items() if d["two_signature"]) == ["RPL-CS-PRO-007", "RPL-CS-PRO-011"]
         for num, n_clauses in (("RPL-CMP-REG-001", 85), ("RPL-CMP-REG-001#register", 70)):
             cl = c.get(f"/company/documents/{by_num[num]['doc_id']}/clauses").json()
@@ -248,7 +248,7 @@ def test_build_document_exposes_state_for_a_document_still_in_review():
     from app.api.company.routes import build_document
 
     d = build_document({
-        "doc_id": "DOC-000001", "title": "New policy", "vertical": "Compliance & Legal",
+        "doc_id": "DOC-000001", "title": "New policy", "vertical": "Compliance & Ethics",
         "lifecycle_state": "pending", "version_status": None, "ingest_status": None,
         "latest_version_no": 1, "latest_version_status": "in_review",
         "latest_ingest_status": "pending",
@@ -262,11 +262,11 @@ def test_build_document_exposes_state_for_a_document_still_in_review():
 def test_build_document_current_version_is_monitored():
     from app.api.company.routes import build_document
 
-    d = build_document({"doc_id": "DOC-000002", "title": "T", "vertical": "Environmental",
+    d = build_document({"doc_id": "DOC-000002", "title": "T", "vertical": "Environmental & Sustainability",
                         "lifecycle_state": "active", "version": "v1.0", "status": "effective",
                         "version_status": "effective", "ingest_status": "ingested"}, [])
     assert d["has_current_version"] is True and d["monitored"] is True
-    assert d["vertical"] == "environmental-esg"
+    assert d["vertical"] == "environmental-sustainability"
 
 
 def test_all_fourteen_frontend_verticals_map_both_ways():
@@ -275,10 +275,11 @@ def test_all_fourteen_frontend_verticals_map_both_ways():
     from app.api.company.routes import VERTICAL_SLUGS, vertical_slug
 
     frontend_slugs = {
-        "compliance-legal", "policy-governance", "financial-reporting", "revenue-pricing",
-        "operations-processes", "technology-systems", "workforce-hr", "environmental-esg",
-        "supply-chain-procurement", "risk-insurance", "strategic-competitive",
-        "reputational-stakeholder", "contractual-third-party", "capital-infrastructure",
+        "corporate-governance-board", "compliance-ethics", "legal-contractual",
+        "financial-compliance-reporting", "tax-trade-compliance", "workforce-employment",
+        "health-safety", "data-privacy-cybersecurity", "environmental-sustainability",
+        "operations-quality", "information-technology-records",
+        "supply-chain-third-party-risk", "policy-training-management", "risk-resilience",
     }
     assert set(VERTICAL_SLUGS.values()) == frontend_slugs
     for name, slug in VERTICAL_SLUGS.items():

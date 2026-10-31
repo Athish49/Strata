@@ -11,20 +11,20 @@ export interface Vertical {
 }
 
 export const VERTICALS: readonly Vertical[] = [
-  { order: 1, slug: "compliance-legal", name: "Compliance & Legal", backendVertical: "Compliance & Legal", description: "Documents that set out legal and regulatory compliance obligations, such as ethics, reporting and recordkeeping requirements." },
-  { order: 2, slug: "policy-governance", name: "Policy & Governance Documents", backendVertical: "Policy & Governance", description: "Corporate policies and governance standards that define how the company is directed and controlled." },
-  { order: 3, slug: "financial-reporting", name: "Financial & Reporting", backendVertical: null, description: "Procedures for financial statements, regulatory filings and rate reporting to commissions and agencies." },
-  { order: 4, slug: "revenue-pricing", name: "Revenue & Pricing", backendVertical: null, description: "Tariffs, rate schedules and billing practices that determine what customers are charged." },
-  { order: 5, slug: "operations-processes", name: "Operations & Processes", backendVertical: "Operations & Processes", description: "Operating procedures for running the distribution system, including service, outage and metering processes." },
-  { order: 6, slug: "technology-systems", name: "Technology & Systems", backendVertical: null, description: "Policies for information systems, cybersecurity and the handling of customer data." },
-  { order: 7, slug: "workforce-hr", name: "Workforce & HR", backendVertical: "Workforce & Safety", description: "Workforce, training and safety documents covering employees and contractors." },
-  { order: 8, slug: "environmental-esg", name: "Environmental & ESG", backendVertical: "Environmental", description: "Environmental permits, emissions and waste procedures, and sustainability reporting." },
-  { order: 9, slug: "supply-chain-procurement", name: "Supply Chain & Procurement", backendVertical: null, description: "Procedures for qualifying suppliers and purchasing materials, equipment and services." },
-  { order: 10, slug: "risk-insurance", name: "Risk & Insurance", backendVertical: null, description: "Enterprise risk, insurance coverage and business continuity documents." },
-  { order: 11, slug: "strategic-competitive", name: "Strategic & Competitive", backendVertical: null, description: "Long-range plans and market positioning documents, including resource and growth planning." },
-  { order: 12, slug: "reputational-stakeholder", name: "Reputational & Stakeholder", backendVertical: null, description: "Customer, community and media communication standards, and stakeholder engagement practices." },
-  { order: 13, slug: "contractual-third-party", name: "Contractual & Third-Party Obligations", backendVertical: null, description: "Obligations the company owes under contracts, interconnection agreements and third-party arrangements." },
-  { order: 14, slug: "capital-infrastructure", name: "Capital & Infrastructure", backendVertical: null, description: "Capital project approval and infrastructure standards for substations, lines and facilities." },
+  { order: 1, slug: "corporate-governance-board", name: "Corporate Governance & Board", backendVertical: null, description: "Board structure, bylaws, charters, fiduciary duties, shareholder rights, entity management, annual filings, regulatory disclosure obligations." },
+  { order: 2, slug: "compliance-ethics", name: "Compliance & Ethics", backendVertical: "Compliance & Ethics", description: "Code of conduct, anti-corruption (FCPA), anti-bribery, whistleblower protections, compliance training, conflicts of interest, FTC consumer/advertising compliance." },
+  { order: 3, slug: "legal-contractual", name: "Legal & Contractual", backendVertical: null, description: "Contract governance, litigation holds, IP protection, licensing, entity structure, NDAs, antitrust compliance." },
+  { order: 4, slug: "financial-compliance-reporting", name: "Financial Compliance & Reporting", backendVertical: "Financial Compliance & Reporting", description: "SOX/ICFR, GAAP/IFRS, financial disclosures, audit requirements, internal controls, revenue recognition, pricing regulations, fee disclosures." },
+  { order: 5, slug: "tax-trade-compliance", name: "Tax & Trade Compliance", backendVertical: null, description: "Corporate tax, payroll tax, sales tax, international tax (FATCA), transfer pricing, export controls, customs, OFAC sanctions, tariffs." },
+  { order: 6, slug: "workforce-employment", name: "Workforce & Employment", backendVertical: null, description: "Labor laws, wage & hour, FMLA, ADA, anti-discrimination, benefits (ERISA), immigration/work authorization, DEI policies." },
+  { order: 7, slug: "health-safety", name: "Health & Safety", backendVertical: "Health & Safety", description: "Workplace safety, emergency preparedness, hazard communication, PPE, incident reporting, product/consumer safety." },
+  { order: 8, slug: "data-privacy-cybersecurity", name: "Data Privacy & Cybersecurity", backendVertical: null, description: "GDPR, CCPA/CPRA, state privacy laws, data breach notification, cybersecurity frameworks, data retention, information security." },
+  { order: 9, slug: "environmental-sustainability", name: "Environmental & Sustainability", backendVertical: "Environmental & Sustainability", description: "EPA regulations, emissions, waste management, environmental permits, GHG reporting, ESG disclosures, climate risk, energy management." },
+  { order: 10, slug: "operations-quality", name: "Operations & Quality", backendVertical: "Operations & Quality", description: "Quality management, process compliance, GMP, FDA product regulations, CAPA, operational standards, business process documentation." },
+  { order: 11, slug: "information-technology-records", name: "Information Technology & Records", backendVertical: "Information Technology & Records", description: "IT policies, system access controls, change management, records retention, digital accessibility (ADA/WCAG), AI governance and responsible use." },
+  { order: 12, slug: "supply-chain-third-party-risk", name: "Supply Chain & Third-Party Risk", backendVertical: null, description: "Vendor compliance, third-party risk, supplier due diligence, modern slavery/forced labor, supply chain transparency, conflict minerals." },
+  { order: 13, slug: "policy-training-management", name: "Policy & Training Management", backendVertical: null, description: "Policy lifecycle, document control, version management, compliance training programs, employee acknowledgments." },
+  { order: 14, slug: "risk-resilience", name: "Risk & Resilience", backendVertical: null, description: "Enterprise risk management, insurance requirements, business continuity, disaster recovery, operational resilience." },
 ];
 
 export const VERTICAL_SLUGS: readonly string[] = VERTICALS.map((v) => v.slug);

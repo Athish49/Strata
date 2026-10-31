@@ -102,7 +102,7 @@ class FakeSession:
 PERSON = ("FROM company.people WHERE company_id = :c AND person_id = :p", [{"person_id": "P1"}])
 DOC_LOCK = ("FROM company.company_documents WHERE company_id = :c AND doc_id = :d FOR UPDATE",
             [{"doc_id": DOC, "current_version_id": uuid.UUID(V1)}])
-DOC_READ = ("SELECT cd.doc_id, cd.title", [{"doc_id": DOC, "title": "T", "vertical": "Environmental"}])
+DOC_READ = ("SELECT cd.doc_id, cd.title", [{"doc_id": DOC, "title": "T", "vertical": "Environmental & Sustainability"}])
 CUR_VERSION = ("AND version_id = CAST(:v AS uuid) FOR UPDATE",
                [{"version_id": uuid.UUID(V1), "status": "effective"}])
 VER_UPDATE = ("UPDATE company.document_versions", [{"version_id": uuid.UUID(V1)}])
@@ -122,15 +122,15 @@ async def test_fake_route_is_mounted_and_sets_only_sent_columns():
     c, sess = fake_client([PERSON, DOC_LOCK, CUR_VERSION, VER_UPDATE, DOC_READ])
     async with c:
         r = await c.patch(f"/company/documents/{DOC}", json={
-            "acting_person_id": "P1", "vertical": "environmental-esg", "doc_class": "Procedure",
+            "acting_person_id": "P1", "vertical": "environmental-sustainability", "doc_class": "Procedure",
             "review_cycle": " Annual ", "next_review": "2026-03-01"})
     assert r.status_code == 200, r.text
-    assert r.json()["doc_id"] == DOC and r.json()["vertical"] == "environmental-esg"
+    assert r.json()["doc_id"] == DOC and r.json()["vertical"] == "environmental-sustainability"
     (dsql, dp), = sess.find("UPDATE company.company_documents")
     assert "vertical = :d_vertical" in dsql and "doc_class = :d_doc_class" in dsql
     assert "review_cycle = :d_review_cycle" in dsql and "updated_at = now()" in dsql
     assert "title" not in dsql.split("WHERE")[0] and "doc_number" not in dsql
-    assert (dp["d_vertical"], dp["d_doc_class"], dp["d_review_cycle"]) == ("Environmental", "procedure", "Annual")
+    assert (dp["d_vertical"], dp["d_doc_class"], dp["d_review_cycle"]) == ("Environmental & Sustainability", "procedure", "Annual")
     (vsql, vp), = sess.find("UPDATE company.document_versions")
     assert "next_review = :v_next_review" in vsql and "effective_date" not in vsql
     assert vp["v_next_review"] == date(2026, 3, 1) and vp["v"] == V1
@@ -331,7 +331,7 @@ def client(factory):
 
 
 def _doc(pg, doc_id=DOC, *, current=None, state="active", title="Policy", doc_class="plan",
-         vertical="Compliance & Legal", doc_number="RPL-X-001", review_cycle="Biennial"):
+         vertical="Compliance & Ethics", doc_number="RPL-X-001", review_cycle="Biennial"):
     _exec(pg, "INSERT INTO company.company_documents (company_id, doc_id, title, doc_class, vertical, "
               "doc_number, review_cycle, current_version_id, lifecycle_state, updated_at) "
               "VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s, now() - interval '1 day')",
@@ -357,7 +357,7 @@ async def test_pg_sets_doc_fields_and_current_version_dates_and_get_reflects(pg,
     _version(pg, V1, 1, "effective", is_current=True)
     _version(pg, V2, 2, "in_review")
     body = {"acting_person_id": "P1", "title": "Retention Schedule", "doc_class": "retention_schedule",
-            "vertical": "workforce-hr", "doc_number": "RPL-RRS-001", "review_cycle": "Annual",
+            "vertical": "workforce-employment", "doc_number": "RPL-RRS-001", "review_cycle": "Annual",
             "next_review": "2026-06-30", "effective_date": "2025-01-15",
             "approved_date": "2025-01-14", "law_as_of": "2024-12-31"}
     async with client as c:
@@ -365,7 +365,7 @@ async def test_pg_sets_doc_fields_and_current_version_dates_and_get_reflects(pg,
         got = await c.get(f"/company/documents/{DOC}")
     assert r.status_code == 200, r.text
     assert _rows(pg, _DOC_COLS, (DOC,)) == [
-        ("Retention Schedule", "retention_schedule", "Workforce & Safety", "RPL-RRS-001", "Annual")]
+        ("Retention Schedule", "retention_schedule", "Workforce & Employment", "RPL-RRS-001", "Annual")]
     assert _rows(pg, _VER_COLS, (V1,)) == [
         (date(2025, 1, 15), date(2025, 1, 14), date(2024, 12, 31), date(2026, 6, 30))]
     assert _rows(pg, _VER_COLS, (V2,)) == [OLD_DATES], "only the current version changes"
@@ -376,7 +376,7 @@ async def test_pg_sets_doc_fields_and_current_version_dates_and_get_reflects(pg,
     assert r.json() == got.json(), "PATCH returns the GET payload"
     g = got.json()
     assert (g["title"], g["doc_type"], g["vertical"], g["vertical_name"]) == (
-        "Retention Schedule", "Retention Schedule", "workforce-hr", "Workforce & Safety")
+        "Retention Schedule", "Retention Schedule", "workforce-employment", "Workforce & Employment")
     assert (g["doc_number"], g["review_cycle"], g["next_review"]) == ("RPL-RRS-001", "Annual", "2026-06-30")
     assert (g["effective_date"], g["approved_date"], g["law_as_of"]) == ("2025-01-15", "2025-01-14", "2024-12-31")
 
@@ -392,6 +392,63 @@ async def test_pg_vertical_accepts_lowercase_name_and_slug_for_all_14(pg, client
                 assert r.status_code == 200, (value, r.text)
                 assert r.json()["vertical"] == slug
                 assert _rows(pg, "SELECT vertical FROM company.company_documents") == [(name.title(),)]
+
+
+async def test_pg_verticals_table_enforces_fk_on_old_and_invalid_names(pg):
+    """company.verticals (added by migration 9c1e4b7a2f05) is a real FK target in
+    the test fixture now, not just an app-layer check. A raw INSERT of an
+    old-taxonomy or otherwise unknown vertical string directly against
+    company_documents.vertical or approval_policies.applies_to_vertical must be
+    rejected by Postgres itself with a foreign-key violation -- proving the
+    fixture (tests/engine/fixtures/company_schema.sql) actually has the FK, not
+    just the app's own validation in front of it."""
+    import psycopg2
+
+    _doc(pg, doc_id="DOC-FK-1", current=None, vertical=None)
+
+    # old (pre-retaxonomy) and nonsense values are both rejected on INSERT.
+    for bad in ("Policy & Governance", "Mars"):
+        with pytest.raises(psycopg2.errors.ForeignKeyViolation):
+            _exec(
+                pg,
+                "UPDATE company.company_documents SET vertical = %s WHERE doc_id = %s",
+                (bad, "DOC-FK-1"),
+            )
+
+    # same FK on approval_policies.applies_to_vertical.
+    policy_id = str(uuid.uuid4())
+    with pytest.raises(psycopg2.errors.ForeignKeyViolation):
+        _exec(
+            pg,
+            "INSERT INTO company.approval_policies (company_id, policy_id, name, applies_to_vertical) "
+            "VALUES (%s, %s, %s, %s)",
+            (CO, policy_id, "bad policy", "Policy & Governance"),
+        )
+
+    # a canonical new-taxonomy name, and NULL (unclassified), both still work.
+    _exec(
+        pg,
+        "UPDATE company.company_documents SET vertical = %s WHERE doc_id = %s",
+        ("Compliance & Ethics", "DOC-FK-1"),
+    )
+    _exec(
+        pg,
+        "UPDATE company.company_documents SET vertical = NULL WHERE doc_id = %s",
+        ("DOC-FK-1",),
+    )
+    _exec(
+        pg,
+        "INSERT INTO company.approval_policies (company_id, policy_id, name, applies_to_vertical) "
+        "VALUES (%s, %s, %s, %s)",
+        (CO, policy_id, "good policy", "Risk & Resilience"),
+    )
+    assert _rows(pg, "SELECT applies_to_vertical FROM company.approval_policies WHERE policy_id = %s",
+                 (policy_id,)) == [("Risk & Resilience",)]
+
+    # the seeded lookup table matches the migration's 14-row NEW_VERTICALS exactly.
+    assert _rows(pg, "SELECT count(*) FROM company.verticals") == [(14,)]
+    assert _rows(pg, "SELECT name, slug FROM company.verticals WHERE name = %s",
+                 ("Corporate Governance & Board",)) == [("Corporate Governance & Board", "corporate-governance-board")]
 
 
 async def test_pg_no_current_version_updates_newest_non_retired(pg, client):
@@ -431,11 +488,11 @@ async def test_pg_explicit_null_clears_and_omitted_fields_untouched(pg, client):
             "acting_person_id": "P1", "doc_class": None, "review_cycle": None, "next_review": None})
         got = await c.get(f"/company/documents/{DOC}")
     assert r.status_code == 200, r.text
-    assert _rows(pg, _DOC_COLS, (DOC,)) == [("Policy", None, "Compliance & Legal", "RPL-X-001", None)]
+    assert _rows(pg, _DOC_COLS, (DOC,)) == [("Policy", None, "Compliance & Ethics", "RPL-X-001", None)]
     assert _rows(pg, _VER_COLS, (V1,)) == [(date(2020, 1, 1), date(2020, 1, 2), date(2020, 1, 3), None)]
     g = got.json()
     assert (g["doc_type"], g["review_cycle"], g["next_review"]) == ("Document", None, None)
-    assert (g["vertical"], g["doc_number"], g["effective_date"]) == ("compliance-legal", "RPL-X-001", "2020-01-01")
+    assert (g["vertical"], g["doc_number"], g["effective_date"]) == ("compliance-ethics", "RPL-X-001", "2020-01-01")
 
 
 async def test_pg_doc_only_patch_works_with_no_versions_at_all(pg, client):
@@ -498,7 +555,7 @@ async def test_pg_unknown_person_unknown_doc_and_bad_input(pg, client):
         status = await c.patch(f"/company/documents/{DOC}", json={"acting_person_id": "P1", "status": "retired"})
     assert ghost.status_code == 404 and missing.status_code == 404
     assert [x.status_code for x in (empty, no_body, bad_v, bad_c, bad_d, status)] == [422] * 6
-    assert _rows(pg, _DOC_COLS, (DOC,)) == [("Policy", "plan", "Compliance & Legal", "RPL-X-001", "Biennial")]
+    assert _rows(pg, _DOC_COLS, (DOC,)) == [("Policy", "plan", "Compliance & Ethics", "RPL-X-001", "Biennial")]
     assert _rows(pg, _VER_COLS, (V1,)) == [OLD_DATES]
     assert _rows(pg, "SELECT status FROM company.document_versions") == [("effective",)]
     assert _rows(pg, "SELECT updated_at < now() - interval '1 hour' FROM company.company_documents") == [(True,)]
@@ -518,7 +575,7 @@ async def test_pg_version_label_set_on_current_version_only_and_get_reflects(pg,
     assert _rows(pg, _LABEL, (V1,)) == [("5.1",)]
     assert _rows(pg, _LABEL, (V2,)) == [("v2.0",)], "only the current version changes"
     assert _rows(pg, _VER_COLS, (V1,)) == [OLD_DATES], "the dates are untouched"
-    assert _rows(pg, _DOC_COLS, (DOC,)) == [("Policy", "plan", "Compliance & Legal", "RPL-X-001", "Biennial")]
+    assert _rows(pg, _DOC_COLS, (DOC,)) == [("Policy", "plan", "Compliance & Ethics", "RPL-X-001", "Biennial")]
     assert _rows(pg, "SELECT version_no, status, is_current FROM company.document_versions ORDER BY version_no") \
         == [(1, "effective", True), (2, "in_review", False)]
     assert r.json()["version"] == "5.1" and got.json()["version"] == "5.1"
