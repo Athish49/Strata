@@ -8,9 +8,6 @@ import sys
 import os
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from dotenv import load_dotenv
-load_dotenv()
-
 from datetime import date as date_type
 from sqlalchemy import select
 from app.db import AsyncSessionLocal
@@ -46,4 +43,10 @@ async def fix():
 
 
 if __name__ == "__main__":
+    # Loaded here, not at import time, so importing this module's pure
+    # functions can never leak production secrets into the process env.
+    from dotenv import load_dotenv
+
+    load_dotenv()
+
     asyncio.run(fix())

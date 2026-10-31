@@ -381,17 +381,3 @@ def test_multiple_terms_all_extracted():
     # Both terms appear in usage_unit
     usage_clauses = [u.clause_id for u in usages]
     assert usage_clauses.count("DOC1:C1") == 2
-
-
-# ---------------------------------------------------------------------------
-# Corpus test (skipped in non-corpus runs)
-# ---------------------------------------------------------------------------
-
-@pytest.mark.corpus
-def test_corpus_terms_per_procedure_doc():
-    """Every procedure document has ≥14 TermEntry objects."""
-    import os
-    import importlib
-
-    # This would require loading the actual corpus; skip if no corpus data available
-    pytest.skip("Corpus test requires full corpus data")

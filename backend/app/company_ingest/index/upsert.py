@@ -28,7 +28,6 @@ def _build_payload(unit: ClauseUnit, company_id: str, version_id: str) -> dict:
         "section_kind": unit.section_kind,
         "clause_role": unit.role,
         "assessable": unit.assessable,
-        "is_current": True,
         "cited_sections": [
             e.parsed.normalized_key
             for e in unit.citations
@@ -48,91 +47,64 @@ def _build_payload(unit: ClauseUnit, company_id: str, version_id: str) -> dict:
     }
 
 
+def build_points(
+    units: list[ClauseUnit],
+    company_id: str,
+    version_id: str,
+    batch_size: int = 128,
+) -> list[list]:
+    """Embed and build Qdrant points for ``units``, grouped into upsert batches.
+
+    Point id is ``stable_uuid(company_id, version_id, clause_id)`` with the REAL
+    ``version_id`` (v1 passed the literal ``"v1"``, so every version overwrote the
+    previous one's vectors). Units for which ``build_embedded_text`` is ``""``
+    (boilerplate, front matter, blank table rows) are skipped.
+    """
+    from qdrant_client.models import PointStruct, SparseVector  # type: ignore[import-untyped]
+
+    embeddable = [u for u in units if build_embedded_text(u)]
+    batches: list[list] = []
+    for i in range(0, len(embeddable), batch_size):
+        batch_units = embeddable[i : i + batch_size]
+        dense_vectors = embed_texts([build_embedded_text(u) for u in batch_units])
+        points = []
+        for unit, dense_vec in zip(batch_units, dense_vectors):
+            sparse_dict = build_sparse_vector_for_unit(unit)
+            points.append(
+                PointStruct(
+                    id=str(stable_uuid(company_id, version_id, unit.clause_id)),
+                    vector={
+                        "dense": dense_vec,
+                        "bm25": SparseVector(
+                            indices=list(sparse_dict.keys()),
+                            values=list(sparse_dict.values()),
+                        ),
+                    },
+                    payload=_build_payload(unit, company_id, version_id),
+                )
+            )
+        batches.append(points)
+    return batches
+
+
 async def upsert_clauses(
     units: list[ClauseUnit],
     company_id: str,
     version_id: str,
     ctx: RunContext,
     batch_size: int = 128,
+    client=None,
 ) -> None:
     """Upsert ClauseUnit objects into the company_clauses Qdrant collection.
 
     Builds dense and sparse vectors, constructs payload per SPEC §9, upserts in batches.
     Skips units where build_embedded_text returns "".
+
+    This is a raw write with no delete. The only production caller is
+    ``promote.reindex_document`` (task 5.6), which deletes the document's points
+    first — presence in the collection means live, so nothing else may index.
     """
-    from qdrant_client.models import PointStruct, SparseVector  # type: ignore[import-untyped]
-
-    client = _make_client()
-
-    # Filter to embeddable units
-    embeddable: list[ClauseUnit] = []
-    for unit in units:
-        if build_embedded_text(unit):
-            embeddable.append(unit)
-
-    # Process in batches
-    for i in range(0, len(embeddable), batch_size):
-        batch_units = embeddable[i : i + batch_size]
-
-        # Build embedded texts for the batch
-        texts = [build_embedded_text(u) for u in batch_units]
-        dense_vectors = embed_texts(texts)
-
-        points = []
-        for unit, dense_vec in zip(batch_units, dense_vectors):
-            point_id = str(stable_uuid(company_id, version_id, unit.clause_id))
-            sparse_dict = build_sparse_vector_for_unit(unit)
-
-            payload = _build_payload(unit, company_id, version_id)
-
-            # Build named vectors dict
-            vectors: dict = {
-                "dense": dense_vec,
-                "bm25": SparseVector(
-                    indices=list(sparse_dict.keys()),
-                    values=list(sparse_dict.values()),
-                ),
-            }
-
-            points.append(
-                PointStruct(
-                    id=point_id,
-                    vector=vectors,
-                    payload=payload,
-                )
-            )
-
+    client = client or _make_client()
+    for points in build_points(units, company_id, version_id, batch_size):
         client.upsert(collection_name=COMPANY_COLLECTION, points=points)
         ctx.count("clauses_indexed", len(points))
-
-
-async def mark_previous_versions_stale(
-    doc_id: str,
-    current_version_id: str,
-    company_id: str,
-) -> None:
-    """Set is_current=False on all points for this doc_id except current_version_id."""
-    from qdrant_client.models import (  # type: ignore[import-untyped]
-        FieldCondition,
-        Filter,
-        MatchValue,
-        MatchExcept,
-    )
-
-    client = _make_client()
-
-    stale_filter = Filter(
-        must=[
-            FieldCondition(key="doc_id", match=MatchValue(value=doc_id)),
-            FieldCondition(key="company_id", match=MatchValue(value=company_id)),
-        ],
-        must_not=[
-            FieldCondition(key="version_id", match=MatchValue(value=current_version_id)),
-        ],
-    )
-
-    client.set_payload(
-        collection_name=COMPANY_COLLECTION,
-        payload={"is_current": False},
-        points=stale_filter,
-    )

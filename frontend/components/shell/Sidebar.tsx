@@ -8,6 +8,7 @@ import { FutureCue } from "@/components/common/FutureCue";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 import { cn } from "@/lib/utils";
 import { ANALYSIS_NAV, FUTURE_NAV_IDS, KB_NAV, isActive, type NavItem } from "./nav";
+import { ActingAsControl } from "./ActingAs";
 import { CompanyChip } from "./CompanyChip";
 import { Recents } from "./Recents";
 import { useShell } from "./ShellContext";
@@ -154,6 +155,7 @@ export function Sidebar() {
           <SearchButton />
           <FutureCue id="notifications" variant="icon" onDark side="right" />
           <CollapseToggle collapsed />
+          <ActingAsControl collapsed />
           <div className="mt-1">
             <CompanyChip collapsed />
           </div>
@@ -204,6 +206,9 @@ export function Sidebar() {
 
       <div className="shrink-0 border-t border-sidebar-border px-4 pb-3 pt-2">
         <CollapseToggle collapsed={false} />
+        <div className="mt-1">
+          <ActingAsControl />
+        </div>
         <CompanyChip />
       </div>
     </aside>

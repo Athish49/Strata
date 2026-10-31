@@ -29,7 +29,7 @@ from app.engine.diffing import (
     diff_segments,
     only_punct,
 )
-from app.engine.footprint import Footprint, rule_key
+from app.engine.footprint import VERSION_SCOPE, Footprint, rule_key
 from app.engine.schemas import NOISE_CLASSES, ChangeInput
 from app.engine.textnorm import normalize, strip_metadata
 
@@ -290,10 +290,13 @@ _S2_TITLES_SQL = text("""
     SELECT id, title_number FROM public.code_sections WHERE id = ANY(:ids)
 """)
 
+# Version-scoped (task 7.1): a pk from a non-current version never resolves to a clause id.
 _CLAUSE_IDS_SQL = text("""
-    SELECT clause_pk::text AS clause_pk, clause_id, doc_id
-    FROM company.clauses
-    WHERE clause_pk = ANY(CAST(:pks AS uuid[]))
+    SELECT c.clause_pk::text AS clause_pk, c.clause_id, c.doc_id
+    FROM company.clauses c
+    JOIN company.company_documents d ON d.company_id = c.company_id AND d.doc_id = c.doc_id
+    WHERE c.clause_pk = ANY(CAST(:pks AS uuid[]))
+      AND """ + VERSION_SCOPE + """
 """)
 
 

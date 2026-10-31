@@ -43,7 +43,11 @@ def _script():
 
 def test_single_head_and_chain():
     script = _script()
-    assert script.get_heads() == ["e5a1c7d9b304"]
+    # Assert there is exactly ONE head rather than naming it: every new
+    # migration moves the head, and hardcoding the id makes an unrelated test
+    # fail on each schema change. A single head is the property that matters.
+    assert len(script.get_heads()) == 1, script.get_heads()
+    # The engine revision itself must stay anchored to the merge commit.
     rev = script.get_revision("e5a1c7d9b304")
     assert rev.down_revision == "34ff74b6868a"
 

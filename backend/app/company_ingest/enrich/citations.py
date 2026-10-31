@@ -159,16 +159,24 @@ def _enrich_register_row(
         if not cell_str:
             continue
 
-        parsed_list = parse_citation(cell_str)
-        for parsed in parsed_list:
+        # A cell may carry several citations ("170 IAC 1-2-1; 170 IAC 1-2-2",
+        # "170 IAC 4-1-3; IC 8-1-2-40").  parse_citation() on the whole cell
+        # returns only the FIRST one, with the whole cell as citation_raw, so the
+        # rest were never resolved (task 9.1 rehearsal).  Split on the same span
+        # finder the prose path uses; a cell it finds nothing in keeps the
+        # whole-cell parse.
+        spans = find_citation_spans(cell_str) or [(0, len(cell_str), cell_str)]
+        pieces = [(start, end, parsed) for start, end, raw in spans
+                  for parsed in parse_citation(raw)]
+        for span_start, span_end, parsed in pieces:
             resolution_status, code_section_id, in_kb = _resolve(
                 parsed, ctx, code_section_repo
             )
             entry = CitationEntry(
                 parsed=parsed,
                 context="register_column",
-                span_start=0,
-                span_end=len(cell_str),
+                span_start=span_start,
+                span_end=span_end,
                 resolution_status=resolution_status,
                 code_section_id=code_section_id,
                 in_knowledge_base=in_kb,

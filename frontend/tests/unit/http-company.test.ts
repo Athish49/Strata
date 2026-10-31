@@ -41,22 +41,34 @@ afterEach(() => {
 });
 
 describe("companyHttp", () => {
-  it("drops documents with unknown vertical and warns", async () => {
+  it("keeps unclassified documents and maps unknown verticals to unclassified (warns only for unknown)", async () => {
     const warn = vi.spyOn(console, "warn").mockImplementation(() => {});
-    const calls = stub(() => ({ body: [doc("A", "compliance-legal"), doc("B", "unclassified")] }));
+    const calls = stub(() => ({ body: [doc("A", "compliance-legal"), doc("B", "unclassified"), doc("C", "nope")] }));
     const docs = await companyHttp.listDocuments();
-    expect(docs.map((d) => d.doc_id)).toEqual(["A"]);
+    expect(docs.map((d) => [d.doc_id, d.vertical])).toEqual([
+      ["A", "compliance-legal"],
+      ["B", "unclassified"],
+      ["C", "unclassified"],
+    ]);
     expect(calls[0]).toMatch(/\/company\/documents$/);
     expect(warn).toHaveBeenCalledOnce();
   });
 
-  it("getDocument: encodes id, null on 404, null on unknown vertical", async () => {
+  it("getDocument: encodes id, null on 404, unknown vertical becomes unclassified", async () => {
     vi.spyOn(console, "warn").mockImplementation(() => {});
     let n = 0;
     const calls = stub(() => (n++ === 0 ? { status: 404, body: { detail: "x" } } : { body: doc("B", "nope") }));
     expect(await companyHttp.getDocument("RPL CS/1")).toBeNull();
     expect(calls[0]).toMatch(/\/company\/documents\/RPL%20CS%2F1$/);
-    expect(await companyHttp.getDocument("B")).toBeNull();
+    expect((await companyHttp.getDocument("B"))?.vertical).toBe("unclassified");
+  });
+
+  it("documentMetaSchema accepts the new optional fields and extra keys", async () => {
+    stub(() => ({
+      body: [{ ...doc("D", "workforce-hr"), doc_number: "HR-1", vertical_name: "Workforce & Safety", ingest_status: "pending", lifecycle_state: "pending", brand_new_key: 1 }],
+    }));
+    const [d] = await companyHttp.listDocuments();
+    expect(d).toMatchObject({ doc_number: "HR-1", ingest_status: "pending", lifecycle_state: "pending", vertical_name: "Workforce & Safety" });
   });
 
   it("listClauses returns [] on 404 and parses rows", async () => {

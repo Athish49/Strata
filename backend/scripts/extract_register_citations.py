@@ -29,14 +29,10 @@ import uuid
 from decimal import Decimal
 from typing import Optional
 
-from dotenv import load_dotenv
-
 # ---------------------------------------------------------------------------
 # Bootstrap path so local app imports work
 # ---------------------------------------------------------------------------
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
-
-load_dotenv()
 
 import psycopg2
 
@@ -261,4 +257,10 @@ def main() -> None:
 
 
 if __name__ == "__main__":
+    # Loaded here, not at import time, so importing this module's pure
+    # functions can never leak production secrets into the process env.
+    from dotenv import load_dotenv
+
+    load_dotenv()
+
     main()

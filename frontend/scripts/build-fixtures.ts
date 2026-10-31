@@ -17,7 +17,7 @@ import type { Person } from "../lib/api/schemas/common";
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const FRONTEND = path.resolve(HERE, "..");
-const CORPUS = path.resolve(FRONTEND, "../backend/app/company/corpus");
+const CORPUS = path.resolve(FRONTEND, "../backend/synthetic/corpus");
 const OUT = path.join(FRONTEND, "fixtures/company");
 
 /* ------------------------------------------------------------------ helpers */

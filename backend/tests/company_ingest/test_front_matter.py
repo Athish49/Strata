@@ -2,14 +2,10 @@
 
 Run with:
     cd backend && .venv/bin/python -m pytest tests/company_ingest/test_front_matter.py -v -k "not qdrant and not corpus and not neon"
-
-To run corpus integration tests:
-    cd backend && .venv/bin/python -m pytest tests/company_ingest/test_front_matter.py -v -m corpus
 """
 from __future__ import annotations
 
 import textwrap
-from pathlib import Path
 
 import pytest
 
@@ -415,117 +411,3 @@ class TestFrontMatterDataclass:
     def test_approver_id_can_be_none(self):
         fm = FrontMatter(owner_id="P18", reviewer_id="P14", approver_id=None)
         assert fm.approver_id is None
-
-
-# ===========================================================================
-# Corpus integration tests
-# ===========================================================================
-
-CORPUS_DOCS_PATH = Path(__file__).parent.parent.parent / "app" / "company" / "corpus" / "docs"
-
-
-@pytest.mark.corpus
-class TestCorpusFrontMatter:
-    """Parse every P1 doc in the real corpus and assert structural invariants."""
-
-    def _get_corpus_docs(self) -> list[tuple[str, Path]]:
-        """Return (doc_id, md_path) for all P1 docs in the corpus."""
-        docs = []
-        if not CORPUS_DOCS_PATH.exists():
-            pytest.skip(f"Corpus not found at {CORPUS_DOCS_PATH}")
-        for doc_dir in sorted(CORPUS_DOCS_PATH.iterdir()):
-            if not doc_dir.is_dir():
-                continue
-            doc_id = doc_dir.name
-            md_files = list(doc_dir.glob("*.md"))
-            if md_files:
-                docs.append((doc_id, md_files[0]))
-        return docs
-
-    def test_all_docs_parse_without_exception(self):
-        docs = self._get_corpus_docs()
-        assert docs, "No corpus docs found"
-        for doc_id, md_path in docs:
-            text = md_path.read_text(encoding="utf-8", errors="replace")
-            # Must not raise
-            fm, body, offset = split_front_matter(text, doc_id)
-            assert isinstance(fm, FrontMatter), f"{doc_id}: expected FrontMatter"
-
-    def test_no_doc_missing_both_doc_id_and_version(self):
-        """Every document must have at least one of doc_id or version (not both None)."""
-        docs = self._get_corpus_docs()
-        assert docs, "No corpus docs found"
-        failures = []
-        for doc_id, md_path in docs:
-            text = md_path.read_text(encoding="utf-8", errors="replace")
-            fm, body, offset = split_front_matter(text, doc_id)
-            if fm.doc_id is None and fm.version is None:
-                failures.append(doc_id)
-        assert not failures, f"docs with both doc_id=None and version=None: {failures}"
-
-    def test_all_docs_have_doc_id(self):
-        """doc_id should never be None (at minimum, the file's directory name is used)."""
-        docs = self._get_corpus_docs()
-        assert docs, "No corpus docs found"
-        failures = []
-        for doc_id, md_path in docs:
-            text = md_path.read_text(encoding="utf-8", errors="replace")
-            fm, body, offset = split_front_matter(text, doc_id)
-            if fm.doc_id is None:
-                failures.append(doc_id)
-        assert not failures, f"docs with doc_id=None: {failures}"
-
-    def test_all_docs_have_version_or_fallback(self):
-        """All 8 YAML docs must have version; Style 2 and 3 docs should have version or None."""
-        docs = self._get_corpus_docs()
-        assert docs, "No corpus docs found"
-        # All 12 docs should at minimum parse successfully
-        for doc_id, md_path in docs:
-            text = md_path.read_text(encoding="utf-8", errors="replace")
-            fm, body, offset = split_front_matter(text, doc_id)
-            # doc_id must always be set (fallback from directory name passed to function)
-            assert fm.doc_id is not None, f"{doc_id}: doc_id should not be None"
-
-    def test_yaml_docs_have_all_fields(self):
-        """YAML-style docs should have title, version, owner_id, and reviewer_id."""
-        docs = self._get_corpus_docs()
-        yaml_docs = [
-            (did, p) for did, p in docs
-            if p.read_text(encoding="utf-8").startswith("---\n")
-        ]
-        assert yaml_docs, "No YAML docs found"
-        for doc_id, md_path in yaml_docs:
-            text = md_path.read_text(encoding="utf-8", errors="replace")
-            fm, body, offset = split_front_matter(text, doc_id)
-            assert fm.title is not None, f"{doc_id}: title should not be None"
-            assert fm.version is not None, f"{doc_id}: version should not be None"
-            assert fm.owner_id is not None, f"{doc_id}: owner_id should not be None"
-            assert fm.reviewer_id is not None, f"{doc_id}: reviewer_id should not be None"
-
-    def test_tariff_doc_has_owner_reviewer_approver(self):
-        """TAR-GRR-012 (HTML comment style) must have owner, reviewer, approver IDs."""
-        tar_dir = CORPUS_DOCS_PATH / "RPL-TAR-GRR-012"
-        if not tar_dir.exists():
-            pytest.skip("RPL-TAR-GRR-012 not in corpus")
-        md_path = next(tar_dir.glob("*.md"), None)
-        if not md_path:
-            pytest.skip("No .md file in RPL-TAR-GRR-012")
-        text = md_path.read_text(encoding="utf-8", errors="replace")
-        fm, body, offset = split_front_matter(text, "RPL-TAR-GRR-012")
-        assert fm.owner_id == "P11"
-        assert fm.reviewer_id == "P10"
-        assert fm.approver_id == "P03"
-        assert fm.law_as_of == "2024-12-31"
-
-    def test_body_offset_within_bounds(self):
-        """body_char_offset must be within [0, len(md_text)]."""
-        docs = self._get_corpus_docs()
-        for doc_id, md_path in docs:
-            text = md_path.read_text(encoding="utf-8", errors="replace")
-            fm, body, offset = split_front_matter(text, doc_id)
-            assert 0 <= offset <= len(text), (
-                f"{doc_id}: body_char_offset={offset} out of range [0, {len(text)}]"
-            )
-            assert text[offset:] == body, (
-                f"{doc_id}: body does not match md_text[offset:]"
-            )

@@ -1,6 +1,7 @@
 """Company footprint: which S1 sections / rules the company's eligible clauses cite (engine_spec.md section 1.5).
 
-Read-only. Eligible clause = assessable, not boilerplate, doc_id belongs to the company (section 3.1: no version_id filter).
+Read-only. Eligible clause = assessable, not boilerplate, belongs to a document of the company,
+and scoped to that document's current version (task 7.1 — see VERSION_SCOPE below).
 """
 from __future__ import annotations
 
@@ -29,12 +30,35 @@ def rule_key(citation: str | None) -> str | None:
     return None
 
 
+# Version scoping (task 7.1).  Every clause query in the engine and API embeds this one
+# predicate (footprint.py, candidates.py, radar.py, delta.py, api/company/routes.py,
+# api/engine/routes_ui_results.py); it requires the aliases `c` = company.clauses and
+# `d` = company.company_documents.  tests/engine/test_version_scoping.py checks every site.
+#
+# A clause is in scope when it belongs to its document's current version. Full stop.
+#
+# Task 9.2 step 7 removed the legacy register-row exemption this predicate carried from
+# task 7.1 through the v2 cutover: `(c.version_id = d.current_version_id OR (c.unit_kind =
+# 'register_row' AND <orphan version_id, <= 1 document_versions row>))`. It existed because
+# the pre-v2 register CSV path wrote clauses under a throwaway uuid5(company, doc, "v1")
+# version_id with no company.document_versions row at all — the plain predicate would have
+# dropped all 204 live register clauses and their 327 resolved citations. After the real
+# cutover (task 9.1/9.2) every register CSV is ingested through the real pipeline, which
+# creates its document_versions row before segmenting, so no orphan version ids exist any
+# more — verified directly against production before removing this (zero register_row
+# clauses with a version_id absent from company.document_versions). The exemption also had
+# a known flaw worth not re-introducing: its "at most one version" guard switched off as
+# soon as a document gained a second document_versions row, even an unapproved draft, which
+# made its behaviour depend on unrelated history rather than on the clause itself.
+VERSION_SCOPE = "c.version_id = d.current_version_id"
+
 _ELIGIBLE_CTE = """
     WITH eligible AS (
         SELECT c.clause_pk
         FROM company.clauses c
-        JOIN company.company_documents d ON d.doc_id = c.doc_id AND d.company_id = :company_id
+        JOIN company.company_documents d ON d.company_id = c.company_id AND d.doc_id = c.doc_id
         WHERE c.company_id = :company_id AND c.assessable = true AND c.clause_role <> 'boilerplate'
+          AND """ + VERSION_SCOPE + """
     )
 """
 
@@ -47,10 +71,14 @@ _CITATIONS_SQL = text(_ELIGIBLE_CTE + """
 
 _ELIGIBLE_COUNT_SQL = text(_ELIGIBLE_CTE + "SELECT count(*) FROM eligible")
 
+# document_scope carries version_id too (task 7.1): without this join v1's rule keys would
+# persist in cited_rule_keys after a promotion.  Verified no-op today (285 rows, 0 mismatches).
 _SCOPE_SQL = text("""
-    SELECT DISTINCT scope_key
-    FROM company.document_scope
-    WHERE company_id = :company_id AND scope_level = 'rule'
+    SELECT DISTINCT s.scope_key
+    FROM company.document_scope s
+    JOIN company.company_documents d ON d.company_id = s.company_id AND d.doc_id = s.doc_id
+    WHERE s.company_id = :company_id AND s.scope_level = 'rule'
+      AND s.version_id = d.current_version_id
 """)
 
 

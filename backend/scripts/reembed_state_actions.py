@@ -20,10 +20,6 @@ import os
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from dotenv import load_dotenv
-
-load_dotenv(os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), ".env"))
-
 from app.db import AsyncSessionLocal
 from app.regulatory.ingestion.embedder import embed_and_store_action, get_embedding_model
 from app.services.vector import get_qdrant_client, project_filter
@@ -237,4 +233,10 @@ async def main():
 
 
 if __name__ == "__main__":
+    # Loaded here, not at import time, so importing this module's pure
+    # functions can never leak production secrets into the process env.
+    from dotenv import load_dotenv
+
+    load_dotenv(os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), ".env"))
+
     asyncio.run(main())

@@ -1,0 +1,666 @@
+{
+  "assessable_by_unit_kind": {
+    "appendix": 20,
+    "form_field": 204,
+    "other": 1,
+    "register_row": 204,
+    "section": 992,
+    "table_row": 750,
+    "tariff_subrule": 127
+  },
+  "captured_at": "2026-10-30T23:51:23.155441+00:00",
+  "citations_by_status": {
+    "external": 34,
+    "not_in_kb": 60,
+    "not_monitored": 78,
+    "out_of_scope_title": 21,
+    "resolved": 1284,
+    "resolved_rule": 73
+  },
+  "citations_by_unit_kind": {
+    "appendix": 10,
+    "form_field": 23,
+    "other": 1,
+    "register_row": 419,
+    "section": 726,
+    "table_row": 193,
+    "tariff_subrule": 178
+  },
+  "citations_resolved": 1284,
+  "citations_resolved_by_unit_kind": {
+    "appendix": 10,
+    "form_field": 22,
+    "other": 1,
+    "register_row": 327,
+    "section": 563,
+    "table_row": 190,
+    "tariff_subrule": 171
+  },
+  "citations_total": 1550,
+  "clauses_by_doc": {
+    "RPL-CMP-REG-001": 155,
+    "RPL-CS-PRO-004": 237,
+    "RPL-CS-PRO-007": 144,
+    "RPL-CS-PRO-011": 174,
+    "RPL-DCC-PRO-003": 277,
+    "RPL-DO-PLN-002": 331,
+    "RPL-ENV-PRO-005": 228,
+    "RPL-LEG-RRS-001": 173,
+    "RPL-MTR-PGM-001": 147,
+    "RPL-REG-CAL-2025": 84,
+    "RPL-SAF-PRO-009": 248,
+    "RPL-TAR-GRR-012": 136
+  },
+  "clauses_by_unit_kind": {
+    "appendix": 21,
+    "form_field": 204,
+    "other": 1,
+    "register_row": 204,
+    "section": 1019,
+    "table_row": 758,
+    "tariff_subrule": 127
+  },
+  "clauses_total": 2334,
+  "code_sections_total": 4603,
+  "distinct_code_sections_by_unit_kind": {
+    "appendix": 4,
+    "form_field": 7,
+    "other": 1,
+    "register_row": 69,
+    "section": 60,
+    "table_row": 40,
+    "tariff_subrule": 40
+  },
+  "distinct_code_sections_total": 75,
+  "document_scope_rows": 285,
+  "document_versions_total": 12,
+  "documents_total": 12,
+  "engine_runs_by_status": {
+    "done": 24,
+    "failed": 1
+  },
+  "findings_by_doc": {
+    "RPL-CMP-REG-001": 358,
+    "RPL-CS-PRO-004": 243,
+    "RPL-CS-PRO-007": 21,
+    "RPL-CS-PRO-011": 109,
+    "RPL-DCC-PRO-003": 11,
+    "RPL-DO-PLN-002": 27,
+    "RPL-ENV-PRO-005": 11,
+    "RPL-LEG-RRS-001": 128,
+    "RPL-MTR-PGM-001": 13,
+    "RPL-REG-CAL-2025": 202,
+    "RPL-SAF-PRO-009": 11,
+    "RPL-TAR-GRR-012": 110
+  },
+  "findings_by_unit_kind": {
+    "appendix": 15,
+    "form_field": 21,
+    "register_row": 487,
+    "section": 511,
+    "table_row": 105,
+    "tariff_subrule": 105
+  },
+  "findings_total": 1244,
+  "schema_version": "pre-v2",
+  "score_reports": [
+    {
+      "metrics": {
+        "expected_non_informational": 6,
+        "fp_rate_must_not_flag": 0.0,
+        "matched": 0,
+        "overall": "FAIL",
+        "per_doc": [
+          {
+            "doc_id": "RPL-TAR-GRR-012",
+            "expected": "cleared",
+            "expected_count": 0,
+            "matched": 0,
+            "system": "cleared",
+            "system_count": 0
+          },
+          {
+            "doc_id": "RPL-CS-PRO-004",
+            "expected": "cleared",
+            "expected_count": 0,
+            "matched": 0,
+            "system": "cleared",
+            "system_count": 0
+          },
+          {
+            "doc_id": "RPL-CS-PRO-007",
+            "expected": "cleared",
+            "expected_count": 0,
+            "matched": 0,
+            "system": "cleared",
+            "system_count": 0
+          },
+          {
+            "doc_id": "RPL-DO-PLN-002",
+            "expected": "cleared",
+            "expected_count": 0,
+            "matched": 0,
+            "system": "cleared",
+            "system_count": 0
+          },
+          {
+            "doc_id": "RPL-CS-PRO-011",
+            "expected": "cleared",
+            "expected_count": 0,
+            "matched": 0,
+            "system": "cleared",
+            "system_count": 0
+          },
+          {
+            "doc_id": "RPL-MTR-PGM-001",
+            "expected": "cleared",
+            "expected_count": 0,
+            "matched": 0,
+            "system": "cleared",
+            "system_count": 0
+          },
+          {
+            "doc_id": "RPL-DCC-PRO-003",
+            "expected": "cleared",
+            "expected_count": 0,
+            "matched": 0,
+            "system": "cleared",
+            "system_count": 0
+          },
+          {
+            "doc_id": "RPL-ENV-PRO-005",
+            "expected": "cleared",
+            "expected_count": 0,
+            "matched": 0,
+            "system": "cleared",
+            "system_count": 0
+          },
+          {
+            "doc_id": "RPL-SAF-PRO-009",
+            "expected": "cleared",
+            "expected_count": 0,
+            "matched": 0,
+            "system": "cleared",
+            "system_count": 0
+          },
+          {
+            "doc_id": "RPL-CMP-REG-001",
+            "expected": "flagged",
+            "expected_count": 3,
+            "matched": 0,
+            "system": "flagged",
+            "system_count": 1
+          },
+          {
+            "doc_id": "RPL-REG-CAL-2025",
+            "expected": "flagged",
+            "expected_count": 3,
+            "matched": 0,
+            "system": "flagged",
+            "system_count": 3
+          },
+          {
+            "doc_id": "RPL-LEG-RRS-001",
+            "expected": "cleared",
+            "expected_count": 0,
+            "matched": 0,
+            "system": "cleared",
+            "system_count": 0
+          }
+        ],
+        "precision": 0.0,
+        "recall": 0.0,
+        "recall_low": 0.0,
+        "recall_medium": 0.0,
+        "returncode": 0,
+        "routing_accuracy": 0.0,
+        "system_non_informational": 4,
+        "targets": [
+          {
+            "result": "FAIL",
+            "target": "Recall \u2265 0.83"
+          },
+          {
+            "result": "FAIL",
+            "target": "Precision \u2265 0.80"
+          },
+          {
+            "result": "PASS",
+            "target": "FP rate on negative set = 0"
+          },
+          {
+            "result": "PASS",
+            "target": "Routing accuracy \u2265 0.80"
+          }
+        ]
+      },
+      "run_id": "05b50712-79df-4c4e-bdb3-c84f31e189ec"
+    },
+    {
+      "metrics": {
+        "expected_non_informational": 6,
+        "fp_rate_must_not_flag": 0.0,
+        "matched": 0,
+        "overall": "FAIL",
+        "per_doc": [
+          {
+            "doc_id": "RPL-TAR-GRR-012",
+            "expected": "cleared",
+            "expected_count": 0,
+            "matched": 0,
+            "system": "cleared",
+            "system_count": 0
+          },
+          {
+            "doc_id": "RPL-CS-PRO-004",
+            "expected": "cleared",
+            "expected_count": 0,
+            "matched": 0,
+            "system": "cleared",
+            "system_count": 0
+          },
+          {
+            "doc_id": "RPL-CS-PRO-007",
+            "expected": "cleared",
+            "expected_count": 0,
+            "matched": 0,
+            "system": "cleared",
+            "system_count": 0
+          },
+          {
+            "doc_id": "RPL-DO-PLN-002",
+            "expected": "cleared",
+            "expected_count": 0,
+            "matched": 0,
+            "system": "cleared",
+            "system_count": 0
+          },
+          {
+            "doc_id": "RPL-CS-PRO-011",
+            "expected": "cleared",
+            "expected_count": 0,
+            "matched": 0,
+            "system": "cleared",
+            "system_count": 0
+          },
+          {
+            "doc_id": "RPL-MTR-PGM-001",
+            "expected": "cleared",
+            "expected_count": 0,
+            "matched": 0,
+            "system": "cleared",
+            "system_count": 0
+          },
+          {
+            "doc_id": "RPL-DCC-PRO-003",
+            "expected": "cleared",
+            "expected_count": 0,
+            "matched": 0,
+            "system": "cleared",
+            "system_count": 0
+          },
+          {
+            "doc_id": "RPL-ENV-PRO-005",
+            "expected": "cleared",
+            "expected_count": 0,
+            "matched": 0,
+            "system": "cleared",
+            "system_count": 0
+          },
+          {
+            "doc_id": "RPL-SAF-PRO-009",
+            "expected": "cleared",
+            "expected_count": 0,
+            "matched": 0,
+            "system": "cleared",
+            "system_count": 0
+          },
+          {
+            "doc_id": "RPL-CMP-REG-001",
+            "expected": "flagged",
+            "expected_count": 3,
+            "matched": 0,
+            "system": "flagged",
+            "system_count": 1
+          },
+          {
+            "doc_id": "RPL-REG-CAL-2025",
+            "expected": "flagged",
+            "expected_count": 3,
+            "matched": 0,
+            "system": "flagged",
+            "system_count": 3
+          },
+          {
+            "doc_id": "RPL-LEG-RRS-001",
+            "expected": "cleared",
+            "expected_count": 0,
+            "matched": 0,
+            "system": "cleared",
+            "system_count": 0
+          }
+        ],
+        "precision": 0.0,
+        "recall": 0.0,
+        "recall_low": 0.0,
+        "recall_medium": 0.0,
+        "returncode": 0,
+        "routing_accuracy": 0.0,
+        "system_non_informational": 4,
+        "targets": [
+          {
+            "result": "FAIL",
+            "target": "Recall \u2265 0.83"
+          },
+          {
+            "result": "FAIL",
+            "target": "Precision \u2265 0.80"
+          },
+          {
+            "result": "PASS",
+            "target": "FP rate on negative set = 0"
+          },
+          {
+            "result": "PASS",
+            "target": "Routing accuracy \u2265 0.80"
+          }
+        ]
+      },
+      "run_id": "0dcc125e-6da6-419f-beb1-8c347e4fb2d4"
+    },
+    {
+      "metrics": {
+        "expected_non_informational": 6,
+        "fp_rate_must_not_flag": 0.0,
+        "matched": 0,
+        "overall": "FAIL",
+        "per_doc": [
+          {
+            "doc_id": "RPL-TAR-GRR-012",
+            "expected": "cleared",
+            "expected_count": 0,
+            "matched": 0,
+            "system": "cleared",
+            "system_count": 0
+          },
+          {
+            "doc_id": "RPL-CS-PRO-004",
+            "expected": "cleared",
+            "expected_count": 0,
+            "matched": 0,
+            "system": "cleared",
+            "system_count": 0
+          },
+          {
+            "doc_id": "RPL-CS-PRO-007",
+            "expected": "cleared",
+            "expected_count": 0,
+            "matched": 0,
+            "system": "cleared",
+            "system_count": 0
+          },
+          {
+            "doc_id": "RPL-DO-PLN-002",
+            "expected": "cleared",
+            "expected_count": 0,
+            "matched": 0,
+            "system": "cleared",
+            "system_count": 0
+          },
+          {
+            "doc_id": "RPL-CS-PRO-011",
+            "expected": "cleared",
+            "expected_count": 0,
+            "matched": 0,
+            "system": "cleared",
+            "system_count": 0
+          },
+          {
+            "doc_id": "RPL-MTR-PGM-001",
+            "expected": "cleared",
+            "expected_count": 0,
+            "matched": 0,
+            "system": "cleared",
+            "system_count": 0
+          },
+          {
+            "doc_id": "RPL-DCC-PRO-003",
+            "expected": "cleared",
+            "expected_count": 0,
+            "matched": 0,
+            "system": "cleared",
+            "system_count": 0
+          },
+          {
+            "doc_id": "RPL-ENV-PRO-005",
+            "expected": "cleared",
+            "expected_count": 0,
+            "matched": 0,
+            "system": "cleared",
+            "system_count": 0
+          },
+          {
+            "doc_id": "RPL-SAF-PRO-009",
+            "expected": "cleared",
+            "expected_count": 0,
+            "matched": 0,
+            "system": "cleared",
+            "system_count": 0
+          },
+          {
+            "doc_id": "RPL-CMP-REG-001",
+            "expected": "flagged",
+            "expected_count": 3,
+            "matched": 0,
+            "system": "flagged",
+            "system_count": 1
+          },
+          {
+            "doc_id": "RPL-REG-CAL-2025",
+            "expected": "flagged",
+            "expected_count": 3,
+            "matched": 0,
+            "system": "flagged",
+            "system_count": 3
+          },
+          {
+            "doc_id": "RPL-LEG-RRS-001",
+            "expected": "cleared",
+            "expected_count": 0,
+            "matched": 0,
+            "system": "cleared",
+            "system_count": 0
+          }
+        ],
+        "precision": 0.0,
+        "recall": 0.0,
+        "recall_low": 0.0,
+        "recall_medium": 0.0,
+        "returncode": 0,
+        "routing_accuracy": 0.0,
+        "system_non_informational": 4,
+        "targets": [
+          {
+            "result": "FAIL",
+            "target": "Recall \u2265 0.83"
+          },
+          {
+            "result": "FAIL",
+            "target": "Precision \u2265 0.80"
+          },
+          {
+            "result": "PASS",
+            "target": "FP rate on negative set = 0"
+          },
+          {
+            "result": "PASS",
+            "target": "Routing accuracy \u2265 0.80"
+          }
+        ]
+      },
+      "run_id": "45b7d2c1-6b97-4a60-8996-187975ebf74b"
+    },
+    {
+      "metrics": {
+        "baseline_check": "PASS",
+        "baseline_line": "PASS \u2014 zero non-informational findings on S1 corpus.",
+        "returncode": 0
+      },
+      "run_id": "53dd08ab-7db7-4476-9ede-ab6496c15ec8"
+    },
+    {
+      "metrics": {
+        "expected_non_informational": 6,
+        "fp_rate_must_not_flag": 0.0,
+        "matched": 0,
+        "overall": "FAIL",
+        "per_doc": [
+          {
+            "doc_id": "RPL-TAR-GRR-012",
+            "expected": "cleared",
+            "expected_count": 0,
+            "matched": 0,
+            "system": "cleared",
+            "system_count": 0
+          },
+          {
+            "doc_id": "RPL-CS-PRO-004",
+            "expected": "cleared",
+            "expected_count": 0,
+            "matched": 0,
+            "system": "cleared",
+            "system_count": 0
+          },
+          {
+            "doc_id": "RPL-CS-PRO-007",
+            "expected": "cleared",
+            "expected_count": 0,
+            "matched": 0,
+            "system": "cleared",
+            "system_count": 0
+          },
+          {
+            "doc_id": "RPL-DO-PLN-002",
+            "expected": "cleared",
+            "expected_count": 0,
+            "matched": 0,
+            "system": "cleared",
+            "system_count": 0
+          },
+          {
+            "doc_id": "RPL-CS-PRO-011",
+            "expected": "cleared",
+            "expected_count": 0,
+            "matched": 0,
+            "system": "cleared",
+            "system_count": 0
+          },
+          {
+            "doc_id": "RPL-MTR-PGM-001",
+            "expected": "cleared",
+            "expected_count": 0,
+            "matched": 0,
+            "system": "cleared",
+            "system_count": 0
+          },
+          {
+            "doc_id": "RPL-DCC-PRO-003",
+            "expected": "cleared",
+            "expected_count": 0,
+            "matched": 0,
+            "system": "cleared",
+            "system_count": 0
+          },
+          {
+            "doc_id": "RPL-ENV-PRO-005",
+            "expected": "cleared",
+            "expected_count": 0,
+            "matched": 0,
+            "system": "cleared",
+            "system_count": 0
+          },
+          {
+            "doc_id": "RPL-SAF-PRO-009",
+            "expected": "cleared",
+            "expected_count": 0,
+            "matched": 0,
+            "system": "cleared",
+            "system_count": 0
+          },
+          {
+            "doc_id": "RPL-CMP-REG-001",
+            "expected": "flagged",
+            "expected_count": 3,
+            "matched": 0,
+            "system": "flagged",
+            "system_count": 1
+          },
+          {
+            "doc_id": "RPL-REG-CAL-2025",
+            "expected": "flagged",
+            "expected_count": 3,
+            "matched": 0,
+            "system": "flagged",
+            "system_count": 2
+          },
+          {
+            "doc_id": "RPL-LEG-RRS-001",
+            "expected": "cleared",
+            "expected_count": 0,
+            "matched": 0,
+            "system": "cleared",
+            "system_count": 0
+          }
+        ],
+        "precision": 0.0,
+        "recall": 0.0,
+        "recall_low": 0.0,
+        "recall_medium": 0.0,
+        "returncode": 0,
+        "routing_accuracy": 0.0,
+        "system_non_informational": 3,
+        "targets": [
+          {
+            "result": "FAIL",
+            "target": "Recall \u2265 0.83"
+          },
+          {
+            "result": "FAIL",
+            "target": "Precision \u2265 0.80"
+          },
+          {
+            "result": "PASS",
+            "target": "FP rate on negative set = 0"
+          },
+          {
+            "result": "PASS",
+            "target": "Routing accuracy \u2265 0.80"
+          }
+        ]
+      },
+      "run_id": "61237079-7eea-45bb-985e-89bcdebeaaaa"
+    },
+    {
+      "metrics": {
+        "baseline_check": "PASS",
+        "baseline_line": "PASS \u2014 zero non-informational findings on S1 corpus.",
+        "returncode": 0
+      },
+      "run_id": "eaae663f-fd4c-4c14-82ae-a6179eac05e7"
+    }
+  ],
+  "table_counts": {
+    "clause_links": 4675,
+    "clause_parameters": 2948,
+    "company_attributes": 22,
+    "dataset_columns": 0,
+    "datasets": 0,
+    "defined_terms": 67,
+    "ingest_runs": 2,
+    "llm_extractions": 0,
+    "parameter_checks": 0,
+    "people": 27,
+    "table_columns": 26,
+    "term_usages": 693
+  }
+}

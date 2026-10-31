@@ -1,13 +1,30 @@
-# Local secrets
+# Local secrets — every .env variant, at any depth, in any package. Example/template
+# files are explicitly un-ignored below so they stay tracked.
 **/.env
+**/.env.*
+!**/.env.example
 
-# Python bytecode and venv
+# Python bytecode, venvs and tool caches
 **/__pycache__/
 **/*.py[cod]
 **/.venv/
+**/*.egg-info/
+**/.pytest_cache/
+**/.mypy_cache/
+**/.ruff_cache/
+**/.coverage
+**/.coverage.*
+**/htmlcov/
 
-# macOS
+# macOS / Windows
 **/.DS_Store
+**/Thumbs.db
+
+# Editors/IDEs (no shared project settings are tracked today; keep it that way)
+**/.vscode/
+**/.idea/
+**/*.swp
+**/*.swo
 
 # Playwright MCP dumps
 **/.playwright-mcp/
@@ -16,11 +33,17 @@
 **/node_modules/
 **/.next/
 **/.next-*/
+**/.turbo/
+**/.vercel/
+**/dist/
+**/build/
+**/*.tsbuildinfo
 
-# Test output and caches
+# Test output, reports and caches
 **/test-results/
 **/playwright-report/
-**/.pytest_cache/
+**/blob-report/
+**/coverage/
 
 # Logs
 **/*.log

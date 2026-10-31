@@ -37,14 +37,12 @@ const defs: FutureFeature[] = [
   { id: "watch", label: "Watch", tooltip: "Follow this section and get alerted on any future change.", icon: "Eye", variant: "button" },
   { id: "impact-memo", label: "Draft impact memo", tooltip: "Generate a counsel-ready memo of this change and every clause it touches.", icon: "FileText", variant: "button" },
   { id: "connect-source", label: "Connect source", tooltip: "Keep documents in sync from SharePoint, Google Drive, Box or iManage.", icon: "Cable", variant: "button" },
-  { id: "upload-document", label: "Upload", tooltip: "Add a document; Strata splits it into clauses and files it in the right vertical.", icon: "Upload", variant: "button" },
   { id: "coverage-gaps", label: "Find coverage gaps", tooltip: "Find rules RPL is subject to that no document covers yet.", icon: "ScanSearch", variant: "toolbar" },
   { id: "invite-team", label: "Invite team", tooltip: "Give this department's owners and reviewers their own view.", icon: "UserPlus", variant: "button" },
   { id: "start-monitoring", label: "Start monitoring", tooltip: "Check this document against every future regulatory change.", icon: "Activity", variant: "inline-add" },
   { id: "ask-document", label: "Ask", tooltip: "Ask about this document and get answers cited to its clauses.", icon: "MessageSquare", variant: "toolbar" },
   { id: "export-redline", label: "Export redline", tooltip: "Send suggested updates to Word as tracked changes for the owner.", icon: "FileDiff", variant: "toolbar" },
   { id: "view-original", label: "Original file", tooltip: "View the source PDF or Word file beside its clauses.", icon: "FileSearch", variant: "toolbar" },
-  { id: "version-history", label: "Version history", tooltip: "Compare this document with its earlier versions.", icon: "Clock", variant: "icon" },
   { id: "draft-rewrite", label: "Draft full rewrite", tooltip: "Draft a complete replacement clause that satisfies the new rule.", icon: "PenLine", variant: "inline-add" },
   { id: "create-task", label: "Create task", tooltip: "Open a tracked task in Jira or ServiceNow for the owner.", icon: "ListChecks", variant: "button" },
   { id: "request-signoff", label: "Request sign-off", tooltip: "Collect owner, reviewer and approver sign-off with an audit trail.", icon: "BadgeCheck", variant: "button" },
@@ -93,8 +91,8 @@ export const SHELL_CUES: readonly string[] = [
 export const PAGE_CUES: Record<string, readonly string[]> = {
   overview: ["schedule-briefing", "export-report", "continuous-monitoring"],
   changes: ["proposed-rules", "watch", "impact-memo"],
-  documents: ["connect-source", "upload-document", "coverage-gaps"],
-  vertical: ["invite-team", "upload-document", "start-monitoring"],
+  documents: ["connect-source", "coverage-gaps"],
+  vertical: ["invite-team", "start-monitoring"],
   reader: ["ask-document", "export-redline", "view-original"],
   evidence: ["draft-rewrite", "create-task", "request-signoff"],
   matrix: ["ai-column", "export-matrix"],
@@ -109,12 +107,10 @@ export const PAGE_CUES: Record<string, readonly string[]> = {
 };
 
 /**
- * Cues allowed on a page beyond the 3-cue limit. The version-history chevron counts toward the
- * limit only if the reader toolbar is crowded, so it is kept out of the main list.
+ * Cues allowed on a page beyond the 3-cue limit. Empty since version history became a real
+ * control (task 8.3).
  */
-export const OPTIONAL_PAGE_CUES: Record<string, readonly string[]> = {
-  reader: ["version-history"],
-};
+export const OPTIONAL_PAGE_CUES: Record<string, readonly string[]> = {};
 
 /** Cues that count as a single cue for the per-page limit. */
 const CLUSTERS: ReadonlyArray<readonly string[]> = [["add-agency-federal", "add-agency-state"]];

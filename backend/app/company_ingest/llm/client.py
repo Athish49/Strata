@@ -5,9 +5,13 @@ import asyncio
 import hashlib
 import json
 import logging
+import re
+import weakref
 from typing import TYPE_CHECKING, Any
 
 from pydantic import BaseModel, ValidationError
+
+from app.company_ingest.ids import stable_uuid
 
 if TYPE_CHECKING:
     from app.company_ingest.run_context import RunContext
@@ -128,6 +132,170 @@ async def _write_audit(
 
 
 # ---------------------------------------------------------------------------
+# Persistent cache tier — company.llm_extractions (TDD §1.4, §4.3)
+# ---------------------------------------------------------------------------
+
+_SHA256_RE = re.compile(r"\A[0-9a-f]{64}\Z")
+
+# One lock per AsyncSession. A single AsyncSession cannot serve two concurrent
+# statements (asyncpg raises "another operation is in progress"), and
+# call_structured runs up to 16-wide. Entries disappear with the session.
+_session_locks: "weakref.WeakKeyDictionary[Any, asyncio.Lock]" = (
+    weakref.WeakKeyDictionary()
+)
+
+_CACHE_SELECT_SQL = """
+    SELECT response
+      FROM company.llm_extractions
+     WHERE company_id     = :company_id
+       AND stage          = :stage
+       AND content_sha256 = :content_sha256
+       AND prompt_sha256  = :prompt_sha256
+       AND model          = :model
+       AND valid
+     LIMIT 1
+"""
+
+_CACHE_INSERT_SQL = """
+    INSERT INTO company.llm_extractions
+        (extraction_pk, run_id, company_id, stage, unit_id, content_sha256,
+         prompt_sha256, model, request, response, valid, error, created_at)
+    VALUES
+        (:extraction_pk, :run_id, :company_id, :stage, :unit_id, :content_sha256,
+         :prompt_sha256, :model, CAST(:request AS jsonb), CAST(:response AS jsonb),
+         true, NULL, now())
+    ON CONFLICT (company_id, stage, content_sha256, prompt_sha256, model)
+        DO NOTHING
+"""
+
+
+def _session_lock(session: Any) -> asyncio.Lock:
+    lock = _session_locks.get(session)
+    if lock is None:
+        lock = asyncio.Lock()
+        _session_locks[session] = lock
+    return lock
+
+
+def _cache_enabled(
+    ctx: "RunContext", session: Any | None, content_sha256: str | None
+) -> bool:
+    """True when the persistent tier can be used safely.
+
+    Every column of ``llm_extractions_cache_uq`` is NOT NULL, so a missing
+    value cannot be written at all. ``ctx.company_id`` defaults to ``""``,
+    which the constraint would accept while pooling every default context into
+    one shared, tenant-less cache — so an empty company_id disables the tier
+    rather than writing a row under it.
+    """
+    if session is None:
+        return False
+    if not ctx.company_id:
+        logger.debug("llm cache disabled: ctx.company_id is empty")
+        return False
+    if not content_sha256 or not _SHA256_RE.match(content_sha256):
+        logger.debug("llm cache disabled: content_sha256 missing or malformed")
+        return False
+    return True
+
+
+async def _cache_lookup(
+    session: Any,
+    ctx: "RunContext",
+    stage: str,
+    content_sha256: str,
+    prompt_sha256: str,
+    model: str,
+    schema: type[BaseModel],
+) -> BaseModel | None:
+    """Read-through SELECT. Returns a validated instance, or None for a miss.
+
+    A row whose payload no longer validates against *schema* is a miss
+    (schemas evolve). Any database error is a miss too: the cache must never
+    be able to fail the call.
+    """
+    from sqlalchemy import text
+
+    params = {
+        "company_id": ctx.company_id,
+        "stage": stage,
+        "content_sha256": content_sha256,
+        "prompt_sha256": prompt_sha256,
+        "model": model,
+    }
+    try:
+        async with _session_lock(session):
+            # SAVEPOINT: this runs inside the caller's transaction, so an error
+            # here would otherwise abort every later statement the caller makes.
+            async with session.begin_nested():
+                result = await session.execute(text(_CACHE_SELECT_SQL), params)
+                row = result.first()
+    except Exception as exc:  # noqa: BLE001 - a cache miss, never a failure
+        logger.warning("llm cache lookup failed for %s: %s", stage, exc)
+        ctx.count("llm_cache_error")
+        return None
+
+    if row is None or row[0] is None:
+        return None
+
+    payload = row[0]
+    try:
+        if isinstance(payload, (str, bytes, bytearray)):
+            return schema.model_validate_json(payload)
+        return schema.model_validate(payload)
+    except (ValidationError, ValueError, json.JSONDecodeError) as exc:
+        logger.info(
+            "cached llm payload no longer validates (%s/%s): %s", stage, schema.__name__, exc
+        )
+        ctx.count("llm_cache_stale")
+        return None
+
+
+async def _cache_store(
+    session: Any,
+    ctx: "RunContext",
+    stage: str,
+    unit_id: str,
+    content_sha256: str,
+    prompt_sha256: str,
+    model: str,
+    system: str,
+    user: str,
+    attempts: int,
+    result: BaseModel,
+) -> None:
+    """Write one valid result. Errors are never cached; failures never raise."""
+    from sqlalchemy import text
+
+    params = {
+        "extraction_pk": str(
+            stable_uuid(ctx.company_id, stage, content_sha256, prompt_sha256, model)
+        ),
+        "run_id": str(ctx.run_id),
+        "company_id": ctx.company_id,
+        "stage": stage,
+        "unit_id": unit_id,
+        "content_sha256": content_sha256,
+        "prompt_sha256": prompt_sha256,
+        "model": model,
+        "request": json.dumps(
+            {"system": system, "user": user, "attempts": attempts,
+             "schema_name": result.__class__.__name__}
+        ),
+        "response": json.dumps(result.model_dump(mode="json")),
+    }
+    try:
+        async with _session_lock(session):
+            async with session.begin_nested():
+                await session.execute(text(_CACHE_INSERT_SQL), params)
+    except Exception as exc:  # noqa: BLE001 - a lost cache row, not a failed call
+        logger.warning("llm cache insert failed for %s/%s: %s", stage, unit_id, exc)
+        ctx.count("llm_cache_error")
+    else:
+        ctx.count("llm_cache_store")
+
+
+# ---------------------------------------------------------------------------
 # Public API
 # ---------------------------------------------------------------------------
 
@@ -152,18 +320,27 @@ async def call_structured(
     schema: type[BaseModel],
     ctx: "RunContext",
     model: str | None = None,
+    *,
+    content_sha256: str | None = None,
+    session: Any | None = None,
 ) -> BaseModel | None:
     """Call the LLM and return a validated *schema* instance, or None on failure.
 
     Steps:
     1. Compute prompt_sha256 from the raw system+user strings.
-    2. Check replay cache (when ctx.rebuild is True).
-    3. Build a schema-augmented system prompt.
-    4. Call the LLM; retry once on a pydantic/JSON validation error,
+    2. Check the in-memory replay cache (when ctx.rebuild is True).
+    3. Check the persistent read-through cache in company.llm_extractions,
+       keyed (company_id, stage, content_sha256, prompt_sha256, model).
+    4. Build a schema-augmented system prompt.
+    5. Call the LLM; retry once on a pydantic/JSON validation error,
        sending the error back to the model.
-    5. On double failure, record a warning issue and return None.
-    6. Write an audit record to R2 (optional — failure is ignored).
-    7. Populate the replay cache.
+    6. On double failure, record a warning issue and return None.
+    7. Write an audit record to R2 (optional — failure is ignored).
+    8. Populate both cache tiers — valid results only, never errors.
+
+    *content_sha256* is the hash of the unit text being enriched; *session* is
+    the caller's AsyncSession. Both are optional: without them the persistent
+    tier is skipped and behaviour is identical to before.
     """
     from app.config import settings
 
@@ -173,10 +350,23 @@ async def call_structured(
     prompt_sha256 = hashlib.sha256((system + user).encode()).hexdigest()
     cache_key = (stage, unit_id, prompt_sha256)
 
-    # --- Replay cache ---
+    # --- Tier 1: in-memory replay cache ---
     if ctx.rebuild and cache_key in ctx.llm_cache:
         logger.debug("LLM cache hit for %s/%s", stage, unit_id)
         return ctx.llm_cache[cache_key]
+
+    # --- Tier 2: persistent read-through cache ---
+    use_db_cache = _cache_enabled(ctx, session, content_sha256)
+    if use_db_cache:
+        assert content_sha256 is not None  # narrowed by _cache_enabled
+        cached = await _cache_lookup(
+            session, ctx, stage, content_sha256, prompt_sha256, model, schema
+        )
+        if cached is not None:
+            logger.debug("persistent LLM cache hit for %s/%s", stage, unit_id)
+            ctx.count("llm_cache_hit")
+            ctx.llm_cache[cache_key] = cached
+            return cached
 
     # Augment the system prompt with the JSON schema.
     schema_json = json.dumps(schema.model_json_schema(), indent=2)
@@ -240,4 +430,14 @@ async def call_structured(
 
     # Populate the cache regardless of ctx.rebuild so future calls can hit it.
     ctx.llm_cache[cache_key] = result
+
+    # Persist only valid results — a failed extraction must never be cached,
+    # or the next run would replay the failure instead of retrying.
+    if use_db_cache:
+        assert content_sha256 is not None  # narrowed by _cache_enabled
+        await _cache_store(
+            session, ctx, stage, unit_id, content_sha256, prompt_sha256, model,
+            system, user, attempts, result,
+        )
+
     return result

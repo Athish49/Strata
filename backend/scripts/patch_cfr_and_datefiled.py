@@ -9,11 +9,6 @@ Issue #6: Backfill date_filed = date_published for iurc_rulemakings and
 """
 
 import asyncio
-from dotenv import load_dotenv
-
-load_dotenv()
-
-
 async def main():
     from app.db import AsyncSessionLocal
     from sqlalchemy import text
@@ -86,4 +81,10 @@ async def main():
 
 
 if __name__ == "__main__":
+    # Loaded here, not at import time, so importing this module's pure
+    # functions can never leak production secrets into the process env.
+    from dotenv import load_dotenv
+
+    load_dotenv()
+
     asyncio.run(main())

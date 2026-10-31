@@ -1,4 +1,4 @@
-"""Tests for task 8.1.2 — store/snapshot.py and store/commit.py."""
+"""Tests for tasks 8.1.2 / 5.8 — store/snapshot.py, store/commit.py, ingest_runs lifecycle."""
 from __future__ import annotations
 
 import json
@@ -206,16 +206,17 @@ def test_write_clause_snapshot_calls_put_bytes_with_correct_key():
     r2_mock = MagicMock()
     r2_mock.put_bytes.return_value = "ok"
 
+    version_id = "11111111-1111-4111-8111-111111111111"
     returned_key = write_clause_snapshot(
         units=[unit],
         doc_id="DOC1",
-        version="v1",
+        version_id=version_id,
         company_id="rpl",
         r2_client=r2_mock,
         ctx=ctx,
     )
 
-    expected_key = derived_clauses_key("rpl", "DOC1", "v1")
+    expected_key = derived_clauses_key("rpl", "DOC1", version_id)
     assert returned_key == expected_key
     r2_mock.put_bytes.assert_called_once()
     actual_key = r2_mock.put_bytes.call_args[0][0]
@@ -314,3 +315,288 @@ def test_finalize_parameters_sets_value_source_on_all():
 
     assert p1.value_source == "company"
     assert p2.value_source == "template"
+
+
+# ===========================================================================
+# Task 5.8 — store-layer defects
+# ===========================================================================
+
+import asyncio  # noqa: E402
+import uuid  # noqa: E402
+
+import boto3  # noqa: E402
+from moto import mock_aws  # noqa: E402
+
+import app.company_ingest.store.r2 as r2_mod  # noqa: E402
+from app.company_ingest.store import neon as neon_mod  # noqa: E402
+from app.company_ingest.store.commit import (  # noqa: E402
+    finish_ingest_run,
+    start_ingest_run,
+)
+from app.company_ingest.store.r2_keys import derived_clauses_key, report_key  # noqa: E402
+
+_FAKE_BUCKET = "test-bucket"
+_V1 = "aaaaaaaa-0000-4000-8000-000000000001"
+_V2 = "aaaaaaaa-0000-4000-8000-000000000002"
+
+
+def _moto_client():
+    return boto3.client(
+        "s3",
+        region_name="us-east-1",
+        aws_access_key_id="fake-key",
+        aws_secret_access_key="fake-secret",
+    )
+
+
+@pytest.fixture()
+def r2(monkeypatch):
+    """The REAL r2 module (write-once guard included) against moto S3."""
+    with mock_aws():
+        _moto_client().create_bucket(Bucket=_FAKE_BUCKET)
+        monkeypatch.setattr(r2_mod, "_get_client", lambda: _moto_client())
+        monkeypatch.setattr(r2_mod.settings, "R2_BUCKET_NAME", _FAKE_BUCKET)
+        yield r2_mod
+
+
+class _FakeRunsDB:
+    """company.ingest_runs only.  Writes become visible on commit() only, so a
+    helper that forgets to commit (or a rolled-back session) leaves no row."""
+
+    def __init__(self):
+        self.rows: dict[str, dict] = {}
+        self.commits = 0
+
+    def factory(self):
+        return _FakeRunsSession(self)
+
+
+class _FakeRunsSession:
+    def __init__(self, db: _FakeRunsDB):
+        self.db = db
+        self.pending: list[tuple[str, dict]] = []
+
+    async def __aenter__(self):
+        return self
+
+    async def __aexit__(self, *exc):
+        self.pending.clear()  # uncommitted work is discarded (rollback)
+        return False
+
+    async def execute(self, statement, params=None):
+        sql = " ".join(str(statement).split())
+        assert sql.startswith("INSERT INTO company.ingest_runs"), sql
+        self.pending.append((sql, dict(params)))
+
+    async def commit(self):
+        for sql, p in self.pending:
+            run_id = p["run_id"]
+            existing = self.db.rows.get(run_id)
+            if "DO NOTHING" in sql:
+                if existing is None:
+                    self.db.rows[run_id] = {
+                        **p, "finished_at": None, "report_r2_key": None,
+                    }
+            elif existing is None:
+                self.db.rows[run_id] = p
+            else:
+                existing.update(
+                    finished_at=p["finished_at"],
+                    status=p["status"],
+                    report_r2_key=p["report_r2_key"],
+                )
+        self.pending.clear()
+        self.db.commits += 1
+
+    async def rollback(self):
+        self.pending.clear()
+
+
+def _run(coro):
+    return asyncio.run(coro)
+
+
+# ---- (1) snapshot key + write-once guard ---------------------------------
+
+
+def test_snapshot_two_versions_two_distinct_keys_neither_raises(r2):
+    ctx = RunContext(company_id="rpl")
+    k1 = write_clause_snapshot(
+        [_make_unit(version_id=_V1)], "DOC1", _V1, "rpl", r2, ctx
+    )
+    k2 = write_clause_snapshot(
+        [_make_unit(version_id=_V2, text_raw="changed")], "DOC1", _V2, "rpl", r2, ctx
+    )
+    assert k1 == derived_clauses_key("rpl", "DOC1", _V1)
+    assert k2 == derived_clauses_key("rpl", "DOC1", _V2)
+    assert k1 != k2
+    assert _V1 in k1 and _V2 in k2 and "/v1/" not in k1
+    assert r2.exists(k1) and r2.exists(k2)
+    assert b"changed" not in r2.get_bytes(k1)
+    assert b"changed" in r2.get_bytes(k2)
+
+
+def test_snapshot_rewrite_same_version_changed_content_does_not_raise(r2):
+    """The old landmine: a retry whose content changed hit the write-once
+    ValueError and failed the run.  Default force=True overwrites."""
+    ctx = RunContext(company_id="rpl")
+    key = write_clause_snapshot([_make_unit(version_id=_V1)], "DOC1", _V1, "rpl", r2, ctx)
+    key2 = write_clause_snapshot(
+        [_make_unit(version_id=_V1, text_raw="after retry")], "DOC1", _V1, "rpl", r2, ctx
+    )
+    assert key == key2
+    assert b"after retry" in r2.get_bytes(key)
+
+
+def test_snapshot_force_false_conflict_is_an_issue_not_an_exception(r2):
+    ctx = RunContext(company_id="rpl")
+    key = write_clause_snapshot([_make_unit(version_id=_V1)], "DOC1", _V1, "rpl", r2, ctx)
+    write_clause_snapshot(
+        [_make_unit(version_id=_V1, text_raw="other")], "DOC1", _V1, "rpl", r2, ctx,
+        force=False,
+    )
+    assert [i.code for i in ctx.issues] == ["snapshot_write_once_conflict"]
+    assert b"other" not in r2.get_bytes(key)  # existing object kept
+
+
+def test_snapshot_rejects_version_label_instead_of_version_id():
+    with pytest.raises(ValueError, match="real version_id"):
+        write_clause_snapshot(
+            [_make_unit()], "DOC1", "v1", "rpl", MagicMock(), RunContext(company_id="rpl")
+        )
+
+
+# ---- (2) + (3) ingest_runs lifecycle and report.json -------------------------
+
+
+def test_start_ingest_run_commits_running_row():
+    db = _FakeRunsDB()
+    ctx = RunContext(company_id="rpl")
+    _run(start_ingest_run(ctx, session_factory=db.factory))
+    row = db.rows[str(ctx.run_id)]
+    assert row["status"] == "running"
+    assert row["finished_at"] is None
+    assert row["report_r2_key"] is None
+    assert row["company_id"] == "rpl"
+    # idempotent
+    _run(start_ingest_run(ctx, session_factory=db.factory))
+    assert len(db.rows) == 1
+
+
+def test_finish_completed_writes_report_to_r2_and_sets_report_r2_key(r2):
+    db = _FakeRunsDB()
+    ctx = RunContext(company_id="rpl")
+    ctx.count("clauses", 7)
+    _run(start_ingest_run(ctx, session_factory=db.factory))
+
+    key = _run(finish_ingest_run(
+        ctx, "completed",
+        doc_ids=["DOC1"], unit_counts_by_doc={"DOC1": 7},
+        r2_client=r2, session_factory=db.factory,
+    ))
+
+    assert key == report_key("rpl", str(ctx.run_id))
+    assert r2.exists(key)
+    report = json.loads(r2.get_bytes(key))
+    assert report["run_id"] == str(ctx.run_id)
+    assert report["status"] == "completed"
+    assert report["passed"] is True
+    assert report["finished_at"] is not None
+    assert report["documents"] == {"DOC1": {"clause_count": 7}}
+    assert report["stats"]["clauses"] == 7
+
+    row = db.rows[str(ctx.run_id)]
+    assert row["status"] == "completed"
+    assert row["report_r2_key"] == key
+    assert row["finished_at"] is not None
+
+
+def test_crashed_run_leaves_non_completed_row():
+    """Start row is committed in its own session; the ingest transaction then
+    blows up and is rolled back, and the process dies before finish."""
+    db = _FakeRunsDB()
+    ctx = RunContext(company_id="rpl")
+
+    async def _job():
+        await start_ingest_run(ctx, session_factory=db.factory)
+        ingest_session = _FakeRunsSession(db)  # stands in for the ingest txn
+        try:
+            await neon_mod.insert_ingest_run(ingest_session, ctx, "completed", None)
+            raise RuntimeError("segmenter exploded")
+        except RuntimeError:
+            await ingest_session.rollback()
+            raise  # crash: finish_ingest_run is never reached
+
+    with pytest.raises(RuntimeError):
+        _run(_job())
+    row = db.rows[str(ctx.run_id)]
+    assert row["status"] == "running"
+    assert row["status"] != "completed"
+    assert row["finished_at"] is None
+
+
+def test_handled_failure_marks_failed_and_still_writes_report(r2):
+    db = _FakeRunsDB()
+    ctx = RunContext(company_id="rpl")
+    _run(start_ingest_run(ctx, session_factory=db.factory))
+    key = _run(finish_ingest_run(
+        ctx, "failed", error="CitationResolutionError('boom')",
+        doc_ids=["DOC1"], r2_client=r2, session_factory=db.factory,
+    ))
+    row = db.rows[str(ctx.run_id)]
+    assert row["status"] == "failed"
+    assert row["report_r2_key"] == key and r2.exists(key)
+    report = json.loads(r2.get_bytes(key))
+    assert report["status"] == "failed"
+    assert report["passed"] is False
+    assert "boom" in report["error"]
+
+
+def test_finish_still_sets_status_when_report_write_fails():
+    db = _FakeRunsDB()
+    ctx = RunContext(company_id="rpl")
+    _run(start_ingest_run(ctx, session_factory=db.factory))
+    broken = MagicMock()
+    broken.put_bytes.side_effect = RuntimeError("R2 down")
+    key = _run(finish_ingest_run(ctx, "completed", r2_client=broken, session_factory=db.factory))
+    assert key is None
+    row = db.rows[str(ctx.run_id)]
+    assert row["status"] == "completed"
+    assert row["report_r2_key"] is None
+
+
+def test_finish_rejects_non_terminal_status():
+    db = _FakeRunsDB()
+    with pytest.raises(ValueError):
+        _run(finish_ingest_run(
+            RunContext(company_id="rpl"), "running",
+            r2_client=MagicMock(), session_factory=db.factory,
+        ))
+    assert db.rows == {}
+
+
+def test_commit_run_no_longer_writes_ingest_runs(monkeypatch):
+    """The in-transaction 'completed' upsert is gone from commit_run."""
+    from unittest.mock import AsyncMock
+
+    for name in (
+        "insert_company_documents", "insert_document_versions", "insert_clause_citations",
+        "insert_clause_parameters", "insert_defined_terms", "insert_term_usages_with_map",
+        "insert_clause_links", "insert_document_scope", "insert_table_columns",
+    ):
+        monkeypatch.setattr(neon_mod, name, AsyncMock())
+    monkeypatch.setattr(neon_mod, "insert_clauses_bulk", AsyncMock(return_value={}))
+    spy = AsyncMock()
+    monkeypatch.setattr(neon_mod, "insert_ingest_run", spy)
+    session = MagicMock()
+    session.execute = AsyncMock()
+
+    _run(neon_mod.commit_run(
+        session=session, ctx=RunContext(company_id="rpl"), sources=[], register_entries=[],
+        units=[_make_unit(version_id=_V1)], links=[], scope_rows=[], terms=[],
+        term_usages=[], col_roles_map={}, report_r2_key=None,
+        version_specs={"DOC1": neon_mod.DocumentVersionSpec(version_id=_V1, version_no=1)},
+    ))
+    spy.assert_not_called()
+    for c in session.execute.call_args_list:
+        assert "ingest_runs" not in str(c.args[0])

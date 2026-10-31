@@ -52,8 +52,9 @@ _KEYWORD_FIELDS = [
     "project",  # cluster isolation — always filter by project = settings.QDRANT_PROJECT_TAG
 ]
 
+# `is_current` was removed by task 5.6: the collection is delete-and-replace on
+# promotion, so presence means live and there is no flag for a reader to forget.
 _BOOL_FIELDS = [
-    "is_current",
     "assessable",
 ]
 

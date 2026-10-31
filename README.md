@@ -2,7 +2,7 @@
 
 Strata shows a company which clauses in which of its documents are affected when government regulations change, why (with verified quotes), what must change and who must act. It flags only; it never edits documents. The demo applies real federal and Indiana rules to a synthetic utility's 12 policy documents.
 
-Design docs: start with [`development_docs/README.md`](development_docs/README.md) ([PRD](development_docs/PRD.md), [TDD](development_docs/TDD.md)).
+Design docs: [`architecture.md`](architecture.md) (system design), [`TDD.md`](TDD.md) (schema, contracts, test strategy), [`implementation_plan.md`](implementation_plan.md) (task breakdown), [`plan_mode.md`](plan_mode.md) (decision record).
 
 ## Prerequisites
 

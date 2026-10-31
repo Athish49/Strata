@@ -1,11 +1,16 @@
 """Task 3.2.1 — Register-row segmenter for P2 CSV registers.
 
-Parses a P2 register CSV file into one ClauseUnit per data row.
+Parses a P2 register CSV into one ClauseUnit per data row.  The ingest
+service calls :func:`segment_register_text` with decoded text and the
+declared ``RegisterSpec`` columns; :func:`segment_register` is the legacy
+path-based wrapper.
 """
 from __future__ import annotations
 
 import csv
+import io
 import logging
+from collections.abc import Iterable
 from pathlib import Path
 
 from app.company_ingest.constants import ColumnRole, UnitKind, SectionKind
@@ -77,11 +82,28 @@ def _provisional_role(col_name: str, is_first_col: bool) -> str | None:
     return None
 
 
-def _build_column_roles(headers: list[str]) -> dict[str, str | None]:
-    """Build a {column_name: provisional_role} mapping from the header list."""
+def _build_column_roles(
+    headers: list[str],
+    id_column: str | None = None,
+    citation_columns: Iterable[str] = (),
+) -> dict[str, str | None]:
+    """Build a {column_name: provisional_role} mapping from the header list.
+
+    When *id_column* is declared (``RegisterSpec.id_column``) it — not
+    ``headers[0]`` — gets the ``id`` role, and the first column is classified
+    like any other.  Declared *citation_columns* always get the ``citation``
+    role, whatever they are named (TDD §3.4 gaps 1 and 2).
+    """
+    declared_citations = set(citation_columns)
     roles: dict[str, str | None] = {}
     for i, col in enumerate(headers):
-        roles[col] = _provisional_role(col, is_first_col=(i == 0))
+        if id_column is not None:
+            role = ColumnRole.ID if col == id_column else _provisional_role(col, is_first_col=False)
+        else:
+            role = _provisional_role(col, is_first_col=(i == 0))
+        if col in declared_citations and col != id_column:
+            role = ColumnRole.CITATION
+        roles[col] = role
     return roles
 
 
@@ -92,9 +114,11 @@ def segment_register(
     document_title: str,
     ctx: RunContext,
 ) -> tuple[list[ClauseUnit], dict[str, str | None]]:
-    """Parse a P2 register CSV into ClauseUnit objects, one per data row.
+    """Parse a P2 register CSV file into ClauseUnit objects, one per data row.
 
-    The CSV is read with the csv module (RFC 4180, UTF-8), never pandas.
+    Path-based wrapper around :func:`segment_register_text` (legacy behaviour:
+    the id column is ``headers[0]`` and ``table_id`` is the file stem).  The
+    file is decoded ``utf-8-sig`` so a BOM never leaks into ``headers[0]``.
 
     Returns
     -------
@@ -102,110 +126,175 @@ def segment_register(
         clauses       – one ClauseUnit per data row
         column_roles  – {column_name: provisional ColumnRole | None}
     """
-    table_id = csv_path.stem
+    text = csv_path.read_text(encoding="utf-8-sig")
+    return segment_register_text(
+        version_id,
+        doc_id,
+        text,
+        document_title,
+        ctx,
+        table_id=csv_path.stem,
+        source_label=str(csv_path),
+    )
+
+
+def segment_register_text(
+    version_id: str,
+    doc_id: str,
+    csv_text: str,
+    document_title: str,
+    ctx: RunContext,
+    *,
+    table_id: str,
+    id_column: str | None = None,
+    citation_columns: Iterable[str] = (),
+    source_label: str | None = None,
+) -> tuple[list[ClauseUnit], dict[str, str | None]]:
+    """Parse already-decoded register CSV text, one ClauseUnit per data row.
+
+    This is the entry point the ingest service uses: the API holds uploaded
+    bytes, decodes them (``utf-8-sig``) and validates them against the declared
+    ``RegisterSpec`` before this is called, so no file is read here.
+
+    * *id_column* — the declared ``RegisterSpec.id_column``; ``clause_id`` is
+      ``f"{doc_id}:{row[id_column]}"``.  ``None`` keeps the legacy
+      ``headers[0]`` behaviour.
+    * *citation_columns* — the declared ``RegisterSpec.citation_columns``;
+      they get the ``citation`` column role.
+    * A leading BOM is stripped; wholly blank rows (``,,,`` spreadsheet
+      artefacts) are skipped and do not consume a row number, matching
+      ``register_spec.validate_register_spec``'s numbering.
+    * A row whose field count differs from the header emits a ``ctx.issue``
+      warning; overflow fields (``csv.DictReader``'s ``None`` key) are kept
+      in ``row_cells`` under ``"_overflow"`` rather than silently lost.
+
+    The CSV is read with the csv module (RFC 4180), never pandas.
+    """
+    label = source_label or table_id
     heading_path = [document_title, table_id]
+    csv_text = csv_text.lstrip("\ufeff")
 
     clauses: list[ClauseUnit] = []
     column_roles: dict[str, str | None] = {}
 
-    with csv_path.open(encoding="utf-8", newline="") as fh:
-        reader = csv.DictReader(fh)
+    reader = csv.DictReader(io.StringIO(csv_text, newline=""))
 
-        if reader.fieldnames is None:
+    if reader.fieldnames is None:
+        ctx.issue(
+            "warning",
+            "3.2.1",
+            "REGISTER_EMPTY_HEADERS",
+            f"No headers found in {label}",
+            doc_id=doc_id,
+            path=label,
+        )
+        return [], {}
+
+    headers: list[str] = list(reader.fieldnames)
+
+    # Log empty/blank headers as info
+    for col in headers:
+        if not col.strip():
+            ctx.issue(
+                "info",
+                "3.2.1",
+                "REGISTER_BLANK_HEADER",
+                f"Blank/empty column header in {label}",
+                doc_id=doc_id,
+                path=label,
+            )
+
+    if not headers:
+        ctx.issue(
+            "warning",
+            "3.2.1",
+            "REGISTER_NO_HEADERS",
+            f"CSV has no columns: {label}",
+            doc_id=doc_id,
+            path=label,
+        )
+        return [], {}
+
+    if id_column is not None and id_column not in headers:
+        raise ValueError(
+            f"id_column {id_column!r} is not a column of register {label!r}; "
+            "validate the RegisterSpec (register_spec.validate_register_spec) first"
+        )
+
+    column_roles = _build_column_roles(headers, id_column, citation_columns)
+    row_id_col = id_column if id_column is not None else headers[0]
+
+    row_number = 0
+    for row in reader:
+        overflow = row.pop(None, None)  # type: ignore[call-overload]
+        values = [v for v in row.values() if v is not None]
+        if not overflow and not any(v.strip() for v in values):
+            continue  # wholly blank row
+        row_number += 1
+
+        if overflow or any(v is None for v in row.values()):
             ctx.issue(
                 "warning",
                 "3.2.1",
-                "REGISTER_EMPTY_HEADERS",
-                f"No headers found in {csv_path}",
+                "REGISTER_RAGGED_ROW",
+                f"Row {row_number} in {label} has "
+                f"{len(values) + len(overflow or [])} fields; the header has "
+                f"{len(headers)} — its column mapping may be wrong",
                 doc_id=doc_id,
-                path=str(csv_path),
+                path=label,
             )
-            return [], {}
 
-        headers: list[str] = list(reader.fieldnames)
+        row_id = (row.get(row_id_col) or "").strip()
+        if not row_id:
+            ctx.issue(
+                "info",
+                "3.2.1",
+                "REGISTER_MISSING_ROW_ID",
+                f"Row {row_number} in {label} has no value in id column '{row_id_col}'",
+                doc_id=doc_id,
+                path=label,
+            )
+            row_id = f"ROW_{row_number}"
 
-        # Log empty/blank headers as info
+        clause_id = f"{doc_id}:{row_id}"
+        local_id = row_id
+
+        # row_cells: all columns as strings
+        row_cells: dict[str, str] = {k: (v if v is not None else "") for k, v in row.items()}
+        if overflow:
+            row_cells["_overflow"] = "; ".join(overflow)
+
+        # text_raw: non-empty cells rendered as "col: val" lines, in header order
+        lines: list[str] = []
         for col in headers:
-            if not col.strip():
-                ctx.issue(
-                    "info",
-                    "3.2.1",
-                    "REGISTER_BLANK_HEADER",
-                    f"Blank/empty column header in {csv_path}",
-                    doc_id=doc_id,
-                    path=str(csv_path),
-                )
+            val = row.get(col, "")
+            if val is not None and val.strip():
+                lines.append(f"{col}: {val}")
+        text_raw = "\n".join(lines)
 
-        column_roles = _build_column_roles(headers)
+        text_norm = normalize(text_raw)
+        text_sha = sha256_text(text_raw)
 
-        # The first column is the row-ID column
-        if not headers:
-            ctx.issue(
-                "warning",
-                "3.2.1",
-                "REGISTER_NO_HEADERS",
-                f"CSV has no columns: {csv_path}",
-                doc_id=doc_id,
-                path=str(csv_path),
-            )
-            return [], {}
-
-        first_col = headers[0]
-
-        for row_number, row in enumerate(reader, start=1):
-            # first_column_value is the row's unique ID
-            row_id = row.get(first_col, "").strip()
-            if not row_id:
-                ctx.issue(
-                    "info",
-                    "3.2.1",
-                    "REGISTER_MISSING_ROW_ID",
-                    f"Row {row_number} in {csv_path} has no value in first column '{first_col}'",
-                    doc_id=doc_id,
-                    path=str(csv_path),
-                )
-                row_id = f"ROW_{row_number}"
-
-            clause_id = f"{doc_id}:{row_id}"
-            local_id = row_id
-
-            # row_cells: all columns as strings
-            row_cells: dict[str, str] = dict(row)
-
-            # text_raw: non-empty cells rendered as "col: val" lines, in header order
-            lines: list[str] = []
-            for col in headers:
-                val = row.get(col, "")
-                if val is not None and val.strip():
-                    lines.append(f"{col}: {val}")
-            text_raw = "\n".join(lines)
-
-            char_start = 0
-            char_end = len(text_raw)
-
-            text_norm = normalize(text_raw)
-            text_sha = sha256_text(text_raw)
-
-            clause = ClauseUnit(
-                version_id=version_id,
-                doc_id=doc_id,
-                clause_id=clause_id,
-                local_id=local_id,
-                parent_clause_id=None,
-                unit_kind=UnitKind.REGISTER_ROW,
-                heading_path=heading_path,
-                section_kind=SectionKind.PROCEDURE,
-                ordinal=row_number,
-                char_start=char_start,
-                char_end=char_end,
-                line_start=row_number,
-                text_raw=text_raw,
-                text_norm=text_norm,
-                text_sha256=text_sha,
-                table_id=table_id,
-                row_cells=row_cells,
-            )
-            clauses.append(clause)
+        clause = ClauseUnit(
+            version_id=version_id,
+            doc_id=doc_id,
+            clause_id=clause_id,
+            local_id=local_id,
+            parent_clause_id=None,
+            unit_kind=UnitKind.REGISTER_ROW,
+            heading_path=heading_path,
+            section_kind=SectionKind.PROCEDURE,
+            ordinal=row_number,
+            char_start=0,
+            char_end=len(text_raw),
+            line_start=row_number,
+            text_raw=text_raw,
+            text_norm=text_norm,
+            text_sha256=text_sha,
+            table_id=table_id,
+            row_cells=row_cells,
+        )
+        clauses.append(clause)
 
     ctx.count("register_rows_parsed", len(clauses))
     return clauses, column_roles

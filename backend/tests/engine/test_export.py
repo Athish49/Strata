@@ -5,8 +5,14 @@ import pytest
 
 from app.engine.export import ExportError, assemble_export, build_export, section_level
 
-_spec = importlib.util.spec_from_file_location(
-    "score_run", Path(__file__).resolve().parents[2] / "scripts" / "score_run.py")
+# score_run is synthetic-corpus tooling (it shells out to the eval harness), so it
+# lives under backend/synthetic/. The suite must stay green when that directory is
+# deleted (implementation_plan.md task 9.4), hence the module-level skip.
+_SCORE_RUN = Path(__file__).resolve().parents[2] / "synthetic" / "score_run.py"
+if not _SCORE_RUN.exists():
+    pytest.skip("backend/synthetic/ is absent; score_run tests need it", allow_module_level=True)
+
+_spec = importlib.util.spec_from_file_location("score_run", _SCORE_RUN)
 score_run = importlib.util.module_from_spec(_spec)
 _spec.loader.exec_module(score_run)
 
@@ -84,6 +90,42 @@ def test_assemble_export_all_docs_and_status():
     assert d2["status"] == "cleared" and len(d2["findings"]) == 1  # informational only
     assert d2["findings"][0]["route_to"]["approver"] is None
     assert d3["findings"] == []
+
+
+def test_assemble_export_rekeys_doc_id_and_clause_id_to_doc_number():
+    """task 9.2 step 5/6 bug: scoring matches by the pre-v2 convention where doc_id
+    *was* the RPL id. v2 made doc_id system-generated and moved the RPL id to
+    doc_number; the export must emit doc_number (and rewrite each clause_id's
+    prefix) or every scoring comparison silently fails to join, even for a
+    substantively correct finding (found on the real post-cutover kb run)."""
+    docs = [
+        {"doc_id": "DOC-000001", "doc_number": "RPL-CMP-REG-001",
+         "owner_id": "P1", "reviewer_id": "P2", "approver_id": "P3"},
+        {"doc_id": "DOC-000002", "doc_number": "RPL-CMP-REG-001#register",
+         "owner_id": "P1", "reviewer_id": "P2", "approver_id": "P3"},
+        {"doc_id": "DOC-000009", "doc_number": None,  # no doc_number: falls back to doc_id
+         "owner_id": "P1", "reviewer_id": "P2", "approver_id": "P3"},
+    ]
+    findings = [
+        {"clause_id": "DOC-000001:B.1", "doc_id": "DOC-000001", "citation": "170 IAC 1-6-3",
+         "finding_type": "stale_citation", "severity": "medium",
+         "route_owner": None, "route_reviewer": None, "route_approver": None},
+        {"clause_id": "DOC-000002:OBL-2024-0018", "doc_id": "DOC-000002", "citation": "170 IAC 1-6-3",
+         "finding_type": "required_content_change", "severity": "high",
+         "route_owner": None, "route_reviewer": None, "route_approver": None},
+        {"clause_id": "DOC-000009:3.1", "doc_id": "DOC-000009", "citation": "170 IAC 1-6-8",
+         "finding_type": "informational", "severity": "low",
+         "route_owner": None, "route_reviewer": None, "route_approver": None},
+    ]
+    out = assemble_export(docs, findings, {})
+    by_doc = {d["doc_id"]: d for d in out["documents"]}
+    assert set(by_doc) == {"RPL-CMP-REG-001", "RPL-CMP-REG-001#register", "DOC-000009"}
+    assert by_doc["RPL-CMP-REG-001"]["findings"][0]["clause_id"] == "RPL-CMP-REG-001:B.1"
+    assert by_doc["RPL-CMP-REG-001#register"]["findings"][0]["clause_id"] == \
+        "RPL-CMP-REG-001#register:OBL-2024-0018"
+    # No doc_number on this one: both the doc-level id and the clause_id prefix are
+    # left as the raw system doc_id, not silently dropped or blanked.
+    assert by_doc["DOC-000009"]["findings"][0]["clause_id"] == "DOC-000009:3.1"
 
 
 class _Result:

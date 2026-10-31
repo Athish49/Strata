@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import logging
 from pathlib import Path
+from typing import Any
 
 from app.company_ingest.enrich.parameter_entry import ParameterEntry
 from app.company_ingest.llm.clause_enrichment import (
@@ -40,8 +41,15 @@ async def _process_unit(
     unit: ClauseUnit,
     all_units: list[ClauseUnit],
     ctx: RunContext,
+    session: Any | None = None,
 ) -> None:
-    """Run LLM enrichment on a single unit and mutate it in place."""
+    """Run LLM enrichment on a single unit and mutate it in place.
+
+    ``unit.text_sha256`` is passed to ``call_structured`` as ``content_sha256``
+    together with *session*, which engages the persistent
+    ``company.llm_extractions`` cache (TDD §4.3).  Without a session the
+    database tier is skipped, exactly as before.
+    """
     # Find parent text.
     parent_text: str | None = None
     if unit.parent_clause_id is not None:
@@ -56,6 +64,7 @@ async def _process_unit(
 
     ctx.count("units_enriched_llm")
 
+    hits_before = ctx.stats.get("llm_cache_hit", 0)
     result: ClauseEnrichment | None = await call_structured(
         "clause_enrichment",
         unit.clause_id,
@@ -63,7 +72,12 @@ async def _process_unit(
         user_msg,
         ClauseEnrichment,
         ctx,
+        content_sha256=unit.text_sha256,
+        session=session,
     )
+    if ctx.stats.get("llm_cache_hit", 0) == hits_before:
+        # Not served by the persistent cache -> the provider was called.
+        ctx.count("llm_calls")
 
     if result is None:
         return
@@ -141,8 +155,19 @@ async def _process_unit(
         unit.topic_terms = result.topic_terms
 
 
-async def run_clause_enrichment(units: list[ClauseUnit], ctx: RunContext) -> None:
-    """Run LLM clause enrichment on eligible units. Mutates units in place."""
+async def run_clause_enrichment(
+    units: list[ClauseUnit],
+    ctx: RunContext,
+    *,
+    session: Any | None = None,
+) -> None:
+    """Run LLM clause enrichment on eligible units. Mutates units in place.
+
+    Pass the ingest ``AsyncSession`` as *session* (and build ``ctx`` with a
+    non-empty ``company_id``) so results are read from / written to the
+    persistent LLM cache; ``ctx.stats["llm_calls"]`` counts calls that were
+    not served from it.
+    """
     if ctx.no_llm:
         for unit in units:
             ctx.count("units_skipped_no_llm")
@@ -164,7 +189,7 @@ async def run_clause_enrichment(units: list[ClauseUnit], ctx: RunContext) -> Non
 
         if is_split:
             for child in children:
-                await _process_unit(child, units, ctx)
+                await _process_unit(child, units, ctx, session)
             # Merge first child's role/statement to original unit.
             first_child = children[0]
             if unit.role is None and first_child.role is not None:
@@ -176,6 +201,6 @@ async def run_clause_enrichment(units: list[ClauseUnit], ctx: RunContext) -> Non
             for child in children:
                 unit.parameters.extend(child.parameters)
         else:
-            await _process_unit(unit, units, ctx)
+            await _process_unit(unit, units, ctx, session)
 
         _recompute_assessable(unit)

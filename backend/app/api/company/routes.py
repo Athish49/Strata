@@ -4,9 +4,6 @@ Shapes follow frontend/lib/api/schemas/company.ts (contract sections 5 and 8).
 """
 from __future__ import annotations
 
-import csv
-import logging
-import pathlib
 from typing import Any, Optional
 
 from fastapi import APIRouter, Depends, HTTPException
@@ -15,12 +12,9 @@ from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.db import get_db
 from app.engine.config import engine_settings
-
-log = logging.getLogger(__name__)
+from app.engine.footprint import VERSION_SCOPE
 
 router = APIRouter(prefix="/company", tags=["company"])
-
-_GLOBAL = pathlib.Path(__file__).resolve().parents[2] / "company" / "corpus" / "_global"
 
 # backend vertical name -> frontend slug (keep in sync with frontend/lib/verticals.ts)
 VERTICAL_SLUGS = {
@@ -29,10 +23,17 @@ VERTICAL_SLUGS = {
     "operations & processes": "operations-processes",
     "environmental": "environmental-esg",
     "workforce & safety": "workforce-hr",
-}
-_DOC_TYPES = {
-    "PRO": "Procedure", "PLN": "Plan", "PGM": "Program Plan", "GRR": "Tariff",
-    "REG": "Register", "RRS": "Register", "CAL": "Register", "POL": "Policy", "STD": "Standard",
+    # The other nine verticals the product offers. No synthetic document used them, but
+    # a customer can upload into any of the 14, and an unmapped name was rejected with 422.
+    "financial & reporting": "financial-reporting",
+    "revenue & pricing": "revenue-pricing",
+    "technology & systems": "technology-systems",
+    "supply chain & procurement": "supply-chain-procurement",
+    "risk & insurance": "risk-insurance",
+    "strategic & competitive": "strategic-competitive",
+    "reputational & stakeholder": "reputational-stakeholder",
+    "contractual & third-party obligations": "contractual-third-party",
+    "capital & infrastructure": "capital-infrastructure",
 }
 _UNIT_KINDS = {"section", "table_row", "register_row", "form_field", "tariff_subrule", "appendix"}
 _STATES = {
@@ -49,9 +50,6 @@ _STATES = {
     "WA": "Washington", "WV": "West Virginia", "WI": "Wisconsin", "WY": "Wyoming",
 }
 
-_register_cache: Optional[dict[str, dict[str, str]]] = None
-_yaml_cache: Optional[dict] = None
-
 
 # ---------------------------------------------------------------- pure helpers
 def vertical_slug(name: Optional[str]) -> str:
@@ -60,11 +58,13 @@ def vertical_slug(name: Optional[str]) -> str:
     return VERTICAL_SLUGS.get(name.strip().lower(), "unclassified")
 
 
-def derive_doc_type(doc_id: str) -> str:
-    parts = (doc_id or "").split("-")
-    if len(parts) >= 3:
-        return _DOC_TYPES.get(parts[-2].upper(), "Document")
-    return "Document"
+def doc_type_label(doc_class: Optional[str]) -> str:
+    """Display label for `company_documents.doc_class` (e.g. "retention_schedule" ->
+    "Retention Schedule"). The frontend's `doc_type` is a required string, so an
+    unclassified document reads "Document"."""
+    if not doc_class or not str(doc_class).strip():
+        return "Document"
+    return " ".join(w.capitalize() for w in str(doc_class).strip().replace("_", " ").split())
 
 
 def clean_unit_kind(kind: Optional[str]) -> str:
@@ -94,38 +94,6 @@ def _iso(d: Any) -> Optional[str]:
     return d.isoformat() if d is not None else None
 
 
-def load_register() -> dict[str, dict[str, str]]:
-    global _register_cache
-    if _register_cache is None:
-        data: dict[str, dict[str, str]] = {}
-        try:
-            with open(_GLOBAL / "document_register.csv", newline="", encoding="utf-8") as fh:
-                for row in csv.DictReader(fh):
-                    if row.get("doc_id"):
-                        data[row["doc_id"]] = row
-        except Exception as exc:  # missing/unreadable -> nulls
-            log.warning("document_register.csv unavailable: %s", exc)
-        _register_cache = data
-    return _register_cache
-
-
-def load_profile_yaml() -> dict:
-    global _yaml_cache
-    if _yaml_cache is None:
-        data: dict = {}
-        try:
-            import yaml
-
-            with open(_GLOBAL / "company_profile.yaml", encoding="utf-8") as fh:
-                loaded = yaml.safe_load(fh)
-            if isinstance(loaded, dict):
-                data = loaded
-        except Exception as exc:
-            log.warning("company_profile.yaml unavailable: %s", exc)
-        _yaml_cache = data
-    return _yaml_cache
-
-
 def _person(row: dict, prefix: str) -> Optional[dict]:
     if row.get(f"{prefix}_pid") is None:
         return None
@@ -138,11 +106,10 @@ def _person(row: dict, prefix: str) -> Optional[dict]:
     }
 
 
-def build_document(row: dict, cited: list[str], register: dict[str, dict[str, str]]) -> dict:
-    reg = register.get(row["doc_id"], {})
-    vname = row.get("vertical") or reg.get("vertical") or None
-    next_review = _iso(row.get("next_review")) or (reg.get("next_review_date") or None)
-    review_cycle = row.get("review_cycle") or reg.get("review_cycle") or None
+def build_document(row: dict, cited: list[str]) -> dict:
+    """Every field comes from the database row (TDD 7.6): company_documents,
+    its current document_versions row, and the people joins."""
+    vname = row.get("vertical") or None
     owner = _person(row, "o")
     reviewer = _person(row, "r")
     approver = _person(row, "a")
@@ -156,29 +123,47 @@ def build_document(row: dict, cited: list[str], register: dict[str, dict[str, st
         "effective_date": _iso(row.get("effective_date")),
         "approved_date": _iso(row.get("approved_date")),
         "law_as_of": _iso(row.get("law_as_of")),
-        "next_review": next_review,
-        "review_cycle": review_cycle,
+        "next_review": _iso(row.get("next_review")),
+        "review_cycle": row.get("review_cycle") or None,
         "vertical": vertical_slug(vname),
         "vertical_name": vname,
         "owner": owner or blank(row.get("owner_id")),
         "reviewer": reviewer or blank(row.get("reviewer_id")),
         "approver": approver,
         "two_signature": row.get("approver_id") is None,
+        # `monitored` means the CURRENT version is ingested; a document still in review
+        # (no current version) is not monitored yet.
         "monitored": row.get("ingest_status") == "ingested",
-        "doc_type": derive_doc_type(row["doc_id"]),
+        # What the UI needs to show a document that has no current version: the document's
+        # lifecycle (pending / active / failed / retired) and its newest non-retired version.
+        "lifecycle_state": row.get("lifecycle_state") or None,
+        "has_current_version": row.get("version_status") is not None,
+        "latest_version_no": row.get("latest_version_no"),
+        "latest_version_status": row.get("latest_version_status"),
+        "latest_ingest_status": row.get("latest_ingest_status"),
+        "doc_type": doc_type_label(row.get("doc_class")),
+        "doc_number": row.get("doc_number"),
         "cited_citations": cited,
     }
 
 
 # ------------------------------------------------------------------------ SQL
 _DOC_SQL = """
-SELECT cd.doc_id, cd.title, cd.vertical, cd.review_cycle, cd.owner_id, cd.reviewer_id, cd.approver_id,
-       v.version, v.status, v.effective_date, v.approved_date, v.law_as_of, v.next_review, v.ingest_status,
+SELECT cd.doc_id, cd.title, cd.doc_class, cd.doc_number, cd.vertical, cd.review_cycle, cd.owner_id, cd.reviewer_id, cd.approver_id,
+       cd.lifecycle_state,
+       v.version, v.status, v.status AS version_status, v.effective_date, v.approved_date, v.law_as_of, v.next_review, v.ingest_status,
+       lat.version_no AS latest_version_no, lat.status AS latest_version_status, lat.ingest_status AS latest_ingest_status,
        po.person_id AS o_pid, po.name AS o_name, po.title AS o_title, po.department AS o_dept, po.reports_to_id AS o_rt,
        pr.person_id AS r_pid, pr.name AS r_name, pr.title AS r_title, pr.department AS r_dept, pr.reports_to_id AS r_rt,
        pa.person_id AS a_pid, pa.name AS a_name, pa.title AS a_title, pa.department AS a_dept, pa.reports_to_id AS a_rt
 FROM company.company_documents cd
 LEFT JOIN company.document_versions v ON v.version_id = cd.current_version_id
+LEFT JOIN LATERAL (
+    SELECT lv.version_no, lv.status, lv.ingest_status
+    FROM company.document_versions lv
+    WHERE lv.company_id = cd.company_id AND lv.doc_id = cd.doc_id AND lv.status <> 'retired'
+    ORDER BY lv.version_no DESC LIMIT 1
+) lat ON true
 LEFT JOIN company.people po ON po.company_id = cd.company_id AND po.person_id = cd.owner_id
 LEFT JOIN company.people pr ON pr.company_id = cd.company_id AND pr.person_id = cd.reviewer_id
 LEFT JOIN company.people pa ON pa.company_id = cd.company_id AND pa.person_id = cd.approver_id
@@ -189,10 +174,12 @@ ORDER BY cd.doc_id
 _CITED_SQL = """
 SELECT DISTINCT c.doc_id, cs.citation
 FROM company.clauses c
+JOIN company.company_documents d ON d.company_id = c.company_id AND d.doc_id = c.doc_id
 JOIN company.clause_citations cc ON cc.clause_pk = c.clause_pk
 JOIN public.code_sections cs ON cs.id = cc.code_section_id::int
 WHERE c.company_id = :cid AND cc.resolution_status IN ('resolved','resolved_rule')
   AND cc.code_section_id ~ '^[0-9]+$' {extra}
+  AND """ + VERSION_SCOPE + """
 """
 
 
@@ -210,8 +197,7 @@ async def _documents(db: AsyncSession, doc_id: Optional[str] = None) -> list[dic
     cited: dict[str, list[str]] = {}
     for r in (await db.execute(text(_CITED_SQL.format(extra=cextra)), params)).mappings().all():
         cited.setdefault(r["doc_id"], []).append(r["citation"])
-    register = load_register()
-    return [build_document(dict(r), sorted(set(cited.get(r["doc_id"], []))), register) for r in rows]
+    return [build_document(dict(r), sorted(set(cited.get(r["doc_id"], [])))) for r in rows]
 
 
 # ------------------------------------------------------------------ endpoints
@@ -234,10 +220,11 @@ async def list_clauses(doc_id: str, db: AsyncSession = Depends(get_db)):
     SELECT clause_id, doc_id, heading_path, unit_kind, text_raw, row_cells, parent_clause_id,
            ROW_NUMBER() OVER (ORDER BY (version_id = current_version_id) DESC, ordinal, clause_id) AS dense_ord
     FROM (
-      SELECT c.*, cd.current_version_id
+      SELECT c.*, d.current_version_id
       FROM company.clauses c
-      JOIN company.company_documents cd ON cd.company_id = c.company_id AND cd.doc_id = c.doc_id
+      JOIN company.company_documents d ON d.company_id = c.company_id AND d.doc_id = c.doc_id
       WHERE c.company_id = :cid AND c.doc_id = :doc_id
+        AND """ + VERSION_SCOPE + """
     ) x
     ORDER BY dense_ord
     """
@@ -284,9 +271,14 @@ async def get_profile(db: AsyncSession = Depends(get_db)):
         for r in rows
     ]
     by_key = {a["key"]: a["value"] for a in attributes}
-    yml = load_profile_yaml()
-    regulator = ((yml.get("company") or {}).get("regulator")) or ""
-    utility = ((yml.get("business_model") or {}).get("utility_type")) or ""
+    # TDD 7.6: regulator / utility_type come from company_attributes (writable via
+    # PUT /company/attributes/{key}); nothing in this module reads files.
+    regulator = str(by_key.get("regulator") or "")
+    # Two different facts share the name "utility type": `utility_type` ("electric") is an
+    # applicability attribute and must not change, while `business_utility_type`
+    # ("electric_distribution") is how the company describes itself on the profile page.
+    # Prefer the display value and fall back, so a company that only has the former still renders.
+    utility = by_key.get("business_utility_type") or by_key.get("utility_type") or ""
     ownership = by_key.get("ownership")
     words = [str(w).replace("_", " ") for w in (ownership, utility) if w]
     ctype = (" ".join(words) + " utility") if words else ""

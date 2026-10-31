@@ -166,24 +166,24 @@ class TestBuildSparseVector:
         assert build_sparse_vector("") == {}
 
     def test_repeated_token_has_higher_tf(self):
-        from app.company_ingest.index.bm25 import build_sparse_vector
+        from app.company_ingest.index.bm25 import build_sparse_vector, token_id
 
         once = build_sparse_vector("hello world")
         twice = build_sparse_vector("hello hello world")
 
-        hello_hash = hash("hello") % (2 ** 20)
+        hello_hash = token_id("hello")
         assert hello_hash in once
         assert hello_hash in twice
         assert twice[hello_hash] > once[hello_hash]
 
     def test_short_tokens_excluded(self):
-        from app.company_ingest.index.bm25 import build_sparse_vector
+        from app.company_ingest.index.bm25 import build_sparse_vector, token_id
 
         # "a" and "b" are < 2 chars, "ab" is fine
         result = build_sparse_vector("a b ab")
-        a_hash = hash("a") % (2 ** 20)
-        b_hash = hash("b") % (2 ** 20)
-        ab_hash = hash("ab") % (2 ** 20)
+        a_hash = token_id("a")
+        b_hash = token_id("b")
+        ab_hash = token_id("ab")
 
         # "ab" should be present (2 chars)
         assert ab_hash in result
@@ -198,6 +198,37 @@ class TestBuildSparseVector:
 
         result = build_sparse_vector("a b c")
         assert result == {}
+
+    def test_token_ids_are_stable_across_interpreter_processes(self):
+        """Task 3.2: index-time and query-time sparse ids must agree across
+        processes. Two child interpreters with DIFFERENT hash seeds must produce
+        identical vectors; each also reports its own ``hash()`` so the test
+        proves the seeds really differed (i.e. would have caught ``hash()``)."""
+        import json
+        import os
+        import subprocess
+        import sys
+        from pathlib import Path
+
+        backend = Path(__file__).resolve().parents[2]
+        code = (
+            "import json\n"
+            "from app.company_ingest.index.bm25 import build_sparse_vector\n"
+            "v = build_sparse_vector('Notify the customer within ten business days, "
+            "per 170 IAC 4-1-16 and the Customer Service Policy.')\n"
+            "print(json.dumps({'ids': sorted(v.items()), 'h': hash('hello')}))\n"
+        )
+        outs = []
+        for seed in ("1", "2"):
+            env = {**os.environ, "PYTHONHASHSEED": seed}
+            res = subprocess.run([sys.executable, "-c", code], cwd=backend, env=env,
+                                 capture_output=True, text=True, timeout=60, check=True)
+            outs.append(json.loads(res.stdout.strip().splitlines()[-1]))
+        assert outs[0]["h"] != outs[1]["h"], "child seeds did not differ"
+        assert outs[0]["ids"] and outs[0]["ids"] == outs[1]["ids"]
+        from app.company_ingest.index.bm25 import token_id
+
+        assert token_id("hello") == 907060870 % (2 ** 20)  # zlib.crc32(b"hello")
 
 
 # ===========================================================================

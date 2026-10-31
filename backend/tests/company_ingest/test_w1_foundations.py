@@ -10,25 +10,11 @@ from app.company_ingest.constants import (
     DocClass,
     LinkType,
     ParameterKind,
-    Profile,
     Qualifier,
-    SemanticRole,
     SectionKind,
     UnitKind,
 )
 from app.company_ingest.ids import UUID_NAMESPACE, stable_uuid
-
-
-# ---------------------------------------------------------------------------
-# Profile enum
-# ---------------------------------------------------------------------------
-
-def test_profile_values():
-    assert Profile.P1_PROSE == "p1_prose"
-    assert Profile.P2_REGISTER == "p2_register"
-    assert Profile.P3_DATASET == "p3_dataset"
-    assert Profile.P4_REFERENCE == "p4_reference"
-    assert Profile.RENDER == "render"
 
 
 # ---------------------------------------------------------------------------
@@ -128,15 +114,6 @@ def test_column_role_values():
         "reference_list", "owner_person", "date", "enum", "status", "free_text", "ignore",
     }
     assert set(ColumnRole) == expected
-
-
-# ---------------------------------------------------------------------------
-# SemanticRole enum
-# ---------------------------------------------------------------------------
-
-def test_semantic_role_values():
-    expected = {"id", "foreign_key", "timestamp", "duration", "quantity", "flag", "category", "clause_ref", "free_text"}
-    assert set(SemanticRole) == expected
 
 
 # ---------------------------------------------------------------------------

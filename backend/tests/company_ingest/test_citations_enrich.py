@@ -112,6 +112,31 @@ def test_p2_register_row_citation_column():
     assert entry.parsed.normalized_key == "170 IAC 4-1-16"
 
 
+def test_p2_register_cell_with_several_citations_yields_one_entry_each():
+    """Task 9.1 rehearsal: ``parse_citation`` on a whole "A; B" cell returns only A,
+    with the whole cell as ``citation_raw``, so B was never resolved (22 calendar and
+    retention-schedule citations). Each citation in the cell is its own entry."""
+    cell = "170 IAC 4-1-3; IC 8-1-2-40; 170 IAC 4-1-15(f)(1)"
+    unit = _make_unit(unit_kind="register_row", section_kind="other",
+                      row_cells={"retention_basis:citation": cell})
+    enrich_citations([unit], _make_ctx())
+    got = [(e.parsed.source_system, e.parsed.citation_raw, e.span_start, e.span_end)
+           for e in unit.citations]
+    assert [g[:2] for g in got] == [("iac", "170 IAC 4-1-3"), ("ic", "IC 8-1-2-40"),
+                                    ("iac", "170 IAC 4-1-15(f)(1)")]
+    for _, raw, start, end in got:
+        assert cell[start:end] == raw
+    assert all(e.context == "register_column" for e in unit.citations)
+
+
+def test_p2_register_cell_without_a_citation_span_keeps_the_whole_cell_parse():
+    unit = _make_unit(unit_kind="register_row", section_kind="other",
+                      row_cells={"retention_basis:citation": "company practice"})
+    enrich_citations([unit], _make_ctx())
+    assert [(e.parsed.source_system, e.parsed.citation_raw, e.span_start, e.span_end)
+            for e in unit.citations] == [("unknown", "company practice", 0, 16)]
+
+
 # ---------------------------------------------------------------------------
 # Test 4: No citations in text → unit.citations is empty
 # ---------------------------------------------------------------------------

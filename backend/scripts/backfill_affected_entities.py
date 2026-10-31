@@ -33,10 +33,6 @@ from collections import Counter
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from dotenv import load_dotenv
-
-load_dotenv(os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), ".env"))
-
 from sqlalchemy import text
 
 from app.db import AsyncSessionLocal
@@ -352,4 +348,10 @@ def main() -> None:
 
 
 if __name__ == "__main__":
+    # Loaded here, not at import time, so importing this module's pure
+    # functions can never leak production secrets into the process env.
+    from dotenv import load_dotenv
+
+    load_dotenv(os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), ".env"))
+
     main()

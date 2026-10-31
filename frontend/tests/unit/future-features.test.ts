@@ -17,8 +17,8 @@ describe("future features registry", () => {
   });
   it("contains the full catalog", () => {
     const ids = Object.keys(FUTURE_FEATURES);
-    expect(ids).toHaveLength(42);
-    for (const id of ["notifications", "watch", "upload-document", "track-docket", "comment-letter", "more-sources", "sync-directory"]) {
+    expect(ids).toHaveLength(40);
+    for (const id of ["notifications", "watch", "connect-source", "track-docket", "comment-letter", "more-sources", "sync-directory"]) {
       expect(ids).toContain(id);
     }
     for (const [key, f] of Object.entries(FUTURE_FEATURES)) expect(f.id).toBe(key);
@@ -26,7 +26,7 @@ describe("future features registry", () => {
   it("copy matches the spec for samples", () => {
     expect(FUTURE_FEATURES["notifications"]).toMatchObject({ label: "Alerts", variant: "icon", tooltip: "Get alerted the moment a rule your documents depend on changes." });
     expect(FUTURE_FEATURES["search-ask"].label).toBe('Ask Strata "‹query›"');
-    expect(FUTURE_FEATURES["upload-document"].tooltip).toBe("Add a document; Strata splits it into clauses and files it in the right vertical.");
+    expect(FUTURE_FEATURES["connect-source"].tooltip).toBe("Keep documents in sync from SharePoint, Google Drive, Box or iManage.");
   });
   it("every tooltip is <= 90 chars and fields are non-empty", () => {
     for (const f of Object.values(FUTURE_FEATURES)) {
@@ -48,6 +48,14 @@ describe("future features registry", () => {
     }
     for (const ids of Object.values(OPTIONAL_PAGE_CUES)) for (const id of ids) expect(FUTURE_FEATURES[id]).toBeDefined();
     for (const id of SHELL_CUES) expect(FUTURE_FEATURES[id]).toBeDefined();
+  });
+  it("upload is a real control now (task 8.1), not a disabled cue", () => {
+    expect(FUTURE_FEATURES["upload-document"]).toBeUndefined();
+    for (const ids of Object.values(PAGE_CUES)) expect(ids).not.toContain("upload-document");
+  });
+  it("version history is a real control now (task 8.3), not a disabled cue", () => {
+    expect(FUTURE_FEATURES["version-history"]).toBeUndefined();
+    for (const ids of [...Object.values(PAGE_CUES), ...Object.values(OPTIONAL_PAGE_CUES)]) expect(ids).not.toContain("version-history");
   });
   it("shell cues are not placed on pages", () => {
     for (const ids of Object.values(PAGE_CUES)) for (const id of ids) expect(SHELL_CUES).not.toContain(id);

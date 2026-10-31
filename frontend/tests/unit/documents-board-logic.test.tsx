@@ -104,14 +104,26 @@ describe("board components", () => {
     expect(screen.getByText(/1 needs attention/)).toBeTruthy();
   });
 
-  it("renders an empty vertical with a disabled add cue", () => {
+  it("renders an empty vertical with a real (enabled) add control", () => {
     render(
       <TooltipProvider>
         <VerticalSection group={groupByVertical([])[3]} />
       </TooltipProvider>,
     );
     expect(screen.getByText(/No documents are filed under Revenue & Pricing yet/)).toBeTruthy();
-    expect(screen.getByText(/Add a document/).closest("button")?.getAttribute("aria-disabled")).toBe("true");
+    // Every one of the 14 verticals accepts uploads (the backend maps them all), including
+    // Revenue & Pricing, which has no synthetic documents.
+    expect(screen.getByRole("button", { name: "Add a document" })).toBeTruthy();
+    cleanup();
+    render(
+      <TooltipProvider>
+        <VerticalSection group={groupByVertical([])[4]} />
+      </TooltipProvider>,
+    );
+    expect(screen.getByText(/No documents are filed under Operations & Processes yet/)).toBeTruthy();
+    const add = screen.getByRole("button", { name: "Add a document" });
+    expect(add.getAttribute("aria-disabled")).toBeNull();
+    expect(add.getAttribute("aria-haspopup")).toBe("dialog");
   });
 
   it("mini bar and pill render text, nothing for no findings", () => {

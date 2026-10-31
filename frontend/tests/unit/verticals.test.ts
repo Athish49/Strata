@@ -1,7 +1,12 @@
 import { describe, expect, it } from "vitest";
 import {
+  UNCLASSIFIED_SLUG,
   VERTICALS,
+  VERTICAL_GROUPS,
+  canUploadToVertical,
   compareVerticals,
+  isKnownVerticalSlug,
+  normalizeVerticalSlug,
   getVertical,
   isVerticalSlug,
   realVerticals,
@@ -43,5 +48,27 @@ describe("verticals", () => {
     expect(isVerticalSlug("workforce-hr")).toBe(true);
     expect(isVerticalSlug("x")).toBe(false);
     expect(["risk-insurance", "compliance-legal"].sort(compareVerticals)).toEqual(["compliance-legal", "risk-insurance"]);
+  });
+  it("unclassified fallback group", () => {
+    expect(VERTICALS.map((v) => v.slug)).not.toContain(UNCLASSIFIED_SLUG);
+    expect(VERTICAL_GROUPS).toHaveLength(15);
+    expect(VERTICAL_GROUPS.at(-1)?.slug).toBe("unclassified");
+    expect(getVertical("unclassified")?.name).toBe("Unclassified");
+    expect(verticalName("unclassified")).toBe("Unclassified");
+    expect(isVerticalSlug("unclassified")).toBe(false);
+    expect(isKnownVerticalSlug("unclassified")).toBe(true);
+    expect(normalizeVerticalSlug("nope")).toBe("unclassified");
+    expect(normalizeVerticalSlug(null)).toBe("unclassified");
+    expect(normalizeVerticalSlug("workforce-hr")).toBe("workforce-hr");
+    expect(["unclassified", "capital-infrastructure", "zzz"].sort(compareVerticals)).toEqual(["capital-infrastructure", "unclassified", "zzz"]);
+  });
+  it("every one of the 14 verticals accepts uploads, and unclassified never does", () => {
+    // The backend maps all 14 (it once mapped only the 5 the synthetic corpus used, so uploads
+    // into the other 9 returned 422). `unclassified` is a fallback group, not an upload target.
+    expect(VERTICAL_GROUPS.filter((v) => canUploadToVertical(v.slug)).map((v) => v.slug)).toEqual(VERTICALS.map((v) => v.slug));
+    expect(VERTICALS).toHaveLength(14);
+    expect(canUploadToVertical("unclassified")).toBe(false);
+    expect(canUploadToVertical("revenue-pricing")).toBe(true);
+    expect(canUploadToVertical("not-a-vertical")).toBe(false);
   });
 });

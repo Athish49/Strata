@@ -66,12 +66,24 @@ export const STREAM_LABELS: Record<string, string> = {
   idem_rulemakings: "Rulemakings",
 };
 
+/** Run statuses (lib/status.ts, also used by the reader). */
 export type DocStatusKey = "action_needed" | "review" | "cleared" | "not_monitored";
-export const DOC_STATUS_LABELS: Record<DocStatusKey, string> = {
+/** Lifecycle statuses for a document without a usable current version (documents board only). */
+export type LifecycleStatusKey = "processing" | "in_review" | "ingest_failed" | "retired";
+/**
+ * Every documents-board status. Keep in step with board/logic.ts STATUS_ORDER and the
+ * DocStatusPill TOKEN map, or the pill renders blank.
+ */
+export type BoardStatusKey = DocStatusKey | LifecycleStatusKey;
+export const DOC_STATUS_LABELS: Record<BoardStatusKey, string> = {
   action_needed: "Action needed",
   review: "Review",
   cleared: "Cleared",
   not_monitored: "Not monitored",
+  processing: "Processing",
+  in_review: "In review",
+  ingest_failed: "Ingest failed",
+  retired: "Retired",
 };
 
 export function verdictLabel(v: VerdictOrCleared): string {
@@ -122,7 +134,7 @@ export function streamLabel(stream: string): string {
   return s.charAt(0).toUpperCase() + s.slice(1);
 }
 
-export function docStatusLabel(key: DocStatusKey): string {
+export function docStatusLabel(key: BoardStatusKey): string {
   return DOC_STATUS_LABELS[key];
 }
 

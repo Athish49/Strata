@@ -16,7 +16,7 @@ from pathlib import Path
 from sqlalchemy import text
 
 from app.engine.config import engine_settings
-from app.engine.footprint import rule_key
+from app.engine.footprint import VERSION_SCOPE, rule_key
 from app.engine.llm import LLMBudget, LLMBudgetExceeded, LLMContext, call_cached
 from app.engine.quotes import verify_quote
 from app.engine.schemas import RadarResult
@@ -50,15 +50,20 @@ _DOC_CITATIONS_SQL = text("""
     SELECT DISTINCT c.doc_id, cc.resolution_status, cc.citation_raw, cs.citation AS section_citation
     FROM company.clause_citations cc
     JOIN company.clauses c ON c.clause_pk = cc.clause_pk AND c.company_id = :company_id
-    JOIN company.company_documents d ON d.doc_id = c.doc_id AND d.company_id = :company_id
+    JOIN company.company_documents d ON d.company_id = c.company_id AND d.doc_id = c.doc_id
     LEFT JOIN public.code_sections cs ON cs.id::text = cc.code_section_id::text
     WHERE c.assessable = true AND c.clause_role <> 'boilerplate'
       AND cc.resolution_status IN ('resolved', 'resolved_rule')
+      AND """ + VERSION_SCOPE + """
 """)
 
+# document_scope is version-keyed too (task 7.1): only the current version's rule scope.
 _DOC_SCOPE_SQL = text("""
-    SELECT DISTINCT doc_id, scope_key FROM company.document_scope
-    WHERE company_id = :company_id AND scope_level = 'rule'
+    SELECT DISTINCT s.doc_id, s.scope_key
+    FROM company.document_scope s
+    JOIN company.company_documents d ON d.company_id = s.company_id AND d.doc_id = s.doc_id
+    WHERE s.company_id = :company_id AND s.scope_level = 'rule'
+      AND s.version_id = d.current_version_id
 """)
 
 _INSERT_SQL = text("""

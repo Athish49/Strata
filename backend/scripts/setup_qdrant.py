@@ -6,9 +6,6 @@ import sys
 import os
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from dotenv import load_dotenv
-load_dotenv()
-
 from qdrant_client import QdrantClient
 from qdrant_client.models import (
     VectorParams, Distance,
@@ -69,4 +66,10 @@ def setup():
     print("\nSetup complete.")
 
 if __name__ == "__main__":
+    # Loaded here, not at import time, so importing this module's pure
+    # functions can never leak production secrets into the process env.
+    from dotenv import load_dotenv
+
+    load_dotenv()
+
     setup()

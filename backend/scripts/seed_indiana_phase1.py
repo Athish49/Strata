@@ -7,10 +7,6 @@ import os
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from dotenv import load_dotenv
-
-load_dotenv()
-
 from app.db import AsyncSessionLocal
 from app.regulatory.ingestion.pipeline import run_ingestion
 from app.regulatory.adapters.iac import IACAdapter
@@ -36,4 +32,10 @@ async def seed_iac_phase1():
 
 
 if __name__ == "__main__":
+    # Loaded here, not at import time, so importing this module's pure
+    # functions can never leak production secrets into the process env.
+    from dotenv import load_dotenv
+
+    load_dotenv()
+
     asyncio.run(seed_iac_phase1())

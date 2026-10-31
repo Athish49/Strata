@@ -28,10 +28,20 @@ _CLAUSE_RE = re.compile(
     r":([^\s|>]+)\s*-->"
 )
 
+# Any document id, for the EXPLICIT forms only. System-assigned ids such as
+# DOC-000123 do not fit the legacy 3-4 segment grammar above, which would make
+# every uploaded document anchor zero clauses. The explicit `clause:` / `table:`
+# keyword is what makes this safe: the bare legacy form `<!-- X:Y -->` stays
+# strict, so an ordinary HTML comment like `<!-- note:todo -->` is never read as
+# a clause.
+_DOC_ID_ANY = r"[A-Za-z0-9][A-Za-z0-9_.\-]*"
+_CLAUSE_EXPLICIT_RE = re.compile(
+    r"<!--\s*clause:\s*(" + _DOC_ID_ANY + r"):([^\s|>]+)\s*-->"
+)
+
 # <!-- table: DOC_ID:TID -->
 _TABLE_RE = re.compile(
-    r"<!--\s*table:\s*([A-Z]+-[A-Z]+-[A-Z]+-\d+|[A-Z]+-[A-Z]+-\d+)"
-    r":([^\s|>]+)\s*-->"
+    r"<!--\s*table:\s*(" + _DOC_ID_ANY + r"):([^\s|>]+)\s*-->"
 )
 
 # Heading: one or more '#' followed by space and text
@@ -216,7 +226,7 @@ def segment(
     version_id:
         UUID of the document_versions row.
     doc_id:
-        The document identifier (e.g. ``RPL-CS-PRO-004``).
+        The document identifier (e.g. ``DOC-000123``).
     body_text:
         The Markdown body *after* front-matter has been stripped.
     body_offset:
@@ -529,7 +539,7 @@ def segment(
             continue
 
         # --- clause marker ---
-        clause_m = _CLAUSE_RE.search(stripped)
+        clause_m = _CLAUSE_EXPLICIT_RE.search(stripped) or _CLAUSE_RE.search(stripped)
         if clause_m:
             # End current clause at the start of this marker line
             _end_current_clause(line_char_start)

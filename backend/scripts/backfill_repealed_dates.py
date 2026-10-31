@@ -16,10 +16,6 @@ import asyncio
 import re
 import sys
 from datetime import datetime
-from dotenv import load_dotenv
-
-load_dotenv()
-
 # Matches the leading repeal note, capturing everything inside the parens.
 # Handles optional "Sec. N." prefix.
 NOTE = re.compile(r"^\s*(?:Sec\.\s*[\d.]+\s*)?\(Repealed\b([^)]*)\)", re.IGNORECASE)
@@ -132,5 +128,11 @@ async def main(commit: bool):
 
 
 if __name__ == "__main__":
+    # Loaded here, not at import time, so importing this module's pure
+    # functions can never leak production secrets into the process env.
+    from dotenv import load_dotenv
+
+    load_dotenv()
+
     commit = "--commit" in sys.argv
     asyncio.run(main(commit))

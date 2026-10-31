@@ -26,10 +26,6 @@ from collections import Counter
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from dotenv import load_dotenv
-
-load_dotenv(os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), ".env"))
-
 import psycopg2
 
 
@@ -97,6 +93,14 @@ def main(apply: bool = False) -> None:
 
 
 if __name__ == "__main__":
+    # Loaded here, not at import time: importing this module (e.g. for
+    # is_whole_token/is_citation_fragment in tests/engine/test_citation_fragments.py)
+    # must never pull production secrets (DATABASE_URL, QDRANT_URL, ...) into the
+    # process environment as a side effect.
+    from dotenv import load_dotenv
+
+    load_dotenv(os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), ".env"))
+
     parser = argparse.ArgumentParser(description="Recompute clause_parameters.is_citation_fragment.")
     parser.add_argument("--apply", action="store_true", help="Write changes (default is dry run).")
     args = parser.parse_args()

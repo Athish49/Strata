@@ -1,9 +1,11 @@
-"""Task 2.2.1 — Front-matter parser for company corpus documents.
+"""Task 2.2.1 — Front-matter parser for company documents.
 
 Supports three styles:
-  1. YAML front matter (8 docs) — delimited by leading and closing '---' lines
-  2. HTML comment header (1 doc, RPL-TAR-GRR-012) — consecutive HTML comment lines
-  3. Marker-based (3 docs) — '<!-- DOC_ID:section -->' marker with bold key-values or a table
+  1. YAML front matter — delimited by leading and closing '---' lines
+  2. HTML comment header — consecutive HTML comment lines at the top of the
+     file, the first shaped ``<!-- <DOC_ID> | ... -->``
+  3. Marker-based — a ``<!-- <doc_id>:meta|front-matter|1.0 -->`` marker for the
+     document being parsed, followed by bold key-values or a Field/Value table
 """
 from __future__ import annotations
 
@@ -138,6 +140,10 @@ _RE_HTML_COMMENT_LINE = re.compile(r'^<!--.*?-->\s*\n?', re.DOTALL)
 _RE_COMMENT_BLOCK_LINE = re.compile(r'^<!--[^\n]*-->\s*$', re.MULTILINE)
 
 
+# First line of an HTML-comment header: "<!-- <DOC_ID> | ..." (any id token).
+_RE_HTML_HEADER_DOCID = re.compile(r'<!--\s*([^\s|:<>]+)\s*\|')
+
+
 def _parse_html_comment_fm(md_text: str) -> tuple[FrontMatter, str, int] | None:
     """Parse HTML-comment-only header at start of file (tariff style).
 
@@ -160,8 +166,11 @@ def _parse_html_comment_fm(md_text: str) -> tuple[FrontMatter, str, int] | None:
     if not comment_lines:
         return None
 
-    # Must have at least the header line starting with <!-- RPL-
-    if not any(re.match(r'<!-- RPL-', l) for l in comment_lines):
+    # The header's first line must be "<!-- <DOC_ID> | ... -->".  Requiring the
+    # pipe keeps a leading clause anchor ("<!-- DOC:1.0 -->") or an ordinary
+    # comment from being swallowed as front matter.
+    m_docid = _RE_HTML_HEADER_DOCID.match(comment_lines[0])
+    if m_docid is None:
         return None
 
     # Skip blank lines after comments to find body start
@@ -201,11 +210,8 @@ def _parse_html_comment_fm(md_text: str) -> tuple[FrontMatter, str, int] | None:
     if m_eff:
         effective_date = m_eff.group(1)
 
-    # doc_id from first comment line: <!-- RPL-TAR-GRR-012 | ...
-    doc_id = None
-    m_docid = re.match(r'<!-- (RPL-[A-Z0-9-]+)', comment_lines[0])
-    if m_docid:
-        doc_id = m_docid.group(1)
+    # doc_id from first comment line: <!-- DOC-ID | ...
+    doc_id = m_docid.group(1)
 
     fm = FrontMatter(
         doc_id=doc_id,
@@ -232,24 +238,16 @@ def _parse_html_comment_fm(md_text: str) -> tuple[FrontMatter, str, int] | None:
 # Style 3 — Marker-based (<!-- DOC_ID:section --> with bold key-values or table)
 # ---------------------------------------------------------------------------
 
-# Matches <!-- RPL-XXXX-YYYY-ZZZ:something --> style markers
-_RE_FM_MARKER = re.compile(
-    r'<!--\s*(RPL-[A-Z0-9-]+):(meta|front-matter|\d+\.\d+|\d+\.0|1\.0)\s*-->'
-)
-
-
 def _parse_marker_fm(md_text: str, doc_id: str) -> tuple[FrontMatter, str, int] | None:
-    """Parse marker-based front matter (CMP-REG-001, LEG-RRS-001, REG-CAL-2025 styles).
+    """Parse marker-based front matter (bold key-value, pipe-separated or table styles).
 
     Returns (FrontMatter, body_text, body_char_offset) or None if not this style.
     """
-    m = _RE_FM_MARKER.search(md_text)
-    if m is None:
-        # Also try explicit doc_id match for any section marker
-        m = re.search(
-            r'<!--\s*' + re.escape(doc_id) + r':(meta|front-matter|1\.0)\s*-->',
-            md_text,
-        )
+    # The marker must name the document being parsed; any id shape is accepted.
+    m = re.search(
+        r'<!--\s*' + re.escape(doc_id) + r':(meta|front-matter|1\.0)\s*-->',
+        md_text,
+    )
     if m is None:
         return None
 

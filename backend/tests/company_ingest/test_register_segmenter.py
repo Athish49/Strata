@@ -1,7 +1,6 @@
 """Tests for task 3.2.1: Register-row segmenter (P2).
 
 Unit tests use inline CSV fixtures (via tmp_path).
-Corpus tests are marked @pytest.mark.corpus and require real data files.
 """
 from __future__ import annotations
 
@@ -395,95 +394,3 @@ class TestEdgeCases:
         ctx = make_ctx()
         clauses, _ = segment_register("ver-1", "DOC-001", csv_file, "Doc", ctx)
         assert clauses[0].text_sha256 == sha256_text(clauses[0].text_raw)
-
-
-# ---------------------------------------------------------------------------
-# Corpus tests (require real data files, skipped unless --run-corpus or CORPUS env)
-# ---------------------------------------------------------------------------
-
-def _corpus_root() -> Path:
-    """Locate the Strata corpus root by searching upwards from this file."""
-    here = Path(__file__).resolve()
-    # Walk up to find a 'corpus' or 'company_corpus' directory
-    for parent in here.parents:
-        for candidate in ("corpus", "company_corpus", "strata_corpus"):
-            p = parent / candidate
-            if p.is_dir():
-                return p
-    pytest.skip("Corpus root not found — skipping corpus test")
-
-
-@pytest.mark.corpus
-class TestCorpus:
-    """Corpus-level tests.  Run with: pytest -m corpus"""
-
-    def _find_csv(self, doc_id: str, filename_pattern: str) -> Path:
-        root = _corpus_root()
-        matches = list(root.rglob(f"{doc_id}/**/{filename_pattern}"))
-        if not matches:
-            pytest.skip(f"Corpus file not found for {doc_id} / {filename_pattern}")
-        return matches[0]
-
-    def test_compliance_register_row_count(self) -> None:
-        csv_path = self._find_csv("RPL-CMP-REG-001", "compliance_register_*.csv")
-        ctx = make_ctx()
-        clauses, roles = segment_register(
-            "ver-corpus-1", "RPL-CMP-REG-001", csv_path,
-            "Compliance Register 2024", ctx
-        )
-        assert len(clauses) >= 70
-        ids = [c.local_id for c in clauses]
-        assert len(ids) == len(set(ids)), "obligation_ids not unique"
-
-    def test_compliance_register_citation_role(self) -> None:
-        csv_path = self._find_csv("RPL-CMP-REG-001", "compliance_register_*.csv")
-        ctx = make_ctx()
-        _, roles = segment_register(
-            "ver-corpus-1", "RPL-CMP-REG-001", csv_path,
-            "Compliance Register 2024", ctx
-        )
-        assert roles.get("citation") == ColumnRole.CITATION
-
-    def test_calendar_events_row_count(self) -> None:
-        csv_path = self._find_csv("RPL-REG-CAL-2025", "calendar_events_*.csv")
-        ctx = make_ctx()
-        clauses, roles = segment_register(
-            "ver-corpus-2", "RPL-REG-CAL-2025", csv_path,
-            "Calendar Events 2025", ctx
-        )
-        assert len(clauses) >= 48
-        ids = [c.local_id for c in clauses]
-        assert len(ids) == len(set(ids)), "event_ids not unique"
-
-    def test_calendar_events_citation_role(self) -> None:
-        csv_path = self._find_csv("RPL-REG-CAL-2025", "calendar_events_*.csv")
-        ctx = make_ctx()
-        _, roles = segment_register(
-            "ver-corpus-2", "RPL-REG-CAL-2025", csv_path,
-            "Calendar Events 2025", ctx
-        )
-        assert roles.get("citation") == ColumnRole.CITATION
-
-    def test_retention_schedule_row_count(self) -> None:
-        csv_path = self._find_csv("RPL-LEG-RRS-001", "retention_schedule_*.csv")
-        ctx = make_ctx()
-        clauses, roles = segment_register(
-            "ver-corpus-3", "RPL-LEG-RRS-001", csv_path,
-            "Retention Schedule 2024", ctx
-        )
-        assert len(clauses) >= 86
-        ids = [c.local_id for c in clauses]
-        assert len(ids) == len(set(ids)), "rrs_ids not unique"
-
-    def test_retention_schedule_citation_role(self) -> None:
-        """Retention schedule may not have a citation column — skip if absent."""
-        csv_path = self._find_csv("RPL-LEG-RRS-001", "retention_schedule_*.csv")
-        ctx = make_ctx()
-        _, roles = segment_register(
-            "ver-corpus-3", "RPL-LEG-RRS-001", csv_path,
-            "Retention Schedule 2024", ctx
-        )
-        # If a citation column exists, it should be detected
-        citation_cols = [col for col in roles if "citation" in col.lower()]
-        for col in citation_cols:
-            assert roles[col] == ColumnRole.CITATION

@@ -33,7 +33,45 @@ export function isVerticalSlug(slug: string): boolean {
   return VERTICAL_SLUGS.includes(slug);
 }
 
+/**
+ * Fallback group for documents whose vertical is not one of the 14: the backend sends the
+ * literal slug "unclassified" for a NULL or unmapped vertical. Deliberately NOT in VERTICALS
+ * (it is not a navigable vertical page, and the upload endpoint rejects it with 422).
+ */
+export const UNCLASSIFIED_SLUG = "unclassified";
+export const UNCLASSIFIED_VERTICAL: Vertical = {
+  order: VERTICALS.length + 1,
+  slug: UNCLASSIFIED_SLUG,
+  name: "Unclassified",
+  backendVertical: null,
+  description: "Documents whose vertical is missing or not one of the fourteen recognised verticals.",
+};
+
+/** The 14 verticals followed by the unclassified fallback: use this to group documents so none are hidden. */
+export const VERTICAL_GROUPS: readonly Vertical[] = [...VERTICALS, UNCLASSIFIED_VERTICAL];
+
+/** True for the 14 slugs and "unclassified" (every value a document's `vertical` can hold after normalising). */
+export function isKnownVerticalSlug(slug: string): boolean {
+  return slug === UNCLASSIFIED_SLUG || isVerticalSlug(slug);
+}
+
+/** A document's vertical slug, or "unclassified" when it is not one of the 14. */
+export function normalizeVerticalSlug(slug: string | null | undefined): string {
+  return slug && isVerticalSlug(slug) ? slug : UNCLASSIFIED_SLUG;
+}
+
+/**
+ * True when POST /company/documents accepts this vertical: any of the 14, never `unclassified`.
+ * (This used to require a `backendVertical`, i.e. only the 5 verticals the synthetic corpus used;
+ * the backend now maps all 14, so a customer can upload into any of them.)
+ */
+export function canUploadToVertical(slug: string): boolean {
+  return isVerticalSlug(slug);
+}
+
+/** Resolves the 14 slugs and "unclassified". */
 export function getVertical(slug: string): Vertical | undefined {
+  if (slug === UNCLASSIFIED_SLUG) return UNCLASSIFIED_VERTICAL;
   return VERTICALS.find((v) => v.slug === slug);
 }
 
@@ -53,7 +91,7 @@ export function realVerticals(): Vertical[] {
   return VERTICALS.filter((v) => v.backendVertical !== null);
 }
 
-/** Sort comparator by fixed order; unknown slugs sort last. */
+/** Sort comparator by fixed order; "unclassified" sorts after the 14, unknown slugs last. */
 export function compareVerticals(a: string, b: string): number {
   return (getVertical(a)?.order ?? 99) - (getVertical(b)?.order ?? 99);
 }

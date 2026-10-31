@@ -2,8 +2,9 @@
 // TanStack Query hooks over StrataApi. Every engine query key includes run_id.
 import { useEffect, useRef } from "react";
 import { useMutation, useQuery, useQueryClient, type QueryClient } from "@tanstack/react-query";
-import { api } from "./client";
-import type { Finding, Run } from "./schemas";
+import { api, type UploadDocumentMeta, type UploadResult, type UploadVersionMeta } from "./client";
+import type { ApprovalRequest, DocumentRole, Finding, IngestJob, IngestJobState, Run } from "./schemas";
+import { isTerminalJobState } from "./schemas";
 
 type Nullable<T> = T | null | undefined;
 
@@ -28,6 +29,12 @@ export const qk = {
   clauses: (docId: string) => ["company", "clauses", docId] as const,
   people: () => ["company", "people"] as const,
   profile: () => ["company", "profile"] as const,
+  orgPeople: (includeInactive: boolean) => ["company", "org-people", includeInactive] as const,
+  /** Company document version history (distinct from the KB `versions` key). */
+  docVersions: (docId: string) => ["company", "doc-versions", docId] as const,
+  ingestJob: (jobId: string) => ["company", "ingest-job", jobId] as const,
+  approvalRequest: (requestId: string) => ["company", "approval-request", requestId] as const,
+  documentRoles: (docId: string) => ["company", "roles", docId] as const,
   agencies: () => ["kb", "agencies"] as const,
   agency: (slug: string) => ["kb", "agency", slug] as const,
   sections: (q: object) => ["kb", "sections", q] as const,
@@ -165,6 +172,76 @@ export function useProfile() {
   return useQuery({ queryKey: qk.profile(), queryFn: () => api.company.getProfile() });
 }
 
+export function useOrgPeople(q?: { include_inactive?: boolean }) {
+  const inc = q?.include_inactive ?? true;
+  return useQuery({ queryKey: qk.orgPeople(inc), queryFn: () => api.company.listOrgPeople({ include_inactive: inc }) });
+}
+
+/** Version history of one document, newest first (null when the document is unknown). */
+export function useDocumentVersions(docId: Nullable<string>) {
+  return useQuery({ queryKey: qk.docVersions(docId ?? ""), queryFn: () => api.company.listVersions(docId as string), enabled: !!docId });
+}
+
+export function useApprovalRequest(requestId: Nullable<string>) {
+  return useQuery({
+    queryKey: qk.approvalRequest(requestId ?? ""),
+    queryFn: () => api.company.getApprovalRequest(requestId as string),
+    enabled: !!requestId,
+  });
+}
+
+export function useDocumentRoles(docId: Nullable<string>) {
+  return useQuery({ queryKey: qk.documentRoles(docId ?? ""), queryFn: () => api.company.listDocumentRoles(docId as string), enabled: !!docId });
+}
+
+export const INGEST_POLL_MS = 2000;
+
+/** Poll interval for an ingest job: every 2 s while queued/running (or not yet loaded), off once terminal or 404. */
+export function ingestJobRefetchInterval(job: IngestJob | null | undefined): number | false {
+  if (job === null) return false; // 404: unknown job, nothing to wait for
+  if (job === undefined) return INGEST_POLL_MS;
+  return isTerminalJobState(job.job.state) ? false : INGEST_POLL_MS;
+}
+
+/** Invalidate what a finished ingest job changes: the document list/record and its versions (+ clauses on success). */
+export function invalidateAfterIngest(qc: QueryClient, docId: string, state: IngestJobState) {
+  const keys: (readonly unknown[])[] = [qk.documents(), qk.document(docId), qk.docVersions(docId)];
+  if (state === "succeeded") keys.push(qk.clauses(docId));
+  return Promise.all(keys.map((queryKey) => qc.invalidateQueries({ queryKey })));
+}
+
+/**
+ * Polls GET /company/ingest-jobs/{id} every 2 s until the job is `succeeded` or `failed`, then stops.
+ * The first time a terminal state is seen for a job id, the documents and versions queries are invalidated
+ * (covers queued -> succeeded without an observed `running`, and a job already finished on first load).
+ */
+export function useIngestJob(jobId: Nullable<string>) {
+  const qc = useQueryClient();
+  const query = useQuery({
+    queryKey: qk.ingestJob(jobId ?? ""),
+    queryFn: () => api.company.getIngestJob(jobId as string),
+    enabled: !!jobId,
+    refetchInterval: (q) => ingestJobRefetchInterval(q.state.data),
+  });
+  const state = query.data?.job.state;
+  const docId = query.data?.job.doc_id;
+  const handled = useRef<string | null>(null);
+  useEffect(() => {
+    if (!jobId || !docId || !state) return;
+    // A retry reuses the SAME job id (failed -> queued -> running -> succeeded). Leaving a
+    // terminal state clears the marker so the next terminal state refreshes the lists again;
+    // otherwise the documents/versions would stay stale after a successful retry.
+    if (!isTerminalJobState(state)) {
+      handled.current = null;
+      return;
+    }
+    if (handled.current === jobId) return;
+    handled.current = jobId;
+    void invalidateAfterIngest(qc, docId, state);
+  }, [jobId, docId, state, qc]);
+  return query;
+}
+
 // ---------- KB ----------
 
 type SectionQuery = Parameters<typeof api.kb.listSections>[0];
@@ -249,6 +326,103 @@ export function useStartWhatIf() {
       qc.setQueryData(qk.run(run.run_id), run);
       void qc.invalidateQueries({ queryKey: qk.runs() });
       void qc.invalidateQueries({ queryKey: qk.scenarios() });
+    },
+  });
+}
+
+// ---------- company writes ----------
+
+/** Seed a `queued` job so the poller starts immediately after an upload or retry. */
+function seedQueuedJob(qc: QueryClient, job_id: string, doc_id: string, version_id: string) {
+  const seeded: IngestJob = {
+    job: { job_id, doc_id, version_id, state: "queued", error: null, created_at: null, started_at: null, finished_at: null },
+    stats: {},
+  };
+  qc.setQueryData(qk.ingestJob(job_id), seeded);
+}
+
+/** Resolves to an UploadResult (branch on `kind`); HTTP errors reject with ApiError, no actor with MissingActorError. */
+export function useUploadDocument() {
+  const qc = useQueryClient();
+  return useMutation({
+    mutationFn: (v: { vertical: string; file: Blob; meta?: UploadDocumentMeta }) => api.company.uploadDocument(v.vertical, v.file, v.meta),
+    onSuccess: (r: UploadResult) => {
+      if (r.kind !== "created") return;
+      seedQueuedJob(qc, r.job_id, r.doc_id, r.version_id);
+      void qc.invalidateQueries({ queryKey: qk.documents() });
+    },
+  });
+}
+
+export function useUploadVersion() {
+  const qc = useQueryClient();
+  return useMutation({
+    mutationFn: (v: { docId: string; file: Blob; meta?: UploadVersionMeta }) => api.company.uploadVersion(v.docId, v.file, v.meta),
+    onSuccess: (r: UploadResult, v) => {
+      if (r.kind !== "created") return;
+      seedQueuedJob(qc, r.job_id, r.doc_id, r.version_id);
+      void qc.invalidateQueries({ queryKey: qk.docVersions(v.docId) });
+      void qc.invalidateQueries({ queryKey: qk.document(v.docId) });
+      void qc.invalidateQueries({ queryKey: qk.documents() });
+    },
+  });
+}
+
+export function useRetryIngestJob() {
+  const qc = useQueryClient();
+  return useMutation({
+    mutationFn: (jobId: string) => api.company.retryIngestJob(jobId),
+    onSuccess: (r) => {
+      if (r.doc_id && r.version_id) {
+        seedQueuedJob(qc, r.job_id, r.doc_id, r.version_id);
+        void qc.invalidateQueries({ queryKey: qk.docVersions(r.doc_id) });
+      } else {
+        void qc.invalidateQueries({ queryKey: qk.ingestJob(r.job_id) });
+      }
+      void qc.invalidateQueries({ queryKey: qk.documents() });
+    },
+  });
+}
+
+function afterApprovalChange(qc: QueryClient, req: ApprovalRequest) {
+  qc.setQueryData(qk.approvalRequest(req.request_id), req);
+  if (!req.doc_id) return;
+  // A final approval promotes the version (current version, clauses and document status all change).
+  void qc.invalidateQueries({ queryKey: qk.docVersions(req.doc_id) });
+  void qc.invalidateQueries({ queryKey: qk.document(req.doc_id) });
+  void qc.invalidateQueries({ queryKey: qk.documents() });
+  if (req.state === "approved") void qc.invalidateQueries({ queryKey: qk.clauses(req.doc_id) });
+}
+
+export function useDecideApprovalStep() {
+  const qc = useQueryClient();
+  return useMutation({
+    mutationFn: (v: { requestId: string; stepNo: number; decision: "approved" | "rejected"; note?: string; actingPersonId?: string }) =>
+      api.company.decideApprovalStep(v.requestId, v.stepNo, v.decision, { note: v.note, acting_person_id: v.actingPersonId }),
+    onSuccess: (r) => afterApprovalChange(qc, r),
+  });
+}
+
+export function useCancelApprovalRequest() {
+  const qc = useQueryClient();
+  return useMutation({
+    mutationFn: (v: { requestId: string; actingPersonId?: string }) =>
+      api.company.cancelApprovalRequest(v.requestId, { acting_person_id: v.actingPersonId }),
+    onSuccess: (r) => afterApprovalChange(qc, r),
+  });
+}
+
+export function useAssignDocumentRole() {
+  const qc = useQueryClient();
+  return useMutation({
+    mutationFn: (v: { docId: string; personId: string; role: DocumentRole; actingPersonId?: string }) =>
+      api.company.assignDocumentRole(v.docId, v.personId, v.role, { acting_person_id: v.actingPersonId }),
+    onSuccess: (_r, v) => {
+      void qc.invalidateQueries({ queryKey: qk.documentRoles(v.docId) });
+      void qc.invalidateQueries({ queryKey: qk.document(v.docId) });
+      void qc.invalidateQueries({ queryKey: qk.documents() });
+      // Steps with no assignee are signed by role holders, so the version's approval summary may change.
+      void qc.invalidateQueries({ queryKey: qk.docVersions(v.docId) });
     },
   });
 }
