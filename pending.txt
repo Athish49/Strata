@@ -81,17 +81,40 @@ was already done. Deploy 2 (the actual column drop) is now also done:
 Action needed from you: none. This item is closed.
 
 ====================================================================
-5. [DEFERRED BY DEFAULT] Frontend vertical taxonomy dynamism (task 3.7)
+5. [DONE 2026-11-01, migration pending your manual step] Frontend vertical
+   taxonomy dynamism (task 3.7)
 ====================================================================
-Status: Not started, per DG-3's default (you didn't opt in). The backend now
-reads company.verticals dynamically (task 3.6, done); the frontend still uses
-its static VERTICALS array in frontend/lib/verticals.ts.
+Status: COMPLETE in code and tested end-to-end against the "test" branch:
+  - New migration backend/migrations/versions/b3f8d2a6c914_verticals_sort_
+    order.py adds company.verticals.sort_order, backfilled to the same 1-14
+    order the frontend's old static array used. Tested against "test" first
+    (verified: 14 rows, correct order, alembic_version advanced cleanly).
+  - New GET /company/verticals endpoint (ordered by sort_order).
+  - frontend/lib/verticals.ts no longer hardcodes the 14 verticals -- every
+    function now takes the fetched list as an explicit argument. Removed
+    backendVertical/realVerticals()/verticalFromBackend() (zero real
+    consumers left, confirmed by grep -- a leftover from the synthetic-demo
+    era). All ~12 real consumers updated (document board, all 14 vertical
+    pages, impact matrix, company profile, section cross-references, upload
+    dialog's vertical picker).
+  - The [vertical]/page.tsx route guard moved client-side (notFound() only
+    works in Server Components, and a server-side fetch there risked a false
+    404 on a Render cold start) -- VerticalView now validates once
+    useVerticals() resolves and renders its own not-found state.
+  - Playwright-verified against "test": all 14 vertical pages, the
+    bogus-slug not-found state, documents board, impact matrix, company
+    profile, and the upload dialog's vertical dropdown (all 14 options) --
+    all correct, zero console errors.
+  - Backend: 1433 passed. Frontend: 435/435 passed, typecheck clean.
 
-Action needed from you: only if you change your mind. This is a real body of
-work (~10 files, a new GET /company/verticals endpoint, a new sort_order
-migration, making a Next.js route guard async, rewriting
-frontend/tests/unit/verticals.test.ts) — not a quick follow-up. Say so
-explicitly if you want it scoped as its own task.
+Action needed from you: apply the migration to PRODUCTION (same pattern as
+item 4 -- I tested it fully on the disposable branch but can't run it
+against production myself). From backend/, with your real .env loaded:
+    python -m alembic upgrade head
+This must land (and the backend be deployed with this session's code)
+BEFORE the frontend is deployed, since the frontend now depends on
+GET /company/verticals existing. Until then, do not deploy only the
+frontend half of this change.
 
 ====================================================================
 6. [DATE-GATED] Drop the 2 migration backup tables (task 5.3, DG-5)
