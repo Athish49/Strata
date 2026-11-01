@@ -233,6 +233,17 @@ async def list_clauses(doc_id: str, db: AsyncSession = Depends(get_db)):
     ]
 
 
+@router.get("/verticals")
+async def list_verticals(db: AsyncSession = Depends(get_db)):
+    rows = (await db.execute(
+        text("SELECT name, slug, description, sort_order FROM company.verticals ORDER BY sort_order")
+    )).mappings().all()
+    return [
+        {"name": r["name"], "slug": r["slug"], "description": r["description"] or "", "sort_order": r["sort_order"]}
+        for r in rows
+    ]
+
+
 @router.get("/people")
 async def list_people(db: AsyncSession = Depends(get_db)):
     res = await db.execute(

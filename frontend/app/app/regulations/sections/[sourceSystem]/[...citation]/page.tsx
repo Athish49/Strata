@@ -18,7 +18,7 @@ import { LineDiffView } from "@/components/kb/LineDiffView";
 import { SectionBody } from "@/components/kb/SectionBody";
 import { agencyHref, decodeCatchAll, safeDecode, sectionHref } from "@/components/kb/links";
 import { amendmentTarget, citedByDocuments, crossRefs } from "@/components/kb/section-utils";
-import { useChanges, useCompare, useDocuments, useSection, useVersionHistory } from "@/lib/api/queries";
+import { useChanges, useCompare, useDocuments, useSection, useVersionHistory, useVerticals } from "@/lib/api/queries";
 import { formatDate } from "@/lib/format";
 import { useRunContext } from "@/lib/run-context";
 import { cn } from "@/lib/utils";
@@ -58,11 +58,15 @@ export default function Page() {
   const hasCompare = (versions.data?.length ?? 0) >= 2;
   const compare = useCompare(view === "compare" && hasCompare ? sourceSystem : null, citation);
   const docs = useDocuments();
+  const verticals = useVerticals();
   const { runId } = useRunContext();
   const changes = useChanges(runId);
   const s = section.data;
   const change = (changes.data ?? []).find((c) => c.citation === citation && c.source_system === sourceSystem);
-  const citedBy = React.useMemo(() => citedByDocuments(docs.data ?? [], citation), [docs.data, citation]);
+  const citedBy = React.useMemo(
+    () => citedByDocuments(docs.data ?? [], citation, verticals.data ?? []),
+    [docs.data, citation, verticals.data],
+  );
   useRecordRecent(s ? { href: sectionHref(s.source_system, s.citation), label: s.citation } : null);
 
   const agencyCrumb = s?.owning_agency ? { label: s.owning_agency.toUpperCase(), href: agencyHref(s.owning_agency) } : { label: "Agency" };

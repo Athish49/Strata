@@ -1,6 +1,6 @@
 // Pure helpers for the upload dialogs: client-side file checks, the CSV header reader for the
 // register id-column picker, and the register_spec builder (mirrors backend/app/company_ingest/register_spec.py).
-import { canUploadToVertical, UNCLASSIFIED_SLUG, VERTICALS, type Vertical } from "@/lib/verticals";
+import { canUploadToVertical, UNCLASSIFIED_SLUG, type Vertical } from "@/lib/verticals";
 
 /** Server cap (413 above this). Enforced client-side too so nothing is sent. */
 export const MAX_UPLOAD_BYTES = 25 * 1024 * 1024;
@@ -126,14 +126,14 @@ export function buildRegisterSpec(registerType: RegisterType | "", idColumn: str
   return { register_type: registerType, id_column: idColumn };
 }
 
-/** True when the dialog may target this vertical: one of the 14 with a backend mapping, never "unclassified". */
-export function isUploadTarget(slug: string | null | undefined): slug is string {
-  return !!slug && slug !== UNCLASSIFIED_SLUG && canUploadToVertical(slug);
+/** True when the dialog may target this vertical: one of the 14, never "unclassified". */
+export function isUploadTarget(slug: string | null | undefined, verticals: readonly Vertical[]): slug is string {
+  return !!slug && slug !== UNCLASSIFIED_SLUG && canUploadToVertical(verticals, slug);
 }
 
 /** Verticals offered when the entry point has none (the Documents board header). */
-export function uploadableVerticals(): Vertical[] {
-  return VERTICALS.filter((v) => isUploadTarget(v.slug));
+export function uploadableVerticals(verticals: readonly Vertical[]): Vertical[] {
+  return verticals.filter((v) => isUploadTarget(v.slug, verticals));
 }
 
 /** "This document is already in the system as 'X'." -> "X" (null when the message has another shape). */

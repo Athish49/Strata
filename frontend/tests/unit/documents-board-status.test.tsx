@@ -21,7 +21,7 @@ import { documentMetaSchema } from "@/lib/api/schemas/company";
 import { normalizeDocument } from "@/lib/api/http/company";
 import { DOC_STATUS_LABELS, type BoardStatusKey } from "@/lib/labels";
 import { documentStatus } from "@/lib/status";
-import { VERTICALS } from "@/lib/verticals";
+import { MOCK_VERTICALS } from "@/tests/support/mock-api/company";
 import { resetActorStoreForTests, setActingPersonId } from "@/lib/actor";
 import { resetCompanyMock } from "@/tests/support/mock-api/company";
 import { mockApi } from "@/tests/support/mock-api";
@@ -218,20 +218,20 @@ describe("ordering, grouping and filtering", () => {
     expect(pendingRows.find((r) => r.meta.doc_id === "P")?.pending).toBe(false);
     expect(pendingRows.find((r) => r.meta.doc_id === "M")?.pending).toBe(true);
 
-    const g = groupByVertical(filterRows(rows, {})).find((group) => group.vertical.slug === "compliance-ethics")!;
+    const g = groupByVertical(filterRows(rows, {}), MOCK_VERTICALS).find((group) => group.vertical.slug === "compliance-ethics")!;
     expect(g.cards.map((r) => r.meta.doc_id)).toEqual(["A", "F", "I", "P", "C"]);
     expect(g.samples.map((r) => r.meta.doc_id)).toEqual(["S"]);
   });
 
   it("groups an unclassified document into a trailing Unclassified group", () => {
-    const g = groupByVertical(rows);
+    const g = groupByVertical(rows, MOCK_VERTICALS);
     expect(g).toHaveLength(15);
-    expect(g.slice(0, 14).map((x) => x.vertical.slug)).toEqual(VERTICALS.map((v) => v.slug));
+    expect(g.slice(0, 14).map((x) => x.vertical.slug)).toEqual(MOCK_VERTICALS.map((v) => v.slug));
     expect(g[14].vertical.slug).toBe("unclassified");
     expect(g[14].vertical.name).toBe("Unclassified");
     expect(g[14].rows.map((r) => r.meta.doc_id)).toEqual(["U"]);
     // without unclassified documents the board keeps its 14 groups
-    expect(groupByVertical(rows.filter((r) => r.meta.vertical !== "unclassified"))).toHaveLength(14);
+    expect(groupByVertical(rows.filter((r) => r.meta.vertical !== "unclassified"), MOCK_VERTICALS)).toHaveLength(14);
   });
 
   it("filters to the unclassified group by vertical", () => {
@@ -320,7 +320,7 @@ describe("lifecycle cards and pills", () => {
 
   it("renders an Unclassified section with its documents and an unlinked header", () => {
     const rows = buildRows([fresh({ doc_id: "DOC-000007", title: "Loose Doc", vertical: "unclassified" })], undefined);
-    const group = groupByVertical(rows).find((g) => g.vertical.slug === "unclassified")!;
+    const group = groupByVertical(rows, MOCK_VERTICALS).find((g) => g.vertical.slug === "unclassified")!;
     render(
       <TooltipProvider>
         <VerticalSection group={group} />

@@ -14,7 +14,7 @@ import {
   stageStates,
   type LedgerRow,
 } from "@/components/engine";
-import type { ChangeRecord, DocumentMeta, MatrixCell } from "@/lib/api/schemas";
+import type { ChangeRecord, DocumentMeta, MatrixCell, CompanyVertical } from "@/lib/api/schemas";
 
 afterEach(cleanup);
 
@@ -188,8 +188,12 @@ describe("MatrixGrid", () => {
     { doc_id: "D1", change_id: "c1", worst_verdict: "action_required", n_findings: 2, n_cleared: 1 },
     { doc_id: "D2", change_id: "c1", worst_verdict: "cleared", n_findings: 0, n_cleared: 4 },
   ];
+  const verticals: CompanyVertical[] = [
+    { name: "Corporate Governance & Board", slug: "corporate-governance-board", description: "", sort_order: 1 },
+    { name: "Compliance & Ethics", slug: "compliance-ethics", description: "", sort_order: 2 },
+  ];
   it("renders groups, dots, checks and empty cells with headers and labels", () => {
-    const { container } = wrap(<MatrixGrid docs={docs} changes={changes} cells={cells} />);
+    const { container } = wrap(<MatrixGrid verticals={verticals} docs={docs} changes={changes} cells={cells} />);
     expect(screen.getByText("Compliance & Ethics")).toBeInTheDocument();
     expect(screen.getByRole("columnheader", { name: "170 IAC 4-1-16, Heading c1" })).toBeInTheDocument();
     expect(container.querySelectorAll("[data-cell]")).toHaveLength(2);
@@ -198,13 +202,13 @@ describe("MatrixGrid", () => {
   });
   it("emits onCellClick and opens the popover", () => {
     const onCellClick = vi.fn();
-    wrap(<MatrixGrid docs={docs} changes={changes} cells={cells} onCellClick={onCellClick} renderCellPopover={(i) => <div>detail for {i.doc.doc_id}</div>} />);
+    wrap(<MatrixGrid verticals={verticals} docs={docs} changes={changes} cells={cells} onCellClick={onCellClick} renderCellPopover={(i) => <div>detail for {i.doc.doc_id}</div>} />);
     fireEvent.click(screen.getByRole("button", { name: /Title D1, 170 IAC 4-1-16: 2 findings/ }));
     expect(onCellClick).toHaveBeenCalledWith(expect.objectContaining({ cell: cells[0] }));
     expect(screen.getByText("detail for D1")).toBeInTheDocument();
   });
   it("shows an empty message with no columns", () => {
-    wrap(<MatrixGrid docs={docs} changes={[]} cells={[]} />);
+    wrap(<MatrixGrid verticals={verticals} docs={docs} changes={[]} cells={[]} />);
     expect(screen.getByText("No changed sections to show.")).toBeInTheDocument();
   });
 });

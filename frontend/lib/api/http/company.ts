@@ -17,20 +17,26 @@ import {
   uploadDuplicateSchema,
   uploadRetryAvailableSchema,
   uploadUnchangedSchema,
+  verticalSchema,
   versionListSchema,
 } from "../schemas/company";
 import type { DocumentMeta } from "../schemas/company";
 import { personSchema } from "../schemas/common";
-import { isVerticalSlug, UNCLASSIFIED_SLUG } from "../../verticals";
+import { UNCLASSIFIED_SLUG } from "../../verticals";
 import { requireActingPersonId } from "../actor-store";
 import { getJson, postJson, postRaw, qs, rawError, seg, type RawResponse } from "./shared";
 
-/** Never drop a document: a vertical outside the 14 (incl. the backend's "unclassified") becomes "unclassified". */
+/**
+ * The backend already normalises `vertical` (app/api/company/routes.py's
+ * `vertical_slug()`, against the same `company.verticals` table GET
+ * /company/verticals reads): every document's `vertical` field is already
+ * either one of the 14 real slugs or the literal "unclassified". This only
+ * catches a genuinely empty/missing value defensively -- it does not
+ * re-validate against the 14, which would require fetching the verticals
+ * list just to check a value the server has already checked.
+ */
 export function normalizeDocument(doc: DocumentMeta): DocumentMeta {
-  if (isVerticalSlug(doc.vertical)) return doc;
-  if (doc.vertical !== UNCLASSIFIED_SLUG) {
-    console.warn(`Document ${doc.doc_id}: unknown vertical "${doc.vertical}", shown as unclassified`);
-  }
+  if (doc.vertical && doc.vertical.trim()) return doc;
   return { ...doc, vertical: UNCLASSIFIED_SLUG };
 }
 
@@ -81,6 +87,8 @@ export function uploadResultFrom(r: RawResponse): UploadResult {
 }
 
 export const companyHttp: CompanyApi = {
+  listVerticals: () => getJson("/company/verticals", z.array(verticalSchema)),
+
   async listDocuments() {
     return (await getJson("/company/documents", z.array(documentMetaSchema))).map(normalizeDocument);
   },

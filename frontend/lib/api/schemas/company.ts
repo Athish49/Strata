@@ -1,6 +1,15 @@
 import { z } from "zod";
 import { isoDate, personSchema, unitKindSchema } from "./common";
 
+/** GET /company/verticals row: one of the 14 verticals, DB-ordered by sort_order. */
+export const verticalSchema = z.object({
+  name: z.string(),
+  slug: z.string(),
+  description: z.string(),
+  sort_order: z.number(),
+});
+export type CompanyVertical = z.infer<typeof verticalSchema>;
+
 export const documentMetaSchema = z.object({
   doc_id: z.string(),
   title: z.string(),

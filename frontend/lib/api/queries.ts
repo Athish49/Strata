@@ -24,6 +24,7 @@ export const qk = {
   score: (runId: string) => ["engine", runId, "score"] as const,
   editableSections: () => ["engine", "editable-sections"] as const,
   sectionS1Text: (ss: string, citation: string) => ["engine", "section-s1-text", ss, citation] as const,
+  verticals: () => ["company", "verticals"] as const,
   documents: () => ["company", "documents"] as const,
   document: (docId: string) => ["company", "document", docId] as const,
   clauses: (docId: string) => ["company", "clauses", docId] as const,
@@ -151,6 +152,12 @@ export function useSectionS1Text(sourceSystem: Nullable<string>, citation: Nulla
 }
 
 // ---------- company ----------
+
+/** The 14 verticals, ordered by sort_order. Reference data: rarely changes, so
+ * never refetched automatically once loaded (staleTime: Infinity). */
+export function useVerticals() {
+  return useQuery({ queryKey: qk.verticals(), queryFn: () => api.company.listVerticals(), staleTime: Infinity });
+}
 
 export function useDocuments() {
   return useQuery({ queryKey: qk.documents(), queryFn: () => api.company.listDocuments() });

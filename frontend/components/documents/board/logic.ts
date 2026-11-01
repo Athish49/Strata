@@ -3,7 +3,7 @@ import type { DocRollup, DocumentMeta } from "@/lib/api/schemas";
 import type { BoardStatusKey } from "@/lib/labels";
 import { documentStatus } from "@/lib/status";
 import { DOC_STATUS_LABELS } from "@/lib/labels";
-import { UNCLASSIFIED_SLUG, VERTICAL_GROUPS, type Vertical } from "@/lib/verticals";
+import { UNCLASSIFIED_SLUG, verticalGroups, type Vertical } from "@/lib/verticals";
 import { VERDICT_SEVERITY_ORDER } from "@/lib/verdict-tokens";
 
 /** A board status: the run status from lib/status.ts or a lifecycle status. */
@@ -171,8 +171,8 @@ export function needsAction(r: DocRow): boolean {
  * One group per vertical in the fixed §5.3 order (also empty ones), then an "Unclassified" group
  * only when it has rows (it is not a vertical you can file into). Rows sorted needs-action first.
  */
-export function groupByVertical(rows: readonly DocRow[]): VerticalGroup[] {
-  return VERTICAL_GROUPS.map((vertical) => {
+export function groupByVertical(rows: readonly DocRow[], verticals: readonly Vertical[]): VerticalGroup[] {
+  return verticalGroups(verticals).map((vertical) => {
     const mine = rows.filter((r) => r.meta.vertical === vertical.slug).sort(compareRows);
     return {
       vertical,

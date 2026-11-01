@@ -1,21 +1,29 @@
-"""Static contract test (task 3.6 step 4): the 14 (name, slug) pairs the
-``verticals_retaxonomy`` migration seeds into ``company.verticals`` must exactly
-match the 14 static ``{name, slug}`` pairs ``frontend/lib/verticals.ts`` ships.
+"""Contract tests for the 14 verticals (tasks 3.6/3.7).
 
-No DB connection, no app import: both sides are read as plain text/AST, the same
-technique ``tests/synthetic/test_corpus_meta.py`` already uses for this file pair,
-so this test can't be broken by `.env`/DB availability during collection.
+Since the frontend now fetches GET /company/verticals dynamically (task 3.7)
+rather than carrying its own static copy, there is no second hand-synced list
+to compare the backend against any more. What remains worth guarding, with no
+DB connection and no app import needed for the first two:
+
+1. The verticals-retaxonomy migration's NEW_VERTICALS seed is well-formed
+   (14 rows, no duplicate name or slug).
+2. The newer sort_order migration's ordering never silently drifts from
+   NEW_VERTICALS' own order (they're two separate files; nothing but this test
+   keeps them in sync).
+3. GET /company/verticals actually returns all 14, ordered by sort_order,
+   matching that same order -- via a FakeSession, the same technique
+   test_company_routes.py already uses for this router.
 """
 from __future__ import annotations
 
 import ast
-import re
-from pathlib import Path
+import pathlib
 
-BACKEND = Path(__file__).resolve().parents[2]
-REPO_ROOT = BACKEND.parent
+import httpx
+import pytest
+
+BACKEND = pathlib.Path(__file__).resolve().parents[2]
 MIGRATIONS_DIR = BACKEND / "migrations" / "versions"
-FRONTEND_VERTICALS_TS = REPO_ROOT / "frontend" / "lib" / "verticals.ts"
 
 
 def _migration_new_verticals() -> list[tuple[str, str]]:
@@ -36,13 +44,17 @@ def _migration_new_verticals() -> list[tuple[str, str]]:
     raise AssertionError("NEW_VERTICALS not found in verticals-retaxonomy migration")
 
 
-def _frontend_verticals() -> list[tuple[str, str]]:
-    """``(name, slug)`` pairs parsed out of ``frontend/lib/verticals.ts``'s
-    ``VERTICALS`` array (field order there is ``slug`` then ``name``)."""
-    text = FRONTEND_VERTICALS_TS.read_text(encoding="utf-8")
-    entries = re.findall(r'slug:\s*"([^"]+)"\s*,\s*name:\s*"([^"]+)"', text)
-    assert entries, "could not parse any {slug, name} entries out of frontend/lib/verticals.ts"
-    return [(name, slug) for slug, name in entries]
+def _sort_order_migration_slugs() -> list[str]:
+    """``ORDERED_SLUGS`` from the sort_order migration, read with ``ast``."""
+    candidates = [p for p in MIGRATIONS_DIR.glob("*.py") if "verticals_sort_order" in p.name]
+    assert candidates, "verticals_sort_order migration file not found under backend/migrations/versions/"
+    assert len(candidates) == 1, f"expected exactly one sort_order migration file, found {candidates}"
+    tree = ast.parse(candidates[0].read_text(encoding="utf-8"))
+    for node in tree.body:
+        targets = node.targets if isinstance(node, ast.Assign) else [getattr(node, "target", None)]
+        if any(isinstance(t, ast.Name) and t.id == "ORDERED_SLUGS" for t in targets):
+            return ast.literal_eval(node.value)
+    raise AssertionError("ORDERED_SLUGS not found in verticals_sort_order migration")
 
 
 def test_migration_seed_has_14_rows():
@@ -54,19 +66,74 @@ def test_migration_seed_has_14_rows():
     assert len(set(slugs)) == 14, "duplicate vertical slug in NEW_VERTICALS"
 
 
-def test_frontend_verticals_has_14_rows():
-    frontend = _frontend_verticals()
-    assert len(frontend) == 14
-
-
-def test_migration_verticals_match_frontend_exactly():
-    """Both (name, slug) fields -- not just name -- must agree, in the same order,
-    between the backend migration seed and the frontend's static vertical list."""
-    migration = _migration_new_verticals()
-    frontend = _frontend_verticals()
-    assert migration == frontend, (
-        "migration NEW_VERTICALS (name, slug) pairs do not exactly match "
-        "frontend/lib/verticals.ts's VERTICALS (name, slug) pairs:\n"
-        f"migration only: {sorted(set(migration) - set(frontend))}\n"
-        f"frontend only: {sorted(set(frontend) - set(migration))}"
+def test_sort_order_migration_matches_new_verticals_order():
+    """The sort_order migration's ORDERED_SLUGS must be the exact same 14 slugs,
+    in the exact same order, as NEW_VERTICALS -- these are two separate files
+    and nothing but this test keeps them from drifting apart."""
+    expected = [slug for _name, slug in _migration_new_verticals()]
+    actual = _sort_order_migration_slugs()
+    assert actual == expected, (
+        "verticals_sort_order's ORDERED_SLUGS does not match NEW_VERTICALS' order:\n"
+        f"NEW_VERTICALS order: {expected}\n"
+        f"ORDERED_SLUGS:       {actual}"
     )
+
+
+# ------------------------------------------------- GET /company/verticals
+
+
+class _Res:
+    def __init__(self, rows):
+        self._rows = rows
+
+    def mappings(self):
+        return self
+
+    def all(self):
+        return self._rows
+
+
+class _FakeSession:
+    """Returns the 14 verticals, already ordered by sort_order, for any query
+    whose text mentions company.verticals -- matches list_verticals()'s SQL."""
+
+    def __init__(self, rows):
+        self._rows = rows
+
+    async def execute(self, stmt, params=None):
+        if "company.verticals" in str(stmt):
+            return _Res(self._rows)
+        return _Res([])
+
+
+@pytest.fixture
+def _clear_overrides():
+    yield
+    from app.main import app
+    app.dependency_overrides.clear()
+
+
+async def test_list_verticals_returns_all_14_ordered_by_sort_order(_clear_overrides):
+    from app.db import get_db
+    from app.main import app
+
+    expected_order = [slug for _name, slug in _migration_new_verticals()]
+    rows = [
+        {"name": name, "slug": slug, "description": "x", "sort_order": i}
+        for i, (name, slug) in enumerate(_migration_new_verticals(), start=1)
+    ]
+    sess = _FakeSession(rows)
+
+    async def _dep():
+        yield sess
+
+    app.dependency_overrides[get_db] = _dep
+    async with httpx.AsyncClient(transport=httpx.ASGITransport(app=app), base_url="http://t") as c:
+        resp = await c.get("/company/verticals")
+
+    assert resp.status_code == 200
+    body = resp.json()
+    assert len(body) == 14
+    assert [r["slug"] for r in body] == expected_order
+    assert [r["sort_order"] for r in body] == list(range(1, 15))
+    assert all(r["name"] and r["description"] for r in body)

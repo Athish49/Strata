@@ -3,7 +3,7 @@ import type { ReactNode } from "react";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { act, renderHook, waitFor } from "@testing-library/react";
 import { mockApi, setMockLatency } from "@/tests/support/mock-api";
-import { MOCK_DUPLICATE_DOC_ID, addMockDocument, resetCompanyMock } from "@/tests/support/mock-api/company";
+import { MOCK_DUPLICATE_DOC_ID, MOCK_VERTICALS, addMockDocument, resetCompanyMock } from "@/tests/support/mock-api/company";
 import { fixtures } from "@/tests/support/mock-api/fixtures";
 import {
   INGEST_POLL_MS,
@@ -17,7 +17,7 @@ import {
 } from "@/lib/api/queries";
 import { ApiError } from "@/lib/api/http/shared";
 import { MissingActorError, resetActorStoreForTests, setActingPersonId } from "@/lib/actor";
-import { VERTICAL_GROUPS } from "@/lib/verticals";
+import { verticalGroups } from "@/lib/verticals";
 import type { IngestJob } from "@/lib/api/schemas";
 
 const file = (name: string) => new File(["x"], name);
@@ -130,19 +130,17 @@ describe("ingest job poller", () => {
 
 describe("documents hook keeps unclassified documents", () => {
   it("a document with vertical 'unclassified' is returned and has a group", async () => {
+    // The backend always normalises `vertical` to a real slug or "unclassified" before the
+    // response leaves the server (task 3.7) -- an unrecognised slug like "something-new"
+    // reaching the frontend is no longer a scenario this layer needs to defend against.
     const base = fixtures().documents[0];
     addMockDocument({ ...base, doc_id: "DOC-UNCLASS", vertical: "unclassified" });
-    addMockDocument({ ...base, doc_id: "DOC-WEIRD", vertical: "something-new" });
-    vi.spyOn(console, "warn").mockImplementation(() => {});
     const { wrapper } = setup();
     const { result } = renderHook(() => useDocuments(), { wrapper });
     await waitFor(() => expect(result.current.data).toBeDefined());
     const mine = result.current.data!.filter((d) => d.doc_id.startsWith("DOC-"));
-    expect(mine.map((d) => [d.doc_id, d.vertical])).toEqual([
-      ["DOC-UNCLASS", "unclassified"],
-      ["DOC-WEIRD", "unclassified"],
-    ]);
-    expect(VERTICAL_GROUPS.map((g) => g.slug)).toContain("unclassified");
+    expect(mine.map((d) => [d.doc_id, d.vertical])).toEqual([["DOC-UNCLASS", "unclassified"]]);
+    expect(verticalGroups(MOCK_VERTICALS).map((g) => g.slug)).toContain("unclassified");
   });
 });
 

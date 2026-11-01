@@ -33,9 +33,30 @@ import type {
 import { normalizeDocument } from "@/lib/api/http/company";
 import { ApiError } from "@/lib/api/http/shared";
 import { requireActingPersonId } from "@/lib/api/actor-store";
+import type { Vertical } from "@/lib/verticals";
 import { canUploadToVertical, getVertical } from "@/lib/verticals";
 import { fixtures, loadClauses } from "./fixtures";
 import { withLatency } from "./config";
+
+// Self-contained offline copy of the 14 verticals GET /company/verticals would return
+// (same name/slug/sort_order as migrations/versions/9c1e4b7a2f05_verticals_retaxonomy.py's
+// NEW_VERTICALS -- backend/tests/api_company/test_verticals_contract.py guards that file).
+export const MOCK_VERTICALS: Vertical[] = [
+  { sort_order: 1, slug: "corporate-governance-board", name: "Corporate Governance & Board", description: "Board structure, bylaws, charters, fiduciary duties, shareholder rights, entity management, annual filings, regulatory disclosure obligations." },
+  { sort_order: 2, slug: "compliance-ethics", name: "Compliance & Ethics", description: "Code of conduct, anti-corruption (FCPA), anti-bribery, whistleblower protections, compliance training, conflicts of interest, FTC consumer/advertising compliance." },
+  { sort_order: 3, slug: "legal-contractual", name: "Legal & Contractual", description: "Contract governance, litigation holds, IP protection, licensing, entity structure, NDAs, antitrust compliance." },
+  { sort_order: 4, slug: "financial-compliance-reporting", name: "Financial Compliance & Reporting", description: "SOX/ICFR, GAAP/IFRS, financial disclosures, audit requirements, internal controls, revenue recognition, pricing regulations, fee disclosures." },
+  { sort_order: 5, slug: "tax-trade-compliance", name: "Tax & Trade Compliance", description: "Corporate tax, payroll tax, sales tax, international tax (FATCA), transfer pricing, export controls, customs, OFAC sanctions, tariffs." },
+  { sort_order: 6, slug: "workforce-employment", name: "Workforce & Employment", description: "Labor laws, wage & hour, FMLA, ADA, anti-discrimination, benefits (ERISA), immigration/work authorization, DEI policies." },
+  { sort_order: 7, slug: "health-safety", name: "Health & Safety", description: "Workplace safety, emergency preparedness, hazard communication, PPE, incident reporting, product/consumer safety." },
+  { sort_order: 8, slug: "data-privacy-cybersecurity", name: "Data Privacy & Cybersecurity", description: "GDPR, CCPA/CPRA, state privacy laws, data breach notification, cybersecurity frameworks, data retention, information security." },
+  { sort_order: 9, slug: "environmental-sustainability", name: "Environmental & Sustainability", description: "EPA regulations, emissions, waste management, environmental permits, GHG reporting, ESG disclosures, climate risk, energy management." },
+  { sort_order: 10, slug: "operations-quality", name: "Operations & Quality", description: "Quality management, process compliance, GMP, FDA product regulations, CAPA, operational standards, business process documentation." },
+  { sort_order: 11, slug: "information-technology-records", name: "Information Technology & Records", description: "IT policies, system access controls, change management, records retention, digital accessibility (ADA/WCAG), AI governance and responsible use." },
+  { sort_order: 12, slug: "supply-chain-third-party-risk", name: "Supply Chain & Third-Party Risk", description: "Vendor compliance, third-party risk, supplier due diligence, modern slavery/forced labor, supply chain transparency, conflict minerals." },
+  { sort_order: 13, slug: "policy-training-management", name: "Policy & Training Management", description: "Policy lifecycle, document control, version management, compliance training programs, employee acknowledgments." },
+  { sort_order: 14, slug: "risk-resilience", name: "Risk & Resilience", description: "Enterprise risk management, insurance requirements, business continuity, disaster recovery, operational resilience." },
+];
 
 export const MOCK_DUPLICATE_DOC_ID = "RPL-CMP-REG-001";
 export const MOCK_MESSAGES = {
@@ -296,6 +317,7 @@ function advance(j: MockJob): void {
 const clone = <T>(v: T): T => structuredClone(v);
 
 export const companyApi: CompanyApi = {
+  listVerticals: () => withLatency(() => MOCK_VERTICALS),
   listDocuments: () => withLatency(() => allDocs()),
   getDocument: (doc_id) => withLatency(() => findDoc(doc_id)),
   listClauses: (doc_id) => withLatency(() => (s.docs.some((d) => d.doc_id === doc_id) ? [] : loadClauses(doc_id))),
@@ -310,7 +332,7 @@ export const companyApi: CompanyApi = {
     withLatency((): UploadResult => {
       const actor = requireActingPersonId(meta.acting_person_id);
       const name = checkFile(file, nameOf(file, meta.filename));
-      if (!canUploadToVertical(vertical)) throw new ApiError(422, `Unknown vertical '${vertical}'.`);
+      if (!canUploadToVertical(MOCK_VERTICALS, vertical)) throw new ApiError(422, `Unknown vertical '${vertical}'.`);
       person(actor);
       if (name.includes("duplicate")) return duplicateOf();
       const doc_id = `DOC-${String(900000 + s.seq + 1).padStart(6, "0")}`;
@@ -326,7 +348,7 @@ export const companyApi: CompanyApi = {
         next_review: null,
         review_cycle: null,
         vertical,
-        vertical_name: getVertical(vertical)?.backendVertical ?? null,
+        vertical_name: getVertical(MOCK_VERTICALS, vertical)?.name ?? null,
         // Like the backend: no roles at upload, so owner/reviewer are blank stubs until assigned.
         owner: blankPerson(),
         reviewer: blankPerson(),

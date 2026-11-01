@@ -1,18 +1,30 @@
 import { afterEach, describe, expect, it, vi } from "vitest";
+import type { ReactNode } from "react";
 import { cleanup, render, screen } from "@testing-library/react";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { buildRows, filterRows, groupByVertical, verdictSegments } from "@/components/documents/board/logic";
 import { VerticalSection } from "@/components/documents/board/VerticalSection";
 import { VerdictMiniBar } from "@/components/documents/board/VerdictMiniBar";
 import { DocStatusPill } from "@/components/documents/board/DocStatusPill";
 import type { DocRollup, DocumentMeta } from "@/lib/api/schemas";
-import { VERTICALS } from "@/lib/verticals";
+import { MOCK_VERTICALS } from "@/tests/support/mock-api/company";
 
 afterEach(cleanup);
 vi.mock("next/navigation", () => ({
   useSearchParams: () => new URLSearchParams("run=run_x"),
   usePathname: () => "/app/documents",
 }));
+
+// VerticalSection renders UploadDocumentDialog, which now calls useVerticals() (task 3.7).
+function wrapWithQuery(ui: ReactNode) {
+  const qc = new QueryClient({ defaultOptions: { queries: { retry: false } } });
+  return (
+    <QueryClientProvider client={qc}>
+      <TooltipProvider>{ui}</TooltipProvider>
+    </QueryClientProvider>
+  );
+}
 
 const person = { person_id: "P01", name: "Dana Reyes", title: "Director", department: "Legal", reports_to_id: null };
 const doc = (over: Partial<DocumentMeta>): DocumentMeta => ({
@@ -55,9 +67,9 @@ describe("board logic", () => {
   const rows = buildRows(docs, [rollup({ doc_id: "A" }), rollup({ doc_id: "B", status: "cleared", counts_by_verdict: {}, changes_considered: 0 })]);
 
   it("derives statuses per §11.5 and sorts needs-action first", () => {
-    const g = groupByVertical(rows);
+    const g = groupByVertical(rows, MOCK_VERTICALS);
     expect(g).toHaveLength(14);
-    expect(g.map((x) => x.vertical.slug)).toEqual(VERTICALS.map((v) => v.slug));
+    expect(g.map((x) => x.vertical.slug)).toEqual(MOCK_VERTICALS.map((v) => v.slug));
     const cl = g[1]; // compliance-ethics
     expect(cl.rows.map((r) => r.meta.doc_id)).toEqual(["A", "B"]);
     expect(cl.rows[0].status.key).toBe("action_needed");
@@ -91,12 +103,8 @@ describe("board components", () => {
       [doc({ doc_id: "RPL-CS-PRO-004" }), doc({ doc_id: "S-1", title: "Sample SOP", monitored: false })],
       [rollup({})],
     );
-    const group = groupByVertical(rows)[1];
-    render(
-      <TooltipProvider>
-        <VerticalSection group={group} />
-      </TooltipProvider>,
-    );
+    const group = groupByVertical(rows, MOCK_VERTICALS)[1];
+    render(wrapWithQuery(<VerticalSection group={group} />));
     expect(screen.getByRole("link", { name: "Disconnection Procedure" }).getAttribute("href")).toContain("/app/documents/RPL-CS-PRO-004");
     expect(screen.queryByRole("link", { name: "Sample SOP" })).toBeNull();
     expect(screen.getByText("Not monitored")).toBeTruthy();
@@ -105,21 +113,13 @@ describe("board components", () => {
   });
 
   it("renders an empty vertical with a real (enabled) add control", () => {
-    render(
-      <TooltipProvider>
-        <VerticalSection group={groupByVertical([])[3]} />
-      </TooltipProvider>,
-    );
+    render(wrapWithQuery(<VerticalSection group={groupByVertical([], MOCK_VERTICALS)[3]} />));
     expect(screen.getByText(/No documents are filed under Financial Compliance & Reporting yet/)).toBeTruthy();
     // Every one of the 14 verticals accepts uploads (the backend maps them all), including
     // Financial Compliance & Reporting, which has no synthetic documents in this fixture.
     expect(screen.getByRole("button", { name: "Add a document" })).toBeTruthy();
     cleanup();
-    render(
-      <TooltipProvider>
-        <VerticalSection group={groupByVertical([])[4]} />
-      </TooltipProvider>,
-    );
+    render(wrapWithQuery(<VerticalSection group={groupByVertical([], MOCK_VERTICALS)[4]} />));
     expect(screen.getByText(/No documents are filed under Tax & Trade Compliance yet/)).toBeTruthy();
     const add = screen.getByRole("button", { name: "Add a document" });
     expect(add.getAttribute("aria-disabled")).toBeNull();

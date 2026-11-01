@@ -41,26 +41,32 @@ afterEach(() => {
 });
 
 describe("companyHttp", () => {
-  it("keeps unclassified documents and maps unknown verticals to unclassified (warns only for unknown)", async () => {
-    const warn = vi.spyOn(console, "warn").mockImplementation(() => {});
-    const calls = stub(() => ({ body: [doc("A", "compliance-ethics"), doc("B", "unclassified"), doc("C", "nope")] }));
+  it("keeps unclassified documents as-is; the backend already normalises `vertical` (task 3.7)", async () => {
+    // app/api/company/routes.py's vertical_slug() always returns a real slug or "unclassified"
+    // before the response leaves the server, against the same company.verticals table
+    // GET /company/verticals reads -- so there is no "unknown slug" case to defend against
+    // here any more; normalizeDocument only catches a genuinely empty/missing value.
+    const calls = stub(() => ({ body: [doc("A", "compliance-ethics"), doc("B", "unclassified")] }));
     const docs = await companyHttp.listDocuments();
     expect(docs.map((d) => [d.doc_id, d.vertical])).toEqual([
       ["A", "compliance-ethics"],
       ["B", "unclassified"],
-      ["C", "unclassified"],
     ]);
     expect(calls[0]).toMatch(/\/company\/documents$/);
-    expect(warn).toHaveBeenCalledOnce();
   });
 
-  it("getDocument: encodes id, null on 404, unknown vertical becomes unclassified", async () => {
-    vi.spyOn(console, "warn").mockImplementation(() => {});
+  it("listDocuments/getDocument: an empty vertical becomes unclassified", async () => {
+    const calls = stub(() => ({ body: [doc("A", "")] }));
+    expect((await companyHttp.listDocuments())[0].vertical).toBe("unclassified");
+    expect(calls[0]).toMatch(/\/company\/documents$/);
+  });
+
+  it("getDocument: encodes id, null on 404", async () => {
     let n = 0;
-    const calls = stub(() => (n++ === 0 ? { status: 404, body: { detail: "x" } } : { body: doc("B", "nope") }));
+    const calls = stub(() => (n++ === 0 ? { status: 404, body: { detail: "x" } } : { body: doc("B", "compliance-ethics") }));
     expect(await companyHttp.getDocument("RPL CS/1")).toBeNull();
     expect(calls[0]).toMatch(/\/company\/documents\/RPL%20CS%2F1$/);
-    expect((await companyHttp.getDocument("B"))?.vertical).toBe("unclassified");
+    expect((await companyHttp.getDocument("B"))?.vertical).toBe("compliance-ethics");
   });
 
   it("documentMetaSchema accepts the new optional fields and extra keys", async () => {

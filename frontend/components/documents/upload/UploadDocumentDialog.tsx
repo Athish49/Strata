@@ -2,9 +2,9 @@
 import * as React from "react";
 import { ChevronDown } from "lucide-react";
 import type { UploadResult } from "@/lib/api/client";
-import { useUploadDocument } from "@/lib/api/queries";
+import { useUploadDocument, useVerticals } from "@/lib/api/queries";
 import { useActingPerson } from "@/lib/actor";
-import { verticalName } from "@/lib/verticals";
+import { verticalName, type Vertical } from "@/lib/verticals";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Dialog, DialogContent, DialogDescription, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
@@ -79,14 +79,22 @@ function NativeSelect({ id, value, onChange, children, invalid, describedBy, dis
   );
 }
 
-function UploadDocumentForm({ fixedVertical, defaultVertical }: { fixedVertical?: string; defaultVertical?: string | null }) {
+function UploadDocumentForm({
+  fixedVertical,
+  defaultVertical,
+  verticals,
+}: {
+  fixedVertical?: string;
+  defaultVertical?: string | null;
+  verticals: readonly Vertical[];
+}) {
   const uid = React.useId();
   const [actorId] = useActingPerson();
   const upload = useUploadDocument();
-  const options = React.useMemo(() => uploadableVerticals(), []);
+  const options = React.useMemo(() => uploadableVerticals(verticals), [verticals]);
 
   const [vertical, setVertical] = React.useState<string>(
-    fixedVertical ?? (isUploadTarget(defaultVertical) ? defaultVertical : ""),
+    fixedVertical ?? (isUploadTarget(defaultVertical, verticals) ? defaultVertical : ""),
   );
   const [format, setFormat] = React.useState<UploadFormat>("docx");
   const [file, setFile] = React.useState<File | null>(null);
@@ -129,7 +137,7 @@ function UploadDocumentForm({ fixedVertical, defaultVertical }: { fixedVertical?
 
   const spec = format === "register" ? buildRegisterSpec(registerType, idColumn) : null;
   const missing = {
-    vertical: !isUploadTarget(vertical),
+    vertical: !isUploadTarget(vertical, verticals),
     file: !file,
     registerType: format === "register" && !registerType,
     idColumn: format === "register" && !idColumn,
@@ -199,7 +207,7 @@ function UploadDocumentForm({ fixedVertical, defaultVertical }: { fixedVertical?
 
         {fixedVertical ? (
           <p className="text-[13px] leading-5 text-ink-3">
-            Filed under <span className="font-medium text-ink-2">{verticalName(fixedVertical)}</span>
+            Filed under <span className="font-medium text-ink-2">{verticalName(verticals, fixedVertical)}</span>
           </p>
         ) : (
           <div>
@@ -354,8 +362,16 @@ function UploadDocumentForm({ fixedVertical, defaultVertical }: { fixedVertical?
 /** "Upload" control + dialog for a new document. Renders nothing for a vertical that cannot take uploads. */
 export function UploadDocumentDialog({ vertical, defaultVertical, variant = "button", label, className }: UploadDocumentDialogProps) {
   const [open, setOpen] = React.useState(false);
-  if (vertical !== undefined && !isUploadTarget(vertical)) return null;
-  if (vertical === undefined && uploadableVerticals().length === 0) return null;
+  const verticalsQuery = useVerticals();
+  const verticals = verticalsQuery.data ?? [];
+  // Only hide the trigger once the verticals list has actually loaded and says this
+  // target is invalid -- while it's still loading, assume valid (matches the old
+  // static-data behaviour, where this was never in doubt) rather than flashing the
+  // button away and back.
+  if (verticalsQuery.data) {
+    if (vertical !== undefined && !isUploadTarget(vertical, verticals)) return null;
+    if (vertical === undefined && uploadableVerticals(verticals).length === 0) return null;
+  }
   const text = label ?? (variant === "inline" ? "Add a document" : "Upload");
   return (
     <Dialog open={open} onOpenChange={setOpen}>
@@ -370,7 +386,7 @@ export function UploadDocumentDialog({ vertical, defaultVertical, variant = "but
           </DialogDescription>
         </div>
         {/* Remounted on every open so a closed dialog never keeps a half-filled form or old result. */}
-        {open && <UploadDocumentForm fixedVertical={vertical} defaultVertical={defaultVertical} />}
+        {open && <UploadDocumentForm fixedVertical={vertical} defaultVertical={defaultVertical} verticals={verticals} />}
       </DialogContent>
     </Dialog>
   );

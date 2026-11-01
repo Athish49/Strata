@@ -4,7 +4,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { cleanup, render, screen, waitFor, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { mockApi, setMockLatency } from "@/tests/support/mock-api";
-import { MOCK_DUPLICATE_DOC_ID, MOCK_MESSAGES, resetCompanyMock } from "@/tests/support/mock-api/company";
+import { MOCK_DUPLICATE_DOC_ID, MOCK_MESSAGES, MOCK_VERTICALS, resetCompanyMock } from "@/tests/support/mock-api/company";
 import { fixtures } from "@/tests/support/mock-api/fixtures";
 import { UploadDocumentDialog, UploadVersionDialog } from "@/components/documents/upload";
 import {
@@ -88,23 +88,25 @@ describe("upload logic", () => {
   });
 
   it("never targets unclassified, but every one of the 14 verticals is a target", () => {
-    expect(isUploadTarget(UNCLASSIFIED_SLUG)).toBe(false);
-    expect(isUploadTarget("financial-compliance-reporting")).toBe(true);
-    expect(isUploadTarget("not-a-vertical")).toBe(false);
-    expect(isUploadTarget(VERTICAL)).toBe(true);
-    expect(uploadableVerticals().map((v) => v.slug)).not.toContain(UNCLASSIFIED_SLUG);
+    expect(isUploadTarget(UNCLASSIFIED_SLUG, MOCK_VERTICALS)).toBe(false);
+    expect(isUploadTarget("financial-compliance-reporting", MOCK_VERTICALS)).toBe(true);
+    expect(isUploadTarget("not-a-vertical", MOCK_VERTICALS)).toBe(false);
+    expect(isUploadTarget(VERTICAL, MOCK_VERTICALS)).toBe(true);
+    expect(uploadableVerticals(MOCK_VERTICALS).map((v) => v.slug)).not.toContain(UNCLASSIFIED_SLUG);
   });
 });
 
 describe("UploadDocumentDialog", () => {
-  it("renders nothing for unclassified or an unknown vertical", () => {
+  it("renders nothing for unclassified or an unknown vertical, once the verticals list has loaded", async () => {
     const { container } = wrap(
       <>
         <UploadDocumentDialog vertical={UNCLASSIFIED_SLUG} />
         <UploadDocumentDialog vertical="not-a-vertical" variant="inline" />
       </>,
     );
-    expect(container).toBeEmptyDOMElement();
+    // While useVerticals() is still loading, the trigger is assumed valid (no flash of a
+    // disappearing button) -- it is only hidden once the list has resolved and says so.
+    await waitFor(() => expect(container).toBeEmptyDOMElement());
   });
 
   it("board entry point asks for a vertical and never offers unclassified", async () => {

@@ -10,6 +10,8 @@ import { Skeleton } from "@/components/ui/skeleton";
 import { AppLink } from "@/lib/app-link";
 import { formatDate, pluralize } from "@/lib/format";
 import { PAGE_CUES } from "@/lib/future-features";
+import Link from "next/link";
+import { useVerticals } from "@/lib/api/queries";
 import { getVertical } from "@/lib/verticals";
 import { StatusCell } from "./StatusCell";
 import { TwoSignatureTag } from "./TwoSignatureTag";
@@ -55,16 +57,47 @@ function Row({ row }: { row: DocRow }) {
   );
 }
 
-/** `/app/documents/verticals/[vertical]` body. `slug` is already validated by the route. */
+/**
+ * `/app/documents/verticals/[vertical]` body. The route no longer validates `slug` (the
+ * verticals list is DB-backed now, task 3.7) -- this component does, once useVerticals()
+ * resolves, and renders a not-found state itself (notFound() only works in Server
+ * Components).
+ */
 export function VerticalView({ slug }: { slug: string }) {
-  const vertical = getVertical(slug);
+  const { data: verticals, isLoading: verticalsLoading, isError: verticalsError, refetch: refetchVerticals } = useVerticals();
+  const vertical = verticals ? getVertical(verticals, slug) : undefined;
   const { rows, isLoading, isError, refetch } = useBoardRows();
   // Retired documents are hidden here; the main board shows them under the Retired status filter.
   const mine = React.useMemo(
     () => rows.filter((r) => r.meta.vertical === slug && r.status.key !== "retired").sort(compareRows),
     [rows, slug],
   );
-  if (!vertical) return null;
+
+  if (verticalsLoading) {
+    return (
+      <PageContainer>
+        <Skeleton className="h-48 rounded-[12px]" />
+      </PageContainer>
+    );
+  }
+  if (verticalsError) {
+    return (
+      <PageContainer>
+        <ErrorState message="Verticals could not be loaded." source="Company data" onRetry={refetchVerticals} />
+      </PageContainer>
+    );
+  }
+  if (!vertical) {
+    return (
+      <main className="flex min-h-[60vh] flex-col items-center justify-center gap-3 px-6 text-center">
+        <p className="font-serif text-[36px] leading-[44px] text-ink">This page could not be found</p>
+        <p className="max-w-[420px] text-[14px] leading-5 text-ink-3">The link may be mistyped, or the page may have moved.</p>
+        <Link href="/app/documents" className="mt-2 text-[14px] text-ink underline underline-offset-4">
+          Back to documents
+        </Link>
+      </main>
+    );
+  }
   const monitored = mine.filter((r) => r.meta.monitored).length;
   const attention = mine.filter((r) => !r.pending && needsAction(r)).length;
 

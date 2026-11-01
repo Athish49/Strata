@@ -31,6 +31,7 @@ import type {
   ScoreReport,
   SectionS1Text,
   VersionEntry,
+  CompanyVertical,
 } from "./schemas";
 
 export interface Page<T> {
@@ -169,6 +170,8 @@ export interface ActingOpts {
 }
 
 export interface CompanyApi {
+  /** GET /company/verticals: the 14 verticals, ordered by sort_order. */
+  listVerticals(): Promise<CompanyVertical[]>;
   /** Every document; a vertical outside the 14 is normalised to "unclassified" (never dropped). */
   listDocuments(): Promise<DocumentMeta[]>;
   getDocument(doc_id: string): Promise<DocumentMeta | null>;

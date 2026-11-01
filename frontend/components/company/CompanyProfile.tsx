@@ -11,10 +11,10 @@ import { FutureCue } from "@/components/common/FutureCue";
 import { PersonChip } from "@/components/common/PersonChip";
 import { SectionHeader } from "@/components/common/SectionHeader";
 import { AppLink } from "@/lib/app-link";
-import { useDocuments, usePeople, useProfile } from "@/lib/api/queries";
+import { useDocuments, usePeople, useProfile, useVerticals } from "@/lib/api/queries";
 import type { CompanyProfile as Profile, DocumentMeta, Person } from "@/lib/api/schemas";
 import { formatCount } from "@/lib/format";
-import { compareVerticals, verticalName } from "@/lib/verticals";
+import { compareVerticals, verticalName, type Vertical } from "@/lib/verticals";
 import { cn } from "@/lib/utils";
 import { attributeLabel, attributeValue, docsByPerson, groupByDepartment, reportingRows, type PersonDoc } from "./people";
 
@@ -202,12 +202,12 @@ export function PeopleSection({ people, docs }: { people: Person[]; docs: Docume
   );
 }
 
-export function DocumentsSummary({ docs }: { docs: DocumentMeta[] }) {
+export function DocumentsSummary({ docs, verticals }: { docs: DocumentMeta[]; verticals: readonly Vertical[] }) {
   const monitored = docs.filter((d) => d.monitored);
   const twoSig = docs.filter((d) => d.two_signature).length;
   const byVertical = new Map<string, DocumentMeta[]>();
   for (const d of docs) byVertical.set(d.vertical, [...(byVertical.get(d.vertical) ?? []), d]);
-  const groups = [...byVertical.entries()].sort(([a], [b]) => compareVerticals(a, b));
+  const groups = [...byVertical.entries()].sort(([a], [b]) => compareVerticals(verticals, a, b));
   if (docs.length === 0) return <EmptyState title="No documents on file" description="Company documents appear here once they are loaded and split into clauses." />;
   return (
     <div className="rounded-[12px] border border-border bg-surface">
@@ -221,7 +221,7 @@ export function DocumentsSummary({ docs }: { docs: DocumentMeta[] }) {
         {groups.map(([vertical, list]) => (
           <div key={vertical} className="px-5 py-3">
             <div className="mb-1.5 flex items-center gap-2 text-[13px] font-medium text-ink">
-              {verticalName(vertical)} <span className="font-normal text-ink-3">· {list.length}</span>
+              {verticalName(verticals, vertical)} <span className="font-normal text-ink-3">· {list.length}</span>
             </div>
             <ul className="space-y-1">
               {list.map((d) => (
@@ -250,6 +250,7 @@ export function CompanyPage({ highlight }: { highlight?: string | null }) {
   const profile = useProfile();
   const people = usePeople();
   const docs = useDocuments();
+  const verticals = useVerticals();
 
   // Deep links (/app/company#owns_generating_units) need the table in the DOM first.
   const ready = !!profile.data;
@@ -296,7 +297,7 @@ export function CompanyPage({ highlight }: { highlight?: string | null }) {
         ) : docs.isLoading ? (
           <Skeleton className="h-[200px] rounded-[12px]" />
         ) : (
-          <DocumentsSummary docs={docs.data ?? []} />
+          <DocumentsSummary docs={docs.data ?? []} verticals={verticals.data ?? []} />
         )}
       </section>
     </div>
