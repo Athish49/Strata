@@ -60,18 +60,25 @@ Action needed from you: none. This item is closed.
 ====================================================================
 4. [YOUR CALL, NOT URGENT] Drop the is_citation_fragment column (task 3.4 Deploy 2)
 ====================================================================
-Status: Deploy 1 (removing all 3 dead read-sites in candidates.py/rules.py/
-judge.py, deleting the backfill script and its test) is DONE. Deploy 2 — the
-actual ALTER TABLE ... DROP COLUMN — is a separate, irreversible-without-backup
-migration you chose to leave for later.
+Status: COMPLETE 2026-11-01. Deploy 1 (removing all 3 dead read-sites in
+candidates.py/rules.py/judge.py, deleting the backfill script and its test)
+was already done. Deploy 2 (the actual column drop) is now also done:
+  - make_whatif_presets.py's COALESCE(p.is_citation_fragment, false) = false
+    condition removed (confirmed dead by the same proof as the other 3 sites
+    -- that query already filters to kind IN ('period','deadline','amount',
+    'threshold'), which excludes the only kind the flag could ever be true
+    for).
+  - New migration backend/migrations/versions/a7c4e9f2b6d1_drop_is_citation_
+    fragment.py written, tested against the disposable "test" Neon branch
+    first (column dropped cleanly, 4,186 rows unaffected, backend verified
+    error-free against the new schema), then applied to production by the
+    user (alembic upgrade head blocked for Claude by a production-deploy
+    safety guardrail -- ran manually instead).
+  - Verified directly against production after: alembic_version =
+    a7c4e9f2b6d1, column confirmed gone, all 4,186 clause_parameters rows
+    intact.
 
-Action needed from you: tell me when you want this to happen. Before it runs:
-  - backend/scripts/make_whatif_presets.py still references this column directly
-    in a SQL WHERE clause (COALESCE(p.is_citation_fragment, false) = false) — it
-    needs updating in the same change, or it will break.
-  - Confirm `alembic heads` shows exactly one head immediately before writing the
-    migration (guardrail 2 — no two migration-writing tasks concurrently).
-  - Consider taking a DB snapshot first since this is not reversible otherwise.
+Action needed from you: none. This item is closed.
 
 ====================================================================
 5. [DEFERRED BY DEFAULT] Frontend vertical taxonomy dynamism (task 3.7)
