@@ -1,98 +1,68 @@
 PENDING TASKS — Company Documents Pipeline Cleanup
-Last updated: 2026-10-31
+Last updated: 2026-11-01
 Source: implementation_plan.md, report.md, findings_1.0_cross_document_links.md,
 findings_1.2_data_provenance.md (all at repo root)
 
-Everything below is either blocked on a human-only step, or deliberately deferred
-pending your decision. Nothing in this list is blocked on further agent/Claude work
-unless noted. See the companion chat message "detailed steps you have to do" for the
-exact actions tied to each item.
-
 ====================================================================
-1. [HIGH PRIORITY, HUMAN-ONLY] Resolve the 12-document data-provenance mystery
+1. [RESOLVED 2026-11-01] 12-document data-provenance mystery
 ====================================================================
-Status: Investigation complete (findings_1.2_data_provenance.md). Mechanism NOT
-found — every code path, script, and migration that could explain it was checked
-and ruled out. Render's free-tier log viewer does not retain logs this old, so
-the originally-planned path (pull logs for the 3 run_ids below) is NOT available.
+Status: SOLVED. The user provided access to a Neon branch called "backup", which
+turned out to be the literal pre-v1-to-v2-cutover database (old RPL-* doc_id
+scheme, 12 documents, is_citation_fragment 100% populated, earlier
+alembic_version). Direct comparison confirmed, exhaustively not by sample: all
+2,002 clauses across all 12 non-register documents match byte-for-byte
+(text_sha256) against this branch, zero mismatches, zero missing. clause_links
+counts matched exactly too everywhere checked.
 
-Run_ids / window for reference, if any of the alternatives below surfaces logs
-or data for this window:
-  - DOC-000001: 7f30d5ae-c5f6-4a9a-8961-09ec0375337d
-  - DOC-000008: 6569055e-89ad-4057-826e-91ff40fb6e46
-  - DOC-000010: 62b01826-cd9b-4373-b2dc-a9a5acc8f166
-  - Window: 2026-10-31, 09:04-09:22 UTC
+Conclusion: during the v1->v2 cutover, these 12 documents' doc_id/clause_ids
+were re-keyed from the old RPL-* scheme to the new DOC-00000N scheme and their
+clause/parameter/citation/link data was copied directly from this backup
+database, not re-ingested through the real v2 pipeline. The 3 register
+documents (DOC-000002/4/6) did NOT take this shortcut and were genuinely
+freshly ingested. Full writeup: findings_1.2_data_provenance.md section 9.
 
-Alternatives to try, roughly in order of likely payoff:
-  1. Check the OTHER coding-agent session(s)/tool(s) that did work on this repo
-     before this session started (mentioned at the start of this conversation).
-     The mystery window lines up with the "company documents ingestion pipeline
-     v2" / "company verticals updated" commits already on main before this
-     session began. If that tool retains session history/transcripts, it may
-     show exactly what ran. This is the single most promising lead.
-  2. Check Render's "Events" tab (not just Logs) for a deploy/restart around
-     2026-10-31 09:00-09:30 UTC — deploy events are sometimes retained longer
-     than log output even on the free tier.
-  3. Check your own local shell history (~/.zsh_history) around that window for
-     anything involving psql, python, alembic, seed.py, rehearsal, curl, or a
-     direct DB connection string. (Claude's own attempt to read this was
-     blocked by a safety guardrail against credential/history exploration —
-     this needs to be you, not me.)
-  4. If your Neon plan has point-in-time recovery/branching, branch at a
-     timestamp just before 09:04 UTC and one just after 09:22 UTC and diff
-     them — narrows down exactly when each row appeared, even without showing
-     what command did it.
-  5. No Sentry/Datadog/other logging service is wired into this codebase
-     (confirmed by grep) — Render's own log viewer was the only first-party
-     observability, so there's no secondary app-level audit trail to check.
-  6. Consider upgrading Render's plan temporarily for longer log retention, if
-     none of the above pans out and this is worth paying to resolve.
+Still open, but no longer blocking anything: exactly who ran the copy, what
+tool, and precisely when within the 09:04-09:22 UTC window — not recoverable
+from database content alone, and Render's free-tier logs don't go back far
+enough. This no longer matters for trusting the data itself.
 
-Report back whatever you find (or don't find).
-
-Blocks: task 5.2 (orphaned R2 cleanup) until resolved.
+Action needed from you: none. This item is closed.
 
 ====================================================================
 2. [DONE] Confirm the deployed R2_ENDPOINT value (task 5.1)
 ====================================================================
 Status: CONFIRMED 2026-10-31. Deployed R2_ENDPOINT carries the same trailing
-"/strata" suffix as the local .env — this is not a local-only quirk, production
-has the identical double-prefix situation (every R2 object physically lives one
-path segment deeper than the key Neon stores, self-cancelling today because
-reads and writes both use the same misconfigured endpoint).
+"/strata" suffix as the local .env — production has the identical double-prefix
+situation as local (every R2 object physically lives one path segment deeper
+than the key Neon stores, self-cancelling today because reads and writes both
+use the same misconfigured endpoint).
 
-No action needed from you on this item. Feeds DG-6 (whether/when to fix
-R2_ENDPOINT) for whenever that's revisited — still requires a full key-migration
-plan first, per report.md/tables_and_connections.md §7, not a quick env-var edit.
-
-Action needed from you:
-  - Check Render's dashboard for the deployed backend service's R2_ENDPOINT value.
-  - Confirm whether it carries the same trailing "/strata" suffix as the local
-    .env (see tables_and_connections.md §7 for why this matters — every R2 object
-    physically lives one path segment deeper than the key Neon stores).
-  - Report back the value. No code change should follow automatically either way
-    — this is informational, feeding a future decision (DG-6), not an action item
-    itself.
+Action needed from you: none. Feeds DG-6 (whether/when to fix R2_ENDPOINT) for
+whenever that's revisited — still requires a full key-migration plan first, per
+report.md/tables_and_connections.md section 7, not a quick env-var edit.
 
 ====================================================================
-3. [BLOCKED on #1] Delete orphaned R2 objects (task 5.2, DG-7)
+3. [UNBLOCKED, your call] Delete orphaned R2 objects (task 5.2, DG-7)
 ====================================================================
-Status: Not started. Deliberately held — these exact objects (old v1-keyed
-derived snapshots, the stale 01e6f1a3... LLM-cache audit JSONs) are the evidence
-findings_1.2 used to investigate the provenance mystery. Deleting them now would
-foreclose investigating it further for any document beyond the one already
-checked (DOC-000008).
+Status: Was blocked on item 1; now unblocked since the provenance mystery is
+resolved and didn't depend on these specific R2 objects as its only evidence
+(see item 1). Not started yet either way.
 
-Action needed from you: nothing yet. Once #1 is resolved (or you decide the
-evidence is no longer needed), tell me to proceed and I will re-verify the
-objects are still unreferenced immediately before deleting.
+These are the old v1-keyed derived snapshots (e.g.
+derived/RPL-CS-PRO-004/v1/clauses.jsonl) and the stale 01e6f1a3...-prefixed
+LLM-cache audit JSONs confirmed unreferenced by any current document_versions
+or ingest_runs row.
+
+Action needed from you: tell me to proceed and I will re-verify the objects are
+still unreferenced immediately before deleting (per the task card, never bulk-
+delete by pattern without that re-check).
 
 ====================================================================
 4. [YOUR CALL, NOT URGENT] Drop the is_citation_fragment column (task 3.4 Deploy 2)
 ====================================================================
 Status: Deploy 1 (removing all 3 dead read-sites in candidates.py/rules.py/
 judge.py, deleting the backfill script and its test) is DONE. Deploy 2 — the
-actual `ALTER TABLE ... DROP COLUMN` — is a separate, irreversible-without-backup
+actual ALTER TABLE ... DROP COLUMN — is a separate, irreversible-without-backup
 migration you chose to leave for later.
 
 Action needed from you: tell me when you want this to happen. Before it runs:
@@ -107,13 +77,14 @@ Action needed from you: tell me when you want this to happen. Before it runs:
 5. [DEFERRED BY DEFAULT] Frontend vertical taxonomy dynamism (task 3.7)
 ====================================================================
 Status: Not started, per DG-3's default (you didn't opt in). The backend now
-reads company.verticals dynamically (task 3.6, done); the frontend still uses its
-static VERTICALS array in frontend/lib/verticals.ts.
+reads company.verticals dynamically (task 3.6, done); the frontend still uses
+its static VERTICALS array in frontend/lib/verticals.ts.
 
-Action needed from you: only if you change your mind. This is a real body of work
-(~10 files, a new GET /company/verticals endpoint, a new sort_order migration,
-making a Next.js route guard async, rewriting frontend/tests/unit/verticals.test.ts) —
-not a quick follow-up. Say so explicitly if you want it scoped as its own task.
+Action needed from you: only if you change your mind. This is a real body of
+work (~10 files, a new GET /company/verticals endpoint, a new sort_order
+migration, making a Next.js route guard async, rewriting
+frontend/tests/unit/verticals.test.ts) — not a quick follow-up. Say so
+explicitly if you want it scoped as its own task.
 
 ====================================================================
 6. [DATE-GATED] Drop the 2 migration backup tables (task 5.3, DG-5)
@@ -122,9 +93,9 @@ Status: Not eligible yet. The retention window is 30 days from the 2026-10-31
 migration date — do not drop before 2026-11-30.
 
 Action needed from you: nothing until the date arrives. When it does, this is a
-single new sequential migration dropping
-company._vertical_backfill_20261031 and company._approval_policy_vertical_backfill_20261031.
-Note: once run, migration 9c1e4b7a2f05's own downgrade() can no longer function.
+single new sequential migration dropping company._vertical_backfill_20261031
+and company._approval_policy_vertical_backfill_20261031. Note: once run,
+migration 9c1e4b7a2f05's own downgrade() can no longer function.
 
 ====================================================================
 7. [INFORMATIONAL] Nothing has been pushed to the remote
@@ -142,7 +113,19 @@ Already implemented, not pending, but worth knowing about:
   references_clause refs across documents. See
   backend/app/company_ingest/link/reconcile_cross_doc.py and
   findings_1.0_cross_document_links.md for the full design rationale.
-- The 274 empty-text_raw clauses found during the 1.2 investigation (6 documents,
-  degrades judge.py's prompt and quote verification for those specific clauses)
-  are NOT separately tracked as a fix task — they're a symptom of the same
-  unresolved provenance mystery (item 1 above), not an independent bug to patch.
+- The 274 empty-text_raw clauses found during the 1.2 investigation (6
+  documents, degrades judge.py's prompt and quote verification for those
+  specific clauses) are a byproduct of the backup-branch copy described in item
+  1 above (some container/header clauses lost their text during that copy) —
+  not a bug in any current code path. Not separately tracked as a fix task;
+  revisit only if those specific clauses' missing text starts mattering in
+  practice.
+- The Neon branch "new_verticals_test" was checked and found to be
+  byte-identical to production (same alembic_version, same row counts, same
+  document_versions.created_at timestamps down to the microsecond). It is
+  almost certainly a clone taken FROM production for testing the verticals
+  migration, not an independent data source, and not evidence that any cleanup
+  work in this session landed there by accident — backend/.env's DATABASE_URL
+  has pointed at production's host for this entire session, confirmed by
+  comparing connection hosts, and no write of any kind was made to any Neon
+  branch during this session's work.
