@@ -117,15 +117,37 @@ GET /company/verticals existing. Until then, do not deploy only the
 frontend half of this change.
 
 ====================================================================
-6. [DATE-GATED] Drop the 2 migration backup tables (task 5.3, DG-5)
+6. [DONE 2026-11-01, migration pending your manual step] Drop the 2 migration
+   backup tables early (task 5.3, DG-5 overridden)
 ====================================================================
-Status: Not eligible yet. The retention window is 30 days from the 2026-10-31
-migration date — do not drop before 2026-11-30.
+Status: The default 2026-11-30 retention date was overridden after an
+extensive manual verification (full reasoning in migration
+d4a9e1c7f052_drop_verticals_backup_tables.py's own docstring and the
+conversation that authorized it). Summary: recovered the original
+signed-off plan.md/table_schemas.md from git history (deleted from the
+working tree, recoverable via `git show 147cf2d:<path>`) and independently
+re-derived the expected vertical for all 15 live documents against that
+plan -- 0/15 mismatches; live distribution matches the plan's own recorded
+verification target exactly; both FK constraints
+(company_documents_vertical_fk, approval_policies_vertical_fk) are in place
+and enforced, so no future write can introduce an invalid value regardless
+of these tables; zero code anywhere references either backup table; all 10
+tables the plan flagged as "should be unaffected by this migration" still
+have exactly their documented pre-migration row counts.
 
-Action needed from you: nothing until the date arrives. When it does, this is a
-single new sequential migration dropping company._vertical_backfill_20261031
-and company._approval_policy_vertical_backfill_20261031. Note: once run,
-migration 9c1e4b7a2f05's own downgrade() can no longer function.
+New migration backend/migrations/versions/d4a9e1c7f052_drop_verticals_
+backup_tables.py written and tested against the disposable "test" branch
+(both tables dropped cleanly, all other data intact, full backend suite
+green: 1433 passed).
+
+Action needed from you: apply to PRODUCTION, same pattern as items 4 and 5
+(I can't run this against production myself). From backend/, with your real
+.env loaded:
+    python -m alembic upgrade head
+Note: once this runs, migration 9c1e4b7a2f05's own downgrade() can no
+longer function (it reads from these tables) -- accepted as part of this
+decision, since the forward migration's correctness was independently
+re-verified rather than merely trusted.
 
 ====================================================================
 7. [INFORMATIONAL] Nothing has been pushed to the remote
