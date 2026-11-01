@@ -13,26 +13,57 @@ exact actions tied to each item.
 ====================================================================
 Status: Investigation complete (findings_1.2_data_provenance.md). Mechanism NOT
 found — every code path, script, and migration that could explain it was checked
-and ruled out. The only remaining way to resolve this is pulling Render's
-application logs.
+and ruled out. Render's free-tier log viewer does not retain logs this old, so
+the originally-planned path (pull logs for the 3 run_ids below) is NOT available.
 
-Action needed from you:
-  - Pull Render's log viewer (or wherever uvicorn/BackgroundTasks output lands)
-    for these 3 ingest_run_ids, around 2026-10-31 09:04-09:22 UTC:
-      - DOC-000001: 7f30d5ae-c5f6-4a9a-8961-09ec0375337d
-      - DOC-000008: 6569055e-89ad-4057-826e-91ff40fb6e46
-      - DOC-000010: 62b01826-cd9b-4373-b2dc-a9a5acc8f166
-  - Look for: any admin/maintenance endpoint call, a bulk-import script
-    invocation, or a swallowed exception in that window.
-  - Report back what you find (or don't find).
+Run_ids / window for reference, if any of the alternatives below surfaces logs
+or data for this window:
+  - DOC-000001: 7f30d5ae-c5f6-4a9a-8961-09ec0375337d
+  - DOC-000008: 6569055e-89ad-4057-826e-91ff40fb6e46
+  - DOC-000010: 62b01826-cd9b-4373-b2dc-a9a5acc8f166
+  - Window: 2026-10-31, 09:04-09:22 UTC
+
+Alternatives to try, roughly in order of likely payoff:
+  1. Check the OTHER coding-agent session(s)/tool(s) that did work on this repo
+     before this session started (mentioned at the start of this conversation).
+     The mystery window lines up with the "company documents ingestion pipeline
+     v2" / "company verticals updated" commits already on main before this
+     session began. If that tool retains session history/transcripts, it may
+     show exactly what ran. This is the single most promising lead.
+  2. Check Render's "Events" tab (not just Logs) for a deploy/restart around
+     2026-10-31 09:00-09:30 UTC — deploy events are sometimes retained longer
+     than log output even on the free tier.
+  3. Check your own local shell history (~/.zsh_history) around that window for
+     anything involving psql, python, alembic, seed.py, rehearsal, curl, or a
+     direct DB connection string. (Claude's own attempt to read this was
+     blocked by a safety guardrail against credential/history exploration —
+     this needs to be you, not me.)
+  4. If your Neon plan has point-in-time recovery/branching, branch at a
+     timestamp just before 09:04 UTC and one just after 09:22 UTC and diff
+     them — narrows down exactly when each row appeared, even without showing
+     what command did it.
+  5. No Sentry/Datadog/other logging service is wired into this codebase
+     (confirmed by grep) — Render's own log viewer was the only first-party
+     observability, so there's no secondary app-level audit trail to check.
+  6. Consider upgrading Render's plan temporarily for longer log retention, if
+     none of the above pans out and this is worth paying to resolve.
+
+Report back whatever you find (or don't find).
 
 Blocks: task 5.2 (orphaned R2 cleanup) until resolved.
 
 ====================================================================
-2. [HUMAN-ONLY] Confirm the deployed R2_ENDPOINT value (task 5.1)
+2. [DONE] Confirm the deployed R2_ENDPOINT value (task 5.1)
 ====================================================================
-Status: Not started — no code in this repo can answer this (render.yaml marks it
-sync: false, value lives only in the Render dashboard).
+Status: CONFIRMED 2026-10-31. Deployed R2_ENDPOINT carries the same trailing
+"/strata" suffix as the local .env — this is not a local-only quirk, production
+has the identical double-prefix situation (every R2 object physically lives one
+path segment deeper than the key Neon stores, self-cancelling today because
+reads and writes both use the same misconfigured endpoint).
+
+No action needed from you on this item. Feeds DG-6 (whether/when to fix
+R2_ENDPOINT) for whenever that's revisited — still requires a full key-migration
+plan first, per report.md/tables_and_connections.md §7, not a quick env-var edit.
 
 Action needed from you:
   - Check Render's dashboard for the deployed backend service's R2_ENDPOINT value.
