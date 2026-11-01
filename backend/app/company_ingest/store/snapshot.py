@@ -1,10 +1,11 @@
-"""Task 8.1.2 — Clause snapshot writer.
+"""Task 8.1.2 / 5.8 — Clause snapshot writer.
 
 Serializes a list of ClauseUnit objects to JSONL format and writes to R2.
 """
 from __future__ import annotations
 
 import json
+import uuid
 from dataclasses import asdict
 from typing import TYPE_CHECKING
 
@@ -122,33 +123,60 @@ def build_clause_snapshot(units: list["ClauseUnit"]) -> str:
 def write_clause_snapshot(
     units: list["ClauseUnit"],
     doc_id: str,
-    version: str,
+    version_id: str,
     company_id: str,
     r2_client,
     ctx: "RunContext",
-    force: bool = False,
+    force: bool = True,
 ) -> str:
-    """Write clauses.jsonl to R2. Returns the R2 key.
+    """Write clauses.jsonl to R2, keyed by the REAL ``version_id``. Returns the key.
 
-    If *force* is True the write-once guard in R2 is bypassed so that a
-    re-run after a segmenter fix can overwrite an existing snapshot.
+    The key is ``company/{company_id}/derived/{doc_id}/{version_id}/clauses.jsonl``,
+    so every version of a document gets its own object (the pre-v2 caller passed
+    the literal ``"v1"``, so every version collided on one key).  A non-UUID
+    ``version_id`` is rejected to stop that regression from coming back.
+
+    The snapshot is derived data, regenerable from Neon + the raw bytes, so
+    ``force`` defaults to True: a retry/re-ingest of the same version whose
+    content changed (new LLM output, segmenter fix) overwrites instead of
+    tripping the R2 write-once guard.  If a caller explicitly passes
+    ``force=False`` and the content differs, the conflict is recorded on
+    ``ctx`` as a warning and the existing key is returned — it never raises
+    ``ValueError`` and so can never fail the whole ingest run.
     """
     from app.company_ingest.store.r2_keys import derived_clauses_key
 
-    key = derived_clauses_key(company_id, doc_id, version)
+    try:
+        version_id = str(uuid.UUID(str(version_id)))
+    except (ValueError, TypeError, AttributeError):
+        raise ValueError(
+            f"write_clause_snapshot needs the real version_id (a uuid), got {version_id!r}"
+        ) from None
+
+    key = derived_clauses_key(company_id, doc_id, version_id)
     jsonl = build_clause_snapshot(units)
     data = jsonl.encode("utf-8")
 
-    r2_client.put_bytes(
-        key,
-        data,
-        {
-            "content_type": "application/x-ndjson",
-            "doc_id": doc_id,
-            "version": version,
-            "profile": "clauses",
-        },
-        "application/x-ndjson",
-        force=force,
-    )
+    try:
+        r2_client.put_bytes(
+            key,
+            data,
+            {
+                "content_type": "application/x-ndjson",
+                "doc_id": doc_id,
+                "version": version_id,
+                "profile": "clauses",
+            },
+            "application/x-ndjson",
+            force=force,
+        )
+    except ValueError as exc:  # write-once conflict (only reachable with force=False)
+        ctx.issue(
+            "warning",
+            "snapshot",
+            "snapshot_write_once_conflict",
+            f"clause snapshot {key} exists with different content and force=False; "
+            f"kept the existing object ({exc})",
+            doc_id=doc_id,
+        )
     return key

@@ -1,8 +1,10 @@
 """Task 5.2.1 — Stage 4b: LLM-based column role classification for register CSVs."""
 from __future__ import annotations
 
+import hashlib
+import json
 import logging
-from typing import TYPE_CHECKING
+from typing import TYPE_CHECKING, Any
 
 from pydantic import BaseModel
 
@@ -110,10 +112,16 @@ async def run_column_roles(
     provisional_roles: dict[str, str | None],
     sample_rows: list[dict[str, str]],
     ctx: "RunContext",
+    *,
+    session: Any | None = None,
 ) -> dict[str, str | None]:
     """For columns with null provisional roles, call the LLM to assign a ColumnRole.
 
     Returns updated roles dict: {column_name: role} for ALL columns (not just null ones).
+
+    With *session* the call is cache-backed (TDD §4.3): ``content_sha256`` is
+    the hash of the headers, provisional roles and sample rows sent to the
+    model, so an identical register re-uses the stored answer.
     """
     # 1. Filter to only the columns with null provisional roles
     null_columns = [col for col in headers if provisional_roles.get(col) is None]
@@ -131,7 +139,19 @@ async def run_column_roles(
         sample_rows=sample_rows[:5],
     )
 
-    # 4. Call the LLM
+    # 4. Call the LLM (cache-backed when a session is given)
+    content_sha256 = hashlib.sha256(
+        json.dumps(
+            {
+                "headers": headers,
+                "provisional_roles": {k: provisional_roles.get(k) for k in headers},
+                "sample_rows": sample_rows[:5],
+            },
+            sort_keys=True,
+            default=str,
+        ).encode("utf-8")
+    ).hexdigest()
+    hits_before = ctx.stats.get("llm_cache_hit", 0)
     result = await call_structured(
         "column_roles",
         doc_id,
@@ -139,7 +159,11 @@ async def run_column_roles(
         user_msg,
         ColumnRolesResponse,
         ctx,
+        content_sha256=content_sha256,
+        session=session,
     )
+    if ctx.stats.get("llm_cache_hit", 0) == hits_before:
+        ctx.count("llm_calls")
 
     # 5. Start with a copy of provisional_roles
     updated: dict[str, str | None] = dict(provisional_roles)

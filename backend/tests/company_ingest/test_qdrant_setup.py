@@ -42,8 +42,8 @@ _EXPECTED_KEYWORD_FIELDS = {
     "project",
 }
 
+# `is_current` is gone (task 5.6): presence in the collection means live.
 _EXPECTED_BOOL_FIELDS = {
-    "is_current",
     "assessable",
 }
 
@@ -212,31 +212,59 @@ def test_collection_name_constant():
 # Integration tests (require real Qdrant — skipped unless QDRANT_URL is set)
 # ---------------------------------------------------------------------------
 
+# A dedicated, disposable collection name — NEVER the real `COMPANY_COLLECTION`
+# ("company_clauses"). QDRANT_URL, when set, points at the real project, which
+# since task 9.2 holds real production data in "company_clauses". This fixture's
+# teardown unconditionally deletes whatever it created; pointed at the real name,
+# it would destroy the real seeded collection outright. Confirmed the hard way
+# during task 9.4 planning — fixed before this was ever run against production.
+_TEST_COLLECTION = "strata_test_qdrant_setup_integration"
+
+
 @pytest.fixture(scope="module")
 def qdrant_client():
-    """Real QdrantClient, skipped when QDRANT_URL is not set."""
+    """Real QdrantClient, skipped when QDRANT_URL is not set. Patches the module's
+    COMPANY_COLLECTION to an isolated, disposable name for the duration of these
+    tests, so ensure_company_collection (which reads the name from its own module
+    globals, not a parameter) never touches the real collection. Module-scoped, so
+    plain attribute set/restore is used instead of the (function-scoped) monkeypatch
+    fixture, which can't be requested from a module-scoped fixture."""
     qdrant_url = os.environ.get("QDRANT_URL")
     if not qdrant_url:
         pytest.skip("QDRANT_URL not set — skipping Qdrant integration tests")
 
     from qdrant_client import QdrantClient as _QC
 
+    import app.company_ingest.index.qdrant_setup as qdrant_setup_module
+    original = qdrant_setup_module.COMPANY_COLLECTION
+    qdrant_setup_module.COMPANY_COLLECTION = _TEST_COLLECTION
+
     api_key = os.environ.get("QDRANT_API_KEY", "")
     client = _QC(url=qdrant_url, api_key=api_key)
-    yield client
-
-    # Teardown: remove test collection if it was created.
     try:
-        client.delete_collection(COMPANY_COLLECTION)
-    except Exception:
-        pass
+        yield client
+    finally:
+        # Teardown: remove the disposable test collection only — never the real one.
+        try:
+            client.delete_collection(_TEST_COLLECTION)
+        except Exception:
+            pass
+        qdrant_setup_module.COMPANY_COLLECTION = original
+
+
+def test_integration_fixture_never_touches_the_real_collection_name():
+    """The real COMPANY_COLLECTION name must never appear in the disposable test
+    collection name, or a typo here could silently regress this fixture back into
+    deleting real production data."""
+    assert COMPANY_COLLECTION not in _TEST_COLLECTION
+    assert _TEST_COLLECTION != COMPANY_COLLECTION
 
 
 @pytest.mark.qdrant
 def test_integration_create_collection(qdrant_client):
     """Integration: ensure_company_collection creates the collection on a real cluster."""
     ensure_company_collection(qdrant_client, embed_dim=384)
-    assert qdrant_client.collection_exists(COMPANY_COLLECTION)
+    assert qdrant_client.collection_exists(_TEST_COLLECTION)
 
 
 @pytest.mark.qdrant

@@ -3,8 +3,9 @@ import * as React from "react";
 import type { DocRollup, DocumentMeta } from "@/lib/api/schemas";
 import { Breadcrumbs } from "@/components/shell/Breadcrumbs";
 import { RunSelector } from "@/components/shell/RunSelector";
-import { FutureCue } from "@/components/common/FutureCue";
+import { VersionHistoryButton } from "@/components/documents/versions";
 import { RouteChips } from "@/components/engine";
+import { UploadVersionDialog } from "@/components/documents/upload"; // task 8.1
 import { Skeleton } from "@/components/ui/skeleton";
 import { formatCount, formatDate, pluralize } from "@/lib/format";
 import { verdictLabel } from "@/lib/labels";
@@ -70,7 +71,9 @@ export function ReaderHeader({ doc, status, sentence, loading }: ReaderHeaderPro
                 <span className="font-mono text-[12.5px] text-ink-2">{doc.doc_id}</span>
                 <span className="inline-flex items-center gap-1">
                   Version {doc.version}
-                  <FutureCue id="version-history" side="bottom" />
+                  {/* Task 8.3: version history + approvals drawer. */}
+                  <VersionHistoryButton docId={doc.doc_id} doc={doc} />
+                  {/* /Task 8.3 */}
                 </span>
                 {dates
                   .filter(([, d]) => !!d)
@@ -91,6 +94,9 @@ export function ReaderHeader({ doc, status, sentence, loading }: ReaderHeaderPro
         </div>
         <div className="flex shrink-0 items-center gap-2 pt-1">
           <RunSelector />
+          {/* task 8.1: upload new version (begin) */}
+          {doc && <UploadVersionDialog docId={doc.doc_id} docTitle={doc.title} format={doc.doc_type === "Register" ? "register" : "docx"} />}
+          {/* task 8.1: upload new version (end) */}
         </div>
       </div>
       <div className="mt-4 flex flex-wrap items-start justify-between gap-x-10 gap-y-4">

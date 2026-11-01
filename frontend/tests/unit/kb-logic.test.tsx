@@ -86,12 +86,17 @@ describe("section helpers", () => {
   });
   it("groups citing documents by vertical in fixed order", () => {
     const d = (doc_id: string, vertical: string, cited: string[]) => ({ doc_id, vertical, cited_citations: cited, title: doc_id }) as unknown as DocumentMeta;
+    const verticals = [
+      { name: "Corporate Governance & Board", slug: "corporate-governance-board", description: "", sort_order: 1 },
+      { name: "Compliance & Ethics", slug: "compliance-ethics", description: "", sort_order: 2 },
+    ];
     const g = citedByDocuments(
-      [d("B", "policy-governance", ["x"]), d("A", "compliance-legal", ["x"]), d("C", "compliance-legal", ["y"])],
+      [d("B", "corporate-governance-board", ["x"]), d("A", "compliance-ethics", ["x"]), d("C", "compliance-ethics", ["y"])],
       "x",
+      verticals,
     );
-    expect(g.map((x) => x.name)).toEqual(["Compliance & Legal", "Policy & Governance Documents"]);
-    expect(g[0].docs.map((x) => x.doc_id)).toEqual(["A"]);
+    expect(g.map((x) => x.name)).toEqual(["Corporate Governance & Board", "Compliance & Ethics"]);
+    expect(g[0].docs.map((x) => x.doc_id)).toEqual(["B"]);
   });
 });
 

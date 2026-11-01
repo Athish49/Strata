@@ -1,18 +1,30 @@
 import { afterEach, describe, expect, it, vi } from "vitest";
+import type { ReactNode } from "react";
 import { cleanup, render, screen } from "@testing-library/react";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { buildRows, filterRows, groupByVertical, verdictSegments } from "@/components/documents/board/logic";
 import { VerticalSection } from "@/components/documents/board/VerticalSection";
 import { VerdictMiniBar } from "@/components/documents/board/VerdictMiniBar";
 import { DocStatusPill } from "@/components/documents/board/DocStatusPill";
 import type { DocRollup, DocumentMeta } from "@/lib/api/schemas";
-import { VERTICALS } from "@/lib/verticals";
+import { MOCK_VERTICALS } from "@/tests/support/mock-api/company";
 
 afterEach(cleanup);
 vi.mock("next/navigation", () => ({
   useSearchParams: () => new URLSearchParams("run=run_x"),
   usePathname: () => "/app/documents",
 }));
+
+// VerticalSection renders UploadDocumentDialog, which now calls useVerticals() (task 3.7).
+function wrapWithQuery(ui: ReactNode) {
+  const qc = new QueryClient({ defaultOptions: { queries: { retry: false } } });
+  return (
+    <QueryClientProvider client={qc}>
+      <TooltipProvider>{ui}</TooltipProvider>
+    </QueryClientProvider>
+  );
+}
 
 const person = { person_id: "P01", name: "Dana Reyes", title: "Director", department: "Legal", reports_to_id: null };
 const doc = (over: Partial<DocumentMeta>): DocumentMeta => ({
@@ -25,7 +37,7 @@ const doc = (over: Partial<DocumentMeta>): DocumentMeta => ({
   law_as_of: null,
   next_review: null,
   review_cycle: null,
-  vertical: "compliance-legal",
+  vertical: "compliance-ethics",
   owner: person,
   reviewer: person,
   approver: null,
@@ -50,22 +62,22 @@ describe("board logic", () => {
   const docs = [
     doc({ doc_id: "B", title: "Cleared doc" }),
     doc({ doc_id: "A", title: "Flagged doc" }),
-    doc({ doc_id: "S", title: "Sample", vertical: "financial-reporting", monitored: false }),
+    doc({ doc_id: "S", title: "Sample", vertical: "financial-compliance-reporting", monitored: false }),
   ];
   const rows = buildRows(docs, [rollup({ doc_id: "A" }), rollup({ doc_id: "B", status: "cleared", counts_by_verdict: {}, changes_considered: 0 })]);
 
   it("derives statuses per §11.5 and sorts needs-action first", () => {
-    const g = groupByVertical(rows);
+    const g = groupByVertical(rows, MOCK_VERTICALS);
     expect(g).toHaveLength(14);
-    expect(g.map((x) => x.vertical.slug)).toEqual(VERTICALS.map((v) => v.slug));
-    const cl = g[0];
+    expect(g.map((x) => x.vertical.slug)).toEqual(MOCK_VERTICALS.map((v) => v.slug));
+    const cl = g[1]; // compliance-ethics
     expect(cl.rows.map((r) => r.meta.doc_id)).toEqual(["A", "B"]);
     expect(cl.rows[0].status.key).toBe("action_needed");
     expect(cl.rows[1].status.reason).toBe("No cited section changed");
     expect(cl.needsAction).toBe(1);
-    expect(g[2].samples).toHaveLength(1);
-    expect(g[2].rows[0].status.key).toBe("not_monitored");
-    expect(g[3].rows).toHaveLength(0);
+    expect(g[3].samples).toHaveLength(1); // financial-compliance-reporting
+    expect(g[3].rows[0].status.key).toBe("not_monitored");
+    expect(g[2].rows).toHaveLength(0); // legal-contractual, untouched
   });
 
   it("treats a run without rollups as cleared with the no-candidates reason", () => {
@@ -76,7 +88,7 @@ describe("board logic", () => {
 
   it("filters by status, vertical and owner", () => {
     expect(filterRows(rows, { status: "action_needed" })).toHaveLength(1);
-    expect(filterRows(rows, { vertical: "financial-reporting" })).toHaveLength(1);
+    expect(filterRows(rows, { vertical: "financial-compliance-reporting" })).toHaveLength(1);
     expect(filterRows(rows, { owner: "P99" })).toHaveLength(0);
   });
 
@@ -91,12 +103,8 @@ describe("board components", () => {
       [doc({ doc_id: "RPL-CS-PRO-004" }), doc({ doc_id: "S-1", title: "Sample SOP", monitored: false })],
       [rollup({})],
     );
-    const group = groupByVertical(rows)[0];
-    render(
-      <TooltipProvider>
-        <VerticalSection group={group} />
-      </TooltipProvider>,
-    );
+    const group = groupByVertical(rows, MOCK_VERTICALS)[1];
+    render(wrapWithQuery(<VerticalSection group={group} />));
     expect(screen.getByRole("link", { name: "Disconnection Procedure" }).getAttribute("href")).toContain("/app/documents/RPL-CS-PRO-004");
     expect(screen.queryByRole("link", { name: "Sample SOP" })).toBeNull();
     expect(screen.getByText("Not monitored")).toBeTruthy();
@@ -104,14 +112,18 @@ describe("board components", () => {
     expect(screen.getByText(/1 needs attention/)).toBeTruthy();
   });
 
-  it("renders an empty vertical with a disabled add cue", () => {
-    render(
-      <TooltipProvider>
-        <VerticalSection group={groupByVertical([])[3]} />
-      </TooltipProvider>,
-    );
-    expect(screen.getByText(/No documents are filed under Revenue & Pricing yet/)).toBeTruthy();
-    expect(screen.getByText(/Add a document/).closest("button")?.getAttribute("aria-disabled")).toBe("true");
+  it("renders an empty vertical with a real (enabled) add control", () => {
+    render(wrapWithQuery(<VerticalSection group={groupByVertical([], MOCK_VERTICALS)[3]} />));
+    expect(screen.getByText(/No documents are filed under Financial Compliance & Reporting yet/)).toBeTruthy();
+    // Every one of the 14 verticals accepts uploads (the backend maps them all), including
+    // Financial Compliance & Reporting, which has no synthetic documents in this fixture.
+    expect(screen.getByRole("button", { name: "Add a document" })).toBeTruthy();
+    cleanup();
+    render(wrapWithQuery(<VerticalSection group={groupByVertical([], MOCK_VERTICALS)[4]} />));
+    expect(screen.getByText(/No documents are filed under Tax & Trade Compliance yet/)).toBeTruthy();
+    const add = screen.getByRole("button", { name: "Add a document" });
+    expect(add.getAttribute("aria-disabled")).toBeNull();
+    expect(add.getAttribute("aria-haspopup")).toBe("dialog");
   });
 
   it("mini bar and pill render text, nothing for no findings", () => {

@@ -1,5 +1,5 @@
 import type { CodeSection, DocumentMeta } from "@/lib/api/schemas";
-import { compareVerticals, verticalName } from "@/lib/verticals";
+import { compareVerticals, verticalName, type Vertical } from "@/lib/verticals";
 import { actionHref, sectionHref, sourceSystemOfCitation } from "./links";
 
 /** Cross-reference citations other than the section itself, de-duplicated, order kept. */
@@ -23,13 +23,21 @@ export function amendmentTarget(section: Pick<CodeSection, "source_system" | "am
 }
 
 /** Documents citing this section (exact citation match), grouped by vertical in the fixed vertical order. */
-export function citedByDocuments(docs: DocumentMeta[], citation: string): { vertical: string; name: string; docs: DocumentMeta[] }[] {
+export function citedByDocuments(
+  docs: DocumentMeta[],
+  citation: string,
+  verticals: readonly Vertical[],
+): { vertical: string; name: string; docs: DocumentMeta[] }[] {
   const by = new Map<string, DocumentMeta[]>();
   for (const d of docs) {
     if (!(d.cited_citations ?? []).includes(citation)) continue;
     by.set(d.vertical, [...(by.get(d.vertical) ?? []), d]);
   }
   return [...by.entries()]
-    .sort(([a], [b]) => compareVerticals(a, b))
-    .map(([vertical, list]) => ({ vertical, name: verticalName(vertical), docs: list.sort((x, y) => x.doc_id.localeCompare(y.doc_id)) }));
+    .sort(([a], [b]) => compareVerticals(verticals, a, b))
+    .map(([vertical, list]) => ({
+      vertical,
+      name: verticalName(verticals, vertical),
+      docs: list.sort((x, y) => x.doc_id.localeCompare(y.doc_id)),
+    }));
 }

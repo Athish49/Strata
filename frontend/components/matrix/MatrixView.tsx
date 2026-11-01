@@ -2,7 +2,7 @@
 import * as React from "react";
 import { parseAsBoolean, useQueryState } from "nuqs";
 import { Check } from "lucide-react";
-import { useMatrix } from "@/lib/api/queries";
+import { useMatrix, useVerticals } from "@/lib/api/queries";
 import { useRunContext } from "@/lib/run-context";
 import { pluralize } from "@/lib/format";
 import { verdictToken } from "@/lib/verdict-tokens";
@@ -64,6 +64,7 @@ export function MatrixView() {
   const noise = !!noiseParam;
   const matrix = useMatrix(runId, { include_noise: noise });
   const data = matrix.data;
+  const verticals = useVerticals().data ?? [];
 
   const stats = React.useMemo(() => {
     if (!data) return null;
@@ -102,6 +103,7 @@ export function MatrixView() {
   } else {
     body = (
       <MatrixGrid
+        verticals={verticals}
         docs={data.docs}
         changes={data.changes}
         cells={data.cells}

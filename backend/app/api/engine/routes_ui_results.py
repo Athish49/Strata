@@ -23,6 +23,7 @@ from app.api.engine.routes_ui_common import (
     resolve_run,
 )
 from app.db import get_db
+from app.engine.footprint import VERSION_SCOPE
 from app.engine.quotes import locate_quote
 
 router = APIRouter(tags=["engine-ui"])
@@ -162,8 +163,12 @@ async def _via_rows(db: AsyncSession, company_id: str, details: list) -> dict[st
     if not ids:
         return {}
     rows = await _all(db, """
-        SELECT DISTINCT ON (clause_id) clause_id, doc_id, unit_kind FROM company.clauses
-        WHERE company_id = :co AND clause_id = ANY(:ids) ORDER BY clause_id, ordinal""",
+        SELECT DISTINCT ON (c.clause_id) c.clause_id, c.doc_id, c.unit_kind
+        FROM company.clauses c
+        JOIN company.company_documents d ON d.company_id = c.company_id AND d.doc_id = c.doc_id
+        WHERE c.company_id = :co AND c.clause_id = ANY(:ids)
+          AND """ + VERSION_SCOPE + """
+        ORDER BY c.clause_id, c.ordinal""",
                       co=company_id, ids=list(ids))
     return {r["clause_id"]: r for r in rows}
 

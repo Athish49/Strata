@@ -31,6 +31,17 @@ from typing import Optional
 # Status helpers
 # --------------------------------------------------------------------------- #
 
+#: Fallback used when a document version's own ``law_as_of`` column is
+#: unavailable (e.g. an orphaned clause, or a version row that predates the
+#: resolver's write-back).  All current corpus doc versions have
+#: ``law_as_of`` equal to this date (KB snapshot "S1").  The CFR S1 snapshot
+#: in ``public.code_sections`` is dated a couple of days after this, which
+#: is why CFR section/part lookups allow a 14-day window between
+#: ``law_as_of`` and ``snapshot_date`` rather than matching exactly.  Single
+#: definition point — ``resolve_citations.py`` and ``service.py`` import it
+#: from here; do not re-literal it there.
+DEFAULT_LAW_AS_OF: date = date.fromisoformat("2024-12-31")
+
 # Statuses we consider "done" — safe to skip on a re-run.
 _TERMINAL = frozenset(
     {
@@ -139,13 +150,13 @@ def resolve_all_citations(conn, dry_run: bool = False) -> dict:
     # ------------------------------------------------------------------ #
     # 2. Determine the fallback law_as_of for orphaned clauses            #
     #    (clauses whose version_id has no row in document_versions).      #
-    #    All existing doc versions have law_as_of = 2024-12-31 (S1), so  #
-    #    we default to that date for orphans.                             #
+    #    All existing doc versions have law_as_of = DEFAULT_LAW_AS_OF    #
+    #    (S1), so we default to that date for orphans.                   #
     # ------------------------------------------------------------------ #
     cur.execute(
         "SELECT MIN(law_as_of) FROM company.document_versions"
     )
-    fallback_law_as_of: date = cur.fetchone()[0] or date(2024, 12, 31)
+    fallback_law_as_of: date = cur.fetchone()[0] or DEFAULT_LAW_AS_OF
 
     # ------------------------------------------------------------------ #
     # 3. Fetch rows to process (skip already-terminal, skip external_std) #
@@ -283,8 +294,8 @@ def resolve_all_citations(conn, dry_run: bool = False) -> dict:
             elif title_str not in cfr_titles:
                 status = "out_of_scope_title"
             elif section_str is not None:
-                # Section-level match.  CFR S1 snapshot is 2025-01-02 while
-                # law_as_of is 2024-12-31, so we allow a 14-day window.
+                # Section-level match.  The CFR S1 snapshot is a couple of
+                # days after DEFAULT_LAW_AS_OF, so we allow a 14-day window.
                 cfr_window = law_as_of + timedelta(days=14)
                 cur.execute(
                     """

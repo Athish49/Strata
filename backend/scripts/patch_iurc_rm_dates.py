@@ -30,11 +30,7 @@ from pathlib import Path
 # Allow running from repo root or scripts/ directory
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
-from dotenv import load_dotenv
 from sqlalchemy import text
-
-load_dotenv()
-
 
 PATCHES = [
     {
@@ -96,4 +92,10 @@ async def main() -> None:
 
 
 if __name__ == "__main__":
+    # Loaded here, not at import time, so importing this module's pure
+    # functions can never leak production secrets into the process env.
+    from dotenv import load_dotenv
+
+    load_dotenv()
+
     asyncio.run(main())

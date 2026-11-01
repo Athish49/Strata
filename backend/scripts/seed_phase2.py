@@ -7,9 +7,6 @@ import sys
 import os
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from dotenv import load_dotenv
-load_dotenv()
-
 from app.db import AsyncSessionLocal
 from app.regulatory.ingestion.pipeline import run_ingestion
 
@@ -86,4 +83,10 @@ async def main():
         print(f"  → {fr_result['skipped']} FR Q2 actions skipped (already exist)")
 
 if __name__ == "__main__":
+    # Loaded here, not at import time, so importing this module's pure
+    # functions can never leak production secrets into the process env.
+    from dotenv import load_dotenv
+
+    load_dotenv()
+
     asyncio.run(main())

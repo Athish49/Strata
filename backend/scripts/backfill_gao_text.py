@@ -30,10 +30,6 @@ import os
 # Allow running from repo root or scripts/ directory
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 
-from dotenv import load_dotenv
-
-load_dotenv()
-
 import httpx
 from sqlalchemy import select, update
 
@@ -189,4 +185,10 @@ async def main() -> None:
 
 
 if __name__ == "__main__":
+    # Loaded here, not at import time, so importing this module's pure
+    # functions can never leak production secrets into the process env.
+    from dotenv import load_dotenv
+
+    load_dotenv()
+
     asyncio.run(main())

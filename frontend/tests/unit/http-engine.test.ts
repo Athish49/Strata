@@ -13,6 +13,7 @@ vi.mock("../../lib/api/http/company", () => ({
 import { companyHttp } from "../../lib/api/http/company";
 import { engineHttp } from "../../lib/api/http/engine";
 import { ApiError } from "../../lib/api/http/shared";
+import { resetActorStoreForTests, setActingPersonId } from "../../lib/api/actor-store";
 
 const person = (id: string) => ({ person_id: id, name: id, title: "t", department: "d", reports_to_id: null });
 const stats = {
@@ -205,6 +206,39 @@ describe("submitReview", () => {
     await engineHttp.submitReview("f3", "accept", undefined, "P09");
     expect(calls.map((c) => c.method)).toEqual(["POST", "GET"]);
     expect(calls[0].body).toMatchObject({ person_id: "P09" });
+  });
+});
+
+describe("submitReview defaults to the acting person", () => {
+  beforeEach(() => {
+    localStorage.clear();
+    resetActorStoreForTests();
+  });
+  afterEach(() => {
+    localStorage.clear();
+    resetActorStoreForTests();
+  });
+  it("uses the selected actor and skips the routed-reviewer pre-fetch", async () => {
+    setActingPersonId("P07");
+    routes["POST /engine/findings/f4/reviews"] = () => ({ body: {} });
+    routes["GET /engine/ui/findings/f4"] = () => ({ body: finding("f4") });
+    await engineHttp.submitReview("f4", "accept");
+    expect(calls.map((c) => c.method)).toEqual(["POST", "GET"]);
+    expect(calls[0].body).toMatchObject({ action: "accept", person_id: "P07" });
+  });
+  it("an explicit person_id still wins over the actor", async () => {
+    setActingPersonId("P07");
+    routes["POST /engine/findings/f5/reviews"] = () => ({ body: {} });
+    routes["GET /engine/ui/findings/f5"] = () => ({ body: finding("f5") });
+    await engineHttp.submitReview("f5", "accept", undefined, "P09");
+    expect(calls[0].body).toMatchObject({ person_id: "P09" });
+  });
+  it("with no actor the behaviour is unchanged (pre-fetch, routed reviewer)", async () => {
+    routes["GET /engine/ui/findings/f6"] = () => ({ body: finding("f6") });
+    routes["POST /engine/findings/f6/reviews"] = () => ({ body: {} });
+    await engineHttp.submitReview("f6", "accept");
+    expect(calls.map((c) => c.method)).toEqual(["GET", "POST", "GET"]);
+    expect(calls[1].body).toMatchObject({ person_id: "P02" });
   });
 });
 

@@ -6,10 +6,12 @@ import { ErrorState } from "@/components/common/ErrorState";
 import { EmptyState } from "@/components/common/EmptyState";
 import { FutureCue } from "@/components/common/FutureCue";
 import { InfoStrip } from "@/components/common/InfoStrip";
+import { UploadDocumentDialog } from "@/components/documents/upload";
 import { Skeleton } from "@/components/ui/skeleton";
 import { DOC_STATUS_LABELS } from "@/lib/labels";
 import { PAGE_CUES } from "@/lib/future-features";
-import { VERTICALS } from "@/lib/verticals";
+import { UNCLASSIFIED_SLUG, verticalGroups } from "@/lib/verticals";
+import { useVerticals } from "@/lib/api/queries";
 import { VerticalSection } from "./VerticalSection";
 import { useBoardRows } from "./useBoardRows";
 import { FilterSelect } from "./FilterSelect";
@@ -17,6 +19,7 @@ import { filterRows, groupByVertical, needsAction, needsActionSentence, normaliz
 
 export function DocumentsBoard() {
   const { docs, rows, isLoading, isError, statusError, refetch } = useBoardRows();
+  const verticals = useVerticals().data ?? [];
   const [statusParam, setStatus] = useQueryState("status", parseAsString);
   const [vertical, setVertical] = useQueryState("vertical", parseAsString);
   const [owner, setOwner] = useQueryState("owner", parseAsString);
@@ -24,10 +27,11 @@ export function DocumentsBoard() {
   const filtered = !!(status || vertical || owner);
 
   const groups = React.useMemo(() => {
-    const g = groupByVertical(filterRows(rows, { status, vertical, owner }));
-    // A filter hides verticals with no matches; unfiltered, all 14 always show (fixed order).
+    const g = groupByVertical(filterRows(rows, { status, vertical, owner }), verticals);
+    // A filter hides verticals with no matches; unfiltered, all 14 always show (fixed order), plus
+    // "Unclassified" when it has documents. Retired documents show only under the Retired status filter.
     return filtered ? g.filter((x) => x.rows.length > 0) : g;
-  }, [rows, status, vertical, owner, filtered]);
+  }, [rows, status, vertical, owner, filtered, verticals]);
 
   const attention = rows.filter((r) => !r.pending && needsAction(r)).length;
   const sentence = needsActionSentence(attention);
@@ -43,6 +47,8 @@ export function DocumentsBoard() {
             {PAGE_CUES.documents.map((id) => (
               <FutureCue key={id} id={id} />
             ))}
+            {/* No vertical at this entry point: the dialog asks for one (pre-filled from the vertical filter). */}
+            <UploadDocumentDialog defaultVertical={vertical} />
           </>
         }
       />
@@ -85,7 +91,9 @@ export function DocumentsBoard() {
               allLabel="All verticals"
               value={vertical}
               onChange={(v) => void setVertical(v)}
-              options={VERTICALS.map((v) => ({ value: v.slug, label: v.name }))}
+              options={verticalGroups(verticals)
+                .filter((v) => v.slug !== UNCLASSIFIED_SLUG || docs.some((d) => d.vertical === UNCLASSIFIED_SLUG))
+                .map((v) => ({ value: v.slug, label: v.name }))}
             />
             <FilterSelect
               label="Owner"

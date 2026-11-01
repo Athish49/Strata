@@ -18,6 +18,7 @@ import {
   type Run,
   type Scenario,
 } from "../schemas";
+import { getActingPersonId } from "../actor-store";
 import { companyHttp } from "./company";
 import { getJson, postJson, qs, seg, sleep } from "./shared";
 
@@ -185,7 +186,8 @@ export const engineHttp: EngineApi = {
 
   async submitReview(finding_id, decision, note, person_id) {
     if (decision === "reject" && !(note ?? "").trim()) throw new Error("A note is required to reject");
-    let reviewer = person_id;
+    // Explicit id, else the "acting as" person, else (unchanged) the finding's routed reviewer.
+    let reviewer = person_id || getActingPersonId() || undefined;
     if (!reviewer) {
       const finding = await getFindingOrNull(finding_id);
       if (!finding) throw new Error("Finding not found");

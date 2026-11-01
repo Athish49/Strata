@@ -1,7 +1,6 @@
 """Tests for task 3.2.1: Register-row segmenter (P2).
 
 Unit tests use inline CSV fixtures (via tmp_path).
-Corpus tests are marked @pytest.mark.corpus and require real data files.
 """
 from __future__ import annotations
 
@@ -12,7 +11,7 @@ from pathlib import Path
 import pytest
 
 from app.company_ingest.constants import ColumnRole
-from app.company_ingest.parse.register_segmenter import segment_register
+from app.company_ingest.parse.register_segmenter import segment_register_text
 from app.company_ingest.run_context import RunContext
 
 
@@ -54,7 +53,7 @@ class TestBasicParsing:
             ],
         )
         ctx = make_ctx()
-        clauses, _ = segment_register("ver-1", "DOC-001", csv_file, "Test Register", ctx)
+        clauses, _ = segment_register_text("ver-1", "DOC-001", csv_file.read_text(encoding="utf-8-sig"), "Test Register", ctx, table_id=csv_file.stem, source_label=str(csv_file))
         assert len(clauses) == 3
 
     def test_clause_id_format(self, tmp_path: Path) -> None:
@@ -64,7 +63,7 @@ class TestBasicParsing:
             [{"obligation_id": "OBL-2024-0001", "title": "First"}],
         )
         ctx = make_ctx()
-        clauses, _ = segment_register("ver-1", "RPL-CMP-REG-001", csv_file, "Compliance Register", ctx)
+        clauses, _ = segment_register_text("ver-1", "RPL-CMP-REG-001", csv_file.read_text(encoding="utf-8-sig"), "Compliance Register", ctx, table_id=csv_file.stem, source_label=str(csv_file))
         assert clauses[0].clause_id == "RPL-CMP-REG-001:OBL-2024-0001"
 
     def test_local_id_is_first_column_value(self, tmp_path: Path) -> None:
@@ -73,7 +72,7 @@ class TestBasicParsing:
             [{"obligation_id": "OBL-2024-0001", "title": "First"}],
         )
         ctx = make_ctx()
-        clauses, _ = segment_register("ver-1", "RPL-CMP-REG-001", csv_file, "Doc", ctx)
+        clauses, _ = segment_register_text("ver-1", "RPL-CMP-REG-001", csv_file.read_text(encoding="utf-8-sig"), "Doc", ctx, table_id=csv_file.stem, source_label=str(csv_file))
         assert clauses[0].local_id == "OBL-2024-0001"
 
     def test_row_cells_contains_all_columns(self, tmp_path: Path) -> None:
@@ -84,7 +83,7 @@ class TestBasicParsing:
             fieldnames=fieldnames,
         )
         ctx = make_ctx()
-        clauses, _ = segment_register("ver-1", "DOC-001", csv_file, "Doc", ctx)
+        clauses, _ = segment_register_text("ver-1", "DOC-001", csv_file.read_text(encoding="utf-8-sig"), "Doc", ctx, table_id=csv_file.stem, source_label=str(csv_file))
         assert set(clauses[0].row_cells.keys()) == {"obligation_id", "citation", "title", "status"}
 
     def test_text_raw_nonempty_cells_only(self, tmp_path: Path) -> None:
@@ -95,7 +94,7 @@ class TestBasicParsing:
             fieldnames=["obligation_id", "citation", "title", "notes"],
         )
         ctx = make_ctx()
-        clauses, _ = segment_register("ver-1", "DOC-001", csv_file, "Doc", ctx)
+        clauses, _ = segment_register_text("ver-1", "DOC-001", csv_file.read_text(encoding="utf-8-sig"), "Doc", ctx, table_id=csv_file.stem, source_label=str(csv_file))
         text = clauses[0].text_raw
         assert "obligation_id: OBL-001" in text
         assert "title: My Title" in text
@@ -110,7 +109,7 @@ class TestBasicParsing:
             [{"event_id": "EVT-001", "title": "Annual Review"}],
         )
         ctx = make_ctx()
-        clauses, _ = segment_register("ver-1", "DOC-001", csv_file, "Doc", ctx)
+        clauses, _ = segment_register_text("ver-1", "DOC-001", csv_file.read_text(encoding="utf-8-sig"), "Doc", ctx, table_id=csv_file.stem, source_label=str(csv_file))
         lines = clauses[0].text_raw.split("\n")
         assert lines[0] == "event_id: EVT-001"
         assert lines[1] == "title: Annual Review"
@@ -118,44 +117,44 @@ class TestBasicParsing:
     def test_char_start_is_zero(self, tmp_path: Path) -> None:
         csv_file = write_csv(tmp_path / "reg.csv", [{"rrs_id": "RRS-001", "description": "Desc"}])
         ctx = make_ctx()
-        clauses, _ = segment_register("ver-1", "DOC-001", csv_file, "Doc", ctx)
+        clauses, _ = segment_register_text("ver-1", "DOC-001", csv_file.read_text(encoding="utf-8-sig"), "Doc", ctx, table_id=csv_file.stem, source_label=str(csv_file))
         assert clauses[0].char_start == 0
 
     def test_char_end_equals_len_text_raw(self, tmp_path: Path) -> None:
         csv_file = write_csv(tmp_path / "reg.csv", [{"rrs_id": "RRS-001", "description": "Desc value"}])
         ctx = make_ctx()
-        clauses, _ = segment_register("ver-1", "DOC-001", csv_file, "Doc", ctx)
+        clauses, _ = segment_register_text("ver-1", "DOC-001", csv_file.read_text(encoding="utf-8-sig"), "Doc", ctx, table_id=csv_file.stem, source_label=str(csv_file))
         unit = clauses[0]
         assert unit.char_end == len(unit.text_raw)
 
     def test_table_id_is_file_stem(self, tmp_path: Path) -> None:
         csv_file = write_csv(tmp_path / "compliance_register_2024-12-31.csv", [{"obligation_id": "OBL-001"}])
         ctx = make_ctx()
-        clauses, _ = segment_register("ver-1", "DOC-001", csv_file, "Doc", ctx)
+        clauses, _ = segment_register_text("ver-1", "DOC-001", csv_file.read_text(encoding="utf-8-sig"), "Doc", ctx, table_id=csv_file.stem, source_label=str(csv_file))
         assert clauses[0].table_id == "compliance_register_2024-12-31"
 
     def test_heading_path_is_doc_title_and_table_id(self, tmp_path: Path) -> None:
         csv_file = write_csv(tmp_path / "calendar_events_2025.csv", [{"event_id": "EVT-001"}])
         ctx = make_ctx()
-        clauses, _ = segment_register("ver-1", "DOC-001", csv_file, "Calendar Events 2025", ctx)
+        clauses, _ = segment_register_text("ver-1", "DOC-001", csv_file.read_text(encoding="utf-8-sig"), "Calendar Events 2025", ctx, table_id=csv_file.stem, source_label=str(csv_file))
         assert clauses[0].heading_path == ["Calendar Events 2025", "calendar_events_2025"]
 
     def test_unit_kind_is_register_row(self, tmp_path: Path) -> None:
         csv_file = write_csv(tmp_path / "reg.csv", [{"obligation_id": "OBL-001"}])
         ctx = make_ctx()
-        clauses, _ = segment_register("ver-1", "DOC-001", csv_file, "Doc", ctx)
+        clauses, _ = segment_register_text("ver-1", "DOC-001", csv_file.read_text(encoding="utf-8-sig"), "Doc", ctx, table_id=csv_file.stem, source_label=str(csv_file))
         assert clauses[0].unit_kind == "register_row"
 
     def test_section_kind_is_procedure(self, tmp_path: Path) -> None:
         csv_file = write_csv(tmp_path / "reg.csv", [{"obligation_id": "OBL-001"}])
         ctx = make_ctx()
-        clauses, _ = segment_register("ver-1", "DOC-001", csv_file, "Doc", ctx)
+        clauses, _ = segment_register_text("ver-1", "DOC-001", csv_file.read_text(encoding="utf-8-sig"), "Doc", ctx, table_id=csv_file.stem, source_label=str(csv_file))
         assert clauses[0].section_kind == "procedure"
 
     def test_parent_clause_id_is_none(self, tmp_path: Path) -> None:
         csv_file = write_csv(tmp_path / "reg.csv", [{"obligation_id": "OBL-001"}])
         ctx = make_ctx()
-        clauses, _ = segment_register("ver-1", "DOC-001", csv_file, "Doc", ctx)
+        clauses, _ = segment_register_text("ver-1", "DOC-001", csv_file.read_text(encoding="utf-8-sig"), "Doc", ctx, table_id=csv_file.stem, source_label=str(csv_file))
         assert clauses[0].parent_clause_id is None
 
     def test_ordinal_is_1indexed_row_number(self, tmp_path: Path) -> None:
@@ -168,7 +167,7 @@ class TestBasicParsing:
             ],
         )
         ctx = make_ctx()
-        clauses, _ = segment_register("ver-1", "DOC-001", csv_file, "Doc", ctx)
+        clauses, _ = segment_register_text("ver-1", "DOC-001", csv_file.read_text(encoding="utf-8-sig"), "Doc", ctx, table_id=csv_file.stem, source_label=str(csv_file))
         assert [c.ordinal for c in clauses] == [1, 2, 3]
 
     def test_line_start_is_1indexed_row_number(self, tmp_path: Path) -> None:
@@ -180,7 +179,7 @@ class TestBasicParsing:
             ],
         )
         ctx = make_ctx()
-        clauses, _ = segment_register("ver-1", "DOC-001", csv_file, "Doc", ctx)
+        clauses, _ = segment_register_text("ver-1", "DOC-001", csv_file.read_text(encoding="utf-8-sig"), "Doc", ctx, table_id=csv_file.stem, source_label=str(csv_file))
         assert clauses[0].line_start == 1
         assert clauses[1].line_start == 2
 
@@ -190,14 +189,14 @@ class TestBasicParsing:
             [{"obligation_id": f"OBL-{i:03d}"} for i in range(10)],
         )
         ctx = make_ctx()
-        clauses, _ = segment_register("ver-1", "DOC-001", csv_file, "Doc", ctx)
+        clauses, _ = segment_register_text("ver-1", "DOC-001", csv_file.read_text(encoding="utf-8-sig"), "Doc", ctx, table_id=csv_file.stem, source_label=str(csv_file))
         ids = [c.clause_id for c in clauses]
         assert len(ids) == len(set(ids))
 
     def test_version_id_and_doc_id_propagated(self, tmp_path: Path) -> None:
         csv_file = write_csv(tmp_path / "reg.csv", [{"obligation_id": "OBL-001"}])
         ctx = make_ctx()
-        clauses, _ = segment_register("my-ver-id", "MY-DOC", csv_file, "Doc", ctx)
+        clauses, _ = segment_register_text("my-ver-id", "MY-DOC", csv_file.read_text(encoding="utf-8-sig"), "Doc", ctx, table_id=csv_file.stem, source_label=str(csv_file))
         assert clauses[0].version_id == "my-ver-id"
         assert clauses[0].doc_id == "MY-DOC"
 
@@ -208,7 +207,7 @@ class TestColumnRoles:
     def test_first_column_gets_id_role(self, tmp_path: Path) -> None:
         csv_file = write_csv(tmp_path / "reg.csv", [{"obligation_id": "OBL-001", "title": "T"}])
         ctx = make_ctx()
-        _, roles = segment_register("ver-1", "DOC-001", csv_file, "Doc", ctx)
+        _, roles = segment_register_text("ver-1", "DOC-001", csv_file.read_text(encoding="utf-8-sig"), "Doc", ctx, table_id=csv_file.stem, source_label=str(csv_file))
         assert roles["obligation_id"] == ColumnRole.ID
 
     def test_citation_column_gets_citation_role(self, tmp_path: Path) -> None:
@@ -217,7 +216,7 @@ class TestColumnRoles:
             [{"obligation_id": "OBL-001", "citation": "§1.1"}],
         )
         ctx = make_ctx()
-        _, roles = segment_register("ver-1", "DOC-001", csv_file, "Doc", ctx)
+        _, roles = segment_register_text("ver-1", "DOC-001", csv_file.read_text(encoding="utf-8-sig"), "Doc", ctx, table_id=csv_file.stem, source_label=str(csv_file))
         assert roles["citation"] == ColumnRole.CITATION
 
     def test_column_containing_citation_gets_citation_role(self, tmp_path: Path) -> None:
@@ -227,7 +226,7 @@ class TestColumnRoles:
             [{"event_id": "EVT-001", "reg_citation": "§2.3"}],
         )
         ctx = make_ctx()
-        _, roles = segment_register("ver-1", "DOC-001", csv_file, "Doc", ctx)
+        _, roles = segment_register_text("ver-1", "DOC-001", csv_file.read_text(encoding="utf-8-sig"), "Doc", ctx, table_id=csv_file.stem, source_label=str(csv_file))
         assert roles["reg_citation"] == ColumnRole.CITATION
 
     def test_owner_id_column_gets_owner_person_role(self, tmp_path: Path) -> None:
@@ -236,7 +235,7 @@ class TestColumnRoles:
             [{"obligation_id": "OBL-001", "accountable_owner_id": "P001"}],
         )
         ctx = make_ctx()
-        _, roles = segment_register("ver-1", "DOC-001", csv_file, "Doc", ctx)
+        _, roles = segment_register_text("ver-1", "DOC-001", csv_file.read_text(encoding="utf-8-sig"), "Doc", ctx, table_id=csv_file.stem, source_label=str(csv_file))
         assert roles["accountable_owner_id"] == ColumnRole.OWNER_PERSON
 
     def test_date_column_gets_date_role(self, tmp_path: Path) -> None:
@@ -245,7 +244,7 @@ class TestColumnRoles:
             [{"event_id": "EVT-001", "due_date": "2025-01-01"}],
         )
         ctx = make_ctx()
-        _, roles = segment_register("ver-1", "DOC-001", csv_file, "Doc", ctx)
+        _, roles = segment_register_text("ver-1", "DOC-001", csv_file.read_text(encoding="utf-8-sig"), "Doc", ctx, table_id=csv_file.stem, source_label=str(csv_file))
         assert roles["due_date"] == ColumnRole.DATE
 
     def test_implementation_clause_gets_reference_list_role(self, tmp_path: Path) -> None:
@@ -254,7 +253,7 @@ class TestColumnRoles:
             [{"obligation_id": "OBL-001", "implementation_clause": "§3.1"}],
         )
         ctx = make_ctx()
-        _, roles = segment_register("ver-1", "DOC-001", csv_file, "Doc", ctx)
+        _, roles = segment_register_text("ver-1", "DOC-001", csv_file.read_text(encoding="utf-8-sig"), "Doc", ctx, table_id=csv_file.stem, source_label=str(csv_file))
         assert roles["implementation_clause"] == ColumnRole.REFERENCE_LIST
 
     def test_wave2_clause_ref_gets_reference_list_role(self, tmp_path: Path) -> None:
@@ -263,7 +262,7 @@ class TestColumnRoles:
             [{"rrs_id": "RRS-001", "wave2_clause_ref": "§4.2"}],
         )
         ctx = make_ctx()
-        _, roles = segment_register("ver-1", "DOC-001", csv_file, "Doc", ctx)
+        _, roles = segment_register_text("ver-1", "DOC-001", csv_file.read_text(encoding="utf-8-sig"), "Doc", ctx, table_id=csv_file.stem, source_label=str(csv_file))
         assert roles["wave2_clause_ref"] == ColumnRole.REFERENCE_LIST
 
     def test_implementation_doc_gets_reference_list_role(self, tmp_path: Path) -> None:
@@ -272,7 +271,7 @@ class TestColumnRoles:
             [{"obligation_id": "OBL-001", "implementation_doc": "POL-001"}],
         )
         ctx = make_ctx()
-        _, roles = segment_register("ver-1", "DOC-001", csv_file, "Doc", ctx)
+        _, roles = segment_register_text("ver-1", "DOC-001", csv_file.read_text(encoding="utf-8-sig"), "Doc", ctx, table_id=csv_file.stem, source_label=str(csv_file))
         assert roles["implementation_doc"] == ColumnRole.REFERENCE_LIST
 
     def test_implementation_docs_gets_reference_list_role(self, tmp_path: Path) -> None:
@@ -281,7 +280,7 @@ class TestColumnRoles:
             [{"rrs_id": "RRS-001", "implementation_docs": "POL-001, POL-002"}],
         )
         ctx = make_ctx()
-        _, roles = segment_register("ver-1", "DOC-001", csv_file, "Doc", ctx)
+        _, roles = segment_register_text("ver-1", "DOC-001", csv_file.read_text(encoding="utf-8-sig"), "Doc", ctx, table_id=csv_file.stem, source_label=str(csv_file))
         assert roles["implementation_docs"] == ColumnRole.REFERENCE_LIST
 
     def test_status_column_gets_status_role(self, tmp_path: Path) -> None:
@@ -290,7 +289,7 @@ class TestColumnRoles:
             [{"obligation_id": "OBL-001", "status": "active"}],
         )
         ctx = make_ctx()
-        _, roles = segment_register("ver-1", "DOC-001", csv_file, "Doc", ctx)
+        _, roles = segment_register_text("ver-1", "DOC-001", csv_file.read_text(encoding="utf-8-sig"), "Doc", ctx, table_id=csv_file.stem, source_label=str(csv_file))
         assert roles["status"] == ColumnRole.STATUS
 
     def test_priority_column_gets_enum_role(self, tmp_path: Path) -> None:
@@ -299,7 +298,7 @@ class TestColumnRoles:
             [{"obligation_id": "OBL-001", "priority": "high"}],
         )
         ctx = make_ctx()
-        _, roles = segment_register("ver-1", "DOC-001", csv_file, "Doc", ctx)
+        _, roles = segment_register_text("ver-1", "DOC-001", csv_file.read_text(encoding="utf-8-sig"), "Doc", ctx, table_id=csv_file.stem, source_label=str(csv_file))
         assert roles["priority"] == ColumnRole.ENUM
 
     def test_description_gets_summary_text_role(self, tmp_path: Path) -> None:
@@ -308,7 +307,7 @@ class TestColumnRoles:
             [{"obligation_id": "OBL-001", "description": "Some text"}],
         )
         ctx = make_ctx()
-        _, roles = segment_register("ver-1", "DOC-001", csv_file, "Doc", ctx)
+        _, roles = segment_register_text("ver-1", "DOC-001", csv_file.read_text(encoding="utf-8-sig"), "Doc", ctx, table_id=csv_file.stem, source_label=str(csv_file))
         assert roles["description"] == ColumnRole.SUMMARY_TEXT
 
     def test_title_gets_summary_text_role(self, tmp_path: Path) -> None:
@@ -317,7 +316,7 @@ class TestColumnRoles:
             [{"obligation_id": "OBL-001", "title": "A Title"}],
         )
         ctx = make_ctx()
-        _, roles = segment_register("ver-1", "DOC-001", csv_file, "Doc", ctx)
+        _, roles = segment_register_text("ver-1", "DOC-001", csv_file.read_text(encoding="utf-8-sig"), "Doc", ctx, table_id=csv_file.stem, source_label=str(csv_file))
         assert roles["title"] == ColumnRole.SUMMARY_TEXT
 
     def test_unknown_column_gets_none_role(self, tmp_path: Path) -> None:
@@ -326,7 +325,7 @@ class TestColumnRoles:
             [{"obligation_id": "OBL-001", "some_weird_column": "value"}],
         )
         ctx = make_ctx()
-        _, roles = segment_register("ver-1", "DOC-001", csv_file, "Doc", ctx)
+        _, roles = segment_register_text("ver-1", "DOC-001", csv_file.read_text(encoding="utf-8-sig"), "Doc", ctx, table_id=csv_file.stem, source_label=str(csv_file))
         assert roles["some_weird_column"] is None
 
     def test_all_headers_present_in_roles(self, tmp_path: Path) -> None:
@@ -337,7 +336,7 @@ class TestColumnRoles:
             fieldnames=fieldnames,
         )
         ctx = make_ctx()
-        _, roles = segment_register("ver-1", "DOC-001", csv_file, "Doc", ctx)
+        _, roles = segment_register_text("ver-1", "DOC-001", csv_file.read_text(encoding="utf-8-sig"), "Doc", ctx, table_id=csv_file.stem, source_label=str(csv_file))
         assert set(roles.keys()) == set(fieldnames)
 
 
@@ -348,7 +347,7 @@ class TestEdgeCases:
         csv_file = tmp_path / "empty.csv"
         csv_file.write_text("obligation_id,title\n", encoding="utf-8")
         ctx = make_ctx()
-        clauses, roles = segment_register("ver-1", "DOC-001", csv_file, "Doc", ctx)
+        clauses, roles = segment_register_text("ver-1", "DOC-001", csv_file.read_text(encoding="utf-8-sig"), "Doc", ctx, table_id=csv_file.stem, source_label=str(csv_file))
         assert clauses == []
         assert "obligation_id" in roles
 
@@ -359,7 +358,7 @@ class TestEdgeCases:
             fieldnames=["obligation_id", "title", "notes"],
         )
         ctx = make_ctx()
-        clauses, _ = segment_register("ver-1", "DOC-001", csv_file, "Doc", ctx)
+        clauses, _ = segment_register_text("ver-1", "DOC-001", csv_file.read_text(encoding="utf-8-sig"), "Doc", ctx, table_id=csv_file.stem, source_label=str(csv_file))
         # text_raw should contain only the ID line
         assert "obligation_id: OBL-001" in clauses[0].text_raw
         assert "title:" not in clauses[0].text_raw
@@ -371,7 +370,7 @@ class TestEdgeCases:
             [{"obligation_id": f"OBL-{i:03d}"} for i in range(5)],
         )
         ctx = make_ctx()
-        segment_register("ver-1", "DOC-001", csv_file, "Doc", ctx)
+        segment_register_text("ver-1", "DOC-001", csv_file.read_text(encoding="utf-8-sig"), "Doc", ctx, table_id=csv_file.stem, source_label=str(csv_file))
         assert ctx.stats.get("register_rows_parsed", 0) == 5
 
     def test_text_norm_is_normalized_text_raw(self, tmp_path: Path) -> None:
@@ -382,7 +381,7 @@ class TestEdgeCases:
             [{"obligation_id": "OBL-001", "title": "UPPER CASE TITLE"}],
         )
         ctx = make_ctx()
-        clauses, _ = segment_register("ver-1", "DOC-001", csv_file, "Doc", ctx)
+        clauses, _ = segment_register_text("ver-1", "DOC-001", csv_file.read_text(encoding="utf-8-sig"), "Doc", ctx, table_id=csv_file.stem, source_label=str(csv_file))
         assert clauses[0].text_norm == normalize(clauses[0].text_raw)
 
     def test_text_sha256_is_hash_of_text_raw(self, tmp_path: Path) -> None:
@@ -393,97 +392,5 @@ class TestEdgeCases:
             [{"obligation_id": "OBL-001", "title": "Title"}],
         )
         ctx = make_ctx()
-        clauses, _ = segment_register("ver-1", "DOC-001", csv_file, "Doc", ctx)
+        clauses, _ = segment_register_text("ver-1", "DOC-001", csv_file.read_text(encoding="utf-8-sig"), "Doc", ctx, table_id=csv_file.stem, source_label=str(csv_file))
         assert clauses[0].text_sha256 == sha256_text(clauses[0].text_raw)
-
-
-# ---------------------------------------------------------------------------
-# Corpus tests (require real data files, skipped unless --run-corpus or CORPUS env)
-# ---------------------------------------------------------------------------
-
-def _corpus_root() -> Path:
-    """Locate the Strata corpus root by searching upwards from this file."""
-    here = Path(__file__).resolve()
-    # Walk up to find a 'corpus' or 'company_corpus' directory
-    for parent in here.parents:
-        for candidate in ("corpus", "company_corpus", "strata_corpus"):
-            p = parent / candidate
-            if p.is_dir():
-                return p
-    pytest.skip("Corpus root not found — skipping corpus test")
-
-
-@pytest.mark.corpus
-class TestCorpus:
-    """Corpus-level tests.  Run with: pytest -m corpus"""
-
-    def _find_csv(self, doc_id: str, filename_pattern: str) -> Path:
-        root = _corpus_root()
-        matches = list(root.rglob(f"{doc_id}/**/{filename_pattern}"))
-        if not matches:
-            pytest.skip(f"Corpus file not found for {doc_id} / {filename_pattern}")
-        return matches[0]
-
-    def test_compliance_register_row_count(self) -> None:
-        csv_path = self._find_csv("RPL-CMP-REG-001", "compliance_register_*.csv")
-        ctx = make_ctx()
-        clauses, roles = segment_register(
-            "ver-corpus-1", "RPL-CMP-REG-001", csv_path,
-            "Compliance Register 2024", ctx
-        )
-        assert len(clauses) >= 70
-        ids = [c.local_id for c in clauses]
-        assert len(ids) == len(set(ids)), "obligation_ids not unique"
-
-    def test_compliance_register_citation_role(self) -> None:
-        csv_path = self._find_csv("RPL-CMP-REG-001", "compliance_register_*.csv")
-        ctx = make_ctx()
-        _, roles = segment_register(
-            "ver-corpus-1", "RPL-CMP-REG-001", csv_path,
-            "Compliance Register 2024", ctx
-        )
-        assert roles.get("citation") == ColumnRole.CITATION
-
-    def test_calendar_events_row_count(self) -> None:
-        csv_path = self._find_csv("RPL-REG-CAL-2025", "calendar_events_*.csv")
-        ctx = make_ctx()
-        clauses, roles = segment_register(
-            "ver-corpus-2", "RPL-REG-CAL-2025", csv_path,
-            "Calendar Events 2025", ctx
-        )
-        assert len(clauses) >= 48
-        ids = [c.local_id for c in clauses]
-        assert len(ids) == len(set(ids)), "event_ids not unique"
-
-    def test_calendar_events_citation_role(self) -> None:
-        csv_path = self._find_csv("RPL-REG-CAL-2025", "calendar_events_*.csv")
-        ctx = make_ctx()
-        _, roles = segment_register(
-            "ver-corpus-2", "RPL-REG-CAL-2025", csv_path,
-            "Calendar Events 2025", ctx
-        )
-        assert roles.get("citation") == ColumnRole.CITATION
-
-    def test_retention_schedule_row_count(self) -> None:
-        csv_path = self._find_csv("RPL-LEG-RRS-001", "retention_schedule_*.csv")
-        ctx = make_ctx()
-        clauses, roles = segment_register(
-            "ver-corpus-3", "RPL-LEG-RRS-001", csv_path,
-            "Retention Schedule 2024", ctx
-        )
-        assert len(clauses) >= 86
-        ids = [c.local_id for c in clauses]
-        assert len(ids) == len(set(ids)), "rrs_ids not unique"
-
-    def test_retention_schedule_citation_role(self) -> None:
-        """Retention schedule may not have a citation column — skip if absent."""
-        csv_path = self._find_csv("RPL-LEG-RRS-001", "retention_schedule_*.csv")
-        ctx = make_ctx()
-        _, roles = segment_register(
-            "ver-corpus-3", "RPL-LEG-RRS-001", csv_path,
-            "Retention Schedule 2024", ctx
-        )
-        # If a citation column exists, it should be detected
-        citation_cols = [col for col in roles if "citation" in col.lower()]
-        for col in citation_cols:
-            assert roles[col] == ColumnRole.CITATION

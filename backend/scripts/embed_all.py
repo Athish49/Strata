@@ -8,9 +8,6 @@ import os
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from dotenv import load_dotenv
-load_dotenv()
-
 from app.db import AsyncSessionLocal
 from app.regulatory.ingestion.embedder import (
     embed_and_store_code_section,
@@ -88,4 +85,10 @@ async def embed_all():
 
 
 if __name__ == "__main__":
+    # Loaded here, not at import time, so importing this module's pure
+    # functions can never leak production secrets into the process env.
+    from dotenv import load_dotenv
+
+    load_dotenv()
+
     asyncio.run(embed_all())

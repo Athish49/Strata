@@ -1,14 +1,6 @@
 from enum import StrEnum
 
 
-class Profile(StrEnum):
-    P1_PROSE = "p1_prose"
-    P2_REGISTER = "p2_register"
-    P3_DATASET = "p3_dataset"
-    P4_REFERENCE = "p4_reference"
-    RENDER = "render"
-
-
 class DocClass(StrEnum):
     PROCEDURE = "procedure"
     PLAN = "plan"
@@ -116,15 +108,3 @@ class ColumnRole(StrEnum):
     STATUS = "status"
     FREE_TEXT = "free_text"
     IGNORE = "ignore"
-
-
-class SemanticRole(StrEnum):
-    ID = "id"
-    FOREIGN_KEY = "foreign_key"
-    TIMESTAMP = "timestamp"
-    DURATION = "duration"
-    QUANTITY = "quantity"
-    FLAG = "flag"
-    CATEGORY = "category"
-    CLAUSE_REF = "clause_ref"
-    FREE_TEXT = "free_text"

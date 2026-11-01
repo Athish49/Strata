@@ -32,7 +32,7 @@ _RE_TARIFF_SHEET = re.compile(
 )
 _RE_TARIFF_RULE = re.compile(r"\bRule\s+(\d+)\b")
 
-# 4. Form references  (optional company-code prefix: RPL-DCC-F-042)
+# 4. Form references  (optional company-code prefix, e.g. ACME-DCC-F-042)
 _RE_FORM = re.compile(r"\b((?:[A-Z]{2,4}-)?[A-Z]{2,4}-F-\d{3}(?:-[A-Z]{2})?)\b")
 
 # 5. Record series references

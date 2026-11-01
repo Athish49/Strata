@@ -5,11 +5,17 @@ import { formatDate } from "@/lib/format";
 import { VerdictMiniBar } from "./VerdictMiniBar";
 import { StatusCell } from "./StatusCell";
 import { TwoSignatureTag } from "./TwoSignatureTag";
-import { docHref, versionLabel, type DocRow } from "./logic";
+import { docHref, docVersionText, isLifecycleStatus, NO_OWNER_LABEL, ownerName, type DocRow } from "./logic";
 
-/** A monitored document: title (links to the reader), id + version, owner, status, verdict bar, reason. */
+/**
+ * A monitored document, or one moving through ingest/approval: title (links to the document), id +
+ * version, owner, status, verdict bar, reason. Blank backend fields show placeholders, never empty cells.
+ */
 export function DocCard({ row }: { row: DocRow }) {
-  const { meta, status, rollup } = row;
+  const { meta, status } = row;
+  // A run rollup describes the current version; a document without one shows no findings.
+  const rollup = isLifecycleStatus(status.key) ? undefined : row.rollup;
+  const owner = ownerName(meta);
   return (
     <article
       data-doc-id={meta.doc_id}
@@ -21,7 +27,7 @@ export function DocCard({ row }: { row: DocRow }) {
             {meta.title}
           </AppLink>
           <p className="mt-1 text-[12.5px] leading-[18px] text-ink-3">
-            <span className="font-mono">{meta.doc_id}</span> · {versionLabel(meta.version)}
+            <span className="font-mono">{meta.doc_id}</span> · {docVersionText(meta, status.key)}
           </p>
         </div>
         <StatusCell row={row} />
@@ -38,7 +44,7 @@ export function DocCard({ row }: { row: DocRow }) {
       )}
 
       <div className="mt-auto flex flex-wrap items-center justify-between gap-x-3 gap-y-1.5 border-t border-border pt-3">
-        <PersonChip name={meta.owner.name} />
+        {owner ? <PersonChip name={owner} /> : <span className="text-[13px] text-ink-3">{NO_OWNER_LABEL}</span>}
         <div className="flex items-center gap-2">
           {meta.two_signature && <TwoSignatureTag />}
           {meta.next_review && (

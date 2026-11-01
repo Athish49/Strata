@@ -2,14 +2,10 @@
 
 Run non-corpus tests with:
     cd backend && .venv/bin/python -m pytest tests/company_ingest/test_markdown_segmenter.py -v -k "not qdrant and not corpus and not neon"
-
-Run corpus integration tests (requires corpus docs on disk):
-    cd backend && .venv/bin/python -m pytest tests/company_ingest/test_markdown_segmenter.py -v -m corpus
 """
 from __future__ import annotations
 
 import textwrap
-from pathlib import Path
 
 import pytest
 
@@ -533,99 +529,34 @@ def test_text_norm_and_sha256():
         assert len(u.text_sha256) == 64  # SHA-256 hex
 
 
-# ===========================================================================
-# Corpus integration tests  (requires corpus docs on disk)
-# ===========================================================================
-
-CORPUS_DOCS_DIR = (
-    Path(__file__).parents[2]
-    / "app" / "company" / "corpus" / "docs"
-)
-
-P1_DOC_IDS = [
-    "RPL-CS-PRO-004",
-    "RPL-CS-PRO-007",
-    "RPL-CS-PRO-011",
-    "RPL-DCC-PRO-003",
-    "RPL-DO-PLN-002",
-    "RPL-ENV-PRO-005",
-    "RPL-MTR-PGM-001",
-    "RPL-SAF-PRO-009",
-    "RPL-TAR-GRR-012",
-    "RPL-CMP-REG-001",
-    "RPL-LEG-RRS-001",
-    "RPL-REG-CAL-2025",
-]
+# ---------------------------------------------------------------------------
+# System-assigned document ids (task 2.3 step 2a)
+# ---------------------------------------------------------------------------
 
 
-def _find_md_file(doc_id: str) -> Path | None:
-    doc_dir = CORPUS_DOCS_DIR / doc_id
-    if not doc_dir.exists():
-        return None
-    for f in doc_dir.glob("*.md"):
-        return f
-    return None
+def _clause_ids(doc_id: str, md: str) -> list[str]:
+    from app.company_ingest.run_context import RunContext
+
+    return [u.clause_id for u in segment_with_ctx("v1", doc_id, md, 0, RunContext(company_id="t"))]
 
 
-@pytest.mark.corpus
-@pytest.mark.parametrize("doc_id", P1_DOC_IDS)
-def test_corpus_clause_count_positive(doc_id: str):
-    md_path = _find_md_file(doc_id)
-    if md_path is None:
-        pytest.skip(f"Corpus file not found for {doc_id}")
-
-    full_text = md_path.read_text(encoding="utf-8")
-
-    # Split front matter off to get body
-    from app.company_ingest.parse.front_matter import split_front_matter
-    _fm, body_text, body_offset = split_front_matter(full_text, doc_id)
-
-    units = segment(VERSION_ID, doc_id, body_text, body_offset)
-    assert len(units) > 0, f"{doc_id}: expected at least one clause unit"
-
-
-@pytest.mark.corpus
-@pytest.mark.parametrize("doc_id", P1_DOC_IDS)
-def test_corpus_clause_ids_unique(doc_id: str):
-    md_path = _find_md_file(doc_id)
-    if md_path is None:
-        pytest.skip(f"Corpus file not found for {doc_id}")
-
-    full_text = md_path.read_text(encoding="utf-8")
-
-    from app.company_ingest.parse.front_matter import split_front_matter
-    _fm, body_text, body_offset = split_front_matter(full_text, doc_id)
-
-    units = segment(VERSION_ID, doc_id, body_text, body_offset)
-    ids = [u.clause_id for u in units]
-    assert len(ids) == len(set(ids)), (
-        f"{doc_id}: duplicate clause IDs: "
-        + ", ".join(cid for cid in set(ids) if ids.count(cid) > 1)
+def test_system_assigned_doc_id_anchors_clauses():
+    """`DOC-000123` must anchor. The legacy grammar demanded 3-4 uppercase segments,
+    so every uploaded document would otherwise have produced an empty clause graph."""
+    md = (
+        "<!-- clause: DOC-000123:s1 -->\n## A\n\nText one.\n\n"
+        "<!-- clause: DOC-000123:7.2 -->\n## B\n\nText two.\n"
     )
+    assert _clause_ids("DOC-000123", md) == ["DOC-000123:s1", "DOC-000123:7.2"]
 
 
-@pytest.mark.corpus
-@pytest.mark.parametrize("doc_id", P1_DOC_IDS)
-def test_corpus_body_offset_slicing(doc_id: str):
-    """char_start/char_end must slice the original file text to reproduce text_raw."""
-    md_path = _find_md_file(doc_id)
-    if md_path is None:
-        pytest.skip(f"Corpus file not found for {doc_id}")
+def test_legacy_corpus_markers_still_anchor():
+    assert _clause_ids("RPL-CS-PRO-004", "<!-- RPL-CS-PRO-004:1 -->\n## A\n\nText.\n") == ["RPL-CS-PRO-004:1"]
+    assert _clause_ids("RPL-CS-PRO-004", "<!-- clause: RPL-CS-PRO-004:2 -->\n## A\n\nText.\n") == ["RPL-CS-PRO-004:2"]
 
-    full_text = md_path.read_text(encoding="utf-8")
 
-    from app.company_ingest.parse.front_matter import split_front_matter
-    _fm, body_text, body_offset = split_front_matter(full_text, doc_id)
-
-    units = segment(VERSION_ID, doc_id, body_text, body_offset)
-
-    # Table rows have char_start/char_end pointing to their raw pipe-table line,
-    # not to text_raw (which is the rendered version).  Skip table rows.
-    prose_units = [u for u in units if u.unit_kind != UnitKind.TABLE_ROW]
-    for u in prose_units:
-        sliced = full_text[u.char_start:u.char_end]
-        assert sliced == u.text_raw, (
-            f"{doc_id} {u.clause_id}: "
-            f"full_text[{u.char_start}:{u.char_end}] = {sliced!r} "
-            f"!= text_raw = {u.text_raw!r}"
-        )
+def test_ordinary_html_comments_are_not_clauses():
+    """The relaxed id grammar applies only to the explicit `clause:` keyword; a plain
+    comment, or a bare `<!-- X:Y -->` with a non-legacy id, must never become a clause."""
+    assert _clause_ids("DOC-000123", "<!-- note:todo -->\n## A\n\nText.\n") == []
+    assert _clause_ids("DOC-000123", "<!-- DOC-000123:1 -->\n## A\n\nText.\n") == []

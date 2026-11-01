@@ -1,0 +1,188 @@
+PENDING TASKS — Company Documents Pipeline Cleanup
+Last updated: 2026-11-01
+Source: implementation_plan.md, report.md, findings_1.0_cross_document_links.md,
+findings_1.2_data_provenance.md (all at repo root)
+
+STATUS: Items 1-6 are all DONE and confirmed live on production. The only
+thing left is item 7 (pushing this work to the remote), which is purely
+your call -- nothing is blocked or waiting on further investigation.
+
+====================================================================
+1. [RESOLVED 2026-11-01] 12-document data-provenance mystery
+====================================================================
+Status: SOLVED. The user provided access to a Neon branch called "backup", which
+turned out to be the literal pre-v1-to-v2-cutover database (old RPL-* doc_id
+scheme, 12 documents, is_citation_fragment 100% populated, earlier
+alembic_version). Direct comparison confirmed, exhaustively not by sample: all
+2,002 clauses across all 12 non-register documents match byte-for-byte
+(text_sha256) against this branch, zero mismatches, zero missing. clause_links
+counts matched exactly too everywhere checked.
+
+Conclusion: during the v1->v2 cutover, these 12 documents' doc_id/clause_ids
+were re-keyed from the old RPL-* scheme to the new DOC-00000N scheme and their
+clause/parameter/citation/link data was copied directly from this backup
+database, not re-ingested through the real v2 pipeline. The 3 register
+documents (DOC-000002/4/6) did NOT take this shortcut and were genuinely
+freshly ingested. Full writeup: findings_1.2_data_provenance.md section 9.
+
+Still open, but no longer blocking anything: exactly who ran the copy, what
+tool, and precisely when within the 09:04-09:22 UTC window — not recoverable
+from database content alone, and Render's free-tier logs don't go back far
+enough. This no longer matters for trusting the data itself.
+
+Action needed from you: none. This item is closed.
+
+====================================================================
+2. [DONE] Confirm the deployed R2_ENDPOINT value (task 5.1)
+====================================================================
+Status: CONFIRMED 2026-10-31. Deployed R2_ENDPOINT carries the same trailing
+"/strata" suffix as the local .env — production has the identical double-prefix
+situation as local (every R2 object physically lives one path segment deeper
+than the key Neon stores, self-cancelling today because reads and writes both
+use the same misconfigured endpoint).
+
+Action needed from you: none. Feeds DG-6 (whether/when to fix R2_ENDPOINT) for
+whenever that's revisited — still requires a full key-migration plan first, per
+report.md/tables_and_connections.md section 7, not a quick env-var edit.
+
+====================================================================
+3. [DONE 2026-11-01] Delete orphaned R2 objects (task 5.2, DG-7)
+====================================================================
+Status: COMPLETE. Re-verified immediately before deleting (per the task card):
+the only ingest_run_id anywhere in R2 that matched zero rows across all three
+legitimate sources (company.ingest_runs, company.document_versions.ingest_
+run_id for ALL versions not just current, company.llm_extractions) was
+01e6f1a3-efde-4f11-88b6-9826afd644d3 (667 objects). The 12 old RPL-*-keyed
+v1/clauses.jsonl derived snapshots were confirmed stale (old doc_id scheme,
+no matching current version). Deleted 679 objects total, by exact key (never
+by pattern), 0 errors. Verified after deletion: 0 remaining orphaned objects,
+and the 3 live register-document derived snapshots (real-UUID-keyed, matching
+their current document_versions) are confirmed untouched.
+
+Action needed from you: none. This item is closed.
+
+====================================================================
+4. [YOUR CALL, NOT URGENT] Drop the is_citation_fragment column (task 3.4 Deploy 2)
+====================================================================
+Status: COMPLETE 2026-11-01. Deploy 1 (removing all 3 dead read-sites in
+candidates.py/rules.py/judge.py, deleting the backfill script and its test)
+was already done. Deploy 2 (the actual column drop) is now also done:
+  - make_whatif_presets.py's COALESCE(p.is_citation_fragment, false) = false
+    condition removed (confirmed dead by the same proof as the other 3 sites
+    -- that query already filters to kind IN ('period','deadline','amount',
+    'threshold'), which excludes the only kind the flag could ever be true
+    for).
+  - New migration backend/migrations/versions/a7c4e9f2b6d1_drop_is_citation_
+    fragment.py written, tested against the disposable "test" Neon branch
+    first (column dropped cleanly, 4,186 rows unaffected, backend verified
+    error-free against the new schema), then applied to production by the
+    user (alembic upgrade head blocked for Claude by a production-deploy
+    safety guardrail -- ran manually instead).
+  - Verified directly against production after: alembic_version =
+    a7c4e9f2b6d1, column confirmed gone, all 4,186 clause_parameters rows
+    intact.
+
+Action needed from you: none. This item is closed.
+
+====================================================================
+5. [DONE 2026-11-01, migration pending your manual step] Frontend vertical
+   taxonomy dynamism (task 3.7)
+====================================================================
+Status: COMPLETE in code and tested end-to-end against the "test" branch:
+  - New migration backend/migrations/versions/b3f8d2a6c914_verticals_sort_
+    order.py adds company.verticals.sort_order, backfilled to the same 1-14
+    order the frontend's old static array used. Tested against "test" first
+    (verified: 14 rows, correct order, alembic_version advanced cleanly).
+  - New GET /company/verticals endpoint (ordered by sort_order).
+  - frontend/lib/verticals.ts no longer hardcodes the 14 verticals -- every
+    function now takes the fetched list as an explicit argument. Removed
+    backendVertical/realVerticals()/verticalFromBackend() (zero real
+    consumers left, confirmed by grep -- a leftover from the synthetic-demo
+    era). All ~12 real consumers updated (document board, all 14 vertical
+    pages, impact matrix, company profile, section cross-references, upload
+    dialog's vertical picker).
+  - The [vertical]/page.tsx route guard moved client-side (notFound() only
+    works in Server Components, and a server-side fetch there risked a false
+    404 on a Render cold start) -- VerticalView now validates once
+    useVerticals() resolves and renders its own not-found state.
+  - Playwright-verified against "test": all 14 vertical pages, the
+    bogus-slug not-found state, documents board, impact matrix, company
+    profile, and the upload dialog's vertical dropdown (all 14 options) --
+    all correct, zero console errors.
+  - Backend: 1433 passed. Frontend: 435/435 passed, typecheck clean.
+
+Action needed from you: apply the migration to PRODUCTION (same pattern as
+item 4 -- I tested it fully on the disposable branch but can't run it
+against production myself). From backend/, with your real .env loaded:
+    python -m alembic upgrade head
+This must land (and the backend be deployed with this session's code)
+BEFORE the frontend is deployed, since the frontend now depends on
+GET /company/verticals existing. Until then, do not deploy only the
+frontend half of this change.
+
+====================================================================
+6. [DONE 2026-11-01] Drop the 2 migration backup tables early (task 5.3,
+   DG-5 overridden)
+====================================================================
+Status: The default 2026-11-30 retention date was overridden after an
+extensive manual verification (full reasoning in migration
+d4a9e1c7f052_drop_verticals_backup_tables.py's own docstring and the
+conversation that authorized it). Summary: recovered the original
+signed-off plan.md/table_schemas.md from git history (deleted from the
+working tree, recoverable via `git show 147cf2d:<path>`) and independently
+re-derived the expected vertical for all 15 live documents against that
+plan -- 0/15 mismatches; live distribution matches the plan's own recorded
+verification target exactly; both FK constraints
+(company_documents_vertical_fk, approval_policies_vertical_fk) are in place
+and enforced, so no future write can introduce an invalid value regardless
+of these tables; zero code anywhere references either backup table; all 10
+tables the plan flagged as "should be unaffected by this migration" still
+have exactly their documented pre-migration row counts.
+
+New migration backend/migrations/versions/d4a9e1c7f052_drop_verticals_
+backup_tables.py written and tested against the disposable "test" branch
+(both tables dropped cleanly, all other data intact, full backend suite
+green: 1433 passed).
+
+Applied to production and confirmed 2026-11-01: alembic_version =
+d4a9e1c7f052, both backup tables gone, all 15 documents and 14 verticals
+confirmed intact.
+
+Action needed from you: none. This item is closed. Note: migration
+9c1e4b7a2f05's own downgrade() can no longer function (it read from these
+tables) -- accepted as part of this
+decision, since the forward migration's correctness was independently
+re-verified rather than merely trusted.
+
+====================================================================
+7. [INFORMATIONAL] Nothing has been pushed to the remote
+====================================================================
+Status: All cleanup work is committed to your LOCAL main branch only (per your
+instruction). origin/main on GitHub does not have any of this yet.
+
+Action needed from you: tell me when (and if) you want this pushed.
+
+====================================================================
+Already implemented, not pending, but worth knowing about:
+====================================================================
+- Cross-document link reconciliation (task 1.0's chosen fix, option (c)): a new
+  best-effort sweep runs on every document promotion, resolving backlogged
+  references_clause refs across documents. See
+  backend/app/company_ingest/link/reconcile_cross_doc.py and
+  findings_1.0_cross_document_links.md for the full design rationale.
+- The 274 empty-text_raw clauses found during the 1.2 investigation (6
+  documents, degrades judge.py's prompt and quote verification for those
+  specific clauses) are a byproduct of the backup-branch copy described in item
+  1 above (some container/header clauses lost their text during that copy) —
+  not a bug in any current code path. Not separately tracked as a fix task;
+  revisit only if those specific clauses' missing text starts mattering in
+  practice.
+- The Neon branch "new_verticals_test" was checked and found to be
+  byte-identical to production (same alembic_version, same row counts, same
+  document_versions.created_at timestamps down to the microsecond). It is
+  almost certainly a clone taken FROM production for testing the verticals
+  migration, not an independent data source, and not evidence that any cleanup
+  work in this session landed there by accident — backend/.env's DATABASE_URL
+  has pointed at production's host for this entire session, confirmed by
+  comparing connection hosts, and no write of any kind was made to any Neon
+  branch during this session's work.

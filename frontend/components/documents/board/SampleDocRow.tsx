@@ -2,7 +2,7 @@ import { FileText } from "lucide-react";
 import { FutureCue } from "@/components/common/FutureCue";
 import { PersonChip } from "@/components/common/PersonChip";
 import { DocStatusPill } from "./DocStatusPill";
-import type { DocRow } from "./logic";
+import { NO_OWNER_LABEL, ownerName, type DocRow } from "./logic";
 
 /** Compact row for a document that is not monitored: no reader link, disabled "Start monitoring". */
 export function SampleDocRow({ row }: { row: DocRow }) {
@@ -17,7 +17,11 @@ export function SampleDocRow({ row }: { row: DocRow }) {
         {meta.title}
       </span>
       <span className="hidden font-mono text-[12.5px] text-ink-3 md:inline">{meta.doc_id}</span>
-      <PersonChip name={meta.owner.name} className="hidden w-48 lg:inline-flex" />
+      {ownerName(meta) ? (
+        <PersonChip name={meta.owner.name} className="hidden w-48 lg:inline-flex" />
+      ) : (
+        <span className="hidden w-48 text-[13px] text-ink-3 lg:inline">{NO_OWNER_LABEL}</span>
+      )}
       <DocStatusPill status="not_monitored" />
       <FutureCue id="start-monitoring" variant="inline-add" />
     </li>

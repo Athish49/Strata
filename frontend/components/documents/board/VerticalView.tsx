@@ -5,26 +5,32 @@ import { ErrorState } from "@/components/common/ErrorState";
 import { EmptyState } from "@/components/common/EmptyState";
 import { FutureCue } from "@/components/common/FutureCue";
 import { PersonChip } from "@/components/common/PersonChip";
+import { UploadDocumentDialog } from "@/components/documents/upload";
 import { Skeleton } from "@/components/ui/skeleton";
 import { AppLink } from "@/lib/app-link";
 import { formatDate, pluralize } from "@/lib/format";
 import { PAGE_CUES } from "@/lib/future-features";
+import Link from "next/link";
+import { useVerticals } from "@/lib/api/queries";
 import { getVertical } from "@/lib/verticals";
 import { StatusCell } from "./StatusCell";
 import { TwoSignatureTag } from "./TwoSignatureTag";
 import { useBoardRows } from "./useBoardRows";
-import { compareRows, docHref, needsAction, versionLabel, type DocRow } from "./logic";
+import { compareRows, docHref, docVersionText, isLifecycleStatus, needsAction, NO_OWNER_LABEL, ownerName, type DocRow } from "./logic";
 
 const TH = "h-10 px-3 text-left text-[12px] font-medium text-ink-3";
 
 function Row({ row }: { row: DocRow }) {
   const { meta } = row;
   const monitored = meta.monitored;
+  // Documents moving through ingest/approval (or failed) link to the document too.
+  const linked = monitored || isLifecycleStatus(row.status.key);
+  const owner = ownerName(meta);
   return (
     <tr data-doc-id={meta.doc_id} className="h-10 border-t border-border hover:bg-surface-muted">
       <td className="px-3 font-mono text-[12.5px] text-ink-2">{meta.doc_id}</td>
       <td className="max-w-[340px] px-3 text-[14px]">
-        {monitored ? (
+        {linked ? (
           <AppLink href={docHref(meta.doc_id)} className="block truncate font-medium text-ink hover:underline" title={meta.title}>
             {meta.title}
           </AppLink>
@@ -35,10 +41,10 @@ function Row({ row }: { row: DocRow }) {
         )}
         {meta.two_signature && <TwoSignatureTag />}
       </td>
-      <td className="px-3 text-[13px] text-ink-2">{meta.doc_type}</td>
-      <td className="px-3 text-[13px] tabular-nums text-ink-2">{versionLabel(meta.version)}</td>
+      <td className="px-3 text-[13px] text-ink-2">{meta.doc_type.trim() || "—"}</td>
+      <td className="px-3 text-[13px] tabular-nums text-ink-2">{docVersionText(meta, row.status.key)}</td>
       <td className="px-3">
-        <PersonChip name={meta.owner.name} />
+        {owner ? <PersonChip name={owner} /> : <span className="text-[13px] text-ink-3">{NO_OWNER_LABEL}</span>}
       </td>
       <td className="whitespace-nowrap px-3 text-[13px] text-ink-2">{formatDate(meta.next_review)}</td>
       <td className="px-3">
@@ -51,12 +57,47 @@ function Row({ row }: { row: DocRow }) {
   );
 }
 
-/** `/app/documents/verticals/[vertical]` body. `slug` is already validated by the route. */
+/**
+ * `/app/documents/verticals/[vertical]` body. The route no longer validates `slug` (the
+ * verticals list is DB-backed now, task 3.7) -- this component does, once useVerticals()
+ * resolves, and renders a not-found state itself (notFound() only works in Server
+ * Components).
+ */
 export function VerticalView({ slug }: { slug: string }) {
-  const vertical = getVertical(slug);
+  const { data: verticals, isLoading: verticalsLoading, isError: verticalsError, refetch: refetchVerticals } = useVerticals();
+  const vertical = verticals ? getVertical(verticals, slug) : undefined;
   const { rows, isLoading, isError, refetch } = useBoardRows();
-  const mine = React.useMemo(() => rows.filter((r) => r.meta.vertical === slug).sort(compareRows), [rows, slug]);
-  if (!vertical) return null;
+  // Retired documents are hidden here; the main board shows them under the Retired status filter.
+  const mine = React.useMemo(
+    () => rows.filter((r) => r.meta.vertical === slug && r.status.key !== "retired").sort(compareRows),
+    [rows, slug],
+  );
+
+  if (verticalsLoading) {
+    return (
+      <PageContainer>
+        <Skeleton className="h-48 rounded-[12px]" />
+      </PageContainer>
+    );
+  }
+  if (verticalsError) {
+    return (
+      <PageContainer>
+        <ErrorState message="Verticals could not be loaded." source="Company data" onRetry={refetchVerticals} />
+      </PageContainer>
+    );
+  }
+  if (!vertical) {
+    return (
+      <main className="flex min-h-[60vh] flex-col items-center justify-center gap-3 px-6 text-center">
+        <p className="font-serif text-[36px] leading-[44px] text-ink">This page could not be found</p>
+        <p className="max-w-[420px] text-[14px] leading-5 text-ink-3">The link may be mistyped, or the page may have moved.</p>
+        <Link href="/app/documents" className="mt-2 text-[14px] text-ink underline underline-offset-4">
+          Back to documents
+        </Link>
+      </main>
+    );
+  }
   const monitored = mine.filter((r) => r.meta.monitored).length;
   const attention = mine.filter((r) => !r.pending && needsAction(r)).length;
 
@@ -72,6 +113,7 @@ export function VerticalView({ slug }: { slug: string }) {
               .map((id) => (
                 <FutureCue key={id} id={id} />
               ))}
+            <UploadDocumentDialog vertical={slug} />
           </>
         }
       />
@@ -92,12 +134,12 @@ export function VerticalView({ slug }: { slug: string }) {
           <EmptyState
             title="No documents are filed here yet"
             description={`Documents in ${vertical.name} appear here with their status for the selected run. Once one is added and monitored, Strata checks it against every regulatory change.`}
-            action={<FutureCue id="upload-document" variant="inline-add" label="Add a document" />}
+            action={<UploadDocumentDialog vertical={slug} variant="inline" />}
           />
         </div>
       ) : (
         <>
-          {monitored === 0 && (
+          {mine.every((r) => r.status.key === "not_monitored") && (
             <p className="mb-4 max-w-[68ch] text-[14px] leading-5 text-ink-3">
               These documents are not yet monitored, so they have no findings. Start monitoring to check them against future changes.
             </p>
@@ -123,7 +165,7 @@ export function VerticalView({ slug }: { slug: string }) {
               </tbody>
             </table>
           </div>
-          {mine.some((r) => !r.meta.monitored) && (
+          {mine.some((r) => r.status.key === "not_monitored") && (
             <div className="mt-4">
               <FutureCue id="start-monitoring" variant="inline-add" />
             </div>

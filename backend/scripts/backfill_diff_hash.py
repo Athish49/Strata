@@ -22,10 +22,6 @@ import sys
 # Make project root importable
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from dotenv import load_dotenv
-
-load_dotenv(os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), ".env"))
-
 import psycopg2
 
 from app.regulatory.ingestion.normalize import normalize_for_diff
@@ -107,6 +103,12 @@ def main(dry_run: bool = False) -> None:
 
 
 if __name__ == "__main__":
+    # Loaded here, not at import time, so importing this module's pure
+    # functions can never leak production secrets into the process env.
+    from dotenv import load_dotenv
+
+    load_dotenv(os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), ".env"))
+
     parser = argparse.ArgumentParser(description="Backfill diff_hash on code_sections.")
     parser.add_argument(
         "--dry-run",

@@ -5,7 +5,7 @@ import type { ChangeRecord, DocumentMeta, MatrixCell } from "@/lib/api/schemas";
 import { AppLink } from "@/lib/app-link";
 import { pluralize } from "@/lib/format";
 import { verdictLabel } from "@/lib/labels";
-import { compareVerticals, verticalName } from "@/lib/verticals";
+import { compareVerticals, verticalName, type Vertical } from "@/lib/verticals";
 import { verdictToken } from "@/lib/verdict-tokens";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
@@ -19,6 +19,8 @@ export interface MatrixCellInfo {
 }
 
 export interface MatrixGridProps {
+  /** The 14 verticals (useVerticals()), for display names and the fixed group order. */
+  verticals: readonly Vertical[];
   /** Rows: the monitored documents (grouped by `vertical`). */
   docs: DocumentMeta[];
   /** Columns: changed sections. */
@@ -56,7 +58,7 @@ function cellLabel(doc: DocumentMeta, change: ChangeRecord, cell: MatrixCell) {
 }
 
 /** Docs × changes grid. Presentational: popover content is supplied by the page, clicks are emitted. */
-export function MatrixGrid({ docs, changes, cells, onCellClick, renderCellPopover, docHref, className }: MatrixGridProps) {
+export function MatrixGrid({ verticals, docs, changes, cells, onCellClick, renderCellPopover, docHref, className }: MatrixGridProps) {
   const [open, setOpen] = React.useState<string | null>(null);
   const byKey = React.useMemo(() => {
     const m = new Map<string, MatrixCell>();
@@ -67,8 +69,8 @@ export function MatrixGrid({ docs, changes, cells, onCellClick, renderCellPopove
   const groups = React.useMemo(() => {
     const g = new Map<string, DocumentMeta[]>();
     for (const d of docs) g.set(d.vertical, [...(g.get(d.vertical) ?? []), d]);
-    return [...g.entries()].sort((a, b) => compareVerticals(a[0], b[0]));
-  }, [docs]);
+    return [...g.entries()].sort((a, b) => compareVerticals(verticals, a[0], b[0]));
+  }, [docs, verticals]);
 
   if (docs.length === 0 || changes.length === 0) {
     return (
@@ -109,7 +111,7 @@ export function MatrixGrid({ docs, changes, cells, onCellClick, renderCellPopove
             <React.Fragment key={vertical}>
               <tr>
                 <th scope="colgroup" colSpan={changes.length + 1} className="sticky left-0 border-b border-border bg-surface-muted px-3 py-1.5 text-left text-[13px] font-medium text-ink">
-                  {verticalName(vertical)} <span className="font-normal text-ink-3">· {pluralize(rows.length, "document")}</span>
+                  {verticalName(verticals, vertical)} <span className="font-normal text-ink-3">· {pluralize(rows.length, "document")}</span>
                 </th>
               </tr>
               {rows.map((d) => {

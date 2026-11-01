@@ -12,7 +12,6 @@ Every stored object must carry metadata keys:
 """
 
 import hashlib
-from pathlib import Path
 
 import boto3
 from botocore.config import Config
@@ -126,20 +125,6 @@ def put_bytes(
         Metadata=str_meta,
     )
     return "ok"
-
-
-def put_file(key: str, path: Path, metadata: dict) -> str:
-    """
-    Upload the file at *path* to *key*.
-
-    content_type is inferred from metadata["content_type"] if present,
-    otherwise defaults to "application/octet-stream".
-
-    Returns "ok" or "unchanged".
-    """
-    data = path.read_bytes()
-    content_type = metadata.get("content_type", "application/octet-stream")
-    return put_bytes(key, data, metadata, content_type)
 
 
 def get_bytes(key: str) -> bytes:

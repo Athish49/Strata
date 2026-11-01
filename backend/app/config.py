@@ -1,5 +1,3 @@
-from pathlib import Path
-
 from pydantic_settings import BaseSettings
 
 
@@ -16,9 +14,7 @@ class Settings(BaseSettings):
     # Origin(s) of the web app allowed to call this API (CORS). Comma-separated; no wildcard.
     FRONTEND_URL: str = "http://localhost:3000"
 
-    # Company ingest settings
-    CORPUS_ROOT: str = str(Path(__file__).parent.parent / "app" / "company" / "corpus")
-    COMPANY_ID: str = "rpl"
+    # Company ingest settings (company id: ENGINE_COMPANY_ID in app.engine.config)
     LLM_PROVIDER: str = "anthropic"
     LLM_MODEL: str = "claude-sonnet-5-5"
     LLM_API_KEY: str = ""

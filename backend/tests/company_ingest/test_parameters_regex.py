@@ -2,8 +2,6 @@
 
 Non-corpus tests: at least 40 cases covering true positives, exclusions,
 kind detection, qualifier detection, day_type, and counting.
-
-Corpus tests (@pytest.mark.corpus): deselect with -m "not corpus".
 """
 from __future__ import annotations
 
@@ -487,72 +485,3 @@ class TestEdgeCases:
         params = run("Section 42 requirements.", local_id="42", citations=[_STUB_CITATION])
         bare_42 = [p for p in params if p.value_num == 42.0 and p.unit is None]
         assert len(bare_42) == 0
-
-
-# ---------------------------------------------------------------------------
-# Corpus tests
-# ---------------------------------------------------------------------------
-
-
-@pytest.mark.corpus
-def test_corpus_all_verified(tmp_path):
-    """All regex parameters extracted from the on-disk corpus are verified."""
-    from pathlib import Path
-    import importlib
-    import sys
-
-    corpus_dir = Path(__file__).parent.parent.parent / "corpus"
-    if not corpus_dir.exists():
-        pytest.skip("Corpus directory not found")
-
-    # Import the segmenter lazily — not available on CI
-    try:
-        from app.company_ingest.parse.markdown_segmenter import segment_markdown
-    except ImportError:
-        pytest.skip("markdown_segmenter not available")
-
-    ctx = RunContext()
-    all_units: list[ClauseUnit] = []
-
-    for doc_path in sorted(corpus_dir.glob("**/*.md"))[:12]:
-        text_content = doc_path.read_text()
-        units = segment_markdown(text_content, doc_id=doc_path.stem, version_id="test")
-        all_units.extend(units)
-
-    enrich_parameters(all_units, ctx)
-
-    total = sum(len(u.parameters) for u in all_units)
-    unverified = sum(
-        1 for u in all_units for p in u.parameters if not p.verified
-    )
-
-    assert unverified == 0, f"{unverified} unverified parameters found"
-    assert total >= 50, f"Expected ≥50 parameters total, got {total}"
-
-
-@pytest.mark.corpus
-def test_corpus_parameter_count(tmp_path):
-    """At least 50 parameters extracted across the corpus documents."""
-    from pathlib import Path
-
-    corpus_dir = Path(__file__).parent.parent.parent / "corpus"
-    if not corpus_dir.exists():
-        pytest.skip("Corpus directory not found")
-
-    try:
-        from app.company_ingest.parse.markdown_segmenter import segment_markdown
-    except ImportError:
-        pytest.skip("markdown_segmenter not available")
-
-    ctx = RunContext()
-    all_units: list[ClauseUnit] = []
-
-    for doc_path in sorted(corpus_dir.glob("**/*.md"))[:12]:
-        text_content = doc_path.read_text()
-        units = segment_markdown(text_content, doc_id=doc_path.stem, version_id="test")
-        all_units.extend(units)
-
-    enrich_parameters(all_units, ctx)
-
-    total = ctx.stats.get("parameters_found", 0)
-    assert total >= 50, f"Expected ≥50 parameters total, got {total}"

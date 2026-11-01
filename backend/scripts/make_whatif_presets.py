@@ -32,7 +32,6 @@ _CANDIDATES_SQL = text("""
       ON s1.source_system = cs.source_system AND s1.d = cs.snapshot_date
     JOIN company.clause_parameters p ON p.clause_pk = c.clause_pk
     WHERE c.company_id = :company_id AND c.assessable = true AND c.clause_role <> 'boilerplate'
-      AND COALESCE(p.is_citation_fragment, false) = false
       AND p.kind IN ('period', 'deadline', 'amount', 'threshold')
       AND p.value_num IS NOT NULL
 """)

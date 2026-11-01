@@ -15,9 +15,6 @@ import os
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from dotenv import load_dotenv
-load_dotenv()
-
 
 async def main():
     from app.db import AsyncSessionLocal
@@ -93,4 +90,11 @@ async def main():
             print(dict(row._mapping))
 
 
-asyncio.run(main())
+if __name__ == "__main__":
+    # Loaded here, not at import time, so importing this module can never leak
+    # production secrets into the process env or run its UPDATEs unconditionally.
+    from dotenv import load_dotenv
+
+    load_dotenv()
+
+    asyncio.run(main())

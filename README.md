@@ -2,7 +2,7 @@
 
 Strata shows a company which clauses in which of its documents are affected when government regulations change, why (with verified quotes), what must change and who must act. It flags only; it never edits documents. The demo applies real federal and Indiana rules to a synthetic utility's 12 policy documents.
 
-Design docs: start with [`development_docs/README.md`](development_docs/README.md) ([PRD](development_docs/PRD.md), [TDD](development_docs/TDD.md)).
+Design docs: [`live_ingestion_architecture.md`](live_ingestion_architecture.md) (system design), [`tables_and_connections.md`](tables_and_connections.md) (schema, data flow), [`report.md`](report.md) (findings/status report).
 
 ## Prerequisites
 
@@ -36,8 +36,18 @@ python scripts/seed_agencies.py
 python scripts/seed_phase1.py && python scripts/seed_indiana_phase1.py
 python scripts/seed_phase2.py && python scripts/seed_indiana_phase2.py
 python scripts/embed_all.py                       # vector index
-# company documents, then the impact engine
-python -m app.company_ingest.cli.ingest
+```
+
+Company documents are not bulk-loaded; there is currently no batch-load tool for them. Each document is uploaded individually through the running backend's HTTP API, which accepts it (202) and ingests it automatically in a background task within the same process:
+
+- `POST /company/documents` — upload a new document
+- `POST /company/documents/{doc_id}/versions` — upload a new version of an existing document
+
+Poll `GET /company/ingest-jobs/{job_id}` for job status. Depending on the document's approval policy, a version may need explicit approval before it becomes the document's current version — the impact engine only reads current versions.
+
+Once the law snapshots and at least one company document are ingested (and, if required, approved), run the impact engine:
+
+```bash
 python scripts/run_engine.py --kind kb
 ```
 

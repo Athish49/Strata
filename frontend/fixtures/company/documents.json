@@ -1,5 +1,116 @@
 [
   {
+    "doc_id": "RPL-COM-PRO-102",
+    "title": "Public Meeting & Community Notification Procedure",
+    "version": "1.5",
+    "status": "Not monitored",
+    "effective_date": "2023-10-23",
+    "approved_date": "2023-10-23",
+    "law_as_of": null,
+    "next_review": "2025-10-23",
+    "review_cycle": "Biennial",
+    "vertical": "corporate-governance-board",
+    "owner": {
+      "person_id": "P22",
+      "name": "Rachel Stein",
+      "title": "Manager Vegetation Management Program",
+      "department": "Distribution Operations",
+      "reports_to_id": "P21"
+    },
+    "reviewer": {
+      "person_id": "P21",
+      "name": "Patrick O'Neill",
+      "title": "Director Distribution Operations",
+      "department": "Distribution Operations",
+      "reports_to_id": "P16"
+    },
+    "approver": {
+      "person_id": "P07",
+      "name": "Thomas Whitfield",
+      "title": "Vice President Regulatory & Government Affairs",
+      "department": "Regulatory Affairs",
+      "reports_to_id": "P01"
+    },
+    "two_signature": false,
+    "monitored": false,
+    "doc_type": "Procedure",
+    "cited_citations": []
+  },
+  {
+    "doc_id": "RPL-STR-PLN-101",
+    "title": "Integrated Distribution System Planning Process",
+    "version": "1.2",
+    "status": "Not monitored",
+    "effective_date": "2024-02-26",
+    "approved_date": "2024-02-26",
+    "law_as_of": null,
+    "next_review": "2025-02-26",
+    "review_cycle": "Annual",
+    "vertical": "corporate-governance-board",
+    "owner": {
+      "person_id": "P21",
+      "name": "Patrick O'Neill",
+      "title": "Director Distribution Operations",
+      "department": "Distribution Operations",
+      "reports_to_id": "P16"
+    },
+    "reviewer": {
+      "person_id": "P20",
+      "name": "Angela Ruiz",
+      "title": "Director Metering",
+      "department": "Metering",
+      "reports_to_id": "P16"
+    },
+    "approver": {
+      "person_id": "P16",
+      "name": "Michael Brennan",
+      "title": "Vice President Operations",
+      "department": "Operations",
+      "reports_to_id": "P01"
+    },
+    "two_signature": false,
+    "monitored": false,
+    "doc_type": "Plan",
+    "cited_citations": []
+  },
+  {
+    "doc_id": "RPL-STR-POL-103",
+    "title": "Distributed Energy Resource Interconnection Strategy",
+    "version": "1.1",
+    "status": "Not monitored",
+    "effective_date": "2024-10-07",
+    "approved_date": "2024-10-07",
+    "law_as_of": null,
+    "next_review": "2026-10-07",
+    "review_cycle": "Biennial",
+    "vertical": "corporate-governance-board",
+    "owner": {
+      "person_id": "P20",
+      "name": "Angela Ruiz",
+      "title": "Director Metering",
+      "department": "Metering",
+      "reports_to_id": "P16"
+    },
+    "reviewer": {
+      "person_id": "P21",
+      "name": "Patrick O'Neill",
+      "title": "Director Distribution Operations",
+      "department": "Distribution Operations",
+      "reports_to_id": "P16"
+    },
+    "approver": {
+      "person_id": "P16",
+      "name": "Michael Brennan",
+      "title": "Vice President Operations",
+      "department": "Operations",
+      "reports_to_id": "P01"
+    },
+    "two_signature": false,
+    "monitored": false,
+    "doc_type": "Policy",
+    "cited_citations": []
+  },
+  {
     "doc_id": "RPL-CMP-REG-001",
     "title": "Regulatory Obligations Register",
     "version": "4.0",
@@ -9,7 +120,7 @@
     "law_as_of": "2024-12-31",
     "next_review": "2025-06-14",
     "review_cycle": "Quarterly",
-    "vertical": "compliance-legal",
+    "vertical": "compliance-ethics",
     "owner": {
       "person_id": "P06",
       "name": "Priya Raman",
@@ -108,65 +219,98 @@
     ]
   },
   {
-    "doc_id": "RPL-LEG-RRS-001",
-    "title": "Records Retention Schedule",
-    "version": "7.2",
+    "doc_id": "RPL-CS-PRO-004",
+    "title": "Disconnection Reconnection & Winter Protection Procedure",
+    "version": "5.1",
     "status": "Approved",
-    "effective_date": "2025-01-23",
-    "approved_date": "2025-01-23",
+    "effective_date": "2025-02-10",
+    "approved_date": "2025-02-05",
     "law_as_of": "2024-12-31",
-    "next_review": "2027-03-17",
-    "review_cycle": "Biennial",
-    "vertical": "compliance-legal",
+    "next_review": "2026-02-10",
+    "review_cycle": "Annual",
+    "vertical": "compliance-ethics",
     "owner": {
-      "person_id": "P12",
-      "name": "Linda Nguyen",
-      "title": "Records & Information Manager",
-      "department": "Legal",
-      "reports_to_id": "P02"
+      "person_id": "P15",
+      "name": "Jasmine Carter",
+      "title": "Supervisor Credit & Collections",
+      "department": "Customer Operations",
+      "reports_to_id": "P14"
     },
     "reviewer": {
+      "person_id": "P13",
+      "name": "Karen Mitchell",
+      "title": "Director Customer Service",
+      "department": "Customer Operations",
+      "reports_to_id": "P16"
+    },
+    "approver": {
       "person_id": "P03",
       "name": "Jonathan Pierce",
       "title": "Senior Counsel Regulatory",
       "department": "Legal",
       "reports_to_id": "P02"
     },
-    "approver": {
-      "person_id": "P02",
-      "name": "Catherine Brandt",
-      "title": "Vice President & General Counsel",
-      "department": "Legal",
-      "reports_to_id": "P01"
-    },
     "two_signature": false,
     "monitored": true,
-    "doc_type": "Register",
+    "doc_type": "Procedure",
     "cited_citations": [
-      "18 CFR 35.19",
-      "18 CFR 101",
-      "18 CFR 125",
-      "18 CFR 125.2",
-      "29 CFR 1904.33",
-      "29 CFR 1910.146",
-      "29 CFR 1910.332",
-      "29 CFR 1910.1020",
-      "40 CFR 112",
-      "40 CFR 122",
-      "40 CFR 262",
-      "40 CFR 262.40",
-      "40 CFR 280",
-      "40 CFR 761",
-      "40 CFR 761.180",
-      "170 IAC 1-2-1",
-      "170 IAC 1-5-2",
-      "170 IAC 1-5-9",
-      "170 IAC 1-5-11",
-      "170 IAC 1-6-5",
-      "170 IAC 4-1-3",
-      "170 IAC 4-1-4",
-      "170 IAC 4-1-23",
-      "170 IAC 16-1-4"
+      "170 IAC 4-1-1",
+      "170 IAC 4-1-13",
+      "170 IAC 4-1-15",
+      "170 IAC 4-1-16",
+      "170 IAC 4-1-16.6",
+      "170 IAC 4-1-18",
+      "170 IAC 16-1-1",
+      "170 IAC 16-1-2",
+      "170 IAC 16-1-3",
+      "170 IAC 16-1-4",
+      "170 IAC 16-1-5",
+      "170 IAC 16-1-6",
+      "170 IAC 16-1-7"
+    ]
+  },
+  {
+    "doc_id": "RPL-CS-PRO-011",
+    "title": "Customer Complaint & Dispute Resolution Procedure",
+    "version": "2.3",
+    "status": "Approved",
+    "effective_date": "2025-03-03",
+    "approved_date": "2025-02-26",
+    "law_as_of": "2024-12-31",
+    "next_review": "2026-03-03",
+    "review_cycle": "Annual",
+    "vertical": "compliance-ethics",
+    "owner": {
+      "person_id": "P17",
+      "name": "Brian Kowalski",
+      "title": "Manager Customer Advocacy & Complaint Resolution",
+      "department": "Customer Operations",
+      "reports_to_id": "P13"
+    },
+    "reviewer": {
+      "person_id": "P13",
+      "name": "Karen Mitchell",
+      "title": "Director Customer Service",
+      "department": "Customer Operations",
+      "reports_to_id": "P16"
+    },
+    "approver": null,
+    "two_signature": true,
+    "monitored": true,
+    "doc_type": "Procedure",
+    "cited_citations": [
+      "170 IAC 4-1-1",
+      "170 IAC 4-1-2",
+      "170 IAC 4-1-13",
+      "170 IAC 4-1-16",
+      "170 IAC 4-1-17",
+      "170 IAC 16-1-1",
+      "170 IAC 16-1-2",
+      "170 IAC 16-1-3",
+      "170 IAC 16-1-4",
+      "170 IAC 16-1-5",
+      "170 IAC 16-1-6",
+      "170 IAC 16-1-7"
     ]
   },
   {
@@ -179,7 +323,7 @@
     "law_as_of": "2024-12-31",
     "next_review": "2026-03-17",
     "review_cycle": "Annual (rolled each January; revised when a source procedure changes)",
-    "vertical": "compliance-legal",
+    "vertical": "compliance-ethics",
     "owner": {
       "person_id": "P09",
       "name": "Marcus Lee",
@@ -236,29 +380,29 @@
     ]
   },
   {
-    "doc_id": "RPL-CS-PRO-004",
-    "title": "Disconnection Reconnection & Winter Protection Procedure",
-    "version": "5.1",
-    "status": "Approved",
-    "effective_date": "2025-02-10",
-    "approved_date": "2025-02-05",
-    "law_as_of": "2024-12-31",
-    "next_review": "2026-02-10",
+    "doc_id": "RPL-CON-PRO-101",
+    "title": "Pole Attachment Agreement Administration Procedure",
+    "version": "2.7",
+    "status": "Not monitored",
+    "effective_date": "2024-02-12",
+    "approved_date": "2024-02-12",
+    "law_as_of": null,
+    "next_review": "2025-02-12",
     "review_cycle": "Annual",
-    "vertical": "policy-governance",
+    "vertical": "legal-contractual",
     "owner": {
-      "person_id": "P15",
-      "name": "Jasmine Carter",
-      "title": "Supervisor Credit & Collections",
-      "department": "Customer Operations",
-      "reports_to_id": "P14"
+      "person_id": "P12",
+      "name": "Linda Nguyen",
+      "title": "Records & Information Manager",
+      "department": "Legal",
+      "reports_to_id": "P02"
     },
     "reviewer": {
-      "person_id": "P13",
-      "name": "Karen Mitchell",
-      "title": "Director Customer Service",
-      "department": "Customer Operations",
-      "reports_to_id": "P16"
+      "person_id": "P10",
+      "name": "Robert Haskins",
+      "title": "Manager Rates & Tariffs",
+      "department": "Regulatory Affairs",
+      "reports_to_id": "P07"
     },
     "approver": {
       "person_id": "P03",
@@ -268,23 +412,77 @@
       "reports_to_id": "P02"
     },
     "two_signature": false,
-    "monitored": true,
+    "monitored": false,
     "doc_type": "Procedure",
-    "cited_citations": [
-      "170 IAC 4-1-1",
-      "170 IAC 4-1-13",
-      "170 IAC 4-1-15",
-      "170 IAC 4-1-16",
-      "170 IAC 4-1-16.6",
-      "170 IAC 4-1-18",
-      "170 IAC 16-1-1",
-      "170 IAC 16-1-2",
-      "170 IAC 16-1-3",
-      "170 IAC 16-1-4",
-      "170 IAC 16-1-5",
-      "170 IAC 16-1-6",
-      "170 IAC 16-1-7"
-    ]
+    "cited_citations": []
+  },
+  {
+    "doc_id": "RPL-CON-PRO-102",
+    "title": "Wholesale Power Agreement Compliance Procedure",
+    "version": "1.6",
+    "status": "Not monitored",
+    "effective_date": "2024-07-29",
+    "approved_date": "2024-07-29",
+    "law_as_of": null,
+    "next_review": "2025-07-29",
+    "review_cycle": "Annual",
+    "vertical": "legal-contractual",
+    "owner": {
+      "person_id": "P09",
+      "name": "Marcus Lee",
+      "title": "Regulatory Affairs Analyst",
+      "department": "Regulatory Affairs",
+      "reports_to_id": "P08"
+    },
+    "reviewer": {
+      "person_id": "P08",
+      "name": "Elena Vasquez",
+      "title": "Manager Regulatory Affairs",
+      "department": "Regulatory Affairs",
+      "reports_to_id": "P07"
+    },
+    "approver": {
+      "person_id": "P07",
+      "name": "Thomas Whitfield",
+      "title": "Vice President Regulatory & Government Affairs",
+      "department": "Regulatory Affairs",
+      "reports_to_id": "P01"
+    },
+    "two_signature": false,
+    "monitored": false,
+    "doc_type": "Procedure",
+    "cited_citations": []
+  },
+  {
+    "doc_id": "RPL-CON-STD-103",
+    "title": "Vegetation Contractor Agreement Management Standard",
+    "version": "1.2",
+    "status": "Not monitored",
+    "effective_date": "2024-01-15",
+    "approved_date": "2024-01-15",
+    "law_as_of": null,
+    "next_review": "2026-01-15",
+    "review_cycle": "Biennial",
+    "vertical": "legal-contractual",
+    "owner": {
+      "person_id": "P22",
+      "name": "Rachel Stein",
+      "title": "Manager Vegetation Management Program",
+      "department": "Distribution Operations",
+      "reports_to_id": "P21"
+    },
+    "reviewer": {
+      "person_id": "P21",
+      "name": "Patrick O'Neill",
+      "title": "Director Distribution Operations",
+      "department": "Distribution Operations",
+      "reports_to_id": "P16"
+    },
+    "approver": null,
+    "two_signature": false,
+    "monitored": false,
+    "doc_type": "Standard",
+    "cited_citations": []
   },
   {
     "doc_id": "RPL-CS-PRO-007",
@@ -296,7 +494,7 @@
     "law_as_of": "2024-12-31",
     "next_review": "2026-02-17",
     "review_cycle": "Annual",
-    "vertical": "policy-governance",
+    "vertical": "financial-compliance-reporting",
     "owner": {
       "person_id": "P18",
       "name": "Luis Hernandez",
@@ -332,111 +530,6 @@
     ]
   },
   {
-    "doc_id": "RPL-CS-PRO-011",
-    "title": "Customer Complaint & Dispute Resolution Procedure",
-    "version": "2.3",
-    "status": "Approved",
-    "effective_date": "2025-03-03",
-    "approved_date": "2025-02-26",
-    "law_as_of": "2024-12-31",
-    "next_review": "2026-03-03",
-    "review_cycle": "Annual",
-    "vertical": "policy-governance",
-    "owner": {
-      "person_id": "P17",
-      "name": "Brian Kowalski",
-      "title": "Manager Customer Advocacy & Complaint Resolution",
-      "department": "Customer Operations",
-      "reports_to_id": "P13"
-    },
-    "reviewer": {
-      "person_id": "P13",
-      "name": "Karen Mitchell",
-      "title": "Director Customer Service",
-      "department": "Customer Operations",
-      "reports_to_id": "P16"
-    },
-    "approver": null,
-    "two_signature": true,
-    "monitored": true,
-    "doc_type": "Procedure",
-    "cited_citations": [
-      "170 IAC 4-1-1",
-      "170 IAC 4-1-2",
-      "170 IAC 4-1-13",
-      "170 IAC 4-1-16",
-      "170 IAC 4-1-17",
-      "170 IAC 16-1-1",
-      "170 IAC 16-1-2",
-      "170 IAC 16-1-3",
-      "170 IAC 16-1-4",
-      "170 IAC 16-1-5",
-      "170 IAC 16-1-6",
-      "170 IAC 16-1-7"
-    ]
-  },
-  {
-    "doc_id": "RPL-DO-PLN-002",
-    "title": "Vegetation Management Plan 2025",
-    "version": "2025.1",
-    "status": "Approved",
-    "effective_date": "2025-01-27",
-    "approved_date": "2025-01-22",
-    "law_as_of": "2024-12-31",
-    "next_review": "2026-01-27",
-    "review_cycle": "Annual",
-    "vertical": "policy-governance",
-    "owner": {
-      "person_id": "P22",
-      "name": "Rachel Stein",
-      "title": "Manager Vegetation Management Program",
-      "department": "Distribution Operations",
-      "reports_to_id": "P21"
-    },
-    "reviewer": {
-      "person_id": "P21",
-      "name": "Patrick O'Neill",
-      "title": "Director Distribution Operations",
-      "department": "Distribution Operations",
-      "reports_to_id": "P16"
-    },
-    "approver": {
-      "person_id": "P03",
-      "name": "Jonathan Pierce",
-      "title": "Senior Counsel Regulatory",
-      "department": "Legal",
-      "reports_to_id": "P02"
-    },
-    "two_signature": false,
-    "monitored": true,
-    "doc_type": "Plan",
-    "cited_citations": [
-      "29 CFR 1910.269",
-      "170 IAC 4-1-2",
-      "170 IAC 4-1-26",
-      "170 IAC 4-9-1",
-      "170 IAC 4-9-2",
-      "170 IAC 4-9-3",
-      "170 IAC 4-9-4",
-      "170 IAC 4-9-5",
-      "170 IAC 4-9-6",
-      "170 IAC 4-9-7",
-      "170 IAC 4-9-8",
-      "170 IAC 4-9-9",
-      "170 IAC 4-9-10",
-      "170 IAC 4-9-11",
-      "170 IAC 4-9-12",
-      "170 IAC 4-9-13",
-      "170 IAC 16-1-1",
-      "170 IAC 16-1-2",
-      "170 IAC 16-1-3",
-      "170 IAC 16-1-4",
-      "170 IAC 16-1-5",
-      "170 IAC 16-1-6",
-      "170 IAC 16-1-7"
-    ]
-  },
-  {
     "doc_id": "RPL-TAR-GRR-012",
     "title": "Tariff for Electric Service, IURC No. 12 — General Rules and Regulations",
     "version": "Sheets as revised through 2024-06-01",
@@ -446,7 +539,7 @@
     "law_as_of": "2024-12-31",
     "next_review": "2025-06-01",
     "review_cycle": "On change; reviewed annually",
-    "vertical": "policy-governance",
+    "vertical": "financial-compliance-reporting",
     "owner": {
       "person_id": "P11",
       "name": "Aisha Thompson",
@@ -525,7 +618,7 @@
     "law_as_of": null,
     "next_review": "2025-09-01",
     "review_cycle": "Biennial",
-    "vertical": "financial-reporting",
+    "vertical": "financial-compliance-reporting",
     "owner": {
       "person_id": "P05",
       "name": "David Okafor",
@@ -562,7 +655,7 @@
     "law_as_of": null,
     "next_review": "2025-03-01",
     "review_cycle": "Annual",
-    "vertical": "financial-reporting",
+    "vertical": "financial-compliance-reporting",
     "owner": {
       "person_id": "P06",
       "name": "Priya Raman",
@@ -590,43 +683,6 @@
     "cited_citations": []
   },
   {
-    "doc_id": "RPL-FIN-PRO-102",
-    "title": "IURC Annual Financial Report Filing Procedure",
-    "version": "2.4",
-    "status": "Not monitored",
-    "effective_date": "2024-04-15",
-    "approved_date": "2024-04-15",
-    "law_as_of": null,
-    "next_review": "2025-04-15",
-    "review_cycle": "Annual",
-    "vertical": "financial-reporting",
-    "owner": {
-      "person_id": "P09",
-      "name": "Marcus Lee",
-      "title": "Regulatory Affairs Analyst",
-      "department": "Regulatory Affairs",
-      "reports_to_id": "P08"
-    },
-    "reviewer": {
-      "person_id": "P08",
-      "name": "Elena Vasquez",
-      "title": "Manager Regulatory Affairs",
-      "department": "Regulatory Affairs",
-      "reports_to_id": "P07"
-    },
-    "approver": {
-      "person_id": "P07",
-      "name": "Thomas Whitfield",
-      "title": "Vice President Regulatory & Government Affairs",
-      "department": "Regulatory Affairs",
-      "reports_to_id": "P01"
-    },
-    "two_signature": false,
-    "monitored": false,
-    "doc_type": "Procedure",
-    "cited_citations": []
-  },
-  {
     "doc_id": "RPL-REV-POL-103",
     "title": "Customer Billing Adjustment & Refund Policy",
     "version": "1.3",
@@ -636,7 +692,7 @@
     "law_as_of": null,
     "next_review": "2025-11-20",
     "review_cycle": "Biennial",
-    "vertical": "revenue-pricing",
+    "vertical": "financial-compliance-reporting",
     "owner": {
       "person_id": "P14",
       "name": "Steven Park",
@@ -673,7 +729,7 @@
     "law_as_of": null,
     "next_review": "2025-01-22",
     "review_cycle": "Annual",
-    "vertical": "revenue-pricing",
+    "vertical": "financial-compliance-reporting",
     "owner": {
       "person_id": "P11",
       "name": "Aisha Thompson",
@@ -701,8 +757,45 @@
     "cited_citations": []
   },
   {
+    "doc_id": "RPL-FIN-PRO-102",
+    "title": "Property Tax & Public Utility Franchise Fee Filing Procedure",
+    "version": "2.4",
+    "status": "Not monitored",
+    "effective_date": "2024-04-15",
+    "approved_date": "2024-04-15",
+    "law_as_of": null,
+    "next_review": "2025-04-15",
+    "review_cycle": "Annual",
+    "vertical": "tax-trade-compliance",
+    "owner": {
+      "person_id": "P09",
+      "name": "Marcus Lee",
+      "title": "Regulatory Affairs Analyst",
+      "department": "Regulatory Affairs",
+      "reports_to_id": "P08"
+    },
+    "reviewer": {
+      "person_id": "P08",
+      "name": "Elena Vasquez",
+      "title": "Manager Regulatory Affairs",
+      "department": "Regulatory Affairs",
+      "reports_to_id": "P07"
+    },
+    "approver": {
+      "person_id": "P07",
+      "name": "Thomas Whitfield",
+      "title": "Vice President Regulatory & Government Affairs",
+      "department": "Regulatory Affairs",
+      "reports_to_id": "P01"
+    },
+    "two_signature": false,
+    "monitored": false,
+    "doc_type": "Procedure",
+    "cited_citations": []
+  },
+  {
     "doc_id": "RPL-REV-PRO-102",
-    "title": "Rider & Tracker Adjustment Filing Procedure",
+    "title": "Utility Sales & Use Tax Remittance Procedure",
     "version": "4.2",
     "status": "Not monitored",
     "effective_date": "2024-06-10",
@@ -710,7 +803,7 @@
     "law_as_of": null,
     "next_review": "2025-06-10",
     "review_cycle": "Annual",
-    "vertical": "revenue-pricing",
+    "vertical": "tax-trade-compliance",
     "owner": {
       "person_id": "P10",
       "name": "Robert Haskins",
@@ -738,6 +831,311 @@
     "cited_citations": []
   },
   {
+    "doc_id": "RPL-CAP-PRO-102",
+    "title": "Workforce Compensation & Benefits Budget Planning Procedure",
+    "version": "2.8",
+    "status": "Not monitored",
+    "effective_date": "2024-08-19",
+    "approved_date": "2024-08-19",
+    "law_as_of": null,
+    "next_review": "2025-08-19",
+    "review_cycle": "Annual",
+    "vertical": "workforce-employment",
+    "owner": {
+      "person_id": "P16",
+      "name": "Michael Brennan",
+      "title": "Vice President Operations",
+      "department": "Operations",
+      "reports_to_id": "P01"
+    },
+    "reviewer": {
+      "person_id": "P05",
+      "name": "David Okafor",
+      "title": "Manager Regulatory Compliance",
+      "department": "Compliance",
+      "reports_to_id": "P04"
+    },
+    "approver": {
+      "person_id": "P01",
+      "name": "William Hartley",
+      "title": "President & Chief Operating Officer",
+      "department": "Executive",
+      "reports_to_id": null
+    },
+    "two_signature": false,
+    "monitored": false,
+    "doc_type": "Procedure",
+    "cited_citations": []
+  },
+  {
+    "doc_id": "RPL-RSK-PRO-102",
+    "title": "Workers' Compensation Claims & Employee Benefits Procedure",
+    "version": "1.9",
+    "status": "Not monitored",
+    "effective_date": "2024-04-29",
+    "approved_date": "2024-04-29",
+    "law_as_of": null,
+    "next_review": "2026-04-29",
+    "review_cycle": "Biennial",
+    "vertical": "workforce-employment",
+    "owner": {
+      "person_id": "P12",
+      "name": "Linda Nguyen",
+      "title": "Records & Information Manager",
+      "department": "Legal",
+      "reports_to_id": "P02"
+    },
+    "reviewer": {
+      "person_id": "P03",
+      "name": "Jonathan Pierce",
+      "title": "Senior Counsel Regulatory",
+      "department": "Legal",
+      "reports_to_id": "P02"
+    },
+    "approver": {
+      "person_id": "P02",
+      "name": "Catherine Brandt",
+      "title": "Vice President & General Counsel",
+      "department": "Legal",
+      "reports_to_id": "P01"
+    },
+    "two_signature": false,
+    "monitored": false,
+    "doc_type": "Procedure",
+    "cited_citations": []
+  },
+  {
+    "doc_id": "RPL-SAF-PRO-009",
+    "title": "Electrical Accident & Incident Reporting Procedure",
+    "version": "2.0",
+    "status": "Approved",
+    "effective_date": "2025-03-17",
+    "approved_date": "2025-03-12",
+    "law_as_of": "2024-12-31",
+    "next_review": "2026-03-17",
+    "review_cycle": "Annual",
+    "vertical": "health-safety",
+    "owner": {
+      "person_id": "P27",
+      "name": "Tyrone Jackson",
+      "title": "Manager Safety",
+      "department": "EHS",
+      "reports_to_id": "P24"
+    },
+    "reviewer": {
+      "person_id": "P24",
+      "name": "Sandra Kim",
+      "title": "Director Environmental Health & Safety",
+      "department": "EHS",
+      "reports_to_id": "P16"
+    },
+    "approver": {
+      "person_id": "P08",
+      "name": "Elena Vasquez",
+      "title": "Manager Regulatory Affairs",
+      "department": "Regulatory Affairs",
+      "reports_to_id": "P07"
+    },
+    "two_signature": false,
+    "monitored": true,
+    "doc_type": "Procedure",
+    "cited_citations": [
+      "170 IAC 4-1-1",
+      "170 IAC 4-1-2",
+      "170 IAC 4-1-3",
+      "170 IAC 4-1-24"
+    ]
+  },
+  {
+    "doc_id": "RPL-SCM-PRO-102",
+    "title": "Contractor Safety Prequalification Procedure",
+    "version": "3.3",
+    "status": "Not monitored",
+    "effective_date": "2024-07-08",
+    "approved_date": "2024-07-08",
+    "law_as_of": null,
+    "next_review": "2025-07-08",
+    "review_cycle": "Annual",
+    "vertical": "health-safety",
+    "owner": {
+      "person_id": "P27",
+      "name": "Tyrone Jackson",
+      "title": "Manager Safety",
+      "department": "EHS",
+      "reports_to_id": "P24"
+    },
+    "reviewer": {
+      "person_id": "P24",
+      "name": "Sandra Kim",
+      "title": "Director Environmental Health & Safety",
+      "department": "EHS",
+      "reports_to_id": "P16"
+    },
+    "approver": {
+      "person_id": "P16",
+      "name": "Michael Brennan",
+      "title": "Vice President Operations",
+      "department": "Operations",
+      "reports_to_id": "P01"
+    },
+    "two_signature": false,
+    "monitored": false,
+    "doc_type": "Procedure",
+    "cited_citations": []
+  },
+  {
+    "doc_id": "RPL-COM-PRO-101",
+    "title": "Data Breach Incident Communications Procedure",
+    "version": "3.2",
+    "status": "Not monitored",
+    "effective_date": "2024-03-11",
+    "approved_date": "2024-03-11",
+    "law_as_of": null,
+    "next_review": "2025-03-11",
+    "review_cycle": "Annual",
+    "vertical": "data-privacy-cybersecurity",
+    "owner": {
+      "person_id": "P17",
+      "name": "Brian Kowalski",
+      "title": "Manager Customer Advocacy & Complaint Resolution",
+      "department": "Customer Operations",
+      "reports_to_id": "P13"
+    },
+    "reviewer": {
+      "person_id": "P13",
+      "name": "Karen Mitchell",
+      "title": "Director Customer Service",
+      "department": "Customer Operations",
+      "reports_to_id": "P16"
+    },
+    "approver": {
+      "person_id": "P01",
+      "name": "William Hartley",
+      "title": "President & Chief Operating Officer",
+      "department": "Executive",
+      "reports_to_id": null
+    },
+    "two_signature": false,
+    "monitored": false,
+    "doc_type": "Procedure",
+    "cited_citations": []
+  },
+  {
+    "doc_id": "RPL-TEC-POL-101",
+    "title": "Customer Data Privacy & Security Policy",
+    "version": "3.0",
+    "status": "Not monitored",
+    "effective_date": "2024-02-05",
+    "approved_date": "2024-02-05",
+    "law_as_of": null,
+    "next_review": "2025-02-05",
+    "review_cycle": "Annual",
+    "vertical": "data-privacy-cybersecurity",
+    "owner": {
+      "person_id": "P03",
+      "name": "Jonathan Pierce",
+      "title": "Senior Counsel Regulatory",
+      "department": "Legal",
+      "reports_to_id": "P02"
+    },
+    "reviewer": {
+      "person_id": "P02",
+      "name": "Catherine Brandt",
+      "title": "Vice President & General Counsel",
+      "department": "Legal",
+      "reports_to_id": "P01"
+    },
+    "approver": {
+      "person_id": "P01",
+      "name": "William Hartley",
+      "title": "President & Chief Operating Officer",
+      "department": "Executive",
+      "reports_to_id": null
+    },
+    "two_signature": false,
+    "monitored": false,
+    "doc_type": "Policy",
+    "cited_citations": []
+  },
+  {
+    "doc_id": "RPL-ENV-PRO-005",
+    "title": "Spill Response & Reporting Procedure",
+    "version": "3.1",
+    "status": "Approved",
+    "effective_date": "2025-03-10",
+    "approved_date": "2025-03-05",
+    "law_as_of": "2024-12-31",
+    "next_review": "2026-03-10",
+    "review_cycle": "Annual",
+    "vertical": "environmental-sustainability",
+    "owner": {
+      "person_id": "P26",
+      "name": "Hannah Brooks",
+      "title": "Senior Environmental Specialist",
+      "department": "EHS",
+      "reports_to_id": "P25"
+    },
+    "reviewer": {
+      "person_id": "P25",
+      "name": "Daniel Foster",
+      "title": "Manager Environmental Services",
+      "department": "EHS",
+      "reports_to_id": "P24"
+    },
+    "approver": {
+      "person_id": "P24",
+      "name": "Sandra Kim",
+      "title": "Director Environmental Health & Safety",
+      "department": "EHS",
+      "reports_to_id": "P16"
+    },
+    "two_signature": false,
+    "monitored": true,
+    "doc_type": "Procedure",
+    "cited_citations": [
+      "40 CFR 112",
+      "40 CFR 302",
+      "40 CFR 761"
+    ]
+  },
+  {
+    "doc_id": "RPL-CAP-PLN-103",
+    "title": "Distribution Asset Replacement & Environmental Impact Plan",
+    "version": "2025.1",
+    "status": "Not monitored",
+    "effective_date": "2025-01-13",
+    "approved_date": "2025-01-13",
+    "law_as_of": null,
+    "next_review": "2026-01-13",
+    "review_cycle": "Annual",
+    "vertical": "environmental-sustainability",
+    "owner": {
+      "person_id": "P22",
+      "name": "Rachel Stein",
+      "title": "Manager Vegetation Management Program",
+      "department": "Distribution Operations",
+      "reports_to_id": "P21"
+    },
+    "reviewer": {
+      "person_id": "P21",
+      "name": "Patrick O'Neill",
+      "title": "Director Distribution Operations",
+      "department": "Distribution Operations",
+      "reports_to_id": "P16"
+    },
+    "approver": {
+      "person_id": "P16",
+      "name": "Michael Brennan",
+      "title": "Vice President Operations",
+      "department": "Operations",
+      "reports_to_id": "P01"
+    },
+    "two_signature": false,
+    "monitored": false,
+    "doc_type": "Plan",
+    "cited_citations": []
+  },
+  {
     "doc_id": "RPL-DCC-PRO-003",
     "title": "Service Interruption Reporting Procedure",
     "version": "4.2",
@@ -747,7 +1145,7 @@
     "law_as_of": "2024-12-31",
     "next_review": "2026-02-24",
     "review_cycle": "Annual",
-    "vertical": "operations-processes",
+    "vertical": "operations-quality",
     "owner": {
       "person_id": "P23",
       "name": "Kevin Adeyemi",
@@ -783,6 +1181,67 @@
     ]
   },
   {
+    "doc_id": "RPL-DO-PLN-002",
+    "title": "Vegetation Management Plan 2025",
+    "version": "2025.1",
+    "status": "Approved",
+    "effective_date": "2025-01-27",
+    "approved_date": "2025-01-22",
+    "law_as_of": "2024-12-31",
+    "next_review": "2026-01-27",
+    "review_cycle": "Annual",
+    "vertical": "operations-quality",
+    "owner": {
+      "person_id": "P22",
+      "name": "Rachel Stein",
+      "title": "Manager Vegetation Management Program",
+      "department": "Distribution Operations",
+      "reports_to_id": "P21"
+    },
+    "reviewer": {
+      "person_id": "P21",
+      "name": "Patrick O'Neill",
+      "title": "Director Distribution Operations",
+      "department": "Distribution Operations",
+      "reports_to_id": "P16"
+    },
+    "approver": {
+      "person_id": "P03",
+      "name": "Jonathan Pierce",
+      "title": "Senior Counsel Regulatory",
+      "department": "Legal",
+      "reports_to_id": "P02"
+    },
+    "two_signature": false,
+    "monitored": true,
+    "doc_type": "Plan",
+    "cited_citations": [
+      "29 CFR 1910.269",
+      "170 IAC 4-1-2",
+      "170 IAC 4-1-26",
+      "170 IAC 4-9-1",
+      "170 IAC 4-9-2",
+      "170 IAC 4-9-3",
+      "170 IAC 4-9-4",
+      "170 IAC 4-9-5",
+      "170 IAC 4-9-6",
+      "170 IAC 4-9-7",
+      "170 IAC 4-9-8",
+      "170 IAC 4-9-9",
+      "170 IAC 4-9-10",
+      "170 IAC 4-9-11",
+      "170 IAC 4-9-12",
+      "170 IAC 4-9-13",
+      "170 IAC 16-1-1",
+      "170 IAC 16-1-2",
+      "170 IAC 16-1-3",
+      "170 IAC 16-1-4",
+      "170 IAC 16-1-5",
+      "170 IAC 16-1-6",
+      "170 IAC 16-1-7"
+    ]
+  },
+  {
     "doc_id": "RPL-MTR-PGM-001",
     "title": "Meter Testing Program Plan",
     "version": "6.0",
@@ -792,7 +1251,7 @@
     "law_as_of": "2024-12-31",
     "next_review": "2026-01-13",
     "review_cycle": "Annual",
-    "vertical": "operations-processes",
+    "vertical": "operations-quality",
     "owner": {
       "person_id": "P19",
       "name": "Gregory Walsh",
@@ -830,6 +1289,68 @@
     ]
   },
   {
+    "doc_id": "RPL-LEG-RRS-001",
+    "title": "Records Retention Schedule",
+    "version": "7.2",
+    "status": "Approved",
+    "effective_date": "2025-01-23",
+    "approved_date": "2025-01-23",
+    "law_as_of": "2024-12-31",
+    "next_review": "2027-03-17",
+    "review_cycle": "Biennial",
+    "vertical": "information-technology-records",
+    "owner": {
+      "person_id": "P12",
+      "name": "Linda Nguyen",
+      "title": "Records & Information Manager",
+      "department": "Legal",
+      "reports_to_id": "P02"
+    },
+    "reviewer": {
+      "person_id": "P03",
+      "name": "Jonathan Pierce",
+      "title": "Senior Counsel Regulatory",
+      "department": "Legal",
+      "reports_to_id": "P02"
+    },
+    "approver": {
+      "person_id": "P02",
+      "name": "Catherine Brandt",
+      "title": "Vice President & General Counsel",
+      "department": "Legal",
+      "reports_to_id": "P01"
+    },
+    "two_signature": false,
+    "monitored": true,
+    "doc_type": "Register",
+    "cited_citations": [
+      "18 CFR 35.19",
+      "18 CFR 101",
+      "18 CFR 125",
+      "18 CFR 125.2",
+      "29 CFR 1904.33",
+      "29 CFR 1910.146",
+      "29 CFR 1910.332",
+      "29 CFR 1910.1020",
+      "40 CFR 112",
+      "40 CFR 122",
+      "40 CFR 262",
+      "40 CFR 262.40",
+      "40 CFR 280",
+      "40 CFR 761",
+      "40 CFR 761.180",
+      "170 IAC 1-2-1",
+      "170 IAC 1-5-2",
+      "170 IAC 1-5-9",
+      "170 IAC 1-5-11",
+      "170 IAC 1-6-5",
+      "170 IAC 4-1-3",
+      "170 IAC 4-1-4",
+      "170 IAC 4-1-23",
+      "170 IAC 16-1-4"
+    ]
+  },
+  {
     "doc_id": "RPL-TEC-PLN-103",
     "title": "Operational Technology Cybersecurity Incident Response Plan",
     "version": "1.8",
@@ -839,7 +1360,7 @@
     "law_as_of": null,
     "next_review": "2025-08-01",
     "review_cycle": "Annual",
-    "vertical": "technology-systems",
+    "vertical": "information-technology-records",
     "owner": {
       "person_id": "P23",
       "name": "Kevin Adeyemi",
@@ -867,43 +1388,6 @@
     "cited_citations": []
   },
   {
-    "doc_id": "RPL-TEC-POL-101",
-    "title": "Customer Data Privacy & Security Policy",
-    "version": "3.0",
-    "status": "Not monitored",
-    "effective_date": "2024-02-05",
-    "approved_date": "2024-02-05",
-    "law_as_of": null,
-    "next_review": "2025-02-05",
-    "review_cycle": "Annual",
-    "vertical": "technology-systems",
-    "owner": {
-      "person_id": "P03",
-      "name": "Jonathan Pierce",
-      "title": "Senior Counsel Regulatory",
-      "department": "Legal",
-      "reports_to_id": "P02"
-    },
-    "reviewer": {
-      "person_id": "P02",
-      "name": "Catherine Brandt",
-      "title": "Vice President & General Counsel",
-      "department": "Legal",
-      "reports_to_id": "P01"
-    },
-    "approver": {
-      "person_id": "P01",
-      "name": "William Hartley",
-      "title": "President & Chief Operating Officer",
-      "department": "Executive",
-      "reports_to_id": null
-    },
-    "two_signature": false,
-    "monitored": false,
-    "doc_type": "Policy",
-    "cited_citations": []
-  },
-  {
     "doc_id": "RPL-TEC-PRO-102",
     "title": "AMI Head-End System Change Management Procedure",
     "version": "2.2",
@@ -913,7 +1397,7 @@
     "law_as_of": null,
     "next_review": "2025-05-13",
     "review_cycle": "Annual",
-    "vertical": "technology-systems",
+    "vertical": "information-technology-records",
     "owner": {
       "person_id": "P20",
       "name": "Angela Ruiz",
@@ -939,89 +1423,6 @@
     "monitored": false,
     "doc_type": "Procedure",
     "cited_citations": []
-  },
-  {
-    "doc_id": "RPL-SAF-PRO-009",
-    "title": "Electrical Accident & Incident Reporting Procedure",
-    "version": "2.0",
-    "status": "Approved",
-    "effective_date": "2025-03-17",
-    "approved_date": "2025-03-12",
-    "law_as_of": "2024-12-31",
-    "next_review": "2026-03-17",
-    "review_cycle": "Annual",
-    "vertical": "workforce-hr",
-    "owner": {
-      "person_id": "P27",
-      "name": "Tyrone Jackson",
-      "title": "Manager Safety",
-      "department": "EHS",
-      "reports_to_id": "P24"
-    },
-    "reviewer": {
-      "person_id": "P24",
-      "name": "Sandra Kim",
-      "title": "Director Environmental Health & Safety",
-      "department": "EHS",
-      "reports_to_id": "P16"
-    },
-    "approver": {
-      "person_id": "P08",
-      "name": "Elena Vasquez",
-      "title": "Manager Regulatory Affairs",
-      "department": "Regulatory Affairs",
-      "reports_to_id": "P07"
-    },
-    "two_signature": false,
-    "monitored": true,
-    "doc_type": "Procedure",
-    "cited_citations": [
-      "170 IAC 4-1-1",
-      "170 IAC 4-1-2",
-      "170 IAC 4-1-3",
-      "170 IAC 4-1-24"
-    ]
-  },
-  {
-    "doc_id": "RPL-ENV-PRO-005",
-    "title": "Spill Response & Reporting Procedure",
-    "version": "3.1",
-    "status": "Approved",
-    "effective_date": "2025-03-10",
-    "approved_date": "2025-03-05",
-    "law_as_of": "2024-12-31",
-    "next_review": "2026-03-10",
-    "review_cycle": "Annual",
-    "vertical": "environmental-esg",
-    "owner": {
-      "person_id": "P26",
-      "name": "Hannah Brooks",
-      "title": "Senior Environmental Specialist",
-      "department": "EHS",
-      "reports_to_id": "P25"
-    },
-    "reviewer": {
-      "person_id": "P25",
-      "name": "Daniel Foster",
-      "title": "Manager Environmental Services",
-      "department": "EHS",
-      "reports_to_id": "P24"
-    },
-    "approver": {
-      "person_id": "P24",
-      "name": "Sandra Kim",
-      "title": "Director Environmental Health & Safety",
-      "department": "EHS",
-      "reports_to_id": "P16"
-    },
-    "two_signature": false,
-    "monitored": true,
-    "doc_type": "Procedure",
-    "cited_citations": [
-      "40 CFR 112",
-      "40 CFR 302",
-      "40 CFR 761"
-    ]
   },
   {
     "doc_id": "RPL-SCM-PRO-101",
@@ -1033,7 +1434,7 @@
     "law_as_of": null,
     "next_review": "2025-03-18",
     "review_cycle": "Annual",
-    "vertical": "supply-chain-procurement",
+    "vertical": "supply-chain-third-party-risk",
     "owner": {
       "person_id": "P19",
       "name": "Gregory Walsh",
@@ -1046,43 +1447,6 @@
       "name": "Angela Ruiz",
       "title": "Director Metering",
       "department": "Metering",
-      "reports_to_id": "P16"
-    },
-    "approver": {
-      "person_id": "P16",
-      "name": "Michael Brennan",
-      "title": "Vice President Operations",
-      "department": "Operations",
-      "reports_to_id": "P01"
-    },
-    "two_signature": false,
-    "monitored": false,
-    "doc_type": "Procedure",
-    "cited_citations": []
-  },
-  {
-    "doc_id": "RPL-SCM-PRO-102",
-    "title": "Contractor Safety Prequalification Procedure",
-    "version": "3.3",
-    "status": "Not monitored",
-    "effective_date": "2024-07-08",
-    "approved_date": "2024-07-08",
-    "law_as_of": null,
-    "next_review": "2025-07-08",
-    "review_cycle": "Annual",
-    "vertical": "supply-chain-procurement",
-    "owner": {
-      "person_id": "P27",
-      "name": "Tyrone Jackson",
-      "title": "Manager Safety",
-      "department": "EHS",
-      "reports_to_id": "P24"
-    },
-    "reviewer": {
-      "person_id": "P24",
-      "name": "Sandra Kim",
-      "title": "Director Environmental Health & Safety",
-      "department": "EHS",
       "reports_to_id": "P16"
     },
     "approver": {
@@ -1107,7 +1471,7 @@
     "law_as_of": null,
     "next_review": "2025-12-04",
     "review_cycle": "Biennial",
-    "vertical": "supply-chain-procurement",
+    "vertical": "supply-chain-third-party-risk",
     "owner": {
       "person_id": "P22",
       "name": "Rachel Stein",
@@ -1129,6 +1493,117 @@
     "cited_citations": []
   },
   {
+    "doc_id": "RPL-COM-POL-103",
+    "title": "Employee Social Media Policy & Training Acknowledgment Standard",
+    "version": "2.3",
+    "status": "Not monitored",
+    "effective_date": "2024-05-20",
+    "approved_date": "2024-05-20",
+    "law_as_of": null,
+    "next_review": "2025-05-20",
+    "review_cycle": "Annual",
+    "vertical": "policy-training-management",
+    "owner": {
+      "person_id": "P13",
+      "name": "Karen Mitchell",
+      "title": "Director Customer Service",
+      "department": "Customer Operations",
+      "reports_to_id": "P16"
+    },
+    "reviewer": {
+      "person_id": "P03",
+      "name": "Jonathan Pierce",
+      "title": "Senior Counsel Regulatory",
+      "department": "Legal",
+      "reports_to_id": "P02"
+    },
+    "approver": {
+      "person_id": "P01",
+      "name": "William Hartley",
+      "title": "President & Chief Operating Officer",
+      "department": "Executive",
+      "reports_to_id": null
+    },
+    "two_signature": false,
+    "monitored": false,
+    "doc_type": "Policy",
+    "cited_citations": []
+  },
+  {
+    "doc_id": "RPL-STR-PRO-102",
+    "title": "Regulatory Compliance Training & Docket Monitoring Procedure",
+    "version": "2.0",
+    "status": "Not monitored",
+    "effective_date": "2024-06-24",
+    "approved_date": "2024-06-24",
+    "law_as_of": null,
+    "next_review": "2025-06-24",
+    "review_cycle": "Annual",
+    "vertical": "policy-training-management",
+    "owner": {
+      "person_id": "P08",
+      "name": "Elena Vasquez",
+      "title": "Manager Regulatory Affairs",
+      "department": "Regulatory Affairs",
+      "reports_to_id": "P07"
+    },
+    "reviewer": {
+      "person_id": "P07",
+      "name": "Thomas Whitfield",
+      "title": "Vice President Regulatory & Government Affairs",
+      "department": "Regulatory Affairs",
+      "reports_to_id": "P01"
+    },
+    "approver": {
+      "person_id": "P02",
+      "name": "Catherine Brandt",
+      "title": "Vice President & General Counsel",
+      "department": "Legal",
+      "reports_to_id": "P01"
+    },
+    "two_signature": false,
+    "monitored": false,
+    "doc_type": "Procedure",
+    "cited_citations": []
+  },
+  {
+    "doc_id": "RPL-CAP-STD-101",
+    "title": "Substation Capital Project Approval Standard",
+    "version": "3.4",
+    "status": "Not monitored",
+    "effective_date": "2024-04-08",
+    "approved_date": "2024-04-08",
+    "law_as_of": null,
+    "next_review": "2025-04-08",
+    "review_cycle": "Annual",
+    "vertical": "risk-resilience",
+    "owner": {
+      "person_id": "P21",
+      "name": "Patrick O'Neill",
+      "title": "Director Distribution Operations",
+      "department": "Distribution Operations",
+      "reports_to_id": "P16"
+    },
+    "reviewer": {
+      "person_id": "P20",
+      "name": "Angela Ruiz",
+      "title": "Director Metering",
+      "department": "Metering",
+      "reports_to_id": "P16"
+    },
+    "approver": {
+      "person_id": "P16",
+      "name": "Michael Brennan",
+      "title": "Vice President Operations",
+      "department": "Operations",
+      "reports_to_id": "P01"
+    },
+    "two_signature": false,
+    "monitored": false,
+    "doc_type": "Standard",
+    "cited_citations": []
+  },
+  {
     "doc_id": "RPL-RSK-PLN-101",
     "title": "Enterprise Risk Management Framework",
     "version": "2.1",
@@ -1138,7 +1613,7 @@
     "law_as_of": null,
     "next_review": "2025-01-08",
     "review_cycle": "Annual",
-    "vertical": "risk-insurance",
+    "vertical": "risk-resilience",
     "owner": {
       "person_id": "P04",
       "name": "Margaret Ellison",
@@ -1175,7 +1650,7 @@
     "law_as_of": null,
     "next_review": "2025-09-16",
     "review_cycle": "Annual",
-    "vertical": "risk-insurance",
+    "vertical": "risk-resilience",
     "owner": {
       "person_id": "P23",
       "name": "Kevin Adeyemi",
@@ -1200,481 +1675,6 @@
     "two_signature": false,
     "monitored": false,
     "doc_type": "Plan",
-    "cited_citations": []
-  },
-  {
-    "doc_id": "RPL-RSK-PRO-102",
-    "title": "Insurance Claims Management Procedure",
-    "version": "1.9",
-    "status": "Not monitored",
-    "effective_date": "2024-04-29",
-    "approved_date": "2024-04-29",
-    "law_as_of": null,
-    "next_review": "2026-04-29",
-    "review_cycle": "Biennial",
-    "vertical": "risk-insurance",
-    "owner": {
-      "person_id": "P12",
-      "name": "Linda Nguyen",
-      "title": "Records & Information Manager",
-      "department": "Legal",
-      "reports_to_id": "P02"
-    },
-    "reviewer": {
-      "person_id": "P03",
-      "name": "Jonathan Pierce",
-      "title": "Senior Counsel Regulatory",
-      "department": "Legal",
-      "reports_to_id": "P02"
-    },
-    "approver": {
-      "person_id": "P02",
-      "name": "Catherine Brandt",
-      "title": "Vice President & General Counsel",
-      "department": "Legal",
-      "reports_to_id": "P01"
-    },
-    "two_signature": false,
-    "monitored": false,
-    "doc_type": "Procedure",
-    "cited_citations": []
-  },
-  {
-    "doc_id": "RPL-STR-PLN-101",
-    "title": "Integrated Distribution System Planning Process",
-    "version": "1.2",
-    "status": "Not monitored",
-    "effective_date": "2024-02-26",
-    "approved_date": "2024-02-26",
-    "law_as_of": null,
-    "next_review": "2025-02-26",
-    "review_cycle": "Annual",
-    "vertical": "strategic-competitive",
-    "owner": {
-      "person_id": "P21",
-      "name": "Patrick O'Neill",
-      "title": "Director Distribution Operations",
-      "department": "Distribution Operations",
-      "reports_to_id": "P16"
-    },
-    "reviewer": {
-      "person_id": "P20",
-      "name": "Angela Ruiz",
-      "title": "Director Metering",
-      "department": "Metering",
-      "reports_to_id": "P16"
-    },
-    "approver": {
-      "person_id": "P16",
-      "name": "Michael Brennan",
-      "title": "Vice President Operations",
-      "department": "Operations",
-      "reports_to_id": "P01"
-    },
-    "two_signature": false,
-    "monitored": false,
-    "doc_type": "Plan",
-    "cited_citations": []
-  },
-  {
-    "doc_id": "RPL-STR-POL-103",
-    "title": "Distributed Energy Resource Interconnection Strategy",
-    "version": "1.1",
-    "status": "Not monitored",
-    "effective_date": "2024-10-07",
-    "approved_date": "2024-10-07",
-    "law_as_of": null,
-    "next_review": "2026-10-07",
-    "review_cycle": "Biennial",
-    "vertical": "strategic-competitive",
-    "owner": {
-      "person_id": "P20",
-      "name": "Angela Ruiz",
-      "title": "Director Metering",
-      "department": "Metering",
-      "reports_to_id": "P16"
-    },
-    "reviewer": {
-      "person_id": "P21",
-      "name": "Patrick O'Neill",
-      "title": "Director Distribution Operations",
-      "department": "Distribution Operations",
-      "reports_to_id": "P16"
-    },
-    "approver": {
-      "person_id": "P16",
-      "name": "Michael Brennan",
-      "title": "Vice President Operations",
-      "department": "Operations",
-      "reports_to_id": "P01"
-    },
-    "two_signature": false,
-    "monitored": false,
-    "doc_type": "Policy",
-    "cited_citations": []
-  },
-  {
-    "doc_id": "RPL-STR-PRO-102",
-    "title": "Regulatory Intervention & Docket Monitoring Procedure",
-    "version": "2.0",
-    "status": "Not monitored",
-    "effective_date": "2024-06-24",
-    "approved_date": "2024-06-24",
-    "law_as_of": null,
-    "next_review": "2025-06-24",
-    "review_cycle": "Annual",
-    "vertical": "strategic-competitive",
-    "owner": {
-      "person_id": "P08",
-      "name": "Elena Vasquez",
-      "title": "Manager Regulatory Affairs",
-      "department": "Regulatory Affairs",
-      "reports_to_id": "P07"
-    },
-    "reviewer": {
-      "person_id": "P07",
-      "name": "Thomas Whitfield",
-      "title": "Vice President Regulatory & Government Affairs",
-      "department": "Regulatory Affairs",
-      "reports_to_id": "P01"
-    },
-    "approver": {
-      "person_id": "P02",
-      "name": "Catherine Brandt",
-      "title": "Vice President & General Counsel",
-      "department": "Legal",
-      "reports_to_id": "P01"
-    },
-    "two_signature": false,
-    "monitored": false,
-    "doc_type": "Procedure",
-    "cited_citations": []
-  },
-  {
-    "doc_id": "RPL-COM-POL-103",
-    "title": "Media & Social Media Policy",
-    "version": "2.3",
-    "status": "Not monitored",
-    "effective_date": "2024-05-20",
-    "approved_date": "2024-05-20",
-    "law_as_of": null,
-    "next_review": "2025-05-20",
-    "review_cycle": "Annual",
-    "vertical": "reputational-stakeholder",
-    "owner": {
-      "person_id": "P13",
-      "name": "Karen Mitchell",
-      "title": "Director Customer Service",
-      "department": "Customer Operations",
-      "reports_to_id": "P16"
-    },
-    "reviewer": {
-      "person_id": "P03",
-      "name": "Jonathan Pierce",
-      "title": "Senior Counsel Regulatory",
-      "department": "Legal",
-      "reports_to_id": "P02"
-    },
-    "approver": {
-      "person_id": "P01",
-      "name": "William Hartley",
-      "title": "President & Chief Operating Officer",
-      "department": "Executive",
-      "reports_to_id": null
-    },
-    "two_signature": false,
-    "monitored": false,
-    "doc_type": "Policy",
-    "cited_citations": []
-  },
-  {
-    "doc_id": "RPL-COM-PRO-101",
-    "title": "Crisis Communications Procedure",
-    "version": "3.2",
-    "status": "Not monitored",
-    "effective_date": "2024-03-11",
-    "approved_date": "2024-03-11",
-    "law_as_of": null,
-    "next_review": "2025-03-11",
-    "review_cycle": "Annual",
-    "vertical": "reputational-stakeholder",
-    "owner": {
-      "person_id": "P17",
-      "name": "Brian Kowalski",
-      "title": "Manager Customer Advocacy & Complaint Resolution",
-      "department": "Customer Operations",
-      "reports_to_id": "P13"
-    },
-    "reviewer": {
-      "person_id": "P13",
-      "name": "Karen Mitchell",
-      "title": "Director Customer Service",
-      "department": "Customer Operations",
-      "reports_to_id": "P16"
-    },
-    "approver": {
-      "person_id": "P01",
-      "name": "William Hartley",
-      "title": "President & Chief Operating Officer",
-      "department": "Executive",
-      "reports_to_id": null
-    },
-    "two_signature": false,
-    "monitored": false,
-    "doc_type": "Procedure",
-    "cited_citations": []
-  },
-  {
-    "doc_id": "RPL-COM-PRO-102",
-    "title": "Public Meeting & Community Notification Procedure",
-    "version": "1.5",
-    "status": "Not monitored",
-    "effective_date": "2023-10-23",
-    "approved_date": "2023-10-23",
-    "law_as_of": null,
-    "next_review": "2025-10-23",
-    "review_cycle": "Biennial",
-    "vertical": "reputational-stakeholder",
-    "owner": {
-      "person_id": "P22",
-      "name": "Rachel Stein",
-      "title": "Manager Vegetation Management Program",
-      "department": "Distribution Operations",
-      "reports_to_id": "P21"
-    },
-    "reviewer": {
-      "person_id": "P21",
-      "name": "Patrick O'Neill",
-      "title": "Director Distribution Operations",
-      "department": "Distribution Operations",
-      "reports_to_id": "P16"
-    },
-    "approver": {
-      "person_id": "P07",
-      "name": "Thomas Whitfield",
-      "title": "Vice President Regulatory & Government Affairs",
-      "department": "Regulatory Affairs",
-      "reports_to_id": "P01"
-    },
-    "two_signature": false,
-    "monitored": false,
-    "doc_type": "Procedure",
-    "cited_citations": []
-  },
-  {
-    "doc_id": "RPL-CON-PRO-101",
-    "title": "Pole Attachment Agreement Administration Procedure",
-    "version": "2.7",
-    "status": "Not monitored",
-    "effective_date": "2024-02-12",
-    "approved_date": "2024-02-12",
-    "law_as_of": null,
-    "next_review": "2025-02-12",
-    "review_cycle": "Annual",
-    "vertical": "contractual-third-party",
-    "owner": {
-      "person_id": "P12",
-      "name": "Linda Nguyen",
-      "title": "Records & Information Manager",
-      "department": "Legal",
-      "reports_to_id": "P02"
-    },
-    "reviewer": {
-      "person_id": "P10",
-      "name": "Robert Haskins",
-      "title": "Manager Rates & Tariffs",
-      "department": "Regulatory Affairs",
-      "reports_to_id": "P07"
-    },
-    "approver": {
-      "person_id": "P03",
-      "name": "Jonathan Pierce",
-      "title": "Senior Counsel Regulatory",
-      "department": "Legal",
-      "reports_to_id": "P02"
-    },
-    "two_signature": false,
-    "monitored": false,
-    "doc_type": "Procedure",
-    "cited_citations": []
-  },
-  {
-    "doc_id": "RPL-CON-PRO-102",
-    "title": "Wholesale Power Agreement Compliance Procedure",
-    "version": "1.6",
-    "status": "Not monitored",
-    "effective_date": "2024-07-29",
-    "approved_date": "2024-07-29",
-    "law_as_of": null,
-    "next_review": "2025-07-29",
-    "review_cycle": "Annual",
-    "vertical": "contractual-third-party",
-    "owner": {
-      "person_id": "P09",
-      "name": "Marcus Lee",
-      "title": "Regulatory Affairs Analyst",
-      "department": "Regulatory Affairs",
-      "reports_to_id": "P08"
-    },
-    "reviewer": {
-      "person_id": "P08",
-      "name": "Elena Vasquez",
-      "title": "Manager Regulatory Affairs",
-      "department": "Regulatory Affairs",
-      "reports_to_id": "P07"
-    },
-    "approver": {
-      "person_id": "P07",
-      "name": "Thomas Whitfield",
-      "title": "Vice President Regulatory & Government Affairs",
-      "department": "Regulatory Affairs",
-      "reports_to_id": "P01"
-    },
-    "two_signature": false,
-    "monitored": false,
-    "doc_type": "Procedure",
-    "cited_citations": []
-  },
-  {
-    "doc_id": "RPL-CON-STD-103",
-    "title": "Vegetation Contractor Agreement Management Standard",
-    "version": "1.2",
-    "status": "Not monitored",
-    "effective_date": "2024-01-15",
-    "approved_date": "2024-01-15",
-    "law_as_of": null,
-    "next_review": "2026-01-15",
-    "review_cycle": "Biennial",
-    "vertical": "contractual-third-party",
-    "owner": {
-      "person_id": "P22",
-      "name": "Rachel Stein",
-      "title": "Manager Vegetation Management Program",
-      "department": "Distribution Operations",
-      "reports_to_id": "P21"
-    },
-    "reviewer": {
-      "person_id": "P21",
-      "name": "Patrick O'Neill",
-      "title": "Director Distribution Operations",
-      "department": "Distribution Operations",
-      "reports_to_id": "P16"
-    },
-    "approver": null,
-    "two_signature": false,
-    "monitored": false,
-    "doc_type": "Standard",
-    "cited_citations": []
-  },
-  {
-    "doc_id": "RPL-CAP-PLN-103",
-    "title": "Distribution Asset Replacement Plan",
-    "version": "2025.1",
-    "status": "Not monitored",
-    "effective_date": "2025-01-13",
-    "approved_date": "2025-01-13",
-    "law_as_of": null,
-    "next_review": "2026-01-13",
-    "review_cycle": "Annual",
-    "vertical": "capital-infrastructure",
-    "owner": {
-      "person_id": "P22",
-      "name": "Rachel Stein",
-      "title": "Manager Vegetation Management Program",
-      "department": "Distribution Operations",
-      "reports_to_id": "P21"
-    },
-    "reviewer": {
-      "person_id": "P21",
-      "name": "Patrick O'Neill",
-      "title": "Director Distribution Operations",
-      "department": "Distribution Operations",
-      "reports_to_id": "P16"
-    },
-    "approver": {
-      "person_id": "P16",
-      "name": "Michael Brennan",
-      "title": "Vice President Operations",
-      "department": "Operations",
-      "reports_to_id": "P01"
-    },
-    "two_signature": false,
-    "monitored": false,
-    "doc_type": "Plan",
-    "cited_citations": []
-  },
-  {
-    "doc_id": "RPL-CAP-PRO-102",
-    "title": "Capital Budget Planning Procedure",
-    "version": "2.8",
-    "status": "Not monitored",
-    "effective_date": "2024-08-19",
-    "approved_date": "2024-08-19",
-    "law_as_of": null,
-    "next_review": "2025-08-19",
-    "review_cycle": "Annual",
-    "vertical": "capital-infrastructure",
-    "owner": {
-      "person_id": "P16",
-      "name": "Michael Brennan",
-      "title": "Vice President Operations",
-      "department": "Operations",
-      "reports_to_id": "P01"
-    },
-    "reviewer": {
-      "person_id": "P05",
-      "name": "David Okafor",
-      "title": "Manager Regulatory Compliance",
-      "department": "Compliance",
-      "reports_to_id": "P04"
-    },
-    "approver": {
-      "person_id": "P01",
-      "name": "William Hartley",
-      "title": "President & Chief Operating Officer",
-      "department": "Executive",
-      "reports_to_id": null
-    },
-    "two_signature": false,
-    "monitored": false,
-    "doc_type": "Procedure",
-    "cited_citations": []
-  },
-  {
-    "doc_id": "RPL-CAP-STD-101",
-    "title": "Substation Capital Project Approval Standard",
-    "version": "3.4",
-    "status": "Not monitored",
-    "effective_date": "2024-04-08",
-    "approved_date": "2024-04-08",
-    "law_as_of": null,
-    "next_review": "2025-04-08",
-    "review_cycle": "Annual",
-    "vertical": "capital-infrastructure",
-    "owner": {
-      "person_id": "P21",
-      "name": "Patrick O'Neill",
-      "title": "Director Distribution Operations",
-      "department": "Distribution Operations",
-      "reports_to_id": "P16"
-    },
-    "reviewer": {
-      "person_id": "P20",
-      "name": "Angela Ruiz",
-      "title": "Director Metering",
-      "department": "Metering",
-      "reports_to_id": "P16"
-    },
-    "approver": {
-      "person_id": "P16",
-      "name": "Michael Brennan",
-      "title": "Vice President Operations",
-      "department": "Operations",
-      "reports_to_id": "P01"
-    },
-    "two_signature": false,
-    "monitored": false,
-    "doc_type": "Standard",
     "cited_citations": []
   }
 ]

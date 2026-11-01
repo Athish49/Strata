@@ -18,7 +18,7 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from app.company_ingest.enrich.terms import _singularize
 from app.engine.config import engine_settings
 from app.engine.delta import CandidateSpec
-from app.engine.footprint import rule_key
+from app.engine.footprint import VERSION_SCOPE, rule_key
 from app.engine.schemas import ValueChange
 
 
@@ -80,8 +80,9 @@ class CandidateData:
 
 _ELIGIBLE = """
     FROM company.clauses c
-    JOIN company.company_documents d ON d.doc_id = c.doc_id AND d.company_id = :company_id
+    JOIN company.company_documents d ON d.company_id = c.company_id AND d.doc_id = c.doc_id
     WHERE c.company_id = :company_id AND c.assessable = true AND c.clause_role <> 'boilerplate'
+      AND """ + VERSION_SCOPE + """
 """
 _CLAUSES_SQL = text("SELECT c.clause_pk::text AS clause_pk, c.clause_id, c.doc_id " + _ELIGIBLE)
 _CITATIONS_SQL = text("""
@@ -94,7 +95,7 @@ _PARAMS_SQL = text("""
     SELECT p.clause_pk::text AS clause_pk, p.kind, p.value_text, p.value_num, p.unit, p.day_type
     FROM company.clause_parameters p
     JOIN company.clauses c ON c.clause_pk = p.clause_pk
-    WHERE c.company_id = :company_id AND COALESCE(p.is_citation_fragment, false) = false
+    WHERE c.company_id = :company_id
       AND (p.kind <> 'number' OR p.unit IS NOT NULL) AND p.value_num IS NOT NULL
 """)
 _LINKS_SQL = text("""

@@ -136,12 +136,36 @@ def test_front_matter_boilerplate():
     assert u.role == "boilerplate"
 
 
+# Rule 7 in roles.py is conditional, not absolute: a register row is a regulatory
+# restatement only when citation enrichment found a citation on it; without one it
+# cannot restate a regulation and is downgraded to internal_procedure. (The original
+# test asserted register_row => regulatory_restatement unconditionally, which the
+# implementation never did; production bears the conditional rule out -- 118
+# regulatory_restatement vs 86 internal_procedure register rows.)
+_A_CITATION = {"citation_raw": "170 IAC 4-1-3", "citation_kind": "IAC"}
+
+
 def test_register_row_regulatory_restatement():
-    """Test 12: unit_kind=register_row → regulatory_restatement"""
-    u = make_unit(unit_kind="register_row", text_raw="Obligation ID: 42, text: comply with rule")
+    """Test 12a: unit_kind=register_row WITH citations → regulatory_restatement"""
+    u = make_unit(
+        unit_kind="register_row",
+        text_raw="Obligation ID: 42, text: comply with rule",
+        citations=[_A_CITATION],
+    )
     run([u])
     assert u.role == "regulatory_restatement"
     assert u.role_method == "heuristic"
+    assert u.assessable is True
+
+
+def test_register_row_without_citations_is_internal_procedure():
+    """Test 12b: unit_kind=register_row with NO citations → internal_procedure"""
+    u = make_unit(unit_kind="register_row", text_raw="Obligation ID: 43, text: company practice")
+    run([u])
+    assert u.role == "internal_procedure"
+    assert u.role_method == "heuristic"
+    # internal_procedure is not in _NON_ASSESSABLE_ROLES, so the row stays assessable
+    assert u.assessable is True
 
 
 def test_normal_clause_undecided():
@@ -223,12 +247,17 @@ def test_multiple_units_partial_match():
         make_unit(text_raw="Company position: our stance", unit_kind="section", section_kind="scope"),
         make_unit(text_raw="Regular policy clause.", unit_kind="section", section_kind="procedure"),
         make_unit(unit_kind="register_row", text_raw="reg obligation row"),
+        make_unit(unit_kind="register_row", text_raw="cited reg obligation row",
+                  citations=[_A_CITATION]),
     ]
     ctx = run(units)
 
     assert units[0].role == "company_position"
     assert units[1].role is None
-    assert units[2].role == "regulatory_restatement"
+    # register row without citations -> internal_procedure; with citations -> restatement
+    assert units[2].role == "internal_procedure"
+    assert units[3].role == "regulatory_restatement"
 
-    assert ctx.stats.get("roles_deterministic", 0) == 2
+    # both register-row outcomes are decided roles, so they count as deterministic
+    assert ctx.stats.get("roles_deterministic", 0) == 3
     assert ctx.stats.get("roles_undecided", 0) == 1

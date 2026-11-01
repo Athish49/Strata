@@ -7,13 +7,12 @@ from typing import Any
 
 import pytest
 
-from app.company_ingest.datasets.profile import DatasetProfile
-from app.company_ingest.datasets.propose_checks import CheckProposal
 from app.company_ingest.enrich.parameter_entry import ParameterEntry
 from app.company_ingest.parse.models import ClauseUnit
 from app.company_ingest.parse.text import sha256_text
 from app.company_ingest.run_context import Issue, RunContext
 from app.company_ingest.validate.checks import (
+    CHECK_NUMBERS,
     CheckOutcome,
     RunState,
     check_1,
@@ -24,10 +23,7 @@ from app.company_ingest.validate.checks import (
     check_6,
     check_7,
     check_8,
-    check_9,
-    check_10,
     check_11,
-    check_12,
     run_all_checks,
 )
 
@@ -71,15 +67,11 @@ def _state(
     units: list | None = None,
     stats: dict | None = None,
     issues: list | None = None,
-    dataset_profiles: list | None = None,
-    check_proposals: list | None = None,
 ) -> RunState:
     return RunState(
         units=units or [],
         links=[],
         scope_rows=[],
-        dataset_profiles=dataset_profiles or [],
-        check_proposals=check_proposals or [],
         doc_ids=["DOC1"],
         stats=stats or {},
         issues=issues or [],
@@ -99,30 +91,6 @@ def _param_entry(method: str = "regex", verified: bool = True) -> ParameterEntry
         span_end=7,
         method=method,
         verified=verified,
-    )
-
-
-def _profile(name: str = "ds1", row_count: int = 100) -> DatasetProfile:
-    return DatasetProfile(
-        name=name,
-        doc_id="DOC1",
-        row_count=row_count,
-        file_sha256="abc",
-        r2_parquet_key="r2/key.parquet",
-        r2_source_key="r2/source.csv",
-        primary_key=None,
-        columns=[],
-    )
-
-
-def _proposal(dataset_name: str = "ds1", validated: bool = False) -> CheckProposal:
-    return CheckProposal(
-        dataset_name=dataset_name,
-        doc_id="DOC1",
-        purpose="Check something.",
-        sql_template="SELECT * FROM ds1 WHERE val > {x}",
-        param_bindings={"x": "pk1"},
-        validated=validated,
     )
 
 
@@ -423,81 +391,6 @@ def test_check_8_ignores_other_issue_codes():
 
 
 # ---------------------------------------------------------------------------
-# Check 9: Parquet row counts match CSV
-# ---------------------------------------------------------------------------
-
-
-def test_check_9_skips_when_no_profiles():
-    """No dataset profiles → skipped (passes)."""
-    state = _state(dataset_profiles=[])
-    outcome = check_9(state)
-    assert outcome.passed is True
-    assert "skipped" in outcome.metric
-
-
-def test_check_9_passes_when_all_profiles_have_rows():
-    """All profiles have row_count > 0 → passes."""
-    p1 = _profile("ds1", 50)
-    p2 = _profile("ds2", 100)
-    state = _state(dataset_profiles=[p1, p2])
-    outcome = check_9(state)
-    assert outcome.passed is True
-    assert "2 datasets" in outcome.metric
-
-
-def test_check_9_fails_when_profile_has_zero_rows():
-    """A profile with row_count=0 → fails."""
-    p = _profile("ds1", 0)
-    state = _state(dataset_profiles=[p])
-    outcome = check_9(state)
-    assert outcome.passed is False
-    assert "ds1" in outcome.details["empty_datasets"]
-
-
-# ---------------------------------------------------------------------------
-# Check 10: parameter checks validated
-# ---------------------------------------------------------------------------
-
-
-def test_check_10_skips_when_no_proposals():
-    """No check proposals → skipped (passes)."""
-    state = _state(check_proposals=[])
-    outcome = check_10(state)
-    assert outcome.passed is True
-    assert "skipped" in outcome.metric
-
-
-def test_check_10_passes_when_at_least_one_validated():
-    """At least 1 validated check per dataset → passes."""
-    p1 = _proposal("ds1", validated=True)
-    p2 = _proposal("ds1", validated=False)
-    state = _state(check_proposals=[p1, p2])
-    outcome = check_10(state)
-    assert outcome.passed is True
-    assert "1/2" in outcome.metric
-
-
-def test_check_10_fails_when_none_validated_for_dataset():
-    """0 validated out of 1 proposal → fails."""
-    p = _proposal("ds1", validated=False)
-    state = _state(check_proposals=[p])
-    outcome = check_10(state)
-    assert outcome.passed is False
-    assert "0/1" in outcome.metric
-    assert "ds1" in outcome.details["datasets_without_validated_check"]
-
-
-def test_check_10_fails_when_one_dataset_lacks_validated():
-    """Two datasets: one has validated, the other doesn't → fails."""
-    p1 = _proposal("ds1", validated=True)
-    p2 = _proposal("ds2", validated=False)
-    state = _state(check_proposals=[p1, p2])
-    outcome = check_10(state)
-    assert outcome.passed is False
-    assert "ds2" in outcome.details["datasets_without_validated_check"]
-
-
-# ---------------------------------------------------------------------------
 # Check 11: Qdrant round-trip (always passes in offline mode)
 # ---------------------------------------------------------------------------
 
@@ -522,50 +415,12 @@ def test_check_11_passes_regardless_of_state():
 
 
 # ---------------------------------------------------------------------------
-# Check 12: no denied files in R2
-# ---------------------------------------------------------------------------
-
-
-def test_check_12_passes_when_denied_paths_and_no_collect_errors():
-    """denied_paths > 0 and no collect errors → passes."""
-    state = _state(stats={"denied_paths": 3})
-    outcome = check_12(state)
-    assert outcome.passed is True
-    assert "3 denied paths" in outcome.metric
-
-
-def test_check_12_fails_when_denied_paths_is_zero():
-    """denied_paths=0 → fails (allowlist not exercised)."""
-    state = _state(stats={"denied_paths": 0})
-    outcome = check_12(state)
-    assert outcome.passed is False
-    assert "0 denied paths" in outcome.metric
-
-
-def test_check_12_fails_when_collect_error_exists():
-    """denied_paths > 0 but a collect error exists → fails."""
-    collect_error = _issue(code="access_denied", severity="error", stage="collect.1")
-    state = _state(stats={"denied_paths": 2}, issues=[collect_error])
-    outcome = check_12(state)
-    assert outcome.passed is False
-    assert outcome.details["collect_error_count"] == 1
-
-
-def test_check_12_ignores_non_collect_errors():
-    """Errors in stages other than 'collect*' do not affect check 12."""
-    parse_error = _issue(code="parse_failed", severity="error", stage="parse.1")
-    state = _state(stats={"denied_paths": 1}, issues=[parse_error])
-    outcome = check_12(state)
-    assert outcome.passed is True
-
-
-# ---------------------------------------------------------------------------
 # run_all_checks orchestrator
 # ---------------------------------------------------------------------------
 
 
-def test_run_all_checks_returns_12_outcomes():
-    """run_all_checks returns exactly 12 CheckOutcome objects."""
+def test_run_all_checks_returns_one_outcome_per_check():
+    """run_all_checks returns one CheckOutcome per entry in CHECK_NUMBERS."""
     ctx = RunContext()
     units = [
         _unit("DOC1:C1", role="obligation"),
@@ -573,12 +428,11 @@ def test_run_all_checks_returns_12_outcomes():
     ]
     state = _state(
         units=units,
-        stats={"denied_paths": 1, "links_resolved": 5, "links_unresolved": 0},
+        stats={"links_resolved": 5, "links_unresolved": 0},
     )
     outcomes = run_all_checks(state, ctx)
-    assert len(outcomes) == 12
-    for i, outcome in enumerate(outcomes, 1):
-        assert outcome.check_number == i
+    assert len(outcomes) == len(CHECK_NUMBERS)
+    assert [o.check_number for o in outcomes] == list(CHECK_NUMBERS)
 
 
 def test_run_all_checks_exception_does_not_halt_others():
@@ -595,7 +449,7 @@ def test_run_all_checks_exception_does_not_halt_others():
     ):
         outcomes = run_all_checks(state, ctx)
 
-    assert len(outcomes) == 12
+    assert len(outcomes) == len(CHECK_NUMBERS)
     # First outcome is the error placeholder
     assert outcomes[0].passed is False
     assert "boom" in outcomes[0].details.get("error", "")
@@ -604,18 +458,18 @@ def test_run_all_checks_exception_does_not_halt_others():
 
 
 def test_run_all_checks_all_check_numbers_present():
-    """All 12 check numbers 1–12 are present in outputs."""
+    """Exactly the SPEC §12 checks still in force (9, 10, 12 removed by task 2.3)."""
     ctx = RunContext()
-    state = _state(stats={"denied_paths": 1})
+    state = _state()
     outcomes = run_all_checks(state, ctx)
     numbers = [o.check_number for o in outcomes]
-    assert numbers == list(range(1, 13))
+    assert numbers == [1, 2, 3, 4, 5, 6, 7, 8, 11]
 
 
 def test_run_all_checks_outcome_names_are_non_empty():
     """Every outcome has a non-empty name string."""
     ctx = RunContext()
-    state = _state(stats={"denied_paths": 1})
+    state = _state()
     outcomes = run_all_checks(state, ctx)
     for o in outcomes:
         assert isinstance(o.name, str) and len(o.name) > 0

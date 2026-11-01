@@ -42,25 +42,53 @@ export interface GetJsonOpts<T> {
   signal?: AbortSignal;
 }
 
+/**
+ * Human-readable message from a parsed error body: a FastAPI `detail` string, a FastAPI
+ * validation list (`[{msg}]`, joined with "; "), or a top-level `message`.
+ */
+export function detailFromBody(body: unknown, fallback = "request failed"): string {
+  if (body && typeof body === "object") {
+    if ("detail" in body) {
+      const d = (body as { detail: unknown }).detail;
+      if (typeof d === "string") return d;
+      if (Array.isArray(d)) {
+        return d
+          .map((e) => (e && typeof e === "object" && "msg" in e ? String((e as { msg: unknown }).msg) : JSON.stringify(e)))
+          .join("; ");
+      }
+      return JSON.stringify(d);
+    }
+    const m = (body as { message?: unknown }).message;
+    if (typeof m === "string") return m;
+  }
+  if (body === null || body === undefined) return fallback;
+  return typeof body === "string" ? body : JSON.stringify(body);
+}
+
 async function detailOf(res: Response): Promise<string> {
   try {
     const body: unknown = await res.json();
-    if (body && typeof body === "object" && "detail" in body) {
-      const d = (body as { detail: unknown }).detail;
-      return typeof d === "string" ? d : JSON.stringify(d);
-    }
+    if (body && typeof body === "object" && "detail" in body) return detailFromBody(body);
     return JSON.stringify(body);
   } catch {
     return res.statusText || "request failed";
   }
 }
 
+const isFormData = (b: unknown): b is FormData => typeof FormData !== "undefined" && b instanceof FormData;
+
+function headersFor(body: unknown): Record<string, string> {
+  // FormData gets NO Content-Type: the browser sets multipart/form-data with its boundary.
+  if (body === undefined || isFormData(body)) return { Accept: "application/json" };
+  return { Accept: "application/json", "Content-Type": "application/json" };
+}
+
 async function request(method: "GET" | "POST", path: string, body: unknown, signal?: AbortSignal): Promise<Response> {
   try {
     return await fetch(`${API_BASE}${path}`, {
       method,
-      headers: body === undefined ? { Accept: "application/json" } : { Accept: "application/json", "Content-Type": "application/json" },
-      body: body === undefined ? undefined : JSON.stringify(body),
+      headers: headersFor(body),
+      body: body === undefined ? undefined : isFormData(body) ? body : JSON.stringify(body),
       signal,
     });
   } catch (e) {
@@ -94,7 +122,39 @@ export async function getJson<T>(path: string, schema: ZodType<T>, opts?: GetJso
   return handle(res, schema, opts);
 }
 
-/** POST JSON, zod-parse the response. Same 404/409 handling as getJson. */
+/**
+ * POST a JSON body (or a FormData body, sent as multipart with no forced Content-Type),
+ * zod-parse the response. Same 404/409 handling as getJson. Never retried.
+ */
 export async function postJson<T>(path: string, body: unknown, schema: ZodType<T>, opts?: GetJsonOpts<T>): Promise<T> {
   return handle(await request("POST", path, body, opts?.signal), schema, opts);
+}
+
+/** A response with its status and parsed JSON body both kept (`body` is null when not JSON). */
+export interface RawResponse {
+  status: number;
+  ok: boolean;
+  body: unknown;
+}
+
+/**
+ * POST without throwing on non-2xx: returns status + parsed body so the caller can map
+ * meaningful non-error bodies (upload 200 `unchanged`, 409 `duplicate` / `retry_available`).
+ * `body` may be FormData (multipart, no forced Content-Type) or a JSON-serialisable value.
+ * A network failure still throws ApiError(0). Never retried.
+ */
+export async function postRaw(path: string, body: unknown, opts?: { signal?: AbortSignal }): Promise<RawResponse> {
+  const res = await request("POST", path, body, opts?.signal);
+  let parsed: unknown = null;
+  try {
+    parsed = await res.json();
+  } catch {
+    parsed = null;
+  }
+  return { status: res.status, ok: res.ok, body: parsed };
+}
+
+/** The ApiError a RawResponse the caller did not map represents (message from `detail`). */
+export function rawError(r: RawResponse): ApiError {
+  return new ApiError(r.status, detailFromBody(r.body, `HTTP ${r.status}`));
 }
