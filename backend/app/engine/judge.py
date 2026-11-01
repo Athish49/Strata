@@ -381,7 +381,7 @@ _OPEN_SQL = text("""
 
 _PARAMS_SQL = text("""
     SELECT clause_pk::text AS clause_pk, kind, value_text, value_num, unit, day_type,
-           span_start, span_end, COALESCE(is_citation_fragment, false) AS is_citation_fragment
+           span_start, span_end
     FROM company.clause_parameters WHERE clause_pk = ANY(CAST(:pks AS uuid[]))
 """)
 

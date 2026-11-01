@@ -95,7 +95,7 @@ _PARAMS_SQL = text("""
     SELECT p.clause_pk::text AS clause_pk, p.kind, p.value_text, p.value_num, p.unit, p.day_type
     FROM company.clause_parameters p
     JOIN company.clauses c ON c.clause_pk = p.clause_pk
-    WHERE c.company_id = :company_id AND COALESCE(p.is_citation_fragment, false) = false
+    WHERE c.company_id = :company_id
       AND (p.kind <> 'number' OR p.unit IS NOT NULL) AND p.value_num IS NOT NULL
 """)
 _LINKS_SQL = text("""

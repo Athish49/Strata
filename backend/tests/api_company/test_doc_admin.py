@@ -76,7 +76,11 @@ class FakeSession:
     """First (substring, rows) rule matching the SQL wins; records every statement."""
 
     def __init__(self, rules):
-        self.rules = rules
+        # caller rules win; VERTICALS_SQL_RULE (defined below the class, used only at
+        # instantiation time) is the default for any request that reaches
+        # routes.fetch_vertical_slugs() (every patch's GET-readback via _documents(),
+        # and any "vertical" field going through _canonical_vertical()).
+        self.rules = list(rules) + [VERTICALS_SQL_RULE]
         self.sql: list[tuple[str, dict]] = []
         self.committed = 0
         self.rolled_back = 0
@@ -108,6 +112,29 @@ CUR_VERSION = ("AND version_id = CAST(:v AS uuid) FOR UPDATE",
 VER_UPDATE = ("UPDATE company.document_versions", [{"version_id": uuid.UUID(V1)}])
 
 
+def _migration_vertical_rows() -> list[dict]:
+    """``company.verticals`` row shape (name, slug), read from the verticals-retaxonomy
+    migration's ``NEW_VERTICALS`` with ``ast`` -- no DB connection, no second hand-synced
+    copy of the 14 verticals. ``routes.fetch_vertical_slugs()`` issues this exact query."""
+    import ast as _ast
+
+    migrations_dir = BACKEND / "migrations" / "versions"
+    candidates = [p for p in migrations_dir.glob("*.py")
+                  if "verticals_retaxonomy" in p.name or "retaxonomy" in p.name]
+    assert candidates, "verticals-retaxonomy migration file not found"
+    tree = _ast.parse(candidates[0].read_text(encoding="utf-8"))
+    for node in tree.body:
+        targets = node.targets if isinstance(node, _ast.Assign) else [getattr(node, "target", None)]
+        if any(isinstance(t, _ast.Name) and t.id == "NEW_VERTICALS" for t in targets):
+            rows = _ast.literal_eval(node.value)
+            return [{"name": n, "slug": s} for n, s, _d in rows]
+    raise AssertionError("NEW_VERTICALS not found in verticals-retaxonomy migration")
+
+
+#: Rule for ``routes.fetch_vertical_slugs()``'s ``SELECT name, slug FROM company.verticals``.
+VERTICALS_SQL_RULE = ("FROM company.verticals", _migration_vertical_rows())
+
+
 def fake_client(rules):
     sess = FakeSession(rules)
 
@@ -119,7 +146,7 @@ def fake_client(rules):
 
 
 async def test_fake_route_is_mounted_and_sets_only_sent_columns():
-    c, sess = fake_client([PERSON, DOC_LOCK, CUR_VERSION, VER_UPDATE, DOC_READ])
+    c, sess = fake_client([PERSON, DOC_LOCK, CUR_VERSION, VER_UPDATE, DOC_READ, VERTICALS_SQL_RULE])
     async with c:
         r = await c.patch(f"/company/documents/{DOC}", json={
             "acting_person_id": "P1", "vertical": "environmental-sustainability", "doc_class": "Procedure",
@@ -382,11 +409,11 @@ async def test_pg_sets_doc_fields_and_current_version_dates_and_get_reflects(pg,
 
 
 async def test_pg_vertical_accepts_lowercase_name_and_slug_for_all_14(pg, client):
-    from app.api.company.routes import VERTICAL_SLUGS
+    verticals = {row["name"].lower(): row["slug"] for row in _migration_vertical_rows()}
 
     _doc(pg, current=None)
     async with client as c:
-        for name, slug in VERTICAL_SLUGS.items():
+        for name, slug in verticals.items():
             for value in (name, slug):
                 r = await c.patch(f"/company/documents/{DOC}", json={"acting_person_id": "P1", "vertical": value})
                 assert r.status_code == 200, (value, r.text)

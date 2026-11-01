@@ -101,7 +101,7 @@ def _iso_date(field: str, value: Optional[str]) -> Optional[date]:
                             detail=f"{field} must be an ISO date (YYYY-MM-DD) or null.") from exc
 
 
-def _validated(body: DocumentPatch) -> tuple[dict[str, Any], dict[str, Any]]:
+async def _validated(db: AsyncSession, body: DocumentPatch) -> tuple[dict[str, Any], dict[str, Any]]:
     """-> (company_documents values, document_versions values), keyed by column."""
     sent = body.model_fields_set - {"acting_person_id", "version_id"}
     if not sent:
@@ -113,7 +113,7 @@ def _validated(body: DocumentPatch) -> tuple[dict[str, Any], dict[str, Any]]:
     if "vertical" in sent:
         if body.vertical is None:
             raise HTTPException(status_code=422, detail="vertical cannot be null.")
-        doc["vertical"] = _canonical_vertical(body.vertical)  # same rules as upload; rejects 'unclassified'
+        doc["vertical"] = _canonical_vertical(body.vertical, await routes.fetch_vertical_slugs(db))  # same rules as upload; rejects 'unclassified'
     if "doc_class" in sent:
         doc["doc_class"] = _doc_class(body.doc_class)
     if "doc_number" in sent:
@@ -192,7 +192,7 @@ async def patch_document(doc_id: str, body: DocumentPatch, db: AsyncSession = De
       request is opened (at upload). Changing either here does not re-select the policy
       of an already-open request; it affects only requests opened later.
     """
-    doc_vals, ver_vals = _validated(body)
+    doc_vals, ver_vals = await _validated(db, body)
     await _require_person(db, body.acting_person_id)
     docs = (await db.execute(text(
         "SELECT doc_id, current_version_id FROM company.company_documents "

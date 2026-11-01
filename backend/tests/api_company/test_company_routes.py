@@ -1,3 +1,4 @@
+import ast
 import builtins
 import inspect
 import os
@@ -10,13 +11,50 @@ import pytest
 
 from app.api.company import routes as r
 
+MIGRATIONS_DIR = pathlib.Path(__file__).resolve().parents[2] / "migrations" / "versions"
+
+
+def _migration_vertical_name_slug_pairs() -> list[tuple[str, str]]:
+    """``(name, slug)`` pairs from the verticals-retaxonomy migration's ``NEW_VERTICALS``,
+    read with ``ast`` -- no DB connection needed, and no second hand-synced copy of the
+    14 verticals here."""
+    candidates = [
+        p for p in MIGRATIONS_DIR.glob("*.py")
+        if "verticals_retaxonomy" in p.name or "retaxonomy" in p.name
+    ]
+    assert candidates, "verticals-retaxonomy migration file not found"
+    tree = ast.parse(candidates[0].read_text(encoding="utf-8"))
+    for node in tree.body:
+        targets = node.targets if isinstance(node, ast.Assign) else [getattr(node, "target", None)]
+        if any(isinstance(t, ast.Name) and t.id == "NEW_VERTICALS" for t in targets):
+            rows = ast.literal_eval(node.value)
+            return [(name, slug) for name, slug, _description in rows]
+    raise AssertionError("NEW_VERTICALS not found in verticals-retaxonomy migration")
+
+
+def _migration_vertical_slugs() -> dict[str, str]:
+    """``name.lower() -> slug``, the same shape ``routes.fetch_vertical_slugs()`` returns
+    from the DB -- for calling ``vertical_slug()``/``build_document()`` directly."""
+    return {name.lower(): slug for name, slug in _migration_vertical_name_slug_pairs()}
+
+
+#: (substring, rows) rule for a ``FakeSession`` whose request will reach
+#: ``routes.fetch_vertical_slugs()`` -- the static ``company.verticals`` row shape
+#: (``SELECT name, slug FROM company.verticals``), keyed distinctly enough
+#: (``FROM company.verticals``) that it won't collide with any other table's rule.
+VERTICALS_SQL_RULE = (
+    "FROM company.verticals",
+    [{"name": n, "slug": s} for n, s in _migration_vertical_name_slug_pairs()],
+)
+
 
 def test_vertical_slug():
-    assert r.vertical_slug("Compliance & Ethics") == "compliance-ethics"
-    assert r.vertical_slug("Health & Safety") == "health-safety"
-    assert r.vertical_slug("Environmental & Sustainability") == "environmental-sustainability"
-    assert r.vertical_slug("Nope") == "unclassified"
-    assert r.vertical_slug(None) == "unclassified"
+    slugs = _migration_vertical_slugs()
+    assert r.vertical_slug("Compliance & Ethics", slugs) == "compliance-ethics"
+    assert r.vertical_slug("Health & Safety", slugs) == "health-safety"
+    assert r.vertical_slug("Environmental & Sustainability", slugs) == "environmental-sustainability"
+    assert r.vertical_slug("Nope", slugs) == "unclassified"
+    assert r.vertical_slug(None, slugs) == "unclassified"
 
 
 def test_doc_type_label_from_doc_class_column():
@@ -83,7 +121,9 @@ class FakeSession:
     """Matches the first (substring, rows) rule found in the SQL text."""
 
     def __init__(self, rules):
-        self.rules = rules
+        # caller rules win; the verticals rule is a default fallback for any request
+        # that reaches routes.fetch_vertical_slugs() (every _documents() call).
+        self.rules = list(rules) + [VERTICALS_SQL_RULE]
         self.sql = []
 
     async def execute(self, stmt, params=None):
@@ -136,7 +176,8 @@ def test_module_has_no_file_io():
 
 
 def test_build_document_db_only():
-    d = r.build_document(dict(DOC_ROW), ["170 IAC 4-1-16"])
+    slugs = _migration_vertical_slugs()
+    d = r.build_document(dict(DOC_ROW), ["170 IAC 4-1-16"], slugs)
     assert set(d) == DOC_KEYS
     assert d["vertical"] == "financial-compliance-reporting" and d["vertical_name"] == "Financial Compliance & Reporting"
     assert d["doc_type"] == "Procedure" and d["doc_number"] == "RPL-CS-PRO-007"
@@ -144,7 +185,7 @@ def test_build_document_db_only():
     assert d["two_signature"] and d["monitored"] and d["approver"] is None
     # unpopulated columns -> nulls / fallbacks, never a file lookup
     bare = dict(DOC_ROW, vertical=None, doc_class=None, doc_number=None, review_cycle=None, next_review=None)
-    d2 = r.build_document(bare, [])
+    d2 = r.build_document(bare, [], slugs)
     assert d2["vertical"] == "unclassified" and d2["doc_type"] == "Document"
     assert d2["doc_number"] is None and d2["review_cycle"] is None and d2["next_review"] is None
 
@@ -154,6 +195,7 @@ async def test_documents_endpoints_fully_populated_from_db(no_files, _clear_over
     c, sess = client_for([
         ("DISTINCT c.doc_id, cs.citation", [{"doc_id": "DOC-000123", "citation": "170 IAC 4-1-16"}]),
         ("FROM company.company_documents cd", [DOC_ROW]),
+        VERTICALS_SQL_RULE,
     ])
     async with c:
         lst = (await c.get("/company/documents")).json()
@@ -252,7 +294,7 @@ def test_build_document_exposes_state_for_a_document_still_in_review():
         "lifecycle_state": "pending", "version_status": None, "ingest_status": None,
         "latest_version_no": 1, "latest_version_status": "in_review",
         "latest_ingest_status": "pending",
-    }, [])
+    }, [], _migration_vertical_slugs())
     assert d["lifecycle_state"] == "pending"
     assert d["has_current_version"] is False and d["monitored"] is False
     assert (d["latest_version_no"], d["latest_version_status"], d["latest_ingest_status"]) == (1, "in_review", "pending")
@@ -264,7 +306,8 @@ def test_build_document_current_version_is_monitored():
 
     d = build_document({"doc_id": "DOC-000002", "title": "T", "vertical": "Environmental & Sustainability",
                         "lifecycle_state": "active", "version": "v1.0", "status": "effective",
-                        "version_status": "effective", "ingest_status": "ingested"}, [])
+                        "version_status": "effective", "ingest_status": "ingested"}, [],
+                        _migration_vertical_slugs())
     assert d["has_current_version"] is True and d["monitored"] is True
     assert d["vertical"] == "environmental-sustainability"
 
@@ -272,7 +315,7 @@ def test_build_document_current_version_is_monitored():
 def test_all_fourteen_frontend_verticals_map_both_ways():
     """Uploads are accepted into every vertical the product offers, not just the five the
     synthetic corpus happened to use, and each maps back to the slug the UI routes on."""
-    from app.api.company.routes import VERTICAL_SLUGS, vertical_slug
+    from app.api.company.routes import vertical_slug
 
     frontend_slugs = {
         "corporate-governance-board", "compliance-ethics", "legal-contractual",
@@ -281,6 +324,7 @@ def test_all_fourteen_frontend_verticals_map_both_ways():
         "operations-quality", "information-technology-records",
         "supply-chain-third-party-risk", "policy-training-management", "risk-resilience",
     }
-    assert set(VERTICAL_SLUGS.values()) == frontend_slugs
-    for name, slug in VERTICAL_SLUGS.items():
-        assert vertical_slug(name.title()) == slug
+    slugs = _migration_vertical_slugs()
+    assert set(slugs.values()) == frontend_slugs
+    for name, slug in slugs.items():
+        assert vertical_slug(name.title(), slugs) == slug

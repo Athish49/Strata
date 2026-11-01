@@ -2,8 +2,7 @@
 
 Parses a P2 register CSV into one ClauseUnit per data row.  The ingest
 service calls :func:`segment_register_text` with decoded text and the
-declared ``RegisterSpec`` columns; :func:`segment_register` is the legacy
-path-based wrapper.
+declared ``RegisterSpec`` columns.
 """
 from __future__ import annotations
 
@@ -11,7 +10,6 @@ import csv
 import io
 import logging
 from collections.abc import Iterable
-from pathlib import Path
 
 from app.company_ingest.constants import ColumnRole, UnitKind, SectionKind
 from app.company_ingest.parse.models import ClauseUnit
@@ -105,37 +103,6 @@ def _build_column_roles(
             role = ColumnRole.CITATION
         roles[col] = role
     return roles
-
-
-def segment_register(
-    version_id: str,
-    doc_id: str,
-    csv_path: Path,
-    document_title: str,
-    ctx: RunContext,
-) -> tuple[list[ClauseUnit], dict[str, str | None]]:
-    """Parse a P2 register CSV file into ClauseUnit objects, one per data row.
-
-    Path-based wrapper around :func:`segment_register_text` (legacy behaviour:
-    the id column is ``headers[0]`` and ``table_id`` is the file stem).  The
-    file is decoded ``utf-8-sig`` so a BOM never leaks into ``headers[0]``.
-
-    Returns
-    -------
-    (clauses, column_roles)
-        clauses       – one ClauseUnit per data row
-        column_roles  – {column_name: provisional ColumnRole | None}
-    """
-    text = csv_path.read_text(encoding="utf-8-sig")
-    return segment_register_text(
-        version_id,
-        doc_id,
-        text,
-        document_title,
-        ctx,
-        table_id=csv_path.stem,
-        source_label=str(csv_path),
-    )
 
 
 def segment_register_text(

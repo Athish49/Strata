@@ -48,7 +48,10 @@ class FakeSession:
     """Matches the first (substring, rows) rule found in the SQL text."""
 
     def __init__(self, rules):
-        self.rules = rules
+        # caller rules win; verticals_rule() (defined below the class, used only at
+        # instantiation time) is the default for any request that reaches
+        # routes.fetch_vertical_slugs() (via _canonical_vertical() on the policy paths).
+        self.rules = list(rules) + [verticals_rule()]
         self.sql: list[tuple[str, dict]] = []
         self.committed = 0
         self.rolled_back = 0
@@ -105,6 +108,32 @@ def _no_real_promotion(monkeypatch):
 def person_rule(found=True):
     return ("FROM company.people WHERE company_id = :c AND person_id = :p",
             PERSON_ROW if found else [])
+
+
+def _migration_vertical_rows() -> list[dict]:
+    """``company.verticals`` row shape (name, slug), read from the verticals-retaxonomy
+    migration's ``NEW_VERTICALS`` with ``ast`` -- no DB connection, no second hand-synced
+    copy of the 14 verticals. ``routes.fetch_vertical_slugs()`` issues this exact query."""
+    import ast
+    from pathlib import Path
+
+    backend = Path(__file__).resolve().parents[2]
+    migrations_dir = backend / "migrations" / "versions"
+    candidates = [p for p in migrations_dir.glob("*.py")
+                  if "verticals_retaxonomy" in p.name or "retaxonomy" in p.name]
+    assert candidates, "verticals-retaxonomy migration file not found"
+    tree = ast.parse(candidates[0].read_text(encoding="utf-8"))
+    for node in tree.body:
+        targets = node.targets if isinstance(node, ast.Assign) else [getattr(node, "target", None)]
+        if any(isinstance(t, ast.Name) and t.id == "NEW_VERTICALS" for t in targets):
+            rows = ast.literal_eval(node.value)
+            return [{"name": n, "slug": s} for n, s, _d in rows]
+    raise AssertionError("NEW_VERTICALS not found in verticals-retaxonomy migration")
+
+
+def verticals_rule():
+    """Rule for ``routes.fetch_vertical_slugs()``'s ``SELECT name, slug FROM company.verticals``."""
+    return ("FROM company.verticals", _migration_vertical_rows())
 
 
 # ------------------------------------------------- acceptance: existing shapes
@@ -613,7 +642,7 @@ async def test_create_policy_rejects_invalid_vertical():
 
 
 async def test_create_policy_accepts_valid_new_taxonomy_vertical():
-    c, sess = client_for([person_rule()])
+    c, sess = client_for([person_rule(), verticals_rule()])
     async with c:
         res = await c.post("/company/approval-policies", json={
             "name": "P", "applies_to_vertical": "Compliance & Ethics",
@@ -643,6 +672,7 @@ async def test_update_policy_rejects_invalid_vertical():
 async def test_update_policy_accepts_valid_new_taxonomy_vertical():
     c, sess = client_for([
         person_rule(),
+        verticals_rule(),
         ("FROM company.approval_policies WHERE company_id = :c AND policy_id", POLICY_ROW),
         ("FROM company.approval_policy_steps", STEP_ROWS),
         ("UPDATE company.approval_policies SET", [{"policy_id": POL, "name": "P",

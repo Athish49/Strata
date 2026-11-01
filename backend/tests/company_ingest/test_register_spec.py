@@ -25,6 +25,10 @@ from app.company_ingest.register_spec import (
 # ---------------------------------------------------------------------------
 
 _BACKEND = Path(__file__).resolve().parents[2]
+# Test-owned copies live in tests/fixtures/registers (flat, by basename) so this
+# module keeps its only real-CSV coverage once synthetic/ is deleted: same
+# reasoning as task 9.4's fix for test_jobs_recovery.py/test_service.py.
+_FIXTURES_DIR = _BACKEND / "tests" / "fixtures" / "registers"
 _CORPUS_DIRS = (
     _BACKEND / "app" / "company" / "corpus",
     _BACKEND / "synthetic" / "corpus",
@@ -56,6 +60,9 @@ REAL_REGISTERS = [
 
 
 def corpus_csv(rel: str) -> Path:
+    fixture = _FIXTURES_DIR / Path(rel).name
+    if fixture.exists():
+        return fixture
     for root in _CORPUS_DIRS:
         candidate = root / rel
         if candidate.exists():
@@ -281,7 +288,6 @@ def test_valid_spec_returns_columns_with_bom_and_quoted_commas() -> None:
 # ---------------------------------------------------------------------------
 
 
-@pytest.mark.corpus
 @pytest.mark.parametrize("rel,register_type,id_column,expected_rows", REAL_REGISTERS)
 def test_real_register_csv_validates(
     rel: str, register_type: str, id_column: str, expected_rows: int
@@ -309,7 +315,6 @@ def test_real_register_csv_validates(
     assert len(rows) - 1 == expected_rows
 
 
-@pytest.mark.corpus
 @pytest.mark.parametrize("rel,register_type,id_column,expected_rows", REAL_REGISTERS)
 def test_real_register_csv_rejects_absent_column(
     rel: str, register_type: str, id_column: str, expected_rows: int

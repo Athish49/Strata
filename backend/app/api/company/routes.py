@@ -16,25 +16,13 @@ from app.engine.footprint import VERSION_SCOPE
 
 router = APIRouter(prefix="/company", tags=["company"])
 
-# backend vertical name -> frontend slug (keep in sync with frontend/lib/verticals.ts)
-VERTICAL_SLUGS = {
-    "compliance & ethics": "compliance-ethics",
-    "operations & quality": "operations-quality",
-    "financial compliance & reporting": "financial-compliance-reporting",
-    "information technology & records": "information-technology-records",
-    "environmental & sustainability": "environmental-sustainability",
-    "health & safety": "health-safety",
-    # The other eight verticals the product offers. No synthetic document used them, but
-    # a customer can upload into any of the 14, and an unmapped name was rejected with 422.
-    "corporate governance & board": "corporate-governance-board",
-    "legal & contractual": "legal-contractual",
-    "tax & trade compliance": "tax-trade-compliance",
-    "workforce & employment": "workforce-employment",
-    "data privacy & cybersecurity": "data-privacy-cybersecurity",
-    "supply chain & third-party risk": "supply-chain-third-party-risk",
-    "policy & training management": "policy-training-management",
-    "risk & resilience": "risk-resilience",
-}
+# backend vertical name -> frontend slug. Source of truth is the `company.verticals`
+# table (FK target of `company_documents.vertical`); fetched per-request through the
+# request-scoped session rather than cached at import time, so tests can override the
+# DB dependency and the process never queries the DB at module-import/app-startup time.
+async def fetch_vertical_slugs(db: AsyncSession) -> dict[str, str]:
+    rows = (await db.execute(text("SELECT name, slug FROM company.verticals"))).mappings().all()
+    return {str(r["name"]).strip().lower(): r["slug"] for r in rows}
 _UNIT_KINDS = {"section", "table_row", "register_row", "form_field", "tariff_subrule", "appendix"}
 _STATES = {
     "IN": "Indiana", "IL": "Illinois", "OH": "Ohio", "KY": "Kentucky", "MI": "Michigan",
@@ -52,10 +40,10 @@ _STATES = {
 
 
 # ---------------------------------------------------------------- pure helpers
-def vertical_slug(name: Optional[str]) -> str:
+def vertical_slug(name: Optional[str], slugs: dict[str, str]) -> str:
     if not name:
         return "unclassified"
-    return VERTICAL_SLUGS.get(name.strip().lower(), "unclassified")
+    return slugs.get(name.strip().lower(), "unclassified")
 
 
 def doc_type_label(doc_class: Optional[str]) -> str:
@@ -106,7 +94,7 @@ def _person(row: dict, prefix: str) -> Optional[dict]:
     }
 
 
-def build_document(row: dict, cited: list[str]) -> dict:
+def build_document(row: dict, cited: list[str], slugs: dict[str, str]) -> dict:
     """Every field comes from the database row (TDD 7.6): company_documents,
     its current document_versions row, and the people joins."""
     vname = row.get("vertical") or None
@@ -125,7 +113,7 @@ def build_document(row: dict, cited: list[str]) -> dict:
         "law_as_of": _iso(row.get("law_as_of")),
         "next_review": _iso(row.get("next_review")),
         "review_cycle": row.get("review_cycle") or None,
-        "vertical": vertical_slug(vname),
+        "vertical": vertical_slug(vname, slugs),
         "vertical_name": vname,
         "owner": owner or blank(row.get("owner_id")),
         "reviewer": reviewer or blank(row.get("reviewer_id")),
@@ -197,7 +185,8 @@ async def _documents(db: AsyncSession, doc_id: Optional[str] = None) -> list[dic
     cited: dict[str, list[str]] = {}
     for r in (await db.execute(text(_CITED_SQL.format(extra=cextra)), params)).mappings().all():
         cited.setdefault(r["doc_id"], []).append(r["citation"])
-    return [build_document(dict(r), sorted(set(cited.get(r["doc_id"], [])))) for r in rows]
+    slugs = await fetch_vertical_slugs(db)
+    return [build_document(dict(r), sorted(set(cited.get(r["doc_id"], []))), slugs) for r in rows]
 
 
 # ------------------------------------------------------------------ endpoints

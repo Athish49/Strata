@@ -62,7 +62,7 @@ from app.api.company.org import (
     _role_holder,
     select_policy,
 )
-from app.api.company.routes import VERTICAL_SLUGS
+from app.api.company.routes import fetch_vertical_slugs
 from app.company_ingest import jobs
 from app.company_ingest.extract import DocxExtractor
 from app.company_ingest.hashing import canonicalize, content_hash
@@ -237,15 +237,19 @@ async def _prepare(raw: bytes, kind: str, filename: str,
                     register_spec=spec)
 
 
-def _canonical_vertical(value: str) -> str:
-    """Accept the backend name (any case) or the frontend slug; store the name."""
+def _canonical_vertical(value: str, slugs: dict[str, str]) -> str:
+    """Accept the backend name (any case) or the frontend slug; store the name.
+
+    ``slugs`` is the ``name.lower() -> slug`` mapping from ``fetch_vertical_slugs()``
+    (fetched by the caller through the request-scoped session).
+    """
     v = (value or "").strip()
     if not v:
         raise HTTPException(status_code=422, detail="vertical is required.")
-    names = {k: k.title() for k in VERTICAL_SLUGS}
+    names = {k: k.title() for k in slugs}
     if v.lower() in names:
         return names[v.lower()]
-    by_slug = {slug: names[k] for k, slug in VERTICAL_SLUGS.items()}
+    by_slug = {slug: names[k] for k, slug in slugs.items()}
     if v.lower() in by_slug:
         return by_slug[v.lower()]
     allowed = ", ".join(sorted(names.values()))
@@ -534,12 +538,12 @@ async def upload_document(
     db: AsyncSession = Depends(get_db),
     deps: UploadDeps = Depends(get_upload_deps),
 ):
-    # ---- read-only pipeline (no DB, no R2) -------------------------------
+    # ---- read-only pipeline (no R2 writes; one read-only verticals lookup) ----
     raw = await _read_capped(file)
     kind = _classify(file, raw)
     spec = _parse_spec(register_spec)
     p = await _prepare(raw, kind, file.filename or "", spec)
-    vertical_name = _canonical_vertical(vertical)
+    vertical_name = _canonical_vertical(vertical, await fetch_vertical_slugs(db))
     law_date = _parse_law_as_of(law_as_of)
     doc_title = (title or "").strip() or (file.filename or "").rsplit(".", 1)[0] or None
 

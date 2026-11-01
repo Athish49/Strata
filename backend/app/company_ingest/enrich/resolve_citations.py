@@ -14,8 +14,8 @@ stay byte-for-byte equivalent in behaviour (TDD.md section 5):
 
 - IAC  -> match by normalized citation key; rule-level if no section
 - CFR  -> parse ``citation_raw``; match by title/part/section_number inside a
-          14-day snapshot window (the CFR S1 snapshot is 2025-01-02 while
-          ``law_as_of`` is 2024-12-31)
+          14-day snapshot window (the CFR S1 snapshot is a couple of days
+          after ``DEFAULT_LAW_AS_OF``, the fallback ``law_as_of``)
 - IC / USC          -> ``not_monitored`` (not in scope)
 - ``external_standard`` -> ``external`` (no KB lookup)
 - ``unknown``       -> ``unparsed``
@@ -37,6 +37,7 @@ from sqlalchemy import bindparam, text
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.company_ingest.enrich.resolve_citations_db import (  # single source of truth
+    DEFAULT_LAW_AS_OF,
     _IN_KB_FOR_STATUS,
     _TERMINAL,
     _iac_normalized_key,
@@ -241,7 +242,7 @@ async def _classify_row(
         elif title_str not in cfr_titles:
             status = "out_of_scope_title"
         elif section_str is not None:
-            # CFR S1 snapshot is 2025-01-02 while law_as_of is 2024-12-31,
+            # CFR S1 snapshot is a couple of days after DEFAULT_LAW_AS_OF,
             # so a 14-day window is allowed.  Do not "clean this up".
             cfr_window = law_as_of + timedelta(days=14)
             hit = (
@@ -321,7 +322,7 @@ async def resolve_citations_for_version(
     #    Deliberately the *global* MIN, not company-scoped.
     fallback_law_as_of: date = (
         await session.execute(_FALLBACK_LAW_AS_OF_SQL)
-    ).scalar() or date(2024, 12, 31)
+    ).scalar() or DEFAULT_LAW_AS_OF
 
     # 3. Rows to process, scoped to this version.
     rows = (

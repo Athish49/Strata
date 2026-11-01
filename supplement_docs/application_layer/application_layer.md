@@ -3,17 +3,17 @@
 _Verified against code + live Neon/Qdrant/R2 on 2026-10-07/08. Counts are a snapshot; re-query to refresh._
 
 ## 1. What it does (one paragraph)
-When government rules change between snapshot **S1** (IAC 2024-12-31 / CFR 2025-01-02) and **S2** (IAC 2025-12-31 / CFR 2026-10-02), Strata shows a company **which clauses in which documents** are affected, **why** (verified quotes from both rule versions + the clause), **what must change**, and **who must act**. It **flags only — never edits** company documents. Demo company: synthetic Rockridge Power & Light (RPL, `company_id='rpl'`), 12 documents, all compliant with S1. S2 is write-on-change: a section absent from S2 is *unchanged*, never repealed. No SEC/EDGAR source exists.
+When government rules change between snapshot **S1** (IAC 2024-12-31 / CFR 2025-01-02) and **S2** (IAC 2025-12-31 / CFR 2026-10-02), Strata shows a company **which clauses in which documents** are affected, **why** (verified quotes from both rule versions + the clause), **what must change**, and **who must act**. It **flags only — never edits** company documents. Demo company: synthetic Rockridge Power & Light (RPL, `company_id='rpl'`), 15 documents, all compliant with S1. S2 is write-on-change: a section absent from S2 is *unchanged*, never repealed. No SEC/EDGAR source exists.
 
 ## 2. Big picture
 ```mermaid
 flowchart LR
   subgraph SRC[Sources]
     G[Gov rules: eCFR, Federal Register,<br/>Indiana IAC, IURC, IDEM]
-    C[Company corpus: 12 synthetic docs<br/>+ registers/datasets]
+    C[Company corpus: 15 synthetic docs<br/>+ registers/datasets]
   end
   G -->|daily cron ingest| KB[(Law KB<br/>Postgres public + Qdrant)]
-  C -->|manual ingest| CO[(Company data<br/>Postgres company + R2)]
+  C -->|automatic, per-upload API ingest| CO[(Company data<br/>Postgres company + R2)]
   KB & CO --> ENG[Impact Engine<br/>S1→S2 diff → candidates → judge → ledger]
   ENG --> EN[(Postgres engine.*)]
   EN --> API[FastAPI /engine/ui, /company]
@@ -44,12 +44,12 @@ flowchart LR
   V --> PG[(public.*)]
   V --> EM[chunk → MiniLM 384d] --> QD[(Qdrant regulation_chunks)]
   subgraph CO[app/company_ingest — corpus 'rpl']
-    C1[collect] --> C2[parse: front matter, markdown/register segmenter] --> C3[enrich: citations, params, refs, roles, terms] --> C4[LLM enrich — skipped by --no-llm] --> C5[link: refs, doc scope, restates] --> C6[validate checks] --> C7[store]
+    C1[collect] --> C2[parse: front matter, markdown/register segmenter] --> C3[enrich: citations, params, refs, roles, terms] --> C4[LLM enrich, cache-backed] --> C5[link: refs, doc scope, restates] --> C6[validate checks] --> C7[store]
   end
   C7 --> PG2[(company.*)] & R2[(R2 bucket strata)]
   C3 -. resolve citations .-> PG
 ```
-**Triggers:** `POST /jobs/ingest` (all 7 adapters, failures isolated) ← Render cron `0 6 * * *`. Company ingest manual: `python -m app.company_ingest.cli.ingest [--no-llm --no-datasets --rebuild --dry-run]`. Engine: `POST /engine/runs` or `scripts/run_engine.py`, `score_run.py`, `run_radar.py`.
+**Triggers:** `POST /jobs/ingest` (all 7 adapters, failures isolated) ← Render cron `0 6 * * *`. Company ingest is automatic, per-upload, API-driven: `POST /company/documents` (new document) / `POST /company/documents/{doc_id}/versions` (new version) trigger the full pipeline inline on each upload — there is no CLI entry point anywhere in the codebase (`app/company_ingest/cli/ingest.py` does not exist; confirmed by file search). Engine: `POST /engine/runs` or `scripts/run_engine.py`, `score_run.py`, `run_radar.py`.
 
 **Live tables**
 | Table | Purpose | Rows |
@@ -61,13 +61,13 @@ flowchart LR
 | company.clauses | atomic clauses | 2,334 |
 | company.clause_parameters / defined_terms / term_usages | extracted numbers, glossary | 2,948 / 67 / 693 |
 | company.clause_citations / clause_links / document_scope | clause→rule, clause↔clause, doc×section | 1,550 / 4,675 / 285 |
-| company.company_documents / people / attributes | 12 docs (all Approved) / org chart / facts | 12 / 27 / 22 |
-| company.datasets, parameter_checks, llm_extractions | never run (`--no-llm --no-datasets`) | 0 |
+| company.company_documents / people / attributes | 15 docs / org chart / facts | 15 / 27 / 24 |
+| company.datasets, parameter_checks, llm_extractions | `datasets`/`dataset_columns`/`parameter_checks` no longer exist as tables; `llm_extractions` present and populated | — |
 | engine.runs / candidates / change_records | | 24 / 6,991 / 5,587 |
 | engine.findings / doc_rollups / radar_items | | 1,240 / 252 / 354 |
 | engine.llm_calls / score_reports / whatif_scenarios / finding_reviews | | 1,606 / 5 / 4 / 0 |
 | Qdrant `regulation_chunks` | 7,898 code_section + 1,207 action points | 9,105 |
-| Qdrant `company_clauses` | defined in code, **absent live (404)** | — |
+| Qdrant `company_clauses` | **live** (confirmed via `client.get_collection()`); indexed only on promotion | 2,298 |
 | R2 `strata` | company/rpl/*, engine run artifacts | 2,769 obj, ~222 MB |
 
 **Law KB metrics**
@@ -193,7 +193,7 @@ sequenceDiagram
 Other facts: **no auth**, CORS via `ENGINE_CORS_ORIGINS`. Env: backend `DATABASE_URL, QDRANT_URL/API_KEY, R2_*, LLM_*, EMBED_*, ENGINE_*`; frontend `NEXT_PUBLIC_STRATA_DATA, _API_URL, _ALLOW_CUSTOM_WHATIF`. Tests: pytest `backend/tests/{api_company,company_ingest,engine}`; vitest `frontend/tests/unit`; Playwright config present.
 
 ## 6. Known gaps (as of snapshot)
-- Cost/tokens not stored; `finding_reviews` empty; `company_clauses` Qdrant collection missing; company LLM/dataset stages never run.
+- Cost/tokens not stored; `finding_reviews` empty; `company_clauses` Qdrant collection is **live** with 2,298 points (not missing); `datasets`/`parameter_checks` stages never run and those tables no longer exist.
 - Per PRD (not re-verified live): CFR citations are unresolved at section level so CFR changes go to radar; no definition-ripple path.
 - `development_docs` PRD figures were measured earlier; this doc reflects live DB.
 - UI routers, company routes, and many frontend files were uncommitted at investigation time.

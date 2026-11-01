@@ -61,7 +61,10 @@ from app.company_ingest.enrich.citations import enrich_citations
 from app.company_ingest.enrich.parameters_regex import enrich_parameters
 from app.company_ingest.enrich.references import enrich_references
 from app.company_ingest.enrich.resolve_citations import resolve_citations_for_version
-from app.company_ingest.enrich.resolve_citations_db import _parse_cfr_citation_raw
+from app.company_ingest.enrich.resolve_citations_db import (
+    DEFAULT_LAW_AS_OF,  # single definition point; see resolve_citations_db.py
+    _parse_cfr_citation_raw,
+)
 from app.company_ingest.enrich.roles import enrich_roles
 from app.company_ingest.enrich.terms import extract_terms, find_term_usages
 from app.company_ingest.extract.docx import anchor_clauses
@@ -367,8 +370,9 @@ def _enrich_register_citations(
 
 #: Does the KB hold ANY snapshot of this title at or before the date the resolver
 #: looked it up at (``law_as_of``, the resolver's global-MIN fallback, then
-#: 2024-12-31; CFR gets the resolver's 14-day window)?  Asked only when a prose
-#: document resolved nothing and some of its citations came back ``not_in_kb``.
+#: ``DEFAULT_LAW_AS_OF``; CFR gets the resolver's 14-day window)?  Asked only
+#: when a prose document resolved nothing and some of its citations came
+#: back ``not_in_kb``.
 _KB_TITLE_COVERED_SQL = text(
     """
     SELECT EXISTS (
@@ -378,7 +382,7 @@ _KB_TITLE_COVERED_SQL = text(
            AND snapshot_date <= COALESCE(
                    CAST(:law_as_of AS date),
                    (SELECT MIN(law_as_of) FROM company.document_versions),
-                   DATE '2024-12-31') + CAST(:window_days AS integer)
+                   CAST(:default_law_as_of AS date)) + CAST(:window_days AS integer)
     )
     """
 )
@@ -424,6 +428,7 @@ async def _zero_resolved_is_genuine(
     for ss, title in sorted(titles):
         covered = (await session.execute(_KB_TITLE_COVERED_SQL, {
             "source_system": ss, "title": title, "law_as_of": law_as_of,
+            "default_law_as_of": DEFAULT_LAW_AS_OF,
             "window_days": 14 if ss == "cfr" else 0,
         })).scalar()
         if covered:
@@ -588,7 +593,7 @@ async def ingest_document(
             "ingest_service",
             "law_as_of_missing",
             "document_versions.law_as_of is NULL; citation resolution falls back "
-            "to the global MIN(law_as_of) (default 2024-12-31)",
+            f"to the global MIN(law_as_of) (default {DEFAULT_LAW_AS_OF})",
             doc_id=doc_id,
         )
 

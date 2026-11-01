@@ -1,10 +1,21 @@
 /**
- * Company fixture builder (spec §6.4). Run manually: `pnpm fixtures:build`.
+ * Company fixture builder (spec §6.4). NO LONGER RUNNABLE.
  *
- * Reads ONLY these corpus files (read-only) from ../backend/app/company/corpus:
+ * CORPUS below points at ../backend/synthetic/corpus, which has been deleted
+ * outright (no relocation, no replacement data source). Running this script
+ * now fails immediately with ENOENT on
+ * ../backend/synthetic/corpus/_global/people_directory.csv — the first file
+ * it reads, via loadPeople() at the top of main() — before any output
+ * directory is touched, so it does not corrupt the committed fixtures in
+ * fixtures/company/; it just crashes.
+ *
+ * It historically read ONLY these corpus files (read-only):
  *   _global/document_register.csv, _global/people_directory.csv, _global/company_profile.yaml,
  *   docs/<doc_id>/<doc_id>_v*.md, docs/<doc_id>/data/<register>.csv (three registers only).
- * Writes validated JSON to fixtures/company/. Output is deterministic.
+ * and wrote validated JSON to fixtures/company/ (output was deterministic).
+ *
+ * This will run again only if someone supplies a new corpus and repoints
+ * CORPUS at it; there is currently no such source.
  */
 import { mkdirSync, readFileSync, readdirSync, rmSync, writeFileSync } from "node:fs";
 import path from "node:path";

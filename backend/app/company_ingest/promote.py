@@ -427,6 +427,27 @@ async def _promote(session, company_id, doc_id, vid, content_hash, qdrant_client
             f"Qdrant reindex failed for {doc_id} version {vid}; nothing was promoted, "
             "retry is safe") from exc
 
+    # 6b. Best-effort: sweep the company's backlog of ingest-time unresolved
+    # references_clause refs (findings_1.0_cross_document_links.md) now that this
+    # promotion may have made more targets resolvable. Never allowed to affect
+    # promotion itself — any failure here is logged and swallowed, not raised.
+    try:
+        from app.company_ingest.link.reconcile_cross_doc import reconcile_unresolved_references
+
+        reconciled = await reconcile_unresolved_references(session, company_id)
+        if reconciled.resolved or reconciled.scanned:
+            log.info(
+                "cross-doc reconcile after promoting %s/%s: scanned=%d resolved=%d "
+                "still_unresolved=%d skipped=%d",
+                doc_id, vid, reconciled.scanned, reconciled.resolved,
+                reconciled.still_unresolved, reconciled.skipped,
+            )
+    except Exception:  # noqa: BLE001 — best-effort, must never block promotion
+        log.warning(
+            "cross-doc reconcile failed after promoting %s/%s (promotion itself succeeded)",
+            doc_id, vid, exc_info=True,
+        )
+
     # 7.
     if commit:
         await session.commit()

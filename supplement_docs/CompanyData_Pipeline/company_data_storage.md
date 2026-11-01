@@ -1,3 +1,5 @@
+> **Note:** this document describes the pre-cutover (v1) pipeline and is now stale. See `tables_and_connections.md`, `live_ingestion_architecture.md`, and `report.md` at the repo root for the current, live-verified state.
+
 # Company Data Storage — Neon · Qdrant · R2
 
 **Entity:** Rockridge Power & Light (RPL) · `company_id = rpl`  

@@ -630,10 +630,12 @@ async def get_policy(policy_id: str, db: AsyncSession = Depends(get_db)):
 
 @router.post("/approval-policies", status_code=201)
 async def create_policy(body: PolicyIn, db: AsyncSession = Depends(get_db)):
+    from app.api.company.routes import fetch_vertical_slugs  # local import: no circularity, just kept next to the upload.py import below
     from app.api.company.upload import _canonical_vertical  # deferred: upload.py imports this module
     await _require_person(db, body.acting_person_id)
     pid = str(uuid.uuid4())
-    vertical = _canonical_vertical(body.applies_to_vertical) if body.applies_to_vertical is not None else None
+    vertical = (_canonical_vertical(body.applies_to_vertical, await fetch_vertical_slugs(db))
+                if body.applies_to_vertical is not None else None)
     await db.execute(text(
         "INSERT INTO company.approval_policies (company_id, policy_id, name, "
         "applies_to_vertical, applies_to_doc_class) VALUES (:c, CAST(:p AS uuid), :n, :v, :k)"),
@@ -660,6 +662,7 @@ async def _write_steps(db: AsyncSession, policy_id: str, steps: list[PolicyStepI
 
 @router.patch("/approval-policies/{policy_id}")
 async def update_policy(policy_id: str, body: PolicyPatch, db: AsyncSession = Depends(get_db)):
+    from app.api.company.routes import fetch_vertical_slugs  # local import: no circularity, just kept next to the upload.py import below
     from app.api.company.upload import _canonical_vertical  # deferred: upload.py imports this module
     await _require_person(db, body.acting_person_id)
     row = await _policy_or_404(db, policy_id)
@@ -672,7 +675,7 @@ async def update_policy(policy_id: str, body: PolicyPatch, db: AsyncSession = De
         sets.append("applies_to_vertical = NULL")
     elif body.applies_to_vertical is not None:
         sets.append("applies_to_vertical = :v")
-        params["v"] = _canonical_vertical(body.applies_to_vertical)
+        params["v"] = _canonical_vertical(body.applies_to_vertical, await fetch_vertical_slugs(db))
     if body.clear_doc_class:
         sets.append("applies_to_doc_class = NULL")
     elif body.applies_to_doc_class is not None:

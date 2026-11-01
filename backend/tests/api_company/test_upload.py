@@ -18,6 +18,7 @@ startup sweep never fires; it does run BackgroundTasks before returning.
 """
 from __future__ import annotations
 
+import ast
 import asyncio
 import base64
 import hashlib
@@ -51,6 +52,28 @@ pytestmark = pytest.mark.asyncio
 
 BACKEND = Path(__file__).resolve().parents[2]
 SCHEMA_SQL = BACKEND / "tests" / "engine" / "fixtures" / "company_schema.sql"
+
+
+def _migration_vertical_rows() -> list[dict]:
+    """``company.verticals`` row shape (name, slug), read from the verticals-retaxonomy
+    migration's ``NEW_VERTICALS`` with ``ast`` -- no DB connection, no second hand-synced
+    copy of the 14 verticals. ``routes.fetch_vertical_slugs()`` issues this exact query,
+    and ``FakeSession`` below answers it with these rows by default."""
+    migrations_dir = BACKEND / "migrations" / "versions"
+    candidates = [p for p in migrations_dir.glob("*.py")
+                  if "verticals_retaxonomy" in p.name or "retaxonomy" in p.name]
+    assert candidates, "verticals-retaxonomy migration file not found"
+    tree = ast.parse(candidates[0].read_text(encoding="utf-8"))
+    for node in tree.body:
+        targets = node.targets if isinstance(node, ast.Assign) else [getattr(node, "target", None)]
+        if any(isinstance(t, ast.Name) and t.id == "NEW_VERTICALS" for t in targets):
+            rows = ast.literal_eval(node.value)
+            return [{"name": n, "slug": s} for n, s, _d in rows]
+    raise AssertionError("NEW_VERTICALS not found in verticals-retaxonomy migration")
+
+
+#: Rule for ``routes.fetch_vertical_slugs()``'s ``SELECT name, slug FROM company.verticals``.
+VERTICALS_SQL_RULE = ("FROM company.verticals", _migration_vertical_rows())
 CO = engine_settings.ENGINE_COMPANY_ID
 PID = "P-UPLOADER"
 VERTICAL = "Compliance & Ethics"
@@ -212,7 +235,10 @@ class _Res:
 
 class FakeSession:
     def __init__(self, rules=()):
-        self.rules = list(rules) + [("FROM company.people", [{"person_id": PID, "is_active": True}])]
+        self.rules = list(rules) + [
+            ("FROM company.people", [{"person_id": PID, "is_active": True}]),
+            VERTICALS_SQL_RULE,
+        ]
         self.sql: list[str] = []
         self.committed = 0
 

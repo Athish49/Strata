@@ -36,7 +36,13 @@ FIXTURE_DOC_ID = "RPL-CS-PRO-004"
 # Test-owned copy (not the deletable synthetic/ corpus render, which this module used to
 # read directly): same reasoning as task 9.4's fix for test_jobs_recovery.py/test_service.py.
 FIXTURE_DOCX = BACKEND_ROOT / "tests" / "fixtures" / "docx" / f"{FIXTURE_DOC_ID}_v5.1.docx"
-FIXTURE_MD = CORPUS / FIXTURE_DOC_ID / f"{FIXTURE_DOC_ID}_v5.1.md"
+_FIXTURE_MD_CANDIDATES = (
+    BACKEND_ROOT / "tests" / "fixtures" / "docx" / f"{FIXTURE_DOC_ID}_v5.1.md",
+    CORPUS / FIXTURE_DOC_ID / f"{FIXTURE_DOC_ID}_v5.1.md",
+)
+FIXTURE_MD = next(
+    (p for p in _FIXTURE_MD_CANDIDATES if p.exists()), _FIXTURE_MD_CANDIDATES[0]
+)
 VERSION_ID = "00000000-0000-0000-0000-000000000042"
 
 # Smallest valid 1x1 PNG, for the image-only document.
@@ -111,13 +117,11 @@ def test_corrupt_bytes_raise_unreadable_document_error():
 # Acceptance: headings
 # ---------------------------------------------------------------------------
 
-@pytest.mark.corpus
 def test_fixture_yields_at_least_thirty_heading_lines(extracted):
     headings = _heading_lines(extracted.markdown)
     assert len(headings) >= 30, f"only {len(headings)} heading lines"
 
 
-@pytest.mark.corpus
 def test_heading_levels_match_source_styles(extracted):
     """`Heading1` ×2 and `Heading2` ×31 must come out as `#` ×2 and `##` ×31."""
     document = docx_lib.Document(io.BytesIO(FIXTURE_DOCX.read_bytes()))
@@ -140,7 +144,6 @@ def test_heading_levels_match_source_styles(extracted):
     assert level_counts.get(2) == style_counts["Heading2"]
 
 
-@pytest.mark.corpus
 def test_page_count_and_confidence(extracted):
     assert extracted.page_count is None  # DOCX stores no pagination
     assert extracted.confidence == 1.0
@@ -150,7 +153,6 @@ def test_page_count_and_confidence(extracted):
 # Acceptance: tables
 # ---------------------------------------------------------------------------
 
-@pytest.mark.corpus
 def test_tables_render_as_pipe_tables_with_separator(extracted):
     lines = extracted.markdown.splitlines()
     separators = [i for i, line in enumerate(lines) if re.match(r"^\|[\s\-:|]+\|$", line)]
@@ -328,7 +330,6 @@ def test_preamble_before_first_heading_is_claimed():
     assert "Rockridge" in units[0].text_raw
 
 
-@pytest.mark.corpus
 def test_no_body_text_is_left_outside_a_clause(extracted):
     """Every prose line of the fixture must land inside some clause span."""
     anchored = anchor_clauses(extracted.markdown, FIXTURE_DOC_ID)
@@ -376,7 +377,6 @@ def test_anchor_clauses_rejects_doc_ids_the_segmenter_cannot_match():
 # Acceptance: clause count vs the Markdown source (±25%)
 # ---------------------------------------------------------------------------
 
-@pytest.mark.corpus
 def test_clause_count_within_25_percent_of_markdown_source(extracted):
     if not FIXTURE_MD.exists():  # pragma: no cover - corpus missing
         pytest.skip(f"corpus fixture missing: {FIXTURE_MD}")

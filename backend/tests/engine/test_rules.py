@@ -27,7 +27,7 @@ def _change(vcs=None, **kw):
 def _param(**kw):
     s = CLAUSE.index("30 days")
     d = dict(kind="period", value_text="30 days", value_num=30.0, unit="days",
-             day_type=None, span_start=s, span_end=s + 7, is_citation_fragment=False)
+             day_type=None, span_start=s, span_end=s + 7)
     d.update(kw)
     return d
 
@@ -91,10 +91,6 @@ def test_r3_day_type_mismatch_no_override():
     c = _change(vcs=[_vc(day_type="business")])
     assert apply_rules(c, _clause([_param(day_type="calendar")]), _cand()) is None
     assert apply_rules(c, _clause([_param(day_type=None)]), _cand()) is not None
-
-
-def test_r3_citation_fragment_ignored():
-    assert apply_rules(_change(), _clause([_param(is_citation_fragment=True)]), _cand()) is None
 
 
 def test_r3_bare_number_ineligible():

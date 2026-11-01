@@ -1,0 +1,117 @@
+PENDING TASKS — Company Documents Pipeline Cleanup
+Last updated: 2026-10-31
+Source: implementation_plan.md, report.md, findings_1.0_cross_document_links.md,
+findings_1.2_data_provenance.md (all at repo root)
+
+Everything below is either blocked on a human-only step, or deliberately deferred
+pending your decision. Nothing in this list is blocked on further agent/Claude work
+unless noted. See the companion chat message "detailed steps you have to do" for the
+exact actions tied to each item.
+
+====================================================================
+1. [HIGH PRIORITY, HUMAN-ONLY] Resolve the 12-document data-provenance mystery
+====================================================================
+Status: Investigation complete (findings_1.2_data_provenance.md). Mechanism NOT
+found — every code path, script, and migration that could explain it was checked
+and ruled out. The only remaining way to resolve this is pulling Render's
+application logs.
+
+Action needed from you:
+  - Pull Render's log viewer (or wherever uvicorn/BackgroundTasks output lands)
+    for these 3 ingest_run_ids, around 2026-10-31 09:04-09:22 UTC:
+      - DOC-000001: 7f30d5ae-c5f6-4a9a-8961-09ec0375337d
+      - DOC-000008: 6569055e-89ad-4057-826e-91ff40fb6e46
+      - DOC-000010: 62b01826-cd9b-4373-b2dc-a9a5acc8f166
+  - Look for: any admin/maintenance endpoint call, a bulk-import script
+    invocation, or a swallowed exception in that window.
+  - Report back what you find (or don't find).
+
+Blocks: task 5.2 (orphaned R2 cleanup) until resolved.
+
+====================================================================
+2. [HUMAN-ONLY] Confirm the deployed R2_ENDPOINT value (task 5.1)
+====================================================================
+Status: Not started — no code in this repo can answer this (render.yaml marks it
+sync: false, value lives only in the Render dashboard).
+
+Action needed from you:
+  - Check Render's dashboard for the deployed backend service's R2_ENDPOINT value.
+  - Confirm whether it carries the same trailing "/strata" suffix as the local
+    .env (see tables_and_connections.md §7 for why this matters — every R2 object
+    physically lives one path segment deeper than the key Neon stores).
+  - Report back the value. No code change should follow automatically either way
+    — this is informational, feeding a future decision (DG-6), not an action item
+    itself.
+
+====================================================================
+3. [BLOCKED on #1] Delete orphaned R2 objects (task 5.2, DG-7)
+====================================================================
+Status: Not started. Deliberately held — these exact objects (old v1-keyed
+derived snapshots, the stale 01e6f1a3... LLM-cache audit JSONs) are the evidence
+findings_1.2 used to investigate the provenance mystery. Deleting them now would
+foreclose investigating it further for any document beyond the one already
+checked (DOC-000008).
+
+Action needed from you: nothing yet. Once #1 is resolved (or you decide the
+evidence is no longer needed), tell me to proceed and I will re-verify the
+objects are still unreferenced immediately before deleting.
+
+====================================================================
+4. [YOUR CALL, NOT URGENT] Drop the is_citation_fragment column (task 3.4 Deploy 2)
+====================================================================
+Status: Deploy 1 (removing all 3 dead read-sites in candidates.py/rules.py/
+judge.py, deleting the backfill script and its test) is DONE. Deploy 2 — the
+actual `ALTER TABLE ... DROP COLUMN` — is a separate, irreversible-without-backup
+migration you chose to leave for later.
+
+Action needed from you: tell me when you want this to happen. Before it runs:
+  - backend/scripts/make_whatif_presets.py still references this column directly
+    in a SQL WHERE clause (COALESCE(p.is_citation_fragment, false) = false) — it
+    needs updating in the same change, or it will break.
+  - Confirm `alembic heads` shows exactly one head immediately before writing the
+    migration (guardrail 2 — no two migration-writing tasks concurrently).
+  - Consider taking a DB snapshot first since this is not reversible otherwise.
+
+====================================================================
+5. [DEFERRED BY DEFAULT] Frontend vertical taxonomy dynamism (task 3.7)
+====================================================================
+Status: Not started, per DG-3's default (you didn't opt in). The backend now
+reads company.verticals dynamically (task 3.6, done); the frontend still uses its
+static VERTICALS array in frontend/lib/verticals.ts.
+
+Action needed from you: only if you change your mind. This is a real body of work
+(~10 files, a new GET /company/verticals endpoint, a new sort_order migration,
+making a Next.js route guard async, rewriting frontend/tests/unit/verticals.test.ts) —
+not a quick follow-up. Say so explicitly if you want it scoped as its own task.
+
+====================================================================
+6. [DATE-GATED] Drop the 2 migration backup tables (task 5.3, DG-5)
+====================================================================
+Status: Not eligible yet. The retention window is 30 days from the 2026-10-31
+migration date — do not drop before 2026-11-30.
+
+Action needed from you: nothing until the date arrives. When it does, this is a
+single new sequential migration dropping
+company._vertical_backfill_20261031 and company._approval_policy_vertical_backfill_20261031.
+Note: once run, migration 9c1e4b7a2f05's own downgrade() can no longer function.
+
+====================================================================
+7. [INFORMATIONAL] Nothing has been pushed to the remote
+====================================================================
+Status: All cleanup work is committed to your LOCAL main branch only (per your
+instruction). origin/main on GitHub does not have any of this yet.
+
+Action needed from you: tell me when (and if) you want this pushed.
+
+====================================================================
+Already implemented, not pending, but worth knowing about:
+====================================================================
+- Cross-document link reconciliation (task 1.0's chosen fix, option (c)): a new
+  best-effort sweep runs on every document promotion, resolving backlogged
+  references_clause refs across documents. See
+  backend/app/company_ingest/link/reconcile_cross_doc.py and
+  findings_1.0_cross_document_links.md for the full design rationale.
+- The 274 empty-text_raw clauses found during the 1.2 investigation (6 documents,
+  degrades judge.py's prompt and quote verification for those specific clauses)
+  are NOT separately tracked as a fix task — they're a symptom of the same
+  unresolved provenance mystery (item 1 above), not an independent bug to patch.

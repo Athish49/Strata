@@ -102,8 +102,6 @@ def _day_type_ok(a: str | None, b: str | None) -> bool:
 
 
 def _eligible(p: dict) -> bool:
-    if p.get("is_citation_fragment"):
-        return False
     return p.get("kind") != "number" or p.get("unit") is not None
 
 

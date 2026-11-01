@@ -80,29 +80,9 @@ class TestR2Keys:
         key = r2_keys.raw_doc_key(self.COMPANY, self.DOC, self.VER, "doc_001_v1.md")
         assert key == "company/rpl/raw/doc_001/v1/doc_001_v1.md"
 
-    def test_raw_dataset_key(self):
-        key = r2_keys.raw_dataset_key(self.COMPANY, self.DOC, self.VER, "tariff_table")
-        assert key == "company/rpl/raw/doc_001/v1/data/tariff_table.csv"
-
-    def test_raw_render_key(self):
-        key = r2_keys.raw_render_key(self.COMPANY, self.DOC, self.VER, "page1.png")
-        assert key == "company/rpl/raw/doc_001/v1/render/page1.png"
-
-    def test_global_file_key(self):
-        key = r2_keys.global_file_key(self.COMPANY, self.RUN, "manifest.json")
-        assert key == "company/rpl/global/run_abc/manifest.json"
-
     def test_derived_clauses_key(self):
         key = r2_keys.derived_clauses_key(self.COMPANY, self.DOC, self.VER)
         assert key == "company/rpl/derived/doc_001/v1/clauses.jsonl"
-
-    def test_parquet_key(self):
-        key = r2_keys.parquet_key(self.COMPANY, self.DOC, self.VER, "prices")
-        assert key == "company/rpl/derived/doc_001/v1/datasets/prices.parquet"
-
-    def test_global_parquet_key(self):
-        key = r2_keys.global_parquet_key(self.COMPANY, "all_ops")
-        assert key == "company/rpl/derived/global/ops/all_ops.parquet"
 
     def test_report_key(self):
         key = r2_keys.report_key(self.COMPANY, self.RUN)
@@ -160,14 +140,6 @@ class TestR2Client:
             "profile": "x",
         }
         result = r2.put_bytes("test/auto.txt", data, meta)
-        assert result == "ok"
-
-    # --- put_file --------------------------------------------------------
-
-    def test_put_file(self, r2, tmp_path):
-        p = tmp_path / "doc.md"
-        p.write_bytes(b"# Doc\ncontent")
-        result = r2.put_file("test/doc.md", p, _good_meta(p.read_bytes()))
         assert result == "ok"
 
     # --- get_bytes -------------------------------------------------------
