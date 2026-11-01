@@ -42,20 +42,20 @@ whenever that's revisited — still requires a full key-migration plan first, pe
 report.md/tables_and_connections.md section 7, not a quick env-var edit.
 
 ====================================================================
-3. [UNBLOCKED, your call] Delete orphaned R2 objects (task 5.2, DG-7)
+3. [DONE 2026-11-01] Delete orphaned R2 objects (task 5.2, DG-7)
 ====================================================================
-Status: Was blocked on item 1; now unblocked since the provenance mystery is
-resolved and didn't depend on these specific R2 objects as its only evidence
-(see item 1). Not started yet either way.
+Status: COMPLETE. Re-verified immediately before deleting (per the task card):
+the only ingest_run_id anywhere in R2 that matched zero rows across all three
+legitimate sources (company.ingest_runs, company.document_versions.ingest_
+run_id for ALL versions not just current, company.llm_extractions) was
+01e6f1a3-efde-4f11-88b6-9826afd644d3 (667 objects). The 12 old RPL-*-keyed
+v1/clauses.jsonl derived snapshots were confirmed stale (old doc_id scheme,
+no matching current version). Deleted 679 objects total, by exact key (never
+by pattern), 0 errors. Verified after deletion: 0 remaining orphaned objects,
+and the 3 live register-document derived snapshots (real-UUID-keyed, matching
+their current document_versions) are confirmed untouched.
 
-These are the old v1-keyed derived snapshots (e.g.
-derived/RPL-CS-PRO-004/v1/clauses.jsonl) and the stale 01e6f1a3...-prefixed
-LLM-cache audit JSONs confirmed unreferenced by any current document_versions
-or ingest_runs row.
-
-Action needed from you: tell me to proceed and I will re-verify the objects are
-still unreferenced immediately before deleting (per the task card, never bulk-
-delete by pattern without that re-check).
+Action needed from you: none. This item is closed.
 
 ====================================================================
 4. [YOUR CALL, NOT URGENT] Drop the is_citation_fragment column (task 3.4 Deploy 2)
